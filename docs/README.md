@@ -11,6 +11,10 @@ review_cycle: weekly
 
 This is the AI-ready operating system for Waiz Media. It turns company knowledge, SOPs, workflows, prompts, KPIs, onboarding systems, sales processes, media buying systems, client success systems, and operational intelligence into a maintainable GitHub repository.
 
+## Updating This Repo
+
+Edit files in `docs/`, save, then **Commit** and **Push** in GitHub Desktop (or Cursor Source Control). Large videos (`.mp4`) stay local — see `.gitignore`.
+
 ## Start Here By Role
 
 | Role | Load first |
