@@ -1,0 +1,23 @@
+---
+description: Waiz Media OS — canonical docs, migration, and business operations in this repo
+globs:
+  - docs/**
+  - source-docs/**
+  - CLAUDE.md
+  - AGENTS.md
+  - .claude/skills/**
+alwaysApply: false
+---
+
+# Waiz Media OS
+
+When working in this repository:
+
+1. Read [docs/SOURCE-OF-TRUTH.md](docs/SOURCE-OF-TRUTH.md) and [docs/_inventory/migration-backlog.md](docs/_inventory/migration-backlog.md) before converting or moving docs.
+2. Use the **waiz-business-os** skill ([.claude/skills/waiz-business-os/SKILL.md](.claude/skills/waiz-business-os/SKILL.md)) for structure, templates, and gap analysis.
+3. Use the **docx** skill when extracting from `.docx` in `source-docs/`. Use **xlsx** for spreadsheet wrappers.
+4. Never edit `source-docs/waiz-drive-export/`. Output canonical Markdown under `docs/` only.
+5. Check [docs/_inventory/duplicate-resolutions.md](docs/_inventory/duplicate-resolutions.md) before converting overlapping sources.
+6. New docs: YAML frontmatter, kebab-case paths, `status: draft` until human approval.
+
+Skill index: [.claude/skills/README.md](.claude/skills/README.md)
