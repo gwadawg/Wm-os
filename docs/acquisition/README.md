@@ -57,7 +57,7 @@ Offer, sales, marketing, lead generation, lead stages, objection handling, scrip
 **Batch A** converted 2026-05-20. Sales funnel spine is **`status: active`**; objection depth and training docs remain `draft`.
 
 - [Sales](sales/README.md) — operating hub (active funnel + draft library)
-- [Marketing](marketing/README.md) — Money Tales email SOP (`draft`)
+- [Marketing](marketing/README.md) — Case study email framework + Money Tales email SOP (`draft`)
 - [Intelligence](intelligence/README.md) — Sales Intelligence Bible (`active`)
 - [Offer](offer/README.md) — see [company money model](../company/overview-money-model-april-26.md)
 - [WM Sales Call Tracker](wm-sales-call-tracker.md) — spreadsheet wrapper (`draft`)
