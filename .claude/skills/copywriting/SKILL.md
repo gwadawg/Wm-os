@@ -1,6 +1,6 @@
 ---
 name: copywriting
-description: When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says "write copy for," "improve this copy," "rewrite this page," "marketing copy," "headline help," or "CTA copy." For email copy, see email-sequence. For popup copy, see popup-cro.
+description: When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says "write copy for," "improve this copy," "rewrite this page," "marketing copy," "headline help," or "CTA copy." For case study emails, testimonial emails, or proof-led nurture emails, read the Waiz Case Study Email Copy Framework in docs/ before drafting. For email copy, see email-sequence. For popup copy, see popup-cro.
 ---
 
 # Copywriting
@@ -33,6 +33,20 @@ Gather this context (ask if not provided):
 - Where is traffic coming from? (ads, organic, email)
 - What do visitors already know before arriving?
 - What messaging are they seeing before this page?
+
+---
+
+## Waiz Media OS — Email Frameworks (read before drafting)
+
+When the task is a **case study email**, **testimonial email**, **social-proof email**, or any proof-led email that uses a client result as the vehicle:
+
+1. **Read first:** [docs/acquisition/marketing/case-study-email-copy-framework.md](../../docs/acquisition/marketing/case-study-email-copy-framework.md)
+2. **Follow its 3-step structure exactly** (unspoken question → concise written case study → optional video deep dive + CTA). Do not substitute a generic email template.
+3. **Voice:** helpful authoritative expert; proof does the selling — not a desperate pitch.
+
+**Not case study emails:** story-driven nurture uses [Money Tales Email Copy Framework SOP](../../docs/acquisition/marketing/sop-money-tales-email-copy-framework.md) — different format; do not mix the two.
+
+For Waiz voice and offer routing when relevant, see [Identity Core](../../docs/company/doctrine-identity-core-april-26.md) and [Money Model](../../docs/company/overview-money-model-april-26.md).
 
 ---
 
@@ -453,3 +467,8 @@ Maintain consistency throughout, but adjust intensity:
 - **email-sequence**: For email copywriting
 - **popup-cro**: For popup and modal copy
 - **ab-test-setup**: To test copy variations properly
+
+## Related Waiz OS Docs
+
+- [Case Study Email Copy Framework](../../docs/acquisition/marketing/case-study-email-copy-framework.md) — proof-led case study / testimonial emails
+- [Money Tales Email Copy Framework SOP](../../docs/acquisition/marketing/sop-money-tales-email-copy-framework.md) — story-driven nurture emails
