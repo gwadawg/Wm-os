@@ -32,12 +32,13 @@ These canonical docs are **`status: active`** — safe for team execution and AI
 
 Pricing and deal structure: founder-only per money model. Boot Camp downsell when not DFY-qualified.
 
-## Client fulfillment — performance
+## Client fulfillment — performance & infrastructure
 
+Boundaries: [Waiz vs client marketing](client-fulfillment/waiz-vs-client-marketing-boundaries.md) — company marketing lives under `acquisition/marketing/`, not here.
+
+- [Infrastructure hub](client-fulfillment/infrastructure/README.md) → [CRM Infrastructure](client-fulfillment/crm-architecture/crm-infrastructure.md), [How The WM AI Bot Works](client-fulfillment/crm-architecture/how-wm-ai-bot-works.md)
 - [Constraint Troubleshooting SOP](client-fulfillment/client-success/constraint-troubleshooting-sop.md)
 - [Fulfillment Constraint Diagnosis And KPI Standards](client-fulfillment/client-success/fulfillment-constraint-diagnosis-kpi-standards.md)
-- [CRM Infrastructure](client-fulfillment/crm-architecture/crm-infrastructure.md)
-- [How The WM AI Bot Works](client-fulfillment/crm-architecture/how-wm-ai-bot-works.md)
 
 ## Operations
 

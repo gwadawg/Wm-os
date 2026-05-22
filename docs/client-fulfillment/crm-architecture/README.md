@@ -9,7 +9,9 @@ review_cycle: monthly
 
 # Client Fulfillment — CRM Architecture
 
-GoHighLevel infrastructure, tags, and AI bot behavior.
+GoHighLevel infrastructure, tags, and AI bot behavior for **clients**.
+
+Also listed under [Infrastructure hub](../infrastructure/README.md) (same docs — use either entry point on GitHub).
 
 ## Active spine
 

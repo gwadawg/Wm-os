@@ -15,6 +15,8 @@ This repository is the Waiz Media operating system. Agents should treat `docs/` 
 | Business docs, migration, SOPs | [.claude/skills/waiz-business-os/SKILL.md](.claude/skills/waiz-business-os/SKILL.md) |
 | Word export conversion | [.claude/skills/docx/SKILL.md](.claude/skills/docx/SKILL.md) |
 | Spreadsheet wrappers | [.claude/skills/xlsx/SKILL.md](.claude/skills/xlsx/SKILL.md) |
+| Translate docs for team readability | [.claude/skills/team-doc-translate/SKILL.md](.claude/skills/team-doc-translate/SKILL.md) |
+| Publish team Google Docs (one-way from `docs/`) | [.claude/skills/team-doc-publish/SKILL.md](.claude/skills/team-doc-publish/SKILL.md) |
 
 Full index: [.claude/skills/README.md](.claude/skills/README.md)
 

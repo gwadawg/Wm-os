@@ -1,0 +1,7 @@
+# Copy to team-publish.local.yaml (gitignored) and fill in paths.
+# Never commit the service account JSON or this file with real paths.
+
+credentials_path: /path/to/your-service-account.json
+
+# Optional: override if GOOGLE_APPLICATION_CREDENTIALS is not set
+# root_folder_id: ""  # from Drive URL: .../folders/FOLDER_ID

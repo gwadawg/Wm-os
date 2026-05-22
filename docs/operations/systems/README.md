@@ -14,6 +14,7 @@ OPS priority ladder, billing reports, technical issue identification, Manus opti
 ## Active spine
 
 - [OPS Manager Priority Ladder](ops-manager-priority-ladder.md)
+- [Team Google Drive Publish](team-drive-publish.md)
 
 ## Draft — review before live use
 

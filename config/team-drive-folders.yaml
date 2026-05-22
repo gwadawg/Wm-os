@@ -1,0 +1,28 @@
+service_account_email: claude-drive-access@rugged-nucleus-383418.iam.gserviceaccount.com
+format_reference_doc_id: "19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y"
+format_reference_url: "https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit"
+root_folder_id: 0AOLZCgRY9xhwUk9PVA
+root_folder_name: Waiz Team SOPs
+shared_drive_id: 0AOLZCgRY9xhwUk9PVA
+folders:
+  start_here:
+    name: 00 - Start Here
+    id: 1fsCAiPk7twwmG1vT1uZmQNx36pNRJUZ_
+  company_basics:
+    name: 01 - Company Basics
+    id: 1PkifQbl3JvW5pU583lRKxwllrRbCULA9
+  setters:
+    name: 02 - Setters
+    id: 1aPIK6wpRXBUG2yy_cD6sdJr8N4djeiQd
+  closers:
+    name: 03 - Closers
+    id: 16RGEmTO9YzCelkyq12yUz-5HQZhwUTeR
+  client_success:
+    name: 04 - Client Success
+    id: 1fpVdR9gLeM978XNATMV8lBCr8E6sR2NQ
+  operations:
+    name: 05 - Operations
+    id: 1ckeEO9NgYf2u6Z26Occ-LtRcvvkf14lt
+  archive:
+    name: 99 - Archive
+    id: 1-AYcuWsWmhNJ3gEuuP8hoQJ0_Mq2Kwil

@@ -1,0 +1,127 @@
+entries:
+- repo_path: docs/company/doctrine-identity-core-april-26.md
+  team_title: Who We Are — Identity Core
+  drive_folder: company_basics
+  google_doc_id: 1ysvZh9mKrfFkYKKvsX6IOgUyB2u48ucODtouoDWMCMY
+  publish_status: active
+  team_role: all
+  last_published: '2026-05-21'
+- repo_path: docs/company/overview-money-model-april-26.md
+  team_title: Offer And Money Model Overview
+  drive_folder: company_basics
+  google_doc_id: 1tRoK-X5R5Jw0f1H4xQcNeYEwp2XKUVkHAf7aTXpdBrQ
+  publish_status: active
+  team_role: all
+  last_published: '2026-05-21'
+- repo_path: docs/company/doctrine-brand-and-visual-identity-april-26.md
+  team_title: Brand And Visual Identity
+  drive_folder: company_basics
+  google_doc_id: 1JxJ-lVDQaJFD2_dJ4OhhuAARYr9MoOg4r-NcqV32tPY
+  publish_status: active
+  team_role: all
+  last_published: '2026-05-21'
+- repo_path: docs/acquisition/intelligence/wm-sales-intelligence-bible.md
+  team_title: Sales Intelligence Bible
+  drive_folder: setters
+  google_doc_id: 1TPOlL9Ssfr6-SsUEKMEBXZVQUU09lPiql0RwMPqiAHA
+  publish_status: active
+  team_role: setter
+  last_published: '2026-05-21'
+- repo_path: docs/acquisition/sales/intro-call-qualification-framework.md
+  team_title: Intro Call Qualification
+  drive_folder: setters
+  google_doc_id: 13InHTQCFIrDOMUSOE9bKrEjIKKkx13EtiwBkZQGE2Cg
+  publish_status: active
+  team_role: setter
+  last_published: '2026-05-21'
+- repo_path: docs/acquisition/sales/script-intro-call-basic.md
+  team_title: Intro Call Script
+  drive_folder: setters
+  google_doc_id: 1ehtDGvyI14SPfU45mPAGFGIsSU6IPGkth-Ir98yuGPE
+  publish_status: active
+  team_role: setter
+  last_published: '2026-05-21'
+- repo_path: docs/acquisition/sales/disqualifying-financial-qualification.md
+  team_title: Disqualifying And Financial Qualification
+  drive_folder: setters
+  google_doc_id: 1AGi1OuRBezM7-fwrJsCWwlM830lpTG5D9SxFrmMUDsE
+  publish_status: active
+  team_role: setter
+  last_published: '2026-05-21'
+- repo_path: docs/acquisition/sales/no-shows-maximizing-show-rates-setter-levers.md
+  team_title: No Shows And Show Rate
+  drive_folder: setters
+  google_doc_id: 1uyWLP-rSqIp29cBo_ti3Bhqr38ERwaaoGjXt-GsHJeU
+  publish_status: active
+  team_role: setter
+  last_published: '2026-05-21'
+- repo_path: docs/acquisition/sales/setter-daily-operations-playbook.md
+  team_title: Setter Daily Operations
+  drive_folder: setters
+  google_doc_id: 1oY7B_gMe3oJ_QDhIaHBslcxzDEbc6qMsUr0SBQmkYv0
+  publish_status: active
+  team_role: setter
+  last_published: '2026-05-21'
+- repo_path: docs/acquisition/sales/discovery-call-script-2026.md
+  team_title: Discovery Call Script
+  drive_folder: closers
+  google_doc_id: 1WoPZ_JA5D9kQJtys8KY9C3TK-AXPdAnWO2ysQsUjx5o
+  publish_status: active
+  team_role: closer
+  last_published: '2026-05-21'
+- repo_path: docs/acquisition/sales/script-demo-call.md
+  team_title: Demo Call Script
+  drive_folder: closers
+  google_doc_id: 10fsfYV0GLxPCjM3cReMQMcUqk6ShU2WM9d6XOQUlG9A
+  publish_status: active
+  team_role: closer
+  last_published: '2026-05-21'
+- repo_path: docs/acquisition/sales/objection-handling-hub.md
+  team_title: Objection Handling Hub
+  drive_folder: closers
+  google_doc_id: 1OVWpCYmSsgkKJh9IIiZ-7SNfxnZBvwUCm7FK1hICctk
+  publish_status: active
+  team_role: closer
+  last_published: '2026-05-21'
+- repo_path: docs/client-fulfillment/client-success/constraint-troubleshooting-sop.md
+  team_title: Constraint Troubleshooting
+  drive_folder: client_success
+  google_doc_id: 108AndXUkCQQaye3GgQHjDtkQTyUDMcjN05i9Gr-8XOU
+  publish_status: active
+  team_role: client_success
+  last_published: '2026-05-21'
+- repo_path: docs/client-fulfillment/client-success/fulfillment-constraint-diagnosis-kpi-standards.md
+  team_title: Fulfillment KPI Standards
+  drive_folder: client_success
+  google_doc_id: 17lHMbyMOpdwjsa-3uje6UyqNJl-TVUTGGTYpauugaC4
+  publish_status: active
+  team_role: client_success
+  last_published: '2026-05-21'
+- repo_path: docs/client-fulfillment/crm-architecture/crm-infrastructure.md
+  team_title: CRM Infrastructure Overview
+  drive_folder: client_success
+  google_doc_id: 1ija2RFK1Mto0TinregM2MwA5yKJCKd4qqVUOI3WNG64
+  publish_status: active
+  team_role: client_success
+  last_published: '2026-05-21'
+- repo_path: docs/client-fulfillment/crm-architecture/how-wm-ai-bot-works.md
+  team_title: How The WM AI Bot Works
+  drive_folder: client_success
+  google_doc_id: 1UDe_xi89VXYIKEtTBkKD8nTsSi2I1Zfk3I07RgoZMXI
+  publish_status: active
+  team_role: client_success
+  last_published: '2026-05-21'
+- repo_path: docs/operations/systems/ops-manager-priority-ladder.md
+  team_title: OPS Manager Priority Ladder
+  drive_folder: operations
+  google_doc_id: 1f5XIKg5lYpPu5vgIEPLIbCiISGmRBAwSVujwsZ0iik4
+  publish_status: active
+  team_role: operations
+  last_published: '2026-05-21'
+- repo_path: docs/_inventory/team-start-here.md
+  team_title: Start Here — Waiz Team SOPs
+  drive_folder: start_here
+  google_doc_id: 16sDBgZ91RkEk0ehEa9DV17VItVRA0R1JXBSWu49HrBA
+  publish_status: active
+  team_role: all
+  last_published: '2026-05-21'

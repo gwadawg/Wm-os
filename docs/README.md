@@ -23,17 +23,22 @@ Edit files in `docs/`, save, then **Commit** and **Push** in GitHub Desktop (or 
 | Setter | [Sales Operating Hub](acquisition/sales/README.md) — intro qualify through show rate |
 | Closer | [Sales Operating Hub](acquisition/sales/README.md) — discovery, demo, [Objection Hub](acquisition/sales/objection-handling-hub.md) |
 | Client success | [Constraint Troubleshooting](client-fulfillment/client-success/constraint-troubleshooting-sop.md), [KPI standards](client-fulfillment/client-success/fulfillment-constraint-diagnosis-kpi-standards.md) |
+| Media buyer | [Client marketing](client-fulfillment/client-marketing/README.md), [Media buying SOPs](client-fulfillment/media-buying/README.md), [Infrastructure (CRM)](client-fulfillment/infrastructure/README.md) |
 | Ops | [OPS Priority Ladder](operations/systems/ops-manager-priority-ladder.md), [Operations](operations/README.md) |
 | Migrating docs | [Drive inventory](_inventory/google-drive-inventory.md), [Migration backlog](_inventory/migration-backlog.md) |
 
 **Superseded Drive files:** [archive/superseded-sources.md](archive/superseded-sources.md) — do not use raw `Archive/` copies for operations.
+
+## Team access (Google Drive)
+
+GitHub `docs/` is the **source of truth**. The shared Drive library `Waiz Team SOPs` holds one-way, team-friendly copies — publish on demand, not sync. See [Team Google Drive Publish](operations/systems/team-drive-publish.md) and [team-publish-registry.yaml](_inventory/team-publish-registry.yaml).
 
 ## Repo Layers
 
 - `source-docs/waiz-drive-export/`: raw Google Drive export. Preserve this as source material.
 - `docs/`: cleaned, canonical, AI-readable operating system.
 - `docs/_inventory/`: import inventory, classification summaries, duplicate candidates, and migration backlog.
-- `.claude/skills/`: agent skills — [index](../.claude/skills/README.md) (`waiz-business-os`, `docx`, `xlsx`).
+- `.claude/skills/`: agent skills — [index](../.claude/skills/README.md) (`waiz-business-os`, `docx`, `xlsx`, `team-doc-publish`).
 - [AGENTS.md](../AGENTS.md): short map for coding agents.
 
 ## Folder Structure (Approved)
@@ -45,7 +50,7 @@ Top-level domains stay as listed below. Add **subfolders only as canonical docs 
 | [Company](company/README.md) | Flat (doctrines, overviews) |
 | [Acquisition](acquisition/README.md) | `sales/`, `marketing/`, `intelligence/`, `offer/` |
 | [Operations](operations/README.md) | `people/`, `hiring/`, `systems/`, `reporting/` |
-| [Client Fulfillment](client-fulfillment/README.md) | `onboarding/`, `client-success/`, `media-buying/`, `crm-architecture/`, `reverse-mortgage-dna/`, `course-material/` |
+| [Client Fulfillment](client-fulfillment/README.md) | `infrastructure/`, `client-marketing/`, `media-buying/`, `onboarding/`, `client-success/`, `crm-architecture/`, `reverse-mortgage-dna/`, `course-material/` — [Waiz vs client marketing](client-fulfillment/waiz-vs-client-marketing-boundaries.md) |
 | [Automations](automations/README.md) | `crm/`, `ai-bots/`, `reporting/`, `sales/` |
 | [Prompts](prompts/README.md) | Mirror operating domain |
 | [KPIs](kpis/README.md) | Mirror operating domain |

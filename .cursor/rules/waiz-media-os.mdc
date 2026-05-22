@@ -19,5 +19,6 @@ When working in this repository:
 4. Never edit `source-docs/waiz-drive-export/`. Output canonical Markdown under `docs/` only.
 5. Check [docs/_inventory/duplicate-resolutions.md](docs/_inventory/duplicate-resolutions.md) before converting overlapping sources.
 6. New docs: YAML frontmatter, kebab-case paths, `status: draft` until human approval.
+7. After SOP or playbook updates in `docs/`, offer team Google Drive publish per [team-doc-publish](.claude/skills/team-doc-publish/SKILL.md). Repo is source of truth; Drive is one-way team output only.
 
 Skill index: [.claude/skills/README.md](.claude/skills/README.md)

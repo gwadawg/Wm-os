@@ -32,6 +32,7 @@ Use this backlog to turn the raw Google Drive export into durable AI-ready compa
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/No Shows & Maximizing Show Rates (Setter Levers).docx` to `docs/acquisition/sales/no-shows-maximizing-show-rates-setter-levers.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Sales Admin Work/EOD Report SOP (Setters & Closers).docx` to `docs/acquisition/sales/eod-report-sop-setters-closers.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales Admin Work/Setter Daily Operations Playbook_...` to `docs/acquisition/sales/setter-daily-operations-playbook.md`.
+- [x] Create LinkedIn LO outreach system: `docs/acquisition/sales/linkedin-lo-outreach-sop.md`, `docs/acquisition/sales/linkedin-dm-angle-library.md`, `docs/prompts/acquisition/linkedin-dm-draft-prompt.md`, `.claude/skills/linkedin-lo-outreach/` (adapted from May 2026 founder training; `draft` until week-1 baseline).
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Script -- Demo Call.docx` to `docs/acquisition/sales/script-demo-call.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Script -- Intro Call Basic.docx` to `docs/acquisition/sales/script-intro-call-basic.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/WM Objection Handling Word Tracking.docx` to `docs/acquisition/sales/wm-objection-handling-word-tracking.md`.
@@ -62,6 +63,13 @@ Use this backlog to turn the raw Google Drive export into durable AI-ready compa
 - [x] Convert fulfillment KPI diagnosis doc to `docs/client-fulfillment/client-success/fulfillment-constraint-diagnosis-kpi-standards.md`.
 - [x] Convert `Waiz Media OS/03 _ Client Fulfillment/Client Course Material/Skool Community/Bootcamp /SOP  Setting Up Your Facebook Lead Form 📝.docx` to `docs/client-fulfillment/course-material/sop-setting-up-facebook-lead-form.md`.
 - [x] Convert `Waiz Media OS/03 _ Client Fulfillment/Client Course Material/Skool Community/Bootcamp /lead_nurture_playbook.docx` to `docs/client-fulfillment/course-material/lead-nurture-playbook.md`.
+
+## Phase 2b: Client fulfillment structure (approved 2026-05-20)
+
+- [x] Document Waiz vs client marketing boundaries → `docs/client-fulfillment/waiz-vs-client-marketing-boundaries.md`
+- [x] Add `infrastructure/` hub (points to `crm-architecture/` active docs)
+- [x] Add `client-marketing/` folder (playbooks; links to `media-buying/` execution SOPs)
+- [ ] Convert `03 _ Client Fulfillment/Media Buying/` batch (~16 docs) → `media-buying/` + `client-marketing/` per boundaries doc
 
 ## Phase 3: Gap Analysis
 

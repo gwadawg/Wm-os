@@ -11,6 +11,10 @@ review_cycle: monthly
 
 Internal systems, software stack, reports, people operations, team responsibilities, and operating cadence.
 
+## Team access (Google Drive)
+
+Canonical truth stays in `docs/`. To publish layperson-readable copies for the team, see [Team Google Drive Publish](systems/team-drive-publish.md).
+
 ## Subfolders
 
 - [People](people/README.md)

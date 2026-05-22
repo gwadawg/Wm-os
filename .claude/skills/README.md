@@ -7,8 +7,11 @@ Skills in this folder are **repo-local**. Cursor and Claude Code discover them f
 | Skill | Path | Use when |
 |-------|------|----------|
 | **Waiz Business OS** | [waiz-business-os/SKILL.md](waiz-business-os/SKILL.md) | Any work in `docs/`, migration, SOPs, KPIs, repo structure, company operations |
+| **LinkedIn LO outreach** | [linkedin-lo-outreach/SKILL.md](linkedin-lo-outreach/SKILL.md) | LinkedIn DMs to reverse mortgage LOs — setter openers, founder replies, angle library |
 | **DOCX** | [docx/SKILL.md](docx/SKILL.md) | Reading or converting `.docx` from `source-docs/` |
 | **XLSX** | [xlsx/SKILL.md](xlsx/SKILL.md) | Sales trackers, scorecards, spreadsheets — summarize in Markdown, keep raw file |
+| **Team doc translate** | [team-doc-translate/SKILL.md](team-doc-translate/SKILL.md) | Humanize repo SOPs into design-focused team copy before publish |
+| **Team doc publish** | [team-doc-publish/SKILL.md](team-doc-publish/SKILL.md) | One-way publish of approved `docs/` to team Google Drive (layperson-readable) |
 
 Waiz Business OS references:
 
@@ -21,6 +24,7 @@ Waiz Business OS references:
 |-------|----------|
 | [copywriting/SKILL.md](copywriting/SKILL.md) | Marketing copy, landing pages, email voice |
 | [marketing-psychology/SKILL.md](marketing-psychology/SKILL.md) | Mental models, persuasion, buyer psychology for messaging and offers |
+| [linkedin-lo-outreach/SKILL.md](linkedin-lo-outreach/SKILL.md) | LinkedIn outbound to loan officers (see also `docs/acquisition/sales/linkedin-lo-outreach-sop.md`) |
 | [senior-prompt-engineer/SKILL.md](senior-prompt-engineer/SKILL.md) | Prompt libraries under `docs/prompts/` |
 | [file-organizer/SKILL.md](file-organizer/SKILL.md) | Large folder cleanup proposals (propose before moving) |
 | [brainstorming/SKILL.md](brainstorming/SKILL.md) | New product/process design before writing docs |

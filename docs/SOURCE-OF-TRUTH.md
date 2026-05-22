@@ -3,7 +3,7 @@ title: Source Of Truth Rules
 domain: company
 owner: operations
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-05-21
 review_cycle: quarterly
 ---
 
@@ -11,13 +11,14 @@ review_cycle: quarterly
 
 Use this page before creating, moving, or converting any Waiz Media OS document.
 
-## Two Layers
+## Layers
 
 | Layer | Path | Role |
 |-------|------|------|
 | Raw export | `source-docs/waiz-drive-export/` | Frozen evidence from Google Drive. **Never edit.** Never cite as operating instructions once a canonical doc exists. |
-| Canonical OS | `docs/` | What the team and AI follow. One source of truth per process, policy, KPI, prompt, or playbook. |
-| Migration control | `docs/_inventory/` | Inventory, duplicates, backlog, domain owners. |
+| Canonical OS | `docs/` | **Source of truth.** What you and AI create, update, and approve. One source of truth per process, policy, KPI, prompt, or playbook. |
+| Migration control | `docs/_inventory/` | Inventory, duplicates, backlog, domain owners, [team publish registry](_inventory/team-publish-registry.yaml). |
+| Team publish | Google Drive `Waiz Team SOPs` | **Downstream only.** Layperson-readable copies for team access. Not canonical; edits in Drive do not sync back. Publish via [team-drive-publish.md](operations/systems/team-drive-publish.md). |
 
 ## Before You Convert A File
 
@@ -70,8 +71,16 @@ Fix typos in canonical names (`infrastructure` not `infrustructure`). Do not cop
 | Drive `Archive/` and old MASTER docs | Archive summary only after canonical replacement exists |
 | Skool course material | Convert last; often duplicate internal SOPs |
 
+## Team Publish Rules
+
+- Publish only after repo doc is `status: active` (unless explicit `--force`).
+- Register every published file in `team-publish-registry.yaml` before first publish.
+- Repo wins on conflict: re-publish overwrites the team Doc body.
+- Do not mirror the old `Waiz Media OS` Drive export tree; use role-based team folders only.
+
 ## Related Docs
 
+- [Team Drive Publish SOP](operations/systems/team-drive-publish.md)
 - [Waiz Media OS README](README.md)
 - [Operating Map](OPERATING-MAP.md)
 - [Domain Owners](_inventory/domain-owners.md)

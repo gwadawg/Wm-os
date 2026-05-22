@@ -2,3 +2,9 @@
 
 # Large media — keep in Drive/local only (GitHub 100MB file limit)
 *.mp4
+
+# Google team publish credentials (never commit)
+*-service-account*.json
+team-publish-sa.json
+.config/waiz/
+config/team-publish.local.yaml

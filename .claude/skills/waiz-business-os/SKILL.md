@@ -49,6 +49,8 @@ Use these default principles:
 | [xlsx](../xlsx/SKILL.md) | Trackers and scorecards — Markdown summary + keep raw `.xlsx` |
 | [copywriting](../copywriting/SKILL.md) | Marketing copy only (not SOP structure) |
 | [senior-prompt-engineer](../senior-prompt-engineer/SKILL.md) | Building `docs/prompts/` assets |
+| [team-doc-translate](../team-doc-translate/SKILL.md) | Humanize repo docs into scannable team-facing copy |
+| [team-doc-publish](../team-doc-publish/SKILL.md) | One-way publish of approved docs to team Google Drive |
 
 Repo index: [../README.md](../README.md). Canonical rules: [docs/SOURCE-OF-TRUTH.md](../../docs/SOURCE-OF-TRUTH.md).
 
@@ -103,6 +105,18 @@ Before changing the repo:
 4. Keep file names stable once referenced by other documents.
 5. Cross-link related docs instead of copying large sections.
 6. Do not reorganize broad folder structures without first proposing a migration plan.
+
+## After creating or materially updating an SOP
+
+When you finish a new or updated canonical doc under `docs/` (especially SOPs, playbooks, scripts):
+
+1. Ensure `status: active` only when the user has approved it for team use.
+2. Ask verbatim:
+
+> This SOP is updated in the repo (`status: …`). Do you want to publish a team-friendly version to Google Drive now? (yes / skip / publish later)
+
+3. If yes, use the [team-doc-publish](../team-doc-publish/SKILL.md) skill — registry entry, then `scripts/publish-team-doc.py`.
+4. GitHub remains source of truth; Google Drive is downstream team access only.
 
 ## Output Style
 

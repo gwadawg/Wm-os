@@ -94,6 +94,8 @@ During any "Priority List" block, work through the following lead sources in thi
 
 5. New Lead Hunting (Meta): Once all other priority tasks are exhausted, dedicate time to proactively hunting for new leads on social media platforms like Meta (Facebook/Instagram). This ensures the pipeline is always being replenished.
 
+6. LinkedIn Hunt Block (30–60 min): Mine Sales Navigator lists, groups, and post engagement per [LinkedIn LO Outreach SOP](linkedin-lo-outreach-sop.md). Setter sends blank connects and **first DM only**; hand off to Gabriel on any reply. Use [LinkedIn DM Angle Library](linkedin-dm-angle-library.md) for openers.
+
 ## Appendix: Supporting Guidelines
 To further enhance workflow, the following guidelines from the reference playbook are included.
 
@@ -108,6 +110,8 @@ When handling objections via text, focus on setting an appointment rather than e
 
 ## Related Docs
 
+- [LinkedIn LO Outreach SOP](linkedin-lo-outreach-sop.md)
+- [LinkedIn DM Angle Library](linkedin-dm-angle-library.md)
 - [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md)
 - [Identity Core](../../company/doctrine-identity-core-april-26.md)
 - [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md)

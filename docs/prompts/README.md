@@ -17,7 +17,7 @@ Reusable AI prompts for sales, operations, media buying, client success, reporti
 
 ## Canonical Docs
 
-Canonical Markdown docs will be added here as source files are converted and approved.
+- [LinkedIn DM Draft Prompt](acquisition/linkedin-dm-draft-prompt.md) (`draft`) — Claude project for LO outreach; pairs with [LinkedIn LO Outreach SOP](../acquisition/sales/linkedin-lo-outreach-sop.md)
 
 ## Open Gaps
 
