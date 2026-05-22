@@ -1,0 +1,14 @@
+# Team publish metadata — see team-doc-publish skill
+publish_skill: team-doc-publish
+drive_folder: setters
+format_spec: docs/templates/wm-team-doc-format-spec.md
+
+entries:
+  - repo_path: docs/acquisition/outbound/linkedin/process.md
+    team_title: LinkedIn Outreach — Process
+    team_role: setter
+    publish_status: draft
+  - repo_path: docs/acquisition/outbound/linkedin/copy-angles.md
+    team_title: LinkedIn Outreach — Scripts And Angles
+    team_role: setter
+    publish_status: draft

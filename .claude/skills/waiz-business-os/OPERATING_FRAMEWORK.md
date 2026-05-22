@@ -52,6 +52,24 @@ Writing rules:
 - Mark uncertain information as an assumption or open question.
 - Avoid duplicating content. Link to the canonical source instead.
 
+## Team-facing publish format (Google Drive)
+
+Repo Markdown is the **source of truth**. When a SOP is approved for the team (`status: active`), publish a **scannable Google Doc** that matches the WM visual standard — do not paste raw repo Markdown into Drive.
+
+| Layer | Where | Format |
+|-------|--------|--------|
+| Canonical | `docs/` | Structured Markdown (sections below) |
+| Team-facing | Google Drive | WM branded layout via publish pipeline |
+
+**Layout reference (match this look):**
+
+- Live doc: [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit)
+- Written spec: [wm-team-doc-format-spec.md](../../docs/templates/wm-team-doc-format-spec.md)
+- Skills: [team-doc-translate](../team-doc-translate/SKILL.md) → [team-doc-publish](../team-doc-publish/SKILL.md)
+- Publish SOP: [team-drive-publish.md](../../docs/operations/systems/team-drive-publish.md)
+
+When authoring repo SOPs, write content that **translates cleanly** into that layout: short Overview bullets (become 📌 NORTH STAR callout), clear H2-worthy subsections, decision tables, and field-style labels (`What It Is`, `How to Handle It`) where helpful. Strip repo-only sections (`Open Questions`, migration notes) before publish.
+
 ## Naming Conventions
 
 Use lowercase kebab-case for files and folders:
@@ -197,3 +215,5 @@ review_cycle: monthly
 ## Open Questions
 - [Question 1]
 ```
+
+After the SOP is active in the repo, the published team copy must follow [wm-team-doc-format-spec.md](../../docs/templates/wm-team-doc-format-spec.md) (cover block, HEADING_1/2, callout tables, footer). Reference layout: [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit).

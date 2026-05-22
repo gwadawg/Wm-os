@@ -61,7 +61,7 @@ entries:
   google_doc_id: 1oY7B_gMe3oJ_QDhIaHBslcxzDEbc6qMsUr0SBQmkYv0
   publish_status: active
   team_role: setter
-  last_published: '2026-05-21'
+  last_published: '2026-05-22'
 - repo_path: docs/acquisition/sales/discovery-call-script-2026.md
   team_title: Discovery Call Script
   drive_folder: closers
@@ -117,11 +117,21 @@ entries:
   google_doc_id: 1f5XIKg5lYpPu5vgIEPLIbCiISGmRBAwSVujwsZ0iik4
   publish_status: active
   team_role: operations
-  last_published: '2026-05-21'
+  last_published: '2026-05-22'
 - repo_path: docs/_inventory/team-start-here.md
   team_title: Start Here — Waiz Team SOPs
   drive_folder: start_here
   google_doc_id: 16sDBgZ91RkEk0ehEa9DV17VItVRA0R1JXBSWu49HrBA
   publish_status: active
   team_role: all
-  last_published: '2026-05-21'
+  last_published: '2026-05-22'
+- repo_path: docs/acquisition/outbound/linkedin/process.md
+  team_title: LinkedIn Outreach — Process
+  drive_folder: setters
+  publish_status: draft
+  team_role: setter
+- repo_path: docs/acquisition/outbound/linkedin/copy-angles.md
+  team_title: LinkedIn Outreach — Scripts And Angles
+  drive_folder: setters
+  publish_status: draft
+  team_role: setter

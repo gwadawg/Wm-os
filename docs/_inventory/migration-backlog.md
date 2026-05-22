@@ -32,7 +32,8 @@ Use this backlog to turn the raw Google Drive export into durable AI-ready compa
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/No Shows & Maximizing Show Rates (Setter Levers).docx` to `docs/acquisition/sales/no-shows-maximizing-show-rates-setter-levers.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Sales Admin Work/EOD Report SOP (Setters & Closers).docx` to `docs/acquisition/sales/eod-report-sop-setters-closers.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales Admin Work/Setter Daily Operations Playbook_...` to `docs/acquisition/sales/setter-daily-operations-playbook.md`.
-- [x] Create LinkedIn LO outreach system: `docs/acquisition/sales/linkedin-lo-outreach-sop.md`, `docs/acquisition/sales/linkedin-dm-angle-library.md`, `docs/prompts/acquisition/linkedin-dm-draft-prompt.md`, `.claude/skills/linkedin-lo-outreach/` (adapted from May 2026 founder training; `draft` until week-1 baseline).
+- [x] Create LinkedIn LO outreach system under `docs/acquisition/outbound/linkedin/` (manifest, process, copy-angles, compliance, log-schema) + `.claude/skills/linkedin-lo-outreach/` (`draft` until week-1 baseline). Legacy paths in `sales/` are redirects.
+- [ ] Publish LinkedIn process + copy-angles to Drive `02 - Setters` when `active` (team-publish-registry).
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Script -- Demo Call.docx` to `docs/acquisition/sales/script-demo-call.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Script -- Intro Call Basic.docx` to `docs/acquisition/sales/script-intro-call-basic.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/WM Objection Handling Word Tracking.docx` to `docs/acquisition/sales/wm-objection-handling-word-tracking.md`.

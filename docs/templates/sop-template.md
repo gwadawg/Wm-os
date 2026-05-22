@@ -61,8 +61,23 @@ source_document: source-docs/waiz-drive-export/...
 
 ## Related Docs
 
-- [Related document](../path/document.md)
+- [Related document example](../acquisition/sales/README.md)
 
 ## Open Questions
 
 - [Question]
+
+---
+
+## Team publish (Google Drive)
+
+When this SOP is `status: active` and published for the team, the Drive copy must match the **WM Objection Categories** layout — not raw repo Markdown.
+
+| Resource | Link |
+|----------|------|
+| Live format reference | https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit |
+| Format spec | [wm-team-doc-format-spec.md](wm-team-doc-format-spec.md) |
+| Publish checklist | [team-doc-publish-template.md](team-doc-publish-template.md) |
+| Publish SOP | [team-drive-publish.md](../operations/systems/team-drive-publish.md) |
+
+Write repo sections so they translate well: concise Overview (→ 📌 NORTH STAR callout), scannable subsections (→ HEADING_2), tables for steps/categories, bold field labels where useful. Omit `Open Questions` and repo-only links from the team doc.

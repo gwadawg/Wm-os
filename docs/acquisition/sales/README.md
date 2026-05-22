@@ -18,7 +18,7 @@ See [Approved Operating Spine](../../SPINE.md) and [SOURCE-OF-TRUTH](../../SOURC
 | Stage | Role | Doc |
 |-------|------|-----|
 | Positioning / psychology | Sales leadership | [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md) |
-| LinkedIn outreach | Setter → founder DM | [LinkedIn LO Outreach SOP](linkedin-lo-outreach-sop.md), [LinkedIn DM Angle Library](linkedin-dm-angle-library.md) |
+| LinkedIn outreach | Setter → founder DM | [Outbound / LinkedIn](../outbound/linkedin/README.md) — [manifest](../outbound/linkedin/manifest.yaml) |
 | Intro qualify | Setter | [Intro Call Qualification Framework](intro-call-qualification-framework.md), [Intro Call Basic Script](script-intro-call-basic.md) |
 | Financial fit / disqualify | Setter | [Disqualifying And Financial Qualification](disqualifying-financial-qualification.md) |
 | Show rate | Setter | [No Shows And Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md) |
@@ -31,8 +31,7 @@ Pricing and packaging: [Money Model](../../company/overview-money-model-april-26
 
 ## Active docs
 
-- [LinkedIn LO Outreach SOP](linkedin-lo-outreach-sop.md) (`draft` — review before live use)
-- [LinkedIn DM Angle Library](linkedin-dm-angle-library.md) (`draft`)
+- [LinkedIn outbound (AI)](../outbound/linkedin/README.md) (`draft`) — [process](../outbound/linkedin/process.md), [copy-angles](../outbound/linkedin/copy-angles.md)
 - [Objection Handling Hub](objection-handling-hub.md)
 - [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md)
 - [Intro Call Qualification Framework](intro-call-qualification-framework.md)

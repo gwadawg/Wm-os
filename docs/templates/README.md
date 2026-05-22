@@ -17,7 +17,9 @@ Reusable SOP, workflow, KPI, prompt, onboarding, sales, and client success templ
 
 ## Canonical Docs
 
-- [SOP Template](sop-template.md): starter shell for new SOPs (also see `.claude/skills/waiz-business-os/TEMPLATES.md`).
+- [SOP Template](sop-template.md): starter shell for new repo SOPs (also see `.claude/skills/waiz-business-os/TEMPLATES.md`).
+- [WM Team Doc Format Spec](wm-team-doc-format-spec.md): visual standard for team Google Docs — match [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit).
+- [Team Doc Publish Template](team-doc-publish-template.md): publish checklist and layout rules.
 
 ## Open Gaps
 

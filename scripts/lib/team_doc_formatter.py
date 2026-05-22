@@ -45,6 +45,7 @@ class FormattedDoc:
     owner_line: str
     blocks: list[Block] = field(default_factory=list)
     quick_reference: TableSpec | None = None
+    glance_pending: str = ""
 
 
 def team_subtitle(owner: str) -> str:
@@ -59,7 +60,7 @@ def blocks_to_formatted_doc(
     owner: str,
 ) -> FormattedDoc:
     fd = FormattedDoc(title=title, owner_line=team_subtitle(owner))
-    fd._glance_pending = ""  # type: ignore[attr-defined]
+    fd.glance_pending = ""
     i = 0
     overview_started = False
     overview_paras = 0
@@ -77,7 +78,7 @@ def blocks_to_formatted_doc(
                 glance_bullets.append(blocks[i].text)
                 i += 1
             # Defer NORTH STAR until after Overview opening (see flush below)
-            fd._glance_pending = " ".join(glance_bullets[:4])  # type: ignore[attr-defined]
+            fd.glance_pending = " ".join(glance_bullets[:4])
             continue
 
         if b.kind == "heading2":
@@ -123,17 +124,17 @@ def blocks_to_formatted_doc(
 
         if overview_started and b.kind == "paragraph" and b.text:
             overview_paras += 1
-            if overview_paras == 2 and getattr(fd, "_glance_pending", ""):
+            if overview_paras == 2 and fd.glance_pending:
                 fd.blocks.append(
-                    Block("callout", fd._glance_pending, callout_type="north_star")  # type: ignore[attr-defined]
+                    Block("callout", fd.glance_pending, callout_type="north_star")
                 )
-                fd._glance_pending = ""  # type: ignore[attr-defined]
+                fd.glance_pending = ""
 
-    if getattr(fd, "_glance_pending", ""):
+    if fd.glance_pending:
         if not overview_started:
             fd.blocks.insert(0, Block("h1", "Overview"))
         fd.blocks.append(
-            Block("callout", fd._glance_pending, callout_type="north_star")  # type: ignore[attr-defined]
+            Block("callout", fd.glance_pending, callout_type="north_star")
         )
 
     fd.blocks.append(

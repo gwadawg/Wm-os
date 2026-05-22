@@ -1,87 +1,41 @@
 ---
 name: linkedin-lo-outreach
-description: Drafts and improves LinkedIn outreach to reverse mortgage loan officers using Waiz SOPs, angle library, and sales intelligence. Use for LinkedIn DMs, Sales Navigator outreach, setter openers, micro-notes, comment-first warm-up, follow-up sequences, Gabriel reply coaching, voice notes, or booking language.
+description: Drafts and improves LinkedIn outreach to reverse mortgage loan officers. Reads manifest.yaml first, then process, copy-angles, compliance, and log-schema. Use for LinkedIn DMs, Sales Navigator, setter openers, follow-ups, Gabriel replies, or booking language.
 ---
 
 # LinkedIn LO Outreach
 
-Waiz Media LinkedIn outbound for reverse mortgage LOs.
+**Read first:** [manifest.yaml](../../../docs/acquisition/outbound/linkedin/manifest.yaml) — load order and owners.
 
-**Setter:** Phase 0 comments → 90s research → pre-connect ritual → connect (blank or micro-note A/B) → first DM → **one** no-reply bump → handoff on reply.
+| Task | File |
+|------|------|
+| Workflow / phases / banned phrases | [process.md](../../../docs/acquisition/outbound/linkedin/process.md) |
+| Draft copy | [copy-angles.md](../../../docs/acquisition/outbound/linkedin/copy-angles.md) |
+| Compliance | [compliance.md](../../../docs/acquisition/outbound/linkedin/compliance.md) |
+| Tracker fields | [log-schema.md](../../../docs/acquisition/outbound/linkedin/log-schema.md) |
+| Claude project prompt | [prompt.md](prompt.md) |
 
-**Gabriel:** All replies, 3-touch ghost sequence, optional voice note, book, pre-call discovery; InMail touch 2+; dream-account omnichannel.
+Do **not** restate rules from process.md in drafts — enforce them.
 
-## Before You Draft
+## Classify
 
-1. Read [linkedin-lo-outreach-sop.md](../../../docs/acquisition/sales/linkedin-lo-outreach-sop.md).
-2. Read [linkedin-dm-angle-library.md](../../../docs/acquisition/sales/linkedin-dm-angle-library.md).
-3. [Identity Core](../../../docs/company/doctrine-identity-core-april-26.md) + [WM Sales Intelligence Bible](../../../docs/acquisition/intelligence/wm-sales-intelligence-bible.md).
-4. Pricing → [Money Model](../../../docs/company/overview-money-model-april-26.md) only.
-
-## Classify The Request
-
-| Type | Who | Rules |
-|------|-----|--------|
-| Comment (Phase 0) | Setter | 5–10/day, no pitch, ICP posts |
-| Connect micro-note | Setter | &lt;200 chars, signal only, A/B vs blank |
-| Setter opener | Setter | Angle 1–10, message 1, handoff on reply |
-| Setter bump | Setter | One only, 48–72h, no pitch |
-| Gabriel reply | Gabriel | Permission, I-moment, discovery |
-| Ghost touch 1–3 | Gabriel | Value → value → opt-out |
-| Voice note | Gabriel | Post-reply, 30–40s, mobile, warm only |
-| InMail | Gabriel | After connect+DM stall, Tier-A |
-| Book / pre-call | Gabriel | Times + email; discovery after book |
-
-Label: **Track A/B**, **tier** (standard/dream), **warm/cold**, voice (**Professional / Peer LO / Casual**).
+Track A/B · tier · stage (comment | micro_note | opener | setter_bump | reply | ghost_1–3 | voice_note | book | pre_call) · voice (Professional | Peer LO | Casual)
 
 ## Workflow
 
-1. Strongest signal (prefer **comment thread** if Phase 0 ran).
-2. Angle # + voice + `connect_type` if applicable.
-3. Draft; annotate psychology (mutuality, permission, follow-up value — no fake scarcity).
-4. Quality checklist.
-5. Log fields: `sequence_stage`, `connect_type`, `commented_before_connect`.
+1. Follow `load_order` in manifest.
+2. Pull [Identity Core](../../../docs/company/doctrine-identity-core-april-26.md) + [Sales Intelligence Bible](../../../docs/acquisition/intelligence/wm-sales-intelligence-bible.md) when needed.
+3. Draft from [copy-angles.md](../../../docs/acquisition/outbound/linkedin/copy-angles.md).
+4. Run checklist in [reference.md](reference.md).
 
-## Quality Checklist
+## Team publish
 
-- [ ] One question per message
-- [ ] Banned phrases absent (including setter bump — rephrase “curious if” → “wondering if”)
-- [ ] No pitch in M1 or connect note
-- [ ] Specific signal (not “loved your content”)
-- [ ] No fabricated stats; compliance-safe for mortgage B2B
-- [ ] InMail not first touch unless explicit test flag
-- [ ] Account safety: no volume spike recommendation
-
-## Output Format
-
-```markdown
-## Classification
-- Track: A | B
-- Tier: standard | dream
-- Stage: comment | micro_note | opener | setter_bump | reply | ghost_1 | ghost_2 | ghost_3 | voice_note | book | pre_call
-- Angle: #N
-- Voice: Professional | Peer LO | Casual
-- connect_type: blank | micro_note | n/a
-
-## Draft
-[text]
-
-## Annotations
-- Principle: [...]
-- sequence_stage: [...]
-
-## Handoff
-[HANDOFF_ON_REPLY if setter and prospect may reply]
-```
-
-## Reference
-
-[reference.md](reference.md) — account limits, sequences, voice notes, benchmarks.
+Human SOPs → Google Drive `02 - Setters` via [team-doc-publish](../team-doc-publish/SKILL.md) — [publish.meta.yaml](../../../docs/acquisition/outbound/linkedin/publish.meta.yaml).
 
 ## Examples
 
 [examples.md](examples.md)
 
-## Prompt
+## Related
 
-[linkedin-dm-draft-prompt.md](../../../docs/prompts/acquisition/linkedin-dm-draft-prompt.md)
+[waiz-business-os](../waiz-business-os/SKILL.md) · [copywriting](../copywriting/SKILL.md) · [marketing-psychology](../marketing-psychology/SKILL.md)

@@ -29,6 +29,7 @@ These canonical docs are **`status: active`** — safe for team execution and AI
 | Demo / close | Closer | [Demo Call Script](acquisition/sales/script-demo-call.md) |
 | Objections | Closer / setter | [Objection Handling Hub](acquisition/sales/objection-handling-hub.md) |
 | Setter admin | Setter | [Setter Daily Operations Playbook](acquisition/sales/setter-daily-operations-playbook.md) |
+| LinkedIn outbound | Setter → founder DM | [LinkedIn manifest](acquisition/outbound/linkedin/manifest.yaml) (`draft` — process + copy-angles) |
 
 Pricing and deal structure: founder-only per money model. Boot Camp downsell when not DFY-qualified.
 

@@ -19,6 +19,7 @@ Offer, sales, marketing, lead generation, lead stages, objection handling, scrip
 ## Subfolders
 
 - [Sales](sales/README.md)
+- [Outbound](outbound/README.md) — LinkedIn and other book-a-call conversation systems
 - [Marketing](marketing/README.md)
 - [Intelligence](intelligence/README.md)
 - [Offer](offer/README.md)
@@ -57,6 +58,7 @@ Offer, sales, marketing, lead generation, lead stages, objection handling, scrip
 **Batch A** converted 2026-05-20. Sales funnel spine is **`status: active`**; objection depth and training docs remain `draft`.
 
 - [Sales](sales/README.md) — operating hub (active funnel + draft library)
+- [Outbound](outbound/README.md) — LinkedIn LO outreach (`draft`) — [manifest](outbound/linkedin/manifest.yaml)
 - [Marketing](marketing/README.md) — Case study email framework + Money Tales email SOP (`draft`)
 - [Intelligence](intelligence/README.md) — Sales Intelligence Bible (`active`)
 - [Offer](offer/README.md) — see [company money model](../company/overview-money-model-april-26.md)

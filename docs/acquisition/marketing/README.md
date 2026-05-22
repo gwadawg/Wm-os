@@ -30,4 +30,5 @@ See [Waiz vs client marketing boundaries](../../client-fulfillment/waiz-vs-clien
 
 - [Company identity core](../../company/doctrine-identity-core-april-26.md)
 - [Sales](../sales/README.md)
+- [LinkedIn outbound (conversations → book)](../outbound/linkedin/README.md) — not nurture email assets
 - [Client fulfillment marketing](../../client-fulfillment/client-marketing/README.md) — **different domain**

@@ -1,0 +1,50 @@
+workflow: linkedin-lo-outreach
+version: 1
+status: draft
+last_updated: 2026-05-21
+
+owners:
+  setter: Pedro / VA
+  founder_dm: Gabriel
+
+triggers:
+  - linkedin dm
+  - linkedin outreach
+  - sales navigator
+  - inmail
+  - setter opener
+  - loan officer prospecting
+
+# Read in order. Do not load copy-angles when only explaining process.
+load_order:
+  - README.md
+  - process.md
+  - copy-angles.md
+  - compliance.md
+  - log-schema.md
+  - ../../intelligence/wm-sales-intelligence-bible.md
+  - ../../../company/doctrine-identity-core-april-26.md
+
+context_slices:
+  sales_intelligence_topics: ["03", "01"]
+  skill: .claude/skills/linkedin-lo-outreach/SKILL.md
+  draft_prompt: .claude/skills/linkedin-lo-outreach/prompt.md
+
+phone_funnel_after_book:
+  - ../../sales/intro-call-qualification-framework.md
+  - ../../sales/no-shows-maximizing-show-rates-setter-levers.md
+  - ../../sales/objection-handling-hub.md
+
+team_publish:
+  skill: team-doc-publish
+  drive_folder: setters
+  registry: docs/_inventory/team-publish-registry.yaml
+  entries:
+    - repo_path: docs/acquisition/outbound/linkedin/process.md
+      team_title: LinkedIn Outreach — Process
+    - repo_path: docs/acquisition/outbound/linkedin/copy-angles.md
+      team_title: LinkedIn Outreach — Scripts And Angles
+
+deprecated_paths:
+  - docs/acquisition/sales/linkedin-lo-outreach-sop.md
+  - docs/acquisition/sales/linkedin-dm-angle-library.md

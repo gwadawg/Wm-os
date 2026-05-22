@@ -56,7 +56,9 @@ Repo index: [../README.md](../README.md). Canonical rules: [docs/SOURCE-OF-TRUTH
 
 ## Templates
 
-Read [TEMPLATES.md](TEMPLATES.md) when creating or improving:
+Read [TEMPLATES.md](TEMPLATES.md) when creating or improving repo SOPs. For **team Google Docs**, match the [WM Objection Categories format](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit) per [wm-team-doc-format-spec.md](../../docs/templates/wm-team-doc-format-spec.md) — use [team-doc-translate](../team-doc-translate/SKILL.md) before publish.
+
+When creating or improving:
 
 - SOPs
 - Workflows

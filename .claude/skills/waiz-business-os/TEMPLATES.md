@@ -52,6 +52,16 @@ review_cycle: monthly
 - [Document](../path/document.md)
 ```
 
+### Team Google Doc layout (when published)
+
+Repo SOPs use the structure above. **Team Drive copies** must match the WM Objection Categories visual standard:
+
+- **Reference doc:** https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit
+- **Spec:** [docs/templates/wm-team-doc-format-spec.md](../../docs/templates/wm-team-doc-format-spec.md)
+- **Translate + publish:** [team-doc-translate](../team-doc-translate/SKILL.md) → `python scripts/publish-team-doc.py <path>`
+
+Cover: `WAIZ MEDIA` → title → `{Role} Team | Internal Use Only | {year}`. Body: HEADING_1/2, bold field labels, 📌/⚠️/💡 callout tables, optional data tables, confidential footer.
+
 ## Workflow Improvement Template
 
 ```markdown

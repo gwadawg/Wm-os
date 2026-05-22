@@ -84,3 +84,7 @@ connect_type: blank | commented_before_connect: Y
 URL: [linkedin]
 Reply: "Brutal. Referrals down maybe 40%..."
 ```
+
+## Paths
+
+`docs/acquisition/outbound/linkedin/` — [manifest.yaml](../../../docs/acquisition/outbound/linkedin/manifest.yaml)

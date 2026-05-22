@@ -21,7 +21,7 @@ GitHub OS maintenance.
 
 ## Owner
 
-See [domain owners](../../_inventory/domain-owners.md): **operations**.
+See [domain owners](_inventory/domain-owners.md): **operations**.
 
 ## When To Use
 
@@ -29,11 +29,11 @@ Use per source document and related operating docs.
 
 ## Quality Bar
 
-- Align with [Identity Core](../../company/doctrine-identity-core-april-26.md) and [SOURCE-OF-TRUTH](../../SOURCE-OF-TRUTH.md).
+- Align with [Identity Core](company/doctrine-identity-core-april-26.md) and [SOURCE-OF-TRUTH](SOURCE-OF-TRUTH.md).
 
 ## Metrics
 
-- See [KPIs](../../kpis/README.md) as metrics are formalized.
+- See [KPIs](kpis/README.md) as metrics are formalized.
 
 ## Operating Content
 
