@@ -1,5 +1,7 @@
 # Team translation examples
 
+**Visual standard:** [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit) — cover block, callout tables, HEADING_1/2, footer.
+
 ## Before (repo — AI-oriented)
 
 ```markdown

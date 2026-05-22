@@ -59,8 +59,10 @@ def blocks_to_formatted_doc(
     owner: str,
 ) -> FormattedDoc:
     fd = FormattedDoc(title=title, owner_line=team_subtitle(owner))
+    fd._glance_pending = ""  # type: ignore[attr-defined]
     i = 0
     overview_started = False
+    overview_paras = 0
 
     while i < len(blocks):
         b = blocks[i]
@@ -70,18 +72,12 @@ def blocks_to_formatted_doc(
             continue
 
         if b.kind == "heading2" and b.text == "At a glance":
-            bullets = []
+            glance_bullets = []
             while i < len(blocks) and blocks[i].kind == "bullet":
-                bullets.append(blocks[i].text)
+                glance_bullets.append(blocks[i].text)
                 i += 1
-            if bullets:
-                fd.blocks.append(
-                    Block(
-                        "callout",
-                        " ".join(bullets[:4]),
-                        callout_type="north_star",
-                    )
-                )
+            # Defer NORTH STAR until after Overview opening (see flush below)
+            fd._glance_pending = " ".join(glance_bullets[:4])  # type: ignore[attr-defined]
             continue
 
         if b.kind == "heading2":
@@ -125,6 +121,21 @@ def blocks_to_formatted_doc(
 
         fd.blocks.append(b)
 
+        if overview_started and b.kind == "paragraph" and b.text:
+            overview_paras += 1
+            if overview_paras == 2 and getattr(fd, "_glance_pending", ""):
+                fd.blocks.append(
+                    Block("callout", fd._glance_pending, callout_type="north_star")  # type: ignore[attr-defined]
+                )
+                fd._glance_pending = ""  # type: ignore[attr-defined]
+
+    if getattr(fd, "_glance_pending", ""):
+        if not overview_started:
+            fd.blocks.insert(0, Block("h1", "Overview"))
+        fd.blocks.append(
+            Block("callout", fd._glance_pending, callout_type="north_star")  # type: ignore[attr-defined]
+        )
+
     fd.blocks.append(
         Block(
             "callout",
@@ -151,9 +162,7 @@ def write_formatted_doc(docs, doc_id: str, fd: FormattedDoc) -> None:
 
     clear_document_body(docs, doc_id)
     writer = _DocWriter(docs, doc_id)
-    writer.append_line("WAIZ MEDIA\n", bold=True, size=26, align="CENTER")
-    writer.append_line(f"{fd.title}\n", size=20, align="CENTER")
-    writer.append_line(f"{fd.owner_line}\n\n", size=11, align="CENTER")
+    writer.write_cover(fd.title, fd.owner_line)
 
     for block in fd.blocks:
         if block.kind == "h1":
@@ -166,148 +175,86 @@ def write_formatted_doc(docs, doc_id: str, fd: FormattedDoc) -> None:
             label = CALLOUT_LABELS.get(block.callout_type or "important", "⚠️ IMPORTANT")
             writer.append_callout_table(label, block.text)
         elif block.kind == "bullet":
-            writer.append_bullet(block.text, link=block.link_url)
+            label = block.text
+            if block.link_url:
+                label = f"{block.text} — {block.link_url}"
+            writer.append_bullet(label)
         elif block.kind == "numbered":
             writer.append_bullet(block.text)
         elif block.kind == "paragraph":
-            if block.link_url:
-                writer.append_linked_line(block.text + "\n", block.link_url)
-            else:
-                writer.append_body(block.text + "\n")
+            writer.append_body(block.text + "\n")
 
     if fd.quick_reference:
         writer.append_heading("Quick Reference — At a Glance", "HEADING_2")
         writer.append_data_table(fd.quick_reference.headers, fd.quick_reference.rows)
 
-    writer.append_line("\nWaiz Media  |  Internal Document  |  Confidential\n", size=11, align="CENTER")
-    writer.flush()
+    writer.write_cover_footer()
 
 
 class _DocWriter:
     def __init__(self, docs, doc_id: str):
         self.docs = docs
         self.doc_id = doc_id
-        self.pending: list[dict[str, Any]] = []
         self.index = 1
 
     def _refresh_index(self) -> None:
         doc = self.docs.documents().get(documentId=self.doc_id).execute()
         self.index = doc["body"]["content"][-1]["endIndex"] - 1
 
-    def flush(self) -> None:
-        if not self.pending:
-            return
-        self.docs.documents().batchUpdate(
-            documentId=self.doc_id, body={"requests": self.pending}
-        ).execute()
-        self.pending = []
-        self._refresh_index()
-
-    def append_line(
-        self,
-        text: str,
-        *,
-        bold: bool = False,
-        size: int | None = None,
-        align: str | None = None,
-        named_style: str | None = None,
-    ) -> None:
+    def _insert(self, text: str) -> int:
         start = self.index
-        self.pending.append({"insertText": {"location": {"index": self.index}, "text": text}})
-        end = start + len(text)
-        self.index = end
-        pfields = []
-        pstyle: dict[str, Any] = {}
-        if named_style:
-            pstyle["namedStyleType"] = named_style
-            pfields.append("namedStyleType")
-        if align:
-            pstyle["alignment"] = align
-            pfields.append("alignment")
-        if pfields:
-            self.pending.append(
+        self.docs.documents().batchUpdate(
+            documentId=self.doc_id,
+            body={"requests": [{"insertText": {"location": {"index": start}, "text": text}}]},
+        ).execute()
+        self._refresh_index()
+        return start
+
+    def write_cover(self, title: str, owner_line: str) -> None:
+        """Styled cover block only — before any tables."""
+        blocks = [
+            ("WAIZ MEDIA\n", True, 26, "CENTER"),
+            (f"{title}\n", False, 20, "CENTER"),
+            (f"{owner_line}\n\n", False, 11, "CENTER"),
+        ]
+        for text, bold, size, align in blocks:
+            start = self.index
+            end = start + len(text)
+            reqs: list[dict[str, Any]] = [
+                {"insertText": {"location": {"index": start}, "text": text}},
                 {
                     "updateParagraphStyle": {
                         "range": {"startIndex": start, "endIndex": end},
-                        "paragraphStyle": pstyle,
-                        "fields": ",".join(pfields),
+                        "paragraphStyle": {"alignment": align},
+                        "fields": "alignment",
                     }
-                }
-            )
-        if bold or size:
-            ts: dict[str, Any] = {}
-            tf = []
-            if bold:
-                ts["bold"] = True
-                tf.append("bold")
-            if size:
-                ts["fontSize"] = {"magnitude": size, "unit": "PT"}
-                tf.append("fontSize")
-            self.pending.append(
+                },
                 {
                     "updateTextStyle": {
-                        "range": {"startIndex": start, "endIndex": max(start + 1, end - 1)},
-                        "textStyle": ts,
-                        "fields": ",".join(tf),
+                        "range": {"startIndex": start, "endIndex": end - 1},
+                        "textStyle": {
+                            "bold": bold,
+                            "fontSize": {"magnitude": size, "unit": "PT"},
+                        },
+                        "fields": "bold,fontSize",
                     }
-                }
-            )
+                },
+            ]
+            self.docs.documents().batchUpdate(documentId=self.doc_id, body={"requests": reqs}).execute()
+            self._refresh_index()
 
     def append_heading(self, text: str, style: str) -> None:
-        self.append_line(f"{text}\n", named_style=style)
-        self.flush()
-
-    def append_label(self, text: str) -> None:
-        self.append_line(f"{text}\n", bold=True, size=11)
-        self.flush()
-
-    def append_body(self, text: str) -> None:
-        self.append_line(text, size=11)
-
-    def append_bullet(self, text: str, link: str | None = None) -> None:
-        self.flush()
-        start = self.index
-        line = f"• {text}\n"
-        self.docs.documents().batchUpdate(
-            documentId=self.doc_id,
-            body={"requests": [{"insertText": {"location": {"index": start}, "text": line}}]},
-        ).execute()
-        end = start + len(line)
-        reqs = [
-            {
-                "updateTextStyle": {
-                    "range": {"startIndex": start + 2, "endIndex": end - 1},
-                    "textStyle": {"fontSize": {"magnitude": 11, "unit": "PT"}},
-                    "fields": "fontSize",
-                }
-            }
-        ]
-        if link:
-            reqs.append(
-                {
-                    "updateTextStyle": {
-                        "range": {"startIndex": start + 2, "endIndex": start + 2 + len(text)},
-                        "textStyle": {"link": {"url": link}},
-                        "fields": "link",
-                    }
-                }
-            )
-        self.docs.documents().batchUpdate(documentId=self.doc_id, body={"requests": reqs}).execute()
-        self._refresh_index()
-
-    def append_linked_line(self, text: str, url: str) -> None:
-        start = self.index
-        self.append_line(text, size=11)
-        self.flush()
+        start = self._insert(f"{text}\n")
+        end = start + len(text) + 1
         self.docs.documents().batchUpdate(
             documentId=self.doc_id,
             body={
                 "requests": [
                     {
-                        "updateTextStyle": {
-                            "range": {"startIndex": start, "endIndex": start + len(text) - 1},
-                            "textStyle": {"link": {"url": url}},
-                            "fields": "link",
+                        "updateParagraphStyle": {
+                            "range": {"startIndex": start, "endIndex": end},
+                            "paragraphStyle": {"namedStyleType": style},
+                            "fields": "namedStyleType",
                         }
                     }
                 ]
@@ -315,8 +262,37 @@ class _DocWriter:
         ).execute()
         self._refresh_index()
 
+    def append_label(self, text: str) -> None:
+        self._insert(f"{text}\n")
+
+    def append_body(self, text: str) -> None:
+        self._insert(text)
+
+    def append_bullet(self, text: str) -> None:
+        self._insert(f"• {text}\n")
+
+    def write_cover_footer(self) -> None:
+        text = "\nWaiz Media  |  Internal Document  |  Confidential\n"
+        start = self.index
+        end = start + len(text)
+        self.docs.documents().batchUpdate(
+            documentId=self.doc_id,
+            body={
+                "requests": [
+                    {"insertText": {"location": {"index": start}, "text": text}},
+                    {
+                        "updateParagraphStyle": {
+                            "range": {"startIndex": start, "endIndex": end},
+                            "paragraphStyle": {"alignment": "CENTER"},
+                            "fields": "alignment",
+                        }
+                    },
+                ]
+            },
+        ).execute()
+        self._refresh_index()
+
     def append_callout_table(self, label: str, message: str) -> None:
-        self.flush()
         idx = self.index
         self.docs.documents().batchUpdate(
             documentId=self.doc_id,
@@ -324,44 +300,20 @@ class _DocWriter:
         ).execute()
         doc = self.docs.documents().get(documentId=self.doc_id).execute()
         cells = _table_cell_starts(doc, -1)
-        if len(cells) < 2:
-            self._refresh_index()
-            return
-        reqs = [
-            {"insertText": {"location": {"index": cells[0]}, "text": label}},
-            {"insertText": {"location": {"index": cells[1]}, "text": message}},
-        ]
-        self.docs.documents().batchUpdate(documentId=self.doc_id, body={"requests": reqs}).execute()
-        doc = self.docs.documents().get(documentId=self.doc_id).execute()
-        cells = _table_cell_starts(doc, -1)
-        style_reqs = []
-        if cells:
-            style_reqs.append(
-                {
-                    "updateTextStyle": {
-                        "range": {"startIndex": cells[0], "endIndex": cells[0] + len(label)},
-                        "textStyle": {"bold": True, "fontSize": {"magnitude": 11, "unit": "PT"}},
-                        "fields": "bold,fontSize",
-                    }
-                }
-            )
-        if len(cells) > 1:
-            style_reqs.append(
-                {
-                    "updateTextStyle": {
-                        "range": {"startIndex": cells[1], "endIndex": cells[1] + len(message)},
-                        "textStyle": {"fontSize": {"magnitude": 11, "unit": "PT"}},
-                        "fields": "fontSize",
-                    }
-                }
-            )
-        if style_reqs:
-            self.docs.documents().batchUpdate(documentId=self.doc_id, body={"requests": style_reqs}).execute()
+        if len(cells) >= 2:
+            self.docs.documents().batchUpdate(
+                documentId=self.doc_id,
+                body={
+                    "requests": [
+                        {"insertText": {"location": {"index": cells[0]}, "text": label}},
+                        {"insertText": {"location": {"index": cells[1]}, "text": message}},
+                    ]
+                },
+            ).execute()
         self._refresh_index()
-        self.append_line("\n")
+        self._insert("\n")
 
     def append_data_table(self, headers: list[str], rows: list[list[str]]) -> None:
-        self.flush()
         idx = self.index
         nrows = 1 + len(rows)
         ncols = len(headers)
@@ -395,7 +347,7 @@ class _DocWriter:
         if bold_reqs:
             self.docs.documents().batchUpdate(documentId=self.doc_id, body={"requests": bold_reqs}).execute()
         self._refresh_index()
-        self.append_line("\n")
+        self._insert("\n")
 
 
 def _table_cell_starts(doc: dict, table_offset: int = -1) -> list[int]:

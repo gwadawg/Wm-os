@@ -9,38 +9,31 @@ review_cycle: quarterly
 
 # Team Doc Publish Template
 
-Design-focused specification for Google Drive team docs. Translation skill: [.claude/skills/team-doc-translate/SKILL.md](../../.claude/skills/team-doc-translate/SKILL.md). Code: `scripts/lib/team_doc_translator.py`.
+All team Google Docs must match the **WM Objection Categories** layout.
 
-## Document structure (required order)
+## Format reference (canonical)
 
-1. **Title** — benefit-oriented plain English
-2. **At a glance** — who, when, outcome, time estimate, escalate-to
-3. **What this is for** — 2–4 sentences
-4. **Before you start** — prerequisites (bullets)
-5. **How to do it** — phased numbered steps (not raw Operating Content dump)
-6. **Done right looks like** — short checklist bullets
-7. **When to get help** — who and when to escalate
-8. **Related procedures** — hyperlinks to published team Docs only
-9. **Footer** — published date, owner role, ref slug (no GitHub)
+- **Live doc:** https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit
+- **Written spec:** [wm-team-doc-format-spec.md](wm-team-doc-format-spec.md)
+- **Translation skill:** [.claude/skills/team-doc-translate/SKILL.md](../../.claude/skills/team-doc-translate/SKILL.md)
+- **Formatter code:** `scripts/lib/team_doc_formatter.py`
 
-## Design principles
+## Required layout
 
-- Scannable in 60 seconds: at-a-glance + first phase visible without scrolling endlessly
-- One idea per bullet; no paragraph over 4 lines
-- Title Case subheadings — never ALL CAPS walls
-- Tables and broken schedules → summarized bullets or phases
-- Second-person action voice where natural
-- Callouts (`▸ IMPORTANT`, `▸ TIP`) for rare must-know rules only
+1. Centered cover: WAIZ MEDIA → title → role | Internal Use Only | year
+2. `HEADING_1` major sections (Overview, How To Do It, …)
+3. `HEADING_2` subsections
+4. Bold field labels (What It Is, How to Identify It, …) where applicable
+5. Callout **tables** (📌 NORTH STAR, ⚠️ IMPORTANT, 💡 PRO TIP, …)
+6. Data **tables** for categories / steps / quick reference when useful
+7. Centered confidential footer
 
-## Never include
+## Publish command
 
-- YAML, `source_document`, Open Questions, migration notes
-- Links to `_inventory/`, `SPINE.md`, `SOURCE-OF-TRUTH.md`, `kpis/`
-- Specific pricing (escalate to Gabriel)
-- AI metadata (`domain:`, `artifact_type:`, `review_cycle`)
+```bash
+python scripts/publish-team-doc.py docs/path/to/sop.md
+```
 
-## Related docs
+## Related
 
-- [Team Drive Publish SOP](../operations/systems/team-drive-publish.md)
-- [team-publish-registry.yaml](../_inventory/team-publish-registry.yaml)
-- [team-doc-translate skill](../../.claude/skills/team-doc-translate/SKILL.md)
+- [team-drive-publish.md](../operations/systems/team-drive-publish.md)

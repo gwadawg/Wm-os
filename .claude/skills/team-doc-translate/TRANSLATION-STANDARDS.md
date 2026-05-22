@@ -1,79 +1,54 @@
 # Team Doc Translation Standards
 
-## At a glance (required)
+Visual layout: [wm-team-doc-format-spec.md](../../docs/templates/wm-team-doc-format-spec.md)  
+Live reference: [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit)
 
-Place immediately under the title. Template:
+## North star callout
 
-```markdown
-AT A GLANCE
-• Who: [Role]
-• When: [Trigger in plain English]
-• Outcome: [What "done" looks like in one line]
-• Time: [Rough read or execution time if known]
-• Questions: Escalate to Gabriel
-```
+Replace plain "At a glance" bullets with one **📌 NORTH STAR** table row:
 
-Pull `When` from Trigger / When To Use. Pull `Outcome` from Purpose or Outputs.
+- Who + when + outcome in 1–2 sentences max.
 
-## Heading map (repo → team)
+## Section mapping (repo → WM format)
 
-| Repo section | Team heading |
-|--------------|--------------|
-| Purpose | What this is for |
-| When To Use / Trigger | (fold into At a glance; expand in Before you start if needed) |
-| Inputs / Tools | Before you start |
-| Process / Operating Content | How to do it |
-| Quality Bar | Done right looks like |
-| Escalation | When to get help |
-| Related Docs | Related procedures |
+| Repo section | WM format |
+|--------------|-----------|
+| Purpose | `HEADING_1` Overview + 11pt paragraphs |
+| When To Use | Fold into NORTH STAR or Before You Start |
+| Inputs / Tools | Label **Before You Start** + bullets |
+| Process | `HEADING_1` How To Do It + `HEADING_2` subsections |
+| Subsections in process | `HEADING_2` + optional labels (What It Is, How to Handle It) |
+| Quality Bar | `HEADING_2` Done Right Looks Like + bullets |
+| Escalation | `HEADING_2` When To Get Help |
+| Related Docs | `HEADING_2` Related Procedures + links |
 
-Never publish headings: Scope, Owner, Metrics, Open Questions, Operating Content.
+## Callout table labels (pick one)
 
-## How to do it — phase pattern
+| Label | When |
+|-------|------|
+| 📌 NORTH STAR | Single most important rule for this doc |
+| ⚠️ IMPORTANT | Must-follow warning |
+| 💡 PRO TIP | Tactic that improves results |
+| 🚨 CRITICAL MISTAKE TO AVOID | High-cost error |
+| ⚠️ WATCH FOR THIS | Easy to miss case |
+| 📌 RULE / 📌 REMEMBER | Closing non-negotiable |
 
-Group long processes into 2–5 phases. Example:
+## Tables
 
-```markdown
-How to do it
+Use when doc has:
 
-Phase 1 — Prep (first 30 min)
-1. Review notes from yesterday.
-2. Open the priority list in [tool].
-
-Phase 2 — Work the priority list
-1. ...
-```
-
-Rules:
-
-- Max 7 numbered steps per phase; split into a new phase if longer.
-- Schedule tables: summarize mode (Hunt vs Normal Day) in 2–3 bullets; do not paste 40 time rows.
-- Scripts: use blockquote-style lead-in: `Say:` / `Ask:` / `Do not:`
-
-## Callouts
-
-Use sparingly for non-negotiables:
-
-```markdown
-▸ IMPORTANT: Do not change campaign budgets without manager approval.
-▸ TIP: If they text back, call immediately.
-```
-
-## Related procedures
-
-- Link label = human title from registry `team_title`, not filename.
-- If target not published: `Title (coming soon)` — never dead link to GitHub.
-- Max 6 related links; prefer same role folder first.
-
-## Sensitive content
-
-- Money model / pricing: overview only; no numbers; "Gabriel approves deal structure."
-- Identity / doctrine: plain language; avoid internal codenames unless team already uses them.
+- Categories/types (Category | What It Is | How to Handle)
+- Steps (Step | What to Do)
+- Quick reference at end (HEADING_2 + summary table)
 
 ## Footer
 
-Single line:
+Always end with centered:
 
-`Published: YYYY-MM-DD | Owner: Setter | Ref: setter-daily-ops`
+`Waiz Media | Internal Document | Confidential`
 
-`Ref` is slug for ops tracking only — team can ignore.
+## Do not publish
+
+- YAML, `source_document`, Open Questions, SPINE/inventory links
+- Dollar pricing (escalate to Gabriel)
+- ASCII `====` / `----` dividers

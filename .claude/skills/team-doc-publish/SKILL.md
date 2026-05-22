@@ -69,10 +69,14 @@ python scripts/publish-team-doc.py docs/path/to/doc.md --archive
 
 ## Translator rules
 
-Apply [team-doc-translate](../team-doc-translate/SKILL.md) **before** publish — design-focused, scannable team copy (not AI repo structure).
+Apply [team-doc-translate](../team-doc-translate/SKILL.md) **before** publish. Output must match the **WM Objection Categories** format:
 
+**Reference:** https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit
+
+- Spec: [wm-team-doc-format-spec.md](../../docs/templates/wm-team-doc-format-spec.md)
 - Template: [team-doc-publish-template.md](../../docs/templates/team-doc-publish-template.md)
-- Code: `scripts/lib/team_doc_translator.py`
+- Translator: `scripts/lib/team_doc_translator.py`
+- Formatter: `scripts/lib/team_doc_formatter.py`
 - Strip frontmatter, Open Questions, migration paths
 - Rewrite `## Related Docs` to hyperlinks when targets have `google_doc_id` in registry
 - Pricing-sensitive docs: no dollar amounts — escalate to Gabriel
