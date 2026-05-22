@@ -1,54 +1,62 @@
 # LinkedIn LO Outreach — Reference
 
-## Sales Navigator vs LinkedIn DM
+## Account Safety
 
-| Channel | Inbox | Best for |
-|---------|--------|----------|
-| Sales Navigator message / InMail | SN inbox + email notification | Tier-A, direct personas, bypass connect wait |
-| LinkedIn DM | Main LinkedIn app inbox | Active posters, rapport, warm signals |
+- **Ramp:** +10–15% volume/week max after baseline
+- **Pending invites:** keep under ~500; withdraw stale 7+ days
+- **Accept rate:** pause if weekly &lt;30%
+- **Organic:** setter 5–10 comments/day; Gabriel posts + comments
+- **No spikes:** sudden 40+/day from idle account risks restriction
 
-- **Blank connect:** no note on the request.
-- **Do not** pitch in the connection request.
-- Some SN messages cost **InMail credits** (~50/month); use on dream accounts only.
-- Avoid sending the same pitch on SN and DM the same day.
+## Channel Order (default)
 
-## Lead Sourcing Cheat Sheet
+1. View profile (+ optional follow company)
+2. Connect: **blank** (default) or **signal micro-note** (A/B)
+3. DM opener after accept (24–48h)
+4. Setter **one** bump at 48–72h if no reply
+5. Gabriel ghost touches at +3–4, +7–10, +12–14 days
+6. **InMail** only after connect+DM path stalls (Tier-A) — not first touch
+7. Dream: one email + one call after LI exhausted
 
-1. SN lead lists + “Posted on LinkedIn” filter
-2. LinkedIn post search (retirement equity, HECM wins — not only “reverse mortgage”)
-3. Reverse mortgage **groups** → members
-4. **Engagement mining** on large niche pages
-5. **Activity gate:** post, repost, or comment in ~90 days
+## Sales Navigator vs DM
 
-## Perfect-Fit Proxies
+| Channel | Use |
+|---------|-----|
+| DM | Primary; active LOs |
+| InMail | Touch 2+; low accept execs; email notification |
 
-- Funded-deal / production posts
-- Heavy reverse content
-- Group member + engagement on reverse educators
-- Ad spend **not** visible — use proxies above
+~50 InMail credits/month — do not waste on first touch.
 
-## Gabriel Reply Mechanics
+## 90-Second Research
 
-1. **Match** length and reply speed
-2. **Permission:** “Mind if I bounce a few thoughts off you?”
-3. **I-moment:** brief personal parallel before a direct question
-4. **Discovery in DM** before offer (volume, what’s working, conversation quality)
-5. **Value bump:** use their stated goal when thread goes cold
-6. **Book:** “Thursday 11am, 12:30pm, or 5pm ET — which works? Send email for invite.”
-7. **Pre-call:** after book, ask 2–3 prep questions in chat with permission
+Role → one activity line → angle # → tier (standard/dream).
 
-## Claude Humanization
+## Comment-First
 
-1. Paste profile, company, recent posts, thread context
-2. Use [linkedin-dm-draft-prompt.md](../../../docs/prompts/acquisition/linkedin-dm-draft-prompt.md)
-3. Take **insight** from output; rewrite in chosen voice (Professional default for LOs)
-4. Remove AI tells: em dashes, perfect grammar, stacked questions, `curious`
-5. Founder can record 30s voice note or drop **approved** case study when prospect is warm
+Comment on ICP post → DM within 24h referencing thread. Higher reply than pure cold.
 
-## Optional: Clay
+## Voice Notes (Gabriel)
 
-Use when SN filters are too broad. Validate profiles for recent activity; discard ghost accounts.
+- Mobile LinkedIn app only; 1st-degree; &lt;60s (aim 30–40)
+- After **warm** reply; personalize first 5 seconds
+- Log `voice_note_sent`
+
+## Benchmarks (interpretation)
+
+| Metric | Healthy |
+|--------|---------|
+| Connect accept | 30–45%+ |
+| Opener → reply | 10–18%; &lt;5% = fix opener |
+| Follow-up share | Track replies after bump/ghost |
+
+## Compliance
+
+No guaranteed results; approved proof only; opt-out on ghost touch 3.
 
 ## Logging
 
-Every touch → [WM Sales Call Tracker](../../../docs/acquisition/wm-sales-call-tracker.md) with `angle_id`, track, channel, reply/book flags.
+[WM Sales Call Tracker](../../../docs/acquisition/wm-sales-call-tracker.md): `connect_type`, `sequence_stage`, `weekly_diagnosis`, omnichannel flags.
+
+## Claude Humanization
+
+Draft → rewrite in **Peer LO** or Professional voice → remove AI tells (em dashes, `curious`, stacks).

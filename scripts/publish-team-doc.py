@@ -9,6 +9,8 @@ import sys
 import time
 from pathlib import Path
 
+from googleapiclient.errors import HttpError
+
 import yaml
 
 ROOT = Path(__file__).resolve().parent
@@ -111,18 +113,29 @@ def publish_spine(
             continue
         if i > 0 and delay_seconds > 0:
             time.sleep(delay_seconds)
-        try:
-            doc_id = publish_entry(
-                entry,
-                registry=registry,
-                folder_cfg=folder_cfg,
-                force=force or bool(entry.get("google_doc_id")),
-            )
-            save_registry(registry)
-            urls.append(doc_url(doc_id))
-            print(f"Published: {entry['repo_path']} -> {doc_url(doc_id)}")
-        except Exception as e:
-            print(f"Skip {entry['repo_path']}: {e}", file=sys.stderr)
+        for attempt in range(4):
+            try:
+                doc_id = publish_entry(
+                    entry,
+                    registry=registry,
+                    folder_cfg=folder_cfg,
+                    force=force or bool(entry.get("google_doc_id")),
+                )
+                save_registry(registry)
+                urls.append(doc_url(doc_id))
+                print(f"Published: {entry['repo_path']} -> {doc_url(doc_id)}")
+                break
+            except HttpError as e:
+                if e.resp.status == 429 and attempt < 3:
+                    wait = 65 * (attempt + 1)
+                    print(f"Rate limit — waiting {wait}s before retry...", file=sys.stderr)
+                    time.sleep(wait)
+                    continue
+                print(f"Skip {entry['repo_path']}: {e}", file=sys.stderr)
+                break
+            except Exception as e:
+                print(f"Skip {entry['repo_path']}: {e}", file=sys.stderr)
+                break
     return urls
 
 
@@ -147,7 +160,7 @@ def main() -> int:
             registry,
             folder_cfg,
             force=args.update_all or args.force,
-            delay_seconds=12.0 if args.update_all else 0.0,
+            delay_seconds=45.0 if args.update_all else 0.0,
         )
         return 0
 

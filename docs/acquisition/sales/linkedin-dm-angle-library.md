@@ -4,6 +4,7 @@ domain: acquisition
 owner: setter
 status: draft
 last_updated: 2026-05-21
+source_note: Updated with 2025–2026 outreach benchmarks (follow-up, micro-note A/B, comment-first, peer voice).
 review_cycle: weekly
 artifact_type: playbook
 ---
@@ -12,11 +13,11 @@ artifact_type: playbook
 
 ## Purpose
 
-Plug-and-play first-message angles for LinkedIn outreach to loan officers. Setter uses this for **message 1 only**; Gabriel uses reply patterns in example threads and the main [LinkedIn LO Outreach SOP](linkedin-lo-outreach-sop.md).
+Plug-and-play first-message angles for LinkedIn outreach to loan officers. Setter uses **message 1**, **connect micro-notes**, and **one no-reply bump**; Gabriel uses reply patterns, ghost sequence, and optional voice notes per [LinkedIn LO Outreach SOP](linkedin-lo-outreach-sop.md).
 
 ## Scope
 
-First DM after connect (or warm DM). Not InMail templates (those can be more direct — test separately). Not phone scripts.
+First DM after connect (or warm DM), signal-only connect notes (A/B), setter bump templates, Gabriel 3-touch ghost lines. InMail = Gabriel touch 2+ per SOP. Not phone scripts.
 
 ## How To Use
 
@@ -28,14 +29,62 @@ First DM after connect (or warm DM). Not InMail templates (those can be more dir
 
 ## Voice Variants
 
+| Variant | When | Rules |
+| ------- | ---- | ----- |
+| **Professional** | Default; corporate tone, branch managers | Full sentences, normal capitalization, warm not stiff |
+| **Peer LO** | Plain-spoken producer, Midwest/South tone, “loan officer” not “executive” | Direct, industry-normal words, no agency jargon or LinkedIn fluff |
+| **Casual** | Younger LO, very informal posts | Lowercase ok, short lines — still no banned phrases |
 
-| Variant          | When                                                                 | Rules                                                          |
-| ---------------- | -------------------------------------------------------------------- | -------------------------------------------------------------- |
-| **Professional** | Default for reverse LOs; senior producers; corporate tone on profile | Full sentences, normal capitalization, warm but not slangy     |
-| **Casual**       | Younger LO, very informal posts, peer-style comment history          | Lowercase ok, shorter lines — still no banned phrases from SOP |
+**Message 1 rules (all angles):** one question only, no pitch, no “what we do” in message 1, under ~3 short lines on mobile.
 
+---
 
-**Message 1 rules (all angles):** one question only, no pitch, no “what we do” in message 1, aim for under ~3 short lines on mobile.
+## Connect Micro-Note (A/B test — under 200 characters)
+
+Use only with a **specific** signal. Never pitch. Log `connect_type = micro_note` in tracker.
+
+| Signal | Template |
+| ------ | -------- |
+| Group | Hey [Name] — saw we’re both in [Group]. Would be good to connect. |
+| Their comment | Hey [Name] — appreciated your point on [topic] on [Person]’s post. Would be good to connect. |
+| Post | Hey [Name] — your post on [specific] stood out. Would be good to connect. |
+| Mutual | Hey [Name] — see we have a few mutuals in the reverse space. Would be good to connect. |
+
+**Default remains blank connect** until A/B data favors micro_note for your account.
+
+---
+
+## Setter No-Reply Bump (one only, 48–72h after opener)
+
+No pitch. One question. Log `setter_bump_sent = Y`.
+
+> Hey [Name] — no worries if timing’s off. Wondering if [original topic from opener] is still on your radar or if the market’s taken a back seat for now?
+
+> Hey [Name] — bumping this once — you’d mentioned [their post topic / climate / volume]. Is that still the main headache on your end?
+
+After bump with no reply → Gabriel Phase 6b ghost sequence.
+
+---
+
+## Gabriel Ghost Sequence (touches 1–3)
+
+| Touch | Template skeleton |
+| ----- | ----------------- |
+| 1 (+3–4d) | [Name], you’d mentioned [their pain]. One pattern I’m seeing with reverse shops in the same spot: [one insight — volume / conversation quality]. No ask — just thought it mapped to what you said. |
+| 2 (+7–10d) | Different insight or **approved** case snippet tied to that pain. Still one short paragraph. |
+| 3 (+12–14d) | Happy to leave you alone if timing’s wrong — just say the word. If [topic] is still live, I’m here. |
+
+---
+
+## Comment-First Opener (use with Phase 0)
+
+**Signal:** Setter left a substantive comment on their post or on a thread they’re active in.
+
+> Hey [Name] — we were just on [Person]’s post about [topic]. Your point on [specific] stood out. How’s that playing out in your shop right now?
+
+> Hey [Name] — saw your comment on [topic] — rare to see someone say that plainly. Is that something you’re dealing with on the production side too?
+
+Send DM within **24h** of comment when possible.
 
 ---
 
@@ -98,6 +147,10 @@ First DM after connect (or warm DM). Not InMail templates (those can be more dir
 
 > Hey [Name], a lot of LOs in reverse are talking about the same headwind right now — [refer to their wording if visible: rates / referral dip / lead quality]. How are you handling volume on your end?
 
+**Peer LO opener:**
+
+> Hey [Name] — sounds like the same story I’m hearing from a lot of reverse guys right now, [rates / referrals / lead quality]. How’s volume on your end — still leaning on referrals or mixing in other channels?
+
 **Note for Gabriel handoff:** Strong pivot to volume imperative and qualified conversations (Bible Topic 03). Do not pitch in message 1.
 
 ---
@@ -110,17 +163,25 @@ First DM after connect (or warm DM). Not InMail templates (those can be more dir
 
 > Hey [Name], saw you engaging with [Page/Person]’s stuff on [topic] — clearly top of mind for you. What’s your take on how that side of the market’s moving right now?
 
-**Mutuality:** You’re not cold — they’ve shown public interest in the niche.
+**Comment-first variant (preferred if setter commented on same post):**
+
+> Hey [Name] — saw your comment on [Person]’s post about [topic]. [One line on their point.] Is that showing up in your production side too?
+
+**Mutuality:** Public interest in the niche; stronger if you commented first (Phase 0).
 
 ---
 
-## Angle 5 — Profile view / new follower
+## Angle 5 — Profile view / new follower / commented on Gabe’s post
 
-**Signal:** They viewed Gabriel’s profile or followed recently.
+**Signal:** They viewed Gabriel’s profile, followed, liked, or **commented on Gabriel’s post**.
 
 **Professional opener:**
 
 > Hey [Name], you popped up on my notifications — appreciate you checking out the profile. Was there something specific you were looking into, or just networking in the space?
+
+**Thanks-for-engaging (warm):**
+
+> Hey [Name], thanks for [the comment / the like] on [post topic]. What caught your eye — the [specific angle] or just timing in the market?
 
 **Pattern interrupt variant (use sparingly):**
 

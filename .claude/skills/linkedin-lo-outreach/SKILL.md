@@ -1,85 +1,87 @@
 ---
 name: linkedin-lo-outreach
-description: Drafts and improves LinkedIn outreach to reverse mortgage loan officers using Waiz SOPs, angle library, and sales intelligence. Use for LinkedIn DMs, Sales Navigator outreach, setter openers, Gabriel reply coaching, follow-up bumps, or booking language.
+description: Drafts and improves LinkedIn outreach to reverse mortgage loan officers using Waiz SOPs, angle library, and sales intelligence. Use for LinkedIn DMs, Sales Navigator outreach, setter openers, micro-notes, comment-first warm-up, follow-up sequences, Gabriel reply coaching, voice notes, or booking language.
 ---
 
 # LinkedIn LO Outreach
 
-Waiz Media LinkedIn outbound for reverse mortgage loan officers. Setter sends **first DM only**; Gabriel owns all replies through book.
+Waiz Media LinkedIn outbound for reverse mortgage LOs.
+
+**Setter:** Phase 0 comments → 90s research → pre-connect ritual → connect (blank or micro-note A/B) → first DM → **one** no-reply bump → handoff on reply.
+
+**Gabriel:** All replies, 3-touch ghost sequence, optional voice note, book, pre-call discovery; InMail touch 2+; dream-account omnichannel.
 
 ## Before You Draft
 
 1. Read [linkedin-lo-outreach-sop.md](../../../docs/acquisition/sales/linkedin-lo-outreach-sop.md).
 2. Read [linkedin-dm-angle-library.md](../../../docs/acquisition/sales/linkedin-dm-angle-library.md).
-3. Pull voice from [Identity Core](../../../docs/company/doctrine-identity-core-april-26.md): **qualified conversations**, **acquisition system** — never generic “leads.”
-4. For objections or beliefs, use [WM Sales Intelligence Bible](../../../docs/acquisition/intelligence/wm-sales-intelligence-bible.md) (volume imperative, agency burn, etc.).
-5. Pricing → [Money Model](../../../docs/company/overview-money-model-april-26.md) (founder only; do not invent numbers).
+3. [Identity Core](../../../docs/company/doctrine-identity-core-april-26.md) + [WM Sales Intelligence Bible](../../../docs/acquisition/intelligence/wm-sales-intelligence-bible.md).
+4. Pricing → [Money Model](../../../docs/company/overview-money-model-april-26.md) only.
 
 ## Classify The Request
 
-| Type | Who writes | Rules |
-|------|------------|--------|
-| Setter opener | Setter | Angle 1–10, message 1 only, handoff on reply |
-| Gabriel reply | Gabriel | Match energy, permission, I-moment, discovery |
-| Value bump | Gabriel | Prospect went cold after stating a goal — tie to their words |
-| Book ask | Gabriel | 2–3 specific times + email; Calendly only if qualifying |
-| Pre-call discovery | Gabriel | After book, day before — permission then questions |
+| Type | Who | Rules |
+|------|-----|--------|
+| Comment (Phase 0) | Setter | 5–10/day, no pitch, ICP posts |
+| Connect micro-note | Setter | &lt;200 chars, signal only, A/B vs blank |
+| Setter opener | Setter | Angle 1–10, message 1, handoff on reply |
+| Setter bump | Setter | One only, 48–72h, no pitch |
+| Gabriel reply | Gabriel | Permission, I-moment, discovery |
+| Ghost touch 1–3 | Gabriel | Value → value → opt-out |
+| Voice note | Gabriel | Post-reply, 30–40s, mobile, warm only |
+| InMail | Gabriel | After connect+DM stall, Tier-A |
+| Book / pre-call | Gabriel | Times + email; discovery after book |
 
-Also label: **Track A** (reverse LO) vs **Track B** (forward/recruit), **warm** vs **cold**, **Professional** vs **Casual** voice.
+Label: **Track A/B**, **tier** (standard/dream), **warm/cold**, voice (**Professional / Peer LO / Casual**).
 
 ## Workflow
 
-1. **Identify strongest signal** (group, post line, engagement, view, role change, climate).
-2. **Select angle #** from the library (or propose new bucket with justification).
-3. **Draft** using the matching skeleton; replace every bracket with prospect-specific detail.
-4. **Annotate** which psychology principles apply (mutuality, permission, foot-in-the-door, contrast on climate — no fake scarcity).
-5. **Run quality checklist** (below).
-6. If Gabriel reply: offer **2 variants** (Professional + optional Casual) only when persona warrants.
+1. Strongest signal (prefer **comment thread** if Phase 0 ran).
+2. Angle # + voice + `connect_type` if applicable.
+3. Draft; annotate psychology (mutuality, permission, follow-up value — no fake scarcity).
+4. Quality checklist.
+5. Log fields: `sequence_stage`, `connect_type`, `commented_before_connect`.
 
 ## Quality Checklist
 
-- [ ] One question per message (no stacks)
-- [ ] No banned phrases: `curious`, `just circling back`, `any thoughts`, connect-request pitch
-- [ ] Message 1 has no Waiz pitch or calendar link
-- [ ] Specific signal referenced (not “loved your content”)
-- [ ] No fabricated stats or case studies
-- [ ] Setter draft flagged `HANDOFF_ON_REPLY` if prospect answers
-- [ ] Track A/B labeled
+- [ ] One question per message
+- [ ] Banned phrases absent (including setter bump — rephrase “curious if” → “wondering if”)
+- [ ] No pitch in M1 or connect note
+- [ ] Specific signal (not “loved your content”)
+- [ ] No fabricated stats; compliance-safe for mortgage B2B
+- [ ] InMail not first touch unless explicit test flag
+- [ ] Account safety: no volume spike recommendation
 
 ## Output Format
 
 ```markdown
 ## Classification
 - Track: A | B
-- Stage: opener | reply | value_bump | book | pre_call
-- Angle: #N — [name]
-- Voice: Professional | Casual
+- Tier: standard | dream
+- Stage: comment | micro_note | opener | setter_bump | reply | ghost_1 | ghost_2 | ghost_3 | voice_note | book | pre_call
+- Angle: #N
+- Voice: Professional | Peer LO | Casual
+- connect_type: blank | micro_note | n/a
 
 ## Draft
-[message text]
+[text]
 
 ## Annotations
-- Principle: [e.g. mutuality, permission]
-- Why this line: [one sentence]
+- Principle: [...]
+- sequence_stage: [...]
 
 ## Handoff
-[Setter only: HANDOFF_ON_REPLY — Gabriel takes thread on any reply]
+[HANDOFF_ON_REPLY if setter and prospect may reply]
 ```
 
-## Channel Rules
+## Reference
 
-See [reference.md](reference.md) for Sales Navigator vs DM, InMail credits, blank connects, and Claude humanization.
+[reference.md](reference.md) — account limits, sequences, voice notes, benchmarks.
 
 ## Examples
 
-See [examples.md](examples.md) for good/bad LO DM pairs.
+[examples.md](examples.md)
 
-## Related Skills
+## Prompt
 
-- [waiz-business-os](../waiz-business-os/SKILL.md) — SOP structure and repo placement
-- [copywriting](../copywriting/SKILL.md) — clarity and CTA wording after draft
-- [marketing-psychology](../marketing-psychology/SKILL.md) — ethical persuasion labels in annotations
-
-## Canonical Prompt
-
-For Claude project use: [linkedin-dm-draft-prompt.md](../../../docs/prompts/acquisition/linkedin-dm-draft-prompt.md)
+[linkedin-dm-draft-prompt.md](../../../docs/prompts/acquisition/linkedin-dm-draft-prompt.md)

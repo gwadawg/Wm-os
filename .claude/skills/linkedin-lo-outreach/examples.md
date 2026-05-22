@@ -56,10 +56,31 @@
 
 ---
 
+## Good connect micro-note
+
+> Hey Tom — saw your comment on Dan's post about referral volume. Would be good to connect.
+
+**Why:** Under 200 chars, one signal, zero pitch.
+
+---
+
+## Good setter bump (48–72h)
+
+> Hey Tom — bumping this once. You’d mentioned referrals feeling thin — is that still the main headache or did Q2 pick up?
+
+---
+
+## Good ghost touch 3 (opt-out)
+
+> Tom — happy to leave you alone if timing’s wrong, just say the word. If volume’s still the issue, I’m here.
+
+---
+
 ## Handoff note (setter → Gabriel)
 
 ```text
 HANDOFF: Mike Torres — Track A — Angle 3 (climate)
+connect_type: blank | commented_before_connect: Y
 URL: [linkedin]
 Reply: "Brutal. Referrals down maybe 40%..."
 ```
