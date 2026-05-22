@@ -3,36 +3,38 @@ title: Client Fulfillment — Media Buying
 domain: client-fulfillment
 owner: media-buying-lead
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-05-21
 review_cycle: weekly
 ---
 
 # Client Fulfillment — Media Buying
 
-**Execution** SOPs for running Meta ads and campaigns **for paying clients** — not Waiz’s own acquisition marketing.
+**Execution** SOPs for Meta ads **for paying clients** — not Waiz acquisition marketing.
 
-| | This folder | Waiz company marketing |
-|--|-------------|------------------------|
-| **Path** | `client-fulfillment/media-buying/` | `acquisition/marketing/` |
-| **Sells** | Client’s RM offer | Waiz Media DFY / Boot Camp |
-
-Boundaries: [Waiz vs client marketing](../waiz-vs-client-marketing-boundaries.md). Playbooks & strategy layer: [client-marketing/](../client-marketing/README.md).
+Boundaries: [Waiz vs client marketing](../waiz-vs-client-marketing-boundaries.md). Strategy: [client-marketing/](../client-marketing/README.md).
 
 ## Canonical docs
 
-_Migration backlog — links added as docs convert from `03 _ Client Fulfillment/Media Buying/`._
+| Doc | Status |
+|-----|--------|
+| [New Client Campaign Setup SOP](new-client-campaign-setup-sop.md) | `draft` |
+| [Month 1 Ad Account Management SOP](month-1-ad-account-management-sop.md) | `draft` |
+| [Ad Copy And Angle Library (RM)](ad-copy-angle-library-rm.md) | `draft` |
+| [MB RM Ad Copy Standards](mb-rm-ad-copy-standards.md) | `draft` |
+| [AI RM Ad Image Creation SOP](ai-rm-ad-image-creation-sop.md) | `draft` |
+| [Perspective Funnel Setup SOP](perspective-funnel-setup-sop.md) | `draft` |
+| [Ads For Dummies WaizMedia SOP](ads-for-dummies-waizmedia-sop.md) | `draft` |
 
-## Pending conversion (high priority)
+## Pending (Drive only)
 
-- Month 1 ad account management, new client campaign setup
-- MB resources (FB setup, communication templates, fixing FB issues)
-- Reverse Mortgage Ads Playbook, Ads For Dummies, Andromeda rules
-- Creative process (ad copy library, AI images, Perspective funnel)
-
-Inventory: [google-drive-inventory](../../_inventory/google-drive-inventory.md) — filter `client-fulfillment/media-buying`.
+- SOP — Setting Up Facebook Page & Ad Account
+- SOP — New Business Manager Setup
+- Fixing Common FB Issues
+- MB Communication Guide / text templates
+- Backup Ad Accounts (spreadsheet — summarize in docs when needed)
 
 ## Related
 
-- [Infrastructure](../infrastructure/README.md)
-- [Client marketing](../client-marketing/README.md)
+- [Fulfillment Operating System](../fulfillment-operating-system.md)
+- [RM Ad Playbook](../client-marketing/rm-ad-playbook.md)
 - [Operations hiring (MB)](../../operations/hiring/README.md)

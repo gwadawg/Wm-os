@@ -22,8 +22,8 @@ Edit files in `docs/`, save, then **Commit** and **Push** in GitHub Desktop (or 
 | Anyone / AI | [Approved Operating Spine](SPINE.md) → [Company](company/README.md) |
 | Setter | [Sales Operating Hub](acquisition/sales/README.md) — intro qualify through show rate |
 | Closer | [Sales Operating Hub](acquisition/sales/README.md) — discovery, demo, [Objection Hub](acquisition/sales/objection-handling-hub.md) |
-| Client success | [Constraint Troubleshooting](client-fulfillment/client-success/constraint-troubleshooting-sop.md), [KPI standards](client-fulfillment/client-success/fulfillment-constraint-diagnosis-kpi-standards.md) |
-| Media buyer | [Client marketing](client-fulfillment/client-marketing/README.md), [Media buying SOPs](client-fulfillment/media-buying/README.md), [Infrastructure (CRM)](client-fulfillment/infrastructure/README.md) |
+| Client success | [Fulfillment Operating System](client-fulfillment/fulfillment-operating-system.md) → [Client success hub](client-fulfillment/client-success/README.md) |
+| Media buyer | [Fulfillment OS](client-fulfillment/fulfillment-operating-system.md), [Media buying](client-fulfillment/media-buying/README.md), [Client marketing](client-fulfillment/client-marketing/README.md) |
 | Ops | [OPS Priority Ladder](operations/systems/ops-manager-priority-ladder.md), [Operations](operations/README.md) |
 | Migrating docs | [Drive inventory](_inventory/google-drive-inventory.md), [Migration backlog](_inventory/migration-backlog.md) |
 

@@ -32,13 +32,18 @@ These canonical docs are **`status: active`** — safe for team execution and AI
 
 Pricing and deal structure: founder-only per money model. Boot Camp downsell when not DFY-qualified.
 
-## Client fulfillment — performance & infrastructure
+## Client fulfillment — delivery & performance
 
-Boundaries: [Waiz vs client marketing](client-fulfillment/waiz-vs-client-marketing-boundaries.md) — company marketing lives under `acquisition/marketing/`, not here.
+**Start:** [Fulfillment Operating System](client-fulfillment/fulfillment-operating-system.md). Boundaries: [Waiz vs client marketing](client-fulfillment/waiz-vs-client-marketing-boundaries.md).
 
-- [Infrastructure hub](client-fulfillment/infrastructure/README.md) → [CRM Infrastructure](client-fulfillment/crm-architecture/crm-infrastructure.md), [How The WM AI Bot Works](client-fulfillment/crm-architecture/how-wm-ai-bot-works.md)
-- [Constraint Troubleshooting SOP](client-fulfillment/client-success/constraint-troubleshooting-sop.md)
-- [Fulfillment Constraint Diagnosis And KPI Standards](client-fulfillment/client-success/fulfillment-constraint-diagnosis-kpi-standards.md)
+| Layer | Active docs |
+|-------|-------------|
+| Master map | [Fulfillment Operating System](client-fulfillment/fulfillment-operating-system.md), [Fulfillment Lead Lifecycle](client-fulfillment/fulfillment-lead-lifecycle.md) |
+| Compliance | [RM Compliance Guardrails](client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md), [Doctrine Reverse Mortgage](client-fulfillment/reverse-mortgage-dna/doctrine-reverse-mortgage.md), [Doctrine RM Marketing](client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md) |
+| Infrastructure | [CRM Infrastructure](client-fulfillment/crm-architecture/crm-infrastructure.md), [WM AI Bot](client-fulfillment/crm-architecture/how-wm-ai-bot-works.md), [Claimed Tag](client-fulfillment/crm-architecture/how-claimed-tag-works.md) |
+| Performance | [Campaign Phase Performance Blueprint](client-fulfillment/client-success/campaign-phase-performance-blueprint.md), [Constraint Troubleshooting SOP](client-fulfillment/client-success/constraint-troubleshooting-sop.md), [Fulfillment Constraint Diagnosis KPI Standards](client-fulfillment/client-success/fulfillment-constraint-diagnosis-kpi-standards.md) |
+
+Onboarding, media buying, nurture, and post-launch CS SOPs are in `client-fulfillment/` as `draft` until founder review — see [client-fulfillment README](client-fulfillment/README.md).
 
 ## Operations
 

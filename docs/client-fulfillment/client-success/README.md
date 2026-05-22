@@ -3,21 +3,34 @@ title: Client Fulfillment — Client Success
 domain: client-fulfillment
 owner: client-success
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-05-21
 review_cycle: weekly
 ---
 
 # Client Fulfillment — Client Success
 
-Daily responsibilities, growth stages, KPI standards, reset calls, and post-launch success systems.
+Post-launch performance, campaign phases, constraints, and account health.
 
 ## Active spine
 
-- [Constraint Troubleshooting And Root Cause Diagnosis](constraint-troubleshooting-sop.md) — **canonical** (supersedes shorter ops constraint doc; see [superseded-sources](../../archive/superseded-sources.md))
-- [Fulfillment Constraint Diagnosis And KPI Standards](fulfillment-constraint-diagnosis-kpi-standards.md) — KPI companion
+| Doc | Status |
+|-----|--------|
+| [Constraint Troubleshooting SOP](constraint-troubleshooting-sop.md) | `active` |
+| [Fulfillment Constraint Diagnosis KPI Standards](fulfillment-constraint-diagnosis-kpi-standards.md) | `active` |
+| [Campaign Phase Performance Blueprint](campaign-phase-performance-blueprint.md) | `active` |
+
+## Post-launch operations (`draft`)
+
+| Doc |
+|-----|
+| [Post-Launch Client Success System](post-launch-client-success-system.md) |
+| [Client Growth Stages](client-growth-stages.md) |
+| [Reset Call SOP](reset-call-sop.md) |
+| [Client Success Daily Responsibilities](client-success-daily-responsibilities.md) |
+| [Overdue Payments And Ghosting Clients](overdue-payments-and-ghosting-clients.md) |
 
 ## Related
 
+- [Fulfillment Operating System](../fulfillment-operating-system.md)
 - [Approved Operating Spine](../../SPINE.md)
 - [CRM Architecture](../crm-architecture/README.md)
-- [Operations systems — superseded constraint note](../../operations/systems/README.md)

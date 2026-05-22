@@ -3,13 +3,15 @@ title: Client Fulfillment
 domain: client-fulfillment
 owner: operations
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-05-21
 review_cycle: monthly
 ---
 
 # Client Fulfillment
 
-Everything Waiz delivers **after a client signs** — onboarding, CRM infrastructure, marketing execution for the client, client success, and RM training material.
+Everything Waiz delivers **after a client signs** — onboarding, CRM, marketing execution, nurture, client success, and RM knowledge.
+
+**Start here:** [Fulfillment Operating System](fulfillment-operating-system.md) — master map for AI and team.
 
 **Not in this domain:** Waiz selling Waiz ([acquisition/](../acquisition/README.md)). Read [Waiz vs client marketing boundaries](waiz-vs-client-marketing-boundaries.md) first.
 
@@ -25,41 +27,39 @@ Everything Waiz delivers **after a client signs** — onboarding, CRM infrastruc
 
 | Folder | Purpose |
 |--------|---------|
-| [Waiz vs client boundaries](waiz-vs-client-marketing-boundaries.md) | **Start here** — where docs belong |
-| [Infrastructure](infrastructure/README.md) | Client CRM, GHL, WM AI bot (`active` docs on GitHub) |
-| [Client marketing](client-marketing/README.md) | Playbooks & strategy **for client campaigns** |
-| [Media buying](media-buying/README.md) | Campaign ops & MB execution SOPs |
-| [Onboarding](onboarding/README.md) | Post-close client onboarding |
-| [Client success](client-success/README.md) | Performance, constraints, KPIs |
-| [CRM architecture](crm-architecture/README.md) | Same infrastructure docs (canonical path) |
-| [Reverse mortgage DNA](reverse-mortgage-dna/README.md) | RM knowledge for client campaigns |
-| [Course material](course-material/README.md) | Skool / Bootcamp (client training) |
+| [Fulfillment Operating System](fulfillment-operating-system.md) | **Master index** — onboarding → launch → lifecycle → phases → fixes |
+| [Waiz vs client boundaries](waiz-vs-client-marketing-boundaries.md) | Where docs belong |
+| [Onboarding](onboarding/README.md) | A-Z post-close through launch |
+| [Infrastructure](infrastructure/README.md) | Client CRM, GHL, WM AI bot |
+| [Client marketing](client-marketing/README.md) | Playbooks, drips, ad strategy |
+| [Media buying](media-buying/README.md) | Campaign execution SOPs |
+| [Client success](client-success/README.md) | Post-launch CS, phases, troubleshooting |
+| [CRM architecture](crm-architecture/README.md) | Canonical CRM + bot paths |
+| [Reverse mortgage DNA](reverse-mortgage-dna/README.md) | Product, ICP, compliance |
+| [Course material](course-material/README.md) | Skool training (links to canonical SOPs) |
 
 ## On GitHub today
 
 | Area | Status |
 |------|--------|
-| **Infrastructure** | [CRM Infrastructure](crm-architecture/crm-infrastructure.md), [AI bot](crm-architecture/how-wm-ai-bot-works.md) — `active` |
-| **Client success** | Constraint SOP + KPI standards — `active` |
-| **Media buying** | README only — **~16 SOPs not converted yet** |
-| **Client marketing** | README only — playbooks pending migration |
-| **Onboarding** | Mostly backlog |
+| **Operating system** | [Fulfillment OS](fulfillment-operating-system.md) + [Lead lifecycle](fulfillment-lead-lifecycle.md) — `active` |
+| **Onboarding** | [A-Z SOP](onboarding/a-z-client-onboarding-sop.md), [Comms SOP](onboarding/onboarding-to-launch-client-communication.md) — `draft` |
+| **Infrastructure** | [CRM](crm-architecture/crm-infrastructure.md), [AI bot](crm-architecture/how-wm-ai-bot-works.md), [Claimed tag](crm-architecture/how-claimed-tag-works.md) — `active` |
+| **Client success** | Troubleshooting + KPIs + phase blueprint + post-launch SOPs — mixed `active`/`draft` |
+| **Media buying** | Campaign setup, month 1, creative library, AI images — `draft` |
+| **Client marketing** | Playbooks, drips, Andromeda — `draft` |
+| **RM DNA** | Doctrine + compliance — `active` on guardrails/doctrine |
+| **Course material** | Partial; links to canonical |
 
 Raw exports: `source-docs/.../03 _ Client Fulfillment/`
 
-## Canonical docs (converted)
+## Still in Drive only (lower priority)
 
-- [Infrastructure hub](infrastructure/README.md)
-- [Client Success](client-success/README.md)
-- [Course Material](course-material/README.md) — partial
-
-## Open gaps
-
-- [ ] Migrate media buying batch → `media-buying/` + link from `client-marketing/`
-- [ ] Migrate onboarding and remaining client-success SOPs
-- [ ] Convert Skool course material last (link to canonical SOPs, avoid duplicates)
+- MB Resources: FB setup, fixing FB issues, comms templates, backup ad accounts spreadsheet
+- Skool-only duplicates — keep as training; do not duplicate in `media-buying/`
 
 ## Related
 
 - [Approved Operating Spine](../SPINE.md)
 - [Migration backlog](../_inventory/migration-backlog.md)
+- [Prompts — client fulfillment](../prompts/client-fulfillment/README.md)

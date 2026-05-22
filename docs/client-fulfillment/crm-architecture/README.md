@@ -3,22 +3,25 @@ title: Client Fulfillment — CRM Architecture
 domain: client-fulfillment
 owner: operations
 status: active
-last_updated: 2026-05-20
-review_cycle: monthly
+last_updated: 2026-05-21
+review_cycle: quarterly
 ---
 
 # Client Fulfillment — CRM Architecture
 
-GoHighLevel infrastructure, tags, and AI bot behavior for **clients**.
+GoHighLevel infrastructure, AI bot, and lead-ownership rules for client accounts.
 
-Also listed under [Infrastructure hub](../infrastructure/README.md) (same docs — use either entry point on GitHub).
+## Canonical docs
 
-## Active spine
+| Doc | Status |
+|-----|--------|
+| [CRM Infrastructure](crm-infrastructure.md) | `active` |
+| [How The WM AI Bot Works](how-wm-ai-bot-works.md) | `active` |
+| [How Claimed Tag Works](how-claimed-tag-works.md) | `active` |
 
-- [CRM Infrastructure](crm-infrastructure.md)
-- [How The WM AI Bot Works](how-wm-ai-bot-works.md)
+Hub alias: [infrastructure/](../infrastructure/README.md)
 
 ## Related
 
-- [Approved Operating Spine](../../SPINE.md)
-- [Client Fulfillment](../README.md)
+- [Fulfillment Lead Lifecycle](../fulfillment-lead-lifecycle.md)
+- [RM Text Drip 2025](../client-marketing/rm-text-drip-2025.md)

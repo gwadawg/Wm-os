@@ -3,37 +3,40 @@ title: Client Fulfillment — Client Marketing
 domain: client-fulfillment
 owner: media-buying-lead
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-05-21
 review_cycle: weekly
 ---
 
 # Client Fulfillment — Client Marketing
 
-Marketing **for paying loan officer clients** — reverse mortgage lead gen, ad strategy, playbooks, and funnels. Distinct from [Waiz company marketing](../../acquisition/marketing/README.md) (selling Waiz Media).
+Marketing **for paying loan officer clients** — strategy, playbooks, funnels, and nurture copy.
 
-Read [Waiz vs client marketing boundaries](../waiz-vs-client-marketing-boundaries.md) before adding docs here.
+Read [Waiz vs client marketing boundaries](../waiz-vs-client-marketing-boundaries.md) before adding docs.
 
-## What goes here vs `media-buying/`
+## Strategy & playbooks
 
-| Layer | Folder | Examples (from Drive, to convert) |
-|-------|--------|-----------------------------------|
-| Strategy & playbooks | **client-marketing/** (this folder) | RM Ad Playbook, Reverse Mortgage Ads Playbook, Andromeda rules |
-| Execution SOPs | [media-buying/](../media-buying/README.md) | New client campaign setup, month-1 ad management, FB troubleshooting |
-| Training / Skool | [course-material/](../course-material/README.md) | Bootcamp lessons; link to canonical SOPs here or in media-buying |
+| Doc | Status |
+|-----|--------|
+| [RM Ad Playbook](rm-ad-playbook.md) | `draft` |
+| [Reverse Mortgage Ads Playbook](reverse-mortgage-ads-playbook.md) | `draft` |
+| [Meta Andromeda Rules For Reverse Mortgages](meta-andromeda-rm-rules.md) | `draft` |
 
-## Canonical docs
+## Nurture & follow-up (canonical copy)
 
-_Migration backlog — ~16 media-buying sources. Links will be added as each doc is converted._
+| Doc | Status |
+|-----|--------|
+| [RM Text Drip 2025](rm-text-drip-2025.md) | `draft` |
+| [10-Day RM Drip Campaign (Email + SMS)](10-day-rm-drip-campaign.md) | `draft` |
+| [RM Lead Nurture Drip Sequence](rm-lead-nurture-drip-sequence.md) | `draft` |
 
-## Drive sources (not yet in `docs/`)
+Skool [Lead Nurture Playbook](../course-material/lead-nurture-playbook.md) is training — link here for operational copy.
 
-- `03 _ Client Fulfillment/Media Buying/Media Buying (SOPs)/`
-- `03 _ Client Fulfillment/Media Buying/RM Ad Playbook.docx`
+## Execution SOPs
 
-See [migration-backlog](../../_inventory/migration-backlog.md) and [google-drive-inventory](../../_inventory/google-drive-inventory.md) (`client-fulfillment/media-buying`).
+See [media-buying/](../media-buying/README.md) for campaign setup and month-1 ops.
 
 ## Related
 
-- [Infrastructure](../infrastructure/README.md) — CRM & bots for client leads
-- [Client success](../client-success/README.md)
+- [Fulfillment Operating System](../fulfillment-operating-system.md)
+- [Reverse mortgage DNA](../reverse-mortgage-dna/README.md)
 - [Acquisition marketing](../../acquisition/marketing/README.md) — **Waiz only**

@@ -11,6 +11,8 @@ artifact_type: playbook
 
 # Lead Nurture Playbook
 
+> **Canonical ops copy:** [RM Lead Nurture Drip Sequence](../client-marketing/rm-lead-nurture-drip-sequence.md) and [10-Day RM Drip Campaign](../client-marketing/10-day-rm-drip-campaign.md). This doc is Skool/training context — do not fork copy here.
+
 ## Purpose
 
 Lead nurture playbook for bootcamp/community.

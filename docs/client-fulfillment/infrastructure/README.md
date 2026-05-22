@@ -19,6 +19,9 @@ review_cycle: monthly
 |-----|--------|
 | [CRM Infrastructure](../crm-architecture/crm-infrastructure.md) | `active` |
 | [How The WM AI Bot Works](../crm-architecture/how-wm-ai-bot-works.md) | `active` |
+| [How Claimed Tag Works](../crm-architecture/how-claimed-tag-works.md) | `active` |
+
+Master map: [Fulfillment Operating System](../fulfillment-operating-system.md)
 
 ## Not Waiz company marketing
 

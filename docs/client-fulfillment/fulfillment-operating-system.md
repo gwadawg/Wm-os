@@ -1,0 +1,108 @@
+---
+title: Fulfillment Operating System
+domain: client-fulfillment
+owner: client-success
+status: active
+last_updated: 2026-05-21
+review_cycle: monthly
+source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/(synthesized)
+artifact_type: overview
+---
+
+# Fulfillment Operating System
+
+## Purpose
+
+Single entry point for how Waiz delivers after a client signs — onboarding, launch, lead engine, campaign phases, and troubleshooting.
+
+## Scope
+
+All post-close client delivery. Excludes Waiz acquisition (see acquisition/).
+
+## Trigger
+
+Any AI or team work on client fulfillment, onboarding, creatives, nurture, or account health.
+
+## Inputs
+
+- Approved offer and contract
+- New Client Form submission
+
+## Outputs
+
+- Live client campaign
+- Documented client in ClickUp/GHL/Slack
+
+## Quality Bar
+
+- Align with [Identity Core](../company/doctrine-identity-core-april-26.md) and [SOURCE-OF-TRUTH](../SOURCE-OF-TRUTH.md).
+- Client-facing copy must follow [RM Compliance Guardrails](../client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md) when applicable.
+
+## Operating Content
+
+## How To Use This Doc
+
+Load this page first for any client-fulfillment question. Follow links to the canonical SOP for execution detail.
+
+## Delivery Timeline (Gated)
+
+| Phase | Name | Canonical doc | Gate |
+|-------|------|---------------|------|
+| 1 | Paid & activation | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | New Client Form |
+| 2 | Welcome & CSM | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Welcome email + call |
+| 3 | Onboarding form | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Form submitted |
+| 4 | Onboarding call | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Kickoff form |
+| 5 | Implementation | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [New Client Campaign Setup](media-buying/new-client-campaign-setup-sop.md) | Kickoff complete |
+| 6 | QA | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | QA form |
+| 7 | Launch | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [Onboarding To Launch Communication](onboarding/onboarding-to-launch-client-communication.md) | Launch form |
+
+## Lead Engine (After Launch)
+
+| Stage | Doc |
+|-------|-----|
+| Full map | [Fulfillment Lead Lifecycle](fulfillment-lead-lifecycle.md) |
+| Ads & creative | [RM Ad Playbook](client-marketing/rm-ad-playbook.md), [Ad Copy And Angle Library](media-buying/ad-copy-angle-library-rm.md), [AI RM Ad Image Creation](media-buying/ai-rm-ad-image-creation-sop.md) |
+| CRM & bot | [CRM Infrastructure](crm-architecture/crm-infrastructure.md), [WM AI Bot](crm-architecture/how-wm-ai-bot-works.md), [Claimed Tag](crm-architecture/how-claimed-tag-works.md) |
+| Nurture | [RM Text Drip 2025](client-marketing/rm-text-drip-2025.md), [10-Day RM Drip](client-marketing/10-day-rm-drip-campaign.md), [RM Lead Nurture Drip](client-marketing/rm-lead-nurture-drip-sequence.md) |
+
+## Campaign Maturity (CS Lens)
+
+| Phase | Weeks | Doc |
+|-------|-------|-----|
+| Testing | 1–4 | [Campaign Phase Performance Blueprint](client-success/campaign-phase-performance-blueprint.md) |
+| Optimization | 4–8 | Same |
+| Compounding | 8+ | Same |
+
+## When Performance Breaks
+
+1. [Campaign Phase Performance Blueprint](client-success/campaign-phase-performance-blueprint.md) — normal vs abnormal for phase
+2. [Constraint Troubleshooting SOP](client-success/constraint-troubleshooting-sop.md) — layer-by-layer fixes
+3. [Fulfillment Constraint Diagnosis KPI Standards](client-success/fulfillment-constraint-diagnosis-kpi-standards.md)
+4. [Reset Call SOP](client-success/reset-call-sop.md) if still off-track
+
+## Compliance (Always)
+
+- [RM Compliance Guardrails](reverse-mortgage-dna/rm-compliance-guardrails.md)
+- [Doctrine Reverse Mortgage](reverse-mortgage-dna/doctrine-reverse-mortgage.md)
+- [Doctrine RM Marketing](reverse-mortgage-dna/doctrine-rm-marketing.md)
+
+## AI Quick Load Order
+
+1. This doc
+2. Compliance guardrails + angle library
+3. Lifecycle + phase blueprint
+4. Task-specific SOP (onboarding, MB, nurture, CS)
+
+## Subfolder Index
+
+| Folder | Role |
+|--------|------|
+| [onboarding/](onboarding/README.md) | Post-close through launch |
+| [infrastructure/](infrastructure/README.md) | CRM hub |
+| [crm-architecture/](crm-architecture/README.md) | GHL + bot specs |
+| [client-marketing/](client-marketing/README.md) | Strategy, drips, playbooks |
+| [media-buying/](media-buying/README.md) | Campaign execution SOPs |
+| [client-success/](client-success/README.md) | Post-launch CS + troubleshooting |
+| [reverse-mortgage-dna/](reverse-mortgage-dna/README.md) | Product, ICP, compliance |
+| [course-material/](course-material/README.md) | Skool training (links to canonical) |
+

@@ -69,7 +69,7 @@ Use this backlog to turn the raw Google Drive export into durable AI-ready compa
 - [x] Document Waiz vs client marketing boundaries → `docs/client-fulfillment/waiz-vs-client-marketing-boundaries.md`
 - [x] Add `infrastructure/` hub (points to `crm-architecture/` active docs)
 - [x] Add `client-marketing/` folder (playbooks; links to `media-buying/` execution SOPs)
-- [ ] Convert `03 _ Client Fulfillment/Media Buying/` batch (~16 docs) → `media-buying/` + `client-marketing/` per boundaries doc
+- [x] Convert `03 _ Client Fulfillment` core batch (2026-05-21) — see [fulfillment-operating-system.md](../client-fulfillment/fulfillment-operating-system.md), `scripts/bulk-convert-fulfillment-batch.py`. Remaining: MB Resources (FB setup, fixing issues, comms templates), backup ad accounts xlsx.
 
 ## Phase 3: Gap Analysis
 
