@@ -44,6 +44,8 @@ Pricing and packaging: [Money Model](../../company/overview-money-model-april-26
 
 ## Draft — review before live use
 
+- [Pre-Intro Follow-Up Messaging](pre-intro-followup-messaging.md) — trust/show-up copy and setter confirmations (pre-demo track TBD)
+
 ### Objection depth (linked from hub)
 
 - [Objection Handling Master Guide](objection-handling-master-guide.md)
