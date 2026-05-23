@@ -128,10 +128,14 @@ entries:
 - repo_path: docs/acquisition/outbound/linkedin/process.md
   team_title: LinkedIn Outreach — Process
   drive_folder: setters
-  publish_status: draft
+  google_doc_id: 1E-Nj4xs0pH4wgYh456MwszRpS3v3lmV-68x1dwTF6Fw
+  publish_status: active
   team_role: setter
+  last_published: '2026-05-22'
 - repo_path: docs/acquisition/outbound/linkedin/copy-angles.md
   team_title: LinkedIn Outreach — Scripts And Angles
   drive_folder: setters
-  publish_status: draft
+  google_doc_id: 1RyFT9vT-15pblwo7t-9NtB7-Po2Rir_HjLw91Oog0Vo
+  publish_status: active
   team_role: setter
+  last_published: '2026-05-22'

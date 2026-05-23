@@ -160,7 +160,7 @@ def main() -> int:
             registry,
             folder_cfg,
             force=args.update_all or args.force,
-            delay_seconds=45.0 if args.update_all else 0.0,
+            delay_seconds=90.0 if args.update_all else 0.0,
         )
         return 0
 
@@ -174,20 +174,30 @@ def main() -> int:
         print(f"No registry entry for {norm}. Add a row to team-publish-registry.yaml.", file=sys.stderr)
         return 1
 
-    try:
-        doc_id = publish_entry(
-            entry,
-            registry=registry,
-            folder_cfg=folder_cfg,
-            force=args.force,
-            archive=args.archive,
-        )
-        save_registry(registry)
-        print(f"Published: {doc_url(doc_id)}")
-        return 0
-    except Exception as e:
-        print(f"Error: {e}", file=sys.stderr)
-        return 1
+    for attempt in range(4):
+        try:
+            doc_id = publish_entry(
+                entry,
+                registry=registry,
+                folder_cfg=folder_cfg,
+                force=args.force,
+                archive=args.archive,
+            )
+            save_registry(registry)
+            print(f"Published: {doc_url(doc_id)}")
+            return 0
+        except HttpError as e:
+            if e.resp.status == 429 and attempt < 3:
+                wait = 65 * (attempt + 1)
+                print(f"Rate limit — waiting {wait}s before retry...", file=sys.stderr)
+                time.sleep(wait)
+                continue
+            print(f"Error: {e}", file=sys.stderr)
+            return 1
+        except Exception as e:
+            print(f"Error: {e}", file=sys.stderr)
+            return 1
+    return 1
 
 
 if __name__ == "__main__":

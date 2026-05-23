@@ -75,7 +75,7 @@ MAX_TEAM_PARAGRAPH_LEN = 320
 
 @dataclass
 class Block:
-    kind: str  # heading1, heading2, heading3, callout, paragraph, bullet, numbered, label
+    kind: str  # heading1, heading2, heading3, north_star, meta_bullet, callout, paragraph, bullet, numbered, label
     text: str
     link_url: str | None = None
     callout_type: str | None = None
@@ -250,14 +250,11 @@ def build_at_a_glance(owner: str, sections: dict[str, str], *, purpose_text: str
     when = sections.get("when", "") or sections.get("scope", "")
     when_short = team_when_summary(when, owner)
     outcome = first_sentence(purpose_text) or "Complete the procedure below"
-    blocks = [
-        Block("heading2", "At a glance"),
-        Block("bullet", f"Who: {owner}"),
-        Block("bullet", f"When: {when_short}"),
-        Block("bullet", f"Outcome: {outcome}"),
-        Block("bullet", "Questions: Escalate to Gabriel"),
+    return [
+        Block("north_star", outcome, callout_type="north_star"),
+        Block("meta_bullet", f"Who: {owner}"),
+        Block("meta_bullet", f"When: {when_short}"),
     ]
-    return blocks
 
 
 def team_when_summary(when: str, owner: str) -> str:

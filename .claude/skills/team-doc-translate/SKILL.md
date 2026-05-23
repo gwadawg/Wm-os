@@ -16,25 +16,24 @@ Turn `docs/` canonical files into **WM team Google Docs** that match the company
 Spec: [wm-team-doc-format-spec.md](../../docs/templates/wm-team-doc-format-spec.md)  
 Doc ID: `19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y`
 
-## Cover block (centered)
+## Cover block (centered, branded)
 
-```
-WAIZ MEDIA                         26pt bold
-[Document Title]                   20pt
-[Role] Team | Internal Use Only | [Year]   11pt
-```
+- **WAIZ MEDIA** — 26pt bold navy
+- **Title** — 20pt blue
+- **Role | Internal Use Only | Year** — 11pt gray italic
+- **Divider** — light blue line under subtitle
 
 ## Body layout
 
 | Element | Style |
 |---------|--------|
-| Major section | `HEADING_1` — e.g. Overview, How To Do It |
-| Subsection | `HEADING_2` — e.g. category, phase, Done Right Looks Like |
-| Field label | Bold line — What It Is, How to Identify It, How to Handle It |
-| Callout | 1×2 table — 📌 NORTH STAR, ⚠️ IMPORTANT, 💡 PRO TIP, 🚨 CRITICAL, 📌 REMEMBER |
-| Lists | Bullets, short lines |
-| Data tables | Header row + rows (categories, steps, quick reference) |
-| Footer | `Waiz Media | Internal Document | Confidential` centered |
+| Major section | `HEADING_1` + navy text |
+| Subsection | `HEADING_2` + navy text |
+| Field label | Bold 11pt navy |
+| NORTH STAR | Shaded single-cell box — **one sentence only**; Who/When as bullets below |
+| Other callouts | Same shaded box (IMPORTANT, PRO TIP, REMEMBER) |
+| Data tables | Navy header row, white text; bordered body rows |
+| Footer | Gray centered confidential line |
 
 ## Translation workflow
 

@@ -76,7 +76,7 @@ Apply [team-doc-translate](../team-doc-translate/SKILL.md) **before** publish. O
 - Spec: [wm-team-doc-format-spec.md](../../docs/templates/wm-team-doc-format-spec.md)
 - Template: [team-doc-publish-template.md](../../docs/templates/team-doc-publish-template.md)
 - Translator: `scripts/lib/team_doc_translator.py`
-- Formatter: `scripts/lib/team_doc_formatter.py`
+- Formatter: `scripts/lib/team_doc_formatter.py` (navy/blue cover, shaded callouts, styled table headers)
 - Strip frontmatter, Open Questions, migration paths
 - Rewrite `## Related Docs` to hyperlinks when targets have `google_doc_id` in registry
 - Pricing-sensitive docs: no dollar amounts — escalate to Gabriel

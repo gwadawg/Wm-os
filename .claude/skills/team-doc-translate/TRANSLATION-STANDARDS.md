@@ -5,9 +5,9 @@ Live reference: [WM Objection Categories](https://docs.google.com/document/d/19c
 
 ## North star callout
 
-Replace plain "At a glance" bullets with one **📌 NORTH STAR** table row:
-
-- Who + when + outcome in 1–2 sentences max.
+- **NORTH STAR:** one sentence (purpose outcome only), max ~220 characters.
+- **Who / When:** bullets directly under the shaded box in Overview — never inside NORTH STAR.
+- Publish applies **navy/blue theme**, divider under cover, shaded callout box, navy table headers.
 
 ## Section mapping (repo → WM format)
 
