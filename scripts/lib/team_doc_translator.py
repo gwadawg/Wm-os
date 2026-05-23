@@ -23,15 +23,31 @@ SECTION_ALIASES = {
     "trigger": "when",
     "when to use": "when",
     "inputs": "inputs",
+    "inputs / outputs": "inputs",
     "outputs": "outputs",
     "tools": "tools",
+    "owners": "inputs",
     "process": "process",
+    "how to use": "process",
     "operating content": "process",
     "quality bar": "quality",
     "escalation": "escalation",
     "owner": "owner",
     "related docs": "related docs",
 }
+
+RESERVED_SECTION_KEYS = frozenset(
+    {
+        "purpose",
+        "scope",
+        "when",
+        "inputs",
+        "tools",
+        "quality",
+        "escalation",
+        "related docs",
+    }
+)
 
 KNOWN_SECTION_HEADINGS = set(SECTION_ALIASES.keys())
 
@@ -110,9 +126,12 @@ def translate(
 
     inputs = sections.get("inputs", "") or sections.get("tools", "")
     when = sections.get("when", "")
+    scope = sections.get("scope", "")
     before_parts = []
     if when:
         before_parts.append(sanitize_body(when, repo_path))
+    if scope:
+        before_parts.append(sanitize_body(scope, repo_path))
     if inputs:
         before_parts.append(sanitize_body(inputs, repo_path))
     if before_parts:
@@ -120,7 +139,7 @@ def translate(
         for part in before_parts:
             blocks.extend(content_to_blocks(part))
 
-    process = sections.get("process", "")
+    process = gather_process_body(sections)
     if process:
         blocks.append(Block("heading2", "How to do it"))
         clean_process = sanitize_body(process, repo_path)
@@ -194,9 +213,6 @@ def split_sections(body: str) -> dict[str, str]:
             continue
         if line.startswith("## "):
             heading = line[3:].strip().lower()
-            if heading not in KNOWN_SECTION_HEADINGS:
-                current_lines.append(line)
-                continue
             flush(sections, current_key, current_lines)
             current_key = heading
             current_lines = []
@@ -226,6 +242,22 @@ def flush(sections: dict[str, str], key: str, lines: list[str]) -> None:
     text = "\n".join(lines).strip()
     if text:
         sections[key] = text
+
+
+def gather_process_body(sections: dict[str, str]) -> str:
+    """Merge process + SOP subsections + playbook angles into How To Do It."""
+    parts: list[str] = []
+    for key, content in sections.items():
+        if key.startswith("_") or key in RESERVED_SECTION_KEYS:
+            continue
+        content = content.strip()
+        if not content:
+            continue
+        if not content.lstrip().startswith("##"):
+            title = " ".join(word.capitalize() for word in key.split())
+            content = f"## {title}\n\n{content}"
+        parts.append(content)
+    return "\n\n".join(parts).strip()
 
 
 def sanitize_body(text: str, repo_path: Path) -> str:
@@ -397,8 +429,14 @@ def content_to_blocks(
             label = stripped[3:].strip()
             if team_mode and should_skip_phase_heading(label, doc_title):
                 continue
-            phase_index += 1
-            blocks.append(Block("heading3", f"Phase {phase_index} — {shorten_heading(label)}"))
+            if team_mode and re.match(r"^phase\s+[\db]", label, re.I):
+                phase_index += 1
+                blocks.append(Block("heading3", f"Phase {phase_index} — {shorten_heading(label)}"))
+            elif team_mode:
+                blocks.append(Block("heading2", shorten_heading(label)))
+            else:
+                phase_index += 1
+                blocks.append(Block("heading3", f"Phase {phase_index} — {shorten_heading(label)}"))
         else:
             plain = strip_markdown_inline(stripped)
             if not plain:

@@ -2,9 +2,13 @@
 
 from __future__ import annotations
 
+import time
 from dataclasses import dataclass, field
 from datetime import date
 from typing import Any
+
+# Docs API: 60 write requests/min/user — pace batchUpdate calls on large publishes.
+_BATCH_MIN_INTERVAL_SEC = 1.05
 
 from .team_doc_translator import Block
 
@@ -265,13 +269,18 @@ class _DocWriter:
         self.docs = docs
         self.doc_id = doc_id
         self.index = 1
+        self._last_batch_at: float = 0.0
 
     def _batch(self, requests: list[dict[str, Any]]) -> None:
         if not requests:
             return
+        elapsed = time.monotonic() - self._last_batch_at
+        if self._last_batch_at and elapsed < _BATCH_MIN_INTERVAL_SEC:
+            time.sleep(_BATCH_MIN_INTERVAL_SEC - elapsed)
         self.docs.documents().batchUpdate(
             documentId=self.doc_id, body={"requests": requests}
         ).execute()
+        self._last_batch_at = time.monotonic()
         self._refresh_index()
 
     def _refresh_index(self) -> None:
