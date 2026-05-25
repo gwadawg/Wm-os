@@ -28,7 +28,6 @@ SECTION_ALIASES = {
     "tools": "tools",
     "owners": "inputs",
     "process": "process",
-    "how to use": "process",
     "operating content": "process",
     "quality bar": "quality",
     "escalation": "escalation",
@@ -41,12 +40,23 @@ RESERVED_SECTION_KEYS = frozenset(
         "purpose",
         "scope",
         "when",
+        "how to use",
         "inputs",
         "tools",
         "quality",
         "escalation",
         "related docs",
     }
+)
+
+PLAYBOOK_SECTION_ORDER = (
+    "how to use",
+    "voice variants",
+    "connect micro-note (a/b test — under 200 characters)",
+    "setter no-reply bump (one only, 48–72h after opener)",
+    "gabriel ghost sequence (touches 1–3)",
+    "comment-first opener (use with phase 0)",
+    "angle index",
 )
 
 KNOWN_SECTION_HEADINGS = set(SECTION_ALIASES.keys())
@@ -91,10 +101,12 @@ MAX_TEAM_PARAGRAPH_LEN = 320
 
 @dataclass
 class Block:
-    kind: str  # heading1, heading2, heading3, north_star, meta_bullet, callout, paragraph, bullet, numbered, label
+    kind: str  # heading1, heading2, label, north_star, meta_bullet, callout, template, table, paragraph, bullet, numbered
     text: str
     link_url: str | None = None
     callout_type: str | None = None
+    table_headers: list[str] | None = None
+    table_rows: list[list[str]] | None = None
 
 
 def translate(
@@ -116,12 +128,12 @@ def translate(
     registry_index = index_by_repo_path(registry_data or {"entries": []})
     blocks: list[Block] = []
 
-    blocks.append(Block("heading1", title))
+    blocks.append(Block("h1", title))
     blocks.extend(build_at_a_glance(owner, sections, purpose_text=sections.get("purpose", "")))
 
     purpose = sections.get("purpose", "")
     if purpose:
-        blocks.append(Block("heading2", "What this is for"))
+        blocks.append(Block("h2", "What This Is For"))
         blocks.extend(paragraphs_to_blocks(truncate_paragraphs(sanitize_body(purpose, repo_path), max_paras=2)))
 
     inputs = sections.get("inputs", "") or sections.get("tools", "")
@@ -135,52 +147,119 @@ def translate(
     if inputs:
         before_parts.append(sanitize_body(inputs, repo_path))
     if before_parts:
-        blocks.append(Block("heading2", "Before you start"))
+        blocks.append(Block("h2", "Before You Start"))
         for part in before_parts:
-            blocks.extend(content_to_blocks(part))
+            blocks.extend(humanize_markdown_body(part, doc_title=title))
 
-    process = gather_process_body(sections)
-    if process:
-        blocks.append(Block("heading2", "How to do it"))
-        clean_process = sanitize_body(process, repo_path)
-        blocks.extend(hunt_normal_callouts(clean_process))
-        blocks.extend(
-            content_to_blocks(
-                clean_process,
-                team_mode=True,
-                doc_title=title,
-            )
-        )
+    is_playbook = _is_playbook_doc(meta, repo_path)
+
+    if is_playbook:
+        blocks.extend(_translate_playbook_sections(sections, repo_path, doc_title=title))
+    else:
+        process = gather_process_body(sections)
+        if process:
+            blocks.append(Block("h1", "How To Do It"))
+            clean_process = sanitize_body(process, repo_path)
+            blocks.extend(hunt_normal_callouts(clean_process))
+            blocks.extend(humanize_markdown_body(clean_process, doc_title=title))
+
+    how_to = sections.get("how to use", "")
+    if how_to and not is_playbook:
+        blocks.append(Block("h2", "Quick Start"))
+        blocks.extend(humanize_markdown_body(sanitize_body(how_to, repo_path), doc_title=title))
 
     quality = sections.get("quality", "")
     if quality:
-        blocks.append(Block("heading2", "Done right looks like"))
+        blocks.append(Block("h2", "Done Right Looks Like"))
         blocks.extend(quality_to_blocks(sanitize_body(quality, repo_path)))
 
     escalation = sections.get("escalation", "")
-    blocks.append(Block("heading2", "When to get help"))
+    blocks.append(Block("h2", "When To Get Help"))
     if escalation:
         blocks.extend(paragraphs_to_blocks(sanitize_body(escalation, repo_path)))
     blocks.append(Block("paragraph", f"Questions, pricing, or exceptions → escalate to Gabriel ({owner} team)."))
 
     related_body = sections.get("related docs", "")
     if related_body:
-        blocks.append(Block("heading2", "Related procedures"))
+        blocks.append(Block("h2", "Related Procedures"))
         blocks.extend(
             related_to_blocks(related_body, repo_path, registry_index),
         )
 
-    from datetime import date
+    return blocks
 
-    blocks.append(Block("paragraph", ""))
-    blocks.append(
-        Block(
-            "paragraph",
-            f"Published: {date.today().isoformat()} | Owner: {owner} | Ref: {slug}",
+
+def _is_playbook_doc(meta: dict[str, str], repo_path: Path) -> bool:
+    if meta.get("artifact_type") == "playbook":
+        return True
+    if repo_path.name in ("copy-angles.md", "linkedin-dm-angle-library.md"):
+        return True
+    if "copy" in repo_path.stem and repo_path.parent.name == "linkedin":
+        return True
+    return False
+
+
+def _translate_playbook_sections(
+    sections: dict[str, str],
+    repo_path: Path,
+    *,
+    doc_title: str,
+) -> list[Block]:
+    """Rebuild playbook/script library docs for humans — not a flat markdown dump."""
+    blocks: list[Block] = []
+    seen: set[str] = set()
+
+    how_to = sections.get("how to use", "").strip()
+    if how_to:
+        seen.add("how to use")
+        blocks.append(Block("h1", "Quick Start"))
+        blocks.extend(
+            humanize_markdown_body(sanitize_body(how_to, repo_path), doc_title=doc_title)
         )
-    )
+
+    for key in PLAYBOOK_SECTION_ORDER:
+        if key not in sections or key in seen:
+            continue
+        seen.add(key)
+        blocks.extend(_section_blocks(key, sections[key], repo_path, doc_title=doc_title))
+
+    for key in sorted(sections.keys()):
+        if key in seen or key in RESERVED_SECTION_KEYS or key.startswith("_"):
+            continue
+        blocks.extend(_section_blocks(key, sections[key], repo_path, doc_title=doc_title))
 
     return blocks
+
+
+def _section_blocks(
+    section_key: str,
+    content: str,
+    repo_path: Path,
+    *,
+    doc_title: str,
+) -> list[Block]:
+    content = sanitize_body(content, repo_path).strip()
+    if not content:
+        return []
+    title = _section_display_title(section_key)
+    blocks: list[Block] = [Block("h2", title)]
+    if section_key == "angle index":
+        blocks.append(
+            Block(
+                "callout",
+                "Pick the angle number that matches the strongest signal on their profile, then scroll to that section for ready-to-send lines.",
+                callout_type="tip",
+            )
+        )
+    blocks.extend(humanize_markdown_body(content, doc_title=doc_title))
+    return blocks
+
+
+def _section_display_title(key: str) -> str:
+    if re.match(r"^angle \d+", key, re.I):
+        return key.title()
+    parts = key.split("—", 1)[0].strip()
+    return parts.title()
 
 
 def parse_frontmatter(text: str) -> dict[str, str]:
@@ -382,6 +461,157 @@ def is_schedule_row(line: str) -> bool:
     if re.match(r"^\d{1,2}:\d{2}\s", line):
         return True
     return False
+
+
+def humanize_markdown_body(text: str, *, doc_title: str = "") -> list[Block]:
+    """Turn repo markdown into scannable team-doc blocks (tables, templates, headings)."""
+    blocks: list[Block] = []
+    lines = text.splitlines()
+    i = 0
+    schedule_rows = 0
+
+    while i < len(lines):
+        stripped = lines[i].strip()
+
+        if not stripped or stripped in ("---", "***", "___"):
+            i += 1
+            continue
+
+        if stripped.startswith("## "):
+            label = stripped[3:].strip()
+            if should_skip_phase_heading(label, doc_title):
+                i += 1
+                continue
+            blocks.append(Block("h2", shorten_heading(label)))
+            i += 1
+            continue
+
+        if stripped.startswith("### "):
+            blocks.append(Block("label", stripped[4:].strip()))
+            i += 1
+            continue
+
+        if stripped.startswith("|") and stripped.count("|") >= 2:
+            headers, rows, i = _parse_markdown_table(lines, i)
+            if headers and rows:
+                blocks.append(
+                    Block(
+                        "table",
+                        "",
+                        table_headers=headers,
+                        table_rows=rows,
+                    )
+                )
+            continue
+
+        if stripped.startswith(">"):
+            while i < len(lines) and lines[i].strip().startswith(">"):
+                quote = strip_markdown_inline(lines[i].strip().lstrip(">").strip())
+                if quote:
+                    blocks.append(Block("template", quote))
+                i += 1
+            continue
+
+        if re.match(r"^\*\*[^*]+\*\*:?\s*$", stripped):
+            label = strip_markdown_inline(stripped.strip("*").strip(":"))
+            blocks.append(Block("label", label))
+            i += 1
+            continue
+
+        if is_schedule_row(stripped):
+            schedule_rows += 1
+            if schedule_rows <= 3:
+                blocks.append(Block("bullet", strip_markdown_inline(stripped.lstrip("#").strip())))
+            elif schedule_rows == 4:
+                blocks.append(
+                    Block(
+                        "callout",
+                        "Follow your calendar blocks — Hunt days are all priority list + outbound; Normal days mix calls and list work.",
+                        callout_type="tip",
+                    )
+                )
+            i += 1
+            continue
+
+        if stripped.startswith("▸") or stripped.upper().startswith("IMPORTANT:"):
+            blocks.append(
+                Block(
+                    "callout",
+                    strip_markdown_inline(stripped.lstrip("▸ ").strip()),
+                    callout_type="important",
+                )
+            )
+            i += 1
+            continue
+
+        if stripped.startswith("- ") or stripped.startswith("* "):
+            item = strip_markdown_inline(stripped[2:])
+            if item and not item.startswith("|"):
+                blocks.append(Block("bullet", item))
+            i += 1
+            continue
+
+        if re.match(r"^\d+\.\s", stripped):
+            blocks.append(Block("numbered", strip_markdown_inline(stripped)))
+            i += 1
+            continue
+
+        if stripped.startswith("**") and "**" in stripped[2:]:
+            m = re.match(r"^\*\*([^*]+)\*\*:?\s*(.*)$", stripped)
+            if m:
+                label, rest = m.group(1).strip(), m.group(2).strip()
+                blocks.append(Block("label", label))
+                if rest:
+                    blocks.append(Block("paragraph", strip_markdown_inline(rest) + "\n"))
+                i += 1
+                continue
+
+        plain = strip_markdown_inline(stripped)
+        if not plain or plain.startswith("|"):
+            i += 1
+            continue
+        if len(plain) <= 100 and plain.endswith(":"):
+            blocks.append(Block("label", plain.rstrip(":")))
+        elif len(plain) <= MAX_TEAM_PARAGRAPH_LEN:
+            blocks.append(Block("paragraph", plain + "\n"))
+        else:
+            for chunk in split_long_text(plain, max_len=180):
+                blocks.append(Block("bullet", chunk))
+        i += 1
+
+    return blocks
+
+
+def _parse_markdown_table(
+    lines: list[str], start: int
+) -> tuple[list[str], list[list[str]], int]:
+    """Parse a GitHub-style markdown table starting at `start`."""
+    table_lines: list[str] = []
+    i = start
+    while i < len(lines):
+        s = lines[i].strip()
+        if not s.startswith("|"):
+            break
+        table_lines.append(s)
+        i += 1
+
+    if len(table_lines) < 2:
+        return [], [], start
+
+    def split_row(row: str) -> list[str]:
+        cells = [c.strip() for c in row.strip("|").split("|")]
+        return [strip_markdown_inline(c) for c in cells]
+
+    headers = split_row(table_lines[0])
+    body_rows: list[list[str]] = []
+    for row_line in table_lines[1:]:
+        if re.match(r"^\|[\s\-:|]+\|$", row_line):
+            continue
+        body_rows.append(split_row(row_line))
+
+    if not body_rows:
+        return [], [], start
+    return headers, body_rows, i
 
 
 def content_to_blocks(

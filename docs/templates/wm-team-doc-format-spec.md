@@ -79,9 +79,21 @@ Same shaded box style for ⚠️ IMPORTANT, 💡 PRO TIP, 🚨 CRITICAL, 📌 RE
 Waiz Media | Internal Document | Confidential
 ```
 
+## Human remake rules (not literal translation)
+
+| Source in repo | Team doc |
+|----------------|----------|
+| Markdown tables | Styled Google Doc tables |
+| `>` message lines | ✉️ COPY & PASTE boxes |
+| Playbook `##` sections | Separate H2 sections + Quick Start |
+| `---` | Omit |
+
+Operators should never see raw `\| pipes \|` or markdown syntax.
+
 ## Do not use
 
 - Plain black 1×2 callout tables with long text in one cell
+- Dumping entire playbook into one "How to do it" wall of bullets
 - ASCII underlines (`====`, `----`)
 - Cramming Who/When/Outcome/Questions into NORTH STAR
 - Repo/metadata language in team docs

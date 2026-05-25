@@ -7,6 +7,8 @@ description: Translates canonical Waiz repo Markdown into WM-branded Google Doc 
 
 Turn `docs/` canonical files into **WM team Google Docs** that match the company visual standard.
 
+**Goal:** Remake content for **human operators** (scannable sections, real tables, copy-paste boxes) — not a literal markdown dump for AI.
+
 ## Format reference (required)
 
 **Match this document exactly in layout and tone:**

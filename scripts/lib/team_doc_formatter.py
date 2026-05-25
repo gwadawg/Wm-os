@@ -22,8 +22,10 @@ WM_NAVY = {"red": 0.10, "green": 0.21, "blue": 0.36}
 WM_BLUE = {"red": 0.17, "green": 0.48, "blue": 0.72}
 WM_GRAY = {"red": 0.45, "green": 0.45, "blue": 0.45}
 WM_CALLOUT_BG = {"red": 0.91, "green": 0.96, "blue": 1.0}
+WM_TEMPLATE_BG = {"red": 0.95, "green": 0.97, "blue": 0.99}
 WM_CALLOUT_BORDER = {"red": 0.17, "green": 0.48, "blue": 0.72}
 WM_WHITE = {"red": 1.0, "green": 1.0, "blue": 1.0}
+TEMPLATE_LABEL = "✉️ COPY & PASTE"
 
 CALLOUT_LABELS = {
     "north_star": "📌 NORTH STAR",
@@ -90,7 +92,11 @@ def blocks_to_formatted_doc(
             fd.overview_meta.append(b.text)
             continue
 
-        if b.kind == "heading1":
+        if b.kind in ("heading1", "h1") and _normalize_text(b.text) == _normalize_text(title):
+            continue
+
+        if b.kind in ("heading1", "h1"):
+            fd.blocks.append(Block("h1", b.text))
             continue
 
         if b.kind == "heading2" and b.text == "At a glance":
@@ -106,34 +112,38 @@ def blocks_to_formatted_doc(
                     pass
             continue
 
-        if b.kind == "heading2":
+        if b.kind in ("heading2", "h2"):
             h = b.text
-            if h == "What this is for":
+            low = h.lower()
+            if low in ("what this is for", "what this is for "):
                 if not overview_started:
                     fd.blocks.append(Block("h1", "Overview"))
                     overview_started = True
                 continue
-            if h == "Before you start":
+            if low == "before you start":
                 fd.blocks.append(Block("label", "Before You Start"))
                 continue
-            if h == "How to do it":
+            if low in ("how to do it", "how to do it "):
                 fd.blocks.append(Block("h1", "How To Do It"))
                 continue
-            if h == "Done right looks like":
+            if low == "done right looks like":
                 fd.blocks.append(Block("h2", "Done Right Looks Like"))
                 continue
-            if h == "When to get help":
+            if low == "when to get help":
                 fd.blocks.append(Block("h2", "When To Get Help"))
                 continue
-            if h == "Related procedures":
+            if low == "related procedures":
                 fd.blocks.append(Block("h2", "Related Procedures"))
                 continue
             fd.blocks.append(Block("h2", h))
             continue
 
         if b.kind == "heading3":
-            label = b.text.split(" — ", 1)[-1] if " — " in b.text else b.text
-            fd.blocks.append(Block("h2", label))
+            fd.blocks.append(Block("label", b.text.split(" — ", 1)[-1] if " — " in b.text else b.text))
+            continue
+
+        if b.kind in ("table", "template"):
+            fd.blocks.append(b)
             continue
 
         if b.kind == "callout":
@@ -247,6 +257,10 @@ def write_formatted_doc(docs, doc_id: str, fd: FormattedDoc) -> None:
         elif block.kind == "callout":
             label = CALLOUT_LABELS.get(block.callout_type or "important", "⚠️ IMPORTANT")
             writer.append_callout_box(label, block.text)
+        elif block.kind == "template":
+            writer.append_template_box(block.text)
+        elif block.kind == "table" and block.table_headers and block.table_rows:
+            writer.append_data_table(block.table_headers, block.table_rows)
         elif block.kind == "bullet":
             label = block.text
             if block.link_url:
@@ -454,6 +468,42 @@ class _DocWriter:
                 ),
                 self._text_style(c_start, c_start + len(label), bold=True, color=WM_NAVY),
                 self._text_style(label_end, c_end - 1, size=11),
+            ]
+        )
+        self._insert("\n")
+
+    def append_template_box(self, message: str) -> None:
+        """Ready-to-send message — distinct from rules/callouts."""
+        body = message.strip()
+        if not body:
+            return
+        cell_text = f"{TEMPLATE_LABEL}\n\n{body}\n"
+        idx = self.index
+        self._batch(
+            [{"insertTable": {"rows": 1, "columns": 1, "location": {"index": idx}}}]
+        )
+        doc = self.docs.documents().get(documentId=self.doc_id).execute()
+        table_start, cell_start = _table_anchor(doc, -1)
+        if cell_start is None:
+            self._insert("\n")
+            return
+        c_start = cell_start
+        c_end = c_start + len(cell_text)
+        label_end = c_start + len(TEMPLATE_LABEL) + 2
+        self._batch(
+            [
+                {"insertText": {"location": {"index": cell_start}, "text": cell_text}},
+                self._style_table_cell(
+                    table_start,
+                    0,
+                    0,
+                    background=WM_TEMPLATE_BG,
+                    borders=True,
+                ),
+                self._text_style(
+                    c_start, c_start + len(TEMPLATE_LABEL), bold=True, color=WM_BLUE
+                ),
+                self._text_style(label_end, c_end - 1, size=11, italic=True),
             ]
         )
         self._insert("\n")

@@ -1,7 +1,20 @@
 # Team Doc Translation Standards
 
+**Remake for humans, not translate for machines.** Repo markdown is input; the team doc is a redesigned operator manual.
+
 Visual layout: [wm-team-doc-format-spec.md](../../docs/templates/wm-team-doc-format-spec.md)  
 Live reference: [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit)
+
+## Human readability rules
+
+| Repo artifact | Team doc output |
+|---------------|-----------------|
+| Markdown `\| table \|` | Real Google Doc table (navy header row) |
+| `> quote` lines | **✉️ COPY & PASTE** shaded boxes (one message per box) |
+| `---` separators | Omit |
+| Long pipe bullets | Never — always a table or template box |
+| Playbook sections | Each `##` → its own **H2** section (not one giant "How to do it") |
+| `**Rule:**` lines | 💡/⚠️ callout or bold label |
 
 ## North star callout
 
