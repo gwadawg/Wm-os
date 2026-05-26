@@ -7,6 +7,7 @@ Skills in this folder are **repo-local**. Cursor and Claude Code discover them f
 | Skill | Path | Use when |
 |-------|------|----------|
 | **Waiz Business OS** | [waiz-business-os/SKILL.md](waiz-business-os/SKILL.md) | Any work in `docs/`, migration, SOPs, KPIs, repo structure, company operations — team Drive copies match [Objection Categories format](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit) |
+| **SOP Builder** | [sop-builder/SKILL.md](sop-builder/SKILL.md) | Brainstorm or build a new SOP/playbook/guide from scratch — guides discovery, picks the right doc type, maps to the correct folder, drafts the file, and offers Drive publish |
 | **LinkedIn LO outreach** | [linkedin-lo-outreach/SKILL.md](linkedin-lo-outreach/SKILL.md) | LinkedIn DMs to reverse mortgage LOs — entry: [outbound/linkedin/manifest.yaml](../../docs/acquisition/outbound/linkedin/manifest.yaml) |
 | **DOCX** | [docx/SKILL.md](docx/SKILL.md) | Reading or converting `.docx` from `source-docs/` |
 | **XLSX** | [xlsx/SKILL.md](xlsx/SKILL.md) | Sales trackers, scorecards, spreadsheets — summarize in Markdown, keep raw file |

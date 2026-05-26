@@ -3,7 +3,7 @@ title: Setter Daily Operations Playbook
 domain: acquisition
 owner: setter
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-05-26
 review_cycle: weekly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Sales Admin Work/Setter Daily Operations Playbook_ A Guide to Maximizing Opportunities.docx
 artifact_type: playbook
@@ -40,77 +40,180 @@ Use when executing or improving the workflow described in the source document. F
 ## Operating Content
 
 ## Setter Daily Operations Playbook: A Guide to Maximizing Opportunities
+
 Objective: This document provides a structured daily schedule for setters, designed to maximize both efficiency and output. It integrates a proven framework with your custom priorities to create a clear, actionable plan for success.
 
-### Core Concepts: Hunt Mode vs. Normal Day
-Based on the principles from the ACQ Closer Handbook, a setter's day is divided into two primary operational modes. Understanding the distinction is critical for prioritizing tasks effectively.
+---
 
-Hunt Mode: This mode is dedicated entirely to proactive outreach and lead generation. It is used on days without any pre-scheduled closing calls. The singular focus is on filling the pipeline by working through the priority list and conducting outbound prospecting. Every available moment is a "Priority List" block, geared towards creating future appointments.
+## The Priority List: Ranked Order
 
-Normal Day (Hunt & Kill Mode): This represents a typical day with a mix of scheduled closing calls and hunting activities. The schedule is a dynamic balance between servicing existing appointments ("Kill Mode") and generating new ones ("Hunt Mode"). Time blocks are allocated to both "Close Calls" and the "Priority List" to ensure both immediate and future opportunities are addressed.
+During any "Priority List" block, work through lead sources in this exact order. Higher = more time-sensitive and revenue-critical. Do not skip down the list until the tier above is exhausted.
 
-## Daily Schedules
-The following tables outline the recommended daily schedule for both Hunt Mode and Normal Days. The core structure is based on the provided reference calendar, with your custom priorities integrated into the "Priority List" blocks.
+### Priority 1 — Inbound Sets (Respond Immediately)
 
-### Hunt Mode Only (No Calls)
-## Time	Activity
-### 6:00 AM	Review Prep + New Notes
-## 6:30 AM	Priority List
-## 7:00 AM	Priority List
-## 7:30 AM	Priority List
-## 8:00 AM	Priority List
-## 8:30 AM	Priority List
-## 9:00 AM	Priority List
-### 9:30 AM	Training (Sacred)
-## 10:00 AM	Priority List
-## 10:30 AM	Priority List
-## 11:00 AM	Priority List
-## 11:30 AM	Priority List
-## 12:00 PM	Priority List
-## 12:30 PM	Priority List
-## 1:00 PM	Priority List
-## 1:30 PM	Priority List
-## 2:00 PM	Priority List
-## 2:30 PM	Priority List
-## 3:00 PM	Outbound
-## 3:30 PM	Outbound
-## 4:00 PM	Outbound
-## 4:30 PM	Outbound
-## 5:00 PM	Priority List
-## 5:30 PM	Priority List
-## 6:00 PM	Priority List
-## 6:30 PM	End of Day Checklist
-## 7:00 PM	End of Day Checklist
-## The Priority List: A Detailed Breakdown
-During any "Priority List" block, work through the following lead sources in this specific order. This hierarchy is designed to engage the most valuable and time-sensitive prospects first.
+New inbound booking notifications must be called the moment they come in — drop everything else. Do not wait for the scheduled time. Call now, qualify, and book the demo ASAP.
 
-1. Inbound Sets (Scheduled Appointments): These are your highest-value prospects who have already booked a call but have not yet spoken to a closer. When you receive a notification for a new Inbound Set, you must call them immediately. This is the top priority above all other tasks during a Priority List block.
+> Speed-to-lead is the #1 lever here. The booked time is a placeholder — your job is to get them on the phone before that slot.
 
-2. Newest to Oldest (Cold Leads): These are fresh, cold leads who have not yet booked an appointment. Work through this list chronologically, starting with the newest leads first, as their interest is most recent.
+- SOP: [Intro Call Qualification Framework](intro-call-qualification-framework.md) — FUN framework, framing the demo, motivator capture
+- Script: [Intro Call Basic Script](script-intro-call-basic.md)
+- Routing: [Disqualifying and Financial Qualification](disqualifying-financial-qualification.md) — if FUN fails, route to Boot Camp
 
-3. No-Shows (This Week): Address all prospects who were scheduled for a call this week but did not show up. Re-engaging them quickly is key to salvaging the opportunity.
+---
 
-4. Archived No-Shows: Go back in time to hunt for no-shows from previous weeks and months. While older, these leads have still shown prior interest and can often be re-engaged successfully.
+### Priority 2 — Watchshift: Responding to Leads + Speed-to-Lead Calls
 
-5. New Lead Hunting (Meta): Once all other priority tasks are exhausted, dedicate time to proactively hunting for new leads on social media platforms like Meta (Facebook/Instagram). This ensures the pipeline is always being replenished.
+During your watchshift window, monitor inbound lead notifications across all active channels (GHL, Slack, etc.) and call new leads immediately as they arrive. This is active monitoring — not passive.
 
-6. LinkedIn Hunt Block (30–60 min): Per [LinkedIn process](../outbound/linkedin/process.md) — **5–10 ICP comments first**, then mine lists/groups/engagement, 90s research, view profile, connect (blank or signal micro-note A/B), first DM, **one** no-reply bump at 48–72h; hand off to Gabriel on any reply. Copy: [copy-angles](../outbound/linkedin/copy-angles.md).
+- Rule: If a lead comes in during this block, it immediately becomes Priority 1.
+- Text only after you have finished calling. If they text back, call immediately.
+- SOP: [No Shows and Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md) — speed-to-lead framing script
 
-## Appendix: Supporting Guidelines
-To further enhance workflow, the following guidelines from the reference playbook are included.
+> **Note:** A dedicated Watchshift SOP does not yet exist. Flag to ops to create one covering channel coverage windows, escalation, and GHL notification setup.
 
-## Texting Best Practices
-Begin texting only after you have finished calling your Inbound Sets.
+---
 
-If a prospect texts you back, call them immediately.
+### Priority 3 — Confirming Appointments (Demo Calls)
 
-If they do not answer your call, text them back.
+Manual confirmation of all upcoming demo calls. Call every booked prospect 24–48 hours before their scheduled demo. Do not rely on automated reminders alone — phone confirmation increases show rate by 30%+.
 
-When handling objections via text, focus on setting an appointment rather than engaging in long-form paragraph conversations.
+Steps per confirmation call:
+1. Double tie-down: confirm date and time, get verbal commitment
+2. Attempt to push the call forward if a sooner slot is available (within 24hrs ideal)
+3. Send social proof assets (case studies, testimonials) after the call
+4. If unresponsive 24hrs out: WhatsApp text + voice note, Instagram DM, follow nurture sequence
+
+Also: Audit the next 3–4 days of the calendar daily. Clear or mark-as-free any Grade 1–2 or unqualified bookings to protect demo slots.
+
+- SOP: [No Shows and Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md) — Manual Confirmation Protocol and 24-Hour Unresponsive Protocol
+
+---
+
+### Priority 4 — LinkedIn Responses and Outreach
+
+Work LinkedIn in two parts — replies first, then new outreach.
+
+**Part A — Replies (handle first):** All pending replies from prospects must be reviewed and responded to. Any reply from a prospect gets handed off to Gabriel immediately.
+
+**Part B — New Outreach block (30–60 min):**
+1. 5–10 ICP post comments first (warms the profile)
+2. Mine lists, groups, and engagement
+3. 90 seconds of research per prospect before connecting
+4. Connect (blank or signal micro-note — A/B test per copy-angles)
+5. First DM on connection accept
+6. One no-reply bump at 48–72 hours — then stop
+
+- SOP: [LinkedIn Outbound Process](../outbound/linkedin/process.md)
+- Copy: [LinkedIn Copy Angles](../outbound/linkedin/copy-angles.md)
+- Compliance: [LinkedIn Compliance](../outbound/linkedin/compliance.md)
+- Log: [LinkedIn Log Schema](../outbound/linkedin/log-schema.md)
+- Full index: [LinkedIn Outbound README](../outbound/linkedin/README.md)
+
+---
+
+### Priority 5 — Power Dialer: New Leads
+
+Once Priorities 1–4 are handled, work new cold leads via power dialer — newest to oldest. Fresh leads have the most recent intent signal; work chronologically from newest.
+
+- Call new leads in order: newest → oldest
+- Text only after calling. If they text back, call immediately.
+- Objections via text: steer to booking an appointment — no long paragraph exchanges
+
+> **Note:** A dedicated Power Dialer SOP does not yet exist. Flag to ops to create one covering dialer setup, call cadence, voicemail scripts, and CRM disposition tagging.
+
+---
+
+### Priority 6 — No-Shows
+
+Re-engage no-shows from this week first, then archived no-shows from prior weeks and months. Do not treat a no-show as dead time — run the full no-show protocol and simultaneously continue working the priority chain.
+
+**No-Show Protocol (run immediately when someone misses):**
+1. Wait 3 min, then call the lead's number
+2. No answer → double-dial immediately
+3. No answer → send first text
+4. Call the front desk if within business hours ("they booked a client generation call")
+5. 7 min past: 3rd call from GHL + call from personal phone + send Jeremy Miner text:
+   > *"Hey it's [NAME] from [COMPANY], we had a call for [TIME] to get you more [CLIENT TYPE], tried to call you a few times and never heard back… where should we go from here?"*
+6. 10 min past: *"Hey [NAME], called a few times. Are you interested in rescheduling?"*
+7. Move to no-show pipeline stage → automated email/text sequence + Slack notification every 24hrs
+8. Only move out of no-show when they rebook
+
+- SOP: [No Shows and Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md) — full no-show protocol and pipeline management
+
+---
+
+### Priority 7 — Call Center Work (B2C Leads)
+
+Lowest priority in the stack. Work B2C call center leads only when Priorities 1–6 are fully exhausted for the current block.
+
+> **Note:** A dedicated Call Center / B2C SOP does not yet exist. Flag to ops to create one covering lead source, call script, qualification criteria, and CRM workflow for B2C leads.
+
+---
+
+## Day Operating Modes
+
+### Hunt Mode (No Demo Calls Scheduled)
+
+Full day is Priority List work. Every block runs through the priority stack top-to-bottom.
+
+| Time | Activity |
+|------|----------|
+| Start of shift | Review Prep — check pipeline, notes from prior day, upcoming calendar |
+| Block 1 | Priority List (P1–P3: Inbounds, Watchshift, Confirmations) |
+| Mid-morning | Training (Sacred — do not skip) |
+| Blocks 2–4 | Priority List (P4–P5: LinkedIn + Power Dialer) |
+| Afternoon block | Priority List (P6–P7: No-Shows + Call Center) |
+| Clock-out | EOD Report — see [EOD Report SOP](eod-report-sop-setters-closers.md) |
+
+### Normal Day (Demo Calls + Hunting)
+
+Demo calls ("Kill Mode") take the slot when they occur. All gaps between calls run the priority stack.
+
+| Time | Activity |
+|------|----------|
+| Start of shift | Review Prep — pipeline, notes, calendar audit |
+| Pre-call blocks | Priority List (P1–P3: Inbounds, Watchshift, Confirmations) |
+| Demo call slots | Kill Mode — attend and support demo calls |
+| Between-call gaps | Priority List (P4–P5: LinkedIn + Power Dialer) |
+| End of day blocks | Priority List (P6–P7: No-Shows + Call Center) |
+| Clock-out | EOD Report — see [EOD Report SOP](eod-report-sop-setters-closers.md) |
+
+---
+
+## EOD Report
+
+Submit the EOD report at clock-out — whenever that is. This is non-negotiable regardless of shift length or what happened during the day.
+
+Fields: energy grade, focus grade, biology grade, admin task checklist, total dials, total conversations, booked demos, confirmed calls, full call roll-up, objections/misaligned expectations encountered.
+
+- SOP: [EOD Report SOP](eod-report-sop-setters-closers.md) — form fields, good/bad examples, enforcement policy
+
+---
+
+## Texting Rules (All Priorities)
+
+- Only text after finishing calls in the current priority block
+- If a prospect texts back → call immediately
+- If they don't answer the call → text back
+- Objection via text → steer toward booking, not paragraph conversations
 
 ## Related Docs
 
-- [LinkedIn outbound index](../outbound/linkedin/README.md)
+### Setter Core SOPs
+- [Intro Call Qualification Framework](intro-call-qualification-framework.md) — FUN qualification, motivator capture, demo framing
+- [Intro Call Basic Script](script-intro-call-basic.md)
+- [Disqualifying and Financial Qualification](disqualifying-financial-qualification.md) — financial fit, Boot Camp routing
+- [No Shows and Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md) — confirmation protocol, no-show protocol, pipeline management
+- [EOD Report SOP](eod-report-sop-setters-closers.md) — end-of-day form, enforcement policy
+
+### LinkedIn Outbound
+- [LinkedIn Outbound README](../outbound/linkedin/README.md)
+- [LinkedIn Process](../outbound/linkedin/process.md)
+- [LinkedIn Copy Angles](../outbound/linkedin/copy-angles.md)
+- [LinkedIn Compliance](../outbound/linkedin/compliance.md)
+- [LinkedIn Log Schema](../outbound/linkedin/log-schema.md)
+
+### Company Context
 - [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md)
 - [Identity Core](../../company/doctrine-identity-core-april-26.md)
 - [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md)
@@ -119,3 +222,6 @@ When handling objections via text, focus on setting an appointment rather than e
 
 - [x] Spine approved 2026-05-20 (`status: active`).
 - [ ] Assign concrete KPIs and triggers if missing from source.
+- [ ] **Missing SOP: Watchshift** — create SOP covering channel coverage windows, GHL notification setup, escalation rules, and shift handoff.
+- [ ] **Missing SOP: Power Dialer (New Leads)** — create SOP covering dialer setup, call cadence, voicemail scripts, and CRM disposition tagging.
+- [ ] **Missing SOP: Call Center / B2C Leads** — create SOP covering lead source definition, B2C call script, qualification criteria, and CRM workflow.
