@@ -65,11 +65,16 @@ New inbound booking notifications must be called the moment they come in — dro
 
 During your watchshift window, monitor inbound lead notifications across all active channels (GHL, Slack, etc.) and call new leads immediately as they arrive. This is active monitoring — not passive.
 
+You are making **outbound calls** to leads who have shown interest but have not yet had an intro call. Use the intro call script and framework for these conversations — the goal is the same: qualify via FUN and book the demo.
+
 - Rule: If a lead comes in during this block, it immediately becomes Priority 1.
 - Text only after you have finished calling. If they text back, call immediately.
-- SOP: [No Shows and Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md) — speed-to-lead framing script
+- Script: [Intro Call Basic Script](script-intro-call-basic.md) — use for outbound watchshift calls
+- Framework: [Intro Call Qualification Framework](intro-call-qualification-framework.md) — FUN qualification, motivator capture, demo framing
+- Speed-to-lead framing: [No Shows and Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md) — framing script for calling before scheduled time
 
-> **Note:** A dedicated Watchshift SOP does not yet exist. Flag to ops to create one covering channel coverage windows, escalation, and GHL notification setup.
+> **Note:** A dedicated Watchshift SOP does not yet exist. Flag to ops to create one covering channel coverage windows, GHL notification setup, escalation rules, and shift handoff.
+> **Update:** Canonical SOP now available: [Watchshift SOP](sop-watchshift.md).
 
 ---
 
@@ -120,6 +125,7 @@ Once Priorities 1–4 are handled, work new cold leads via power dialer — newe
 - Objections via text: steer to booking an appointment — no long paragraph exchanges
 
 > **Note:** A dedicated Power Dialer SOP does not yet exist. Flag to ops to create one covering dialer setup, call cadence, voicemail scripts, and CRM disposition tagging.
+> **Update:** Canonical SOP now available: [Power Dialer New Leads SOP](sop-power-dialer-new-leads.md).
 
 ---
 
@@ -146,7 +152,10 @@ Re-engage no-shows from this week first, then archived no-shows from prior weeks
 
 Lowest priority in the stack. Work B2C call center leads only when Priorities 1–6 are fully exhausted for the current block.
 
-> **Note:** A dedicated Call Center / B2C SOP does not yet exist. Flag to ops to create one covering lead source, call script, qualification criteria, and CRM workflow for B2C leads.
+Use the dedicated fulfillment-side script system:
+
+- SOP: [Call Center Script Factory SOP](../../client-fulfillment/call-center/sop-call-center-script-factory.md)
+- Index: [Client Fulfillment — Call Center](../../client-fulfillment/call-center/README.md)
 
 ---
 
@@ -222,6 +231,6 @@ Fields: energy grade, focus grade, biology grade, admin task checklist, total di
 
 - [x] Spine approved 2026-05-20 (`status: active`).
 - [ ] Assign concrete KPIs and triggers if missing from source.
-- [ ] **Missing SOP: Watchshift** — create SOP covering channel coverage windows, GHL notification setup, escalation rules, and shift handoff.
-- [ ] **Missing SOP: Power Dialer (New Leads)** — create SOP covering dialer setup, call cadence, voicemail scripts, and CRM disposition tagging.
-- [ ] **Missing SOP: Call Center / B2C Leads** — create SOP covering lead source definition, B2C call script, qualification criteria, and CRM workflow.
+- [x] **Watchshift SOP** — see [Watchshift SOP](sop-watchshift.md).
+- [x] **Power Dialer (New Leads) SOP** — see [Power Dialer New Leads SOP](sop-power-dialer-new-leads.md).
+- [x] **Call Center / B2C script system** — see [Call Center Script Factory SOP](../../client-fulfillment/call-center/sop-call-center-script-factory.md) and [Client Fulfillment — Call Center](../../client-fulfillment/call-center/README.md).

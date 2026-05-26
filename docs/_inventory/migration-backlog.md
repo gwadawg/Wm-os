@@ -74,6 +74,13 @@ Use this backlog to turn the raw Google Drive export into durable AI-ready compa
 
 ## Phase 3: Gap Analysis
 
+- [x] Add acquisition sales meta-process SOPs for design, intake, and script lifecycle:
+  - `docs/acquisition/sales/sop-sales-process-design.md`
+  - `docs/acquisition/sales/sop-sales-advice-intake.md`
+  - `docs/acquisition/sales/sop-script-factory.md`
+- [x] Add fulfillment call-center scripting domain and factory SOP:
+  - `docs/client-fulfillment/call-center/README.md`
+  - `docs/client-fulfillment/call-center/sop-call-center-script-factory.md`
 - [ ] Add owners to every active SOP and playbook.
 - [ ] Add triggers, inputs, outputs, and definition of done to every SOP.
 - [ ] Add KPIs to sales, media buying, onboarding, and client success workflows.

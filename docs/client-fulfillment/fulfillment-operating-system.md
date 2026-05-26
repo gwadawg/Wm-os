@@ -64,6 +64,7 @@ Load this page first for any client-fulfillment question. Follow links to the ca
 | Ads & creative | [RM Ad Playbook](client-marketing/rm-ad-playbook.md), [Ad Copy And Angle Library](media-buying/ad-copy-angle-library-rm.md), [AI RM Ad Image Creation](media-buying/ai-rm-ad-image-creation-sop.md) |
 | CRM & bot | [CRM Infrastructure](crm-architecture/crm-infrastructure.md), [WM AI Bot](crm-architecture/how-wm-ai-bot-works.md), [Claimed Tag](crm-architecture/how-claimed-tag-works.md) |
 | Nurture | [RM Text Drip 2025](client-marketing/rm-text-drip-2025.md), [10-Day RM Drip](client-marketing/10-day-rm-drip-campaign.md), [RM Lead Nurture Drip](client-marketing/rm-lead-nurture-drip-sequence.md) |
+| Call center scripts | [Call Center Script Factory SOP](call-center/sop-call-center-script-factory.md) |
 
 ## Campaign Maturity (CS Lens)
 
@@ -91,7 +92,7 @@ Load this page first for any client-fulfillment question. Follow links to the ca
 1. This doc
 2. Compliance guardrails + angle library
 3. Lifecycle + phase blueprint
-4. Task-specific SOP (onboarding, MB, nurture, CS)
+4. Task-specific SOP (onboarding, MB, nurture, CS, call center)
 
 ## Subfolder Index
 
@@ -103,6 +104,7 @@ Load this page first for any client-fulfillment question. Follow links to the ca
 | [client-marketing/](client-marketing/README.md) | Strategy, drips, playbooks |
 | [media-buying/](media-buying/README.md) | Campaign execution SOPs |
 | [client-success/](client-success/README.md) | Post-launch CS + troubleshooting |
+| [call-center/](call-center/README.md) | B2C fulfillment call-center scripts and QA lifecycle |
 | [reverse-mortgage-dna/](reverse-mortgage-dna/README.md) | Product, ICP, compliance |
 | [course-material/](course-material/README.md) | Skool training (links to canonical) |
 

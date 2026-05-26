@@ -44,6 +44,16 @@ Pricing and packaging: [Money Model](../../company/overview-money-model-april-26
 
 ## Draft — review before live use
 
+### Process architecture and improvement
+
+- [Sales Process Design SOP](sop-sales-process-design.md)
+- [Sales Advice Intake SOP](sop-sales-advice-intake.md)
+- [Script Factory SOP](sop-script-factory.md)
+- [Sales Script Version Change Log](sales-script-version-change-log.md)
+- [Watchshift SOP](sop-watchshift.md)
+- [Power Dialer New Leads SOP](sop-power-dialer-new-leads.md)
+- [Acquisition Script Boundary Rules](script-boundary-rules.md)
+
 ### Objection depth (linked from hub)
 
 - [Objection Handling Master Guide](objection-handling-master-guide.md)

@@ -19,6 +19,8 @@ Metric definitions, scorecards, dashboards, reporting cadences, and interpretati
 
 Canonical Markdown docs will be added here as source files are converted and approved.
 
+- [Acquisition / Sales KPI Thresholds](acquisition/sales-kpi-thresholds.md) (`draft`)
+
 ## Open Gaps
 
 - [ ] Assign domain owner.

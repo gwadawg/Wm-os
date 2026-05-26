@@ -34,6 +34,7 @@ Everything Waiz delivers **after a client signs** — onboarding, CRM, marketing
 | [Client marketing](client-marketing/README.md) | Playbooks, drips, ad strategy |
 | [Media buying](media-buying/README.md) | Campaign execution SOPs |
 | [Client success](client-success/README.md) | Post-launch CS, phases, troubleshooting |
+| [Call center](call-center/README.md) | B2C fulfillment call-center scripts and QA lifecycle |
 | [CRM architecture](crm-architecture/README.md) | Canonical CRM + bot paths |
 | [Reverse mortgage DNA](reverse-mortgage-dna/README.md) | Product, ICP, compliance |
 | [Course material](course-material/README.md) | Skool training (links to canonical SOPs) |
@@ -46,6 +47,7 @@ Everything Waiz delivers **after a client signs** — onboarding, CRM, marketing
 | **Onboarding** | [A-Z SOP](onboarding/a-z-client-onboarding-sop.md), [Comms SOP](onboarding/onboarding-to-launch-client-communication.md) — `draft` |
 | **Infrastructure** | [CRM](crm-architecture/crm-infrastructure.md), [AI bot](crm-architecture/how-wm-ai-bot-works.md), [Claimed tag](crm-architecture/how-claimed-tag-works.md) — `active` |
 | **Client success** | Troubleshooting + KPIs + phase blueprint + post-launch SOPs — mixed `active`/`draft` |
+| **Call center** | [Call Center Script Factory SOP](call-center/sop-call-center-script-factory.md) — `draft` |
 | **Media buying** | Campaign setup, month 1, creative library, AI images — `draft` |
 | **Client marketing** | Playbooks, drips, Andromeda — `draft` |
 | **RM DNA** | Doctrine + compliance — `active` on guardrails/doctrine |

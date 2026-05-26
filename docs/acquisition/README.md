@@ -63,6 +63,7 @@ Offer, sales, marketing, lead generation, lead stages, objection handling, scrip
 - [Intelligence](intelligence/README.md) — Sales Intelligence Bible (`active`)
 - [Offer](offer/README.md) — see [company money model](../company/overview-money-model-april-26.md)
 - [WM Sales Call Tracker](wm-sales-call-tracker.md) — spreadsheet wrapper (`draft`)
+- [Sales KPI Thresholds](../kpis/acquisition/sales-kpi-thresholds.md) — acquisition trigger guardrails (`draft`)
 
 ## Open Gaps
 
