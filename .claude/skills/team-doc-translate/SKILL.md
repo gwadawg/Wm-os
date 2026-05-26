@@ -34,7 +34,8 @@ Doc ID: `19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y`
 | Field label | Bold 11pt navy |
 | NORTH STAR | Shaded single-cell box — **one sentence only**; Who/When as bullets below |
 | Other callouts | Same shaded box (IMPORTANT, PRO TIP, REMEMBER) |
-| Data tables | Navy header row, white text; bordered body rows |
+| Data tables | Navy header row, white header text; **black** body row text |
+| Body / bullets / copy boxes | **Black** 11pt — never white body text |
 | Footer | Gray centered confidential line |
 
 ## Translation workflow

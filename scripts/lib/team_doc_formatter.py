@@ -24,6 +24,7 @@ WM_GRAY = {"red": 0.45, "green": 0.45, "blue": 0.45}
 WM_CALLOUT_BG = {"red": 0.91, "green": 0.96, "blue": 1.0}
 WM_TEMPLATE_BG = {"red": 0.95, "green": 0.97, "blue": 0.99}
 WM_CALLOUT_BORDER = {"red": 0.17, "green": 0.48, "blue": 0.72}
+WM_BLACK = {"red": 0.0, "green": 0.0, "blue": 0.0}
 WM_WHITE = {"red": 1.0, "green": 1.0, "blue": 1.0}
 TEMPLATE_LABEL = "✉️ COPY & PASTE"
 
@@ -338,6 +339,16 @@ class _DocWriter:
             }
         }
 
+    def _body_text_style(self, start: int, end: int, *, italic: bool = False) -> dict[str, Any]:
+        """Readable body copy — always black (table cells may inherit white)."""
+        return self._text_style(
+            start,
+            end,
+            size=11,
+            color=WM_BLACK,
+            italic=italic if italic else None,
+        )
+
     def write_cover(self, title: str, owner_line: str) -> None:
         """Branded cover: navy WAIZ MEDIA, blue title, gray subtitle, divider."""
         media = "WAIZ MEDIA\n"
@@ -421,10 +432,18 @@ class _DocWriter:
         self._batch([self._text_style(start, end - 1, bold=True, size=11, color=WM_NAVY)])
 
     def append_body(self, text: str) -> None:
-        self._insert(text)
+        if not text:
+            return
+        chunk = text if text.endswith("\n") else f"{text}\n"
+        start = self._insert(chunk)
+        end = start + len(chunk)
+        self._batch([self._body_text_style(start, max(start, end - 1))])
 
     def append_bullet(self, text: str) -> None:
-        self._insert(f"• {text}\n")
+        line = f"• {text}\n"
+        start = self._insert(line)
+        end = start + len(line)
+        self._batch([self._body_text_style(start, max(start, end - 1))])
 
     def write_cover_footer(self) -> None:
         text = "\nWaiz Media  |  Internal Document  |  Confidential\n"
@@ -474,7 +493,7 @@ class _DocWriter:
                     borders=True,
                 ),
                 self._text_style(c_start, c_start + len(label), bold=True, color=WM_NAVY),
-                self._text_style(label_end, max(label_end, c_end - 1), size=11),
+                self._body_text_style(label_end, max(label_end, c_end - 1)),
             ]
         )
         self._refresh_index()
@@ -519,7 +538,7 @@ class _DocWriter:
                 self._text_style(
                     c_start, c_start + len(TEMPLATE_LABEL), bold=True, color=WM_BLUE
                 ),
-                self._text_style(label_end, max(label_end, c_end - 1), size=11, italic=True),
+                self._body_text_style(label_end, max(label_end, c_end - 1), italic=True),
             ]
         )
         self._refresh_index()
@@ -581,6 +600,12 @@ class _DocWriter:
                             color=WM_WHITE,
                         )
                     )
+        for i in range(ncols, min(len(cells), len(flat))):
+            text = flat[i]
+            if text and cells[i] is not None:
+                end = cells[i] + len(text)
+                if end > cells[i]:
+                    style_reqs.append(self._body_text_style(cells[i], end))
         if style_reqs:
             self._batch(style_reqs)
         self._refresh_index()

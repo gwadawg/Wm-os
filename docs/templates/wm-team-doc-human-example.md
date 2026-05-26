@@ -105,7 +105,7 @@ Use this order every time:
 | Opener was **general / mutuals / group** | Option A (timing check) |
 | They were **cold** (no strong signal) | Option A |
 
-*(In Google Docs this is a real table: navy header row, white header text, bordered rows — not `\| pipe \|` bullets.)*
+*(In Google Docs this is a real table: navy header row, white header text, **black** body rows — not `\| pipe \|` bullets.)*
 
 ---
 

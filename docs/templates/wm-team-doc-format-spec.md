@@ -25,8 +25,9 @@ Canonical visual standard for team Google Docs. **Match this layout on every pub
 | WM Navy `#1a365d` | rgb(0.10, 0.21, 0.36) | WAIZ MEDIA header, H1/H2, callout label, table header fill |
 | WM Blue `#2b6cb0` | rgb(0.17, 0.48, 0.72) | Document title, divider line, table borders |
 | WM Gray | rgb(0.45, 0.45, 0.45) | Subtitle line, footer (italic) |
+| WM Black | rgb(0, 0, 0) | **All body copy** — paragraphs, bullets, callout body, template messages, table body rows |
 | Callout fill | rgb(0.91, 0.96, 1.0) | NORTH STAR / IMPORTANT boxes |
-| White | rgb(1, 1, 1) | Text on navy table headers |
+| White | rgb(1, 1, 1) | **Header row text only** on navy table headers — never body copy |
 
 ## Cover block (centered)
 
@@ -46,7 +47,7 @@ Role examples: Sales & Setting, Client Success, Operations, Company.
 | Major section | `HEADING_1` + navy text | Overview, How To Do It |
 | Subsection | `HEADING_2` + navy text | Categories, phases, workflows |
 | Field label | Bold 11pt navy | `Before You Start`, `What It Is` |
-| Body | 11pt normal text | Short paragraphs, max ~4 lines |
+| Body | 11pt **black** normal text | Short paragraphs, max ~4 lines |
 | Lists | Bullets | Who/When meta under Overview — not inside NORTH STAR |
 
 ## NORTH STAR callout (single shaded box)
@@ -65,8 +66,8 @@ Same shaded box style for ⚠️ IMPORTANT, 💡 PRO TIP, 🚨 CRITICAL, 📌 RE
 
 ## Data tables
 
-- Header row: **navy background**, **white bold** text
-- Body rows: white background, thin blue borders
+- Header row: **navy background**, **white bold** text (headers only)
+- Body rows: **black** text, white background, thin blue borders
 - 2–4 columns max, short cell text
 
 ## Quick reference (end)
