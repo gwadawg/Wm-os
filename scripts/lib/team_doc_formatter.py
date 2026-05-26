@@ -448,17 +448,24 @@ class _DocWriter:
         )
         doc = self.docs.documents().get(documentId=self.doc_id).execute()
         table_start, cell_start = _table_anchor(doc, -1)
-        if cell_start is None:
+        if cell_start is None or table_start is None:
             self._insert("\n")
             return
 
+        self._batch(
+            [{"insertText": {"location": {"index": cell_start}, "text": cell_text}}]
+        )
+        doc = self.docs.documents().get(documentId=self.doc_id).execute()
+        _, cell_start = _table_anchor(doc, -1)
+        if cell_start is None:
+            self._refresh_index()
+            return
         c_start = cell_start
         c_end = c_start + len(cell_text)
-        label_end = c_start + len(label) + 2  # through first newline after label
+        label_end = c_start + len(label) + 2
 
         self._batch(
             [
-                {"insertText": {"location": {"index": cell_start}, "text": cell_text}},
                 self._style_table_cell(
                     table_start,
                     0,
@@ -467,9 +474,10 @@ class _DocWriter:
                     borders=True,
                 ),
                 self._text_style(c_start, c_start + len(label), bold=True, color=WM_NAVY),
-                self._text_style(label_end, c_end - 1, size=11),
+                self._text_style(label_end, max(label_end, c_end - 1), size=11),
             ]
         )
+        self._refresh_index()
         self._insert("\n")
 
     def append_template_box(self, message: str) -> None:
@@ -484,15 +492,23 @@ class _DocWriter:
         )
         doc = self.docs.documents().get(documentId=self.doc_id).execute()
         table_start, cell_start = _table_anchor(doc, -1)
-        if cell_start is None:
+        if cell_start is None or table_start is None:
             self._insert("\n")
+            return
+
+        self._batch(
+            [{"insertText": {"location": {"index": cell_start}, "text": cell_text}}]
+        )
+        doc = self.docs.documents().get(documentId=self.doc_id).execute()
+        _, cell_start = _table_anchor(doc, -1)
+        if cell_start is None:
+            self._refresh_index()
             return
         c_start = cell_start
         c_end = c_start + len(cell_text)
         label_end = c_start + len(TEMPLATE_LABEL) + 2
         self._batch(
             [
-                {"insertText": {"location": {"index": cell_start}, "text": cell_text}},
                 self._style_table_cell(
                     table_start,
                     0,
@@ -503,9 +519,10 @@ class _DocWriter:
                 self._text_style(
                     c_start, c_start + len(TEMPLATE_LABEL), bold=True, color=WM_BLUE
                 ),
-                self._text_style(label_end, c_end - 1, size=11, italic=True),
+                self._text_style(label_end, max(label_end, c_end - 1), size=11, italic=True),
             ]
         )
+        self._refresh_index()
         self._insert("\n")
 
     def append_data_table(self, headers: list[str], rows: list[list[str]]) -> None:
@@ -527,13 +544,15 @@ class _DocWriter:
         cells = _table_cell_starts(doc, -1)
         data = [headers] + rows
         flat = [c for row in data for c in row]
-        insert_reqs = [
-            {"insertText": {"location": {"index": cell_start}, "text": text}}
+        pairs = [
+            (cell_start, text)
             for cell_start, text in zip(cells, flat)
-            if cell_start is not None
+            if cell_start is not None and text
         ]
-        if insert_reqs:
-            self._batch(insert_reqs)
+        for cell_start, text in sorted(pairs, key=lambda p: p[0], reverse=True):
+            self._batch(
+                [{"insertText": {"location": {"index": cell_start}, "text": text}}]
+            )
 
         doc = self.docs.documents().get(documentId=self.doc_id).execute()
         table_start, _ = _table_anchor(doc, -1)
@@ -551,17 +570,20 @@ class _DocWriter:
                     )
                 )
         for i, text in enumerate(headers):
-            if i < len(cells):
-                style_reqs.append(
-                    self._text_style(
-                        cells[i],
-                        cells[i] + len(text),
-                        bold=True,
-                        color=WM_WHITE,
+            if i < len(cells) and text:
+                end = cells[i] + len(text)
+                if end > cells[i]:
+                    style_reqs.append(
+                        self._text_style(
+                            cells[i],
+                            end,
+                            bold=True,
+                            color=WM_WHITE,
+                        )
                     )
-                )
         if style_reqs:
             self._batch(style_reqs)
+        self._refresh_index()
         self._insert("\n")
 
     def _style_table_cell(
@@ -620,6 +642,7 @@ def _table_anchor(doc: dict, table_offset: int = -1) -> tuple[int | None, int | 
 
 
 def _table_cell_starts(doc: dict, table_offset: int = -1) -> list[int]:
+    """Insert indices for each table cell (empty cells included)."""
     tables = [e for e in doc["body"]["content"] if "table" in e]
     if not tables:
         return []
@@ -627,10 +650,19 @@ def _table_cell_starts(doc: dict, table_offset: int = -1) -> list[int]:
     starts = []
     for row in table["table"]["tableRows"]:
         for cell in row["tableCells"]:
-            for el in cell.get("content", []):
-                if "paragraph" in el:
-                    for pe in el["paragraph"].get("elements", []):
-                        if "startIndex" in pe:
-                            starts.append(pe["startIndex"])
-                            break
+            idx = _cell_insert_index(cell)
+            if idx is not None:
+                starts.append(idx)
     return starts
+
+
+def _cell_insert_index(cell: dict) -> int | None:
+    for el in cell.get("content", []):
+        if "paragraph" not in el:
+            continue
+        if "startIndex" in el:
+            return el["startIndex"]
+        for pe in el["paragraph"].get("elements", []):
+            if "startIndex" in pe:
+                return pe["startIndex"]
+    return None
