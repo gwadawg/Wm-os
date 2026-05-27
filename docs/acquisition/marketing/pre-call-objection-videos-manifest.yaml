@@ -32,6 +32,9 @@ assets:
   - id: whoweare-why-we-do-what-we-do
     sequence: 1
     title: "Why We Do What We Do"
+    landing_copy:
+      eyebrow: "About Waiz Media"
+      headline: "Why we built a company exclusively for reverse mortgage loan officers"
     prospect_page_url: https://wm.waizmedia.net/reversemortgage/whoweare
     watch_url: https://youtu.be/RYnwas5j7iI
     youtube_id: RYnwas5j7iI
@@ -59,6 +62,9 @@ assets:
   - id: rm-opportunity-industry
     sequence: 2
     title: "Opportunity in the Reverse Mortgage Industry"
+    landing_copy:
+      eyebrow: "The market opportunity"
+      headline: "The reverse mortgage opportunity is larger — and more urgent — than most LOs realize"
     prospect_page_url: https://wm.waizmedia.net/reversemortgage/rmopportunity
     watch_url: https://youtu.be/wlGAgHRX_QI
     youtube_id: wlGAgHRX_QI
@@ -90,6 +96,9 @@ assets:
   - id: what-makes-waiz-different
     sequence: 3
     title: "What Makes Waiz Media Different?"
+    landing_copy:
+      eyebrow: "How we're different"
+      headline: "What makes Waiz Media different from every other marketing agency"
     prospect_page_url: https://wm.waizmedia.net/reversemortgage/whatmakesusdifferent
     watch_url: https://youtu.be/uYr9nfeGHHs
     youtube_id: uYr9nfeGHHs
@@ -123,6 +132,9 @@ assets:
   - id: burnt-by-other-agencies
     sequence: 4
     title: "Burnt By Different Companies?"
+    landing_copy:
+      eyebrow: "If you've been burned before"
+      headline: "Why past agency experiences fail — and how we're built differently"
     prospect_page_url: https://wm.waizmedia.net/reversemortgage/burnt
     watch_url: https://youtu.be/8sqNYp6T3Vg
     youtube_id: 8sqNYp6T3Vg
@@ -159,6 +171,9 @@ assets:
   - id: leads-arent-everything
     sequence: 5
     title: "Leads Aren't Everything (Here's What Loan Officers Should Track Instead)"
+    landing_copy:
+      eyebrow: "Beyond lead lists"
+      headline: "Leads aren't enough. Here's what actually moves your pipeline."
     prospect_page_url: https://wm.waizmedia.net/reversemortgage/leads
     watch_url: https://youtu.be/HZf-n-7DDm8
     youtube_id: HZf-n-7DDm8
@@ -193,6 +208,9 @@ assets:
   - id: do-we-guarantee-results
     sequence: 6
     title: "Do We Guarantee Results?"
+    landing_copy:
+      eyebrow: "Our guarantee"
+      headline: "Do we guarantee results? Yes — and here's exactly what that means."
     prospect_page_url: https://wm.waizmedia.net/reversemortgage/doweguaranteeresults
     watch_url: https://youtu.be/Km5e5lM5mrw
     youtube_id: Km5e5lM5mrw
@@ -233,6 +251,9 @@ assets:
   - id: reverse-sales-team-call-center
     sequence: 7
     title: "How Does Our Reverse Sales Team Work?"
+    landing_copy:
+      eyebrow: "Inside our operation"
+      headline: "How our reverse sales team books qualified appointments on your calendar"
     prospect_page_url: https://wm.waizmedia.net/reversemortgage/callcenter
     watch_url: https://youtu.be/RgjA7v6K3lk
     youtube_id: RgjA7v6K3lk

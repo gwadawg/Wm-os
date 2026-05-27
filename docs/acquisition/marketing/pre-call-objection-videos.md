@@ -3,7 +3,7 @@ title: Pre-Call Objection Video Assets
 domain: acquisition
 owner: marketing-lead
 status: draft
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 review_cycle: monthly
 artifact_type: reference
 ---
@@ -69,6 +69,20 @@ Marketing lead (assets); setters/closers execute sends. See [domain owners](../.
 | 7 | [How Does Our Reverse Sales Team Work?](#7-how-does-our-reverse-sales-team-work) | [callcenter](https://wm.waizmedia.net/reversemortgage/callcenter) | [YouTube](https://youtu.be/RgjA7v6K3lk) | Dial team / assistants; speed + persistence; vs. lead dumps |
 
 Machine index: [pre-call-objection-videos-manifest.yaml](pre-call-objection-videos-manifest.yaml).
+
+## Landing page copy (eyebrow + headline)
+
+Use on each `wm.waizmedia.net/reversemortgage/*` page above the video embed. Eyebrow = small label; headline = primary H1.
+
+| # | Page | Eyebrow | Headline |
+|---|------|---------|----------|
+| 1 | [whoweare](https://wm.waizmedia.net/reversemortgage/whoweare) | About Waiz Media | Why we built a company exclusively for reverse mortgage loan officers |
+| 2 | [rmopportunity](https://wm.waizmedia.net/reversemortgage/rmopportunity) | The market opportunity | The reverse mortgage opportunity is larger — and more urgent — than most LOs realize |
+| 3 | [whatmakesusdifferent](https://wm.waizmedia.net/reversemortgage/whatmakesusdifferent) | How we're different | What makes Waiz Media different from every other marketing agency |
+| 4 | [burnt](https://wm.waizmedia.net/reversemortgage/burnt) | If you've been burned before | Why past agency experiences fail — and how we're built differently |
+| 5 | [leads](https://wm.waizmedia.net/reversemortgage/leads) | Beyond lead lists | Leads aren't enough. Here's what actually moves your pipeline. |
+| 6 | [doweguaranteeresults](https://wm.waizmedia.net/reversemortgage/doweguaranteeresults) | Our guarantee | Do we guarantee results? Yes — and here's exactly what that means. |
+| 7 | [callcenter](https://wm.waizmedia.net/reversemortgage/callcenter) | Inside our operation | How our reverse sales team books qualified appointments on your calendar |
 
 ---
 
