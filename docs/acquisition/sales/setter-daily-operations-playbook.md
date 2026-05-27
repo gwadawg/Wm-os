@@ -15,6 +15,8 @@ artifact_type: playbook
 
 Daily setter workflow to maximize qualified opportunities and demo bookings.
 
+**Daily checklist (run every shift):** [Setter Daily Checklist](setter-daily-checklist.md)
+
 ## Scope
 
 Setter role operations; complements intro qualification framework.

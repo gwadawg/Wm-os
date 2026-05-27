@@ -62,6 +62,13 @@ entries:
   publish_status: active
   team_role: setter
   last_published: '2026-05-22'
+- repo_path: docs/acquisition/sales/setter-daily-checklist.md
+  team_title: Setter Daily Checklist
+  drive_folder: setters
+  google_doc_id: null
+  publish_status: active
+  team_role: setter
+  last_published: null
 - repo_path: docs/acquisition/sales/discovery-call-script-2026.md
   team_title: Discovery Call Script
   drive_folder: closers
