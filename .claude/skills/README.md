@@ -9,6 +9,7 @@ Skills in this folder are **repo-local**. Cursor and Claude Code discover them f
 | **Waiz Business OS** | [waiz-business-os/SKILL.md](waiz-business-os/SKILL.md) | Any work in `docs/`, migration, SOPs, KPIs, repo structure, company operations — team Drive copies match [Objection Categories format](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit) |
 | **SOP Builder** | [sop-builder/SKILL.md](sop-builder/SKILL.md) | Brainstorm or build a new SOP/playbook/guide from scratch — guides discovery, picks the right doc type, maps to the correct folder, drafts the file, and offers Drive publish |
 | **LinkedIn LO outreach** | [linkedin-lo-outreach/SKILL.md](linkedin-lo-outreach/SKILL.md) | LinkedIn DMs to reverse mortgage LOs — entry: [outbound/linkedin/manifest.yaml](../../docs/acquisition/outbound/linkedin/manifest.yaml) |
+| **Pre-call objection videos** | [pre-call-objection-videos/SKILL.md](pre-call-objection-videos/SKILL.md) | Prospect nurture videos before strategy/demo — [manifest](../../docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml) |
 | **DOCX** | [docx/SKILL.md](docx/SKILL.md) | Reading or converting `.docx` from `source-docs/` |
 | **XLSX** | [xlsx/SKILL.md](xlsx/SKILL.md) | Sales trackers, scorecards, spreadsheets — summarize in Markdown, keep raw file |
 | **Team doc translate** | [team-doc-translate/SKILL.md](team-doc-translate/SKILL.md) | Humanize repo SOPs into design-focused team copy before publish |
@@ -24,6 +25,7 @@ Waiz Business OS references:
 | Skill | Use when |
 |-------|----------|
 | [copywriting/SKILL.md](copywriting/SKILL.md) | Marketing copy, landing pages, email voice |
+| [pre-call-objection-videos/SKILL.md](pre-call-objection-videos/SKILL.md) | LO prospect video sends, transcripts, ad/nurture alignment |
 | [marketing-psychology/SKILL.md](marketing-psychology/SKILL.md) | Mental models, persuasion, buyer psychology for messaging and offers |
 | [linkedin-lo-outreach/SKILL.md](linkedin-lo-outreach/SKILL.md) | LinkedIn outbound — start at `docs/acquisition/outbound/linkedin/manifest.yaml` |
 | [senior-prompt-engineer/SKILL.md](senior-prompt-engineer/SKILL.md) | Prompt libraries under `docs/prompts/` |

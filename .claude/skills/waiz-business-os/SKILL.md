@@ -51,6 +51,7 @@ Use these default principles:
 | [senior-prompt-engineer](../senior-prompt-engineer/SKILL.md) | Building `docs/prompts/` assets |
 | [team-doc-translate](../team-doc-translate/SKILL.md) | Humanize repo docs into scannable team-facing copy |
 | [team-doc-publish](../team-doc-publish/SKILL.md) | One-way publish of approved docs to team Google Drive |
+| [pre-call-objection-videos](../pre-call-objection-videos/SKILL.md) | Prospect nurture videos — URLs, transcripts, objection mapping for sales/marketing |
 
 Repo index: [../README.md](../README.md). Canonical rules: [docs/SOURCE-OF-TRUTH.md](../../docs/SOURCE-OF-TRUTH.md).
 
@@ -115,9 +116,9 @@ When you finish a new or updated canonical doc under `docs/` (especially SOPs, p
 1. Ensure `status: active` only when the user has approved it for team use.
 2. Ask verbatim:
 
-> This SOP is updated in the repo (`status: …`). Do you want to publish a team-friendly version to Google Drive now? (yes / skip / publish later)
+> This SOP is updated in the repo (`status: …`). Do you want to **prepare a team draft** for Google Drive? (prepare / skip / later)
 
-3. If yes, use the [team-doc-publish](../team-doc-publish/SKILL.md) skill — registry entry, then `scripts/publish-team-doc.py`.
+3. If yes, use [team-doc-publish](../team-doc-publish/SKILL.md): `team-doc-prepare` → edit `docs/team-drafts/` → `team-doc-approve` → `publish-team-doc.py`.
 4. GitHub remains source of truth; Google Drive is downstream team access only.
 
 ## Output Style

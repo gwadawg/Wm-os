@@ -169,6 +169,8 @@ Cool, so I’ll put you in for [DATE AND TIME], you’ll get that calendar invit
 
 Now I know you mentioned efficiency is pretty important to you, I just had a thought… I’ve actually got a video that is only 12 minutes, but will really help you guys move swiftly through that next call. Would you like that?
 
+> **Video pick:** [Pre-Call Objection Video Assets](../marketing/pre-call-objection-videos.md#quick-send-by-objection) — send matching **prospect_page_url**.
+
 ### So if I sent that to you, you’ll watch it, yeah?
 Okay cool, I’ll send that over here in just a second with the calendar invite. I’ll also drop you some links to our socials so you can do extra research if you’d like, but the Pre-Call Guide should give you all you need.
 

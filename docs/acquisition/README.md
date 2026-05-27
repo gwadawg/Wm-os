@@ -59,7 +59,7 @@ Offer, sales, marketing, lead generation, lead stages, objection handling, scrip
 
 - [Sales](sales/README.md) — operating hub (active funnel + draft library)
 - [Outbound](outbound/README.md) — LinkedIn LO outreach (`draft`) — [manifest](outbound/linkedin/manifest.yaml)
-- [Marketing](marketing/README.md) — Case study email framework + Money Tales email SOP (`draft`)
+- [Marketing](marketing/README.md) — Pre-call objection videos (`draft`), case study email framework, Money Tales SOP (`draft`)
 - [Intelligence](intelligence/README.md) — Sales Intelligence Bible (`active`)
 - [Offer](offer/README.md) — see [company money model](../company/overview-money-model-april-26.md)
 - [WM Sales Call Tracker](wm-sales-call-tracker.md) — spreadsheet wrapper (`draft`)

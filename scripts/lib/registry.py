@@ -60,9 +60,12 @@ def update_entry_doc_id(
     google_doc_id: str,
     *,
     published_date: str | None = None,
+    template_based: bool | None = None,
 ) -> None:
     entry = find_entry(data, repo_path)
     if not entry:
         raise KeyError(f"No registry entry for {repo_path}")
     entry["google_doc_id"] = google_doc_id
     entry["last_published"] = published_date or date.today().isoformat()
+    if template_based is not None:
+        entry["template_based"] = template_based

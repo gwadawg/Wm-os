@@ -26,6 +26,7 @@ See [Approved Operating Spine](../../SPINE.md) and [SOURCE-OF-TRUTH](../../SOURC
 | Discovery | Closer | [Discovery Call Script](discovery-call-script-2026.md) |
 | Demo / close | Closer | [Demo Call Script](script-demo-call.md) |
 | Objections | Closer / setter | [Objection Handling Hub](objection-handling-hub.md) |
+| Pre-call nurture videos | Setter / closer | [Pre-Call Objection Video Assets](../marketing/pre-call-objection-videos.md) — [manifest](../marketing/pre-call-objection-videos-manifest.yaml) |
 
 Pricing and packaging: [Money Model](../../company/overview-money-model-april-26.md) (founder-only). Boot Camp when not DFY-qualified.
 
@@ -53,6 +54,10 @@ Pricing and packaging: [Money Model](../../company/overview-money-model-april-26
 - [Watchshift SOP](sop-watchshift.md)
 - [Power Dialer New Leads SOP](sop-power-dialer-new-leads.md)
 - [Acquisition Script Boundary Rules](script-boundary-rules.md)
+
+### Pre-call nurture (draft)
+
+- [Pre-Call Objection Video Assets](../marketing/pre-call-objection-videos.md) — URLs, transcripts, setter send map
 
 ### Objection depth (linked from hub)
 

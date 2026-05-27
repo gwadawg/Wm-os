@@ -36,6 +36,16 @@ Gather this context (ask if not provided):
 
 ---
 
+## Waiz Media OS — Pre-call video assets (read before nurture / landing / ad copy)
+
+When the task is **prospect nurture**, **Hammer-Them** sequences, **setter video sends**, **Waiz-to-LO landing pages**, or **acquisition ad scripts** that should align with filmed objection angles:
+
+1. **Read first:** [pre-call-objection-videos-manifest.yaml](../../docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml) via [pre-call-objection-videos/SKILL.md](../pre-call-objection-videos/SKILL.md)
+2. Use **prospect_page_url** for CTAs in sales copy; pull phrasing from transcripts in [pre-call-objection-videos.md](../../docs/acquisition/marketing/pre-call-objection-videos.md)
+3. Do not invent guarantee or pricing numbers — asset #6 requires live offer confirmation per [money model](../../docs/company/overview-money-model-april-26.md)
+
+---
+
 ## Waiz Media OS — Email Frameworks (read before drafting)
 
 When the task is a **case study email**, **testimonial email**, **social-proof email**, or any proof-led email that uses a client result as the vehicle:

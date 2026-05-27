@@ -12,85 +12,96 @@ description: Publish canonical repo docs to team Google Drive as layperson-reada
 - **Never** sync Drive edits back into the repo.
 - **Never** treat old `source-docs/waiz-drive-export/` or legacy Drive trees as publish sources.
 
+## Default pipeline: Google Doc template (matches Claude web layout)
+
+1. **Prepare** — scaffold human draft from canonical markdown
+2. **Edit + approve** — operator-ready copy in `docs/team-drafts/`
+3. **Publish** — **Copy** [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit) as a new Google Doc, clear body, write content using the template’s native heading styles (blue left bar on H1/H2).
+
+Fallback order: template → DOCX (Pandoc) → API formatter.
+
+Pandoc/DOCX does **not** match Claude-on-web formatting as well as the template copy path.
+
+**Requires:** Pandoc (`python scripts/setup-pandoc.py` or `brew install pandoc`), reference DOCX in repo, approved draft when `require_approved_draft: true` in config.
+
 ## After creating or updating a canonical SOP
 
 Ask verbatim:
 
-> This SOP is updated in the repo (`status: …`). Do you want to publish a team-friendly version to Google Drive now? (yes / skip / publish later)
+> This SOP is updated in the repo (`status: …`). Do you want to **prepare a team draft** for Google Drive? (prepare / skip / later)
 
-If **yes**:
+If preparing or publishing:
 
-1. Confirm [team-publish-registry.yaml](../../docs/_inventory/team-publish-registry.yaml) has a row for the file (`publish_status: active`, correct `drive_folder`).
-2. Confirm `status: active` in repo frontmatter (or user approved `--force`).
-3. Run publish (credentials in `config/team-publish.local.yaml` or `GOOGLE_APPLICATION_CREDENTIALS`):
+1. Confirm [team-publish-registry.yaml](../../docs/_inventory/team-publish-registry.yaml) has a row (`publish_status: active`, correct `drive_folder`).
+2. Confirm `status: active` in repo frontmatter (or `--force`).
 
 ```bash
 pip install -r scripts/requirements-publish.txt
 python scripts/verify-team-drive-access.py
+
+# Step 1–2: draft
+python scripts/team-doc-prepare.py docs/path/to/doc.md
+# Edit docs/team-drafts/<slug>.team.md, then:
+python scripts/team-doc-approve.py docs/team-drafts/<slug>.team.md
+
+# Step 3: publish (template default)
 python scripts/publish-team-doc.py docs/path/to/doc.md
 ```
 
-Service account (share team folder with this email): `claude-drive-access@rugged-nucleus-383418.iam.gserviceaccount.com`
+Or combined prepare flag:
 
-4. Return the Google Doc URL from script output.
-5. If related docs were not published yet, note that links show “(coming soon)” until those docs are published.
+```bash
+python scripts/publish-team-doc.py docs/path/to/doc.md --prepare
+```
 
-## Registry and folders
+Service account: `claude-drive-access@rugged-nucleus-383418.iam.gserviceaccount.com`
 
-| File | Purpose |
-|------|---------|
-| [team-publish-registry.yaml](../../docs/_inventory/team-publish-registry.yaml) | repo path ↔ `google_doc_id` |
-| [team-drive-folders.yaml](../../config/team-drive-folders.yaml) | Role folder IDs |
-| [team-drive-publish.md](../../docs/operations/systems/team-drive-publish.md) | Full setup and commands |
 
-**Drive folders (team-facing):** `00 - Start Here`, `01 - Company Basics`, `02 - Setters`, `03 - Closers`, `04 - Client Success`, `05 - Operations`, `99 - Archive`.
+## Layout quality gate (before publish)
+
+Before publishing, confirm the draft matches the WM style family used in:
+
+- `WM Sales Intelligence Bible.pdf`
+- `WM _ ICP Document.pdf`
+- `WM Sales Objection Doctorine.pdf`
+
+Checklist:
+
+- Cover uses 4-line stack (brand, title, purpose, internal-use line)
+- At least one doctrine callout (`📌`) and one tactical/critical callout (`💡` or `🚨`)
+- Uses at least one high-signal table pattern (`WHAT THEY SAY` vs `WHAT'S ACTUALLY TRUE`, step map, or avatar summary)
+- Contains explicit operator section headers (Context, Pain Points, Positioning, Reframe, Key Phrases where relevant)
+- Ends with consistent footer line
 
 ## Commands
 
 ```bash
-# First-time folder creation (after root_folder_id is set)
-python scripts/bootstrap-team-drive.py
-
-# One doc
-python scripts/publish-team-doc.py docs/acquisition/sales/setter-daily-operations-playbook.md
-
-# All registry entries without google_doc_id
-python scripts/publish-team-doc.py --spine
-
-# Republish everything active
-python scripts/publish-team-doc.py --spine --update-all
-
-# Start Here index
-python scripts/publish-team-doc.py --start-here
-
-# Archive copy before overwrite
+python scripts/team-doc-prepare.py docs/path/to/doc.md
+python scripts/team-doc-approve.py docs/team-drafts/<slug>.team.md
+python scripts/publish-team-doc.py docs/path/to/doc.md
+python scripts/publish-team-doc.py docs/path/to/doc.md --pipeline api   # force API only
 python scripts/publish-team-doc.py docs/path/to/doc.md --archive
+python scripts/publish-team-doc.py --spine --update-all
 ```
+
+## Config
+
+| File | Purpose |
+|------|---------|
+| [team-publish.local.example.yaml](../../config/team-publish.local.example.yaml) | `default_publish_pipeline`, `reference_docx`, `require_approved_draft` |
+| [wm-team-reference.docx](../../docs/templates/wm-team-reference.docx) | Pandoc style template (Objection Categories) |
+| [team-drive-publish.md](../../docs/operations/systems/team-drive-publish.md) | Full runbook |
 
 ## Translator rules
 
-Apply [team-doc-translate](../team-doc-translate/SKILL.md) **before** publish. Output must match the **WM Objection Categories** format:
-
-**Reference:** https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit
+Apply [team-doc-translate](../team-doc-translate/SKILL.md) when editing the **team draft** (not when publishing raw canonical md).
 
 - Spec: [wm-team-doc-format-spec.md](../../docs/templates/wm-team-doc-format-spec.md)
-- Template: [team-doc-publish-template.md](../../docs/templates/team-doc-publish-template.md)
-- Translator: `scripts/lib/team_doc_translator.py`
-- Formatter: `scripts/lib/team_doc_formatter.py` (navy/blue cover, shaded callouts, styled table headers)
-- Strip frontmatter, Open Questions, migration paths
-- Rewrite `## Related Docs` to hyperlinks when targets have `google_doc_id` in registry
-- Pricing-sensitive docs: no dollar amounts — escalate to Gabriel
-- After improving translation rules, republish with `--force` so Drive matches
-
-## Adding a new publishable doc
-
-1. Create or update canonical Markdown under `docs/`.
-2. Set `status: active` when approved.
-3. Add registry entry with `team_title`, `drive_folder`, `team_role`.
-4. Ask publish question → run `publish-team-doc.py`.
+- Draft output: `docs/team-drafts/*.team.md`
+- API fallback formatter: `scripts/lib/team_doc_formatter.py`
 
 ## Related skills
 
-- [team-doc-translate](../team-doc-translate/SKILL.md) — humanize and design team-facing copy
-- [waiz-business-os](../waiz-business-os/SKILL.md) — structure and SOP templates
-- [docx](../docx/SKILL.md) — legacy export conversion only (not team publish)
+- [team-doc-translate](../team-doc-translate/SKILL.md) — humanize team draft content
+- [waiz-business-os](../waiz-business-os/SKILL.md) — canonical repo SOPs
+- [docx](../docx/SKILL.md) — reference template maintenance

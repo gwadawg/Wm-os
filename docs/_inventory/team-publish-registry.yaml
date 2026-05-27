@@ -61,14 +61,14 @@ entries:
   google_doc_id: 1oY7B_gMe3oJ_QDhIaHBslcxzDEbc6qMsUr0SBQmkYv0
   publish_status: active
   team_role: setter
-  last_published: '2026-05-22'
+  last_published: '2026-05-27'
 - repo_path: docs/acquisition/sales/setter-daily-checklist.md
   team_title: Setter Daily Checklist
   drive_folder: setters
-  google_doc_id: null
+  google_doc_id: 1NhFujNmuR2Q9lQbvxSBsjhFpWelfJBpafp8GpzOFTbg
   publish_status: active
   team_role: setter
-  last_published: null
+  last_published: '2026-05-27'
 - repo_path: docs/acquisition/sales/discovery-call-script-2026.md
   team_title: Discovery Call Script
   drive_folder: closers
@@ -138,11 +138,14 @@ entries:
   google_doc_id: 1E-Nj4xs0pH4wgYh456MwszRpS3v3lmV-68x1dwTF6Fw
   publish_status: active
   team_role: setter
-  last_published: '2026-05-22'
+  last_published: '2026-05-27'
 - repo_path: docs/acquisition/outbound/linkedin/copy-angles.md
   team_title: LinkedIn Outreach — Scripts And Angles
   drive_folder: setters
-  google_doc_id: 1RyFT9vT-15pblwo7t-9NtB7-Po2Rir_HjLw91Oog0Vo
+  google_doc_id: 1WkAmGq8qwKfHyd9DhCzLvkGfQi7jSonGjWq_lu2ECWQ
   publish_status: active
   team_role: setter
-  last_published: '2026-05-25'
+  publish_pipeline: template
+  team_draft_path: docs/team-drafts/copy-angles.team.md
+  template_based: true
+  last_published: '2026-05-27'

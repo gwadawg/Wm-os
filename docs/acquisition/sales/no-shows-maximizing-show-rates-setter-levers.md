@@ -99,6 +99,7 @@ Manual confirmation over the phone has been shown to increase show rate by 30%+ 
 "Actually, I've got a slot that just opened up tomorrow morning at 10am, would that work better?"
 
 ## Send sales assets to build trust pre-call
+### Pre-call video assets (canonical URLs + objection map): [Pre-Call Objection Video Assets](../marketing/pre-call-objection-videos.md) — use **prospect_page_url** from the index; default sequence 1→2→3 or jump-send per quick-send table
 ### Case studies, testimonials, anything that builds credibility
 ### Conduct mini pre-pitch (covered in "Transitioning to Demo" video)
 ## 24-Hour Unresponsive Protocol

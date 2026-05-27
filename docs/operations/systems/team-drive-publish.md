@@ -50,11 +50,48 @@ Operations (Gabriel). Service account performs API writes.
 | Layer | Location | Role |
 |-------|----------|------|
 | Canonical OS | `docs/` | Source of truth; AI and founder operate here |
+| Team drafts | `docs/team-drafts/*.team.md` | Human-facing copy; approve before publish |
 | Raw export | `source-docs/` | Historical; never published |
 | Team publish | Google Drive `Waiz Team SOPs` | Layperson-readable copies only |
 | Registry | `docs/_inventory/team-publish-registry.yaml` | Maps repo path ↔ Doc ID |
 
 Edits in Google Docs **do not** sync back. On conflict, repo wins on next publish.
+
+## Publish pipeline (default: DOCX)
+
+```mermaid
+flowchart LR
+  canonical[docs/canonical.md]
+  draft[docs/team-drafts/slug.team.md]
+  pandoc[Pandoc + wm-team-reference.docx]
+  drive[Google Drive Doc]
+  api[API formatter fallback]
+  canonical --> draft
+  draft --> pandoc
+  pandoc --> drive
+  pandoc -.->|on failure| api
+  api --> drive
+```
+
+1. **Prepare:** `python scripts/team-doc-prepare.py docs/.../sop.md`
+2. **Edit + approve:** `python scripts/team-doc-approve.py docs/team-drafts/<slug>.team.md`
+3. **Publish:** `python scripts/publish-team-doc.py docs/.../sop.md`
+
+Config in `config/team-publish.local.yaml` (see [team-publish.local.example.yaml](../../../config/team-publish.local.example.yaml)):
+
+- `default_publish_pipeline: docx`
+- `reference_docx: docs/templates/wm-team-reference.docx`
+- `require_approved_draft: true`
+
+**Prerequisite:** Pandoc on PATH, or run once:
+
+```bash
+python scripts/setup-pandoc.py
+```
+
+Then set `pandoc_path` in `config/team-publish.local.yaml` (printed by setup script). Alternative: `brew install pandoc`
+
+**Force API only:** `python scripts/publish-team-doc.py docs/.../sop.md --pipeline api`
 
 ## Google Cloud Setup (once)
 
@@ -85,11 +122,14 @@ Waiz Team SOPs/
 
 ## Process
 
-### Publish one doc
+### Publish one doc (DOCX-first)
 
 ```bash
 # Credentials load from config/team-publish.local.yaml automatically, or:
 # export GOOGLE_APPLICATION_CREDENTIALS=path/to/service-account.json
+python scripts/team-doc-prepare.py docs/acquisition/sales/setter-daily-operations-playbook.md
+# Edit docs/team-drafts/setter-daily-operations-playbook.team.md
+python scripts/team-doc-approve.py docs/team-drafts/setter-daily-operations-playbook.team.md
 python scripts/publish-team-doc.py docs/acquisition/sales/setter-daily-operations-playbook.md
 ```
 
@@ -130,13 +170,18 @@ Add a row in [team-publish-registry.yaml](../../_inventory/team-publish-registry
 
 Optional frontmatter on repo files (not sent to Drive): `team_publish: true`, `team_folder: setters`.
 
-## Translator
+## Translator and styling
 
-Apply design standards from [.claude/skills/team-doc-translate/SKILL.md](../../../.claude/skills/team-doc-translate/SKILL.md) before publish.
+Apply [.claude/skills/team-doc-translate/SKILL.md](../../../.claude/skills/team-doc-translate/SKILL.md) when editing **team drafts**.
 
-**Visual reference (match this layout):** [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit) — see [wm-team-doc-format-spec.md](../../templates/wm-team-doc-format-spec.md).
+**Visual reference:** [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit) — [wm-team-doc-format-spec.md](../../templates/wm-team-doc-format-spec.md).
 
-Team Docs are built by [team_doc_translator.py](../../../scripts/lib/team_doc_translator.py) + [team_doc_formatter.py](../../../scripts/lib/team_doc_formatter.py) per [team-doc-publish-template.md](../../templates/team-doc-publish-template.md).
+| Path | Role |
+|------|------|
+| [team_doc_translator.py](../../../scripts/lib/team_doc_translator.py) | Canonical md → draft scaffold |
+| [pandoc_publish.py](../../../scripts/lib/pandoc_publish.py) | Draft md → styled DOCX |
+| [wm-team-reference.docx](../../templates/wm-team-reference.docx) | Pandoc reference styles |
+| [team_doc_formatter.py](../../../scripts/lib/team_doc_formatter.py) | API fallback only |
 
 - Strips YAML, migration notes, Open Questions, export paths.
 - Rewrites `## Related Docs` links to Google Doc URLs when targets are published.
@@ -151,9 +196,12 @@ Team Docs are built by [team_doc_translator.py](../../../scripts/lib/team_doc_tr
 
 ## Escalation
 
+- **Pandoc not found:** `brew install pandoc`, or publish with `--pipeline api`.
+- **Draft not approved:** run `team-doc-approve.py` after editing draft.
 - API or permission errors: verify folder shared with service account, APIs enabled, credentials path.
 - Wrong folder: fix `drive_folder` in registry and re-publish.
 - Team edited a Doc: accept loss on next publish or merge feedback into repo first.
+- DOCX import looks wrong: refresh [wm-team-reference.docx](../../templates/wm-team-reference.docx) from the gold Objection Categories Word file.
 
 ## Metrics
 

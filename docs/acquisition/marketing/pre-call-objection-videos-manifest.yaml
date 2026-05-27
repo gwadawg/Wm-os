@@ -1,0 +1,268 @@
+workflow: pre-call-objection-videos
+version: 1
+status: draft
+last_updated: 2026-05-27
+
+owners:
+  marketing: marketing-lead
+  sales: closer
+
+# Machine-readable index for AI and scripts. Full copy + transcripts in pre-call-objection-videos.md
+# Skill: .claude/skills/pre-call-objection-videos/SKILL.md
+
+triggers:
+  - pre-call video
+  - nurture video
+  - send prospect video
+  - hammer them
+  - objection video
+  - waizmedia.net/reversemortgage
+  - burned by agency video
+  - guarantee objection video
+  - call center video
+
+load_order:
+  - pre-call-objection-videos.md
+  - ../sales/objection-handling-hub.md
+  - ../sales/wm-objection-categories.md
+  - ../intelligence/wm-sales-intelligence-bible.md
+  - ../../company/doctrine-identity-core-april-26.md
+
+assets:
+  - id: whoweare-why-we-do-what-we-do
+    sequence: 1
+    title: "Why We Do What We Do"
+    prospect_page_url: https://wm.waizmedia.net/reversemortgage/whoweare
+    watch_url: https://youtu.be/RYnwas5j7iI
+    youtube_id: RYnwas5j7iI
+    purpose: Establish trust; show who Waiz is and why the company exists before the strategy call.
+    objection_categories:
+      - uncertainty-based
+    pre_handle_beliefs:
+      - Who is Waiz / can I trust this company?
+      - Reverse is stigmatized; marketing makes it worse
+      - Referrals and recycled leads are the only path
+      - Generic agencies do not understand reverse
+    funnel_stages:
+      - pre-call-nurture
+      - landing-page
+      - post-book-pre-demo
+    use_cases:
+      - prospect_link
+      - landing_page_embed
+      - ad_campaign_nurture
+      - setter_or_closer_send_before_strategy_call
+    related_docs:
+      - ../../company/doctrine-identity-core-april-26.md
+      - ../intelligence/wm-sales-intelligence-bible.md
+
+  - id: rm-opportunity-industry
+    sequence: 2
+    title: "Opportunity in the Reverse Mortgage Industry"
+    prospect_page_url: https://wm.waizmedia.net/reversemortgage/rmopportunity
+    watch_url: https://youtu.be/wlGAgHRX_QI
+    youtube_id: wlGAgHRX_QI
+    purpose: Prove Waiz knows the industry; educate on the scale of reverse opportunity and why acting now matters.
+    objection_categories:
+      - uncertainty-based
+      - logistical-logic-based
+    pre_handle_beliefs:
+      - Reverse is a small or dying market
+      - Timing is wrong / I can wait
+      - Referrals and word of mouth are enough to grow
+      - Better sales skills fix pipeline (vs. education/marketing)
+      - Only 2% penetration means limited upside (reframe to 98% untapped)
+    funnel_stages:
+      - pre-call-nurture
+      - landing-page
+      - post-book-pre-demo
+      - ad_campaign_top-of-funnel
+    use_cases:
+      - prospect_link
+      - landing_page_embed
+      - ad_campaign_nurture
+      - urgency_before_strategy_call
+      - setter_or_closer_send_when_market_size_objection
+    related_docs:
+      - ../intelligence/wm-sales-intelligence-bible.md
+      - ../../company/overview-money-model-april-26.md
+
+  - id: what-makes-waiz-different
+    sequence: 3
+    title: "What Makes Waiz Media Different?"
+    prospect_page_url: https://wm.waizmedia.net/reversemortgage/whatmakesusdifferent
+    watch_url: https://youtu.be/uYr9nfeGHHs
+    youtube_id: uYr9nfeGHHs
+    purpose: Differentiate Waiz from generic marketing agencies and sell the three-part acquisition system before the strategy call.
+    objection_categories:
+      - uncertainty-based
+      - fear-based
+    pre_handle_beliefs:
+      - Waiz is just another marketing agency
+      - Generic forward-mortgage playbooks work for reverse
+      - Agencies deliver lead lists or low-quality Facebook leads
+      - Stock or scammy ads hurt trust in reverse
+      - I only need ads, not dial team or CRM
+      - Referrals are enough; I do not need a full system
+    funnel_stages:
+      - pre-call-nurture
+      - landing-page
+      - post-book-pre-demo
+      - pre-demo-differentiation
+    use_cases:
+      - prospect_link
+      - landing_page_embed
+      - ad_campaign_nurture
+      - setter_or_closer_send_when_comparing_vendors
+      - setter_or_closer_send_before_strategy_call
+    related_docs:
+      - ../../company/overview-money-model-april-26.md
+      - ../intelligence/wm-sales-intelligence-bible.md
+      - ../../company/doctrine-identity-core-april-26.md
+
+  - id: burnt-by-other-agencies
+    sequence: 4
+    title: "Burnt By Different Companies?"
+    prospect_page_url: https://wm.waizmedia.net/reversemortgage/burnt
+    watch_url: https://youtu.be/8sqNYp6T3Vg
+    youtube_id: 8sqNYp6T3Vg
+    format: youtube_short
+    purpose: Pre-handle fear from bad agency experiences; explain why those failures happened and how reverse marketing was done wrong.
+    objection_categories:
+      - fear-based
+      - uncertainty-based
+    pre_handle_beliefs:
+      - Burned by a marketing agency before
+      - Tried ads; leads were garbage
+      - Agency took money and disappeared
+      - Locked in contract with zero results
+      - LO-turned-agency vendors cannot run marketing ops
+      - Generic multi-product agencies use templates not reverse expertise
+      - Leads handed over vs appointments booked on calendar
+    funnel_stages:
+      - pre-call-nurture
+      - landing-page
+      - objection-response
+      - ad_campaign_retargeting
+    use_cases:
+      - prospect_link_when_burned_objection
+      - setter_or_closer_send_after_agency_horror_story
+      - landing_page_embed
+      - social_short_repurpose
+    pairs_with_asset_ids:
+      - whoweare-why-we-do-what-we-do
+      - what-makes-waiz-different
+    related_docs:
+      - ../sales/objection-handling-master-guide.md
+      - ../sales/wm-objection-categories.md
+
+  - id: leads-arent-everything
+    sequence: 5
+    title: "Leads Aren't Everything (Here's What Loan Officers Should Track Instead)"
+    prospect_page_url: https://wm.waizmedia.net/reversemortgage/leads
+    watch_url: https://youtu.be/HZf-n-7DDm8
+    youtube_id: HZf-n-7DDm8
+    format: youtube_short
+    purpose: Reframe the broken decade-long leads-only model; success requires more than lead volume; differentiate Waiz from lead-vendor agencies.
+    objection_categories:
+      - uncertainty-based
+      - logistical-logic-based
+    pre_handle_beliefs:
+      - Waiz is like every other agency that only sells leads
+      - More leads equals more success
+      - Lead count is the right KPI
+      - Past decade lead-gen playbook should still work
+      - Marketing vendor job ends at the lead
+    funnel_stages:
+      - pre-call-nurture
+      - landing-page
+      - objection-response
+      - ad_campaign_retargeting
+    use_cases:
+      - prospect_link_when_leads_only_objection
+      - setter_or_closer_send_when_comparing_to_lead_vendors
+      - landing_page_embed
+      - social_short_repurpose
+    pairs_with_asset_ids:
+      - what-makes-waiz-different
+      - burnt-by-other-agencies
+    related_docs:
+      - ../sales/objection-handling-master-guide.md
+      - ../../company/overview-money-model-april-26.md
+
+  - id: do-we-guarantee-results
+    sequence: 6
+    title: "Do We Guarantee Results?"
+    prospect_page_url: https://wm.waizmedia.net/reversemortgage/doweguaranteeresults
+    watch_url: https://youtu.be/Km5e5lM5mrw
+    youtube_id: Km5e5lM5mrw
+    format: youtube_short
+    purpose: Break competitor guarantee objections; explain pay-per-result pitfalls and what Waiz guarantees instead.
+    objection_categories:
+      - uncertainty-based
+      - fear-based
+      - logistical-logic-based
+    pre_handle_beliefs:
+      - Do you guarantee results?
+      - Pay per close or pay per appointment sounds safer
+      - Competitor guarantee seems too good to be true
+      - More appointments from pay-per-book models means better outcomes
+      - Waiz has no guarantee or weak guarantee
+    funnel_stages:
+      - pre-call-nurture
+      - landing-page
+      - objection-response
+      - pre-demo-offer-clarity
+    use_cases:
+      - prospect_link_when_guarantee_objection
+      - setter_or_closer_send_when_comparing_pay_per_result_offers
+      - landing_page_embed
+      - social_short_repurpose
+    pairs_with_asset_ids:
+      - what-makes-waiz-different
+      - leads-arent-everything
+      - burnt-by-other-agencies
+    compliance_note: >-
+      Video states specific guarantee terms (e.g. 50 conversations / 90 days).
+      Confirm live offer language against founder-approved pricing/offer docs before quoting in calls or copy.
+    related_docs:
+      - ../../company/overview-money-model-april-26.md
+      - ../sales/objection-handling-master-guide.md
+      - ../sales/disqualifying-financial-qualification.md
+
+  - id: reverse-sales-team-call-center
+    sequence: 7
+    title: "How Does Our Reverse Sales Team Work?"
+    prospect_page_url: https://wm.waizmedia.net/reversemortgage/callcenter
+    watch_url: https://youtu.be/RgjA7v6K3lk
+    youtube_id: RgjA7v6K3lk
+    format: long_form
+    purpose: Explain the reverse sales assistant / call center operation and why it differentiates Waiz from lead-only competitors.
+    objection_categories:
+      - uncertainty-based
+      - logistical-logic-based
+    pre_handle_beliefs:
+      - Waiz only runs ads and dumps leads
+      - I can nurture and dial my own database
+      - Call centers sound generic and hurt my brand
+      - AI bots are enough for follow-up
+      - Speed to lead does not matter
+      - Competitors pre-qualify the same way
+    funnel_stages:
+      - pre-call-nurture
+      - landing-page
+      - post-book-pre-demo
+      - pre-demo-differentiation
+    use_cases:
+      - prospect_link_when_call_center_or_dial_team_question
+      - setter_or_closer_send_before_strategy_call
+      - landing_page_embed
+      - explain_pillar_2_booked_appointments
+    pairs_with_asset_ids:
+      - what-makes-waiz-different
+      - do-we-guarantee-results
+      - leads-arent-everything
+    related_docs:
+      - ../sales/disqualifying-financial-qualification.md
+      - ../sales/no-shows-maximizing-show-rates-setter-levers.md
+      - ../../client-fulfillment/call-center/README.md

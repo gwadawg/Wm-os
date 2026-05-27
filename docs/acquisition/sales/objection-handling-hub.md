@@ -3,7 +3,7 @@ title: Objection Handling Hub
 domain: acquisition
 owner: closer
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-05-27
 review_cycle: monthly
 ---
 
@@ -32,6 +32,7 @@ Intro, discovery, and demo conversations with reverse mortgage loan officer pros
 | [WM Objection Handling Word Tracking](wm-objection-handling-word-tracking.md) | Phrasing and word-level tracking |
 | [WM Reframe Beliefs](wm-reframe-beliefs.md) | Belief reframes |
 | [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md) | Buyer psychology and selling points |
+| [Pre-Call Objection Video Assets](../marketing/pre-call-objection-videos.md) | Trust / belief pre-handle before calls; send prospect links + transcripts |
 
 ## Quality Bar
 

@@ -3,7 +3,7 @@ title: WM Team Doc Format Spec
 domain: templates
 owner: operations
 status: active
-last_updated: 2026-05-22
+last_updated: 2026-05-27
 review_cycle: quarterly
 ---
 
@@ -16,9 +16,76 @@ Canonical visual standard for team Google Docs. **Match this layout on every pub
 - **Live example:** [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit)
 - **Doc ID:** `19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y`
 - **Config:** [config/team-drive-folders.yaml](../../config/team-drive-folders.yaml) → `format_reference_doc_id`
-- **Formatter:** `scripts/lib/team_doc_formatter.py` (applies brand colors via Docs API)
+- **Pandoc reference (preferred):** [wm-team-reference.docx](wm-team-reference.docx) — copy of Objection Categories; Pandoc applies Heading1/2/Normal and table styles on publish
+- **API formatter (fallback):** `scripts/lib/team_doc_formatter.py` (Docs API rgbColor when DOCX path fails)
 
-## Brand colors (automated on publish)
+## Publish pipeline (default: template)
+
+1. **Prepare** — `python scripts/team-doc-prepare.py docs/.../sop.md` → human draft under `docs/team-drafts/`
+2. **Approve** — `python scripts/team-doc-approve.py docs/team-drafts/<slug>.team.md`
+3. **Publish** — `python scripts/publish-team-doc.py docs/.../sop.md` → **copy** live [Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit) Google Doc as template, write content with native H1/H2 styles (blue left bar — same as Claude-on-web).
+
+Fallback: DOCX (Pandoc) → API formatter. Pandoc alone does not fully replicate Claude web layout.
+
+Body text must be readable **black** in the final Google Doc.
+
+
+## Layout patterns from recent WM docs
+
+These patterns are extracted from:
+
+- `/Users/gwadawg/Desktop/WM Sales Intelligence Bible.pdf`
+- `/Users/gwadawg/Desktop/WM _ ICP Document.pdf`
+- `/Users/gwadawg/Desktop/WM Sales Objection Doctorine.pdf`
+
+Use these as the default design language for future team docs.
+
+### 1) Cover stack
+
+1. `WAIZ MEDIA` (or `WAIZ MEDIA — INTERNAL REFERENCE` for references)
+2. Clear doc title
+3. One-line purpose / subtitle
+4. Audience + internal-use line (`Internal Use Only | Team | Month Year`)
+
+### 2) Section architecture
+
+- Use numbered major sections for training/SOP docs (`1.`, `2.`, `3.`).
+- Use clear role headers: `CONTEXT`, `Profile`, `Pain Points`, `How to Position / Speak to Them`, `Objection & Reframe`, `Key Phrases`.
+- Prefer short explanatory paragraphs followed by actionable bullets.
+
+### 3) Signature table patterns
+
+- **Contrast table:** `WHAT THEY SAY` vs `WHAT'S ACTUALLY TRUE`
+- **Map table:** `Step` / `Type` / `When to Use` / `What It Means` / `Sample Language`
+- **Category table:** `Avatar` / `Core Problem` / `Urgency`
+
+### 4) Callout hierarchy
+
+Use emoji-prefixed labels exactly like the doctrine docs:
+
+- `📌` rule / doctrine / important principle
+- `💡` tactical spotting or coaching cue
+- `🚨` critical warning or distinction
+- `⭐` standard / mastery expectation
+
+Callouts should be short, high-signal, and immediately usable in a live call or training context.
+
+### 5) Voice + readability
+
+- Assertive, operator-facing tone (clear standards, no fluff).
+- Use concrete language over generic business language.
+- Keep paragraphs compact; avoid long walls of prose.
+- End sections with practical anchors (checklist, key phrases, or action prompt).
+
+### 6) Footer convention
+
+Use a consistent footer line where applicable:
+
+`Waiz Media | [Doc Family] | Internal Use Only | [Month Year]`
+
+For doctrine/SOP docs, `Waiz Media | [Doc Name] | Internal Document | Confidential` is also valid.
+
+## Brand colors (API fallback only)
 
 | Element | Color | Usage |
 |---------|--------|--------|

@@ -241,18 +241,24 @@ def _infer_callout(text: str) -> str:
     return "important"
 
 
-def write_formatted_doc(docs, doc_id: str, fd: FormattedDoc) -> None:
+def write_formatted_doc(
+    docs, doc_id: str, fd: FormattedDoc, *, use_template_styles: bool = False
+) -> None:
     from .google_publish import clear_document_body
 
     clear_document_body(docs, doc_id)
-    writer = _DocWriter(docs, doc_id)
+    writer = _DocWriter(docs, doc_id, use_template_styles=use_template_styles)
     writer.write_cover(fd.title, fd.owner_line)
 
     for block in fd.blocks:
         if block.kind == "h1":
-            writer.append_heading(block.text, "HEADING_1", colored=True)
+            writer.append_heading(
+                block.text, "HEADING_1", colored=not use_template_styles
+            )
         elif block.kind == "h2":
-            writer.append_heading(block.text, "HEADING_2", colored=True)
+            writer.append_heading(
+                block.text, "HEADING_2", colored=not use_template_styles
+            )
         elif block.kind == "label":
             writer.append_label(block.text)
         elif block.kind == "callout":
@@ -273,18 +279,23 @@ def write_formatted_doc(docs, doc_id: str, fd: FormattedDoc) -> None:
             writer.append_body(block.text + "\n")
 
     if fd.quick_reference:
-        writer.append_heading("Quick Reference — At a Glance", "HEADING_2", colored=True)
+        writer.append_heading(
+            "Quick Reference — At a Glance",
+            "HEADING_2",
+            colored=not use_template_styles,
+        )
         writer.append_data_table(fd.quick_reference.headers, fd.quick_reference.rows)
 
     writer.write_cover_footer()
 
 
 class _DocWriter:
-    def __init__(self, docs, doc_id: str):
+    def __init__(self, docs, doc_id: str, *, use_template_styles: bool = False):
         self.docs = docs
         self.doc_id = doc_id
         self.index = 1
         self._last_batch_at: float = 0.0
+        self.use_template_styles = use_template_styles
 
     def _batch(self, requests: list[dict[str, Any]]) -> None:
         if not requests:
@@ -350,7 +361,11 @@ class _DocWriter:
         )
 
     def write_cover(self, title: str, owner_line: str) -> None:
-        """Branded cover: navy WAIZ MEDIA, blue title, gray subtitle, divider."""
+        """Cover block. Template mode inherits Claude/reference doc heading styles."""
+        if self.use_template_styles:
+            self._write_cover_template(title, owner_line)
+            return
+
         media = "WAIZ MEDIA\n"
         title_line = f"{title}\n"
         meta = f"{owner_line}\n\n"
@@ -382,6 +397,41 @@ class _DocWriter:
                 self._text_style(title_start, title_end - 1, bold=False, size=20, color=WM_BLUE),
                 self._text_style(meta_start, meta_end - 1, italic=True, size=11, color=WM_GRAY),
                 self._para_border_bottom(meta_start, meta_end),
+            ]
+        )
+
+    def _write_cover_template(self, title: str, owner_line: str) -> None:
+        """Match live Objection Categories doc: WAIZ bold, title as HEADING_1 (blue bar)."""
+        media = "WAIZ MEDIA\n"
+        meta = f"{owner_line}\n\n"
+        start = self.index
+        self._batch([{"insertText": {"location": {"index": start}, "text": media}}])
+        m_end = start + len(media)
+        self._batch(
+            [
+                self._text_style(start, m_end - 1, bold=True, color=WM_BLACK),
+            ]
+        )
+
+        t_start = self._insert(f"{title}\n")
+        t_end = t_start + len(title) + 1
+        self._batch(
+            [
+                {
+                    "updateParagraphStyle": {
+                        "range": {"startIndex": t_start, "endIndex": t_end},
+                        "paragraphStyle": {"namedStyleType": "HEADING_1"},
+                        "fields": "namedStyleType",
+                    }
+                },
+            ]
+        )
+
+        meta_start = self._insert(meta)
+        meta_end = meta_start + len(meta)
+        self._batch(
+            [
+                self._text_style(meta_start, meta_end - 1, italic=True, size=11, color=WM_GRAY),
             ]
         )
 
@@ -429,7 +479,8 @@ class _DocWriter:
     def append_label(self, text: str) -> None:
         start = self._insert(f"{text}\n")
         end = start + len(text) + 1
-        self._batch([self._text_style(start, end - 1, bold=True, size=11, color=WM_NAVY)])
+        color = WM_BLACK if self.use_template_styles else WM_NAVY
+        self._batch([self._text_style(start, end - 1, bold=True, size=11, color=color)])
 
     def append_body(self, text: str) -> None:
         if not text:

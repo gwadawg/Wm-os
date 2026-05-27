@@ -5,3 +5,10 @@ credentials_path: /path/to/your-service-account.json
 
 # Optional: override if GOOGLE_APPLICATION_CREDENTIALS is not set
 # root_folder_id: ""  # from Drive URL: .../folders/FOLDER_ID
+
+# DOCX-first publish (default). Pandoc: brew install pandoc OR python scripts/setup-pandoc.py
+default_publish_pipeline: template   # template | docx | api
+pandoc_path: pandoc   # or absolute path from setup-pandoc.py output
+reference_docx: docs/templates/wm-team-reference.docx
+require_approved_draft: true
+team_drafts_dir: docs/team-drafts

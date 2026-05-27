@@ -36,6 +36,10 @@ Human SOPs → Google Drive `02 - Setters` via [team-doc-publish](../team-doc-pu
 
 [examples.md](examples.md)
 
+## After book (optional nurture)
+
+If the prospect is on WhatsApp/email before the intro call, you may link **one** pre-call video from [pre-call-objection-videos manifest](../../../docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml) (trust → `whoweare`; burned → `burnt-by-other-agencies`). Use **prospect_page_url** only. Skill: [pre-call-objection-videos](../pre-call-objection-videos/SKILL.md).
+
 ## Related
 
-[waiz-business-os](../waiz-business-os/SKILL.md) · [copywriting](../copywriting/SKILL.md) · [marketing-psychology](../marketing-psychology/SKILL.md)
+[waiz-business-os](../waiz-business-os/SKILL.md) · [copywriting](../copywriting/SKILL.md) · [marketing-psychology](../marketing-psychology/SKILL.md) · [pre-call-objection-videos](../pre-call-objection-videos/SKILL.md)

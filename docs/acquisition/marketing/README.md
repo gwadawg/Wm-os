@@ -3,7 +3,7 @@ title: Acquisition — Marketing (Waiz Company Only)
 domain: acquisition
 owner: marketing-lead
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-05-27
 review_cycle: monthly
 ---
 
@@ -19,6 +19,7 @@ See [Waiz vs client marketing boundaries](../../client-fulfillment/waiz-vs-clien
 
 ## Canonical docs
 
+- [Pre-Call Objection Video Assets](pre-call-objection-videos.md) (`status: draft`) — prospect nurture videos, transcripts, URLs; [manifest](pre-call-objection-videos-manifest.yaml)
 - [Case Study Email Copy Framework](case-study-email-copy-framework.md) (`status: draft`)
 - [Money Tales Email Copy Framework SOP](sop-money-tales-email-copy-framework.md) (`status: draft`)
 

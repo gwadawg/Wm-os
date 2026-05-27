@@ -19,7 +19,8 @@ This repository is the Waiz Media operating system for future AI use. Treat it a
 - `source-docs/waiz-drive-export/`: raw exported Google Drive files. Do not treat these as canonical operating docs.
 - `docs/`: AI-ready company knowledge base and operating documentation.
 - `docs/_inventory/`: source inventory, classification map, duplicate candidates, and migration backlog.
-- `.claude/skills/`: repo-local skills — see [`.claude/skills/README.md`](.claude/skills/README.md) (waiz-business-os + docx + xlsx for migration).
+- `.claude/skills/`: repo-local skills — see [`.claude/skills/README.md`](.claude/skills/README.md) (waiz-business-os, pre-call-objection-videos, linkedin-lo-outreach, docx, xlsx).
+- `docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml`: prospect nurture video URLs + transcripts for sales/marketing AI.
 - [AGENTS.md](AGENTS.md): agent entry map.
 
 ## Default Documentation Standard

@@ -194,6 +194,8 @@ Cool — so I'll put you in for [DATE AND TIME]. You'll get that calendar invite
 
 Now, I know you mentioned {INSERT UNIQUE ATTRIBUTE}  — I just had a thought. I've got a video that's only a couple minutes long, but it'll really help you guys move swiftly through that next call. Would you like that?
 
+> **Video pick:** See [Pre-Call Objection Video Assets](../marketing/pre-call-objection-videos.md#quick-send-by-objection) — send the matching **prospect page** link (not YouTube).
+
 ### So if I sent that to you — you'll watch it, yeah?
 Okay cool — I'll send that over with the calendar invite. I'll also drop you links to our socials so you can do extra research, but the Pre-Call Guide should give you everything you need.
 
@@ -380,6 +382,8 @@ Gotcha, no worries. He's a little packed — let me see if I can find a spot. It
 Cool — so I'll put you in for [DATE AND TIME]. You'll get that calendar invite here in just a second...
 
 Now, I know you mentioned {INSERT UNIQUE ATTRIBUTE}  — I just had a thought. I've got a video that's only a couple minutes long, but it'll really help you guys move swiftly through that next call. Would you like that?
+
+> **Video pick:** See [Pre-Call Objection Video Assets](../marketing/pre-call-objection-videos.md#quick-send-by-objection) — send the matching **prospect page** link (not YouTube).
 
 ### So if I sent that to you — you'll watch it, yeah?
 Okay cool — I'll send that over with the calendar invite. I'll also drop you links to our socials so you can do extra research, but the Pre-Call Guide should give you everything you need.

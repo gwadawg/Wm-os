@@ -46,6 +46,12 @@ After answers are gathered, confirm: "Here's what I'm going to build: [doc type]
 
 ---
 
+## Prospect video assets (do not duplicate)
+
+If the SOP involves **sending nurture videos to LO prospects** before calls, link [pre-call-objection-videos.md](../../docs/acquisition/marketing/pre-call-objection-videos.md) and [manifest](../../docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml) — do not create a second video registry. Skill: [pre-call-objection-videos](../pre-call-objection-videos/SKILL.md).
+
+---
+
 ## Step 3: Determine Document Type
 
 Use the Waiz document type taxonomy to pick the right type:
