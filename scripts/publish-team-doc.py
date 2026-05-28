@@ -39,6 +39,7 @@ from lib.team_draft import (  # noqa: E402
     blocks_for_publish,
     draft_paths_for_repo,
     is_approved,
+    validate_draft,
     prepare_draft,
 )
 
@@ -75,6 +76,16 @@ def resolve_pipeline(entry: dict, publish_cfg: dict) -> str:
     ).lower()
 
 
+def _require_valid_draft(draft_path: Path) -> None:
+    errors = validate_draft(draft_path)
+    if errors:
+        raise ValueError(
+            "Draft validation failed:\n- "
+            + "\n- ".join(errors)
+            + "\n\nReview: docs/templates/wm-team-doc-review-checklist.md"
+        )
+
+
 def publish_entry_template(
     entry: dict,
     *,
@@ -104,6 +115,7 @@ def publish_entry_template(
                 f"Draft not approved: {draft_path}\n"
                 f"Run: python scripts/team-doc-approve.py {draft_path}"
             )
+        _require_valid_draft(draft_path)
 
     folder_key = entry.get("drive_folder", "operations")
     parent_id = folder_id_for(folder_cfg, folder_key)
@@ -200,6 +212,7 @@ def publish_entry_docx(
             f"Draft not approved: {draft_path}\n"
             f"Run: python scripts/team-doc-approve.py {draft_path}"
         )
+    _require_valid_draft(draft_path)
 
     folder_key = entry.get("drive_folder", "operations")
     parent_id = folder_id_for(folder_cfg, folder_key)

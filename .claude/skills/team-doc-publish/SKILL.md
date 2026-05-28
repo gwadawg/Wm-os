@@ -59,19 +59,13 @@ Service account: `claude-drive-access@rugged-nucleus-383418.iam.gserviceaccount.
 
 ## Layout quality gate (before publish)
 
-Before publishing, confirm the draft matches the WM style family used in:
+Run [wm-team-doc-review-checklist.md](../../docs/templates/wm-team-doc-review-checklist.md) on the draft. For angle libraries, also enforce [wm-team-angle-unit-template.md](../../docs/templates/wm-team-angle-unit-template.md).
 
-- `WM Sales Intelligence Bible.pdf`
-- `WM _ ICP Document.pdf`
-- `WM Sales Objection Doctorine.pdf`
+```bash
+python scripts/team-doc-approve.py docs/team-drafts/<slug>.team.md --check-only
+```
 
-Checklist:
-
-- Cover uses 4-line stack (brand, title, purpose, internal-use line)
-- At least one doctrine callout (`📌`) and one tactical/critical callout (`💡` or `🚨`)
-- Uses at least one high-signal table pattern (`WHAT THEY SAY` vs `WHAT'S ACTUALLY TRUE`, step map, or avatar summary)
-- Contains explicit operator section headers (Context, Pain Points, Positioning, Reframe, Key Phrases where relevant)
-- Ends with consistent footer line
+Automated checks (overview, angle units, duplicate footer, etc.) run on approve and publish. Fix violations in the draft file — not in Google Docs after publish.
 
 ## Commands
 

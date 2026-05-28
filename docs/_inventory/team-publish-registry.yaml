@@ -145,7 +145,38 @@ entries:
   google_doc_id: 1WkAmGq8qwKfHyd9DhCzLvkGfQi7jSonGjWq_lu2ECWQ
   publish_status: active
   team_role: setter
+  team_doc_type: angle_library
   publish_pipeline: template
   team_draft_path: docs/team-drafts/copy-angles.team.md
   template_based: true
   last_published: '2026-05-27'
+- repo_path: docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md
+  team_title: RM Ads — High-Quality Lead Playbook
+  drive_folder: client_success
+  google_doc_id: 1AS1ZSAirlmNZPEwd6egXNT8Rtfiuv2-SFLM0skCcDz0
+  publish_status: active
+  team_role: client_success
+  publish_pipeline: template
+  team_draft_path: docs/team-drafts/rm-high-quality-lead-acquisition.team.md
+  template_based: true
+  last_published: '2026-05-27'
+- repo_path: docs/client-fulfillment/call-center/script-appointment-setting-call.md
+  team_title: Call Center — Appointment-Setting Call Script
+  drive_folder: client_success
+  publish_status: active
+  team_role: client_success
+  publish_pipeline: template
+  team_draft_path: docs/team-drafts/script-appointment-setting-call.team.md
+  template_based: true
+  google_doc_id: 14qq8uzopc4PM560jqXWd5AKgjySKp8OD7gVzR426mww
+  last_published: '2026-05-28'
+- repo_path: docs/client-fulfillment/client-marketing/rm-imessage-intent-drip-7day.md
+  team_title: RM iMessage Intent Drip (7-Day)
+  drive_folder: client_success
+  publish_status: active
+  team_role: client_success
+  publish_pipeline: template
+  team_draft_path: docs/team-drafts/rm-imessage-intent-drip-7day.team.md
+  template_based: true
+  google_doc_id: 1HHgz95JyvFtOo29pJdee-GSZ71EV1Z-kmCKPp6esDEs
+  last_published: '2026-05-28'

@@ -430,6 +430,8 @@ The first job of any piece of content is to educate — to shift the Debt Frame 
 
 Rule 3 — One Archetype Per Output
 
+When optimizing for **equity-rich, closable leads** (not raw volume), weight creative toward **Strategic Retiree** and **Legacy Planner** and use qual friction on the landing page. Full playbook: [RM High-Quality Lead Acquisition](../client-marketing/rm-high-quality-lead-acquisition.md).
+
 Every piece of content is written for one specific prospect archetype. Never for all of them. Before producing any output, identify the target archetype and write exclusively to that person's fears, language, and frame. Content written for everyone converts no one.
 
 Rule 4 — Dignity Always

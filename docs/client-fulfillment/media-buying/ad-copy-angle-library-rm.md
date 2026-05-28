@@ -41,6 +41,8 @@ New client creative build, creative refresh, constraint layer 1 fixes.
 
 ## Operating Content
 
+For **lead quality** (equity-rich, planner mindset, qual friction), read [RM High-Quality Lead Acquisition](../client-marketing/rm-high-quality-lead-acquisition.md) first — then use the tiers below for volume and emotional breadth.
+
 SOP: Reverse Mortgage Ad Copy & Angle Library
 
 A Production-Ready Guide for Media Buyers & Creative Teams

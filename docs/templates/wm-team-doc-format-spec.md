@@ -166,6 +166,17 @@ Operators should never see raw `\| pipes \|` or markdown syntax.
 - Cramming Who/When/Outcome/Questions into NORTH STAR
 - Repo/metadata language in team docs
 
+## Doc-type extensions
+
+Use these only when the doc matches the type — do not add to generic SOPs.
+
+| Doc type | Template | Review |
+|----------|----------|--------|
+| Angle / script library | [wm-team-angle-unit-template.md](wm-team-angle-unit-template.md) | [wm-team-doc-review-checklist.md](wm-team-doc-review-checklist.md) Pass 2 |
+| All team publishes | — | [wm-team-doc-review-checklist.md](wm-team-doc-review-checklist.md) Pass 1 + 3 |
+
+Registry: optional `team_doc_type: angle_library` on the publish row enables approve/publish validation.
+
 ## Related
 
 - [team-doc-translate skill](../../.claude/skills/team-doc-translate/SKILL.md)

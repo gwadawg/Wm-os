@@ -3,7 +3,7 @@ team_title: "LinkedIn Outreach — Scripts And Angles"
 team_role: setter
 source_repo_path: "docs/acquisition/outbound/linkedin/copy-angles.md"
 approved: true
-draft_updated: 2026-05-27
+draft_updated: 2026-05-28
 ---
 
 <!-- Edit below. Publish uses Google Doc template (Objection Categories styles). -->
@@ -153,24 +153,6 @@ hey [name] — saw we’re in [group] and had a few mutuals. figured id connect.
 
 Mentioning Waiz, ads, or “would love to pick your brain.”
 
-## Angle 10 — Pattern Interrupt
-
-**Signal:**
-
-Only when profile shows personality (humor posts, casual comment style). Do not force.
-
-**Example (light)**
-
-**✉️ COPY & PASTE**
-
-```
-Hey [Name], your comment on [post] was the most honest thing I’ve seen on my feed this week. How’s the rest of the business treating you — same chaos as everyone else?
-```
-
-**If no reply:**
-
-Do not double down on jokes; switch to value bump via Gabriel or archive.
-
 ## Angle 2 — Specific Post Reference
 
 **Signal:**
@@ -219,6 +201,10 @@ Hey [Name], a lot of LOs in reverse are talking about the same headwind right no
 Hey [Name] — sounds like the same story I’m hearing from a lot of reverse guys right now, [rates / referrals / lead quality]. How’s volume on your end — still leaning on referrals or mixing in other channels?
 ```
 
+**Avoid:**
+
+Pitching services, quoting internal playbooks, or stacking multiple questions in message 1.
+
 **Note for Gabriel handoff:**
 
 Strong pivot to volume imperative and qualified conversations (Bible Topic 03). Do not pitch in message 1.
@@ -245,9 +231,9 @@ Hey [Name], saw you engaging with [Page/Person]’s stuff on [topic] — clearly
 Hey [Name] — saw your comment on [Person]’s post about [topic]. [One line on their point.] Is that showing up in your production side too?
 ```
 
-**Mutuality:**
+**Avoid:**
 
-Public interest in the niche; stronger if you commented first (Phase 0).
+Generic “saw you’re active on LinkedIn” with no named page, post, or topic.
 
 ## Angle 5 — Profile View / New Follower / Commented on Gabe's Post
 
@@ -279,6 +265,10 @@ Hey [Name], thanks for [the comment / the like] on [post topic]. What caught you
 Hey [Name], you showed up in my views — always hard to tell if those are real or Sales Nav being Sales Nav. Did you actually stop by the profile or was it a glitch?
 ```
 
+**Avoid:**
+
+Assuming intent (“ready to buy”), pitching Waiz, or more than one question in message 1.
+
 ## Angle 6 — New Role / Company Change
 
 **Signal:**
@@ -293,9 +283,9 @@ New title, new company, “excited to announce” post.
 Hey [Name], congrats on the move to [Company/Role]. How’s the first stretch been — still getting your arms around production or already in flow?
 ```
 
-**Track B:**
+**Avoid:**
 
-If forward LO, use Angle 7 instead if reverse is not on their profile.
+Long congrats paragraphs, recruiting pitch, or “welcome to the team” tone in message 1.
 
 ## Angle 7 — Recruit (Forward Lo)
 
@@ -311,9 +301,13 @@ Forward mortgage LO, minimal reverse content; Track B only.
 Hey [Name], saw your background in [forward/conventional] — a lot of producers in your shoes have been peeking at reverse for the economics and deal flow. Is that on your radar at all or are you heads-down where you are?
 ```
 
-**Gabriel note:**
+**Avoid:**
 
-No hard recruit pitch in message 1. Explore fit before opportunity talk.
+Hard recruit pitch, compensation talk, or implying they must switch to reverse in message 1.
+
+**Note for Gabriel handoff:**
+
+Explore fit before opportunity talk.
 
 ## Angle 8 — Outsourced Linkedin
 
@@ -329,6 +323,10 @@ Post mentions VA, agency ran LinkedIn, or “taking my profile back.”
 Hey [Name], saw you mention [taking LinkedIn back / the agency experiment]. A lot of LOs say the account grew but the conversations didn’t. What were you hoping LinkedIn would do for the business when you started?
 ```
 
+**Avoid:**
+
+Bashing their past vendor by name, pitching your agency stack, or a multi-paragraph rant in message 1.
+
 ## Angle 9 — Direct / Value-First
 
 **Signal:**
@@ -343,9 +341,31 @@ Senior producer, terse profile, C-suite or branch lead tone — unlikely to want
 Hey [Name], saw your background in reverse — had a thought on [specific signal: production post / team size / market comment]. Worth a quick exchange or bad timing?
 ```
 
-**Gabriel:**
+**Avoid:**
+
+Small talk, rapport fluff, or “would love to pick your brain” on senior / terse profiles.
+
+**Note for Gabriel handoff:**
 
 Skip long rapport; lead with insight after permission. See example thread B below.
+
+## Angle 10 — Pattern Interrupt
+
+**Signal:**
+
+Only when profile shows personality (humor posts, casual comment style). Do not force.
+
+**Light humor opener**
+
+**✉️ COPY & PASTE**
+
+```
+Hey [Name], your comment on [post] was the most honest thing I’ve seen on my feed this week. How’s the rest of the business treating you — same chaos as everyone else?
+```
+
+**Avoid:**
+
+Forcing humor without signal; doubling down on jokes after no reply; pitching Waiz in message 1.
 
 ## Example Threads (Adapted Structure)
 
@@ -447,19 +467,7 @@ Fair question. The noise is real — generic lead vendors burned a lot of shops.
 
 ## Weekly Updates
 
-**After Gabriel’s weekly review, add a line under the winning angle**
-
-```markdown
-
-**Angle 3 — last_winning_variant (2026-05-21)**
-
-**✉️ COPY & PASTE**
-
-```
-[paste best-performing opener variant]
-```
-
-```
+After Gabriel’s weekly review, add a winning variant under the matching angle using the same unit skeleton (`**Signal:**` → opener → **✉️ COPY & PASTE** → **Avoid:**). Do not add a second NORTH STAR or footer.
 
 ## When To Get Help
 
@@ -472,13 +480,5 @@ Questions, pricing, or exceptions → escalate to Gabriel (Setter team).
 - Draft prompt (coming soon)
 - WM Sales Intelligence Bible — https://docs.google.com/document/d/1TPOlL9Ssfr6-SsUEKMEBXZVQUU09lPiql0RwMPqiAHA/edit
 - Identity Core — https://docs.google.com/document/d/1ysvZh9mKrfFkYKKvsX6IOgUyB2u48ucODtouoDWMCMY/edit
-> **📌 REMEMBER**
->
-> If this doc conflicts with what you heard elsewhere, follow this doc and tell Gabriel.
 
-
-<div align="center">
-
-*Waiz Media | Setter Script Library | Internal Use Only | May 2026*
-
-</div>
+Waiz Media | Setter Script Library | Internal Use Only | May 2026

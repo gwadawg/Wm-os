@@ -60,6 +60,15 @@ Always end with centered:
 
 `Waiz Media | Internal Document | Confidential`
 
+**One footer per doc.** No duplicate NORTH STAR callouts.
+
+## Angle / script libraries
+
+When the registry row has `team_doc_type: angle_library`:
+
+- Follow [wm-team-angle-unit-template.md](../../docs/templates/wm-team-angle-unit-template.md) for every `## Angle N —` section.
+- Run [wm-team-doc-review-checklist.md](../../docs/templates/wm-team-doc-review-checklist.md) Pass 2 before approve.
+
 ## Do not publish
 
 - YAML, `source_document`, Open Questions, SPINE/inventory links

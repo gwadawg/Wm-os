@@ -207,6 +207,7 @@ Common patterns: wrong age (under 62), renting (not a homeowner), no meaningful 
 
 ## Does the ad creative accurately represent who this is for? (age, homeownership, equity)
 ## Are qualifying questions present on the landing page? (homeownership, age 62+, approximate equity)
+See [RM High-Quality Lead Acquisition](../client-marketing/rm-high-quality-lead-acquisition.md) for archetype mix, LP qual fields, and creative concepts when optimizing for equity-rich leads.
 Is the ICP archetype in the ad attracting the wrong segment? (e.g., curiosity-seekers vs. motivated homeowners in financial stress)
 
 ## Section 3: Call Center — Contact Rate & Booking Rate

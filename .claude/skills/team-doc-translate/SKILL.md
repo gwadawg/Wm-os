@@ -23,8 +23,15 @@ Turn `docs/` canonical files into **WM team drafts** (`docs/team-drafts/`) that 
 
 1. `python scripts/team-doc-prepare.py docs/path/to/canonical.md` — scaffold draft
 2. Edit draft per [TRANSLATION-STANDARDS.md](TRANSLATION-STANDARDS.md) and format spec
-3. `python scripts/team-doc-approve.py docs/team-drafts/<slug>.team.md`
-4. [team-doc-publish](../team-doc-publish/SKILL.md) runs template-copy publish (Objection Categories styles)
+3. **Review pass** — [wm-team-doc-review-checklist.md](../../docs/templates/wm-team-doc-review-checklist.md); fix all violations before approve
+4. `python scripts/team-doc-approve.py docs/team-drafts/<slug>.team.md --check-only` then approve
+5. [team-doc-publish](../team-doc-publish/SKILL.md) runs template-copy publish (Objection Categories styles)
+
+## Angle / script libraries (`team_doc_type: angle_library`)
+
+Use the rigid unit in [wm-team-angle-unit-template.md](../../docs/templates/wm-team-angle-unit-template.md) for **every** angle. Do not vary section labels or order per angle. Obey the **FORBIDDEN** table in that doc.
+
+Set `team_doc_type: angle_library` in registry + `*.team.meta.yaml` for copy-angles-style docs. Approve/publish will reject inconsistent angles.
 
 ## Draft markdown conventions (WM doctrine style)
 

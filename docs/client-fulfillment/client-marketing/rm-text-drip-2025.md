@@ -87,5 +87,6 @@ Something came up in the market... You still trying to take cash out of your hom
 
 ## Related Docs
 
+- [RM iMessage Intent Drip (7-Day)](rm-imessage-intent-drip-7day.md) — current intent-segmented iMessage nurture (team Google Doc)
 - [10-Day RM Drip Campaign](10-day-rm-drip-campaign.md)
 - [How The WM AI Bot Works](../crm-architecture/how-wm-ai-bot-works.md)

@@ -11,6 +11,7 @@ import yaml
 
 from .paths import repo_root, resolve_repo_path
 from .publish_config import load_publish_config
+from .registry import find_entry, load_registry
 from .team_doc_formatter import (
     CALLOUT_LABELS,
     TEMPLATE_LABEL,
@@ -67,6 +68,71 @@ def is_approved(draft_path: Path, meta_path: Path | None = None) -> bool:
     return bool(m)
 
 
+ANGLE_SECTION_RE = re.compile(r"^## Angle (\d+)\s+—", re.MULTILINE)
+
+
+def team_doc_type_for_draft(draft_path: Path) -> str | None:
+    meta_path = draft_path.parent / f"{draft_path.stem}.meta.yaml"
+    meta = load_meta(meta_path)
+    if meta.get("team_doc_type"):
+        return str(meta["team_doc_type"])
+    src = meta.get("source_repo_path")
+    if src:
+        entry = find_entry(load_registry(), src)
+        if entry and entry.get("team_doc_type"):
+            return str(entry["team_doc_type"])
+    return None
+
+
+def validate_angle_library(draft_path: Path) -> list[str]:
+    """Enforce repeating angle unit skeleton (see wm-team-angle-unit-template.md)."""
+    errors: list[str] = []
+    body = FRONTMATTER_RE.sub("", draft_path.read_text(encoding="utf-8"))
+
+    footer_count = len(re.findall(r"(?im)^Waiz Media \|", body))
+    if footer_count > 1:
+        errors.append(
+            f"Duplicate footer ({footer_count} lines starting with 'Waiz Media |')"
+        )
+
+    north_star_count = len(re.findall(r"📌\s*NORTH STAR", body, re.IGNORECASE))
+    if north_star_count > 1:
+        errors.append(
+            f"Duplicate NORTH STAR callout ({north_star_count}); keep one in Overview"
+        )
+
+    angle_nums = [int(m.group(1)) for m in ANGLE_SECTION_RE.finditer(body)]
+    if not angle_nums:
+        errors.append(
+            "No ## Angle N — sections found (angle_library requires angle units)"
+        )
+        return errors
+
+    sections = re.split(r"(?=^## Angle \d+\s+—)", body, flags=re.MULTILINE)
+    for section in sections:
+        if not section.strip().startswith("## Angle"):
+            continue
+        m = ANGLE_SECTION_RE.match(section.strip())
+        if not m:
+            continue
+        n = m.group(1)
+        if not re.search(r"\*\*Signal:\*\*", section):
+            errors.append(f"Angle {n}: missing **Signal:**")
+        if "**✉️ COPY & PASTE**" not in section:
+            errors.append(f"Angle {n}: missing **✉️ COPY & PASTE** banner")
+        if "```" not in section:
+            errors.append(f"Angle {n}: missing fenced paste block (```)")
+        if not re.search(r"\*\*Avoid:\*\*", section):
+            errors.append(f"Angle {n}: missing **Avoid:**")
+
+    if angle_nums != sorted(angle_nums):
+        errors.append(
+            f"Angles out of index order ({angle_nums}); reorder sections to match Angle Index"
+        )
+
+    return errors
+
+
 def validate_draft(draft_path: Path) -> list[str]:
     errors: list[str] = []
     if not draft_path.is_file():
@@ -84,6 +150,8 @@ def validate_draft(draft_path: Path) -> list[str]:
             errors.append(f"Remove internal content: {pat}")
     if len(body.strip()) < 200:
         errors.append("Draft body too short")
+    if team_doc_type_for_draft(draft_path) == "angle_library":
+        errors.extend(validate_angle_library(draft_path))
     return errors
 
 

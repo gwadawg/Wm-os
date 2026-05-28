@@ -25,6 +25,8 @@ Client-side B2C conversations only (onboarding, follow-up, recovery, retention-r
 |-----|--------|
 | [Call Center Script Factory SOP](sop-call-center-script-factory.md) | `draft` |
 | [Call Center Script Boundary Rules](script-boundary-rules.md) | `draft` |
+| [Appointment-Setting Call Script](script-appointment-setting-call.md) | `draft` |
+| [Live Transfer Warm Hand-off Script](script-live-transfer-warm-handoff.md) | `draft` |
 
 ## Related
 

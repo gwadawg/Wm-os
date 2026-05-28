@@ -3,7 +3,7 @@ title: Client Fulfillment — Client Marketing
 domain: client-fulfillment
 owner: media-buying-lead
 status: active
-last_updated: 2026-05-21
+last_updated: 2026-05-27
 review_cycle: weekly
 ---
 
@@ -20,6 +20,7 @@ Read [Waiz vs client marketing boundaries](../waiz-vs-client-marketing-boundarie
 | [RM Ad Playbook](rm-ad-playbook.md) | `draft` |
 | [Reverse Mortgage Ads Playbook](reverse-mortgage-ads-playbook.md) | `draft` |
 | [Meta Andromeda Rules For Reverse Mortgages](meta-andromeda-rm-rules.md) | `draft` |
+| [RM High-Quality Lead Acquisition](rm-high-quality-lead-acquisition.md) | `active` |
 
 ## Nurture & follow-up (canonical copy)
 

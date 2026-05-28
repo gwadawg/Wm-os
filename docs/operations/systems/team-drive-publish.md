@@ -74,8 +74,10 @@ flowchart LR
 ```
 
 1. **Prepare:** `python scripts/team-doc-prepare.py docs/.../sop.md`
-2. **Edit + approve:** `python scripts/team-doc-approve.py docs/team-drafts/<slug>.team.md`
-3. **Publish:** `python scripts/publish-team-doc.py docs/.../sop.md`
+2. **Edit** draft; run [wm-team-doc-review-checklist.md](../../templates/wm-team-doc-review-checklist.md) (angle libraries: [wm-team-angle-unit-template.md](../../templates/wm-team-angle-unit-template.md))
+3. **Validate (optional):** `python scripts/team-doc-approve.py docs/team-drafts/<slug>.team.md --check-only`
+4. **Approve:** `python scripts/team-doc-approve.py docs/team-drafts/<slug>.team.md`
+5. **Publish:** `python scripts/publish-team-doc.py docs/.../sop.md`
 
 Config in `config/team-publish.local.yaml` (see [team-publish.local.example.yaml](../../../config/team-publish.local.example.yaml)):
 

@@ -20,6 +20,7 @@ RM product, ICP, marketing doctrine, and compliance for **client** campaigns and
 | [RM Compliance Guardrails](rm-compliance-guardrails.md) | `active` |
 | [Doctrine Reverse Mortgage](doctrine-reverse-mortgage.md) | `active` |
 | [Doctrine RM Marketing](doctrine-rm-marketing.md) | `active` |
+| [RM High-Quality Lead Acquisition](../client-marketing/rm-high-quality-lead-acquisition.md) | `active` |
 | [Intelligence ICP RM](intelligence-icp-rm.md) | `draft` |
 | [Intelligence RM Product](intelligence-rm-product.md) | `draft` |
 
