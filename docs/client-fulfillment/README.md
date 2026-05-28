@@ -53,7 +53,7 @@ Everything Waiz delivers **after a client signs** — onboarding, CRM, marketing
 | **RM DNA** | Doctrine + compliance — `active` on guardrails/doctrine |
 | **Course material** | Partial; links to canonical |
 
-Raw exports: `source-docs/.../03 _ Client Fulfillment/`
+Raw exports: `wm-os-archive/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/` — [archive setup](../_inventory/raw-export-archive.md)
 
 ## Still in Drive only (lower priority)
 

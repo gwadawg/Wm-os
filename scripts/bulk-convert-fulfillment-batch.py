@@ -3,12 +3,22 @@
 from __future__ import annotations
 
 import re
+import sys
 import zipfile
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
 REPO = Path(__file__).resolve().parents[1]
-BASE = REPO / "source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment"
+sys.path.insert(0, str(REPO / "scripts"))
+from lib.paths import drive_export_root
+
+_export = drive_export_root()
+if _export is None:
+    raise SystemExit(
+        "Drive export not found. Clone wm-os-archive next to Wm-os "
+        "(see docs/_inventory/raw-export-archive.md)."
+    )
+BASE = _export / "Waiz Media OS/03 _ Client Fulfillment"
 DOCS = REPO / "docs/client-fulfillment"
 TODAY = "2026-05-21"
 

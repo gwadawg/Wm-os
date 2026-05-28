@@ -10,7 +10,7 @@ description: Publish canonical repo docs to team Google Drive as layperson-reada
 - **Source of truth:** `docs/` in this repo only.
 - **Team output:** Google Drive folder `Waiz Team SOPs` — readable copies, not canonical.
 - **Never** sync Drive edits back into the repo.
-- **Never** treat old `source-docs/waiz-drive-export/` or legacy Drive trees as publish sources.
+- **Never** treat `wm-os-archive/waiz-drive-export/` or legacy Drive trees as publish sources.
 
 ## Default pipeline: Google Doc template (matches Claude web layout)
 

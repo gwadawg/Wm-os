@@ -15,7 +15,7 @@ Use this page before creating, moving, or converting any Waiz Media OS document.
 
 | Layer | Path | Role |
 |-------|------|------|
-| Raw export | `source-docs/waiz-drive-export/` | Frozen evidence from Google Drive. **Never edit.** Never cite as operating instructions once a canonical doc exists. |
+| Raw export | Sibling repo `wm-os-archive/waiz-drive-export/` | Frozen evidence from Google Drive. **Never edit.** Never cite as operating instructions once a canonical doc exists. See [raw-export-archive.md](_inventory/raw-export-archive.md). |
 | Canonical OS | `docs/` | **Source of truth.** What you and AI create, update, and approve. One source of truth per process, policy, KPI, prompt, or playbook. |
 | Migration control | `docs/_inventory/` | Inventory, duplicates, backlog, domain owners, [team publish registry](_inventory/team-publish-registry.yaml). |
 | Team publish | Google Drive `Waiz Team SOPs` | **Downstream only.** Layperson-readable copies for team access. Not canonical; edits in Drive do not sync back. Publish via [team-drive-publish.md](operations/systems/team-drive-publish.md). |
@@ -66,7 +66,7 @@ Fix typos in canonical names (`infrastructure` not `infrustructure`). Do not cop
 | Type | Action |
 |------|--------|
 | `.docx` operating docs | Convert to `docs/` when `convert-first` or approved |
-| `.xlsx` trackers | KPI/summary Markdown + keep spreadsheet in `source-docs/` |
+| `.xlsx` trackers | KPI/summary Markdown + keep spreadsheet in `wm-os-archive/waiz-drive-export/` |
 | `.pptx`, `.mp4`, `.png`, `.pdf` | Keep raw; optional short reference doc |
 | Drive `Archive/` and old MASTER docs | Archive summary only after canonical replacement exists |
 | Skool course material | Convert last; often duplicate internal SOPs |

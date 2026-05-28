@@ -3,13 +3,13 @@ title: Google Drive Export Inventory
 domain: inventory
 owner: operations
 status: active
-last_updated: 2026-05-17
+last_updated: 2026-05-28
 review_cycle: as-needed
 ---
 
 # Google Drive Export Inventory
 
-This is a non-destructive inventory of the raw Google Drive export in `source-docs/waiz-drive-export/`. Use it to decide what should become canonical Markdown documentation under `docs/`.
+This is a non-destructive inventory of the raw Google Drive export in the **wm-os-archive** sibling repo (`waiz-drive-export/Waiz Media OS/`). See [raw-export-archive.md](raw-export-archive.md) for clone setup. Use this inventory to decide what should become canonical Markdown documentation under `docs/`.
 
 - Total files: 158
 - `.docx` files: 147

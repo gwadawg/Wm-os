@@ -3,7 +3,7 @@ title: Waiz Media OS
 domain: company
 owner: operations
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-05-28
 review_cycle: weekly
 ---
 
@@ -35,7 +35,7 @@ GitHub `docs/` is the **source of truth**. The shared Drive library `Waiz Team S
 
 ## Repo Layers
 
-- `source-docs/waiz-drive-export/`: raw Google Drive export. Preserve this as source material.
+- **wm-os-archive** (sibling repo): raw Google Drive export — [setup](_inventory/raw-export-archive.md). Not in this repo (keeps clones small).
 - `docs/`: cleaned, canonical, AI-readable operating system.
 - `docs/_inventory/`: import inventory, classification summaries, duplicate candidates, and migration backlog.
 - `.claude/skills/`: agent skills — [index](../.claude/skills/README.md) (`waiz-business-os`, `docx`, `xlsx`, `team-doc-publish`).
@@ -75,6 +75,7 @@ Top-level domains stay as listed below. Add **subfolders only as canonical docs 
 
 The first inventory has been generated from the exported Google Drive folder. Start here:
 
+- [Raw export archive](_inventory/raw-export-archive.md) (sibling `wm-os-archive` repo)
 - [Google Drive Inventory](_inventory/google-drive-inventory.md)
 - [Classification Summary](_inventory/classification-summary.md)
 - [Duplicate Candidates](_inventory/duplicate-candidates.md)

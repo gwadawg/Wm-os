@@ -1,6 +1,6 @@
 # Agents — Waiz Media OS
 
-This repository is the Waiz Media operating system. Agents should treat `docs/` as canonical truth and `source-docs/` as read-only exports.
+This repository is the Waiz Media operating system. Agents should treat `docs/` as canonical truth. Raw Drive exports live in the sibling **wm-os-archive** repo — see [raw-export-archive.md](docs/_inventory/raw-export-archive.md).
 
 ## Start here
 
@@ -26,6 +26,6 @@ Full index: [.claude/skills/README.md](.claude/skills/README.md)
 
 ## Do not
 
-- Edit files under `source-docs/waiz-drive-export/`
+- Edit files under `wm-os-archive/waiz-drive-export/` (or legacy `source-docs/` if still present locally)
 - Create duplicate canonical docs (check `docs/_inventory/duplicate-resolutions.md`)
 - Quote pricing not in an approved pricing sheet

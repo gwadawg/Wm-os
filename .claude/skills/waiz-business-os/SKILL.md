@@ -45,7 +45,7 @@ Use these default principles:
 
 | Skill | When |
 |-------|------|
-| [docx](../docx/SKILL.md) | Converting or reading Word files in `source-docs/waiz-drive-export/` |
+| [docx](../docx/SKILL.md) | Converting or reading Word files in sibling `wm-os-archive/waiz-drive-export/` |
 | [xlsx](../xlsx/SKILL.md) | Trackers and scorecards — Markdown summary + keep raw `.xlsx` |
 | [copywriting](../copywriting/SKILL.md) | Marketing copy only (not SOP structure) |
 | [senior-prompt-engineer](../senior-prompt-engineer/SKILL.md) | Building `docs/prompts/` assets |

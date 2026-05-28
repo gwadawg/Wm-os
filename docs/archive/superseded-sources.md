@@ -9,7 +9,7 @@ review_cycle: as-needed
 
 # Superseded Sources Index
 
-Raw files remain in `source-docs/waiz-drive-export/` for history. **Do not use these for daily operations** — use the canonical Markdown link instead.
+Raw files remain in `wm-os-archive/waiz-drive-export/` for history. **Do not use these for daily operations** — use the canonical Markdown link instead. See [raw-export-archive.md](../_inventory/raw-export-archive.md).
 
 ## Company DNA — Drive `Archive/` folder
 
