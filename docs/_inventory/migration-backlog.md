@@ -31,11 +31,13 @@ Use this backlog to turn the raw Google Drive export into durable AI-ready compa
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Intro Call Qualification Framework.docx` to `docs/acquisition/sales/intro-call-qualification-framework.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/No Shows & Maximizing Show Rates (Setter Levers).docx` to `docs/acquisition/sales/no-shows-maximizing-show-rates-setter-levers.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Sales Admin Work/EOD Report SOP (Setters & Closers).docx` to `docs/acquisition/sales/eod-report-sop-setters-closers.md`.
-- [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales Admin Work/Setter Daily Operations Playbook_...` to `docs/acquisition/sales/setter-daily-operations-playbook.md`.
+- [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales Admin Work/Setter Daily Operations Playbook_...` → canonical [setter-daily-checklist.md](../acquisition/sales/setter-daily-checklist.md) (playbook markdown removed 2026-05-29).
 - [x] Create LinkedIn LO outreach system under `docs/acquisition/outbound/linkedin/` (manifest, process, copy-angles, compliance, log-schema) + `.claude/skills/linkedin-lo-outreach/` (`draft` until week-1 baseline). Legacy paths in `sales/` are redirects.
 - [ ] Publish LinkedIn process + copy-angles to Drive `02 - Setters` when `active` (team-publish-registry).
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Script -- Demo Call.docx` to `docs/acquisition/sales/script-demo-call.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Script -- Intro Call Basic.docx` to `docs/acquisition/sales/script-intro-call-basic.md`.
+- [x] Create repo-native `docs/acquisition/sales/script-demo-appointment-confirmation.md` (setter morning-of / 24–48hr demo confirm + pre-call video tie-down; linked from P3 checklist).
+- [ ] Publish Demo Appointment Confirmation Script to Drive `02 - Setters` when `status: active` ([team-publish-registry](team-publish-registry.yaml)).
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/WM Objection Handling Word Tracking.docx` to `docs/acquisition/sales/wm-objection-handling-word-tracking.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/WM _ Reframe Beliefs_.docx` to `docs/acquisition/sales/wm-reframe-beliefs.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Sales Discovery Framework (Hell,Bridges,Heaven,Fuel).docx` to `docs/acquisition/sales/sales-discovery-framework-hell-bridges-heaven-fuel.md`.

@@ -19,10 +19,12 @@ See [Approved Operating Spine](../../SPINE.md) and [SOURCE-OF-TRUTH](../../SOURC
 |-------|------|-----|
 | Positioning / psychology | Sales leadership | [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md) |
 | LinkedIn outreach | Setter → founder DM | [Outbound / LinkedIn](../outbound/linkedin/README.md) — [manifest](../outbound/linkedin/manifest.yaml) |
-| Intro qualify | Setter | [Intro Call Qualification Framework](intro-call-qualification-framework.md), [Intro Call Basic Script](script-intro-call-basic.md) |
+| Intro qualify | Setter | [Intro Call Qualification Framework](intro-call-qualification-framework.md), [Intro Call Script](script-intro-call-basic.md) |
 | Financial fit / disqualify | Setter | [Disqualifying And Financial Qualification](disqualifying-financial-qualification.md) |
 | Show rate | Setter | [No Shows And Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md) |
-| Setter ops | Setter | [Setter Daily Operations Playbook](setter-daily-operations-playbook.md) |
+| Demo confirm + pre-call watch | Setter | [Demo Appointment Confirmation Script](script-demo-appointment-confirmation.md) (`draft`) |
+| Setter daily workflow | Setter | [Setter Daily Checklist](setter-daily-checklist.md) |
+| Setter SMS / follow-up | Setter | [Setter Lead Messaging](setter-lead-messaging.md) |
 | Discovery | Closer | [Discovery Call Script](discovery-call-script-2026.md) |
 | Demo / close | Closer | [Demo Call Script](script-demo-call.md) |
 | Objections | Closer / setter | [Objection Handling Hub](objection-handling-hub.md) |
@@ -36,10 +38,10 @@ Pricing and packaging: [Money Model](../../company/overview-money-model-april-26
 - [Objection Handling Hub](objection-handling-hub.md)
 - [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md)
 - [Intro Call Qualification Framework](intro-call-qualification-framework.md)
-- [Intro Call Basic Script](script-intro-call-basic.md)
+- [Intro Call Script](script-intro-call-basic.md) (`v2.4`)
 - [Disqualifying And Financial Qualification](disqualifying-financial-qualification.md)
 - [No Shows And Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md)
-- [Setter Daily Operations Playbook](setter-daily-operations-playbook.md)
+- [Setter Daily Checklist](setter-daily-checklist.md)
 - [Discovery Call Script](discovery-call-script-2026.md)
 - [Demo Call Script](script-demo-call.md)
 
@@ -50,9 +52,12 @@ Pricing and packaging: [Money Model](../../company/overview-money-model-april-26
 - [Sales Process Design SOP](sop-sales-process-design.md)
 - [Sales Advice Intake SOP](sop-sales-advice-intake.md)
 - [Script Factory SOP](sop-script-factory.md)
+- [Script Factory — building blocks](script-factory/README.md) — [Flip the Frame](script-factory/flip-the-frame-company-description.md) · [Intro ICP tracks](script-factory/intro-icp-tracks.md)
+- [Demo Appointment Confirmation Script](script-demo-appointment-confirmation.md) — morning-of / 24–48hr closer demo confirm + pre-call video tie-down
 - [Sales Script Version Change Log](sales-script-version-change-log.md)
 - [Watchshift SOP](sop-watchshift.md)
 - [Power Dialer New Leads SOP](sop-power-dialer-new-leads.md)
+- [Setter Lead Messaging](setter-lead-messaging.md)
 - [Acquisition Script Boundary Rules](script-boundary-rules.md)
 
 ### Pre-call nurture (draft)

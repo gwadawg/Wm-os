@@ -46,7 +46,7 @@ Offer, sales, marketing, lead generation, lead stages, objection handling, scrip
 - `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Intro Call Qualification Framework.docx` (sop, convert-first)
 - `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/No Shows & Maximizing Show Rates (Setter Levers).docx` (sop, convert-first)
 - `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Sales Admin Work/EOD Report SOP (Setters & Closers).docx` (sop, convert-first)
-- `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Sales Admin Work/Setter Daily Operations Playbook_ A Guide to Maximizing Opportunities.docx` (sop, convert-first)
+- `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Sales Admin Work/Setter Daily Operations Playbook_ A Guide to Maximizing Opportunities.docx` → [setter-daily-checklist.md](sales/setter-daily-checklist.md) (canonical)
 - `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Script -- Demo Call.docx` (sop, convert-first)
 - `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Script -- Intro Call Basic.docx` (sop, convert-first)
 - `Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/WM Objection Handling Word Tracking.docx` (sop, convert-first)

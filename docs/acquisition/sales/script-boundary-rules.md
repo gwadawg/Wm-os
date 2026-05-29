@@ -27,7 +27,8 @@ Applies to all script execution and script editing in `docs/acquisition/sales/`.
 
 ## Allowed Acquisition Script Set
 
-- [Intro Call Basic Script](script-intro-call-basic.md)
+- [Intro Call Script](script-intro-call-basic.md)
+- [Demo Appointment Confirmation Script](script-demo-appointment-confirmation.md) — setter; morning-of / 24–48hr closer demo confirm + pre-call video tie-down
 - [Discovery Call Script](discovery-call-script-2026.md)
 - [Demo Call Script](script-demo-call.md)
 - [Objection Handling Hub](objection-handling-hub.md)

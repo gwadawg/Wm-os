@@ -57,6 +57,15 @@ Cross-link both; operations README points to client-success SOP.
 
 Multiple sources (Skool, media buying SOPs). **Before converting:** pick one internal SOP under `docs/client-fulfillment/media-buying/`; course copies link to it.
 
+## Setter Daily Operations Playbook vs Checklist
+
+| Source | Action |
+|--------|--------|
+| `Setter Daily Operations Playbook_ A Guide to Maximizing Opportunities.docx` | Historical Drive export — content lives in checklist |
+| `docs/acquisition/sales/setter-daily-operations-playbook.md` | **Removed 2026-05-29** — duplicated P1–P7 and contradicted approved checklist rules |
+
+**Canonical path:** [setter-daily-checklist.md](../acquisition/sales/setter-daily-checklist.md) — run every shift; link out to intro, watchshift, dialer, LinkedIn, no-show, and EOD SOPs.
+
 ## Related
 
 - [Duplicate Candidates](duplicate-candidates.md)

@@ -1,9 +1,9 @@
 ---
 title: Watchshift SOP
 domain: acquisition
-owner: setter-lead
+owner: setter
 status: draft
-last_updated: 2026-05-26
+last_updated: 2026-05-29
 review_cycle: weekly
 artifact_type: sop
 ---
@@ -12,78 +12,161 @@ artifact_type: sop
 
 ## Purpose
 
-Define the live monitoring and speed-to-lead execution standard for setter watchshift blocks so inbound and high-intent leads are contacted immediately.
+Define how the setter handles **live watchshift** and **watchshift alerts** — speed-to-lead, Slack/GHL notifications, and consistent handoff back to the channel.
 
 ## Scope
 
-Applies to acquisition setter watchshift operations only. This SOP does not govern fulfillment B2C call-center scripting.
+Acquisition setter only. Does not cover fulfillment B2C call-center work.
 
 ## Owner
 
-See [domain owners](../../_inventory/domain-owners.md): **setter lead**.
+See [domain owners](../../_inventory/domain-owners.md): **setter**.
 
 ## Trigger
 
-- Setter enters scheduled watchshift block
-- New inbound notifications arrive during watchshift
+- Setter is in a scheduled watchshift block, **or**
+- Any watchshift alert fires on Slack/GHL during the shift (see alert types below)
 
 ## Inputs
 
-- Active lead alerts from GHL, Slack, and assigned channels
-- Current call queue and lead notes
-- Qualification logic from [Intro Call Qualification Framework](intro-call-qualification-framework.md)
+- Slack and GHL notifications (watchshift channels)
+- Lead record, calendar, and notes in GHL
+- [Intro Call Script](script-intro-call-basic.md) — opening type depends on how the lead entered ([mapping table](#which-intro-opening-to-use))
+- [Intro Call Qualification Framework](intro-call-qualification-framework.md)
 
 ## Outputs
 
-- Immediate call attempts on new inbound and watchshift outbound leads
-- Updated lead dispositions in CRM
-- Escalated issues and shift handoff notes
+- Lead contacted or dispositioned per script + FUN
+- Slack thread updated (✅ or Gabriel tagged)
+- CRM updated; GHL task for self or Gabriel if follow-up remains
 
-## Process
+---
 
-1. Start watchshift and verify alerts are active across all assigned channels.
-2. Monitor channels continuously; do not run non-watchshift work in this block.
-3. If a new inbound lead appears, call immediately (Priority 1 behavior).
-4. During gaps, call watchshift outbound leads who showed interest but have not completed intro qualification.
-5. Log each attempt outcome and next action in CRM before moving to the next lead.
-6. If a lead replies by text during block, call immediately before further texting.
-7. End block with a concise handoff note (open high-priority leads, escalations, system issues).
+## Watchshift alert types
 
-## Decision Rules
+Handle **immediately** when any of these come in:
 
-- Inbound lead during watchshift always overrides outbound queue.
-- Texting supports calling, not replaces calling.
-- If a lead cannot be reached after protocol steps, move to defined retry queue.
-- Script and framework remain acquisition-side: use [Intro Call Basic Script](script-intro-call-basic.md) and [Intro Call Qualification Framework](intro-call-qualification-framework.md).
+| Alert | What to do |
+|-------|------------|
+| **SMS response** (pre-demo) | [SMS pre-demo rules](#sms-responses-pre-demo) — setter owns unless escalation applies |
+| **New appointment booked** | Call to run intro **early** when possible — don’t wait for the slot if you can take them now ([speed-to-lead framing](no-shows-maximizing-show-rates-setter-levers.md)) |
+| **New lead in** | Call outbound; qualify and book next step per script |
+| **No-show notification** | Run intro no-show path from script + [no-show protocol](no-shows-maximizing-show-rates-setter-levers.md) as applicable |
+
+### Which intro opening to use
+
+| Alert / situation | Script opening |
+|-------------------|----------------|
+| **New appointment booked** (intro on calendar) | [2 — Appointment confirmation (early intro)](script-intro-call-basic.md#opening-2--appointment-confirmation-early-intro) when calling before the slot; [1 — Booked call](script-intro-call-basic.md#opening-1--booked-call) when the slot is now |
+| **New lead in** (no intro yet) | [3 — Dialer / impromptu](script-intro-call-basic.md#opening-3--dialer--impromptu) |
+| **No-show notification** (missed intro) | [4 — Intro no-show recovery](script-intro-call-basic.md#opening-4--intro-no-show-recovery) + [no-show protocol](no-shows-maximizing-show-rates-setter-levers.md) |
+| Live intro at scheduled time | [1 — Booked call](script-intro-call-basic.md#opening-1--booked-call) |
+
+Full dialogue: [Intro Call Script](script-intro-call-basic.md).
+
+---
+
+## SMS responses (pre-demo)
+
+**Scope:** Any SMS from a lead who has **not yet completed a booked demo with the closer**. After demo is on the calendar with the closer, confirmations and show-rate work follow [Demo Appointment Confirmation Script](script-demo-appointment-confirmation.md), [No Shows and Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md), and [Setter Daily Checklist P3](setter-daily-checklist.md#priority-3--confirm-demo-appointments-closer-calls).
+
+### Default — setter owns it
+
+The setter **writes and sends** pre-demo SMS replies. Do not wait for Gabriel unless an escalation rule below applies.
+
+- Reply in GHL using **[Setter Lead Messaging](setter-lead-messaging.md)** — read form + history; value-first; no empty check-ins.
+- Prefer a **call** when the thread is heating up or booking is one message away ([texting rules](setter-daily-checklist.md#texting-rules-all-priorities) for dialer blocks).
+- **CRM notes required** on every lead you speak with (call or substantive SMS) — what was said, next step, stage.
+
+### Tag Gabriel (Slack + context)
+
+On the watchshift Slack notification (or thread), **tag Gabriel** and add one line of context when:
+
+| Situation | Setter action |
+|-----------|----------------|
+| **Gabriel must reply** | The message needs Gabriel’s voice or answer — setter does **not** reply; tag Gabriel and leave a GHL task assigned to Gabriel |
+| **High-value question** | Strong / quality lead asks something that needs **more thought** than a quick setter reply (pricing nuance, policy, custom situation) — tag Gabriel; do not guess |
+
+After tagging, leave the lead in a clear CRM state (task for Gabriel, note what was asked). Do not mark ✅ on Slack until the handoff is posted (Gabriel may still owe the reply).
+
+### Disposition — quality lead pre-booking
+
+When the lead is **good quality** but still **pre-demo** (not yet booked with the closer):
+
+- Move to pipeline stage: **Setter quality lead**
+- Add a short note: why they’re quality, what’s pending (e.g. awaiting Gabriel reply, callback time, intro slot)
+- Create a GHL task for self or Gabriel if the next step is not done in the same session
+
+Use this disposition when they’re worth prioritizing in the pipeline — not for every SMS, only when they meet your quality bar before booking.
+
+### When handled (no Gabriel needed)
+
+1. Reply sent (or call completed).
+2. CRM updated (disposition + notes).
+3. **✅** on the Slack notification.
+
+---
+
+## Cadence (required)
+
+1. **Handle immediately** — treat the alert as drop-everything until that item is worked or clearly waiting on the prospect.
+2. **Close the loop on Slack:**
+   - Done and no founder action needed → add a **✅** (checkmark) reaction on the notification (or reply ✅).
+   - Needs Gabriel → **tag Gabriel** per [SMS pre-demo rules](#sms-responses-pre-demo) or other escalation below.
+3. **CRM / GHL** — disposition, notes, and tasks per [Setter Daily Checklist](setter-daily-checklist.md) (task for self or Gabriel if not finished).
+
+Do not leave watchshift notifications unreacted after you’ve handled them.
+
+---
+
+## During a watchshift block
+
+1. Verify GHL + Slack alerts are on before starting.
+2. Work the alert queue using the cadence above — inbound during block still overrides outbound queue.
+3. Between alerts, call watchshift outbound leads who have shown interest but have not completed intro qualification.
+4. SMS during watchshift: follow [SMS pre-demo rules](#sms-responses-pre-demo).
+5. End block with a short handoff only if something is open (tag Gabriel or leave a GHL task).
+
+---
+
+## Setting an intro on the setter calendar
+
+When the lead is busy on a live call, use [Opening 3 — BAMFAM](script-intro-call-basic.md#opening-3--dialer--impromptu) to book an intro on **the setter’s calendar** — as soon as possible.
+
+---
 
 ## Escalation
 
-- Alert routing/system failure -> ops manager immediately.
-- Repeated unreachable hot leads with missing contact data -> CRM owner.
-- Qualification or pricing boundary confusion -> closer/founder per existing sales SOPs.
+| Situation | Action |
+|-----------|--------|
+| Pre-demo SMS needs Gabriel’s reply or high-value question | Tag **Gabriel** on Slack + GHL task — see [SMS pre-demo](#sms-responses-pre-demo) |
+| Pricing / policy / founder-only edge case | Tag **Gabriel** on Slack + GHL task |
+| Alert routing or system failure | Ops / Gabriel |
+| Qualification boundary | [Disqualifying and Financial Qualification](disqualifying-financial-qualification.md) |
+| Quality lead, not yet on closer demo calendar | Pipeline stage **Setter quality lead** + note + task |
 
-## Quality Bar
+## Quality bar
 
-- Leads are called fast enough to preserve peak intent.
-- CRM records are complete and usable by next shift.
-- No mixing with fulfillment call-center process. Fulfillment scripts live in [Client Fulfillment — Call Center](../../client-fulfillment/call-center/README.md).
+- Median time from alert to first action is minutes, not hours.
+- Every handled Slack alert has ✅ or Gabriel tagged.
+- Intro opening matches how the lead entered (per [script mapping](#which-intro-opening-to-use)).
 
 ## Metrics
 
-- Median speed-to-first-call
-- Contact rate during watchshift block
-- Qualified-demo booking rate from watchshift leads
-- Missed inbound alert count
+- Speed-to-first-action on watchshift alerts
+- % of Slack notifications closed with ✅ or explicit Gabriel tag
+- Qualified demos booked from watchshift-sourced leads
 
 ## Related Docs
 
-- [Setter Daily Operations Playbook](setter-daily-operations-playbook.md)
+- [Setter Daily Checklist](setter-daily-checklist.md) — P2 and Always First
+- [Intro Call Script](script-intro-call-basic.md)
 - [Intro Call Qualification Framework](intro-call-qualification-framework.md)
-- [Intro Call Basic Script](script-intro-call-basic.md)
-- [No Shows And Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md)
-- [Client Fulfillment — Call Center](../../client-fulfillment/call-center/README.md)
+- [No Shows and Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md)
+- [Setter Lead Messaging](setter-lead-messaging.md)
 
 ## Open Questions
 
-- [ ] Confirm exact retry ladder timing by channel.
-- [ ] Confirm required handoff format at end of each watchshift.
+- [ ] Confirm GHL setter-calendar name, duration, and confirmation SMS (placeholder in intro script Opening 3).
+- [ ] Confirm exact Slack channel names and emoji convention with ops.
+- [x] **Setter quality lead** — confirmed GHL pipeline stage (2026-05-29).

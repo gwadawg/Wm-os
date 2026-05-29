@@ -13,7 +13,7 @@ artifact_type: playbook
 
 ## Purpose
 
-Plug-and-play copy for LinkedIn LO outreach. Process and rules: [process.md](process.md). Setter: message 1, micro-notes, one bump. Gabriel: ghost sequence, optional voice note.
+Plug-and-play copy for LinkedIn LO outreach. Process and rules: [process.md](process.md). **Setter:** message 1, micro-notes, one bump only — **no replies** (forward to Gabriel). **Gabriel:** all replies, ghost sequence, optional voice note.
 
 ## Scope
 
@@ -25,7 +25,7 @@ First DM after connect (or warm DM), signal-only connect notes (A/B), setter bum
 2. Pick the matching **angle #** below.
 3. Fill bracketed fields manually — never send obvious templates.
 4. Log `angle_id` per [log-schema.md](log-schema.md).
-5. On reply → hand off to Gabriel; do not continue the thread.
+5. On **any** reply → **do not reply**; hand off to Gabriel per [process.md](process.md#handoff-to-gabriel-phase-5).
 
 ## Voice Variants
 

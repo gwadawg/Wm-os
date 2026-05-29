@@ -3,7 +3,7 @@ title: EOD Report SOP (Setters And Closers)
 domain: acquisition
 owner: sales-leadership
 status: draft
-last_updated: 2026-05-20
+last_updated: 2026-05-29
 review_cycle: weekly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Sales Admin Work/EOD Report SOP (Setters & Closers).docx
 artifact_type: sop
@@ -13,199 +13,184 @@ artifact_type: sop
 
 ## Purpose
 
-End-of-day reporting standards for setters and closers.
+Standardize **end-of-day (EOD)** reporting so leadership has accurate activity, pipeline state, and coaching signals — without reps leaving CRM or admin half-done.
 
 ## Scope
 
-Sales admin reporting cadence and fields.
+- **Setters:** [Setter Daily Checklist](setter-daily-checklist.md) EOD block — this doc is the field-by-field standard.
+- **Closers:** Demo metrics, pipeline hygiene, and roll-up (below).
 
 ## Owner
 
-See [domain owners](../../_inventory/domain-owners.md): **sales-leadership**.
+| Role | Owner |
+|------|--------|
+| Setter EOD | **setter** — see [domain owners](../../_inventory/domain-owners.md) |
+| Closer EOD | **closer** / sales leadership |
 
-## When To Use
+## Trigger
 
-Use when executing or improving the workflow described in the source document. For offer routing and pricing rules, see [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md).
+Submit the EOD form when the setter/closer **wraps for the day** — no fixed clock-out time. Non-negotiable every working day.
 
-## Quality Bar
+## Inputs
 
-- Follows Waiz voice: qualified conversations, acquisition system, strategic partner (see [Identity Core](../../company/doctrine-identity-core-april-26.md)).
-- Pricing and deal structure escalated to founder when applicable.
-- Boot Camp downsell offered when prospect is not DFY-qualified.
+- GHL pipeline, tasks, call/SMS history, KPI tracker
+- Notes from today’s intros, dialer, watchshift, confirmations
 
-## Metrics
+## Outputs
 
-- Define or track metrics in [KPIs](../../kpis/README.md) as this workflow is operationalized.
+- EOD form posted to the sales Slack channel (e.g. `#eods-salesteam`)
+- CRM reflects today’s work (pipeline cleared, dispositions correct)
 
-## Operating Content
+---
 
-### EOD Report SOP (Setters & Closers)
-## Introduction
-This video is going to break down a gold standard practice every sales rep (setter or closer) must do at the end of every day: the End of Day (EOD) Report.
+## Setter EOD
 
-### What is an EOD?
-EOD stands for End of Day. This is a form you will submit by the end of every day to keep your direct report in the loop with how the day went, your stats, and any reflection you may have for our company or for yourself.
+### Why it matters
 
-This is a non-negotiable that everyone on our team must complete by the end of each day. In this video, I'm going to show you how to find it & how to fill it out…
+- Coaching and feedback from real call detail  
+- Marketing/product signals from objections and misaligned expectations  
+- Proof admin and CRM hygiene happened (not just activity theater)  
+- Self-review habit — short daily roll-up
 
-## Setter EOD Form
-### Why do EOD reports?
-It helps the management team understand what's going on during your calls so they can give you relevant feedback and coaching or make adjustments to marketing if needed
+### Admin (complete before submit)
 
-### Lets us track how you are doing personally over time and prevent sales ruts
-## Ensures you complete all your admin
-## It dramatically improves your self-awareness through self-call analysis
-## This is GREAT practice and allows you to self-correct
-### It becomes sort of an "end-of-day journaling" routine
-## How To Fill It Out
-Being detailed in your EOD reports is crucial. The more detail you can provide, the better we can support you. Below, we'll break down each question on the form for both Setters and Closers and provide good and bad examples for your reference.
+Answer **yes** on the form only if true. Mirrors the [daily checklist](setter-daily-checklist.md#end-of-day-when-you-wrap).
 
-## Setter EOD Report Breakdown
-### GENERAL INFO:
-## Your Name
-## Bad: John
-## Good: John Stone
-### What grade would I give myself on my ENERGY today? (1-10)
-### What grade would I give myself on my FOCUS? (1-10)
-What grade would I give myself on my BIOLOGY? (Food, Water, Exercise, Sleep) (1-10)
+| Task | Standard |
+|------|----------|
+| **Setter KPI tracker** | Filled for the day (dials, outcomes, etc.) |
+| **Pipeline cleared** | No active lead without a **pipeline stage**, accurate disposition context, or **GHL task** (assigned to self or Gabriel) |
+| **Dispositions correct** | Every lead you **spoke with** today is reflected in CRM — see [disposition rules](#setter-disposition-rules) |
+| **GHL tasks** | Your open tasks current; anything waiting on Gabriel is assigned to Gabriel with context |
+| **Hotlist** | See [Hotlist](#hotlist-setter) |
+| **Notes** | No “called only” records — calls/SMS threads have notes per [Setter Lead Messaging](setter-lead-messaging.md) |
 
-### ADMIN TASKS:
-### Did you fill out the Setter KPI tracker?
-Have you checked the calendar for the next 3-4 days and marked all unqualified / low quality bookings as FREE?
+**Not required:** Routine “audit the next 3–4 days and mark bookings FREE” unless ops assigns a one-off calendar cleanup. Speed-to-lead on **new** bookings is [Watchshift](sop-watchshift.md) / P1, not a standing EOD calendar audit.
 
-Did you organize the pipeline by moving fake leads to lost, and moving the leads stuck on the call book stages that haven't been moved?
+### Hotlist (setter)
 
-### Did you follow up with your hotlist?
-### TODAY'S METRICS:
-## Total Dials Made
-## Bad: 100
-## Good: 250 - Dialed for 4 hours straight
-## Total Conversations
-## Bad: 10
-### Good: 50 - 20% conversation rate (right on target)
-### Number of Booked Demos (From Outbound)
-## Bad: 2
-Good: 3 - Booked 3 demos from outbound dialing, 2 for tomorrow and 1 for next week
+Leads you flagged today as **high intent** (e.g. pipeline stage **Setter quality lead**, strong intro, waiting on a reply). Before EOD:
 
-## Number of Calls Confirmed
-## Bad: 5
-### Good: 8 - Confirmed all of tomorrow's demos via text and call
-### ROLL UP:
-## Daily Roll Up - breakdown of ALL the calls you took
-### Bad:
-## INTRO 1 - good call
-## INTRO 2 - no show
-## INTRO 3 - decent call
-### Good:
-INTRO 1 - [Prospect Name] - Booked demo for tomorrow at 2pm. Qualified, has budget, decision maker. Excited to talk.
+- Touch each hotlist lead (call, value SMS, or task), **or**
+- Create/update a GHL task with the next step and date.
 
-INTRO 2 - [Prospect Name] - No showed. Sent follow-up text.
+Do not leave hotlist names only in your head or Slack.
 
-INTRO 3 - [Prospect Name] - Disqualified. No budget, not ready to invest. Marked as lost.
+### Setter disposition rules
 
-OUTBOUND 1 - [Prospect Name] - Booked demo for Friday at 10am. Solid conversation, they're struggling with lead gen and ready to talk.
+After every intro, dialer connect, or substantive SMS:
 
-OUTBOUND 2 - [Prospect Name] - Not interested. Marked as lost.
+| Outcome | CRM |
+|---------|-----|
+| Strong pre-demo, not booked yet | Stage: **Setter quality lead** + note |
+| Demo with closer booked | Correct booked stage + notes for Gabriel |
+| Intro booked on setter calendar | Stage reflects intro slot |
+| Not DFY fit | Boot Camp route or lost per [Disqualifying and Financial Qualification](disqualifying-financial-qualification.md) |
+| No-show | No-show stage + protocol per [No Shows SOP](no-shows-maximizing-show-rates-setter-levers.md) |
+| Junk / wrong number / spam | Lost (or bad lead) + brief note |
+| Stuck on call-book with no movement | Move stage or task — nothing idle in limbo |
 
-What questions / objections / or misaligned expectations did you encounter on todays calls that we can make pre-call assets around to prevent?
+If unsure of stage name, match existing GHL pipeline labels; escalate naming to ops once.
 
-## Bad: None
-Good: I had 3 prospects today ask "What's the price?" on the intro call before I could even qualify them. I think we need a pre-call asset or script adjustment to handle this earlier in the process without killing the demo booking rate.
+### Metrics (form fields)
 
-## Closer EOD Report Breakdown
-### GENERAL INFO:
-## Your Name
-## Bad: John
-## Good: John Stone
-### What grade would I give myself on my ENERGY today? (1-10)
-## Bad: 5
-### Good: 7 - Felt great today, had my coffee early and was locked in on the phones
-### What grade would I give myself on my FOCUS? (1-10)
-## Bad: 5
-Good: 8 - Stayed off my phone between calls and reviewed my notes before each demo
+Report honestly with brief context (not bare numbers).
 
-What grade would I give myself on my BIOLOGY? (Food, Water, Exercise, Sleep) (1-10)
+| Field | Report |
+|-------|--------|
+| Total dials made | Count + block context if useful |
+| Total conversations | Count; note connect rate if you track it |
+| Booked demos (from outbound) | Count + timing (e.g. 2 tomorrow, 1 next week) |
+| Calls confirmed | Demos you confirmed for closer (P3 work) |
 
-## Bad: 5
-Good: 6 - Ate clean, drank 3L of water, but only got 5 hours of sleep last night
+### Self grades (1–10)
 
-### ADMIN TASKS:
-### Did you fill out the Closer KPI tracker?
-Did you fill out the new client form for all closed deals and add the client to slack?
+Energy, focus, biology (food, water, sleep, movement). Short note if any score is low and why.
 
-### Did you organize the pipeline such as moving demos that no showed to "no show"?
-### Hot List Completed?
-Have you checked the calendar for the next 3-4 days and marked all unqualified / low quality bookings as FREE?
+### Roll-up (required detail)
 
-### Did you fill out the post demo call forms?
-### TODAY'S METRICS:
-### Total Calls Connected (Scheduled & Not Scheduled)
-## Demos Scheduled For Today
-## Demos Showed
-## Clients Closed
-## Total Cash Collected
-### UF Cash %
-### ROLL UP:
-## Daily Roll Up - breakdown of ALL the calls you took
-### Bad:
-## DEMO 1 - good call
-## DEMO 2 - no show
-## DEMO 3 - decent call
-### Good:
-DEMO 1 - [Client Name] - Closed for $7k PIF. Solid call, followed the framework perfectly. They were ready to buy, just needed to build certainty around the guarantee.
+List **every** intro and meaningful outbound touch today:
 
-DEMO 2 - [Prospect Name] - No showed. Sent the no-show follow-up sequence. Will call tomorrow.
+**Bad:** `INTRO 1 - good call`
 
-DEMO 3 - [Prospect Name] - Got a "think about it" objection. I tried to isolate it but they were firm on needing to talk to their business partner. Booked follow-up for Friday. I want to review this call tomorrow to see where I could have pushed harder.
+**Good:**
 
-DEMO 4 - [Prospect Name] - Unqualified. No budget, not decision maker. Disqualified and marked as lost.
+```text
+INTRO 1 - [Name] - Booked demo tomorrow 2pm. FUN yes. Motivator: referral well dry. Notes in GHL.
+INTRO 2 - [Name] - No-show. Ran protocol, moved to no-show stage, SMS sent.
+OUTBOUND 3 - [Name] - Setter quality lead. Burned by prior agency. Gabriel tagged on Slack for pricing question.
+```
 
-### Am I on track to hit projections? If NO, why?
-## Bad: No
-Good: Yes - Currently at 18 closes, need 9 more by end of month. If I maintain 4 demos/day at 30% close rate, I'll hit 27 closes.
+### Objections / assets question
 
-What questions / objections / or misaligned expectations did you encounter on todays calls that we can make pre-call assets around to prevent?
+Flag patterns for pre-call assets or script updates (e.g. repeated “what’s the price on intro?”). Link ideas to [Pre-Call Objection Videos](../marketing/pre-call-objection-videos.md) when relevant.
 
-## Bad: None
-Good: I had 2 prospects today ask "What's the price?" on the intro call before I could even qualify them. I think we need a pre-call asset or script adjustment to handle this earlier in the process without killing the demo booking rate.
+**Bad:** `None`
 
-## EOD Report Templates
-Below is the snapshot URL for the EOD report form. You can install this into your own HighLevel account and customize it for your team.
+**Good:** `3 intros asked price before qualify — suggest pre-call asset or intro framing tweak.`
 
-## Slack Channel
-## Automation Name
-## Make Automation
-## Setup SOP
-## eods-salesteam
-### Auto pull in EOD’s and EOD form
-### > Automation Snapshot W/ Form
-### > Make Scenario
-## Video Walkthrough
-### How To Set It Up (Implementation)
-## Automation
-We recommend setting up an automation to pull the EOD form submissions directly into a dedicated Slack channel (e.g., #eods-salesreps). This keeps everything organized and visible to the management team.
+---
 
-### Slack Channel Automation:
-## Name: eods-salesreps
-Setup: Use HighLevel's native Slack integration or make.com to automatically post new form submissions to the corresponding channel.
+## Closer EOD
 
-### Enforcement (Non-Negotiable)
-When you implement the EOD process, especially with reps who have been with you BEFORE you implement it, you're naturally going to get some resistance. People don't like change, especially if it means them putting in more work.
+### Admin
 
-The key is not saying this is something you're implementing that they "can do" - you MUST enforce this as a non-negotiable. The standard is filling it out, and if they fall below that standard, they are off the team.
+- Closer KPI tracker complete  
+- New clients: new-client form + Slack  
+- Pipeline: no-shows staged correctly; demos and follow-ups current  
+- Hot list completed  
+- Post-demo call forms filled  
+- Calendar: unqualified/low-quality future bookings marked FREE (closer-owned hygiene)
 
-### We have a very simple process for missed EOD's:
-## 1st time: Warning
-### 2nd time: Final warning, no commission for that day
-## 3rd time: Off the team
+### Metrics
+
+Total calls connected, demos scheduled today, demos showed, clients closed, cash collected, UF cash %.
+
+### Roll-up
+
+Per demo: name, outcome, next step, notable objection. Include projection check (“on track for month?”) with brief math if not.
+
+### Objections / assets
+
+Same standard as setter — feed marketing and script improvements.
+
+---
+
+## Form and Slack
+
+- Submit via the **HighLevel EOD form** (team snapshot / automation as implemented).  
+- Submissions should post to the dedicated Slack channel (e.g. `#eods-salesteam`) via native GHL Slack integration or make.com — see implementation notes in source export if rebuilding.
+
+## Enforcement (non-negotiable)
+
+| Miss | Action |
+|------|--------|
+| 1st | Warning |
+| 2nd | Final warning; no commission that day |
+| 3rd | Off the team |
+
+EOD is a standard, not optional when reps push back on change.
+
+## Quality bar
+
+- Management can coach from roll-ups without pulling recordings first.  
+- Pipeline in GHL matches what the rep claims in EOD.  
+- Setter EOD aligns with [Setter Daily Checklist](setter-daily-checklist.md) every day.
 
 ## Related Docs
 
+- [Setter Daily Checklist](setter-daily-checklist.md)
+- [Setter Lead Messaging](setter-lead-messaging.md) — notes + SMS
+- [Watchshift SOP](sop-watchshift.md)
+- [Power Dialer New Leads SOP](sop-power-dialer-new-leads.md)
+- [No Shows and Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md)
 - [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md)
 - [Identity Core](../../company/doctrine-identity-core-april-26.md)
 - [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md)
+- [Pre-Call Objection Videos](../marketing/pre-call-objection-videos.md)
 
 ## Open Questions
 
-- [ ] Human review: confirm `status: draft` → `active` after validation.
-- [ ] Assign concrete KPIs and triggers if missing from source.
+- [ ] Confirm live EOD form URL / field IDs match this SOP after next GHL publish.
+- [ ] Setter KPI tracker location (sheet name or GHL report).
+- [ ] Human review: `status: draft` → `active` when Pedro signs off.

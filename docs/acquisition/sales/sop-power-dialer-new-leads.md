@@ -1,9 +1,9 @@
 ---
 title: Power Dialer New Leads SOP
 domain: acquisition
-owner: setter-lead
+owner: setter
 status: draft
-last_updated: 2026-05-26
+last_updated: 2026-05-29
 review_cycle: weekly
 artifact_type: sop
 ---
@@ -12,84 +12,133 @@ artifact_type: sop
 
 ## Purpose
 
-Standardize how setters work new-lead dial blocks so dialing cadence, messaging, and CRM dispositions are consistent and performance-trackable.
+Standardize how the setter works **new-lead power dialer blocks** — call order, texting, pipeline stages, and handoffs — so dialing stays fast and CRM stays accurate.
 
 ## Scope
 
-Applies to acquisition new-lead dialer activity after higher-priority blocks are handled. Excludes fulfillment B2C call-center scripts and workflows.
+- Acquisition **new leads** in the power dialer queue only.
+- Runs at **Priority 5** on the [Setter Daily Checklist](setter-daily-checklist.md) — after P1–P4 are clear for the block.
+- Does **not** cover watchshift alerts (see [Watchshift SOP](sop-watchshift.md)), fulfillment B2C call center, or intro script copy (see [Intro Call Script](script-intro-call-basic.md)).
 
 ## Owner
 
-See [domain owners](../../_inventory/domain-owners.md): **setter lead**.
+See [domain owners](../../_inventory/domain-owners.md): **setter**.
 
 ## Trigger
 
-- Priority 1-4 blocks are complete for the current period
-- New-lead dial block is scheduled
+- P1–P4 are clear for the current work block, **and**
+- Setter is running a new-lead dial session (scheduled block or open time in the priority stack)
+
+**Stop the dialer block** when a watchshift or P1 interrupt fires — handle per [Watchshift SOP](sop-watchshift.md) / checklist **Always first**, then resume the list.
 
 ## Inputs
 
-- New lead queue ordered newest to oldest
-- Dialer system access and verified line
-- Intro script + qualification framework
+- New-lead queue in GHL/power dialer, sorted **newest → oldest**
+- Dialer access and active line
+- [Intro Call Script](script-intro-call-basic.md) — on connect use [Opening 3 — Dialer / impromptu](script-intro-call-basic.md#opening-3--dialer--impromptu) (other openings if they already booked)
+- [Intro Call Qualification Framework](intro-call-qualification-framework.md)
 
 ## Outputs
 
-- Completed dial attempts with dispositions
-- Booked intro/demo outcomes where qualified
-- Clear retry queue for unresolved leads
+- Every touched lead has an updated **pipeline stage**, notes, and next step (or explicit reason untouched)
+- GHL **task** for setter or Gabriel when work carries past this block
+- Booked intros/demos, **Setter quality lead**, lost/Boot Camp, or scheduled follow-up per outcome
+
+---
 
 ## Process
 
-1. Pull lead list sorted newest -> oldest; work in order.
-2. Call each lead first before texting.
-3. If no answer, follow voicemail/text fallback sequence.
-4. If connected, run qualification via acquisition intro framework and route accordingly.
-5. After each lead, record disposition and next action immediately.
-6. Continue until block ends; leave clean retry queue and summary notes.
+1. Confirm P1–P4 are clear — do not start dialer while watchshift backlog or higher priorities are open.
+2. Pull queue **newest → oldest**; do not cherry-pick unless ops assigns a hot list.
+3. **Per lead:**
+   1. **Call first** (live attempt per cadence below).
+   2. If no connect → voicemail; then **value-based text** if they have never been texted or follow-up is due — see [Setter Lead Messaging](setter-lead-messaging.md).
+   3. If connect → intro script + FUN; book next step or route disqualify/Boot Camp.
+   4. **Notes required** — every lead you **speak with** gets CRM notes (what was said, motivators, objection, next step). A call without notes is incomplete.
+   5. **Immediately** update pipeline stage after the touch.
+   6. If callback or Gabriel input needed → GHL task (assigned correctly).
+4. **SMS during the block:** see [Texting during dial blocks](#texting-during-dial-blocks).
+5. End block with no leads left in “called but not staged” limbo — aligns with EOD **pipeline cleared** on the checklist.
 
-## Call Cadence (Default)
+---
 
-- Attempt 1: live call
-- Attempt 2: immediate second call if first missed
-- Attempt 3: voicemail + concise text follow-up
-- Attempt 4+: scheduled retry based on queue priority and recent engagement
+## Call cadence (default)
 
-## Voicemail Framework (Default)
+| Step | Action |
+|------|--------|
+| 1 | Live call |
+| 2 | Immediate second dial if first rings out / no answer |
+| 3 | Voicemail + short text (if appropriate) |
+| 4+ | Retry per queue rules / GHL task for later |
 
-- Identify self/company
-- State reason (response to expressed interest)
-- Provide simple callback action
-- Keep under 20 seconds
+### Voicemail (default)
 
-## CRM Disposition Tags (Minimum)
+- Who you are + Waiz Media
+- Why you’re calling (they showed interest)
+- Simple callback ask
+- Under ~20 seconds
 
-- Connected-qualified-booked
-- Connected-qualified-not-booked
-- Connected-not-qualified
-- No-answer-voicemail-left
-- No-answer-no-voicemail
-- Bad-number
-- Follow-up-scheduled
+---
 
-## Decision Rules
+## Texting during dial blocks
 
-- Do not skip sequence order unless lead is explicitly time-sensitive.
-- Do not run long objection handling over text; route to live call.
-- If a lead is not a fit, route using [Disqualifying And Financial Qualification](disqualifying-financial-qualification.md).
-- Do not use fulfillment call-center scripts in acquisition dial blocks.
+Execution detail: **[Setter Lead Messaging](setter-lead-messaging.md)** (review lead file + form + history; value-first copy; word-tracking starters).
+
+Matches the [daily checklist texting rules](setter-daily-checklist.md#texting-rules-all-priorities):
+
+- **Call before text** when opening a new lead in the dialer.
+- If the lead has **not been texted** after contact → send follow-up SMS per lead messaging doc (do not skip).
+- If someone **texts back while you’re dialing**, reply with value, then **return to outbound** — the whole block does not stop unless you’re moving to a live call or a watchshift interrupt.
+- **No long objection threads over text** — steer to a call; use [Objection Handling Hub](objection-handling-hub.md) for angles.
+- **Pre-demo SMS** that needs Gabriel or a high-value founder answer → [Watchshift SMS rules](sop-watchshift.md#sms-responses-pre-demo) (tag Gabriel, do not guess).
+
+---
+
+## Pipeline stages and outcomes
+
+Update the **GHL pipeline stage** on every lead you work in this block (not only call tags in a note). End of day: pipeline cleared per checklist.
+
+| Outcome | Pipeline / action |
+|---------|-------------------|
+| Strong lead, not booked yet, worth prioritizing | Stage: **Setter quality lead** + note why + task |
+| Qualified → intro on setter calendar | Book per intro script (BAMFAM); stage reflects booked intro |
+| Qualified → demo with closer booked | Stage reflects demo booked; notes for closer |
+| Not DFY fit | Route per [Disqualifying and Financial Qualification](disqualifying-financial-qualification.md) — Boot Camp or lost |
+| Bad data / wrong number | Mark lost or bad lead per CRM convention + note |
+| No answer, will retry | Follow-up stage or task with callback time |
+
+### Call attempt notes (optional layer)
+
+If your workflow separates **stage** from **last attempt**, you may also log:
+
+- Connected / no answer / voicemail left / bad number
+- Same session rule: **stage + next step** must still be set before moving to the next lead
+
+---
+
+## Decision rules
+
+- Work **newest → oldest** unless Gabriel assigns a hotlist override.
+- Do not skip P1–P4 to “just finish dials.”
+- Connected leads use acquisition intro script — **not** fulfillment call-center scripts ([Call Center index](../../client-fulfillment/call-center/README.md)).
+- Quality pre-demo lead → **Setter quality lead** stage (same definition as [Watchshift SOP](sop-watchshift.md#sms-responses-pre-demo)).
+- Objections on text → short steer to book/call; escalate to Gabriel only when watchshift SMS escalation applies.
 
 ## Escalation
 
-- Dialer outage or call-delivery issue -> ops manager.
-- High bad-number rate spike -> data/CRM owner.
-- Repeated compliance-risk language in outreach -> sales-leadership review.
+| Situation | Action |
+|-----------|--------|
+| Pre-demo SMS / quality lead needs Gabriel | Tag Gabriel + GHL task — [Watchshift SMS](sop-watchshift.md#sms-responses-pre-demo) |
+| Pricing, policy, founder-only | Tag Gabriel + GHL task |
+| Dialer outage, line, or delivery failure | Gabriel / ops |
+| Bad-number spike | Flag Gabriel / data owner |
 
-## Quality Bar
+## Quality bar
 
-- Dispositions are complete and reliable.
-- Dial blocks prioritize freshness and throughput without losing quality.
-- Acquisition scripting remains isolated from fulfillment call-center scripting.
+- Every worked lead has **notes + pipeline stage + next step** before the next dial.
+- No “called only” records — text follow-up when the file has no SMS and outreach is due.
+- Dial blocks favor speed **without** empty dispositions at EOD.
+- Texting does not stall the block unless interrupt rules apply.
 
 ## Metrics
 
@@ -97,17 +146,23 @@ See [domain owners](../../_inventory/domain-owners.md): **setter lead**.
 - Connect rate
 - Qualified rate
 - Booked rate from connects
+- % leads with stage updated same session
 - Bad-number rate
 
 ## Related Docs
 
-- [Setter Daily Operations Playbook](setter-daily-operations-playbook.md)
-- [Intro Call Basic Script](script-intro-call-basic.md)
+- [Setter Daily Checklist](setter-daily-checklist.md) — P5
+- [Watchshift SOP](sop-watchshift.md) — interrupts + pre-demo SMS
+- [Intro Call Script](script-intro-call-basic.md)
 - [Intro Call Qualification Framework](intro-call-qualification-framework.md)
-- [Disqualifying And Financial Qualification](disqualifying-financial-qualification.md)
-- [Client Fulfillment — Call Center](../../client-fulfillment/call-center/README.md)
+- [Disqualifying and Financial Qualification](disqualifying-financial-qualification.md)
+- [Objection Handling Hub](objection-handling-hub.md)
+- [Setter Lead Messaging](setter-lead-messaging.md) — value-based SMS + notes discipline
+- [EOD Report SOP](eod-report-sop-setters-closers.md) — pipeline cleared
+- [Client Fulfillment — Call Center](../../client-fulfillment/call-center/README.md) — out of scope
 
 ## Open Questions
 
-- [ ] Confirm exact retry-day schedule after day 1.
-- [ ] Confirm whether voicemail is mandatory on every no-answer attempt.
+- [ ] Confirm retry-day schedule after day 1 (ops).
+- [ ] Confirm whether voicemail is required on every no-answer or only attempt 3.
+- [ ] Document full GHL pipeline stage list in one disposition reference (when remaining stages are confirmed).

@@ -3,7 +3,7 @@ title: Sales Discovery Framework (Hell, Bridges, Heaven, Fuel)
 domain: acquisition
 owner: closer
 status: draft
-last_updated: 2026-05-20
+last_updated: 2026-05-29
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/01 _ Acquisition/Sales/Sales Discovery Framework (Hell,Bridges,Heaven,Fuel).docx
 artifact_type: sales process
@@ -17,7 +17,7 @@ Discovery call structure using Hell, Bridges, Heaven, and Fuel model.
 
 ## Scope
 
-Discovery-stage narrative framework.
+Discovery-stage narrative framework for **demo and deeper closer discovery** — not the setter intro. Intro uses operational qualifiers in [Intro Call Script](script-intro-call-basic.md#stage-3--qualifying-questions).
 
 ## Owner
 
@@ -44,7 +44,7 @@ Use when executing or improving the workflow described in the source document. F
 ### Internal Use Only  |  Sales  |  Last Updated: March 2026
 ## What This Document Is
 ## This blueprint covers how to run a Discovery Process —
-Intro call- Very surface level. Just to find the main points  Demo all - Dig much deeper
+**Intro call** — operational qualifiers only ([Intro Call Script](script-intro-call-basic.md)). **Demo** — dig much deeper using Hell → Bridges → Heaven → Fuel below.
 
 ### By the end of this document, you'll understand:
 ## The purpose of the Discovery Call and what it is NOT

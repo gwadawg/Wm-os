@@ -23,6 +23,13 @@ Raw files remain in `waiz-os-archive/waiz-drive-export/` for history. **Do not u
 | `00 _ Company DNA/Archive/WM _ Company Overview.docx` | [Identity Core](../company/doctrine-identity-core-april-26.md) |
 | `00 _ Company DNA/Archive/Who We Are A Mental Model for Waiz Media.docx` | [Identity Core](../company/doctrine-identity-core-april-26.md) |
 
+## Acquisition — setter daily workflow
+
+| Superseded | Use instead |
+|------------|-------------|
+| `docs/acquisition/sales/setter-daily-operations-playbook.md` (removed) | [Setter Daily Checklist](../acquisition/sales/setter-daily-checklist.md) |
+| Team Drive doc *Setter Daily Operations* (`1oY7B_gMe3oJ_QDhIaHBslcxzDEbc6qMsUr0SBQmkYv0`) | Republish from checklist when approved |
+
 ## Operations duplicates
 
 | Superseded source | Use instead |

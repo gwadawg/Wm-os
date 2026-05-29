@@ -1,11 +1,11 @@
 workflow: linkedin-lo-outreach
 version: 1
 status: draft
-last_updated: 2026-05-21
+last_updated: 2026-05-29
 
 owners:
-  setter: Pedro / VA
-  founder_dm: Gabriel
+  setter: Pedro / VA  # outreach only — no LinkedIn replies (see process.md)
+  founder_dm: Gabriel  # all LI replies + ghost + book
 
 triggers:
   - linkedin dm

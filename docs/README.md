@@ -20,7 +20,7 @@ Edit files in `docs/`, save, then **Commit** and **Push** in GitHub Desktop (or 
 | Role | Load first |
 |------|------------|
 | Anyone / AI | [Approved Operating Spine](SPINE.md) → [Company](company/README.md) |
-| Setter | [Sales Operating Hub](acquisition/sales/README.md) — intro qualify through show rate; pre-call videos: [objection video assets](acquisition/marketing/pre-call-objection-videos.md) |
+| Setter | [Sales Operating Hub](acquisition/sales/README.md) — intro qualify, show rate, [demo confirmation script](acquisition/sales/script-demo-appointment-confirmation.md); pre-call videos: [objection video assets](acquisition/marketing/pre-call-objection-videos.md) |
 | Closer | [Sales Operating Hub](acquisition/sales/README.md) — discovery, demo, [Objection Hub](acquisition/sales/objection-handling-hub.md), [pre-call videos](acquisition/marketing/pre-call-objection-videos.md) |
 | Client success | [Fulfillment Operating System](client-fulfillment/fulfillment-operating-system.md) → [Client success hub](client-fulfillment/client-success/README.md) |
 | Media buyer | [Fulfillment OS](client-fulfillment/fulfillment-operating-system.md), [Media buying](client-fulfillment/media-buying/README.md), [Client marketing](client-fulfillment/client-marketing/README.md) |

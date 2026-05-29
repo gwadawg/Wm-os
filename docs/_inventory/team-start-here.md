@@ -3,7 +3,7 @@ title: Start Here — Waiz Team SOPs
 domain: company
 owner: operations
 status: active
-last_updated: 2026-05-21
+last_updated: 2026-05-29
 review_cycle: monthly
 team_publish: true
 team_folder: start_here
@@ -39,7 +39,7 @@ All roles. Use your role folder first, then Company Basics for shared context.
 
 ### 2. Essential docs by role
 
-**Setters:** Setter Daily Operations, Intro Call Qualification, No Shows And Show Rate.
+**Setters:** Setter Daily Checklist, Intro Call Script, Intro Call Qualification, Demo Appointment Confirmation Script, No Shows And Show Rate.
 
 **Closers:** Discovery Call Script, Demo Call Script, Objection Handling Hub.
 
@@ -60,7 +60,8 @@ Procedures are maintained centrally. When you see a conflict between this librar
 
 ## Related Docs
 
-- [Setter Daily Operations](../acquisition/sales/setter-daily-operations-playbook.md)
+- [Setter Daily Checklist](../acquisition/sales/setter-daily-checklist.md)
+- [Demo Appointment Confirmation Script](../acquisition/sales/script-demo-appointment-confirmation.md)
 - [Discovery Call Script](../acquisition/sales/discovery-call-script-2026.md)
 - [Constraint Troubleshooting](../client-fulfillment/client-success/constraint-troubleshooting-sop.md)
 - [Identity Core](../company/doctrine-identity-core-april-26.md)

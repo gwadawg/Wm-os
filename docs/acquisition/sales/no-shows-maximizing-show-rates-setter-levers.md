@@ -91,6 +91,8 @@ Regardless of if the person is booking an intro or not (1-call or 2-call process
 
 Manual confirmation over the phone has been shown to increase show rate by 30%+ so this is one of the highest leverage things you can do.
 
+**Word-for-word demo confirmations (morning-of + 24–48hr):** [Demo Appointment Confirmation Script](script-demo-appointment-confirmation.md) — double tie-down, calendar accept, pre-call video watch commitment, SMS backup, CRM notes.
+
 ### When Connecting With Them Over The Phone:
 ## Always double tie down on their time
 ### "So you're confirmed for Tuesday at 2pm, you'll be there right?"
@@ -99,7 +101,7 @@ Manual confirmation over the phone has been shown to increase show rate by 30%+ 
 "Actually, I've got a slot that just opened up tomorrow morning at 10am, would that work better?"
 
 ## Send sales assets to build trust pre-call
-### Pre-call video assets (canonical URLs + objection map): [Pre-Call Objection Video Assets](../marketing/pre-call-objection-videos.md) — use **prospect_page_url** from the index; default sequence 1→2→3 or jump-send per quick-send table
+### Pre-call video assets (canonical URLs + objection map): [Pre-Call Objection Video Assets](../marketing/pre-call-objection-videos.md) — use **prospect_page_url** from the index; default sequence 1→2→3 or jump-send per quick-send table; tie-down language in [demo confirmation script](script-demo-appointment-confirmation.md#4--pre-call-content-tie-down)
 ### Case studies, testimonials, anything that builds credibility
 ### Conduct mini pre-pitch (covered in "Transitioning to Demo" video)
 ## 24-Hour Unresponsive Protocol

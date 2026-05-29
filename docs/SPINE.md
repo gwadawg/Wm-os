@@ -3,7 +3,7 @@ title: Approved Operating Spine
 domain: company
 owner: operations
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-05-29
 review_cycle: monthly
 ---
 
@@ -22,13 +22,13 @@ These canonical docs are **`status: active`** — safe for team execution and AI
 | Stage | Owner | Active doc |
 |-------|-------|------------|
 | Intelligence / positioning | Sales leadership | [WM Sales Intelligence Bible](acquisition/intelligence/wm-sales-intelligence-bible.md) |
-| Intro / qualify | Setter | [Intro Call Qualification Framework](acquisition/sales/intro-call-qualification-framework.md), [Intro Call Basic Script](acquisition/sales/script-intro-call-basic.md) |
+| Intro / qualify | Setter | [Intro Call Qualification Framework](acquisition/sales/intro-call-qualification-framework.md), [Intro Call Script](acquisition/sales/script-intro-call-basic.md) |
 | Disqualify / financial fit | Setter | [Disqualifying And Financial Qualification](acquisition/sales/disqualifying-financial-qualification.md) |
-| Show rate | Setter | [No Shows And Maximizing Show Rates](acquisition/sales/no-shows-maximizing-show-rates-setter-levers.md) |
+| Show rate / demo confirm | Setter | [No Shows And Maximizing Show Rates](acquisition/sales/no-shows-maximizing-show-rates-setter-levers.md); word-for-word confirm + pre-call watch: [Demo Appointment Confirmation Script](acquisition/sales/script-demo-appointment-confirmation.md) (`draft`) |
 | Discovery | Closer | [Discovery Call Script](acquisition/sales/discovery-call-script-2026.md) |
 | Demo / close | Closer | [Demo Call Script](acquisition/sales/script-demo-call.md) |
 | Objections | Closer / setter | [Objection Handling Hub](acquisition/sales/objection-handling-hub.md) |
-| Setter admin | Setter | [Setter Daily Operations Playbook](acquisition/sales/setter-daily-operations-playbook.md) |
+| Setter daily workflow | Setter | [Setter Daily Checklist](acquisition/sales/setter-daily-checklist.md) |
 | LinkedIn outbound | Setter → founder DM | [LinkedIn manifest](acquisition/outbound/linkedin/manifest.yaml) (`draft` — process + copy-angles) |
 
 Pricing and deal structure: founder-only per money model. Boot Camp downsell when not DFY-qualified.

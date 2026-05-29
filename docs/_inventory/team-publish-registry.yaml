@@ -55,15 +55,15 @@ entries:
   publish_status: active
   team_role: setter
   last_published: '2026-05-21'
-- repo_path: docs/acquisition/sales/setter-daily-operations-playbook.md
-  team_title: Setter Daily Operations
+- repo_path: docs/acquisition/sales/script-demo-appointment-confirmation.md
+  team_title: Demo Appointment Confirmation Script
   drive_folder: setters
-  google_doc_id: 1oY7B_gMe3oJ_QDhIaHBslcxzDEbc6qMsUr0SBQmkYv0
-  publish_status: active
+  publish_status: pending
   team_role: setter
-  last_published: '2026-05-27'
+  notes: Repo-native script v1.0 (2026-05-29). Publish after status active + team draft approved.
 - repo_path: docs/acquisition/sales/setter-daily-checklist.md
   team_title: Setter Daily Checklist
+  notes: Supersedes former Setter Daily Operations Playbook (repo file removed 2026-05-29; Drive doc 1oY7B_gMe3oJ_QDhIaHBslcxzDEbc6qMsUr0SBQmkYv0 — archive or replace on next publish)
   drive_folder: setters
   google_doc_id: 1NhFujNmuR2Q9lQbvxSBsjhFpWelfJBpafp8GpzOFTbg
   publish_status: active

@@ -39,7 +39,7 @@ Use this page before creating, moving, or converting any Waiz Media OS document.
 | Doctrine | `doctrine-{topic}.md` | `doctrine-identity-core-april-26.md` |
 | Overview | `overview-{topic}.md` | `overview-money-model-april-26.md` |
 | SOP | `{workflow}-sop.md` | `discovery-call-sop.md` |
-| Playbook | `{topic}-playbook.md` | `setter-daily-operations-playbook.md` |
+| Playbook / daily checklist | `{topic}-playbook.md` or `{role}-daily-checklist.md` | `setter-daily-checklist.md` |
 | Script | `script-{call}.md` | `script-demo-call.md` |
 | KPI | `{metric}-kpi.md` | `setter-show-rate-kpi.md` |
 | Automation | `{system}-automation-spec.md` | `wm-ai-bot-automation-spec.md` |

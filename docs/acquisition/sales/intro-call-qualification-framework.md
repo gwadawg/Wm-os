@@ -3,7 +3,7 @@ title: Intro Call Qualification Framework
 domain: acquisition
 owner: setter
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-05-29
 review_cycle: weekly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Intro Call Qualification Framework.docx
 artifact_type: sop
@@ -18,6 +18,8 @@ Framework for Pedro (setter) intro calls: qualify, book demo, or route to Boot C
 ## Scope
 
 Stage 1 intro call per money model routing.
+
+**Operational qualifying questions** (license, role, product focus, lead gen, production, timeline) live in [Intro Call Script](script-intro-call-basic.md#stage-3--qualifying-questions). This doc owns **FUN**, motivators, demo framing, and routing — not word-for-word intro dialogue.
 
 ## Owner
 
@@ -102,20 +104,20 @@ The more often you hard qualify, the more you introduce resistance and friction.
 
 Use it as a last resort — not a default step.
 
-Script: "Our average client makes an additional $[X] in their first 12 months working with us. They typically invest $[Y]. Does that range make sense for where you're at?"
+**When they demand a number on the intro** — use the [Intro Call Script ballpark flow](script-intro-call-basic.md#if-they-push-price--what-does-it-cost): **wide** approved **[LOW]–[HIGH]** from the live pricing sheet, explain that fit depends on how fast they want to move and how large the build is, then ask if that ballpark works. One pass, then move on.
 
-Always give the high end of your range — not the low end. If you give a range, they'll only hear the lowest number.
+Script (return context — optional after ballpark): "Our average client makes an additional $[X] in their first 12 months working with us. They typically invest $[Y]. Does that range make sense for where you're at?"
 
-Contrast the investment with the return — make the number easier to contextualize.
+Do **not** use a tight range (e.g. "$900 to $2,100") — they anchor low. The intro ballpark is intentionally **wide** for fit-check only, not a quote.
 
 Give the answer and move on — do not explain ROI in detail, do not go down a rabbit hole.
 
 ### 🚨  What NOT to Do
-Never give a range like "$900 to $2,100" — they hear $900 and anchor there.
+Never quote exact package price, line items, or guarantees on the intro.
 
 Never over-explain cost-per-acquisition or ROI math on this call.
 
-Prepare a default high-end answer in advance and deliver it confidently.
+Use only founder-approved **[LOW]** / **[HIGH]** from the pricing sheet — do not improvise.
 
 ## U — Urgency
 Are they looking to solve this in the next couple of weeks? If they're not ready to move, they're not ready for a Demo.
@@ -125,7 +127,7 @@ Are they looking to solve this in the next couple of weeks? If they're not ready
 ## Ready to solve this within weeks
 ## Proceed — book the Demo
 ## Vague or non-committal on timeline
-Probe: ask why. Use Fuel questions (see Discovery Blueprint).
+Probe: ask why (timeline and blockers on intro — see [Intro Call Script — Stage 3](script-intro-call-basic.md#6--timeline-and-blockers)).
 
 ## Clearly not ready to act soon
 Do not book Demo. Book a 15-min check-in 4 weeks out. Send resources in the meantime.
@@ -213,11 +215,14 @@ These are the five most common mistakes. Each one either kills show rates or was
 ## Trying to close or pitch the solution
 You're not there yet. You're selling the Demo, not the service. Pitching here burns trust and skips the process.
 
-### Going too deep on Bridges (past attempts)
-Don't handle objections on this call. Note them. Save reframes and proof for the Demo where they land hardest.
+### Going too deep on past attempts or objections
+Don't run full discovery (Hell/Bridges/Heaven/Fuel) on the intro. Note what they tried; save reframes and proof for the Demo where they land hardest.
 
 ## Over-explaining ROI or pricing
 Rabbit holes stall the call and invite price anchoring. Have a default answer prepared. Deliver it and move on.
+
+## Pitching on command when they ask "what do you do?"
+Use [Flip the Frame — company description](script-factory/flip-the-frame-company-description.md): Framework 1 (reclaim frame) or Framework 2 (pain → front end → relevance question), then discovery quartet. Do not feature-dump or qualify yourself to them.
 
 ## Not framing the next call properly
 Without the consultation frame, prospects show up defensive. The frame is what creates an open, engaged Demo conversation.
@@ -273,9 +278,12 @@ That handoff is the job. Everything on the Intro Call is in service of making th
 
 ## Related Docs
 
+- [Intro Call Script](script-intro-call-basic.md) — word-for-word intro, boundaries, seven-stage checklist
+- [Demo Appointment Confirmation Script](script-demo-appointment-confirmation.md) — after demo is booked; morning-of / 24–48hr confirm + pre-call watch tie-down
 - [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md)
 - [Identity Core](../../company/doctrine-identity-core-april-26.md)
 - [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md)
+- [Sales Discovery Framework (Hell, Bridges, Heaven, Fuel)](sales-discovery-framework-hell-bridges-heaven-fuel.md) — deeper discovery on demo, not intro
 
 ## Open Questions
 

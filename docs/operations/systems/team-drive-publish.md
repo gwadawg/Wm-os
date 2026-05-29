@@ -129,10 +129,10 @@ Waiz Team SOPs/
 ```bash
 # Credentials load from config/team-publish.local.yaml automatically, or:
 # export GOOGLE_APPLICATION_CREDENTIALS=path/to/service-account.json
-python scripts/team-doc-prepare.py docs/acquisition/sales/setter-daily-operations-playbook.md
-# Edit docs/team-drafts/setter-daily-operations-playbook.team.md
-python scripts/team-doc-approve.py docs/team-drafts/setter-daily-operations-playbook.team.md
-python scripts/publish-team-doc.py docs/acquisition/sales/setter-daily-operations-playbook.md
+python scripts/team-doc-prepare.py docs/acquisition/sales/setter-daily-checklist.md
+# Edit docs/team-drafts/setter-daily-checklist.team.md
+python scripts/team-doc-approve.py docs/team-drafts/setter-daily-checklist.team.md
+python scripts/publish-team-doc.py docs/acquisition/sales/setter-daily-checklist.md
 ```
 
 ### Publish all SPINE-active registry entries (missing or stale doc id)

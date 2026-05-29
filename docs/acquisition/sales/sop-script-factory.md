@@ -3,7 +3,7 @@ title: Script Factory SOP
 domain: acquisition
 owner: sales-leadership
 status: draft
-last_updated: 2026-05-26
+last_updated: 2026-05-29
 review_cycle: monthly
 artifact_type: sop
 ---
@@ -49,6 +49,7 @@ See [domain owners](../../_inventory/domain-owners.md): **sales-leadership**.
    - Include examples of current failure language and desired replacement behavior.
 2. **Draft v0**
    - Build script using current positioning and qualification rules.
+   - Apply reusable patterns from [Script Factory building blocks](script-factory/README.md) when relevant (e.g. [Flip the Frame — company description](script-factory/flip-the-frame-company-description.md)).
    - Keep it stage-specific and avoid cross-stage bloat.
 3. **QA review**
    - Check for clarity, compliance-safe phrasing, objection handling quality, and role fit (setter vs closer).
@@ -119,9 +120,13 @@ See [domain owners](../../_inventory/domain-owners.md): **sales-leadership**.
 
 ### Reference (used during execution)
 
+- [Script Factory — building blocks](script-factory/README.md) - reusable frameworks (company description, future patterns).
+- [Flip the Frame — company description](script-factory/flip-the-frame-company-description.md) - Framework 1; reclaim frame.
+- [Intro ICP tracks](script-factory/intro-icp-tracks.md) - “who we are” + demo pre-pitch (referral / marketing-system / forward→reverse).
 - [Sales Advice Intake SOP](sop-sales-advice-intake.md) - intake and routing logic for script requests.
 - [Sales Script Version Change Log](sales-script-version-change-log.md) - required record of script version decisions and outcomes.
-- [Intro Call Basic Script](script-intro-call-basic.md) - current intro baseline.
+- [Intro Call Script](script-intro-call-basic.md) - current intro baseline (`v2.0`).
+- [Demo Appointment Confirmation Script](script-demo-appointment-confirmation.md) - setter demo confirm + pre-call video tie-down (`v1.0`, `draft`).
 - [Discovery Call Script](discovery-call-script-2026.md) - current discovery baseline.
 - [Demo Call Script](script-demo-call.md) - current demo baseline.
 - [Objection Handling Hub](objection-handling-hub.md) - objection handling references.
