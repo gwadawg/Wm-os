@@ -7,7 +7,7 @@ This repository is the Waiz Media operating system for future AI use. Treat it a
 1. Start in `docs/README.md` to understand the repo map.
 2. Read `docs/SOURCE-OF-TRUTH.md` and `docs/_inventory/domain-owners.md` before converting or editing canonical docs.
 3. Check `docs/_inventory/google-drive-inventory.md` before creating new documents from the raw Drive export.
-4. Prefer updating canonical Markdown docs under `docs/` instead of editing raw files in the **wm-os-archive** sibling repo.
+4. Prefer updating canonical Markdown docs under `docs/` instead of editing raw files in the **waiz-os-archive** sibling repo.
 5. Preserve one source of truth per process, policy, KPI, prompt, or playbook.
 6. Link related docs instead of duplicating large sections.
 7. Use clear metadata, stable lowercase kebab-case filenames, and operational headings.
@@ -16,7 +16,7 @@ This repository is the Waiz Media operating system for future AI use. Treat it a
 
 ## Important Paths
 
-- **Raw export (sibling repo):** `../wm-os-archive/waiz-drive-export/` — frozen Google Drive export. Clone [wm-os-archive](docs/_inventory/raw-export-archive.md) next to this repo. Do not treat as canonical operating docs.
+- **Raw export (sibling repo):** `../waiz-os-archive/waiz-drive-export/` — frozen Google Drive export. Clone [waiz-os-archive](docs/_inventory/raw-export-archive.md) next to this repo. Do not treat as canonical operating docs.
 - `docs/`: AI-ready company knowledge base and operating documentation.
 - `docs/_inventory/`: source inventory, classification map, duplicate candidates, and migration backlog.
 - `.claude/skills/`: repo-local skills — see [`.claude/skills/README.md`](.claude/skills/README.md) (waiz-business-os, pre-call-objection-videos, linkedin-lo-outreach, docx, xlsx).

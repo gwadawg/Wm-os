@@ -15,7 +15,7 @@ from lib.paths import drive_export_root
 _export = drive_export_root()
 if _export is None:
     raise SystemExit(
-        "Drive export not found. Clone wm-os-archive next to Wm-os "
+        "Drive export not found. Clone waiz-os-archive next to Wm-os "
         "(see docs/_inventory/raw-export-archive.md)."
     )
 BASE = _export / "Waiz Media OS/03 _ Client Fulfillment"

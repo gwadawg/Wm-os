@@ -288,7 +288,23 @@ def prepare_draft(
         "approved_at": None,
         "draft_path": str(draft_path.relative_to(repo_root())).replace("\\", "/"),
     }
+    if entry.get("team_doc_type"):
+        meta["team_doc_type"] = entry["team_doc_type"]
     save_meta(meta_path, meta)
+
+    if entry.get("team_doc_type") == "angle_library":
+        note = (
+            "<!-- angle_library: every ## Angle N — section must follow "
+            "docs/templates/wm-team-angle-unit-template.md -->\n\n"
+        )
+        if note not in md:
+            md = md.replace(
+                "<!-- Edit below.",
+                f"{note}<!-- Edit below.",
+                1,
+            )
+            draft_path.write_text(md, encoding="utf-8")
+
     return draft_path, meta_path
 
 

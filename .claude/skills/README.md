@@ -10,7 +10,7 @@ Skills in this folder are **repo-local**. Cursor and Claude Code discover them f
 | **SOP Builder** | [sop-builder/SKILL.md](sop-builder/SKILL.md) | Brainstorm or build a new SOP/playbook/guide from scratch — guides discovery, picks the right doc type, maps to the correct folder, drafts the file, and offers Drive publish |
 | **LinkedIn LO outreach** | [linkedin-lo-outreach/SKILL.md](linkedin-lo-outreach/SKILL.md) | LinkedIn DMs to reverse mortgage LOs — entry: [outbound/linkedin/manifest.yaml](../../docs/acquisition/outbound/linkedin/manifest.yaml) |
 | **Pre-call objection videos** | [pre-call-objection-videos/SKILL.md](pre-call-objection-videos/SKILL.md) | Prospect nurture videos before strategy/demo — [manifest](../../docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml) |
-| **DOCX** | [docx/SKILL.md](docx/SKILL.md) | Reading or converting `.docx` from **wm-os-archive** (`waiz-drive-export/`) |
+| **DOCX** | [docx/SKILL.md](docx/SKILL.md) | Reading or converting `.docx` from **waiz-os-archive** (`waiz-drive-export/`) |
 | **XLSX** | [xlsx/SKILL.md](xlsx/SKILL.md) | Sales trackers, scorecards, spreadsheets — summarize in Markdown, keep raw file |
 | **Team doc translate** | [team-doc-translate/SKILL.md](team-doc-translate/SKILL.md) | Humanize repo SOPs into design-focused team copy before publish |
 | **Team doc publish** | [team-doc-publish/SKILL.md](team-doc-publish/SKILL.md) | One-way publish of approved `docs/` to team Google Drive (layperson-readable) |

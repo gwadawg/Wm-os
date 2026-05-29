@@ -589,7 +589,7 @@ Questions or benchmark updates: escalate to Gabriel Goertzen (Founder) before mo
 
 ## Related Docs
 
-- None yet.
+- [Client Performance Diagnostic Rulebook](../../kpis/client-performance-diagnostic-rulebook.md) — how to apply these benchmarks across time windows and account states (WATCH, RECOVERING, cross-client rules)
 
 ## Open Questions
 

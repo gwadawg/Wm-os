@@ -1,6 +1,6 @@
 .DS_Store
 
-# Raw Drive export — lives in sibling repo wm-os-archive (see docs/_inventory/raw-export-archive.md)
+# Raw Drive export — lives in sibling repo waiz-os-archive (see docs/_inventory/raw-export-archive.md)
 source-docs/
 
 # Large media — keep in Drive/local only (GitHub 100MB file limit)

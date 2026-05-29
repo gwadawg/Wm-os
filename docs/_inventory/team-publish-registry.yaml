@@ -149,7 +149,7 @@ entries:
   publish_pipeline: template
   team_draft_path: docs/team-drafts/copy-angles.team.md
   template_based: true
-  last_published: '2026-05-27'
+  last_published: '2026-05-28'
 - repo_path: docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md
   team_title: RM Ads — High-Quality Lead Playbook
   drive_folder: client_success

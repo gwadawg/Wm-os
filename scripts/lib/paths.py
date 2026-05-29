@@ -10,10 +10,12 @@ def repo_root() -> Path:
 
 
 def drive_export_root() -> Path | None:
-    """Root of frozen Drive export (sibling wm-os-archive or legacy source-docs/)."""
-    sibling = repo_root().parent / "wm-os-archive" / "waiz-drive-export"
-    if sibling.is_dir():
-        return sibling
+    """Root of frozen Drive export (sibling waiz-os-archive or legacy source-docs/)."""
+    parent = repo_root().parent
+    for name in ("waiz-os-archive", "wm-os-archive"):
+        sibling = parent / name / "waiz-drive-export"
+        if sibling.is_dir():
+            return sibling
     legacy = repo_root() / "source-docs" / "waiz-drive-export"
     if legacy.is_dir():
         return legacy

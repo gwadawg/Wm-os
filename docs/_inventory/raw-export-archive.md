@@ -16,7 +16,7 @@ The frozen Google Drive export no longer lives in `Wm-os`. It moved to a sibling
 ```text
 ~/Documents/GitHub/
 ├── Wm-os/                 ← canonical docs, scripts, skills
-└── wm-os-archive/         ← raw export only (196MB+)
+└── waiz-os-archive/       ← raw export only (196MB+)
     └── waiz-drive-export/
         └── Waiz Media OS/
 ```
@@ -25,16 +25,16 @@ The frozen Google Drive export no longer lives in `Wm-os`. It moved to a sibling
 
 | Historical path in frontmatter | Current path on disk |
 |-------------------------------|----------------------|
-| `source-docs/waiz-drive-export/...` | `../wm-os-archive/waiz-drive-export/...` (relative to `Wm-os` root) |
+| `source-docs/waiz-drive-export/...` | `../waiz-os-archive/waiz-drive-export/...` (relative to `Wm-os` root) |
 
 ## Setup
 
 ```bash
 cd ~/Documents/GitHub
-git clone git@github.com:gwadawg/wm-os-archive.git wm-os-archive
+git clone git@github.com:gwadawg/waiz-os-archive.git waiz-os-archive
 ```
 
-Create the GitHub repo `wm-os-archive` (private recommended), then push from the local folder at `~/Documents/GitHub/wm-os-archive` (already initialized with the export).
+GitHub: [gwadawg/waiz-os-archive](https://github.com/gwadawg/waiz-os-archive) (private recommended). Clone next to `Wm-os` under `~/Documents/GitHub/`.
 
 If the archive repo is not cloned, migration and `.docx` conversion workflows cannot read raw sources. Team publish from approved `docs/` is unaffected.
 
@@ -42,4 +42,4 @@ If the archive repo is not cloned, migration and `.docx` conversion workflows ca
 
 - [Google Drive Inventory](google-drive-inventory.md)
 - [Source Of Truth Rules](../SOURCE-OF-TRUTH.md)
-- Archive repo README: `../wm-os-archive/README.md` (sibling clone)
+- Archive repo README: [waiz-os-archive](https://github.com/gwadawg/waiz-os-archive)
