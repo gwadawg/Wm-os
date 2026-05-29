@@ -100,10 +100,11 @@ entries:
 - repo_path: docs/client-fulfillment/client-success/fulfillment-constraint-diagnosis-kpi-standards.md
   team_title: Fulfillment KPI Standards
   drive_folder: client_success
-  google_doc_id: 17lHMbyMOpdwjsa-3uje6UyqNJl-TVUTGGTYpauugaC4
+  google_doc_id: 1CsZYUdFcDRs6CbBLFYcauFchjZ1sFbAK5LZ6QPfUOm4
   publish_status: active
   team_role: client_success
-  last_published: '2026-05-21'
+  last_published: '2026-05-28'
+  template_based: true
 - repo_path: docs/client-fulfillment/crm-architecture/crm-infrastructure.md
   team_title: CRM Infrastructure Overview
   drive_folder: client_success
@@ -159,7 +160,7 @@ entries:
   publish_pipeline: template
   team_draft_path: docs/team-drafts/rm-high-quality-lead-acquisition.team.md
   template_based: true
-  last_published: '2026-05-27'
+  last_published: '2026-05-28'
 - repo_path: docs/client-fulfillment/call-center/script-appointment-setting-call.md
   team_title: Call Center — Appointment-Setting Call Script
   drive_folder: client_success

@@ -317,8 +317,9 @@ Full condition table: [standards doc §5](../client-fulfillment/client-success/f
 
 | Source | Role |
 |--------|------|
-| [Fulfillment Constraint Diagnosis And KPI Standards](../client-fulfillment/client-success/fulfillment-constraint-diagnosis-kpi-standards.md) | **Canonical tiers** for layers and CPConv ($80–149 At, etc.) |
-| [RM Client KPI Check](../operations/systems/rm-client-kpi-check.md) | **Operational workflow** (Goldilocks steps, ClickUp) — if tiers conflict with standards, **standards win** until founder updates |
+| [Client KPI Judgment Standard](client-kpi-judgment-standard.md) | **Canonical authority (pending founder sign-off)** — CPConv-anchored, relational bands and override rules; supersedes the isolated-tier method below |
+| [Fulfillment Constraint Diagnosis And KPI Standards](../client-fulfillment/client-success/fulfillment-constraint-diagnosis-kpi-standards.md) | **Legacy tiers + lever library.** Tier numbers superseded by the judgment standard; solutions/levers still used |
+| [RM Client KPI Check](../operations/systems/rm-client-kpi-check.md) | **Operational workflow** (Goldilocks steps, ClickUp) — tier tables superseded by the judgment standard |
 | [Constraint Troubleshooting SOP](../client-fulfillment/client-success/constraint-troubleshooting-sop.md) | **Playbook actions** after label is set |
 
 **Open reconciliation (founder to confirm):**
