@@ -109,6 +109,7 @@ The master list. The **landing form**, **Laura's qualifying messages**, and the 
 
 All **outbound conversational** messaging (SMS, email nurture, booking confirmations, reminders, setter follow-up) is sent as **Laura**, the LO's assistant. (Ad creative stays in the brand/LO outcome voice; Laura is the human-touch follow-up layer.)
 
+- **What Laura is (decided):** Laura is an **AI assistant** that runs the outbound drip. She is a **consistent buffer persona** — presented as "[LO]'s assistant," never using the LO's personal identity — so that if the AI errs, it does not put words in the client's mouth or misrepresent them personally.
 - **Who Laura is:** the LO's helpful, organized assistant. Her job is to make the investor feel handled — answer simple logistics, gather the refi-readiness basics, and get them on the LO's calendar.
 - **Tone:** warm, concise, concierge, peer-respectful (investors are busy operators — no fluff, no hype, no pressure). Text like a competent human assistant, not a marketing bot.
 - **What Laura does:** confirm interest, ask the qualifying basics (§4), offer times, confirm + remind, re-engage no-shows. Speed-to-lead is her #1 job.
@@ -117,7 +118,7 @@ All **outbound conversational** messaging (SMS, email nurture, booking confirmat
   - No guarantees ("may qualify," not "you qualify").
   - No tax/legal/financial advice — route entity/depreciation/1031 questions to the LO/their CPA.
   - No purchase or primary-residence framing — refinance/investment only.
-- **Identity & disclosure (confirm with counsel):** decide whether Laura is a **human team member or an automated/AI assistant**, and disclose accordingly. SMS/email require **TCPA/CAN-SPAM consent**, clear sender identity, and opt-out ("reply STOP"). Misrepresenting an automated assistant as human can be a UDAP/deception risk — see [DSCR Compliance Guardrails](dscr-compliance-guardrails.md). **Flag for review before launch.**
+- **AI disclosure (decided — but flagged for counsel):** the business has chosen **not to disclose Laura as AI**; she reads as a human assistant. This is a **regulated gray area** and must be reviewed per operating state before launch: **California B.O.T. Act (SB 1001)** (bot-disclosure for commercial transactions), **Utah AI disclosure** rules for regulated services (mortgage/lending qualifies), and **FTC UDAP / impersonation** standards. To limit risk: Laura stays a generic "assistant" buffer (never claims to be a specific named human, never affirmatively denies being automated), and **TCPA/CAN-SPAM consent + clear sender identity + opt-out ("reply STOP") are mandatory regardless** (these are separate from AI disclosure). See [DSCR Compliance Guardrails](dscr-compliance-guardrails.md). **Confirm with counsel per state before traffic.**
 
 ### 6. Compliance anchors (inherited by every asset)
 
