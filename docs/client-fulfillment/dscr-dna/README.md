@@ -15,6 +15,8 @@ DSCR product, ICP, marketing doctrine, and compliance for **client** campaigns a
 
 This pod was built by cloning the [Reverse Mortgage DNA](../reverse-mortgage-dna/README.md) pod per the [Product Launch Playbook](../../prompts/product-launch-playbook.md). **DSCR is the near-inverse of RM:** the borrower is a real-estate *investor* (not a retiree), and DSCR is typically **business-purpose lending** with a different compliance regime than consumer HUD/FHA. Do not assume RM framing carries over — see each doc.
 
+**Scope — refinance only.** The Waiz DSCR line covers **refinance transactions only** (rate/term and cash-out refinances of investment property the borrower already owns). **No purchase financing or purchase angles.** All docs and downstream assets must assume the investor already owns the property.
+
 ## Canonical docs
 
 | Doc | Status |
@@ -24,6 +26,7 @@ This pod was built by cloning the [Reverse Mortgage DNA](../reverse-mortgage-dna
 | [Doctrine DSCR Marketing](doctrine-dscr-marketing.md) | `draft` |
 | [Intelligence ICP DSCR](intelligence-icp-dscr.md) | `draft` |
 | [Intelligence DSCR Product](intelligence-dscr-product.md) | `draft` |
+| [Ad Copy And Angle Library (DSCR)](ad-copy-angle-library-dscr.md) | `draft` |
 
 ## Status note
 

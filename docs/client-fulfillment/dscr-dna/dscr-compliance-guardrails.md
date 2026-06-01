@@ -64,6 +64,7 @@ Any DSCR copy draft or review.
 - The exemption is **nuanced**, not a checkbox. Reg Z applies a **5-factor business-vs-consumer purpose test**. Lenders typically require a signed **Certification of Business Purpose** and **Occupancy Certification** at closing.
 - **Never** position or imply a loan is business-purpose to dodge consumer protections when the real use is personal — misclassification is illegal and can carry **criminal penalties**.
 - **Copy rule:** marketing must speak to **investment / income-producing property** use. Avoid any framing that markets DSCR for a primary residence or personal/household use.
+- **Scope rule (Waiz line):** **refinance transactions only** — rate/term and cash-out refinances of property the investor already owns. Do **not** write purchase/acquisition angles.
 
 ### 2. Consumer-exempt does NOT mean rule-free
 
