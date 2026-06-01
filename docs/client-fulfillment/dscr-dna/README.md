@@ -28,6 +28,16 @@ This pod was built by cloning the [Reverse Mortgage DNA](../reverse-mortgage-dna
 | [Intelligence DSCR Product](intelligence-dscr-product.md) | `draft` |
 | [Ad Copy And Angle Library (DSCR)](ad-copy-angle-library-dscr.md) | `draft` |
 
+## Campaign assets (ads + funnel)
+
+Operational ad/funnel assets, kept in-pod for a self-contained DSCR line (deviates from the playbook's default `client-marketing/` + `media-buying/` folder map — relocate later if preferred).
+
+| Doc | Status |
+|-----|--------|
+| [DSCR Ads Playbook](dscr-ads-playbook.md) | `draft` |
+| [MB DSCR Ad Copy Standards](mb-dscr-ad-copy-standards.md) | `draft` |
+| [DSCR Funnel Setup SOP](dscr-funnel-setup-sop.md) | `draft` |
+
 ## Status note
 
 Every doc in this pod is `status: draft` pending owner review. Product mechanics (rates, LTV, DSCR tiers, credit floors) are **illustrative 2026 market ranges from public sources — not Waiz or client pricing**, and must be reconciled against the approved pricing sheet and active lender programs before client use. The compliance doc requires **licensed-counsel / compliance review** before any copy ships.
