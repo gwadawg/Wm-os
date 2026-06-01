@@ -13,8 +13,8 @@ cloned_from: docs/client-fulfillment/media-buying/ad-copy-angle-library-rm.md
 
 > **DRAFT — REFINANCE ONLY.** The Waiz DSCR line covers **refinance transactions only** (rate/term +
 > cash-out) on rentals the investor already owns. **No purchase angles.** Every angle here must pass
-> [DSCR Compliance Guardrails](dscr-compliance-guardrails.md). **No invented pricing** — all rate / LTV /
-> payment figures are bracketed placeholders to be filled from the approved pricing sheet, not asserted.
+> [DSCR Compliance Guardrails](dscr-compliance-guardrails.md). **No pricing or specific figures**
+> (rates, LTV, payments, amounts) appear in any copy — keep it outcome-focused and qualitative.
 
 ## Purpose
 
@@ -30,7 +30,7 @@ New client creative build, creative refresh, constraint layer 1 fixes.
 
 ## Inputs
 
-- Client offer + approved pricing sheet
+- Client offer + voice/brand notes
 - [DSCR Compliance Guardrails](dscr-compliance-guardrails.md)
 - Approved personas + objections: [Intelligence ICP DSCR](intelligence-icp-dscr.md)
 - Product mechanics: [Intelligence DSCR Product](intelligence-dscr-product.md)
@@ -52,8 +52,8 @@ Read [Doctrine DSCR Marketing](doctrine-dscr-marketing.md) first. Each angle bel
 psychological signal to the algorithm and maps to one approved persona. Copy is operator-to-operator
 (numbers-literate, peer tone) — never the senior/relief tone used for RM.
 
-**Placeholder key (fill from the approved pricing sheet — never invent):** `[RATE]`, `[MAX_LTV]`,
-`[MIN_DSCR]`, `[CLOSE_DAYS]`, `[STATE]`. If a number isn't confirmed, keep the copy qualitative.
+**No numbers in copy.** DSCR ads never quote rates, LTV, DSCR ratios, payments, close times, or amounts.
+Keep every variant qualitative and outcome-focused. The only allowed token is `[STATE]` for geo localization.
 
 **Standing disclosure (append where the client's licensing requires):** *Business-purpose investment
 financing. For investment (non-owner-occupied) property only. Not a commitment to lend; all loans subject
@@ -71,7 +71,7 @@ to underwriting and property qualification.*
 
 #### Angle 2: The "Trapped Equity" Angle  ·  Persona: Portfolio Scaler
 
-- **Primary Text:** You've got equity sitting in doors you already own — doing nothing. A DSCR cash-out refinance lets you pull it out (up to `[MAX_LTV]` LTV) and put it back to work, qualifying on the property's income instead of yours.
+- **Primary Text:** You've got equity sitting in doors you already own — doing nothing. A DSCR cash-out refinance lets you pull it out and put it back to work, qualifying on the property's income instead of yours.
 - **Headline:** Your Equity Is Just Sitting There. Put It to Work.
 - **Body:** Cash-out refinance on the property's cash flow. No income verification. See what you can pull out.
 
@@ -137,7 +137,7 @@ to underwriting and property qualification.*
 
 #### Angle 11: The "Portfolio Cash-Out" Angle  ·  Persona: Portfolio Scaler
 
-- **Primary Text:** You don't have to sell a door to free up capital. A DSCR cash-out refinance across the rentals you already own lets you unlock equity (up to `[MAX_LTV]` LTV) without a property-count ceiling — each property qualifies on its own income.
+- **Primary Text:** You don't have to sell a door to free up capital. A DSCR cash-out refinance across the rentals you already own lets you unlock equity without a property-count ceiling — each property qualifies on its own income.
 - **Headline:** Free Up Capital Without Selling a Single Door
 - **Body:** Cash-out refinance across your portfolio. No conventional cap. See what you can unlock.
 
@@ -172,7 +172,7 @@ DSCR refinance ads are **business-purpose**, but advertising still carries real 
 
 - **Refinance only.** No purchase/acquisition language. Assume the investor already owns the property.
 - **Business-purpose / investment property only.** Never primary-residence or personal-use framing.
-- **No invented pricing.** Fill `[RATE]`, `[MAX_LTV]`, `[MIN_DSCR]`, `[CLOSE_DAYS]` from the approved pricing sheet, framed as illustrative — or stay qualitative. No guaranteed rates or amounts.
+- **No pricing or numbers in copy.** Never quote rates, LTV, DSCR ratios, payments, close times, or amounts. Keep every variant qualitative and outcome-focused.
 - **No guarantees.** Use "may qualify," "could," "in many cases." Never "you qualify," "guaranteed approval," or a locked rate/timeline.
 - **Meta Special Ad Category.** U.S. mortgage ads still require the Financial Products & Services Special Ad Category (targeting restrictions; proof of authorization) even though the loan is business-purpose.
 - **Licensed states only.** Run only where the client is authorized to lend/broker for the relevant collateral; confirm `[STATE]` list per client.

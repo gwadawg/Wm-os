@@ -12,9 +12,9 @@ cloned_from: docs/client-fulfillment/media-buying/mb-rm-ad-copy-standards.md
 # MB DSCR Ad Copy Standards
 
 > **DRAFT — REFINANCE ONLY.** Quick-reference headlines + primary text for DSCR **refinance** Meta ads.
-> **No invented pricing** — every rate/LTV/payment/amount is a bracketed placeholder to fill from the
-> approved pricing sheet and frame as illustrative. Full angle development lives in the
-> [Ad Copy And Angle Library (DSCR)](ad-copy-angle-library-dscr.md); this is the media-buyer pick list.
+> **No pricing or specific figures** (rates, LTV, payments, amounts) appear in any variant — DSCR copy
+> never quotes numbers. Full angle development lives in the
+> [Ad Copy And Angle Library (DSCR)](ad-copy-angle-library-dscr.md); this is the copywriter/media-buyer pick list.
 
 ## Purpose
 
@@ -39,7 +39,7 @@ Writing or reviewing ad copy at the media-buyer level.
 ## Quality Bar
 
 - Align with [Identity Core](../../company/doctrine-identity-core-april-26.md) and [SOURCE-OF-TRUTH](../../SOURCE-OF-TRUTH.md).
-- Every variant passes [DSCR Compliance Guardrails](dscr-compliance-guardrails.md). Refinance only. No invented pricing.
+- Every variant passes [DSCR Compliance Guardrails](dscr-compliance-guardrails.md). Refinance only. No pricing/numbers in copy.
 
 ## Operating Content
 
@@ -75,17 +75,17 @@ Writing or reviewing ad copy at the media-buyer level.
 | LLC | Refinance your investment property into your LLC and qualify on its rent — built for how investors actually operate. | 1/5 |
 | FN | Own income-producing US property but have no US tax returns? A DSCR refinance can qualify on the property itself. Eligibility varies — see if yours fits. | 3/5 |
 
-> **Pricing placeholders.** When a variant needs a number (rate, LTV cap, monthly payment, cash-out amount),
-> insert `[RATE]`, `[MAX_LTV]`, `[PAYMENT]`, `[CASH_OUT]` and pull the approved figure at build time —
-> framed as illustrative ("in many cases," "as low as," not guaranteed). Never assert a number not on the pricing sheet.
+> **No numbers in copy.** DSCR ads do not quote rates, LTV caps, payments, or cash-out amounts. Keep
+> copy outcome-focused ("pull your equity out," "lower the payment") without asserting any figure.
 
 ### Compliance reminders (do not skip)
 
 - Refinance only — no purchase/acquisition copy.
 - Business-purpose / investment property — no primary-residence or personal-use framing.
+- No pricing or specific figures of any kind in copy.
 - No guarantees — "may qualify," "could," "in many cases."
 - No tax/legal advice — route depreciation/entity questions to a CPA/attorney.
-- Licensed states only; substantiate all proof.
+- Substantiate all proof.
 
 ### UTM Tracker
 
@@ -97,6 +97,5 @@ utm_source={{site_source_name}}&utm_medium={{adset.name}}&utm_campaign={{campaig
 
 - [Ad Copy And Angle Library (DSCR)](ad-copy-angle-library-dscr.md)
 - [DSCR Ads Playbook](dscr-ads-playbook.md)
-- [DSCR Funnel Setup SOP](dscr-funnel-setup-sop.md)
 - [DSCR Compliance Guardrails](dscr-compliance-guardrails.md)
 - RM analog: [MB RM Ad Copy Standards](../media-buying/mb-rm-ad-copy-standards.md)
