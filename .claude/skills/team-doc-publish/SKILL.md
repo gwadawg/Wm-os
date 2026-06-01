@@ -12,15 +12,15 @@ description: Publish canonical repo docs to team Google Drive as layperson-reada
 - **Never** sync Drive edits back into the repo.
 - **Never** treat `waiz-os-archive/waiz-drive-export/` or legacy Drive trees as publish sources.
 
-## Default pipeline: Google Doc template (matches Claude web layout)
+## Default pipeline: author → approve → faithful render
 
-1. **Prepare** — scaffold human draft from canonical markdown
-2. **Edit + approve** — operator-ready copy in `docs/team-drafts/`
-3. **Publish** — **Copy** [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit) as a new Google Doc, clear body, write content using the template’s native heading styles (blue left bar on H1/H2).
+1. **Author** — rewrite canonical into a team draft per [team-doc-author](../team-doc-author/SKILL.md), the [authoring contract](../../docs/templates/wm-team-draft-authoring-contract.md), and the doc's [profile](../../docs/templates/wm-team-doc-profiles.yaml). (`team-doc-prepare.py` is an optional rough scaffold only.)
+2. **Validate + approve** — `team-doc-approve.py --check-only` enforces the contract + profile thresholds; then approve.
+3. **Publish** — **Copy** [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit) as the styled base, then render the draft **faithfully**: cover + footer from frontmatter, body 1:1, hyperlinks everywhere (incl. tables). No auto-injected callouts/cover/footer — the Google Doc matches the draft exactly.
 
-Fallback order: template → DOCX (Pandoc) → API formatter.
+Fallback order: template (faithful) → DOCX (Pandoc) → API formatter.
 
-Pandoc/DOCX does **not** match Claude-on-web formatting as well as the template copy path.
+The faithful renderer is what makes the Google Doc match the draft; Pandoc/DOCX is a fallback only.
 
 **Requires:** Pandoc (`python scripts/setup-pandoc.py` or `brew install pandoc`), reference DOCX in repo, approved draft when `require_approved_draft: true` in config.
 

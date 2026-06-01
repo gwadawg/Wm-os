@@ -1,0 +1,133 @@
+# WM Team Doc Profiles
+#
+# Per-doc-type publish profiles. Keyed by `team_doc_type` (set in the publish
+# registry row and in each docs/team-drafts/<slug>.team.meta.yaml).
+#
+# Each profile = which authoring-contract elements are expected + acceptance
+# thresholds (derived from real good/bad WM docs) + good/bad exemplar doc IDs
+# surfaced to the team-doc-author skill as few-shot guidance.
+#
+# Adding a new kind of team doc = add a profile entry here. No code change.
+#
+# Consumed by:
+#   - scripts/lib/team_draft.py  load_profile() / validate_draft()
+#   - .claude/skills/team-doc-author/SKILL.md (few-shot exemplars + thresholds)
+#
+# Contract reference: docs/templates/wm-team-draft-authoring-contract.md
+
+default_profile: sop
+
+# Thresholds shared unless a profile overrides them.
+defaults: &defaults
+  require_h2_nesting: true       # reject all-H1 docs (BAD-1: 17 H1 / 0 H2)
+  min_chars_per_box: 250         # callout/paste/table box density floor (BAD-2: ~130)
+  max_links_per_section: 12      # de-dup / cap link-soup (BAD-1: 42 links)
+  lists_as_bullets: true         # lists must be bullets/numbered, not one-line boxes
+  max_north_star: 1              # single NORTH STAR, in Overview
+  single_footer: true            # footer comes from frontmatter only
+
+profiles:
+
+  sop:
+    label: Standard Operating Procedure
+    description: >
+      Process/how-to docs. Numbered H1 major sections, H2 subsections, short
+      scannable prose, bullets for steps, sparse principle callouts, anchor-text
+      links to related published docs.
+    thresholds:
+      <<: *defaults
+    contract:
+      expects: [overview, north_star, h1, h2, bullet, numbered, table, callout, link]
+      allows: [paste_box, label]
+      forbids: [cover_in_body, footer_in_body, bare_url]
+    examples:
+      good:
+        - id: "19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y"
+          name: WM Objection Categories
+          why: clean H1/H2 nesting, sparse callouts, real data tables, bullets
+      bad:
+        - id: "1NhFujNmuR2Q9lQbvxSBsjhFpWelfJBpafp8GpzOFTbg"
+          name: Setter Daily Checklist
+          why: 17 H1 / 0 H2, 42 links, 0 bullets (flat + link-soup)
+
+  reference:
+    label: Reference / Doctrine
+    description: >
+      Deep training/doctrine references. Numbered H1 sections, each opening with
+      one principle callout, then H2 subsections mixing short prose with real
+      multi-column data tables (mapping/contrast). Heavy table use is fine when
+      tables carry substantial content.
+    thresholds:
+      <<: *defaults
+      min_chars_per_box: 200
+    contract:
+      expects: [overview, north_star, h1, h2, table, callout, link]
+      allows: [bullet, numbered, label, paste_box]
+      forbids: [cover_in_body, footer_in_body, bare_url]
+    examples:
+      good:
+        - id: "1_3u9CvGiAbRGmBkrXE5izyn6IooCMLu5wuyu-MiMSfA"
+          name: WM Sales Objection Doctrine
+          why: 7 H1 / 16 H2, numbered sections, principle box per section + real data tables
+        - id: "19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y"
+          name: WM Objection Categories
+          why: balanced headings + sparse callouts + small data tables + bullets
+      bad:
+        - id: "1wkPbJfxOcL5rtceUhJdqXCB1-aG2zOttGqlUOxtglBI"
+          name: Setter Lead Messaging
+          why: 34 tiny tables (~130 chars each), 0 bullets (over-boxing)
+
+  playbook:
+    label: Playbook / Script Library (angle units)
+    description: >
+      Script/angle libraries. Repeating angle unit (Signal -> opener -> COPY &
+      PASTE -> Avoid). Paste boxes are expected and exempt from the box-density
+      floor. Enforces the angle unit skeleton (Pass 2 of the review checklist).
+    thresholds:
+      <<: *defaults
+      paste_box_exempt_density: true   # paste boxes may be short (ready-to-send copy)
+    contract:
+      expects: [overview, north_star, h1, h2, table, paste_box, callout, link, angle_unit]
+      allows: [bullet, numbered, label]
+      forbids: [cover_in_body, footer_in_body, bare_url]
+    angle_unit:
+      requires_per_angle: [signal, copy_paste, avoid]
+      angles_in_index_order: true
+    examples:
+      good:
+        - id: "1_3u9CvGiAbRGmBkrXE5izyn6IooCMLu5wuyu-MiMSfA"
+          name: WM Sales Objection Doctrine
+          why: consistent repeating structure, real tables, principle callouts
+      bad:
+        - id: "1wkPbJfxOcL5rtceUhJdqXCB1-aG2zOttGqlUOxtglBI"
+          name: Setter Lead Messaging
+          why: over-boxed snippets instead of clean angle units + bullets
+
+  checklist:
+    label: Operational Checklist
+    description: >
+      Short daily/operational checklists. Bullets or numbered items are the spine.
+      Paste boxes are NOT used. Links are anchor-text and tightly capped.
+    thresholds:
+      <<: *defaults
+      max_links_per_section: 6
+      min_chars_per_box: 200
+    contract:
+      expects: [overview, h1, h2, bullet, numbered, link]
+      allows: [callout, table, label]
+      forbids: [cover_in_body, footer_in_body, bare_url, paste_box]
+    examples:
+      good:
+        - id: "19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y"
+          name: WM Objection Categories
+          why: scannable bullets + H2 nesting (structure to emulate)
+      bad:
+        - id: "1NhFujNmuR2Q9lQbvxSBsjhFpWelfJBpafp8GpzOFTbg"
+          name: Setter Daily Checklist
+          why: 17 H1 / 0 H2, 42 links, 0 bullets (the exact anti-pattern)
+
+# Aliases: alternate team_doc_type values mapped to a profile above.
+aliases:
+  angle_library: playbook
+  doctrine: reference
+  script_library: playbook

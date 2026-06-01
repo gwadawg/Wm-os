@@ -37,6 +37,7 @@ from lib.registry import (  # noqa: E402
 from lib.team_doc_translator import format_role, translate  # noqa: E402
 from lib.team_draft import (  # noqa: E402
     blocks_for_publish,
+    draft_cover_footer,
     draft_paths_for_repo,
     is_approved,
     validate_draft,
@@ -130,6 +131,10 @@ def publish_entry_template(
         )
     ref_id = format_reference_doc_id(folder_cfg)
 
+    # Faithful render when an approved draft exists (cover/footer from frontmatter).
+    use_faithful = draft_path.is_file()
+    cover = draft_cover_footer(draft_path, entry) if use_faithful else {}
+
     doc_id = publish_from_template(
         blocks,
         folder_id=parent_id,
@@ -140,6 +145,11 @@ def publish_entry_template(
         template_based=bool(entry.get("template_based")),
         archive=archive,
         archive_folder_id=archive_id,
+        faithful=use_faithful,
+        cover_title=cover.get("cover_title"),
+        cover_subtitle=cover.get("cover_subtitle", ""),
+        cover_audience=cover.get("cover_audience", ""),
+        footer=cover.get("footer", ""),
     )
     update_entry_doc_id(
         registry, entry["repo_path"], doc_id, template_based=True

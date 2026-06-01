@@ -241,6 +241,78 @@ def _infer_callout(text: str) -> str:
     return "important"
 
 
+def _write_block(writer: "_DocWriter", block: Block, *, use_template_styles: bool) -> None:
+    """Render a single content block 1:1. Shared by faithful + legacy paths."""
+    if block.kind == "h1":
+        writer.append_heading(block.text, "HEADING_1", colored=not use_template_styles)
+    elif block.kind == "h2":
+        writer.append_heading(block.text, "HEADING_2", colored=not use_template_styles)
+    elif block.kind == "label":
+        writer.append_label(block.text)
+    elif block.kind == "callout":
+        label = CALLOUT_LABELS.get(block.callout_type or "important", "⚠️ IMPORTANT")
+        writer.append_callout_box(label, block.text, link_ranges=block.link_ranges)
+    elif block.kind == "template":
+        writer.append_template_box(block.text, link_ranges=block.link_ranges)
+    elif block.kind == "table" and block.table_headers and block.table_rows:
+        writer.append_data_table(
+            block.table_headers,
+            block.table_rows,
+            header_links=block.table_header_links,
+            row_links=block.table_row_links,
+        )
+    elif block.kind == "bullet":
+        if block.link_ranges:
+            writer.append_bullet(block.text, link_ranges=block.link_ranges)
+        elif block.link_url:
+            writer.append_bullet(
+                block.text, link_ranges=[(0, len(block.text), block.link_url)]
+            )
+        else:
+            writer.append_bullet(block.text)
+    elif block.kind == "numbered":
+        if block.link_ranges:
+            writer.append_bullet(block.text, link_ranges=block.link_ranges)
+        else:
+            writer.append_bullet(block.text)
+    elif block.kind == "paragraph":
+        if block.link_ranges:
+            writer.append_body_with_links(block.text, block.link_ranges)
+        else:
+            writer.append_body(block.text + "\n")
+
+
+def render_draft_faithfully(
+    docs,
+    doc_id: str,
+    blocks: list[Block],
+    *,
+    cover_title: str,
+    cover_brand: str = "WAIZ MEDIA",
+    cover_subtitle: str = "",
+    cover_audience: str = "",
+    footer: str = "",
+    use_template_styles: bool = True,
+) -> None:
+    """Render the team draft EXACTLY as authored.
+
+    No auto cover/footer, no injected callouts, no overview reshuffle. Cover and
+    footer come only from explicit arguments (sourced from draft frontmatter);
+    body comes only from `blocks`.
+    """
+    from .google_publish import clear_document_body
+
+    clear_document_body(docs, doc_id)
+    writer = _DocWriter(docs, doc_id, use_template_styles=use_template_styles)
+    writer.write_cover_faithful(
+        cover_brand, cover_title, cover_subtitle, cover_audience
+    )
+    for block in blocks:
+        _write_block(writer, block, use_template_styles=use_template_styles)
+    if footer.strip():
+        writer.write_footer_text(footer.strip())
+
+
 def write_formatted_doc(
     docs, doc_id: str, fd: FormattedDoc, *, use_template_styles: bool = False
 ) -> None:
@@ -251,32 +323,7 @@ def write_formatted_doc(
     writer.write_cover(fd.title, fd.owner_line)
 
     for block in fd.blocks:
-        if block.kind == "h1":
-            writer.append_heading(
-                block.text, "HEADING_1", colored=not use_template_styles
-            )
-        elif block.kind == "h2":
-            writer.append_heading(
-                block.text, "HEADING_2", colored=not use_template_styles
-            )
-        elif block.kind == "label":
-            writer.append_label(block.text)
-        elif block.kind == "callout":
-            label = CALLOUT_LABELS.get(block.callout_type or "important", "⚠️ IMPORTANT")
-            writer.append_callout_box(label, block.text)
-        elif block.kind == "template":
-            writer.append_template_box(block.text)
-        elif block.kind == "table" and block.table_headers and block.table_rows:
-            writer.append_data_table(block.table_headers, block.table_rows)
-        elif block.kind == "bullet":
-            label = block.text
-            if block.link_url:
-                label = f"{block.text} — {block.link_url}"
-            writer.append_bullet(label)
-        elif block.kind == "numbered":
-            writer.append_bullet(block.text)
-        elif block.kind == "paragraph":
-            writer.append_body(block.text + "\n")
+        _write_block(writer, block, use_template_styles=use_template_styles)
 
     if fd.quick_reference:
         writer.append_heading(
@@ -400,6 +447,77 @@ class _DocWriter:
             ]
         )
 
+    def write_cover_faithful(
+        self, brand: str, title: str, subtitle: str, audience: str
+    ) -> None:
+        """Cover driven entirely by explicit draft frontmatter values."""
+        # Brand line (bold).
+        if brand:
+            start = self.index
+            self._batch(
+                [{"insertText": {"location": {"index": start}, "text": f"{brand}\n"}}]
+            )
+            b_end = start + len(brand)
+            if self.use_template_styles:
+                self._batch([self._text_style(start, b_end, bold=True, color=WM_BLACK)])
+            else:
+                self._batch(
+                    [
+                        self._para_align(start, b_end + 1, "CENTER"),
+                        self._text_style(start, b_end, bold=True, size=26, color=WM_NAVY),
+                    ]
+                )
+
+        # Title as HEADING_1 (inherits template blue bar) or styled blue.
+        t_start = self._insert(f"{title}\n")
+        t_end = t_start + len(title) + 1
+        if self.use_template_styles:
+            self._batch(
+                [
+                    {
+                        "updateParagraphStyle": {
+                            "range": {"startIndex": t_start, "endIndex": t_end},
+                            "paragraphStyle": {"namedStyleType": "HEADING_1"},
+                            "fields": "namedStyleType",
+                        }
+                    }
+                ]
+            )
+        else:
+            self._batch(
+                [
+                    self._para_align(t_start, t_end, "CENTER"),
+                    self._text_style(t_start, t_end - 1, bold=False, size=20, color=WM_BLUE),
+                ]
+            )
+
+        # Subtitle (one-line purpose) + audience line, gray italic.
+        for line in (subtitle, audience):
+            if not line:
+                continue
+            s_start = self._insert(f"{line}\n")
+            s_end = s_start + len(line) + 1
+            reqs = [self._text_style(s_start, s_end - 1, italic=True, size=11, color=WM_GRAY)]
+            if not self.use_template_styles:
+                reqs.insert(0, self._para_align(s_start, s_end, "CENTER"))
+            self._batch(reqs)
+        # Spacer + divider under cover.
+        sp_start = self._insert("\n")
+        self._batch([self._para_border_bottom(sp_start, sp_start + 1)])
+
+    def write_footer_text(self, text: str) -> None:
+        """Single explicit footer line from draft frontmatter."""
+        footer = f"\n{text}\n"
+        start = self.index
+        end = start + len(footer)
+        self._batch(
+            [
+                {"insertText": {"location": {"index": start}, "text": footer}},
+                self._para_align(start, end, "CENTER"),
+                self._text_style(start, end - 1, size=10, color=WM_GRAY),
+            ]
+        )
+
     def _write_cover_template(self, title: str, owner_line: str) -> None:
         """Match live Objection Categories doc: WAIZ bold, title as HEADING_1 (blue bar)."""
         media = "WAIZ MEDIA\n"
@@ -490,11 +608,65 @@ class _DocWriter:
         end = start + len(chunk)
         self._batch([self._body_text_style(start, max(start, end - 1))])
 
-    def append_bullet(self, text: str) -> None:
-        line = f"• {text}\n"
+    def _apply_link_styles(
+        self,
+        base_index: int,
+        link_ranges: list[tuple[int, int, str]],
+        *,
+        offset: int = 0,
+        text_len: int | None = None,
+    ) -> None:
+        reqs = []
+        max_end = base_index + offset + text_len if text_len is not None else None
+        for link_start, link_end, url in link_ranges:
+            if not url or link_end <= link_start:
+                continue
+            abs_start = base_index + offset + link_start
+            abs_end = base_index + offset + link_end
+            if max_end is not None:
+                abs_end = min(abs_end, max_end)
+            if abs_end <= abs_start:
+                continue
+            reqs.append(
+                {
+                    "updateTextStyle": {
+                        "range": {
+                            "startIndex": abs_start,
+                            "endIndex": abs_end,
+                        },
+                        "textStyle": {"link": {"url": url}},
+                        "fields": "link",
+                    }
+                }
+            )
+        if reqs:
+            self._batch(reqs)
+
+    def append_bullet(
+        self,
+        text: str,
+        *,
+        link_ranges: list[tuple[int, int, str]] | None = None,
+    ) -> None:
+        prefix = "• "
+        line = f"{prefix}{text}\n"
         start = self._insert(line)
         end = start + len(line)
         self._batch([self._body_text_style(start, max(start, end - 1))])
+        if link_ranges:
+            self._apply_link_styles(
+                start, link_ranges, offset=len(prefix), text_len=len(text)
+            )
+
+    def append_body_with_links(
+        self, text: str, link_ranges: list[tuple[int, int, str]]
+    ) -> None:
+        chunk = text if text.endswith("\n") else f"{text}\n"
+        start = self._insert(chunk)
+        end = start + len(chunk)
+        self._batch([self._body_text_style(start, max(start, end - 1))])
+        body = chunk.rstrip("\n")
+        self._apply_link_styles(start, link_ranges, offset=0, text_len=len(body))
 
     def write_cover_footer(self) -> None:
         text = "\nWaiz Media  |  Internal Document  |  Confidential\n"
@@ -508,7 +680,13 @@ class _DocWriter:
             ]
         )
 
-    def append_callout_box(self, label: str, message: str) -> None:
+    def append_callout_box(
+        self,
+        label: str,
+        message: str,
+        *,
+        link_ranges: list[tuple[int, int, str]] | None = None,
+    ) -> None:
         """Single-cell shaded callout (label + body), matching Objection Handling reference."""
         body = _trim_north_star(message) if "NORTH STAR" in label else message.strip()
         cell_text = f"{label}\n\n{body}\n"
@@ -532,7 +710,8 @@ class _DocWriter:
             return
         c_start = cell_start
         c_end = c_start + len(cell_text)
-        label_end = c_start + len(label) + 2
+        body_offset = len(label) + 2
+        label_end = c_start + body_offset
 
         self._batch(
             [
@@ -547,10 +726,19 @@ class _DocWriter:
                 self._body_text_style(label_end, max(label_end, c_end - 1)),
             ]
         )
+        if link_ranges:
+            self._apply_link_styles(
+                c_start, link_ranges, offset=body_offset, text_len=len(body)
+            )
         self._refresh_index()
         self._insert("\n")
 
-    def append_template_box(self, message: str) -> None:
+    def append_template_box(
+        self,
+        message: str,
+        *,
+        link_ranges: list[tuple[int, int, str]] | None = None,
+    ) -> None:
         """Ready-to-send message — distinct from rules/callouts."""
         body = message.strip()
         if not body:
@@ -576,7 +764,8 @@ class _DocWriter:
             return
         c_start = cell_start
         c_end = c_start + len(cell_text)
-        label_end = c_start + len(TEMPLATE_LABEL) + 2
+        body_offset = len(TEMPLATE_LABEL) + 2
+        label_end = c_start + body_offset
         self._batch(
             [
                 self._style_table_cell(
@@ -592,10 +781,21 @@ class _DocWriter:
                 self._body_text_style(label_end, max(label_end, c_end - 1), italic=True),
             ]
         )
+        if link_ranges:
+            self._apply_link_styles(
+                c_start, link_ranges, offset=body_offset, text_len=len(body)
+            )
         self._refresh_index()
         self._insert("\n")
 
-    def append_data_table(self, headers: list[str], rows: list[list[str]]) -> None:
+    def append_data_table(
+        self,
+        headers: list[str],
+        rows: list[list[str]],
+        *,
+        header_links: list[list[tuple[int, int, str]]] | None = None,
+        row_links: list[list[list[tuple[int, int, str]]]] | None = None,
+    ) -> None:
         idx = self.index
         nrows = 1 + len(rows)
         ncols = len(headers)
@@ -659,6 +859,23 @@ class _DocWriter:
                     style_reqs.append(self._body_text_style(cells[i], end))
         if style_reqs:
             self._batch(style_reqs)
+
+        # Apply per-cell hyperlink ranges (headers + body), flattened to match cells.
+        flat_links: list[list[tuple[int, int, str]]] = []
+        flat_links.extend(header_links or [[] for _ in headers])
+        if row_links:
+            for r in row_links:
+                flat_links.extend(r)
+        else:
+            for r in rows:
+                flat_links.extend([[] for _ in r])
+        for i, ranges in enumerate(flat_links):
+            if i >= len(cells) or not ranges or cells[i] is None:
+                continue
+            self._apply_link_styles(
+                cells[i], ranges, offset=0, text_len=len(flat[i]) if i < len(flat) else None
+            )
+
         self._refresh_index()
         self._insert("\n")
 

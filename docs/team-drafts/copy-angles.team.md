@@ -1,18 +1,18 @@
 ---
 team_title: "LinkedIn Outreach — Scripts And Angles"
 team_role: setter
+team_doc_type: angle_library
 source_repo_path: "docs/acquisition/outbound/linkedin/copy-angles.md"
 approved: true
-draft_updated: 2026-05-28
+draft_updated: 2026-05-29
+cover_title: "LinkedIn Outreach — Scripts And Angles"
+cover_subtitle: "First-touch DMs, setter bumps, and Gabriel handoff scripts"
+cover_audience: "Sales & Setting Team  |  Internal Use Only  |  2026"
+footer: "Waiz Media  |  Setter Script Library  |  Internal Use Only  |  2026"
 ---
 
-<!-- Edit below. Publish uses Google Doc template (Objection Categories styles). -->
-
-**WAIZ MEDIA**
-
-*Sales & Setting Team  |  Internal Use Only  |  2026*
-
-Master script and angle library for first-touch LinkedIn outreach, setter bumps, and Gabriel handoff sequencing.
+<!-- angle_library: every ## Angle N — section must follow docs/templates/wm-team-angle-unit-template.md -->
+<!-- Cover + footer come from frontmatter. Body starts at # Overview. -->
 
 # 1. Overview
 
@@ -475,10 +475,7 @@ Questions, pricing, or exceptions → escalate to Gabriel (Setter team).
 
 ## Related Procedures
 
-- process.md — https://docs.google.com/document/d/1E-Nj4xs0pH4wgYh456MwszRpS3v3lmV-68x1dwTF6Fw/edit
-- manifest.yaml (coming soon)
-- Draft prompt (coming soon)
-- WM Sales Intelligence Bible — https://docs.google.com/document/d/1TPOlL9Ssfr6-SsUEKMEBXZVQUU09lPiql0RwMPqiAHA/edit
-- Identity Core — https://docs.google.com/document/d/1ysvZh9mKrfFkYKKvsX6IOgUyB2u48ucODtouoDWMCMY/edit
-
-Waiz Media | Setter Script Library | Internal Use Only | May 2026
+- [LinkedIn Outreach Process Guide](https://docs.google.com/document/d/1E-Nj4xs0pH4wgYh456MwszRpS3v3lmV-68x1dwTF6Fw/edit)
+- [WM Sales Intelligence Bible](https://docs.google.com/document/d/1TPOlL9Ssfr6-SsUEKMEBXZVQUU09lPiql0RwMPqiAHA/edit)
+- [Identity Core](https://docs.google.com/document/d/1ysvZh9mKrfFkYKKvsX6IOgUyB2u48ucODtouoDWMCMY/edit)
+- Setter prompt + manifest (coming soon)

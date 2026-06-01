@@ -15,14 +15,15 @@ This repository is the Waiz Media operating system. Agents should treat `docs/` 
 | Business docs, migration, SOPs | [.claude/skills/waiz-business-os/SKILL.md](.claude/skills/waiz-business-os/SKILL.md) |
 | Word export conversion | [.claude/skills/docx/SKILL.md](.claude/skills/docx/SKILL.md) |
 | Spreadsheet wrappers | [.claude/skills/xlsx/SKILL.md](.claude/skills/xlsx/SKILL.md) |
-| Translate docs for team readability | [.claude/skills/team-doc-translate/SKILL.md](.claude/skills/team-doc-translate/SKILL.md) |
-| Publish team Google Docs (prepare → approve → DOCX publish) | [.claude/skills/team-doc-publish/SKILL.md](.claude/skills/team-doc-publish/SKILL.md) |
+| Author a team Google Doc draft (rewrite for readability) | [.claude/skills/team-doc-author/SKILL.md](.claude/skills/team-doc-author/SKILL.md) |
+| Translate docs for team readability (legacy scaffold) | [.claude/skills/team-doc-translate/SKILL.md](.claude/skills/team-doc-translate/SKILL.md) |
+| Publish team Google Docs (author → approve → faithful publish) | [.claude/skills/team-doc-publish/SKILL.md](.claude/skills/team-doc-publish/SKILL.md) |
 | LinkedIn LO outreach (DMs, SN, angles) | [.claude/skills/linkedin-lo-outreach/SKILL.md](.claude/skills/linkedin-lo-outreach/SKILL.md) |
 | Pre-call objection videos (nurture URLs, transcripts, setter sends) | [.claude/skills/pre-call-objection-videos/SKILL.md](.claude/skills/pre-call-objection-videos/SKILL.md) — [manifest](docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml) |
 
 Full index: [.claude/skills/README.md](.claude/skills/README.md)
 
-**Team SOP layout:** Prepare draft → approve → publish via Pandoc + [wm-team-reference.docx](docs/templates/wm-team-reference.docx). Match [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit). See [team-drive-publish.md](docs/operations/systems/team-drive-publish.md).
+**Team SOP layout:** Author draft (agent rewrite per [authoring contract](docs/templates/wm-team-draft-authoring-contract.md) + [doc-type profile](docs/templates/wm-team-doc-profiles.yaml)) → approve → faithful publish (renders the draft 1:1). Match [WM Objection Categories](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit). See [team-drive-publish.md](docs/operations/systems/team-drive-publish.md).
 
 ## Do not
 

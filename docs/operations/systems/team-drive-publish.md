@@ -73,11 +73,11 @@ flowchart LR
   api --> drive
 ```
 
-1. **Prepare:** `python scripts/team-doc-prepare.py docs/.../sop.md`
-2. **Edit** draft; run [wm-team-doc-review-checklist.md](../../templates/wm-team-doc-review-checklist.md) (angle libraries: [wm-team-angle-unit-template.md](../../templates/wm-team-angle-unit-template.md))
-3. **Validate (optional):** `python scripts/team-doc-approve.py docs/team-drafts/<slug>.team.md --check-only`
+1. **Author:** rewrite canonical into the team draft per [team-doc-author](../../../.claude/skills/team-doc-author/SKILL.md) + [authoring contract](../../templates/wm-team-draft-authoring-contract.md) + the doc's [profile](../../templates/wm-team-doc-profiles.yaml). (`python scripts/team-doc-prepare.py docs/.../sop.md` is an optional rough scaffold.)
+2. **Self-check:** [wm-team-doc-review-checklist.md](../../templates/wm-team-doc-review-checklist.md) (angle libraries: [wm-team-angle-unit-template.md](../../templates/wm-team-angle-unit-template.md))
+3. **Validate:** `python scripts/team-doc-approve.py docs/team-drafts/<slug>.team.md --check-only` (contract + profile thresholds)
 4. **Approve:** `python scripts/team-doc-approve.py docs/team-drafts/<slug>.team.md`
-5. **Publish:** `python scripts/publish-team-doc.py docs/.../sop.md`
+5. **Publish (faithful render):** `python scripts/publish-team-doc.py docs/.../sop.md`
 
 Config in `config/team-publish.local.yaml` (see [team-publish.local.example.yaml](../../../config/team-publish.local.example.yaml)):
 

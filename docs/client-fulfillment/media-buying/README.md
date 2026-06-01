@@ -25,6 +25,13 @@ Boundaries: [Waiz vs client marketing](../waiz-vs-client-marketing-boundaries.md
 | [Perspective Funnel Setup SOP](perspective-funnel-setup-sop.md) | `draft` |
 | [Ads For Dummies WaizMedia SOP](ads-for-dummies-waizmedia-sop.md) | `draft` |
 
+## Creative system
+
+| Folder | What it does | Status |
+|--------|--------------|--------|
+| [creative-studio/](creative-studio/README.md) | Brainstorm RM ad ideas + write compliant video scripts (skill: `rm-creative-studio`) | `draft` |
+| [creative-research/](creative-research/README.md) | Decompose ads you admire (Poppy.ai input) into reusable editing/script patterns | `draft` |
+
 ## Pending (Drive only)
 
 - SOP — Setting Up Facebook Page & Ad Account

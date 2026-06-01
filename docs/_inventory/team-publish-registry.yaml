@@ -35,12 +35,17 @@ entries:
   team_role: setter
   last_published: '2026-05-21'
 - repo_path: docs/acquisition/sales/script-intro-call-basic.md
-  team_title: Intro Call Script
+  team_title: 05 - Intro Call Script
   drive_folder: setters
   google_doc_id: 1ehtDGvyI14SPfU45mPAGFGIsSU6IPGkth-Ir98yuGPE
   publish_status: active
   team_role: setter
-  last_published: '2026-05-21'
+  publish_pipeline: template
+  team_draft_path: docs/team-drafts/script-intro-call-basic.team.md
+  template_based: true
+  notes: 'Post-publish: split into 3 native Google Doc tabs (Full Process | Quick
+    Reference | ICP Responses) per team draft H1 markers.'
+  last_published: '2026-05-29'
 - repo_path: docs/acquisition/sales/disqualifying-financial-qualification.md
   team_title: Disqualifying And Financial Qualification
   drive_folder: setters
@@ -60,15 +65,61 @@ entries:
   drive_folder: setters
   publish_status: pending
   team_role: setter
-  notes: Repo-native script v1.0 (2026-05-29). Publish after status active + team draft approved.
+  notes: Repo-native script v1.0 (2026-05-29). Publish after status active + team
+    draft approved.
 - repo_path: docs/acquisition/sales/setter-daily-checklist.md
-  team_title: Setter Daily Checklist
-  notes: Supersedes former Setter Daily Operations Playbook (repo file removed 2026-05-29; Drive doc 1oY7B_gMe3oJ_QDhIaHBslcxzDEbc6qMsUr0SBQmkYv0 — archive or replace on next publish)
+  team_title: 00 - Setter Daily Checklist
+  notes: Supersedes former Setter Daily Operations Playbook (repo file removed 2026-05-29;
+    Drive doc 1oY7B_gMe3oJ_QDhIaHBslcxzDEbc6qMsUr0SBQmkYv0 — archive or replace on
+    next publish)
   drive_folder: setters
   google_doc_id: 1NhFujNmuR2Q9lQbvxSBsjhFpWelfJBpafp8GpzOFTbg
   publish_status: active
   team_role: setter
-  last_published: '2026-05-27'
+  publish_pipeline: template
+  team_draft_path: docs/team-drafts/setter-daily-checklist.team.md
+  template_based: true
+  last_published: '2026-05-29'
+- repo_path: docs/acquisition/sales/sop-watchshift.md
+  team_title: 01 - Watchshift SOP
+  drive_folder: setters
+  publish_status: active
+  team_role: setter
+  publish_pipeline: template
+  team_draft_path: docs/team-drafts/sop-watchshift.team.md
+  template_based: true
+  google_doc_id: 1u3o2itwYbu_UDdTXBXLhmUNgHNTU2nzSoBTklNMOW18
+  last_published: '2026-05-29'
+- repo_path: docs/acquisition/sales/sop-power-dialer-new-leads.md
+  team_title: 02 - Power Dialer — New Leads
+  drive_folder: setters
+  publish_status: active
+  team_role: setter
+  publish_pipeline: template
+  team_draft_path: docs/team-drafts/sop-power-dialer-new-leads.team.md
+  template_based: true
+  google_doc_id: 1bt2gLk2-jh2xlvbhsy8R9_kIWUj50l6NUTFEnmveGKw
+  last_published: '2026-05-29'
+- repo_path: docs/acquisition/sales/setter-lead-messaging.md
+  team_title: 03 - Setter Lead Messaging
+  drive_folder: setters
+  publish_status: active
+  team_role: setter
+  publish_pipeline: template
+  team_draft_path: docs/team-drafts/setter-lead-messaging.team.md
+  template_based: true
+  google_doc_id: 1wkPbJfxOcL5rtceUhJdqXCB1-aG2zOttGqlUOxtglBI
+  last_published: '2026-05-29'
+- repo_path: docs/acquisition/sales/eod-report-sop-setters-closers.md
+  team_title: 04 - EOD Report SOP
+  drive_folder: setters
+  publish_status: active
+  team_role: setter
+  publish_pipeline: template
+  team_draft_path: docs/team-drafts/eod-report-sop-setters-closers.team.md
+  template_based: true
+  google_doc_id: 1041NLAXQUumCj6e85xz-HZsSAIuTERCIKf4K4Pu3xFY
+  last_published: '2026-05-29'
 - repo_path: docs/acquisition/sales/discovery-call-script-2026.md
   team_title: Discovery Call Script
   drive_folder: closers
@@ -150,7 +201,7 @@ entries:
   publish_pipeline: template
   team_draft_path: docs/team-drafts/copy-angles.team.md
   template_based: true
-  last_published: '2026-05-28'
+  last_published: '2026-05-29'
 - repo_path: docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md
   team_title: RM Ads — High-Quality Lead Playbook
   drive_folder: client_success

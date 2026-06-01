@@ -23,6 +23,19 @@ This repository is the Waiz Media operating system for future AI use. Treat it a
 - `docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml`: prospect nurture video URLs + transcripts for sales/marketing AI.
 - [AGENTS.md](AGENTS.md): agent entry map.
 
+## Contributors Using Claude Code
+
+If you are a contributor (not the repo owner) building processes here with Claude Code, follow these rules. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow.
+
+- Always work on a branch (`git checkout -b contrib/<short-name>`), never on `main`.
+- New docs start as `status: draft` in frontmatter. The owner flips them to `active` after review.
+- Open a pull request and let the owner review and merge. Do not merge your own PR.
+- Do NOT edit these files or directories:
+  - [docs/SPINE.md](docs/SPINE.md) (approved operating spine)
+  - [docs/_inventory/team-publish-registry.yaml](docs/_inventory/team-publish-registry.yaml) (team publish registry)
+  - anything under `scripts/` or `config/` (publish tooling and credentials)
+- Do NOT run the team publish tooling: `scripts/team-doc-approve.py`, `scripts/publish-team-doc.py`, or any Google Drive publish step. Only the owner publishes to the team Drive.
+
 ## Default Documentation Standard
 
 Use the Waiz Business OS skill standards. Durable operating docs should include purpose, scope, owner, trigger, inputs, outputs, process, quality bar, metrics, and related docs when applicable.

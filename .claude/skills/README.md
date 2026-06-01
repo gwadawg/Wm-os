@@ -12,7 +12,8 @@ Skills in this folder are **repo-local**. Cursor and Claude Code discover them f
 | **Pre-call objection videos** | [pre-call-objection-videos/SKILL.md](pre-call-objection-videos/SKILL.md) | Prospect nurture videos before strategy/demo — [manifest](../../docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml) |
 | **DOCX** | [docx/SKILL.md](docx/SKILL.md) | Reading or converting `.docx` from **waiz-os-archive** (`waiz-drive-export/`) |
 | **XLSX** | [xlsx/SKILL.md](xlsx/SKILL.md) | Sales trackers, scorecards, spreadsheets — summarize in Markdown, keep raw file |
-| **Team doc translate** | [team-doc-translate/SKILL.md](team-doc-translate/SKILL.md) | Humanize repo SOPs into design-focused team copy before publish |
+| **Team doc author** | [team-doc-author/SKILL.md](team-doc-author/SKILL.md) | Rewrite canonical docs into publish-ready team drafts (faithful render). Default authoring step |
+| **Team doc translate** | [team-doc-translate/SKILL.md](team-doc-translate/SKILL.md) | Legacy heuristic scaffold for team drafts (optional starting point) |
 | **Team doc publish** | [team-doc-publish/SKILL.md](team-doc-publish/SKILL.md) | One-way publish of approved `docs/` to team Google Drive (layperson-readable) |
 
 Waiz Business OS references:
@@ -24,6 +25,8 @@ Waiz Business OS references:
 
 | Skill | Use when |
 |-------|----------|
+| [rm-creative-studio/SKILL.md](rm-creative-studio/SKILL.md) | Brainstorm reverse-mortgage ad ideas and write compliant video ad scripts for client fulfillment — engine: [creative-studio/](../../docs/client-fulfillment/media-buying/creative-studio/README.md) |
+| [ugc-scriptwriter/SKILL.md](ugc-scriptwriter/SKILL.md) | Draft **generic** (non-RM) UGC scripts — talking-head, testimonial, creator — from a hook + product. For reverse-mortgage client ads use [rm-creative-studio](rm-creative-studio/SKILL.md) (compliance gate) |
 | [copywriting/SKILL.md](copywriting/SKILL.md) | Marketing copy, landing pages, email voice |
 | [pre-call-objection-videos/SKILL.md](pre-call-objection-videos/SKILL.md) | LO prospect video sends, transcripts, ad/nurture alignment |
 | [marketing-psychology/SKILL.md](marketing-psychology/SKILL.md) | Mental models, persuasion, buyer psychology for messaging and offers |

@@ -179,6 +179,9 @@ Registry: optional `team_doc_type: angle_library` on the publish row enables app
 
 ## Related
 
-- [team-doc-translate skill](../../.claude/skills/team-doc-translate/SKILL.md)
+- [wm-team-draft-authoring-contract.md](wm-team-draft-authoring-contract.md) — exact markdown vocabulary (single source for author + renderer)
+- [wm-team-doc-profiles.yaml](wm-team-doc-profiles.yaml) — per-type contract subset + thresholds + exemplars
+- [team-doc-author skill](../../.claude/skills/team-doc-author/SKILL.md) — default authoring step
+- [team-doc-translate skill](../../.claude/skills/team-doc-translate/SKILL.md) — legacy scaffold
 - [team-doc-publish-template.md](team-doc-publish-template.md)
 - [team-drive-publish.md](../operations/systems/team-drive-publish.md)

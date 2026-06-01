@@ -11,6 +11,8 @@ review_cycle: weekly
 
 Use this backlog to turn the raw Google Drive export into durable AI-ready company documentation.
 
+**Weekly hygiene (branches, drafts, team publish):** [repo-hygiene-checklist.md](repo-hygiene-checklist.md).
+
 ## Phase 1: Source Of Truth Setup
 
 - [x] Confirm top-level operating domains match how Waiz Media actually works.

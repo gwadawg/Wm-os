@@ -104,9 +104,13 @@ class Block:
     kind: str  # heading1, heading2, label, north_star, meta_bullet, callout, template, table, paragraph, bullet, numbered
     text: str
     link_url: str | None = None
+    link_ranges: list[tuple[int, int, str]] | None = None  # start, end, url within text
     callout_type: str | None = None
     table_headers: list[str] | None = None
     table_rows: list[list[str]] | None = None
+    # Per-cell inline link ranges (parallel to table_headers / table_rows).
+    table_header_links: list[list[tuple[int, int, str]]] | None = None
+    table_row_links: list[list[list[tuple[int, int, str]]]] | None = None
 
 
 def translate(

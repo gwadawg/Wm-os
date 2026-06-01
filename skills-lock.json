@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "decision-journal": {
+      "source": "membranedev/application-skills",
+      "sourceType": "github",
+      "skillPath": "skills/decision-journal/SKILL.md",
+      "computedHash": "3dcbfb388721ccd7e6527c514ef22e1eb03363bf4b4bc1176b5143c19c504301"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "9e1c8b3103f92fa8092568a44fe64858de7c5c9dc65ce4bea8f168080e889cfd"
+    },
+    "startup-canvas": {
+      "source": "phuryn/pm-skills",
+      "sourceType": "github",
+      "skillPath": "pm-product-strategy/skills/startup-canvas/SKILL.md",
+      "computedHash": "57a15851a385bd7e31c6dad1037a29dfe4cd467ed369a3ff4892d988dd0d81a6"
+    },
+    "ugc-scriptwriter": {
+      "source": "motion-creative/skills",
+      "sourceType": "github",
+      "skillPath": "ugc-scriptwriter/SKILL.md",
+      "computedHash": "3adfe0664edfde8e1d7e3f9d7f052e25bee325d8c0762e2956f3e8acafb7fba1"
+    }
+  }
+}

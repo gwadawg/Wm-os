@@ -5,6 +5,8 @@ description: Translates canonical Waiz repo Markdown into WM-branded team drafts
 
 # Team Doc Translate
 
+> **Default authoring is now [team-doc-author](../team-doc-author/SKILL.md)** — an agent rewrite that follows the [authoring contract](../../docs/templates/wm-team-draft-authoring-contract.md) and the matching [doc-type profile](../../docs/templates/wm-team-doc-profiles.yaml), then publishes via the faithful renderer (the Google Doc matches the draft 1:1). Use the steps below only for the optional heuristic scaffold (`team-doc-prepare.py`), then rewrite by hand per the author skill.
+
 Turn `docs/` canonical files into **WM team drafts** (`docs/team-drafts/`) that match the company visual standard when published.
 
 **Goal:** Remake content for **human operators** (scannable sections, real tables, copy-paste boxes) — not a literal markdown dump for AI.

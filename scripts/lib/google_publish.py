@@ -13,7 +13,11 @@ from googleapiclient.http import MediaFileUpload
 
 from .paths import config_path
 from .pandoc_publish import PublishPipelineError
-from .team_doc_formatter import blocks_to_formatted_doc, write_formatted_doc
+from .team_doc_formatter import (
+    blocks_to_formatted_doc,
+    render_draft_faithfully,
+    write_formatted_doc,
+)
 from .team_doc_translator import Block
 
 SCOPES = [
@@ -146,10 +150,18 @@ def publish_from_template(
     template_based: bool = False,
     archive: bool = False,
     archive_folder_id: str | None = None,
+    faithful: bool = False,
+    cover_title: str | None = None,
+    cover_subtitle: str = "",
+    cover_audience: str = "",
+    footer: str = "",
 ) -> str:
     """
     Copy the Claude-formatted reference Google Doc, clear body, write content.
     Inherits heading styles (blue left bar) from the template document.
+
+    When `faithful` is set, the body + cover + footer are rendered EXACTLY as
+    authored in the draft (no auto-injected cover/footer/callouts).
     """
     creds = get_credentials()
     drive = drive_service(creds)
@@ -181,14 +193,26 @@ def publish_from_template(
             except Exception:
                 pass
 
-    write_blocks_to_doc(
-        docs,
-        target_id,
-        blocks,
-        title=title,
-        owner=owner,
-        use_template_styles=True,
-    )
+    if faithful:
+        render_draft_faithfully(
+            docs,
+            target_id,
+            blocks,
+            cover_title=cover_title or title,
+            cover_subtitle=cover_subtitle,
+            cover_audience=cover_audience,
+            footer=footer,
+            use_template_styles=True,
+        )
+    else:
+        write_blocks_to_doc(
+            docs,
+            target_id,
+            blocks,
+            title=title,
+            owner=owner,
+            use_template_styles=True,
+        )
     drive.files().update(fileId=target_id, body={"name": title}, **DRIVE_KWARGS).execute()
     return target_id
 

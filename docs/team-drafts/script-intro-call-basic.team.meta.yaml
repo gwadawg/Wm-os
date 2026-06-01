@@ -1,0 +1,13 @@
+source_repo_path: docs/acquisition/sales/script-intro-call-basic.md
+team_title: 05 - Intro Call Script
+team_role: setter
+approved: true
+approved_at: '2026-05-29'
+draft_path: docs/team-drafts/script-intro-call-basic.team.md
+google_doc_tabs:
+- Full Process
+- Quick Reference
+- ICP Nuanced Responses
+post_publish_manual: 'In Google Docs, add native document tabs from the three H1 sections:
+  Full Process | Quick Reference | ICP Nuanced Responses. (Publish pipeline writes
+  one doc body; tabs are a manual step until API support.)'
