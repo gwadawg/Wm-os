@@ -28,14 +28,20 @@ This pod was built by cloning the [Reverse Mortgage DNA](../reverse-mortgage-dna
 | [Intelligence DSCR Product](intelligence-dscr-product.md) | `draft` |
 | [Ad Copy And Angle Library (DSCR)](ad-copy-angle-library-dscr.md) | `draft` |
 
-## Creative + copy assets
+## Launch build (offer → ads → funnel → nurture → setter)
 
-Creative and copy development for DSCR refinance ads (no campaign setup/structure; that's a media-buyer runtime task). Kept in-pod for a self-contained DSCR line.
+End-to-end DSCR refinance funnel assets. **Start at the offer/funnel anchor** — every asset below inherits its offer, CTA ladder, qualifying questions, and the **Laura (LO's assistant)** outbound voice.
 
-| Doc | Status |
-|-----|--------|
-| [DSCR Ads Playbook](dscr-ads-playbook.md) | `draft` |
-| [MB DSCR Ad Copy Standards](mb-dscr-ad-copy-standards.md) | `draft` |
+| Doc | Phase | Status |
+|-----|-------|--------|
+| [DSCR Offer And Funnel Map](dscr-offer-and-funnel-map.md) | 0 — anchor | `draft` |
+| [DSCR Ads Playbook](dscr-ads-playbook.md) | 1 — ad creative | `draft` |
+| [MB DSCR Ad Copy Standards](mb-dscr-ad-copy-standards.md) | 1 — ad creative | `draft` |
+| _video ad scripts + static briefs_ | 1 | _to build_ |
+| _landing page / VSL copy_ | 2 | _to build_ |
+| _lead nurture + booking reminders (Laura)_ | 3 | _to build_ |
+| _setter script + objection guide_ | 4 | _to build_ |
+| _KPI + test scorecard_ | 5 | _to build_ |
 
 ## Status note
 
