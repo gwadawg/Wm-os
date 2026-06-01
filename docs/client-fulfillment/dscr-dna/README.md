@@ -38,7 +38,7 @@ End-to-end DSCR refinance funnel assets. **Start at the offer/funnel anchor** �
 | [DSCR Ads Playbook](dscr-ads-playbook.md) | 1 — ad creative | `draft` |
 | [MB DSCR Ad Copy Standards](mb-dscr-ad-copy-standards.md) | 1 — ad creative | `draft` |
 | [DSCR Ad Creative — Batch 01](dscr-ad-creative-batch-01.md) | 1 — ad creative | `draft` |
-| _landing page / VSL copy_ | 2 | _to build_ |
+| [DSCR Landing Page And VSL Copy](dscr-landing-and-vsl.md) | 2 — landing/VSL | `draft` |
 | _lead nurture + booking reminders (Laura)_ | 3 | _to build_ |
 | _setter script + objection guide_ | 4 | _to build_ |
 | _KPI + test scorecard_ | 5 | _to build_ |
