@@ -146,7 +146,7 @@ Use verbatim or near-verbatim in hooks, ad copy, and VSL opens:
 
 **Outcome statements (investor voice) for ads/landers:**
 
-- "Refinanced on the rent, not my tax returns. Closed in 18 days."
+- "Refinanced on the rent, not my tax returns — and closed fast." *(keep live copy number-free)*
 - "Got out of my hard-money loan into a 30-year DSCR before the balloon hit."
 - "Cashed out my equity, redeployed it, kept the portfolio moving."
 - "Finally, a lender who gets how investors actually operate."
