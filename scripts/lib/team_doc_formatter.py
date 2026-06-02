@@ -311,6 +311,9 @@ def render_draft_faithfully(
         _write_block(writer, block, use_template_styles=use_template_styles)
     if footer.strip():
         writer.write_footer_text(footer.strip())
+    # Clear list bullets inherited from the copied template (otherwise the whole
+    # doc renders as one big bulleted list — cover, headings, and all).
+    writer.strip_body_bullets()
 
 
 def write_formatted_doc(
@@ -334,6 +337,8 @@ def write_formatted_doc(
         writer.append_data_table(fd.quick_reference.headers, fd.quick_reference.rows)
 
     writer.write_cover_footer()
+    # Clear list bullets inherited from the copied template.
+    writer.strip_body_bullets()
 
 
 class _DocWriter:
@@ -517,6 +522,32 @@ class _DocWriter:
                 self._text_style(start, end - 1, size=10, color=WM_GRAY),
             ]
         )
+
+    def strip_body_bullets(self) -> None:
+        """Remove list bullets inherited from the copied template.
+
+        Copying the styled reference doc leaves the insertion-point paragraph
+        carrying a list bullet, which every inserted paragraph then inherits —
+        making the whole doc render as one big bulleted list. Bullets we actually
+        want are written as literal "• " text, so it is safe to clear all
+        inherited paragraph bullets across the body in one pass at the end.
+        """
+        doc = self.docs.documents().get(documentId=self.doc_id).execute()
+        end = doc["body"]["content"][-1]["endIndex"] - 1
+        if end <= 1:
+            return
+        try:
+            self._batch(
+                [
+                    {
+                        "deleteParagraphBullets": {
+                            "range": {"startIndex": 1, "endIndex": end}
+                        }
+                    }
+                ]
+            )
+        except Exception:
+            pass
 
     def _write_cover_template(self, title: str, owner_line: str) -> None:
         """Match live Objection Categories doc: WAIZ bold, title as HEADING_1 (blue bar)."""
