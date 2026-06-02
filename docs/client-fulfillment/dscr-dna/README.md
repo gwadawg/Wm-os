@@ -30,10 +30,11 @@ This pod was built by cloning the [Reverse Mortgage DNA](../reverse-mortgage-dna
 
 ## Launch build (offer → ads → funnel → nurture → setter)
 
-End-to-end DSCR refinance funnel assets. **Start at the offer/funnel anchor** — every asset below inherits its offer, CTA ladder, qualifying questions, and the **Laura (LO's assistant)** outbound voice.
+End-to-end DSCR refinance funnel assets. **Read the GTM brief first** for the beachhead persona, the one big idea, and channel priority — then **start at the offer/funnel anchor**. Every asset inherits its offer, CTA ladder, qualifying questions, and the **Laura (LO's assistant)** outbound voice.
 
 | Doc | Phase | Status |
 |-----|-------|--------|
+| [DSCR GTM And Positioning Brief](dscr-gtm-positioning-brief.md) | strategy — read first | `draft` |
 | [DSCR Offer And Funnel Map](dscr-offer-and-funnel-map.md) | 0 — anchor | `draft` |
 | [DSCR Ads Playbook](dscr-ads-playbook.md) | 1 — ad creative | `draft` |
 | [MB DSCR Ad Copy Standards](mb-dscr-ad-copy-standards.md) | 1 — ad creative | `draft` |
