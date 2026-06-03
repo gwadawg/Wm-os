@@ -3,7 +3,7 @@ title: Ad Copy And Angle Library (DSCR)
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-05-30
+last_updated: 2026-06-02
 review_cycle: monthly
 artifact_type: playbook
 cloned_from: docs/client-fulfillment/media-buying/ad-copy-angle-library-rm.md
@@ -54,6 +54,25 @@ psychological signal to the algorithm and maps to one approved persona. Copy is 
 
 **No numbers in copy.** DSCR ads never quote rates, LTV, DSCR ratios, payments, close times, or amounts.
 Keep every variant qualitative and outcome-focused. The only allowed token is `[STATE]` for geo localization.
+
+### Lead-with priority (by market gap)
+
+Per live competitor intel ([DSCR Competitor Ad Intelligence](dscr-competitor-ad-intelligence.md)), the
+field is saturated on a generic "no income / no tax returns" claim and on **purchase**, and thin on
+**refinance pain, urgency, and proof**. So while all 12 angles are approved, **lead testing on the
+angles that exploit the gap** rather than the crowded claim:
+
+| Priority | Angles | Why (the gap) |
+|----------|--------|---------------|
+| **Lead (gap)** | **2 Trapped Equity**, **3 Escape Hard-Money**, **11 Portfolio Cash-Out** | Cash-out + balloon urgency are under-served and carry the strongest drivers (loss aversion, urgency). |
+| **Lead (idea)** | **1 Property Qualifies Itself**, **7 No Tax Returns**, **8 Write-Offs** | Same theme competitors run — but win it on the *reframe* (idea-first), not a feature list. |
+| Expand | 4 Lower the Payment, 5 Into Your LLC, 10 STR Income | Solid; open once the leaders show signal. |
+| Niche / last | 6 Interest-Only, 9 Higher-Rate Math, 12 Foreign National | Smaller pools / program-gated; confirm eligibility. |
+
+**Two creative mandates the gap demands** (detail in the [Ads Playbook](dscr-ads-playbook.md) →
+*Differentiation mandate*): (1) **open with the reframe, not the checklist** — the hook is an idea, not
+"✅ no income ✅ fast"; (2) **work in proof** (a real, compliant funded outcome) wherever the funnel stage
+allows — it's the single most under-used, highest-trust lever in the category.
 
 **Standing disclosure (append where the client's licensing requires):** *Business-purpose investment
 financing. For investment (non-owner-occupied) property only. Not a commitment to lend; all loans subject
@@ -186,4 +205,5 @@ DSCR refinance ads are **business-purpose**, but advertising still carries real 
 - [Doctrine DSCR Marketing](doctrine-dscr-marketing.md)
 - [Intelligence ICP DSCR](intelligence-icp-dscr.md)
 - [Intelligence DSCR Product](intelligence-dscr-product.md)
+- [DSCR Competitor Ad Intelligence](dscr-competitor-ad-intelligence.md)
 - RM analog: [Ad Copy And Angle Library (RM)](../media-buying/ad-copy-angle-library-rm.md)

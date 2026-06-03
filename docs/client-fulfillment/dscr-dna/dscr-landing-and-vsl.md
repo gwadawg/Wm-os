@@ -52,6 +52,44 @@ The landing page headline must echo the **angle of the ad** that drove the click
 
 ---
 
+### Headline split-test bank
+
+Test **angle-vs-angle** first, then headline-vs-headline within the winner. All number-free, refinance/investment-only, no guarantees. Cash-out leads (current marketing focus).
+
+**Cash-out / trapped equity (primary)**
+- *Control:* Pull the Equity Out of the Doors You Already Own.
+- Your Equity Is Just Sitting There. Put It Back to Work.
+- Cash Out Your Rental — Qualify on the Rent, Not Your Tax Returns.
+- Tap Your Rental's Equity Without Showing a Single Tax Return.
+- Turn Trapped Equity Into Your Next Deal.
+
+**No income docs / write-offs**
+- Refinance Your Rental Without W-2s, Pay Stubs, or Tax Returns.
+- Your Write-Offs Won't Block This Refinance.
+- Great at Write-Offs. Punished by DTI. There's a Better Way.
+
+**Balloon / hard-money exit**
+- *Control:* Refinance Out of Hard-Money — Before the Balloon Hits.
+- Your Balloon's Coming Due. Your Exit Qualifies on the Rent.
+- Trade Your Bridge Loan for a Stable Long-Term Loan That Qualifies on the Rent.
+
+**Portfolio / property-count**
+- Conventional Capped You at 10. Your Equity Didn't Get the Memo.
+- No Property-Count Ceiling. Cash Out on Each Door's Income.
+
+**Question hooks (good for a Perspective opener)**
+- Sitting on Equity You Can't Touch?
+- Tired of Re-Documenting Your Whole Life Just to Refinance?
+
+> **Specs-forward direction (savvy-investor variant — to split-test):** a more information-dense page
+> (stat-block layout, product named openly) tests well with sophisticated investors. Numbers in any stat
+> block must come from the **approved pricing sheet / lender program** with disclaimers ("from/up to," "as
+> fast as," no flat timeline guarantees) per [DSCR Compliance Guardrails](dscr-compliance-guardrails.md). A
+> ship-now, no-pricing version flexes mechanism instead of price: *Qualify on the Rent · No Tax Returns ·
+> Close in Your LLC · No Property-Count Cap · Cash-Out Available.*
+
+---
+
 ### Variant A — Cash-Out / Trapped Equity (Portfolio Scaler)
 
 **Hero**
@@ -146,11 +184,21 @@ Pulls directly from [DSCR Offer And Funnel Map §4](dscr-offer-and-funnel-map.md
 
 ---
 
-### Thank-you page
+### Thank-you page (improved)
 
-- **Headline:** You're in — [Laura] will reach out shortly.
-- **Body:** "Thanks! [Laura], [LO]'s assistant, will text you in the next few minutes to grab a couple quick details and find a time that works. Keep an eye on your phone."
-- *(Sets the expectation that matches the Phase 3 nurture, so the first text isn't a surprise.)*
+Does four jobs: confirm, let high-intent leads **self-book instead of waiting** (the page's biggest lift — most "we'll call you" pages leak the hottest leads in the gap), prime them for the call, and pre-empt the ghost. Uses GHL merge fields.
+
+- **Headline:** You're in. Here's what happens next.
+- **Subhead:** "{{user.first_name}}'s team is already reviewing your property. Laura will text you in the next few minutes to grab a couple quick details and find a time."
+- **Primary CTA — self-book (calendar embed):**
+  - "Don't want to wait for the text? Grab a time now." → **[Book Your Refinance Review]**
+- **Have these handy for the call:**
+  - Rough monthly rent on the property
+  - Your current loan balance (a ballpark is fine)
+  - What you'd do with the cash you pull out
+- **What to expect:** "A straight look at what your property qualifies for on its own rental income — no tax returns, no obligation. If the numbers work, {{user.first_name}} maps your options. If they don't, he'll tell you that too."
+- **Trust block:** *[LO headshot + "Meet {{user.first_name}}" bio]* and *[one substantiated investor result once available — no invented numbers].*
+- *(Sets the expectation that matches the Phase 3 Laura nurture, so the first text isn't a surprise — and captures peak intent with the self-book option.)*
 
 ### Compliance footer (every page + thank-you page)
 

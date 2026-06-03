@@ -3,7 +3,7 @@ title: Doctrine DSCR Marketing
 domain: client-fulfillment
 owner: founder
 status: draft
-last_updated: 2026-05-30
+last_updated: 2026-06-02
 review_cycle: monthly
 artifact_type: doctrine
 cloned_from: docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
@@ -58,6 +58,17 @@ This is the operating doctrine for every piece of fulfillment work produced for 
 **Demand already exists.** DSCR is one of the fastest-growing segments of US mortgage lending (≈30% of record non-QM securitization in 2025; growing into 2026). The investor knows they want leverage — so unlike RM, we are **not** doing de-stigmatization work. We are competing for the investor's trust on **competence and execution.**
 
 **What this means for every output:** assume the reader is a numbers-literate operator who has likely seen "DSCR loan" before, already **owns** the property, is skeptical of generalist lenders, and cares most about *will this refinance close, on my property, on time, in my entity.* We start from "prove you understand investors" and build toward "book the conversation."
+
+**The competitive reality (live ad intel).** A 2026-06 scrape of the Meta Ad Library
+([DSCR Competitor Ad Intelligence](dscr-competitor-ad-intelligence.md)) shows the category has
+collapsed into a **sea of sameness**: ~60% of active DSCR ads shout the same two things — "no income /
+no tax returns" and "fast" — and ~76% of ads die within two weeks. The field is loud on **purchase**
+and **feature lists**, and quiet on the things that actually move investors: **refinance pain**
+(trapped equity, maturing hard-money/balloon), **proof** (funded outcomes / investor stories), and a
+**low-friction first step**. That gap *is* our opening. We do not win by saying the same claim slightly
+better — we win on a sharper **idea** ("the property qualifies itself"), the under-served **refinance /
+cash-out / urgency** lanes, and **proof**. Our number-free posture is an advantage here, not a handicap:
+the top human-led competitor wins on outcome framing, not quoted rates.
 
 ### Section 2 — The Two Frames
 
@@ -151,4 +162,5 @@ Waiz Media | Doctrine — DSCR Fulfillment | Fulfillment Reference | Confidentia
 - [Doctrine DSCR](doctrine-dscr.md)
 - [Intelligence ICP DSCR](intelligence-icp-dscr.md)
 - [Intelligence DSCR Product](intelligence-dscr-product.md)
+- [DSCR Competitor Ad Intelligence](dscr-competitor-ad-intelligence.md)
 - RM analog: [Doctrine RM Marketing](../reverse-mortgage-dna/doctrine-rm-marketing.md)

@@ -3,7 +3,7 @@ title: Client Fulfillment — DSCR DNA
 domain: client-fulfillment
 owner: founder
 status: draft
-last_updated: 2026-05-30
+last_updated: 2026-06-02
 review_cycle: quarterly
 ---
 
@@ -26,6 +26,7 @@ This pod was built by cloning the [Reverse Mortgage DNA](../reverse-mortgage-dna
 | [Doctrine DSCR Marketing](doctrine-dscr-marketing.md) | `draft` |
 | [Intelligence ICP DSCR](intelligence-icp-dscr.md) | `draft` |
 | [Intelligence DSCR Product](intelligence-dscr-product.md) | `draft` |
+| [DSCR Competitor Ad Intelligence](dscr-competitor-ad-intelligence.md) | `draft` |
 | [Ad Copy And Angle Library (DSCR)](ad-copy-angle-library-dscr.md) | `draft` |
 
 ## Launch build (offer → ads → funnel → nurture → setter)
@@ -40,6 +41,7 @@ End-to-end DSCR refinance funnel assets. **Read the GTM brief first** for the be
 | [MB DSCR Ad Copy Standards](mb-dscr-ad-copy-standards.md) | 1 — ad creative | `draft` |
 | [DSCR Ad Creative — Batch 01](dscr-ad-creative-batch-01.md) | 1 — ad creative | `draft` |
 | [DSCR Landing Page And VSL Copy](dscr-landing-and-vsl.md) | 2 — landing/VSL | `draft` |
+| [DSCR Funnel Form Spec](dscr-funnel-form-spec.md) | 2 — funnel/form | `draft` |
 | [DSCR Lead Nurture And Booking — Laura](dscr-nurture-and-booking-laura.md) | 3 — nurture/booking | `draft` |
 | [DSCR Setter / Appointment-Setting Call Script](dscr-setter-appointment-script.md) | 4 — setter | `draft` |
 | [DSCR Objection-Handling Guide](dscr-objection-handling-guide.md) | 4 — objections | `draft` |

@@ -3,7 +3,7 @@ title: DSCR Ads Playbook
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-05-30
+last_updated: 2026-06-02
 review_cycle: monthly
 artifact_type: playbook
 cloned_from: docs/client-fulfillment/client-marketing/rm-ad-playbook.md, docs/client-fulfillment/client-marketing/reverse-mortgage-ads-playbook.md, docs/client-fulfillment/client-marketing/meta-andromeda-rm-rules.md
@@ -54,7 +54,7 @@ This playbook is cloned from the RM ad system and **inverted**. The RM rules tha
 |---------|--------------|
 | Never name the product at TOF ("reverse mortgage" is a liability) | **Name "DSCR" openly** — investors search it; the name signals competence |
 | Audience is 62+; target/hook on age | **No age** — target on investor intent; business-purpose, no age framing |
-| Lead with emotional relief/security | Lead with **numbers/outcomes** — equity unlocked, payment fixed, fast close |
+| Lead with emotional relief/security | Lead with **outcomes** for a numbers-literate operator — equity unlocked, payment fixed, fast close (operator tone; **never quote figures** — see number-free rule) |
 | De-stigmatize a misunderstood product | **Demand already exists** — prove competence and execution |
 
 **Non-negotiable for every ad:** refinance only (no purchase), business-purpose/investment property, **no pricing or specific figures in copy**, no guarantees ("may qualify"), no tax/legal advice.
@@ -86,6 +86,35 @@ A **qualified DSCR lead** is an investor who **already owns** an income property
 - **Perceived effort (↓):** "no W-2s, no tax returns — qualify on the property."
 
 **New > better.** Don't run "Get a DSCR loan." Frame the outcome: "Pull the equity out of the doors you already own." Sell the destination, not the vehicle (but you *can* name the vehicle here).
+
+### Competitive landscape & differentiation mandate (2026-06)
+
+Grounded in live Meta Ad Library intel — [DSCR Competitor Ad Intelligence](dscr-competitor-ad-intelligence.md)
+(291 ads; refresh monthly). The category is crowded but shallow. These are the rules that separate our
+creative from the field. **Every concept must clear at least the first three.**
+
+1. **Idea-first, not feature-list.** ~60% of competitor ads stack the same checklist ("✅ no income ✅ no
+   tax returns ✅ fast"). That is the sea of sameness. Lead with the **reframe** ("Your tax returns say
+   you're broke. Your rentals say otherwise." / "The property qualifies itself"), *then* name DSCR. Sell
+   the job-to-be-done (stop being told no; free trapped equity), not the spec sheet.
+2. **Own the under-served lanes.** The field is loud on purchase and quiet on refinance pain. Lead with
+   **trapped equity / dead money** (loss aversion), **balloon coming due** (urgency), and **cash-out** —
+   these are the lowest-competition, highest-emotion angles and they map straight to our beachhead
+   (Self-Employed/Write-Off + Hard-Money). Don't open on a generic "no-income" claim everyone runs.
+3. **Proof is the open lane.** Competitor ads are nearly devoid of funded outcomes, investor stories, or
+   "operators like you do this all the time." Substantiated proof is wide open and high-trust — work it
+   into MOF/BOF wherever a real, compliant example exists.
+4. **Lower the first step.** The field defaults to high-friction "Get a quote / Apply now." Offer a
+   low-friction micro-commitment first — "See if your property qualifies" (soft, no-credit-pull framing)
+   — to reduce activation energy before the quote ask.
+5. **Lean into video / creator-led.** Video is only ~14% of active ads yet several are long-runners.
+   Human/creator-led concepts differentiate faster and cheaper than another static feature card.
+6. **Number-free is our edge, not our handicap.** Many competitors lean on "85% LTV" / quoted rates; we
+   can't and won't. The top *human-led* winner succeeds on outcome framing. Reframe + proof beats specs —
+   stay qualitative (see the number-free rule) and treat it as a differentiator.
+7. **Plan for the graveyard.** ~76% of competitor ads die within two weeks. Expect the same: budget for
+   **concept volume** (new angles, not recolors) and judge on refi-ready CPL → booked → showed (per
+   [KPI scorecard](dscr-kpi-and-test-scorecard.md)), never CTR.
 
 ### Platform context — the Andromeda era (creative is the targeting)
 
@@ -175,4 +204,5 @@ If any item fails, the ad is not ready.
 - [MB DSCR Ad Copy Standards](mb-dscr-ad-copy-standards.md)
 - [DSCR Compliance Guardrails](dscr-compliance-guardrails.md)
 - [Doctrine DSCR Marketing](doctrine-dscr-marketing.md)
+- [DSCR Competitor Ad Intelligence](dscr-competitor-ad-intelligence.md)
 - RM analogs: [RM Ad Playbook](../client-marketing/rm-ad-playbook.md) · [Reverse Mortgage Ads Playbook](../client-marketing/reverse-mortgage-ads-playbook.md) · [Meta Andromeda Rules (RM)](../client-marketing/meta-andromeda-rm-rules.md)
