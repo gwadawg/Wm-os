@@ -25,7 +25,7 @@ See [domain owners](../../_inventory/domain-owners.md): **setter** (prompt maint
 1. Create a Claude Project named **"Setter Follow-Up Emails — Waiz"**.
 2. Paste the [System Prompt](#system-prompt-paste-into-project-custom-instructions) below into the project's **custom instructions**.
 3. Upload the [Project knowledge files](#project-knowledge-files-upload-to-the-project) to **project knowledge**.
-4. Per lead, the setter fills in the [User Prompt Template](#user-prompt-template-setter-fills-per-lead) and pastes it into a new chat.
+4. Per lead, the setter starts a new chat with whatever they know — Claude asks structured questions for the rest — or pastes the filled [User Prompt Template](#user-prompt-template-optional-fast-path) to skip questions entirely.
 
 ---
 
@@ -120,12 +120,23 @@ OUTPUT FORMAT (every request)
 5. SEND TIMING — when to send and what the next touch should be if no reply (new value only, no fixed-day bump calendar).
 6. FLAGS — say "CALL INSTEAD" if booking is one step away or the thread needs tone; say "HANDOFF TO GABRIEL" for pricing, legal/compliance challenges, or high-value strategic questions. Confirm no banned phrases or compliance violations.
 
-If the brief is missing critical context (no form answers, no history, unclear goal), ask for it before drafting — a generic email is worse than no email.
+INTAKE
+If the setter's message is missing critical context (stage, form answers, history, objection, goal), do not draft yet. Gather what's missing by asking 2–4 short, specific questions at a time, each with discrete selectable options where possible:
+- Pipeline stage: new lead / booked intro / booked demo / no-show / post-intro / post-demo / gone cold
+- Touches so far (calls + texts): 1 / 2–3 / 4+
+- Main hesitation: burned by agency / "just give me leads" / guarantee questions / market or timing doubts / process questions / none surfaced
+- Email route preference: value-frame / case study / give me both
+Prefer multiple-choice over open-ended. Only ask for free text where options can't cover it (their form answers, call notes, exact words they used). Once you have enough, draft without further questions — a generic email is worse than no email.
 ```
 
 ---
 
-## User Prompt Template (setter fills per lead)
+## User Prompt Template (optional fast path)
+
+Two ways for the setter to start a chat:
+
+- **Quick start (default):** just say who the lead is and what's known ("Mark, LO in FL, no-showed yesterday, said his Meta campaign failed before") — Claude will pull the rest via short structured questions per the INTAKE section.
+- **Full brief (fastest to a draft):** paste this template filled in; Claude drafts immediately with no questions.
 
 ```text
 ## Lead
