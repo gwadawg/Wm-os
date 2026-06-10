@@ -3,7 +3,7 @@ title: Creative Studio Compliance Gate Checklist
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-05-30
+last_updated: 2026-06-10
 review_cycle: monthly
 artifact_type: reference
 ---
@@ -55,6 +55,28 @@ Source: [frameworks-reference.md §F1](frameworks-reference.md). Copy without al
 - [ ] First 5 seconds (video) work without "Hi, I'm [name] from [company]."
 - [ ] CTA is from the approved bank (TOF/MOF info-access; BOF direct invite) and low-friction.
 
+## Part E — Format-specific (testimonial + educational only; any FAIL = fix)
+
+Source: [higgsfield-format-modules.md](higgsfield-format-modules.md). Skip this part for UGC,
+static, and long-form real-talent formats.
+
+**Testimonial (spoken or silent text-overlay):**
+
+- [ ] **Dramatization disclosure documented** in Editor Notes with placement
+      (`Dramatization. Composite of real homeowner experiences. Individual results vary.`) —
+      burned in by the editor, never AI-rendered.
+- [ ] **Story tagged Composite.** Speaker is never presented as a real named client.
+- [ ] **No result dollar figures.** Numbers stay on the struggle side; a real, approved client
+      result is `[TO FILL]` → **HUMAN REVIEW**.
+
+**Educational / explainer:**
+
+- [ ] **Explains, never advises.** No "you should" recommendations; "talk to a qualified
+      professional" framing where relevant.
+- [ ] **B-Roll Sourcing Plan present**, every scene tagged GENERATE / SOURCE / EDITOR.
+- [ ] **Every SOURCE item flagged for licensing check** (licensed stock or client-approved
+      footage only — never grabbed from the open web).
+
 ## Result block (paste into each output)
 
 ```
@@ -63,6 +85,7 @@ A Hard:    PASS / FAIL -> <which item>
 B Stage:   PASS / FIX
 C Quality: PASS (VOC / mechanism / proof / awareness all present?) / DRAFT
 D Hygiene: PASS / FIX
+E Format:  PASS / FIX / N/A (testimonial + educational formats only)
 RESULT: READY  |  DRAFT (reason)  |  HUMAN REVIEW (reason)
 ```
 

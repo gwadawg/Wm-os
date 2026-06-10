@@ -3,7 +3,7 @@ title: RM Ad Ideation Matrix
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-05-30
+last_updated: 2026-06-10
 review_cycle: monthly
 artifact_type: playbook
 ---
@@ -28,11 +28,25 @@ A concept is one point in this space:
 | **Angle** | Burden, Trapped Asset, Surviving vs Living, Breaking News / New Program, No Monthly Payment, Exclusive Access, Cash Out, State-Specific Bulletin, Regret / Social Proof, Heirs Get Equity, Inflation Hedge, Aging-in-Place | [rm-ad-playbook.md](../../client-marketing/rm-ad-playbook.md) + [ad-copy-angle-library-rm.md](../ad-copy-angle-library-rm.md) |
 | **Awareness / Stage** | TOF (Unaware/Problem-aware), MOF (Solution/Product-aware), BOF (Most-aware) | frameworks-reference awareness bridge |
 | **Hook type** | Rhetorical question, Confessional, Specific pain, Demonstration, Myth-bust, Authority, Curiosity gap, Social proof, Niche callout, Paradox | frameworks-reference hook taxonomy (F7) |
-| **Format** | Video script (45-90s), Static image, Carousel | playbook two-format system |
+| **Format** | UGC video (Higgsfield, 18–32s), Spoken testimonial (Higgsfield, 25–40s), Silent text-overlay testimonial (Higgsfield b-roll, 45–60s), Educational explainer (Higgsfield + sourced b-roll, 30–60s), Long-form video script (45–90s, real talent), Static image, Carousel | [higgsfield-prompt-builder.md](higgsfield-prompt-builder.md) + [higgsfield-format-modules.md](higgsfield-format-modules.md) + playbook two-format system |
+
+### Format ↔ stage fit (use when picking or recommending a format)
+
+| Format | TOF | MOF | BOF | Natural hook pairings |
+|--------|-----|-----|-----|------------------------|
+| UGC video | Strong | Strong | OK | Confessional, Specific pain, Rhetorical question |
+| Spoken testimonial | OK (product unnamed) | Strong | Strong | Confessional, Social proof, Paradox |
+| Silent text-overlay testimonial | Strong | Strong | Weak | Specific pain, Paradox, Curiosity gap |
+| Educational explainer | OK (myth-hook variant) | Strong | Strong | Myth-bust, Authority, Demonstration |
+| Long-form script (real talent) | OK | Strong | Strong | Any (full education arc) |
+
+Both testimonial formats are **composites (dramatizations)** and carry the disclosure rule —
+see [higgsfield-format-modules.md](higgsfield-format-modules.md).
 
 ## Generation logic (how `brainstorm` works)
 
-Input: an **archetype** (or "any"), a **stage**, and a **count** N.
+Input: an **archetype** (or "any"), a **stage**, a **count** N, and optionally a **format**
+(or "any" — then recommend per the format ↔ stage fit table above).
 
 1. **Anchor the emotion.** Pull the archetype's core fear + desire + best angles from
    [rm-archetypes-canonical.md](rm-archetypes-canonical.md), and the matching VOC phrases +
@@ -53,7 +67,7 @@ Input: an **archetype** (or "any"), a **stage**, and a **count** N.
 | Angle | Heirs Get the Equity |
 | Stage | MOF |
 | Hook type | Myth-bust |
-| Format | Video script |
+| Format | Educational explainer (Higgsfield) |
 | One-line premise | Dismantle the "my kids inherit the debt" fear by showing the non-recourse guarantee. |
 | Lead hook (direction) | "Worried your kids will inherit a bill? Here's what actually happens." |
 | VOC anchor | "I don't want to ask my kids for help." |

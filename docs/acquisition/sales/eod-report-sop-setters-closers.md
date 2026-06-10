@@ -3,7 +3,7 @@ title: EOD Report SOP (Setters And Closers)
 domain: acquisition
 owner: sales-leadership
 status: draft
-last_updated: 2026-05-29
+last_updated: 2026-06-10
 review_cycle: weekly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Sales Admin Work/EOD Report SOP (Setters & Closers).docx
 artifact_type: sop
@@ -33,7 +33,7 @@ Submit the EOD form when the setter/closer **wraps for the day** — no fixed cl
 
 ## Inputs
 
-- GHL pipeline, tasks, call/SMS history, KPI tracker
+- GHL daily queue (**DQ-1**, **DQ-3**), Opportunities board, tasks, call/SMS history, KPI tracker
 - Notes from today’s intros, dialer, watchshift, confirmations
 
 ## Outputs
@@ -59,19 +59,19 @@ Answer **yes** on the form only if true. Mirrors the [daily checklist](setter-da
 | Task | Standard |
 |------|----------|
 | **Setter KPI tracker** | Filled for the day (dials, outcomes, etc.) |
-| **Pipeline cleared** | No active lead without a **pipeline stage**, accurate disposition context, or **GHL task** (assigned to self or Gabriel) |
+| **Pipeline cleared** | **DQ-1** empty OR every row snoozed (Next Work Date ≥ tomorrow + task). **DQ-3** zero overdue. Scan Opportunities board for orphans. |
 | **Dispositions correct** | Every lead you **spoke with** today is reflected in CRM — see [disposition rules](#setter-disposition-rules) |
 | **GHL tasks** | Your open tasks current; anything waiting on Gabriel is assigned to Gabriel with context |
-| **Hotlist** | See [Hotlist](#hotlist-setter) |
+| **Hotlist / DQ-1** | See [Hotlist](#hotlist-setter) — A-grade in DQ-1 cleared or snoozed |
 | **Notes** | No “called only” records — calls/SMS threads have notes per [Setter Lead Messaging](setter-lead-messaging.md) |
 
 **Not required:** Routine “audit the next 3–4 days and mark bookings FREE” unless ops assigns a one-off calendar cleanup. Speed-to-lead on **new** bookings is [Watchshift](sop-watchshift.md) / P1, not a standing EOD calendar audit.
 
 ### Hotlist (setter)
 
-Leads you flagged today as **high intent** (e.g. pipeline stage **Setter quality lead**, strong intro, waiting on a reply). Before EOD:
+High-intent leads surface as **A-grade rows in DQ-1** and pipeline stage **Setter Quality Lead**. Before EOD:
 
-- Touch each hotlist lead (call, value SMS, or task), **or**
+- Clear **DQ-1** — touch each A-grade lead (call, value SMS, snooze with Next Work Date, or task), **or**
 - Create/update a GHL task with the next step and date.
 
 Do not leave hotlist names only in your head or Slack.
@@ -138,6 +138,8 @@ Flag patterns for pre-call assets or script updates (e.g. repeated “what’s t
 - Closer KPI tracker complete  
 - New clients: new-client form + Slack  
 - Pipeline: no-shows staged correctly; demos and follow-ups current  
+- **SL-C2** (Negotiating) — every deal has a next step or GHL task  
+- **SL-C3** (Gabriel Tasks Due) — zero overdue handoffs  
 - Hot list completed  
 - Post-demo call forms filled  
 - Calendar: unqualified/low-quality future bookings marked FREE (closer-owned hygiene)
@@ -183,6 +185,7 @@ EOD is a standard, not optional when reps push back on change.
 - [Setter Lead Messaging](setter-lead-messaging.md) — notes + SMS
 - [Watchshift SOP](sop-watchshift.md)
 - [Power Dialer New Leads SOP](sop-power-dialer-new-leads.md)
+- [GHL Pipeline And Disposition Reference](ghl-pipeline-disposition-reference.md) — daily queue DQ-1/DQ-2/DQ-3
 - [No Shows and Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md)
 - [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md)
 - [Identity Core](../../company/doctrine-identity-core-april-26.md)

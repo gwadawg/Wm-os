@@ -49,6 +49,8 @@ Pricing and packaging: [Money Model](../../company/overview-money-model-april-26
 
 ### Process architecture and improvement
 
+- [GHL Pipeline And Disposition Reference](ghl-pipeline-disposition-reference.md) — stages, tags, fields, daily queue (DQ-1/DQ-2/DQ-3), closer lists
+- [GHL Automation Workflows](ghl-automation-workflows.md) — build spec for the 9 acquisition automations
 - [Sales Process Design SOP](sop-sales-process-design.md)
 - [Sales Advice Intake SOP](sop-sales-advice-intake.md)
 - [Script Factory SOP](sop-script-factory.md)

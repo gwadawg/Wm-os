@@ -3,7 +3,7 @@ title: A-Z Client Onboarding SOP
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-05-21
+last_updated: 2026-06-10
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Onboarding/Updated A-Z Onboarding Document.docx
 artifact_type: sop
@@ -63,11 +63,20 @@ Systematic Readiness: Launch readiness is a calculated state based on QA and dep
 
 This phase kicks off once a new client has formally agreed to the terms of service and completed the payment. It involves critical actions by the Closer and automated steps to initiate the onboarding journey.
 
+**System of record:** Mr. Waiz (Supabase `clients` table) holds the master client record for reporting, billing, and CEO metrics. ClickUp Client Hub remains the task execution layer for onboarding checklists. Make.com orchestrates both — call Mr. Waiz **before** GHL contact creation and Slack setup.
+
 Actions & Dependencies
 
-Closer fills out the New Client Form (Business Name, Client Name, Email, Phone, Contract, Offer, etc.).
+Closer fills out the **GHL New Client Form** (Business Name, Client Name, Email, Phone, Contract, Offer, etc.).
 
-Automation triggers: Slack notification to the team, GHL contact creation, Manager assignment, Slack channel creation (General & Scheduling), and ClickUp main onboarding task creation.
+Make.com automation (in order):
+
+1. **Mr. Waiz** — `POST /api/admin/onboard` creates/updates the Supabase client (`lifecycle_status: new_account`) and a ClickUp Client Hub task; returns `client_id` and `clickup_task_id`.
+2. **GHL** — contact creation in the client subaccount (unchanged).
+3. **Slack** — team notification, manager assignment, channel creation (General & Scheduling).
+4. **ClickUp** — downstream onboarding checklist tasks may reference the Client Hub task id from step 1.
+
+Do **not** manually add clients in Mr. Waiz Client Roster for every new close — that tab is for corrections and missing fields (e.g. `ghl_location_id`).
 
 Communication
 

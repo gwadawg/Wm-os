@@ -3,7 +3,7 @@ title: Power Dialer New Leads SOP
 domain: acquisition
 owner: setter
 status: draft
-last_updated: 2026-05-29
+last_updated: 2026-06-10
 review_cycle: weekly
 artifact_type: sop
 ---
@@ -33,7 +33,7 @@ See [domain owners](../../_inventory/domain-owners.md): **setter**.
 
 ## Inputs
 
-- New-lead queue in GHL/power dialer, sorted **newest → oldest**
+- **DQ-1 — Clear Today** smart list in GHL (Contacts → Smart Lists) — see [GHL Daily Queue](ghl-pipeline-disposition-reference.md#dq-1--clear-today-primary-outbound-queue)
 - Dialer access and active line
 - [Intro Call Script](script-intro-call-basic.md) — on connect use [Opening 3 — Dialer / impromptu](script-intro-call-basic.md#opening-3--dialer--impromptu) (other openings if they already booked)
 - [Intro Call Qualification Framework](intro-call-qualification-framework.md)
@@ -49,16 +49,19 @@ See [domain owners](../../_inventory/domain-owners.md): **setter**.
 ## Process
 
 1. Confirm P1–P4 are clear — do not start dialer while watchshift backlog or higher priorities are open.
-2. Pull queue **newest → oldest**; do not cherry-pick unless ops assigns a hot list.
-3. **Per lead:**
+2. Open **DQ-1 — Clear Today**. Work **top to bottom** until empty or every remaining row snoozed. Do not cherry-pick from Opportunities.
+3. **Within DQ-1, prioritize:** fresh New Leads → Engaged replies → A-grade → everything else.
+4. **Per lead:**
    1. **Call first** (live attempt per cadence below).
    2. If no connect → voicemail; then **value-based text** if they have never been texted or follow-up is due — see [Setter Lead Messaging](setter-lead-messaging.md).
    3. If connect → intro script + FUN; book next step or route disqualify/Boot Camp.
    4. **Notes required** — every lead you **speak with** gets CRM notes (what was said, motivators, objection, next step). A call without notes is incomplete.
-   5. **Immediately** update pipeline stage after the touch.
-   6. If callback or Gabriel input needed → GHL task (assigned correctly).
-4. **SMS during the block:** see [Texting during dial blocks](#texting-during-dial-blocks).
-5. End block with no leads left in “called but not staged” limbo — aligns with EOD **pipeline cleared** on the checklist.
+   5. **Lead Grade** on every connect (A/B/C/Junk) — A-grade gets priority in DQ-1 next day
+   6. **Immediately** update pipeline stage on the Opportunities board after the touch.
+   7. If callback or Gabriel input needed → GHL task (assigned correctly).
+   8. **Defer without closing:** set **Next Work Date** (tomorrow or future) + GHL task + note — lead leaves DQ-1 until that date.
+5. **SMS during the block:** see [Texting during dial blocks](#texting-during-dial-blocks).
+6. End block with DQ-1 empty or all remaining rows snoozed — aligns with EOD **pipeline cleared** on the checklist.
 
 ---
 
@@ -105,7 +108,7 @@ Update the **GHL pipeline stage** on every lead you work in this block (not only
 | Qualified → demo with closer booked | Stage reflects demo booked; notes for closer |
 | Not DFY fit | Route per [Disqualifying and Financial Qualification](disqualifying-financial-qualification.md) — Boot Camp or lost |
 | Bad data / wrong number | Mark lost or bad lead per CRM convention + note |
-| No answer, will retry | Follow-up stage or task with callback time |
+| No answer, will retry tomorrow | Next Work Date = tomorrow + GHL task; Last Human Touch updates on attempt |
 
 ### Call attempt notes (optional layer)
 
@@ -118,7 +121,9 @@ If your workflow separates **stage** from **last attempt**, you may also log:
 
 ## Decision rules
 
-- Work **newest → oldest** unless Gabriel assigns a hotlist override.
+- Work **DQ-1** top to bottom — one daily outbound queue, not Opportunities cherry-picking.
+- **Touch today** (call/SMS) → Last Human Touch auto-updates → out of DQ-1 for the day.
+- **Snooze** → Next Work Date + task when deferring without a full close.
 - Do not skip P1–P4 to “just finish dials.”
 - Connected leads use acquisition intro script — **not** fulfillment call-center scripts ([Call Center index](../../client-fulfillment/call-center/README.md)).
 - Quality pre-demo lead → **Setter quality lead** stage (same definition as [Watchshift SOP](sop-watchshift.md#sms-responses-pre-demo)).
@@ -159,10 +164,11 @@ If your workflow separates **stage** from **last attempt**, you may also log:
 - [Objection Handling Hub](objection-handling-hub.md)
 - [Setter Lead Messaging](setter-lead-messaging.md) — value-based SMS + notes discipline
 - [EOD Report SOP](eod-report-sop-setters-closers.md) — pipeline cleared
+- [GHL Pipeline And Disposition Reference](ghl-pipeline-disposition-reference.md) — DQ-1 build spec + Next Work Date rules
 - [Client Fulfillment — Call Center](../../client-fulfillment/call-center/README.md) — out of scope
 
 ## Open Questions
 
 - [ ] Confirm retry-day schedule after day 1 (ops).
 - [ ] Confirm whether voicemail is required on every no-answer or only attempt 3.
-- [ ] Document full GHL pipeline stage list in one disposition reference (when remaining stages are confirmed).
+- [x] Document full GHL pipeline stage list in one disposition reference — see [GHL Pipeline And Disposition Reference](ghl-pipeline-disposition-reference.md) (draft, 2026-06-10).

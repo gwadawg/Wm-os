@@ -17,8 +17,9 @@ Read these from `docs/client-fulfillment/media-buying/creative-studio/` and sibl
 2. [rm-archetypes-canonical.md](../../../docs/client-fulfillment/media-buying/creative-studio/rm-archetypes-canonical.md) — archetypes <-> personas <-> angles.
 3. [rm-ad-ideation-matrix.md](../../../docs/client-fulfillment/media-buying/creative-studio/rm-ad-ideation-matrix.md) — the brainstorm engine.
 4. [rm-script-generator.md](../../../docs/client-fulfillment/media-buying/creative-studio/rm-script-generator.md) — the 5-part script engine + Video Brief.
-5. [compliance-gate-checklist.md](../../../docs/client-fulfillment/media-buying/creative-studio/compliance-gate-checklist.md) — the gate every output passes.
-6. [higgsfield-prompt-builder.md](../../../docs/client-fulfillment/media-buying/creative-studio/higgsfield-prompt-builder.md) — concept → Higgsfield AI-video prompt (short UGC). Load for the `prompt` command.
+5. [compliance-gate-checklist.md](../../../docs/client-fulfillment/media-buying/creative-studio/compliance-gate-checklist.md) — the gate every output passes (incl. Part E format checks).
+6. [higgsfield-prompt-builder.md](../../../docs/client-fulfillment/media-buying/creative-studio/higgsfield-prompt-builder.md) — concept → Higgsfield AI-video prompt (short UGC) + the shared production mechanics. Load for the `prompt` command.
+7. [higgsfield-format-modules.md](../../../docs/client-fulfillment/media-buying/creative-studio/higgsfield-format-modules.md) — spoken testimonial (T1, dramatization rule), silent text-overlay testimonial (T2), educational/explainer (E1, B-Roll Sourcing Plan). Load with the prompt builder whenever the concept's format is not UGC.
 
 Pull voice/pain/objections from [intelligence-icp-rm.md](../../../docs/client-fulfillment/reverse-mortgage-dna/intelligence-icp-rm.md)
 and structure from [rm-ad-playbook.md](../../../docs/client-fulfillment/client-marketing/rm-ad-playbook.md).
@@ -35,7 +36,9 @@ file until the user explicitly says to save (see File Policy).
 
 ### Step 1 — Concept
 1. Collect only the **minimal missing inputs** by asking: archetype (or "any"), angle + stage
-   (TOF/MOF/BOF, or "any"), and count N. If the user already gave these, don't re-ask — proceed.
+   (TOF/MOF/BOF, or "any"), creative format (UGC / spoken testimonial / silent text-overlay
+   testimonial / educational, or "any" — recommend per the matrix's format ↔ stage fit table),
+   and count N. If the user already gave these, don't re-ask — proceed.
 2. Generate concept(s) per the [ideation matrix](../../../docs/client-fulfillment/media-buying/creative-studio/rm-ad-ideation-matrix.md):
    anchor emotion -> spread across angle x hook -> respect stage rules -> tag + screen. Enforce the
    anti-overlap rule (no two concepts share archetype + angle + hook type).
@@ -56,15 +59,25 @@ file until the user explicitly says to save (see File Policy).
 2. Keep iterating until the user says the script is locked. **Do not advance** to Step 4 until then.
 
 ### Step 4 — Higgsfield prompt (with its own reiteration loop)
-1. Build the prompt from the **locked script** per the
-   [higgsfield-prompt-builder.md](../../../docs/client-fulfillment/media-buying/creative-studio/higgsfield-prompt-builder.md):
-   pick format by stage (Full Stack 28-32s cold/TOF, or Mid-Funnel 18-22s warmer MOF/BOF); write the
-   short UGC voiceover (Debt -> Retirement-Tool reframe, verbatim VOC, plain mechanism + one tactile
-   analogy, no em dashes/bolding in VO); choose standard or chunked delivery (paste the character lock
-   + all five direction blocks, incl. 3.5 Clean Frame + Audio = no rendered text/captions, no music,
-   into every chunk); apply the reveal-asset pattern (**TOF = all NO**;
-   MOF/BOF reveal only at the mechanism beat); run the compliance gate.
-2. Show the full output **inline** (Voiceover + Prompt(s) + Frameworks Applied + Compliance Gate).
+1. Build the prompt from the **locked script**, **routed by the concept's creative format**:
+   - **UGC** → [higgsfield-prompt-builder.md](../../../docs/client-fulfillment/media-buying/creative-studio/higgsfield-prompt-builder.md):
+     pick length by stage (Full Stack 28-32s cold/TOF, or Mid-Funnel 18-22s warmer MOF/BOF); write the
+     short UGC voiceover (Debt -> Retirement-Tool reframe, verbatim VOC, plain mechanism + one tactile
+     analogy, no em dashes/bolding in VO).
+   - **Spoken testimonial / silent text-overlay / educational** →
+     [higgsfield-format-modules.md](../../../docs/client-fulfillment/media-buying/creative-studio/higgsfield-format-modules.md)
+     (T1/T2/E1), reusing the builder's shared mechanics. Testimonials carry the **dramatization
+     rule** (Composite tag + disclosure in Editor Notes, no result dollar figures); silent
+     text-overlay outputs per-scene b-roll prompts + caption table in Editor Notes; educational
+     outputs the **B-Roll Sourcing Plan** (GENERATE / SOURCE / EDITOR, licensing flags on SOURCE)
+     before the prompt chunks.
+   - All formats: choose standard or chunked delivery (paste the character lock
+     + all five direction blocks, incl. 3.5 Clean Frame + Audio = no rendered text/captions, no music,
+     into every chunk); apply the reveal-asset pattern (**TOF = all NO**;
+     MOF/BOF reveal only at the mechanism beat); run the compliance gate (incl. Part E for
+     testimonial/educational).
+2. Show the full output **inline** (Voiceover/captions + Prompt(s) + B-Roll Sourcing Plan if
+   educational + Editor Notes + Frameworks Applied + Compliance Gate).
 3. **The first prompt is often not good — iterate.** Loop on feedback, re-showing the **full revised
    prompt inline** each pass (mirroring Step 3), until the user says it's locked. **Do not advance to
    save** until then.

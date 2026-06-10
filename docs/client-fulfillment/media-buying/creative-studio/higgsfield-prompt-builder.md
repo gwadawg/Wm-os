@@ -3,7 +3,7 @@ title: Higgsfield Prompt Builder (RM UGC)
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-05-30
+last_updated: 2026-06-10
 review_cycle: monthly
 artifact_type: playbook
 ---
@@ -22,11 +22,31 @@ prompt** — single-prompt or chunked. Powers the `prompt` command of the
 > prompt framework). The transferable production mechanics are kept; the beauty/skin/physical-product
 > parts are replaced for reverse mortgage; an RM compliance overlay is added (the source has none).
 
+## 0. Format selector (start here)
+
+This doc is the **UGC creator-to-camera** format AND the home of the shared production
+mechanics (direction blocks §3, character lock §4, asset tagging §5, skeletons §6–7,
+camera/failure standards §8, compliance overlay §10). Three more formats live in
+[higgsfield-format-modules.md](higgsfield-format-modules.md) and reuse those mechanics:
+
+| Concept's format | Build with |
+|------------------|------------|
+| UGC creator-to-camera (18–32s) | **This doc** (§1 onward) |
+| Spoken testimonial (25–40s, dramatization rule) | [Format modules — T1](higgsfield-format-modules.md) |
+| Silent text-overlay testimonial (45–60s, captions by editor) | [Format modules — T2](higgsfield-format-modules.md) |
+| Educational / explainer (30–60s, with B-Roll Sourcing Plan) | [Format modules — E1](higgsfield-format-modules.md) |
+
+If the concept has no format, recommend one by stage and hook type (the modules doc has the
+selector table), then confirm before building.
+
 ## Scope
 
 - **In:** concept → short UGC voiceover → Higgsfield prompt(s) (standard or chunked), UGC
-  creator-to-camera, RM compliant.
-- **Out:** the 45–90s long-form script (use [rm-script-generator.md](rm-script-generator.md));
+  creator-to-camera, RM compliant. Plus the shared mechanics the
+  [format modules](higgsfield-format-modules.md) build on.
+- **Out:** testimonial + educational formats (use
+  [higgsfield-format-modules.md](higgsfield-format-modules.md)); the 45–90s long-form script
+  (use [rm-script-generator.md](rm-script-generator.md));
   static images ([ai-rm-ad-image-creation-sop.md](../ai-rm-ad-image-creation-sop.md)); the
   future auto-render agent ([FUTURE-video-agent-spec.md](FUTURE-video-agent-spec.md)).
 - **Generic RM only.** No client-specific names, amounts, or results — use `[TO FILL]`.
@@ -38,7 +58,7 @@ prompt** — single-prompt or chunked. Powers the `prompt` command of the
 - Talent demographic and setting preference (optional; defaults below).
 - Whether a program-reveal asset is available (on-screen text card, document prop). TOF never uses one.
 
-## 1. Two formats (pick by funnel stage)
+## 1. Two UGC lengths (pick by funnel stage)
 
 | Attribute | Full Stack | Mid-Funnel Punchy |
 |-----------|-----------|-------------------|
@@ -318,8 +338,13 @@ A Hard:    PASS / FAIL -> <item>
 B Stage:   PASS / FIX
 C Quality: PASS (VOC / mechanism / proof / awareness) / DRAFT
 D Hygiene: PASS / FIX
+E Format:  PASS / FIX (testimonial + educational formats only — disclosure, no result figures, b-roll licensing)
 RESULT: READY | DRAFT (reason) | HUMAN REVIEW (reason)
 ```
+
+For testimonial and educational formats, the [format modules](higgsfield-format-modules.md)
+add to this template: a `Format:` + `Story type:` line, an **Editor Notes** section, and (for
+educational) the **B-Roll Sourcing Plan** table.
 
 ## Quality escalation
 

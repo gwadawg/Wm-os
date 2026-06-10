@@ -3,7 +3,7 @@ title: Setter Daily Checklist
 domain: acquisition
 owner: setter
 status: draft
-last_updated: 2026-05-29
+last_updated: 2026-06-10
 review_cycle: weekly
 artifact_type: checklist
 source_document: source-docs/waiz-drive-export/Waiz Media OS/01 _ Acquisition/Sales/Sales (SOPs)/Sales Admin Work/Setter Daily Operations Playbook_ A Guide to Maximizing Opportunities.docx
@@ -29,18 +29,19 @@ Setter role: intro calls, speed-to-lead, confirmations, outbound, LinkedIn hando
 
 ## How to use this doc
 
-1. **Start of shift** — quick prep (below).
+1. **Start of shift** — open **DQ-1** (Clear Today) to see today's outbound workload. See [GHL Daily Queue](ghl-pipeline-disposition-reference.md#smart-list-quick-reference).
 2. **Always first** — true drop-everything items only.
 3. **Priority list (P1–P7)** — work in order; do not drop to a lower priority until the one above is clear for this block.
 4. **Intro calls (P1)** — any time you’re on an intro (alert, watchshift, or calendar slot), run the [intro script](script-intro-call-basic.md); don’t duplicate steps here.
-5. **End of day** — submit EOD when you wrap (no fixed clock-out time).
+5. **End of day** — submit EOD when you wrap (no fixed clock-out time). Update stages on the **Opportunities board** after every touch; use smart lists to find who to work.
 
 ---
 
 ## Start of Shift
 
 - [ ] Confirm watchshift channels are live (GHL, Slack notifications on)
-- [ ] Glance at today’s calendar — any **intro or demo appointments** today? (same workflow either way; only the slots change)
+- [ ] Open **Contacts → Smart Lists** — pinned: **DQ-1**, **DQ-2**, **DQ-3**
+- [ ] Glance at **DQ-1** queue size for the day
 - [ ] **GHL tasks:** When you see a follow-up or opportunity, create a **task for yourself** in GHL. If it needs Gabriel, create a **task assigned to Gabriel** — don’t rely on memory or Slack alone.
 
 ---
@@ -50,6 +51,7 @@ Setter role: intro calls, speed-to-lead, confirmations, outbound, LinkedIn hando
 Only these override the current priority block. Everything else stays in the stack.
 
 - [ ] **Watchshift alert** (Slack/GHL) → handle immediately per [Watchshift SOP](sop-watchshift.md), then ✅ or tag Gabriel on the thread
+- [ ] **New inbound lead** → appears in **DQ-1**; call within watchshift window
 - [ ] **New inbound booking** (notification) → [Priority 1](#priority-1--intro-calls) — call now, don’t wait for the slot
 - [ ] **Live intro or demo no-show** (you’re on the call slot now) → [Priority 6](#priority-6--no-shows) protocol
 
@@ -99,9 +101,11 @@ _Framework: [Intro Call Qualification Framework](intro-call-qualification-framew
 
 Call prospects with a **demo** on the calendar in the next **24–48 hours** and **every demo morning-of**. Do not rely on automations alone.
 
+**List:** Open **DQ-2 — Confirmations**. Work top to bottom. Includes intros and demos due within 2 days.
+
 **Script:** [Demo Appointment Confirmation Script](script-demo-appointment-confirmation.md) — phone flow, content tie-down, SMS backup, CRM note template.
 
-- [ ] Pulled list of all **demos** in the next 24–48 hours **and today**
+- [ ] Cleared **DQ-2** — every contact called (demos in next 24–48 hours **and today**)
 - [ ] Called every booked prospect to confirm (word-for-word: confirmation script)
 - [ ] Double tie-down: date/time + verbal commitment + computer/Zoom
 - [ ] Pre-call video: re-tie watch commitment or send correct asset ([Pre-Call Objection Videos](../marketing/pre-call-objection-videos.md#quick-send-by-objection))
@@ -133,23 +137,28 @@ _Process: [LinkedIn Outbound Process](../outbound/linkedin/process.md) | Copy: [
 
 ---
 
-## Priority 5 — Power Dialer: New Leads
+## Priority 5 — Power Dialer: Clear DQ-1
 
-Only after P1–P4 are clear for this block. Newest → oldest.
+Only after P1–P4 are clear for this block. **DQ-1** is also the P6 no-show queue — same list, same discipline.
 
-- [ ] Dialing new leads: newest → oldest
-- [ ] Text after calling when needed; text replies per [texting rules](#texting-rules-all-priorities) — then back to dialing
-- [ ] Objections via text — steered to booking ([Objection Handling Hub](objection-handling-hub.md))
-- [ ] **Notes + pipeline stage** on every lead spoken with; text follow-up if they haven’t been messaged ([Setter Lead Messaging](setter-lead-messaging.md))
-- [ ] GHL task for callbacks you can’t hit today
+**List:** **DQ-1 — Clear Today**. Work top to bottom until empty or every remaining row snoozed with **Next Work Date**.
 
-_SOP: [Power Dialer New Leads SOP](sop-power-dialer-new-leads.md)_
+- [ ] **DQ-1** worked top to bottom — New Lead, Engaged, Quality, No-Shows
+- [ ] Within list: fresh New Leads and Engaged replies first, then A-grade, then rest
+- [ ] **Touch today** = Last Human Touch updates (auto) → lead drops out for the day
+- [ ] **Can't reach / defer** = set **Next Work Date** + GHL task + note
+- [ ] Text after calling when needed; text replies per [texting rules](#texting-rules-all-priorities) — then back to DQ-1
+- [ ] **Lead Grade** on every connect
+- [ ] **Notes + pipeline stage** on every lead spoken with ([Setter Lead Messaging](setter-lead-messaging.md))
+- [ ] GHL task for callbacks you can't hit today
+
+_SOP: [Power Dialer New Leads SOP](sop-power-dialer-new-leads.md) | Lists: [GHL Daily Queue](ghl-pipeline-disposition-reference.md#setter-lists-daily-queue-model)_
 
 ---
 
 ## Priority 6 — No-Shows
 
-This week’s no-shows first, then archived.
+No-shows in **Intro No Show** / **Demo No Show** stages appear in **DQ-1**. Work them there during P5/P6 using the protocol below. After DQ-1 is clear, archived no-shows can be pulled from the Opportunities board.
 
 **Per no-show:**
 
@@ -198,10 +207,12 @@ Submit when you’re done for the day — flexible timing.
 **Admin**
 
 - [ ] Setter KPI tracker filled out
-- [ ] **Pipeline cleared** — nothing sitting without a next step: every active lead has a stage, disposition, or GHL task (self or Gabriel)
-- [ ] **Dispositions correct** — today’s calls reflected in CRM (booked demo, Boot Camp, lost, no-show, follow-up, etc.); fake/junk → lost; stuck call-book stages moved; no-shows in no-show stage
+- [ ] **DQ-1 cleared** — zero rows, OR every remaining row has **Next Work Date** ≥ tomorrow + GHL task
+- [ ] **DQ-3 cleared** — zero overdue scheduled follow-ups
+- [ ] **Pipeline cleared** on Opportunities board — scan for orphans
+- [ ] **Dispositions correct** — today's calls reflected in CRM
 - [ ] Open **GHL tasks** up to date (your tasks + anything waiting on Gabriel)
-- [ ] **Hotlist** followed up — see [EOD Report SOP](eod-report-sop-setters-closers.md)
+- [ ] **Hotlist** — A-grade rows in DQ-1 touched or snoozed; see [EOD Report SOP](eod-report-sop-setters-closers.md)
 
 **Metrics to report**
 
@@ -238,4 +249,5 @@ _SOP: [EOD Report SOP](eod-report-sop-setters-closers.md)_
 | Pre-call nurture videos | [Pre-Call Objection Videos](../marketing/pre-call-objection-videos.md) |
 | Objections | [Objection Handling Hub](objection-handling-hub.md) |
 | EOD | [EOD Report SOP](eod-report-sop-setters-closers.md) |
+| GHL daily queue + pipeline | [GHL Pipeline And Disposition Reference](ghl-pipeline-disposition-reference.md) |
 | Offers / routing | [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md) |
