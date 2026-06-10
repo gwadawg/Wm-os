@@ -226,6 +226,7 @@ Avoid fake scarcity (“only X spots”) unless ops provides real capacity langu
 
 ## Related Docs
 
+- [Setter Follow-Up Email Claude Project Prompt](prompt-setter-followup-email.md) — same rules, email channel (Claude Project)
 - [Setter Daily Checklist](setter-daily-checklist.md)
 - [Demo Appointment Confirmation Script](script-demo-appointment-confirmation.md)
 - [Watchshift SOP](sop-watchshift.md)
