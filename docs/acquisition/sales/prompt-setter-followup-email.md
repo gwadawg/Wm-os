@@ -33,25 +33,29 @@ See [domain owners](../../_inventory/domain-owners.md): **setter** (prompt maint
 
 ### Core bundle (essential)
 
-| File | Why it's in the project |
-|------|------------------------|
-| [doctrine-identity-core-april-26.md](../../company/doctrine-identity-core-april-26.md) | Who Waiz is, origin story, voice, positioning boundaries |
-| [overview-money-model-april-26.md](../../company/overview-money-model-april-26.md) | Offer architecture (DFY + Boot Camp), routing — contains no live pricing |
-| [wm-sales-intelligence-bible.md](../intelligence/wm-sales-intelligence-bible.md) | LO beliefs, fears, misunderstandings, and approved reframes |
-| [setter-lead-messaging.md](setter-lead-messaging.md) | Setter follow-up rules, value frameworks, example library |
-| [case-study-email-copy-framework.md](../marketing/case-study-email-copy-framework.md) | 3-step proof email structure |
-| [sop-money-tales-email-copy-framework.md](../marketing/sop-money-tales-email-copy-framework.md) | Story-driven nurture email structure |
-| [pre-call-objection-videos.md](../marketing/pre-call-objection-videos.md) | The 7 video URLs + transcripts — approved phrasing source |
-| [wm-objection-categories.md](wm-objection-categories.md) | Fear / uncertainty / logistical taxonomy and diagnosis |
-| [linkedin compliance.md](../outbound/linkedin/compliance.md) | B2B mortgage guardrails (rename to `b2b-compliance.md` on upload) |
+
+| File                                                                                            | Why it's in the project                                                  |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [doctrine-identity-core-april-26.md](../../company/doctrine-identity-core-april-26.md)          | Who Waiz is, origin story, voice, positioning boundaries                 |
+| [overview-money-model-april-26.md](../../company/overview-money-model-april-26.md)              | Offer architecture (DFY + Boot Camp), routing — contains no live pricing |
+| [wm-sales-intelligence-bible.md](../intelligence/wm-sales-intelligence-bible.md)                | LO beliefs, fears, misunderstandings, and approved reframes              |
+| [setter-lead-messaging.md](setter-lead-messaging.md)                                            | Setter follow-up rules, value frameworks, example library                |
+| [case-study-email-copy-framework.md](../marketing/case-study-email-copy-framework.md)           | 3-step proof email structure                                             |
+| [sop-money-tales-email-copy-framework.md](../marketing/sop-money-tales-email-copy-framework.md) | Story-driven nurture email structure                                     |
+| [pre-call-objection-videos.md](../marketing/pre-call-objection-videos.md)                       | The 7 video URLs + transcripts — approved phrasing source                |
+| [wm-objection-categories.md](wm-objection-categories.md)                                        | Fear / uncertainty / logistical taxonomy and diagnosis                   |
+| [linkedin compliance.md](../outbound/linkedin/compliance.md)                                    | B2B mortgage guardrails (rename to `b2b-compliance.md` on upload)        |
+
 
 ### Optional (add if the project has room)
 
-| File | Why |
-|------|-----|
-| [no-shows-maximizing-show-rates-setter-levers.md](no-shows-maximizing-show-rates-setter-levers.md) | No-show recovery and confirmation email context |
-| [ghl-automation-workflows.md](ghl-automation-workflows.md) | What automated touches the lead already receives — avoid duplicates |
-| [linkedin copy-angles.md](../outbound/linkedin/copy-angles.md) | Peer-tone angle library for openers |
+
+| File                                                                                               | Why                                                                 |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| [no-shows-maximizing-show-rates-setter-levers.md](no-shows-maximizing-show-rates-setter-levers.md) | No-show recovery and confirmation email context                     |
+| [ghl-automation-workflows.md](ghl-automation-workflows.md)                                         | What automated touches the lead already receives — avoid duplicates |
+| [linkedin copy-angles.md](../outbound/linkedin/copy-angles.md)                                     | Peer-tone angle library for openers                                 |
+
 
 ---
 
@@ -135,7 +139,7 @@ OUTPUT FORMAT (every request)
 6. FLAGS — say "CALL INSTEAD" if booking is one step away or the thread needs tone; say "HANDOFF TO GABRIEL" for pricing, legal/compliance challenges, or high-value strategic questions; say "LOW-CONTEXT" if drafted with fewer than two lead-specific details. Confirm no banned phrases or compliance violations.
 
 INTAKE
-If the setter's message is missing critical context (stage, form answers, history, objection, goal), do not draft yet. Gather what's missing by asking 2–4 short, specific questions at a time, each with discrete selectable options where possible:
+If the setter's message is missing critical context (stage, form answers, history, objection, goal), do not draft yet. Your first response must contain ONLY questions — no preamble, no partial draft. Use your interactive question form capability (clickable multiple-choice options), never plain-text question lists: present ONE batch of 2–4 questions, each with 2–6 tappable options, single-choice wherever possible (avoid multi-select checklists). Question menu:
 - Pipeline stage: new lead / booked intro / booked demo / no-show / post-intro / post-demo / gone cold
 - Touches so far (calls + texts + emails): 1 / 2–3 / 4+
 - Thread: fresh email / replying in an existing email thread
@@ -195,13 +199,15 @@ Role: [LO | branch manager | owner]
 
 Paste each into a fresh project chat and check the listed expectations. If any fail, fix the prompt before the setter uses it.
 
-| # | Paste this | Must happen |
-|---|-----------|-------------|
-| 1 | "Mark, LO in Tampa, no-showed yesterday. Form said he spent $2k on Meta with another agency, zero appointments." | Route A or C; both his details woven in; subject references his situation; ends with ONE either/or question; /burnt video; no booking hard-ask |
-| 2 | "Lead asked what we charge per appointment." | No pricing in any variant; defers to call; HANDOFF TO GABRIEL flag; likely /doweguaranteeresults video |
-| 3 | "Sarah, newer LO in AZ, low budget, 5 touches no reply. Last shot before I close her file." | Route E2 Boot Camp; not framed as consolation prize; no pricing/links; FINAL TOUCH in send timing; clean-out close |
-| 4 | "Qualified branch owner, burned twice, gone quiet after demo, 4+ touches." | Route E1; guarantee phrasing verbatim ("50 conversations with qualified homeowners... work for free"); never "50 appointments"; /doweguaranteeresults linked |
-| 5 | "New lead, form is blank, never reached." | Asks ONCE for context; when told "nothing else," still drafts with LOW-CONTEXT flag — does not refuse or loop |
+
+| #   | Paste this                                                                                                       | Must happen                                                                                                                                                  |
+| --- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1   | "Mark, LO in Tampa, no-showed yesterday. Form said he spent $2k on Meta with another agency, zero appointments." | Route A or C; both his details woven in; subject references his situation; ends with ONE either/or question; /burnt video; no booking hard-ask               |
+| 2   | "Lead asked what we charge per appointment."                                                                     | No pricing in any variant; defers to call; HANDOFF TO GABRIEL flag; likely /doweguaranteeresults video                                                       |
+| 3   | "Sarah, newer LO in AZ, low budget, 5 touches no reply. Last shot before I close her file."                      | Route E2 Boot Camp; not framed as consolation prize; no pricing/links; FINAL TOUCH in send timing; clean-out close                                           |
+| 4   | "Qualified branch owner, burned twice, gone quiet after demo, 4+ touches."                                       | Route E1; guarantee phrasing verbatim ("50 conversations with qualified homeowners... work for free"); never "50 appointments"; /doweguaranteeresults linked |
+| 5   | "New lead, form is blank, never reached."                                                                        | Asks ONCE for context; when told "nothing else," still drafts with LOW-CONTEXT flag — does not refuse or loop                                                |
+
 
 Also spot-check every output for: banned phrases, two lead details, one closing question, body 50–125 words, setter first-name sign-off.
 
@@ -222,6 +228,7 @@ There is no approved case-study / proof asset library in the repo yet (open ques
 
 ## Open Questions
 
-- [ ] Human review: confirm `status: draft` → `active` after validation.
-- [ ] Link approved case study library to project knowledge once converted from Drive.
-- [ ] Confirm which free audit/breakdown offers are live before the setter offers them via email (mirrors SMS open question).
+- Human review: confirm `status: draft` → `active` after validation.
+- Link approved case study library to project knowledge once converted from Drive.
+- Confirm which free audit/breakdown offers are live before the setter offers them via email (mirrors SMS open question).
+
