@@ -40,8 +40,10 @@ End-to-end DSCR refinance funnel assets. **Read the GTM brief first** for the be
 | [DSCR Ads Playbook](dscr-ads-playbook.md) | 1 — ad creative | `draft` |
 | [MB DSCR Ad Copy Standards](mb-dscr-ad-copy-standards.md) | 1 — ad creative | `draft` |
 | [DSCR Ad Creative — Batch 01](dscr-ad-creative-batch-01.md) | 1 — ad creative | `draft` |
+| [DSCR Static Image Generator — Claude Project Build Pack](dscr-static-image-generator-project.md) | 1 — ad creative (image generation) | `draft` |
 | [DSCR Landing Page And VSL Copy](dscr-landing-and-vsl.md) | 2 — landing/VSL | `draft` |
 | [DSCR Funnel Form Spec](dscr-funnel-form-spec.md) | 2 — funnel/form | `draft` |
+| [DSCR Lander Build Pack](dscr-lander-build-pack.md) | 2 — buildable page spec (Lander A/B split test) | `draft` |
 | [DSCR Lead Nurture And Booking — Laura](dscr-nurture-and-booking-laura.md) | 3 — nurture/booking | `draft` |
 | [DSCR Setter / Appointment-Setting Call Script](dscr-setter-appointment-script.md) | 4 — setter | `draft` |
 | [DSCR Objection-Handling Guide](dscr-objection-handling-guide.md) | 4 — objections | `draft` |
