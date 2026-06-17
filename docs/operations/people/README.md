@@ -16,3 +16,7 @@ Team accountability, VA roles, performance tiers, and responsibility directories
 - [Team Responsibility Directory](team-responsibility-directory.md)
 - [VA Performance Bonus Booking And Show Rate Tiers](va-performance-bonus-booking-show-rate-tiers.md)
 - [VA Role Master Task List And Performance Expectations](va-role-master-task-list-performance-expectations.md)
+
+## Team registry
+
+- [Christian Bokalli — Ops Contractor](christian-bokalli-ops.md) — role, responsibilities, behavioral standards reference (`draft` until agreement acknowledged)

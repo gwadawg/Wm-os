@@ -2,6 +2,24 @@
 
 Skills in this folder are **repo-local**. Cursor and Claude Code discover them from `.claude/skills/<name>/SKILL.md`.
 
+## Content & marketing
+
+| Skill | Path | Use when |
+|-------|------|----------|
+| **content-engine** | [content-engine/SKILL.md](content-engine/SKILL.md) | Weekly ideas, `/weekly-ideas`, `/script`, reels, carousels, trial concepts |
+| **knowledge-capture** | [knowledge-capture/SKILL.md](knowledge-capture/SKILL.md) | Paste transcript/call/research → update hook/angle/belief libraries |
+| copywriting | [copywriting/SKILL.md](copywriting/SKILL.md) | Hooks, captions, carousel copy |
+| ugc-scriptwriter | [ugc-scriptwriter/SKILL.md](ugc-scriptwriter/SKILL.md) | UGC / talking-head scripts |
+| marketing-psychology | [marketing-psychology/SKILL.md](marketing-psychology/SKILL.md) | Angles, persuasion |
+| brainstorming | [brainstorming/SKILL.md](brainstorming/SKILL.md) | Deep ideation |
+| rm-creative-studio | [rm-creative-studio/SKILL.md](rm-creative-studio/SKILL.md) | Reverse mortgage ad creative |
+| linkedin-lo-outreach | [linkedin-lo-outreach/SKILL.md](linkedin-lo-outreach/SKILL.md) | LO outbound |
+| pre-call-objection-videos | [pre-call-objection-videos/SKILL.md](pre-call-objection-videos/SKILL.md) | Nurture video manifest |
+
+**Content engine hub:** [docs/content-engine/README.md](../../docs/content-engine/README.md) · [.agents/product-marketing.md](../../.agents/product-marketing.md)
+
+Reference files: [content-engine/weekly-workflow.md](content-engine/weekly-workflow.md), [content-engine/format-templates.md](content-engine/format-templates.md), [knowledge-capture/routing-table.md](knowledge-capture/routing-table.md)
+
 ## Required for documentation work
 
 | Skill | Path | Use when |

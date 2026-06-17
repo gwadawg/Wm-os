@@ -1,0 +1,240 @@
+workflow: pre-call-video-pages
+version: 1
+status: draft
+last_updated: 2026-06-16
+
+owner: marketing-lead
+domain: acquisition
+project: wm-site
+route_base: /reversemortgage
+
+template:
+  id: reverse-objection-video-v1
+  variant: premium-clean
+  sections:
+    - hero
+    - video_embed
+    - why_this_matters
+    - proof_strip
+    - related_questions
+    - primary_cta
+    - trust_footer
+
+content_model:
+  required_fields:
+    - id
+    - slug
+    - page_title
+    - meta_description
+    - eyebrow
+    - headline
+    - support_line
+    - youtube_id
+    - watch_url
+    - objection_angle
+    - sales_letter
+    - proof_points
+    - cta
+    - related_slugs
+  sales_letter_schema:
+    - problem_framing
+    - reframe
+    - mechanism
+    - expected_outcome
+    - next_step
+  cta_schema:
+    - primary_label
+    - primary_url
+    - secondary_label
+    - secondary_url
+
+defaults:
+  cta:
+    primary_label: "Book Your Strategy Call"
+    primary_url: "https://wm.waizmedia.net/reversemortgage/book"
+    secondary_label: "See How The System Works"
+    secondary_url: "https://wm.waizmedia.net/reversemortgage/whatmakesusdifferent"
+  trust_footer:
+    for:
+      - Reverse mortgage loan officers who want predictable appointments.
+      - Teams ready to replace referral dependency with a real acquisition system.
+    not_for:
+      - Loan officers looking for instant lead dumps without follow-up.
+      - Teams unwilling to implement process and accountability.
+
+pages:
+  - id: whoweare-why-we-do-what-we-do
+    slug: whoweare
+    page_title: Why We Built Waiz Media for Reverse Mortgage Loan Officers
+    meta_description: Learn why Waiz Media exists, why reverse mortgage growth needs education-first marketing, and how this creates predictable opportunities.
+    eyebrow: About Waiz Media
+    headline: Why we built a company exclusively for reverse mortgage loan officers
+    support_line: We built Waiz to solve the education and trust gap that keeps great LOs stuck relying on referrals and recycled leads.
+    youtube_id: RYnwas5j7iI
+    watch_url: https://youtu.be/RYnwas5j7iI
+    objection_angle: Trust and credibility
+    sales_letter:
+      problem_framing: Most loan officers know the product changes lives but still face market stigma, slow trust-building, and inconsistent lead flow.
+      reframe: Reverse mortgages do not have a demand problem. They have a marketing and education problem.
+      mechanism: This video explains why Waiz chose a reverse-only focus and how education-first content reframes the conversation before the sales call.
+      expected_outcome: You understand the mission, the strategy behind it, and why this model attracts better conversations.
+      next_step: If this is how you want to grow, book a strategy call and see exactly how the system applies to your market.
+    proof_points:
+      - Reverse-only focus instead of generic mortgage marketing.
+      - Tested messaging built around homeowner outcomes, not product jargon.
+      - Strategic partner positioning with systems and playbooks.
+    related_slugs:
+      - rmopportunity
+      - whatmakesusdifferent
+      - burnt
+
+  - id: rm-opportunity-industry
+    slug: rmopportunity
+    page_title: Reverse Mortgage Market Opportunity for Loan Officers
+    meta_description: See why the reverse mortgage market is larger and more urgent than most LOs realize, and why education-first marketing wins now.
+    eyebrow: The market opportunity
+    headline: The reverse mortgage opportunity is larger - and more urgent - than most LOs realize
+    support_line: The biggest growth opportunity is not in fighting for the active 2 percent. It is in educating the 98 percent still untapped.
+    youtube_id: wlGAgHRX_QI
+    watch_url: https://youtu.be/wlGAgHRX_QI
+    objection_angle: Market size and timing
+    sales_letter:
+      problem_framing: Many LOs assume reverse is niche or that timing is not right, so they default to referrals and wait.
+      reframe: The opportunity is massive, but demand stays trapped when education and trust are missing.
+      mechanism: This video breaks down demographic and equity trends, then shows why educate-first strategy captures market share before competitors react.
+      expected_outcome: You see the true upside and understand what must change to access it consistently.
+      next_step: Book a strategy call to map this opportunity to your licensed states and growth goals.
+    proof_points:
+      - Opportunity tied to demographic and equity shifts.
+      - Education-first strategy beats sell-first in stigmatized categories.
+      - Built for long-term pipeline control, not short-term spikes.
+    related_slugs:
+      - whoweare
+      - whatmakesusdifferent
+      - leads
+
+  - id: what-makes-waiz-different
+    slug: whatmakesusdifferent
+    page_title: What Makes Waiz Media Different from Other Agencies
+    meta_description: Discover Waiz Media's three-part reverse mortgage acquisition system: education content, booked appointments, and full infrastructure.
+    eyebrow: How we're different
+    headline: What makes Waiz Media different from every other marketing agency
+    support_line: Most agencies sell leads. We build and run the front end of your acquisition system end to end.
+    youtube_id: uYr9nfeGHHs
+    watch_url: https://youtu.be/uYr9nfeGHHs
+    objection_angle: Differentiation and mechanism clarity
+    sales_letter:
+      problem_framing: Generic agencies copy and paste campaigns across products, which fails in reverse mortgage.
+      reframe: Reverse requires a specialized model across messaging, follow-up, and operations.
+      mechanism: This video walks through our three pillars: stigma-breaking content, booked appointments, and AI-enabled infrastructure.
+      expected_outcome: You understand exactly what Waiz does and why it performs differently from lead vendors.
+      next_step: Book a strategy call if you want this system customized to your business.
+    proof_points:
+      - Reverse-only specialization.
+      - Booked appointments instead of lead lists.
+      - CRM and automation layer to compound performance.
+    related_slugs:
+      - whoweare
+      - burnt
+      - callcenter
+
+  - id: burnt-by-other-agencies
+    slug: burnt
+    page_title: Burned by Marketing Agencies? Why This Happens in Reverse
+    meta_description: If you've been burned by agencies before, this video explains why it happens and how Waiz Media is built differently for reverse.
+    eyebrow: If you've been burned before
+    headline: Why past agency experiences fail - and how we're built differently
+    support_line: Skepticism is rational when you've seen low-quality leads, poor follow-up, and broken vendor promises.
+    youtube_id: 8sqNYp6T3Vg
+    watch_url: https://youtu.be/8sqNYp6T3Vg
+    objection_angle: Burned-before fear objection
+    sales_letter:
+      problem_framing: Bad experiences with agencies create trust barriers before a conversation even starts.
+      reframe: The issue is rarely ads alone. It is usually lack of reverse specialization and weak operations.
+      mechanism: This video shows why generic templates fail and how Waiz aligns strategy, team, and process around reverse-specific realities.
+      expected_outcome: You can separate real infrastructure from surface-level promises.
+      next_step: Book a strategy call to review if your market fit and goals match our system.
+    proof_points:
+      - Reverse-only campaigns and positioning.
+      - Appointment-first model instead of dumping contacts.
+      - Operations-led approach with real process ownership.
+    related_slugs:
+      - whatmakesusdifferent
+      - leads
+      - doweguaranteeresults
+
+  - id: leads-arent-everything
+    slug: leads
+    page_title: Leads Are Not Enough: What Actually Moves Your Pipeline
+    meta_description: Learn why lead volume alone fails and what reverse mortgage loan officers should track for predictable growth.
+    eyebrow: Beyond lead lists
+    headline: Leads aren't enough. Here's what actually moves your pipeline.
+    support_line: Real growth comes from contact science, qualification, and booked conversations - not lead count alone.
+    youtube_id: HZf-n-7DDm8
+    watch_url: https://youtu.be/HZf-n-7DDm8
+    objection_angle: Leads-only mindset
+    sales_letter:
+      problem_framing: Many teams still evaluate marketing by monthly lead totals, even when conversion quality is weak.
+      reframe: Lead generation without follow-up infrastructure is a bottleneck, not a growth engine.
+      mechanism: This video outlines the process required to convert demand into real calendar conversations with qualified prospects.
+      expected_outcome: You shift from lead-count obsession to pipeline-quality metrics that improve close rates.
+      next_step: Book a strategy call to see the exact workflow and KPI stack we implement.
+    proof_points:
+      - Real human follow-up and qualification.
+      - Visibility into leads, calls, and appointment outcomes.
+      - Systems designed to compound over time.
+    related_slugs:
+      - whatmakesusdifferent
+      - burnt
+      - callcenter
+
+  - id: do-we-guarantee-results
+    slug: doweguaranteeresults
+    page_title: Do We Guarantee Results? How Waiz Defines It
+    meta_description: Understand how Waiz Media frames guarantees, why pay-per-result offers can misalign incentives, and what quality outcomes look like.
+    eyebrow: Our guarantee
+    headline: Do we guarantee results? Yes - and here's exactly what that means.
+    support_line: Strong guarantees only matter when incentives stay aligned around qualified conversations, not calendar volume.
+    youtube_id: Km5e5lM5mrw
+    watch_url: https://youtu.be/Km5e5lM5mrw
+    objection_angle: Guarantee and risk objection
+    compliance_note: Confirm live offer and approved guarantee language before quoting specifics in sales copy.
+    sales_letter:
+      problem_framing: Prospects hear many guarantee offers and struggle to distinguish signal from gimmicks.
+      reframe: The real question is not whether a guarantee exists, but whether incentives protect quality and fit.
+      mechanism: This video explains why pay-per-result models often reward volume, then clarifies how Waiz aligns around qualified conversations.
+      expected_outcome: You understand the practical difference between noisy appointment volume and meaningful sales opportunities.
+      next_step: Book a strategy call to review current offer terms and fit for your business.
+    proof_points:
+      - Incentive alignment around qualified opportunities.
+      - Education-first flow before the calendar handoff.
+      - Transparent process and qualification checkpoints.
+    related_slugs:
+      - leads
+      - whatmakesusdifferent
+      - callcenter
+
+  - id: reverse-sales-team-call-center
+    slug: callcenter
+    page_title: How Our Reverse Sales Team Books Qualified Appointments
+    meta_description: See how Waiz Media's reverse sales team handles speed-to-lead, qualification, and appointment setting without generic call-center scripts.
+    eyebrow: Inside our operation
+    headline: How our reverse sales team books qualified appointments on your calendar
+    support_line: Speed, persistence, and reverse-trained conversations turn opt-ins into qualified calls you can actually close.
+    youtube_id: RgjA7v6K3lk
+    watch_url: https://youtu.be/RgjA7v6K3lk
+    objection_angle: Call center and follow-up process objection
+    sales_letter:
+      problem_framing: Most loan officers do not have the time or system to execute high-speed, high-persistence follow-up at scale.
+      reframe: Follow-up is a specialized operational function, not a side task.
+      mechanism: This video explains how our reverse-trained team qualifies, nurtures, and books meetings while preserving your brand positioning.
+      expected_outcome: You understand why booked appointments outperform unmanaged lead lists.
+      next_step: Book a strategy call to see how this operating layer would run in your market.
+    proof_points:
+      - Reverse-specific scripts and objection handling.
+      - Speed-to-lead and multi-attempt cadence.
+      - Assistant positioning that reinforces trust.
+    related_slugs:
+      - whatmakesusdifferent
+      - leads
+      - doweguaranteeresults
