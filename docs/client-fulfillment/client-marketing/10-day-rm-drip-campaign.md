@@ -1,305 +1,1030 @@
 ---
-title: 10-Day RM Drip Campaign (Email + SMS)
+title: 10-Day RM Drip Campaign (Email + SMS) — Meta Leads
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-05-21
+last_updated: 2026-06-23
 review_cycle: monthly
-source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Client Course Material/Skool Community/Templates/10-Day Reverse Mortgage Drip Campaign (Email + SMS).docx
-artifact_type: playbook
+source_document: internal — conversation + rm-imessage-intent-drip-7day.md evolution
+artifact_type: script
 ---
 
-# 10-Day RM Drip Campaign (Email + SMS)
+# 10-Day RM Drip Campaign (Email + SMS) — Meta Leads
 
 ## Purpose
 
-Ten-day email and SMS nurture templates for new RM leads.
+Nurture **Meta instant-form** reverse mortgage leads who have not replied or booked with the **loan officer (LO)**. Combines educational email depth with conversational SMS/iMessage to elicit a reply so the AI booking agent can take over.
+
+Extends into **long-term nurture** (Days 11–90) for leads who complete the 10-day arc without booking.
 
 ## Scope
 
-GHL workflows; may be adapted per client.
+- Days 1–10: primary email + SMS sequence (Meta lead source)
+- Days 11–30: Phase 2 long-term nurture (education rotation)
+- Days 31–90: Phase 3 maintenance nurture (light touch)
+- GHL workflow build; per-client snapshot with custom values
+- Does **not** replace speed-to-lead AI/bot in the first 0–5 minutes
+- Does **not** replace [RM iMessage Intent Drip (7-Day)](rm-imessage-intent-drip-7day.md) for intent-segmented SMS-only paths — use this doc when **email + SMS** is required or Meta is the lead source
+
+## Owner
+
+Client Success (Laura Moco). LO approves client-specific story names and compliance-sensitive lines.
 
 ## Trigger
 
-Sequence build during tech implementation.
+- Lead submits Meta instant form
+- Lead has **not** replied and has **not** booked
+- Lead enters workflow at Day 1 (+4 hrs after form submit, after speed-to-lead bot)
 
 ## Inputs
 
-- CRM custom values
-- Compliance guardrails
+- `form_intent` from form (optional — see intent routing)
+- Contact: first name, state, estimated home value (when available)
+- Assigned LO user: `{{user.first_name}}`
+- Setter display name: `{{custom_values.setter_display_name}}`
+- Lead source tag: `meta`
 
 ## Outputs
 
-- Live 10-day workflow
+- Reply → remove from all drip workflows → AI/Closebot books with LO
+- Day 10 complete, no reply → merge into Phase 2 (Days 11–30)
+- Day 30 complete, no reply → merge into Phase 3 (Days 31–90)
+- Any reply at any phase → exit → AI books
 
 ## Quality Bar
 
-- Align with [Identity Core](../../company/doctrine-identity-core-april-26.md) and [SOURCE-OF-TRUTH](../../SOURCE-OF-TRUTH.md).
-- Client-facing copy must follow [RM Compliance Guardrails](../../client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md) when applicable.
+- Identity: **LO's assistant**, not company/brand as sender
+- Copy: **outcome-first** — name **HECM** or **reverse mortgage** only when mechanics or objection-handling require it
+- Product: reverse-specific mechanics when needed (HECM line growth, non-recourse, no required monthly mortgage payment on the loan)
+- [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md): no tax advice in SMS; no guaranteed outcomes; say *retired homeowners* not age in copy
+- Stories (Carol, Ruth, Tom): LO-approved or labeled composite internally
+- Meta-specific: acknowledge form source; address scam/FB misinformation on Day 8
 
-## Operating Content
+## GHL routing
 
-10-Day Reverse Mortgage Drip Campaign (Email + SMS)
+| Segment | `form_intent` values | Use |
+|---------|----------------------|-----|
+| 1 — Remove mortgage payment | `remove_mortgage_payment` | Day 1 opener + Day 4 story swap |
+| 2 — Pay debt off | `pay_off_debt` | Day 1 opener + Day 6 emphasis |
+| 3 — Cash out / strategic | `tax_free_cash_out` or `cash_out` | Day 1 opener + Day 7 value line |
+| Universal | none / unknown | Default copy below |
 
-This drip campaign is designed to nurture a lead who has inquired about a reverse mortgage. The persona is Laura, the assistant to the main loan officer. The tone is educational, empathetic, and aims to build trust by addressing common fears and misconceptions. Each day includes a short SMS message and a more detailed email.
+**Rules**
 
-Day 1: Immediate Follow-up & Acknowledgment
+1. Route intent-specific lines at Day 1, 4, 6, 7 where bracketed.
+2. **Any inbound reply** → exit all phases → AI responder books with LO.
+3. After appointment booked → AI off; appointment reminders only (not this nurture).
+4. Day 10 → Phase 2 if no reply. Day 30 → Phase 3 if no reply.
 
-### Sms:
+## Merge fields (snapshot)
 
-Hi [Lead Name], it's Laura, [Client Name]'s assistant. He asked me to reach out. I just sent you an email with some info. No pressure, just facts. Let me know if you have questions!
+| Token | Use |
+|-------|-----|
+| `{{contact.first_name}}` | Lead first name |
+| `{{contact.state}}` | State normalization |
+| `{{contact.estimated_home_value}}` | Segment 3 / Day 7 only |
+| `{{user.first_name}}` | Assigned LO first name |
+| `{{custom_values.setter_display_name}}` | Assistant name (e.g. Laura) |
 
-Email:
+**Opener pattern:** `Hey {{contact.first_name}}, this is {{custom_values.setter_display_name}} — {{user.first_name}}'s assistant. He asked me to reach out because you filled out a form about…`
 
-Subject: Your Information Request
+## Cadence summary
 
-From: Laura, Assistant to [Client Name]
+| Phase | Days | Touches | Channel mix |
+|-------|------|---------|-------------|
+| Primary | 1–10 | ~18 | 1 email + 1–2 SMS most days |
+| Long-term A | 11–30 | 8 | 1 email + 1 SMS every 2–3 days |
+| Long-term B | 31–90 | 6 | 1 email + 1 SMS every ~10 days |
 
-Hi [Lead Name],
+## Outcome-first language (use vs avoid)
 
-Thank you for reaching out and requesting information. My name is Laura, and I am the assistant to [Client Name].
+| Avoid | Use |
+|-------|-----|
+| "reverse mortgage" in every message | lead with the **outcome** they asked for |
+| equity options (vague) | **eliminate monthly payment**, **clear debt**, **access cash from home** |
+| access your equity (generic) | home equity proceeds — **no required monthly mortgage payment** on the loan |
+| tax-free cash | tax questions → `{{user.first_name}}` on the call |
+| homeowners 62+ | **retired homeowners** |
 
-[Client Name] is a specialist in helping homeowners explore their options, and he asked me to personally get in touch with you.
+## Educational arc (Days 1–10)
 
-Over the next few days, we'll be sending you some clear, no-pressure information to help you understand how things work. Our goal is simply to provide you with the facts so you can make an informed decision that's right for you.
+| Day | Theme | Objection preempted |
+|-----|--------|---------------------|
+| 1 | Acknowledge Meta form + qualify | "Where did you get my info?" |
+| 2 | House-rich, cash-poor | Trapped equity |
+| 3 | You keep the home | "Bank takes my house" |
+| 4 | No required monthly payment | "I don't want more debt" |
+| 5 | Heirs & legacy | "Kids inherit debt" |
+| 6 | What funds can be used for | "Is this right for me?" |
+| 7 | Disbursement structures | Confusion / paralysis |
+| 8 | Regulated program / scam fear | Horror stories |
+| 9 | SS/Medicare + social proof | Benefits + "need to think" |
+| 10 | Soft breakup + recap | Respect opt-out |
 
-If you have any immediate questions, please don't hesitate to reply to this email.
+---
 
-Best regards,
+# Phase 1 — Days 1–10
 
-Laura
+## Day 1 — Acknowledge + qualify
 
-Day 2: The Core Problem - "Surviving vs. Thriving"
+**Theme:** You came from our Meta form. What pushed you to look now?
 
-### Sms:
+### SMS — +4 hrs after form submit
 
-Hi [Lead Name], Laura here. I just sent you a quick email. It touches on a feeling many homeowners we speak with share about retirement. Hope you find it insightful.
+```
+Hey {{contact.first_name}}, this is {{custom_values.setter_display_name}} — {{user.first_name}}'s assistant. He asked me to reach out because you filled out a form about [INTENT — see routing below].
 
-Email:
+What pushed you to look now — the payment itself, debt, or having cash available when you need it?
+```
 
-Subject: Is This How Retirement Was Supposed to Feel?
+**Intent routing (Day 1 SMS):**
 
-From: Laura
+| Segment | `[INTENT]` line |
+|---------|-----------------|
+| `remove_mortgage_payment` | getting rid of your monthly mortgage payment |
+| `pay_off_debt` | using home equity to clear debt |
+| `cash_out` / `tax_free_cash_out` | accessing cash from your home |
+| Universal | using your home equity |
 
-Hi [Lead Name],
+### SMS — +6 hrs (if no reply)
 
-One of the most common things we hear from homeowners is that retirement isn't quite what they imagined. They feel like they are just "surviving" on a fixed income, not "thriving" the way they deserve to.
+```
+A lot of retired homeowners in {{contact.state}} have strong equity but tight monthly cash flow. {{user.first_name}} helps people see what's actually possible — no pressure, about 20 minutes. Does that sound like what you were after?
+```
 
-Many have worked their entire lives to build value in their homes, only to feel "house-rich and cash-poor." It can be a frustrating and stressful situation.
+### Email — +5 hrs
 
-If any of this sounds familiar, please know you are not alone.
+**Subject:** You asked about your home — quick follow-up
 
-Tomorrow, I'll share a little about a different way to think about your home's equity.
+**Preview:** {{user.first_name}} asked me to reach out personally.
 
-Best,
+---
 
-Laura
+Hi {{contact.first_name}},
 
-Day 3: Introducing the Concept (Without Jargon)
+You recently filled out a form on Facebook about [INTENT — match routing table above]. I'm {{custom_values.setter_display_name}}, assistant to {{user.first_name}} at [COMPANY].
 
-### Sms:
+A lot of retired homeowners tell us the same thing: *"My house is worth a lot, but I can't use any of it."* That's exactly the conversation {{user.first_name}} specializes in.
 
-Hi [Lead Name], it's Laura. Following up on yesterday's email, I've sent another one that talks about a different way to look at your home's value. It's a short read.
+**One quick question so we send you the right info:**
 
-Email:
+What matters most to you right now?
 
-Subject: A Different Way to Think About Your Home Equity
+1. Stopping a monthly mortgage payment
+2. Clearing debt that's eating into retirement
+3. Having cash or a line of credit available when you need it
+4. Still figuring it out
 
-From: Laura
+Just reply to this email (or text me back at [PHONE]) with a number or a few words. No application. No commitment.
 
-Hi [Lead Name],
+Talk soon,
 
-Yesterday, we talked about the feeling of being "house-rich and cash-poor."
+{{custom_values.setter_display_name}}
+On behalf of {{user.first_name}}, [COMPANY]
+[PHONE]
 
-What if you could access a portion of your home's value without having to sell it? What if you could turn that equity into a source of funds for a more comfortable retirement?
+---
 
-There is a federally-insured program designed for homeowners 62 and older that allows you to do just that. It's a strategic tool that can provide greater financial flexibility.
+**Compliance check:** PASS — factual lead source; no amounts or guarantees.
 
-It's not about taking on new debt in the traditional sense; it's about accessing the wealth you've already built.
+---
 
-I'll be in touch tomorrow to talk about one of the biggest myths surrounding this topic.
+## Day 2 — Trapped equity
 
-Best,
+**Theme:** Your equity isn't useless — here's why people feel stuck.
 
-Laura
+### Email — 9:00 AM
 
-Day 4: Myth-Busting #1 - "The Bank Takes My Home"
+**Subject:** "My home is worth a lot, but I can't touch it"
 
-### Sms:
+---
 
-Hi [Lead Name], Laura again. A quick note to say I've sent an email that tackles a big myth about reverse mortgages. It's about who really owns your home.
+Hi {{contact.first_name}},
 
-Email:
+If you've ever thought that sentence, you're not alone.
 
-Subject: Who Really Owns Your Home?
+Many retired homeowners in {{contact.state}} are in the same spot:
 
-From: Laura
+- Fixed income that doesn't keep up with groceries, utilities, or insurance
+- Savings that get a little smaller every year
+- A home that keeps going up in value — but no easy way to use that value without selling
 
-Hi [Lead Name],
+That's the gap a federally insured **Home Equity Conversion Mortgage (HECM)** is designed to address. In plain English: a way to access equity you've already built, **stay in your home**, and have **no required monthly mortgage payment** on the loan itself.
 
-Let's talk about the biggest and most common fear we hear: "Will the bank take my home?"
+You're still responsible for property taxes, insurance, and upkeep — but for a lot of people, that's a very different picture than sending a mortgage payment every month.
 
-The answer is simple: No. With a modern, federally-insured reverse mortgage, you retain title and ownership of your home. You can never be forced to sell or move as long as you live in the home and meet the loan obligations (like paying property taxes and insurance).
+**Reply with one word:** *payment*, *debt*, or *cash* — and I'll make sure {{user.first_name}} focuses on that on your call.
 
-Think of it like a traditional mortgage, just in reverse. Instead of you paying the bank, the bank pays you. But it's still your home.
+— {{custom_values.setter_display_name}}
 
-We believe that knowing the facts is the best way to get rid of fear.
+---
 
-Best,
+### SMS — 2:00 PM
 
-Laura
+```
+{{contact.first_name}} — quick one. Is the frustration more about monthly bills, or that your equity is "locked up" while costs keep rising?
+```
 
-Day 5: Social Proof - A Relatable Story
+**Compliance check:** PASS
 
-### Sms:
+---
 
-Hi [Lead Name], it's Laura. I just sent you an email with a short story about a homeowner named Carol. I think you'll find it relatable.
+## Day 3 — You keep ownership
 
-Email:
+**Theme:** Myth #1 — "The bank takes my house."
 
-Subject: A Story We Thought You'd Appreciate
+### SMS — 10:00 AM
 
-From: Laura
+```
+One thing people get wrong: you don't give up your home. You stay on title. As long as you live there and keep up taxes and insurance, the home stays yours. Had you heard that before?
+```
 
-Hi [Lead Name],
+### Email — 4:00 PM
 
-Sometimes, the best way to understand something is through a real-life story.
+**Subject:** Do you still own your home?
 
-We recently worked with a woman named Carol. After her husband passed away, she was worried she wouldn't be able to afford to stay in the home they had shared for 40 years. The emotional and financial stress was overwhelming.
+---
 
-By using a reverse mortgage, she was able to pay off her old mortgage, eliminating that monthly payment, and establish a safety net for unexpected expenses. She told us it felt like a huge weight was lifted off her shoulders. She could finally breathe again, knowing she could stay in her home, surrounded by her memories.
+Hi {{contact.first_name}},
 
-Every situation is unique, but Carol's story is a powerful example of the peace of mind that comes with financial security.
+This is the question we hear more than any other:
 
-Best,
+*"Will I lose my home?"*
 
-Laura
+**Short answer:** You remain the owner. Your name stays on title. You live in the home as your primary residence, pay property taxes and homeowners insurance, and maintain the property — same responsibilities you have today.
 
-Day 6: Myth-Busting #2 - "What About My Kids?"
+The loan is generally repaid when you sell, move out permanently, or pass away — not because you "run out of time" in the home.
 
-### Sms:
+{{user.first_name}} walks through exactly how that works for *your* home in about 20 minutes. No application required to have the conversation.
 
-Hi [Lead Name], Laura here. Another quick email is on its way to you. This one is about what a reverse mortgage means for your kids and your legacy.
+**Worth a quick call?** Reply *yes* and I'll find a time that works.
 
-Email:
+— {{custom_values.setter_display_name}}
 
-Subject: Your Legacy and Your Heirs
+---
 
-From: Laura
+**Compliance check:** PASS — qualified with taxes/insurance/occupancy obligations.
 
-Hi [Lead Name],
+---
 
-Another common concern is about inheritance. Many people worry that using a reverse mortgage will leave nothing for their children.
+## Day 4 — No required monthly payment
 
-Here's the truth: your heirs will inherit your home and any remaining equity. When the loan is due, they can choose to either repay the loan and keep the home, or sell the home and keep the difference.
+**Theme:** This isn't "another bill every month."
 
-And importantly, a reverse mortgage is a "non-recourse" loan. This means your children will never owe more than the value of the home, even if the loan balance is higher. The debt is secured by the property, not by your family.
+### Email — 9:00 AM
 
-It's a way to secure your retirement without putting a burden on your children.
+**Subject:** What "no monthly payment" actually means
 
-Best,
+---
 
-Laura
+Hi {{contact.first_name}},
 
-Day 7: The "How It Works" Email
+A lot of people hear "no monthly payment" and think it sounds too good to be true. Fair.
 
-### Sms:
+Here's what it actually means on a HECM:
 
-Hi [Lead Name], it's Laura. I've sent you a simple, plain-English email explaining how the program works. No jargon, I promise!
+- There is **no required monthly mortgage payment** on the loan
+- Interest and fees are added to the loan balance over time — you're not writing a check each month for the mortgage itself
+- You **can** make optional payments anytime if you want to slow balance growth
 
-Email:
+For many retired homeowners, the real shift is cash flow: money stops going *out* every month for the mortgage, or proceeds can be used to pay off an existing loan at closing.
 
-Subject: A Simple Explanation
+**Segment 1 story (remove_mortgage_payment):** Carol sent the same mortgage payment for 18 years. She used proceeds to pay off her existing loan — and hasn't had a required monthly mortgage payment since.
 
-From: Laura
+That's the piece {{user.first_name}} runs the numbers on — for your home, not a generic example.
 
-Hi [Lead Name],
+Reply *numbers* if you want to see what this could look like for you.
 
-We've talked about some of the myths and benefits, but you might be wondering, "How does it actually work?"
+— {{custom_values.setter_display_name}}
 
-Here's a simple way to think about it:
+---
 
-You access your equity: Based on your age, home value, and interest rates, you can access a portion of your home's equity.
+### SMS — 3:00 PM
 
-You choose how to receive the funds: You can take it as a lump sum, a monthly payment, or a line of credit you can draw on as needed.
+```
+{{contact.first_name}} — still here. Are you mostly trying to free up cash each month, or is it more about a one-time need (repairs, debt, medical)?
+```
 
-No monthly mortgage payments: You are not required to make monthly mortgage payments. The loan is repaid when you sell the home or no longer live there.
+**Compliance check:** PASS — Carol story = LO-approved composite; flag for client approval before deploy.
 
-Of course, there are more details, but that's the core of it. It's a tool to convert your home equity into cash flow, giving you more control over your finances in retirement.
+---
 
-Best,
+## Day 5 — Heirs & legacy
 
-Laura
+**Theme:** "My kids will inherit debt."
 
-Day 8: The "Safety Net" Angle
+### SMS — 11:00 AM
 
-### Sms:
+```
+Biggest worry we hear: kids and the house. It's a non-recourse loan — your family isn't personally on the hook. Heirs can keep the home or sell; any equity left after payoff goes to them. Want {{user.first_name}} to walk through how that works for your family?
+```
 
-Hi [Lead Name], Laura again. I just sent you an email about creating a financial safety net for retirement. It's about preparing for the unexpected.
+### Email — 5:00 PM
 
-Email:
+**Subject:** What happens to your kids?
 
-Subject: Preparing for the Unexpected
+---
 
-From: Laura
+Hi {{contact.first_name}},
 
-Hi [Lead Name],
+If you've hesitated because of your children, you're thinking like most parents we talk to.
 
-One of the biggest sources of anxiety in retirement is the fear of the unexpected. A sudden medical bill or a major home repair can be financially devastating on a fixed income.
+A few facts that usually help:
 
-A reverse mortgage can create a financial safety net. Many of our clients set up a line of credit that they don't touch, but it's there if they need it. Just knowing that you have a cushion for emergencies can provide incredible peace of mind.
+1. **Your children are never personally responsible** for the loan. It's non-recourse — neither you nor your heirs owe more than the home's value when the loan comes due.
+2. **Heirs have options.** They can sell the home, repay the loan from proceeds, and keep any remaining equity. Or they can keep the home by paying off the loan (under HECM rules).
+3. **You're not "giving away" the house.** You're making a decision about how to use equity *while you're still living there.*
 
-It's about preparing for the future and ensuring you have the resources to handle whatever life throws your way.
+Legacy is personal. {{user.first_name}} doesn't rush anyone — he explains how the numbers work so you and your family can decide with clarity, not fear.
 
-Best,
+Reply *family* if that's the part you want to understand first.
 
-Laura
+— {{custom_values.setter_display_name}}
 
-Day 9: The Call to Action - A Soft Offer
+---
 
-### Sms:
+**Compliance check:** PASS — HUMAN REVIEW if adding 95% appraisal payoff detail for a specific state/client.
 
-Hi [Lead Name], it's Laura. I sent you an email with a link to [Client Name]'s calendar. If you'd like to chat, he has some time set aside. No pressure at all.
+---
 
-Email:
+## Day 6 — What funds can be used for
 
-Subject: A No-Pressure Conversation
+**Theme:** Practical uses — repairs, debt, cushion, staying put.
 
-From: Laura
+### Email — 9:00 AM
 
-Hi [Lead Name],
+**Subject:** 5 ways retired homeowners use this (that aren't "luxury")
 
-I hope the information I've shared over the past week has been helpful.
+---
 
-[Client Name] has some time set aside next week to answer questions for homeowners like you. This isn't a sales call; it's a free, educational conversation to help you understand your options.
+Hi {{contact.first_name}},
 
-If you'd like to schedule a brief, confidential chat to get your specific questions answered, you can do so here: [Link to Calendar]
+Nobody needs a lecture on retirement. Here's what people in {{contact.state}} actually use home equity proceeds for:
 
-There's absolutely no obligation. We're here to help you make the best decision for your family.
+1. **Pay off an existing mortgage** — eliminate a monthly payment
+2. **Clear high-interest debt** — credit cards, medical bills, old balances
+3. **Home repairs** — roof, HVAC, accessibility (ramps, walk-in shower)
+4. **A financial cushion** — so one big expense doesn't wipe you out
+5. **Staying in the home you love** — without downsizing before you're ready
 
-Best,
+You don't have to need all five. Most people have one or two that matter right now.
 
-Laura
+**Which of those is closest to your situation?** Reply with a number (1–5) and I'll note it for {{user.first_name}}.
 
-Day 10: Final Follow-up
+— {{custom_values.setter_display_name}}
 
-### Sms:
+---
 
-Hi [Lead Name], Laura here for the last time for now. Just sent a final email. Our door is always open if you have questions down the road. Wishing you the best.
+### SMS — 2:00 PM
 
-Email:
+```
+Honest question {{contact.first_name}}: if you had access to your home equity tomorrow, what's the first thing you'd use it for?
+```
 
-Subject: Any Questions?
+**Segment 2 emphasis (pay_off_debt):** Swap SMS to: `A lot of folks did everything right — and still carried debt into retirement. Proceeds can pay off that debt without adding a new required monthly mortgage payment on the loan. Does that match what you're hoping for?`
 
-From: Laura
+**Compliance check:** PASS
 
-Hi [Lead Name],
+---
 
-Just wanted to send one last follow-up. We know this is a big decision, and it's normal to have a lot of questions.
+## Day 7 — How you receive funds
 
-Our door is always open. If you think of anything, please don't hesitate to reach out. We're happy to provide you with the information you need, whenever you need it.
+**Theme:** Lump sum vs. line of credit vs. monthly draws.
 
-Wishing you all the best,
+### SMS — 10:00 AM
 
-Laura
+```
+Most people don't know you can structure this different ways — lump sum, monthly draws, a HECM line of credit, or a mix. The unused portion of a line of credit can actually grow over time. Leaning toward one of those, or still deciding?
+```
 
+### Email — 4:00 PM
+
+**Subject:** Lump sum, monthly income, or a line of credit?
+
+---
+
+Hi {{contact.first_name}},
+
+One reason people get confused: they think there's only one way to receive funds. There isn't.
+
+{{user.first_name}} usually walks through **four structures**:
+
+| Option | Best when… |
+|--------|----------------|
+| **Lump sum** | You have a defined need now (pay off loan, major repair, debt) |
+| **Monthly draws** | You want steady supplemental cash flow |
+| **HECM line of credit** | You want a standby fund — unused portion **grows over time** |
+| **Combination** | You want some cash now + flexibility later |
+
+**Segment 3 (cash_out):** With about {{contact.estimated_home_value}} in value, there's often meaningful room to work with — exact amounts depend on your situation, rates, and payoff needs.
+
+**Tom story (cash_out / strategic):** Tom set up a HECM line of credit and didn't draw for two years. The unused portion kept growing. When the market dipped, he drew from it instead of selling investments at a loss. That's the piece most people don't compare to a HELOC.
+
+This is exactly what a 20-minute call is for: structure options for *your* home, not a brochure.
+
+Reply *structure* and I'll get you on {{user.first_name}}'s calendar.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+**Compliance check:** PASS — HUMAN REVIEW if inserting home value amounts; Tom story = LO-approved composite.
+
+---
+
+## Day 8 — Regulated program / scam fear
+
+**Theme:** Today's HECM vs. old horror stories. Meta leads often need this.
+
+### Email — 9:00 AM
+
+**Subject:** "I've heard horror stories" — you're right to be careful
+
+---
+
+Hi {{contact.first_name}},
+
+If you're skeptical, good. There *have* been bad actors and outdated programs in this space.
+
+Today's federally insured **HECM** is different:
+
+- **FHA-insured** and heavily regulated
+- **Independent counseling required** before you can close — a third party explains your options
+- **All costs disclosed upfront** — no surprises at the closing table
+- **You verify who you're talking to** — {{user.first_name}} is a licensed loan officer at [COMPANY]; happy to share NMLS, website, and direct line before you book
+
+We're not asking you to "trust us blindly." We're asking for 20 minutes so you can decide with full information.
+
+**Want {{user.first_name}}'s direct info to verify first?** Reply *verify* and I'll text his details.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+### SMS — 3:00 PM
+
+```
+{{contact.first_name}} — a lot of what floats around Facebook isn't accurate. {{user.first_name}} specializes in this and can show how today's program actually works. What's been holding you back from a quick call?
+```
+
+**Compliance check:** PASS — verification path offered; no competitor disparagement.
+
+---
+
+## Day 9 — Benefits question + social proof
+
+**Theme:** SS/Medicare (defer to LO) + relatable story + booking CTA.
+
+### SMS — 11:00 AM
+
+```
+Common question: does this affect Social Security or Medicare? Generally proceeds aren't counted as income for those programs — but that's one for {{user.first_name}} on a call, along with what makes sense for your home. Worth 20 minutes?
+```
+
+### Email — 5:00 PM
+
+**Subject:** "I wish I'd looked into this sooner"
+
+---
+
+Hi {{contact.first_name}},
+
+Ruth used proceeds from her home to pay off balances she'd carried for years — **without adding a new required monthly mortgage payment** on the loan itself.
+
+She told us: *"I wish I'd understood this sooner. I wasn't looking for anything fancy — just to stop worrying."*
+
+That's the conversation {{user.first_name}} has every week with homeowners in {{contact.state}}. Not a sales pitch. A clear walkthrough of costs, options, and whether it fits your plan.
+
+**No application. No commitment. Just clarity.**
+
+Reply *ready* and I'll send a few times that work this week.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+**Compliance check:** HUMAN REVIEW — SS/Medicare language is sensitive; confirm with LO/compliance before deploy. Ruth = LO-approved composite.
+
+---
+
+## Day 10 — Soft breakup + recap
+
+**Theme:** Step back respectfully; leave door open. Merge to Phase 2 if no reply.
+
+### SMS — 10:00 AM
+
+```
+{{contact.first_name}} — I don't want to crowd your messages if the timing's off. I'll step back for now. Whenever you want {{user.first_name}} to walk through what this could look like for your home, just reply here.
+```
+
+### Email — 2:00 PM
+
+**Subject:** I'll pause here — door's always open
+
+---
+
+Hi {{contact.first_name}},
+
+I've reached out a few times because you asked for information about your home — and I didn't want you to think you'd been forgotten.
+
+Quick recap of what we've covered:
+
+- You **keep ownership** of your home
+- There's **no required monthly mortgage payment** on the loan
+- Your **heirs aren't personally liable** — non-recourse protection
+- Funds can be structured as a **lump sum, monthly draws, line of credit, or mix**
+- It's a **regulated, FHA-insured program** — not the old programs you've maybe heard horror stories about
+
+If any of that raised questions, {{user.first_name}} is still happy to walk through your specific situation — about 20 minutes, no pressure.
+
+If now isn't the right time, no hard feelings. Reply whenever you're ready and we'll pick it up.
+
+Warmly,
+
+{{custom_values.setter_display_name}}
+[PHONE]
+
+---
+
+**Compliance check:** PASS
+
+---
+
+# Phase 2 — Days 11–30 (long-term nurture A)
+
+**Cadence:** One education touch every 2–3 days. Rotate themes not covered deeply in Phase 1. Lighter pressure; same reply-to-book goal.
+
+**GHL:** New workflow triggered at Day 10 completion with no reply and no booking.
+
+---
+
+## Day 12 — Surviving vs. living
+
+### SMS — 10:00 AM
+
+```
+{{contact.first_name}} — still here. A lot of retired homeowners tell us retirement feels like surviving, not living. Is that closer to how it feels, or are things mostly okay for now?
+```
+
+### Email — Day 12, 2:00 PM
+
+**Subject:** Surviving retirement vs. actually living it
+
+---
+
+Hi {{contact.first_name}},
+
+One feeling we hear constantly:
+
+*"I worked my whole life — this isn't how retirement was supposed to be."*
+
+Not luxury. Not travel every month. Just… not juggling every bill. Not delaying repairs. Not staying home because going out costs money.
+
+Accessing home equity isn't about spending wildly. For most people, it's about **breathing room** — so retirement feels like retirement again.
+
+If that resonates, reply *breathe* and I'll note it for {{user.first_name}}.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+## Day 15 — Safety net / one big expense
+
+### SMS — 11:00 AM
+
+```
+What's scarier — monthly bills, or one big expense (roof, medical, car) wiping out what's left? A HECM line of credit can sit unused but grow — a cushion you don't have to touch until you need it. Ever looked at it that way?
+```
+
+### Email — Day 15, 4:00 PM
+
+**Subject:** The expense nobody plans for
+
+---
+
+Hi {{contact.first_name}},
+
+The fear we hear most after monthly bills:
+
+*"One big expense could ruin me."*
+
+A roof. HVAC. A medical bill. A car repair.
+
+Many retired homeowners set up a **HECM line of credit** they don't draw on right away — but it's there if something hits. The unused portion can grow over time, so setting it up earlier can mean more available later.
+
+That's planning, not panic.
+
+Reply *cushion* if you want {{user.first_name}} to walk through how that could work for your home.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+## Day 18 — HECM vs. HELOC
+
+### SMS — 10:00 AM
+
+```
+Quick comparison people miss: a HELOC usually requires monthly payments. A HECM line of credit doesn't — and the unused portion can grow. Had you been comparing the two?
+```
+
+### Email — Day 18, 3:00 PM
+
+**Subject:** HECM line of credit vs. a HELOC — what's different?
+
+---
+
+Hi {{contact.first_name}},
+
+If you've looked at home equity before, you may have seen a **HELOC** (home equity line of credit). Fair comparison — but they're not the same.
+
+| | HELOC | HECM line of credit |
+|--|-------|---------------------|
+| Monthly mortgage payment | Usually required | **Not required** on the loan |
+| Unused line | Typically static | **Can grow over time** |
+| Typical borrower | Income/credit qualifying | Retired homeowners with strong equity |
+
+Neither is right for everyone. {{user.first_name}} can compare both in the context of *your* home — about 20 minutes, no obligation.
+
+Reply *compare* if that's useful.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+## Day 21 — Fees transparency
+
+### SMS — 2:00 PM
+
+```
+Fair question we get: "What are the fees?" All costs are regulated and disclosed upfront — {{user.first_name}} breaks down every line on the call so you decide with full info. Want that walkthrough?
+```
+
+### Email — Day 21, 5:00 PM
+
+**Subject:** "The fees are too high" — let's talk about that
+
+---
+
+Hi {{contact.first_name}},
+
+Skepticism about fees is healthy. Nobody should sign anything without understanding costs.
+
+On a HECM:
+
+- Fees are **regulated and disclosed upfront** — origination, mortgage insurance, third-party costs
+- {{user.first_name}} walks through **every cost** on the call before you decide anything
+- Many homeowners weigh fees against **eliminating a monthly payment** or **high-interest debt** — but that's math for your situation, not a generic pitch
+
+Reply *costs* if you want the full breakdown for your home.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+**Compliance check:** PASS — do not quote specific fee amounts unless LO-approved.
+
+---
+
+## Day 24 — Counseling requirement (trust builder)
+
+### SMS — 11:00 AM
+
+```
+Did you know independent counseling is required before you can close? A third party explains your options — not just us. That's one reason today's program is different from old horror stories. Want {{user.first_name}} to explain the full process?
+```
+
+### Email — Day 24, 4:00 PM
+
+**Subject:** You get a third-party counselor before anything closes
+
+---
+
+Hi {{contact.first_name}},
+
+One safeguard many people don't know about:
+
+Before you can close on a federally insured HECM, you must complete **independent counseling** with a HUD-approved counselor. They explain your options in plain English — separate from {{user.first_name}} or any lender.
+
+That step exists so you're not deciding from a Facebook ad or a text thread alone.
+
+{{user.first_name}}'s call is step one: see if it's worth exploring. Counseling comes later — only if you choose to move forward.
+
+Reply *process* if you want the full roadmap.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+## Day 27 — Not mortgage-free required
+
+### SMS — 10:00 AM
+
+```
+{{contact.first_name}} — common myth: you have to own your home free and clear. You don't. An existing mortgage is often paid off at closing with proceeds. Still carrying a payment today?
+```
+
+### Email — Day 27, 2:00 PM
+
+**Subject:** You don't have to be mortgage-free to qualify
+
+---
+
+Hi {{contact.first_name}},
+
+A myth that stops people from even asking:
+
+*"I still have a mortgage — so this probably isn't for me."*
+
+Often the opposite. Many retired homeowners still send a monthly payment. Proceeds at closing can pay off that existing loan — which is exactly why the **eliminate monthly payment** path is so common.
+
+{{user.first_name}} runs those numbers in about 20 minutes. No application to start the conversation.
+
+Reply *payment* if that's your situation.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+## Day 30 — Phase 2 close + handoff to Phase 3
+
+### SMS — 10:00 AM
+
+```
+{{contact.first_name}} — it's been about a month since your form. A lot can change. If you want {{user.first_name}} to run fresh numbers with you, just reply. Otherwise I'll check in occasionally — no pressure.
+```
+
+### Email — Day 30, 3:00 PM
+
+**Subject:** Still thinking it over? That's normal.
+
+---
+
+Hi {{contact.first_name}},
+
+Most homeowners we talk to research for weeks before they feel ready. That's smart — not slow.
+
+If you're still comparing options, here's what a call with {{user.first_name}} actually is:
+
+- About **20 minutes**
+- **Educational** — costs, structures, ownership, heirs
+- **No application** required to have the conversation
+- **No obligation** to move forward
+
+If the timing still isn't right, no problem. I'll check in occasionally with something useful — and you can reply whenever.
+
+Reply *ready* when you want times for this week.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+**Compliance check:** PASS — merge to Phase 3 if no reply.
+
+---
+
+# Phase 3 — Days 31–90 (long-term nurture B)
+
+**Cadence:** ~1 email + 1 SMS every 10 days. Maintenance mode — value-first, minimal repetition.
+
+**GHL:** Trigger at Day 30 completion with no reply and no booking.
+
+---
+
+## Day 40 — Property tax / rising costs
+
+### SMS
+
+```
+Property taxes and insurance keep climbing in {{contact.state}} — even when income doesn't. Is that part of what's been on your mind lately?
+```
+
+### Email
+
+**Subject:** When everything costs more except your income
+
+---
+
+Hi {{contact.first_name}},
+
+Fixed income. Rising property taxes. Insurance going up every year.
+
+It's one of the most common triggers we see — not a luxury purchase, just keeping up with the home you already own.
+
+If costs have been the main squeeze, {{user.first_name}} can walk through whether home equity helps your specific situation. Reply *costs* if that's you.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+## Day 50 — Delayed repairs
+
+### SMS
+
+```
+{{contact.first_name}} — a lot of homeowners delay roof or HVAC work because of cost. Is there something at the house you've been putting off?
+```
+
+### Email
+
+**Subject:** The repair you've been putting off
+
+---
+
+Hi {{contact.first_name}},
+
+Delaying a roof, HVAC, or plumbing fix doesn't make the problem smaller — it usually makes it more expensive later.
+
+Proceeds from a HECM are commonly used for **home repairs and aging-in-place upgrades** — ramps, walk-in showers, better access — so you can stay safely in the home you love.
+
+Reply *repair* if that's been on your list.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+## Day 60 — Family conversation
+
+### SMS
+
+```
+Some folks want their kids in the conversation before they decide anything. Totally fair. Want to loop in a family member on a call with {{user.first_name}}, or handle it yourself first?
+```
+
+### Email
+
+**Subject:** When your kids have opinions (and questions)
+
+---
+
+Hi {{contact.first_name}},
+
+We hear this a lot:
+
+*"My kids think it's a scam."* or *"I want them to understand before I do anything."*
+
+Both are reasonable. {{user.first_name}} is happy to walk through ownership, heirs, and costs on a call — with or without family on the line.
+
+Reply *family* or *solo* and I'll set it up accordingly.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+## Day 70 — Second look / still researching
+
+### SMS
+
+```
+{{contact.first_name}} — still researching, or did you find another path? Either way, no judgment. If a second look would help, {{user.first_name}} is here.
+```
+
+### Email
+
+**Subject:** Still researching? That's the right instinct.
+
+---
+
+Hi {{contact.first_name}},
+
+Big financial decisions deserve time. If you're still gathering information, these are the five questions worth getting answered before you decide anything:
+
+1. Do I keep ownership of my home?
+2. What are the real costs — all of them?
+3. What happens to my heirs?
+4. How can I structure the funds (lump sum, line, monthly)?
+5. What are my ongoing obligations (taxes, insurance, maintenance)?
+
+{{user.first_name}} covers all five in one conversation. Reply *questions* when you're ready.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+## Day 80 — Planning ahead (calm urgency)
+
+### SMS
+
+```
+Most homeowners start these conversations before finances become urgent — so they have more options. Still in planning mode, or feeling more pressed lately?
+```
+
+### Email
+
+**Subject:** Planning ahead vs. reacting under pressure
+
+---
+
+Hi {{contact.first_name}},
+
+The homeowners who feel best about their decision usually start **before** they're in crisis mode — when they still have room to compare structures and timing.
+
+That doesn't mean rush. It means a conversation now can mean more flexibility later.
+
+Reply *plan* if you'd like to talk options while you're still in control of the timing.
+
+— {{custom_values.setter_display_name}}
+
+---
+
+**Compliance check:** PASS — calm planning urgency only; no false scarcity.
+
+---
+
+## Day 90 — Final long-term touch
+
+### SMS
+
+```
+{{contact.first_name}} — last scheduled check-in from me for a while. Door's always open. Reply anytime and we'll pick it up with {{user.first_name}} — no hard feelings either way.
+```
+
+### Email
+
+**Subject:** I'll go quiet for now — you know where to find us
+
+---
+
+Hi {{contact.first_name}},
+
+This is my last scheduled note for a while.
+
+You filled out a form because something about your home and your retirement deserved a closer look. That hasn't changed — even if the timing has.
+
+Whenever you're ready:
+
+- Reply to this email or text [PHONE]
+- Ask for {{user.first_name}}'s direct line (*verify*)
+- Request times (*ready*)
+
+No pressure. No expiration date on good information.
+
+Wishing you peace of mind either way,
+
+{{custom_values.setter_display_name}}
+On behalf of {{user.first_name}}, [COMPANY]
+
+---
+
+**Compliance check:** PASS — after Day 90, move to quarterly re-engagement or manual recycle per client policy.
+
+---
+
+## Subject line A/B options
+
+| Day | Option A | Option B | Option C |
+|-----|----------|----------|----------|
+| 1 | You asked about your home — quick follow-up | {{contact.first_name}}, following up from your form | {{user.first_name}} asked me to reach out |
+| 3 | Do you still own your home? | The #1 question we get | "Will I lose my home?" — honest answer |
+| 5 | What happens to your kids? | Your family isn't on the hook | Legacy question — quick clarity |
+| 8 | "I've heard horror stories" | You're right to be careful | How today's program is different |
+| 10 | I'll pause here — door's always open | Quick recap + no pressure | Whenever you're ready |
+| 30 | Still thinking it over? That's normal. | No rush — here's what the call actually is | Ready when you are |
+
+## Reply keywords (bot routing)
+
+| Keyword | Intent for AI/bot |
+|---------|-------------------|
+| `yes`, `ready`, `numbers`, `structure` | Book appointment |
+| `verify` | Send LO NMLS, direct line, company URL |
+| `payment`, `debt`, `cash`, `family`, `costs` | Qualify + book |
+| `stop`, `unsubscribe` | Opt out immediately |
+
+## Metrics
+
+- Reply rate by day and phase
+- Reply → book rate (post-AI handoff)
+- Stop / opt-out rate (Day 1–2 spike = cadence too heavy)
+- Email open rate by subject theme
+- Messages to first reply
+- Phase 2 vs Phase 3 reply recovery rate
+
+## Sequence-level compliance summary
+
+| Area | Status |
+|------|--------|
+| No guaranteed outcomes | PASS |
+| No tax advice in SMS | PASS (Day 9 → defer to LO) |
+| SS/Medicare | **HUMAN REVIEW** before deploy |
+| Age in copy | PASS ("retired homeowners") |
+| Composite stories (Carol, Ruth, Tom) | **LO approval** before client deploy |
+| Dollar amounts | PASS (merge field only; no invented figures) |
+| High-pressure urgency | PASS |
+
+## Related docs
+
+- [RM iMessage Intent Drip (7-Day)](rm-imessage-intent-drip-7day.md) — intent-segmented SMS-only path
+- [RM iMessage Appointment Follow-Up](rm-imessage-appointment-followup.md) — post-booking
+- [RM iMessage Second-Booking Follow-Up](rm-imessage-second-booking-followup.md) — rebook
+- [RM Text Drip 2025](rm-text-drip-2025.md) — legacy longer-cycle SMS
+- [RM Lead Nurture Drip Sequence](rm-lead-nurture-drip-sequence.md) — Skool-origin extended nurture
+- [RM Borrower Objections](../reverse-mortgage-dna/rm-borrower-objections.md)
+- [How The WM AI Bot Works](../crm-architecture/how-wm-ai-bot-works.md)
+- [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md)
+
+## Open questions
+
+- [ ] Per-client approval of story names and state-specific disclaimers
+- [ ] A/B lighter cadence (email-only some days) for opt-out-sensitive lists
+- [ ] Merge vs. replace [RM iMessage Intent Drip (7-Day)](rm-imessage-intent-drip-7day.md) when both email and SMS are live
+- [ ] Post–Day 90 quarterly re-engagement workflow (not yet authored)
