@@ -3,7 +3,7 @@ title: Creative Research System (RM Ads)
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-05-30
+last_updated: 2026-06-23
 review_cycle: monthly
 artifact_type: sop
 ---
@@ -24,6 +24,7 @@ creative-research/
 ├── swipe-decomposition-rubrics.md  ← how to break down a script + an edit
 ├── editing-styles-catalog.md       ← reusable EDITING styles (how it's made)
 ├── script-archetypes-catalog.md    ← reusable SCRIPT patterns (what it says)
+├── losers-log.md                   ← paused/fatigued patterns to avoid (Step 0)
 └── swipes/
     ├── _TEMPLATE.md                ← copy this per ad
     └── assets/                     ← drop the actual video files / frames here
@@ -31,9 +32,10 @@ creative-research/
 
 ## The 4-phase method
 
-1. **Collect** — source from Meta Ad Library (RM + adjacent finance/insurance/senior),
-   our own winning ads, and high-craft DTC/UGC outside RM (for editing rhythm).
-   Winner proxies: run length 3+ weeks, multiple variations, or real account data.
+1. **Collect** — primary source for **owned winners**: Mr. Waiz `ad_library` (summary +
+   visual_notes, `status=winner`) via [ad-intelligence-bridge.md](../../../operations/ad-intelligence-bridge.md).
+   Secondary: Meta Ad Library (RM + adjacent finance/insurance/senior), high-craft DTC/UGC outside RM.
+   Winner proxies: account performance data (preferred), run length 3+ weeks, or multiple variations.
 2. **Capture** — one `swipes/<id>.md` per ad (copy `_TEMPLATE.md`). Save the actual
    asset in `swipes/assets/` — ads disappear.
 3. **Decompose** — run each swipe through the rubrics in
@@ -46,9 +48,9 @@ creative-research/
 
 | Frequency | Action |
 |-----------|--------|
-| Weekly | Capture 5–10 swipes (bias to our own winners) |
+| Weekly | Capture 1–2 **owned** RM winners from Mr. Waiz + optional competitor swipes |
 | Monthly | Synthesize: a pattern shared by 3+ winners becomes a rule. Update catalogs. |
-| Quarterly | Prune dead patterns; re-rank by what account data proved |
+| Quarterly | Prune dead patterns; re-rank by what account data proved. Update [losers-log.md](losers-log.md). |
 
 ## How to feed ads to the agent (and what it can actually see)
 

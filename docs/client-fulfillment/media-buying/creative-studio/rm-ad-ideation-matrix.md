@@ -3,7 +3,7 @@ title: RM Ad Ideation Matrix
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-06-10
+last_updated: 2026-06-23
 review_cycle: monthly
 artifact_type: playbook
 ---
@@ -58,6 +58,21 @@ Input: an **archetype** (or "any"), a **stage**, a **count** N, and optionally a
 4. **Tag + screen.** Each concept is tagged with its frameworks and run through the
    [compliance gate](compliance-gate-checklist.md). Anything that fails is fixed or dropped, not shown.
 
+## Winner-informed ideation (Step 0)
+
+When the user says "new ad" without naming a winner, **do not start blank-page**. Run Step 0 from
+[ad-development-workflow.md](../ad-development-workflow.md) first:
+
+1. Scan [script-archetypes-catalog.md](../creative-research/script-archetypes-catalog.md),
+   [editing-styles-catalog.md](../creative-research/editing-styles-catalog.md), and recent
+   [swipes/](../creative-research/swipes/).
+2. Build a coverage map: which archetype × angle × format combos already have proven swipes.
+3. **Ideation seed = the gap** — e.g. "Legacy Planner + UGC + comment-reply hook is unproven;
+   Strategic Retiree + static + five-icon grid is covered."
+4. Optionally pull Mr. Waiz `ad_library` via `supabase:ad:{uuid}` when user names a winner to `vary`.
+
+Cite `winner_ref` or `supabase:ad:{uuid}` on every concept row when building from owned patterns.
+
 ## Output format (one concept = one row)
 
 | Field | Example |
@@ -71,6 +86,7 @@ Input: an **archetype** (or "any"), a **stage**, a **count** N, and optionally a
 | One-line premise | Dismantle the "my kids inherit the debt" fear by showing the non-recourse guarantee. |
 | Lead hook (direction) | "Worried your kids will inherit a bill? Here's what actually happens." |
 | VOC anchor | "I don't want to ask my kids for help." |
+| winner_ref | `supabase:ad:{uuid}` or swipe id (when derived from owned winner) |
 | Frameworks | F7 myth-bust hook; F2 Loss Aversion (reframed); F4 objection #2 |
 | Compliance flag | OK (no guarantee, no age, real mechanism) |
 

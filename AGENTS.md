@@ -21,11 +21,19 @@ This repository is the Waiz Media operating system. Agents should treat `docs/` 
 | LinkedIn LO outreach (DMs, SN, angles) | [.claude/skills/linkedin-lo-outreach/SKILL.md](.claude/skills/linkedin-lo-outreach/SKILL.md) |
 | Pre-call objection videos (nurture URLs, transcripts, setter sends) | [.claude/skills/pre-call-objection-videos/SKILL.md](.claude/skills/pre-call-objection-videos/SKILL.md) — [manifest](docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml) |
 | **Content ideation + scripting (personal / business / client lanes)** | [.claude/skills/content-engine/SKILL.md](.claude/skills/content-engine/SKILL.md) — [content engine hub](docs/content-engine/README.md) |
+| **Apify creator research + viral format remix** | [.claude/skills/creator-research/SKILL.md](.claude/skills/creator-research/SKILL.md) — [manifest](docs/content-engine/research/creator-research-manifest.yaml) |
 | **Transcript / research → knowledge base updates** | [.claude/skills/knowledge-capture/SKILL.md](.claude/skills/knowledge-capture/SKILL.md) |
+| **RM fulfillment (copy, drips, bot, objections, lifecycle)** | [.claude/skills/rm-fulfillment-agent/SKILL.md](.claude/skills/rm-fulfillment-agent/SKILL.md) — [deploy kit](docs/client-fulfillment/reverse-mortgage-agent/chatbot-deploy/README.md) |
+| **Call transcripts (Supabase → OS)** | [docs/operations/call-intelligence-bridge.md](docs/operations/call-intelligence-bridge.md) |
+| **Owned ad winners (Mr. Waiz → OS)** | [docs/operations/ad-intelligence-bridge.md](docs/operations/ad-intelligence-bridge.md) — [ad development workflow](docs/client-fulfillment/media-buying/ad-development-workflow.md) — [manifest](docs/client-fulfillment/media-buying/ad-creative-manifest.yaml) |
 
 Full index: [.claude/skills/README.md](.claude/skills/README.md)
 
-**Content engine entry:** [docs/content-engine/README.md](docs/content-engine/README.md) — [infrastructure](docs/content-engine/INFRASTRUCTURE.md), [lane boundaries](docs/content-engine/LANE-BOUNDARIES.md), archive policy.
+**Content engine entry:** [docs/content-engine/README.md](docs/content-engine/README.md) — [infrastructure](docs/content-engine/INFRASTRUCTURE.md), [lane boundaries](docs/content-engine/LANE-BOUNDARIES.md), [ClickUp personal pipeline](docs/content-engine/clickup-personal-brand-pipeline.md), archive policy.
+
+**Call intelligence:** Supabase WM Reporting stores all call transcripts. Wm-os stores distilled knowledge only. Bridge: [call-intelligence-bridge.md](docs/operations/call-intelligence-bridge.md).
+
+**Ad intelligence:** Mr. Waiz `ad_library` stores owned client creatives + performance. Wm-os stores distilled swipes and catalogs only. Bridge: [ad-intelligence-bridge.md](docs/operations/ad-intelligence-bridge.md). Create ads via [ad-development-workflow.md](docs/client-fulfillment/media-buying/ad-development-workflow.md).
 
 **Product marketing context:** [.agents/product-marketing.md](.agents/product-marketing.md) — Waiz Media positioning for business-lane content.
 

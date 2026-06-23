@@ -21,6 +21,8 @@ Canonical truth stays in `docs/`. To publish layperson-readable copies for the t
 - [Hiring (Media Buyer)](hiring/README.md)
 - [Systems](systems/README.md)
 - [Reporting](reporting/README.md)
+- [Call Intelligence Bridge](call-intelligence-bridge.md) — Supabase call transcripts → Wm-os content engine
+- [Ad Intelligence Bridge](ad-intelligence-bridge.md) — Mr. Waiz owned ad winners → Wm-os creative-research
 
 ## Source Inventory Snapshot
 

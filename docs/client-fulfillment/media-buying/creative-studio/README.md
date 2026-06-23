@@ -3,7 +3,7 @@ title: Creative Studio (RM Ads)
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-06-10
+last_updated: 2026-06-23
 review_cycle: monthly
 artifact_type: sop
 ---
@@ -12,8 +12,8 @@ artifact_type: sop
 
 The outbound creative engine: brainstorm new reverse-mortgage ad ideas and write compliant
 video ad scripts for fulfillment clients. Sibling to [creative-research/](../creative-research/)
-(inbound: learn from others). Invoked via the
-[rm-creative-studio skill](../../../../.claude/skills/rm-creative-studio/SKILL.md).
+(inbound: learn from others). Full lifecycle: [ad-development-workflow.md](../ad-development-workflow.md).
+Invoked via the [rm-creative-studio skill](../../../../.claude/skills/rm-creative-studio/SKILL.md).
 
 ## What this gives you
 
@@ -48,6 +48,7 @@ for your approval or edits before moving to the next.
 
 | Step | What happens | Gate |
 |------|--------------|------|
+| **0. Pull patterns** | Agent reads [ad-development-workflow.md](../ad-development-workflow.md) retrieval order, scans catalogs + swipes, cites `supabase:ad:{uuid}` or swipe ids, names the gap to fill | Confirm patterns or name a winner to vary |
 | **1. Concept** | The agent asks only for the minimal missing inputs (archetype, angle/stage, format, count), then shows compliance-flagged concept(s) as a table | Pick a concept # or request changes |
 | **2. Script** | Full 5-part script + Frameworks Applied + Compliance Gate (+ Video Brief) for the chosen concept | Approve or edit |
 | **3. Reiterations** | Iterate on the script — the full revised script is re-shown each pass — until you lock it | Lock the script |
@@ -58,7 +59,7 @@ consolidated file per ad** (concept + final script + final prompt + compliance g
 [outputs/](outputs/) only when you explicitly say to save. No per-step or per-concept files.
 
 Shortcuts for one step in isolation (still in-chat unless you save): say `brainstorm`, `script`,
-`prompt`, or "give me 5 variations of this winner" (`vary`).
+`prompt`, or "give me 5 variations of this winner" (`vary` — pass `supabase:ad:{uuid}` or a swipe id).
 
 ## Quality guarantees (why outputs aren't improvised)
 

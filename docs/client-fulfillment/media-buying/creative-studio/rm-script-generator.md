@@ -21,6 +21,7 @@ Turns one ideation concept into a full, compliant, ready-to-shoot video ad scrip
 
 - A concept from the [ideation matrix](rm-ad-ideation-matrix.md) (archetype + angle + stage + hook type), OR
 - A direct request: archetype + angle + stage.
+- Optional **`winner_ref`**: `supabase:ad:{uuid}` or swipe id (e.g. `rm-2026-06-breaking-news-static`) — when hooks derive from a proven winner, cite the ref in hook options and Frameworks Applied.
 - Pulls VOC, fears, desires, objections from the [ICP doc](../../reverse-mortgage-dna/intelligence-icp-rm.md)
   and structure rules from the [RM Ad Playbook](../../client-marketing/rm-ad-playbook.md).
 

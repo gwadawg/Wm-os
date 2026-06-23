@@ -11,7 +11,14 @@ established frameworks, never improvised.
 
 ## Always load first (knowledge base)
 
-Read these from `docs/client-fulfillment/media-buying/creative-studio/` and siblings:
+Read these from `docs/client-fulfillment/media-buying/` and siblings:
+
+0. [ad-development-workflow.md](../../../docs/client-fulfillment/media-buying/ad-development-workflow.md) — retrieval order + Step 0 contract.
+0b. [script-archetypes-catalog.md](../../../docs/client-fulfillment/media-buying/creative-research/script-archetypes-catalog.md) + [editing-styles-catalog.md](../../../docs/client-fulfillment/media-buying/creative-research/editing-styles-catalog.md) + recent [swipes/](../../../docs/client-fulfillment/media-buying/creative-research/swipes/) + [losers-log.md](../../../docs/client-fulfillment/media-buying/creative-research/losers-log.md).
+0c. [ad-intelligence-bridge.md](../../../docs/operations/ad-intelligence-bridge.md) — when pulling `supabase:ad:{uuid}` from Mr. Waiz.
+0d. [ad-creative-manifest.yaml](../../../docs/client-fulfillment/media-buying/ad-creative-manifest.yaml) — Supabase pull index (v2 programmatic query).
+
+Read these from `docs/client-fulfillment/media-buying/creative-studio/`:
 
 1. [frameworks-reference.md](../../../docs/client-fulfillment/media-buying/creative-studio/frameworks-reference.md) — which frameworks exist and the awareness/hook maps (DR doctrine distilled inline).
 2. [rm-archetypes-canonical.md](../../../docs/client-fulfillment/media-buying/creative-studio/rm-archetypes-canonical.md) — archetypes <-> personas <-> angles.
@@ -29,10 +36,17 @@ Related skills: [copywriting](../copywriting/SKILL.md) · [marketing-psychology]
 ## Ad Build Flow (default)
 
 When the user wants to make an ad ("let's make an ad", "new RM ad", "script for X", or anything
-without a specific shortcut), run this **single gated 4-step flow in order**. It is conversational:
+without a specific shortcut), run this **single gated 5-step flow in order** (Step 0 + Steps 1–4). It is conversational:
 **everything happens in chat**, and you **pause after every step** for the user's approval or edits
 before advancing. Do not skip ahead, do not run multiple steps in one pass, and do not write any
 file until the user explicitly says to save (see File Policy).
+
+### Step 0 — Pull proven patterns (before Concept)
+1. Read [ad-development-workflow.md](../../../docs/client-fulfillment/media-buying/ad-development-workflow.md) retrieval order.
+2. Scan script-archetypes + editing-styles catalogs and 2–3 relevant swipes (or query Mr. Waiz `ad_library` when user names `supabase:ad:{uuid}`).
+3. State **"Patterns I'm building from:"** with citations on every concept row (`swipe-id` or `supabase:ad:{uuid}`).
+4. Name the **gap** — archetype × angle × format not recently proven — use as ideation seed.
+5. **Pause** if user said "pull from winners first." Otherwise proceed to Step 1.
 
 ### Step 1 — Concept
 1. Collect only the **minimal missing inputs** by asking: archetype (or "any"), angle + stage

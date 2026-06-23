@@ -1,0 +1,59 @@
+workflow: ad-creative-intelligence
+version: 1
+status: active
+last_updated: 2026-06-23
+
+owners:
+  founder: founder
+
+triggers:
+  - capture pending RM ad winners
+  - supabase:ad
+  - ad library winner
+  - pull from our winners
+  - ad intelligence bridge
+
+load_order:
+  - ad-development-workflow.md
+  - ../../operations/ad-intelligence-bridge.md
+  - creative-research/script-archetypes-catalog.md
+  - creative-research/editing-styles-catalog.md
+  - creative-research/losers-log.md
+  - creative-studio/rm-ad-ideation-matrix.md
+  - ad-creative-manifest.yaml
+
+supabase:
+  project_id: fszmndldcvrrmitfbwde
+  project_name: WM Reporting
+  tables:
+  - ad_library
+  - ad_library_aliases
+  - meta_ad_insights
+  view: v_ad_library_intelligence
+
+citation_format: "supabase:ad:{uuid}"
+
+api:
+  base_path: /api/ad-library/intelligence
+  filters:
+  - id
+  - status
+  - product
+  - library_status
+
+product_routing:
+  reverse:
+  - creative-research/swipes/
+  - creative-research/script-archetypes-catalog.md
+  - creative-research/editing-styles-catalog.md
+  - creative-studio/
+  - reverse-mortgage-dna/
+  dscr:
+  - dscr-dna/ad-copy-angle-library-dscr.md
+  broad_forward:
+  - client-marketing/
+
+archive:
+  root: ../wm-content-archive
+  ads_dir: ads
+  naming: "YYYY-MM-DD-{library-id-slug}/"

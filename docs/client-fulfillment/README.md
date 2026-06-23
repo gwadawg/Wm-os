@@ -33,10 +33,12 @@ Everything Waiz delivers **after a client signs** — onboarding, CRM, marketing
 | [Infrastructure](infrastructure/README.md) | Client CRM, GHL, WM AI bot |
 | [Client marketing](client-marketing/README.md) | Playbooks, drips, ad strategy |
 | [Media buying](media-buying/README.md) | Campaign execution SOPs |
+| [Ad development workflow](media-buying/ad-development-workflow.md) | **RM ad learn + create loop** (Mr. Waiz winners → creative-research → creative studio) |
 | [Client success](client-success/README.md) | Post-launch CS, phases, troubleshooting |
 | [Call center](call-center/README.md) | B2C fulfillment call-center scripts and QA lifecycle |
 | [CRM architecture](crm-architecture/README.md) | Canonical CRM + bot paths |
 | [Reverse mortgage DNA](reverse-mortgage-dna/README.md) | Product, ICP, compliance |
+| [RM Fulfillment Agent](reverse-mortgage-agent/README.md) | Claude Project deploy kit for internal fulfillment team |
 | [Course material](course-material/README.md) | Skool training (links to canonical SOPs) |
 
 ## On GitHub today

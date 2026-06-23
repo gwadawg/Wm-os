@@ -6,7 +6,79 @@ disable-model-invocation: true
 
 # Knowledge Capture
 
-Turn raw inputs into **distilled OS updates**. Never store full transcripts in the OS — archive raw externally (`wm-content-archive/transcripts/`).
+Turn raw inputs into **distilled OS updates**. Never store full transcripts in the OS — raw calls live in Supabase; optional mirror in `wm-content-archive/transcripts/`.
+
+## Supabase pull mode
+
+When the user references a call by UUID, pending batch, or points to the Mr. Waiz database:
+
+1. Read [call-intelligence-bridge.md](../../../docs/operations/call-intelligence-bridge.md)
+2. Pull call via **Supabase MCP** (`v_all_calls`) or dashboard `GET /api/calls/intelligence`
+3. Read `extraction` JSON first; load `transcript` only if extraction is empty or insufficient
+4. Route findings per [routing-table.md](routing-table.md)
+5. Cite every entry: `supabase:call:{uuid}` in Source column
+6. After confirmed updates, note that `call_intelligence.knowledge_capture_status` should be set to `processed` and `os_refs` updated in Supabase
+
+## Supabase ad pull mode (owned winners)
+
+When the user says "capture pending RM ad winners", references `supabase:ad:{uuid}`, or points to Mr. Waiz `ad_library`:
+
+1. Read [ad-intelligence-bridge.md](../../../docs/operations/ad-intelligence-bridge.md)
+2. Pull ad via **Supabase MCP** on `ad_library` (+ `ad_library_aliases`) or v2 `GET /api/ad-library/intelligence`
+3. Read `summary` + `visual_notes` first (usually sufficient — no Drive video required)
+4. Snapshot performance funnel metrics at capture time (spend, leads, qualified, appointments, shows)
+5. Route findings per [routing-table.md](routing-table.md) § Owned client ads
+6. Cite every entry: `supabase:ad:{uuid}`
+7. After confirmed updates, set `knowledge_capture_status = 'processed'` and `os_refs` on `ad_library` (v2)
+8. Keep [ad-development-workflow.md](../../../docs/client-fulfillment/media-buying/ad-development-workflow.md) and creative-research catalogs in sync
+
+### Supabase ad queries
+
+Single ad with aliases:
+
+```sql
+select al.*, coalesce(json_agg(ala.alias_name) filter (where ala.id is not null), '[]') as aliases
+from ad_library al
+left join ad_library_aliases ala on ala.library_id = al.id
+where al.id = '{uuid}'
+group by al.id;
+```
+
+RM winners pending capture:
+
+```sql
+select id, ad_name, product, ad_format, status, summary, visual_notes, knowledge_capture_status
+from ad_library
+where product = 'reverse' and status = 'winner'
+  and coalesce(knowledge_capture_status, 'none') in ('none', 'pending')
+order by updated_at desc limit 20;
+```
+
+**Weekly cap:** Process 1–3 owned RM winners max per session. Scrub client names from OS entries.
+
+### Supabase queries
+
+Single call with transcript:
+
+```sql
+select call_id, call_category, call_subtype, called_at, transcript, extraction, lanes, sensitivity
+from v_all_calls where call_id = '{uuid}';
+```
+
+Pending content-eligible calls:
+
+```sql
+select call_id, call_category, call_subtype, called_at, transcript_summary, extraction
+from v_all_calls
+where knowledge_capture_status = 'pending'
+  and content_eligible = true
+order by called_at desc limit 20;
+```
+
+**Weekly cap:** Process 3–5 calls max. Prioritize sales > Gabe teaching > client check-ins.
+Skip ops-only client calls (`knowledge_capture_status = skipped`).
+
+**Client calls:** Default route to client DNA, not business hooks. Scrub names/metrics.
 
 ## Input types
 
@@ -15,7 +87,7 @@ Turn raw inputs into **distilled OS updates**. Never store full transcripts in t
 | `transcript` | Sales call, discovery, client call, podcast |
 | `notes` | Voice memo text, bullet dump |
 | `article` | Blog, thread, competitor post |
-| `apify` | JSON export from Instagram/TikTok scraper |
+| `apify` | JSON export from Instagram / Meta Ads scraper (via creator-research `/apify-capture`) |
 | `forum` | Reddit/comment research paste |
 
 Ask if unclear: **"What type of input is this, and which lane should benefit (personal / business / client)?"**
@@ -48,8 +120,10 @@ From **content-strategy** call transcript methodology:
 | **Hooks** | Punchy openers said naturally → hook-library |
 | **Competitor mentions** | Names + comparisons → competitor-research |
 | **Beliefs / frames** | Strong opinions → beliefs.md |
+| **Format decomposition** | Hook, beats, visual, audio, engagement → swipe-file (Apify) |
 
-Capture **verbatim quotes** when possible (product-marketing standard).
+Capture **verbatim quotes** when possible (product-marketing standard). For Apify
+scrapes, **adapt hooks** — do not copy competitor lines verbatim into hook-library.
 
 ## Auto-update vs ask-first
 
@@ -106,6 +180,9 @@ Full matrix: [routing-table.md](routing-table.md)
 
 ## Related
 
+- [call-intelligence-bridge.md](../../../docs/operations/call-intelligence-bridge.md) — Supabase call pull contract
+- [ad-intelligence-bridge.md](../../../docs/operations/ad-intelligence-bridge.md) — Supabase owned-ad pull contract
+- [creator-research](../creator-research/SKILL.md) — Apify capture + format remix
 - [content-engine](../content-engine/SKILL.md) — consumes updated KB for ideation
 - [waiz-business-os](../waiz-business-os/SKILL.md) — doc standards
 

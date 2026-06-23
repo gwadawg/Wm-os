@@ -28,6 +28,10 @@ New creative batch or testing new angles.
 - Angle
 - Brand/compliance rules
 - Prompt templates
+- Optional **`winner_ref`**: run Step 0 from [ad-development-workflow.md](ad-development-workflow.md) —
+  pull winning **static** patterns from [creative-research/swipes/](creative-research/swipes/) and
+  [script-archetypes-catalog.md](creative-research/script-archetypes-catalog.md) before Ideogram.
+  Cite `supabase:ad:{uuid}` or swipe id in the image brief.
 
 ## Outputs
 
