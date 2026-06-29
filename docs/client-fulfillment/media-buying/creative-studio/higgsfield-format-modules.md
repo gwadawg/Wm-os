@@ -108,6 +108,12 @@ entirely through burned-in captions over dignified b-roll. **Works on mute. The 
 content; the people are the proof, not presenters.** Strong at TOF because the soft mechanism
 reveal never needs the product name.
 
+> **Canonical playbook (2026-06+):** [silent-story-ad-playbook.md](silent-story-ad-playbook.md) —
+> punchy caption engine (6–12 words/frame, 2–2.5s), three story layers (emotional + secret +
+> proof), multi-hook pack workflow, B-roll REAL/AI/STILL matrix, lead-quality hook rules, and
+> story spine library. Use that doc for brainstorm → script → editor handoff; this module covers
+> Higgsfield prompt chunks and dramatization rules.
+
 ### What Higgsfield does and does not render
 
 - Higgsfield renders **only the b-roll scenes** — no dialogue, no speaking to camera, and
@@ -117,9 +123,11 @@ reveal never needs the product name.
 
 ### Structure (the caption engine)
 
-- **12–14 caption frames** (~1 caption every 3–4s, 45–60s total) mapped onto the 5-beat arc:
-  Hook (1) → Empathy (2–4) → Frame Shift (5–7) → Proof (8–11) → Payoff (12–13) → CTA end
-  card (14).
+- **16–19 caption frames** (~2–2.5s each, ~42–56s total) is the **preferred punchy standard**
+  (see [silent-story-ad-playbook.md](silent-story-ad-playbook.md)). Legacy outputs may use
+  **12–14 frames** (~3–4s each, 45–60s).
+- Both map onto the 5-beat arc: Hook (1–2) → Empathy (3–5) → Frame Shift (6–8) → Proof (9–14)
+  → Payoff + CTA (15–19).
 - **Ellipsis open-loop engine:** captions that continue end with `…` to force the next
   frame; resolution beats end clean.
 - **Hook frame (0:00–0:02) is the most important 2 seconds:** bold ALL-CAPS line +

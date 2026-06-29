@@ -3,7 +3,7 @@ title: DSCR Static Image Generator — Claude Project Build Pack
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-06-11
+last_updated: 2026-06-29
 review_cycle: monthly
 artifact_type: sop
 ---
@@ -36,7 +36,8 @@ at all. Optional: client voice/brand notes.
 
 ## Outputs
 
-Whatever you ask for — typically Ideogram-ready prompts, but no fixed template is required.
+Whatever you ask for — typically Ideogram-ready prompts plus a **Mr. Waiz registration block**
+(`overview`, `ad_name`, `summary`, `visual_notes`) when a new static is ready to log.
 
 ## Quality Bar
 
@@ -49,8 +50,8 @@ Whatever you ask for — typically Ideogram-ready prompts, but no fixed template
 ### How to use it
 
 ```
-[You describe what you want] → [Claude helps: prompt, copy, direction, variations]
-      → [Ideogram] → [Canva] → [Meta Ads Manager]
+[You describe what you want] → [Claude helps: prompt, ad name, summary, visual notes]
+      → [Ideogram] → [Canva] → [Mr. Waiz ad_library] → [Meta Ads Manager]
 ```
 
 No mandatory questions. No fixed output structure. The project knows DSCR; you drive the creative.
@@ -145,6 +146,85 @@ VARIATIONS / HEADSHOTS — when asked:
   Professional studio lighting, clean cutout edges, subtle soft shadow, solid neutral background."
   Remind them to composite in Canva.
 
+MR WAIZ REGISTRATION — when the user finishes a new static, asks to "label the ad," or says the creative
+is ready to log, output a **COPY-PASTE FOR MR. WAIZ** block with these four sections (each in its own
+code block, ready to paste):
+
+1. **overview** — one easy sentence for the Mr. Waiz description/overview field. Plain English; what the
+   ad is + who it's for + main hook. No jargon.
+2. **ad_name** — short slug: `dscr_[visual]_[spec1]_[spec2]_[spec3]` (see naming rules below).
+3. **summary** — 2–4 sentences: funnel stage (TOF/MOF/BOF), audience, format/angle, test hypothesis,
+   named pattern slug (e.g. `navy-suburban-headline-stack`). Strategy, not layout.
+4. **visual_notes** — layout, colors, typography, verbatim on-image copy.
+
+Also remind: `product=dscr`, `ad_format=static`, `drive_url` when the file is in Drive.
+
+**Ad name — default pattern (short: visual + top specs):**
+
+```
+dscr_[visual]_[spec1]_[spec2]_[spec3]
+```
+
+- **visual** — one token for what you'd recognize in the thumbnail (background + layout). Max one token.
+- **specs** — top 3 selling points on the creative. Drop weaker specs before dropping visual.
+
+Visual slug cheat sheet:
+
+| What you see | Slug |
+|--------------|------|
+| Blurred suburban house + navy overlay | `navy-suburban` |
+| Blurred luxury rental + navy overlay | `navy-luxury` |
+| Centered rate-card / spec stack | `ratecard` |
+| Big headline + specs below | `headline-stack` |
+| Center-left type stack | `centerleft` |
+| Cream / warm background | `cream` |
+| Icon grid | `icon-grid` |
+
+Spec slug cheat sheet:
+
+| On ad | Slug |
+|-------|------|
+| From 5.9% / 5.99% APR | `5.9apr` / `5.99apr` |
+| No income docs | `nodocs` |
+| Up to 85% LTV | `85ltv` |
+| No appraisal | `noappr` |
+| 640+ FICO | `640fico` |
+| Investor refinance headline | `invrefi` |
+
+Examples:
+- `dscr_navy-suburban_5.99apr_noappr_nodocs`
+- `dscr_ratecard_5.9apr_nodocs_85ltv`
+
+**Ad name — concept-slug pattern (angle-led statics, no spec stack on image):**
+
+```
+dscr_[concept-slug]_4x5_[YYYY-MM-DD]_v[#]
+```
+
+Example: `dscr_balloon-exit_4x5_2026-06-11_v1`
+
+**Overview template (one line):**
+
+```
+MOF DSCR static — [visual style] — leads with [main hook] for investors refinancing rentals.
+```
+
+**Summary template (fill in brackets):**
+
+```
+[TOF/MOF/BOF] DSCR investor refinance static — [format/angle name]. Targets [persona/friction].
+Leads with [primary hook on image]. Hypothesis: [what you're testing]. Named pattern: [kebab-case-slug].
+```
+
+**Visual notes template:**
+
+```
+[ratio] static. [Background/scene]. [Typography stack top → bottom with exact on-image copy in quotes].
+[CTA pill/button text]. [Style tags: e.g. rate-card, premium fintech, no people].
+```
+
+Also output Meta pipe format when useful: `DSCR | [visual] | [spec-slug]` (e.g. `DSCR | navy-suburban | 5.99apr_noappr_nodocs`).
+
 Be concise unless they want depth. Be creative unless they want literal. You're a sparring partner, not
 a form.
 ```
@@ -153,13 +233,71 @@ a form.
 
 Use this pipeline when you're ready to produce — none of it is enforced by the project.
 
-### Ideogram → Canva → Meta
+### Ideogram → Canva → Mr. Waiz → Meta
 
-1. Get your prompt from the project (however you asked for it).
-2. [Ideogram](https://ideogram.ai) → paste prompt → **4:5** default (1:1 or 16:9 when intentional) → Generate.
-3. Check spelling, composition, no stray numbers in the scene → Download.
-4. Canva: logo, text fixes, headshot composite → Export.
-5. Ads Manager: upload, add copy, launch.
+1. Get your Ideogram prompt from the project.
+2. [Ideogram](https://ideogram.ai) → paste prompt → **4:5** default → Generate → Download.
+3. Canva: logo, text fixes, headshot composite → Export.
+4. Upload final PNG/JPG to Google Drive → copy share link.
+5. Ask the project: **`Label this ad for Mr. Waiz`** → copy the registration block (`overview`, `ad_name`,
+   `summary`, `visual_notes`).
+6. **Mr. Waiz** (`ad_library`): paste fields — `overview`/`summary` into description fields,
+   `visual_notes` into visual notes, `product=dscr`, `ad_format=static`, `drive_url`. Thumbnail:
+   `https://drive.google.com/thumbnail?id=FILE_ID&sz=w1000`.
+7. Ads Manager: upload, use same `ad_name`, add primary text, launch.
+
+### Mr. Waiz registration (every new static — required)
+
+When a creative is ready, log it in Mr. Waiz **before or right after** Meta upload so performance can
+roll up to one library row. Bridge spec: [ad-intelligence-bridge.md](../../operations/ad-intelligence-bridge.md).
+
+| Mr. Waiz field | What to paste |
+|----------------|---------------|
+| **Description / overview** | `overview` — one easy sentence (see copy-paste blocks below) |
+| **ad_name** | Short slug: `dscr_[visual]_[spec1]_[spec2]_[spec3]` — same in Meta Ads Manager |
+| **summary** | Funnel stage, audience, hypothesis, named pattern |
+| **visual_notes** | Layout, colors, typography, verbatim on-image copy |
+| **product** | `dscr` |
+| **ad_format** | `static` |
+| **drive_url** | Google Drive view link to final export |
+| **status** | `testing` at launch; `winner` when performance gates pass |
+
+**Copy-paste block — navy suburban headline stack:**
+
+```
+overview:
+MOF DSCR static — blurred suburban rental on navy — headline "Refinance Your Rental / No Appraisal" with 5.99% APR and investor program specs.
+
+ad_name:
+dscr_navy-suburban_5.99apr_noappr_nodocs
+
+summary:
+MOF DSCR investor refinance static — headline-stack on blurred suburban rental with navy overlay. Targets active investors who already own rentals and respond to direct refi hooks (no appraisal + rate + program specs). Hypothesis: headline-led layout with rate callout converts better than generic checklist cards for warm investor traffic. Named pattern: navy-suburban-headline-stack.
+
+visual_notes:
+4:5 vertical, center-left type. Blurred suburban rental house, 75% deep navy overlay. Amber gold eyebrow "INVESTOR REFINANCE". Large white "REFINANCE YOUR RENTAL" + amber gold "NO APPRAISAL". White "FROM 5.99% APR". Specs: "NO INCOME DOCS" (gold), "640+ FICO · UP TO 85% LTV", "$75K - $5M LOAN RANGE". Bottom-left gold pill "SEE YOUR TERMS". Premium financial, no people/icons.
+```
+
+**Copy-paste block — centered rate card:**
+
+```
+overview:
+MOF DSCR static — centered rate card on luxury rental — $75K–$5M range, from 5.9% APR, stacked program specs.
+
+ad_name:
+dscr_ratecard_5.9apr_nodocs_85ltv
+
+summary:
+MOF/BOF DSCR investor refinance static — centered rate-card / program-spec format. Targets active investors ready to compare terms on a rental they already own. Leads with loan range + rate, then no income docs, FICO, LTV, no appraisal. Hypothesis: spec-card clarity beats generic checklist ads. Named pattern: investor-refi-rate-card.
+
+visual_notes:
+4:5 vertical, centered stack. Blurred luxury rental exterior, 70% navy overlay. "INVESTOR REFINANCE" eyebrow → "$75K - $5M" in white outline box → "FROM 5.9% APR" → alternating gold/white specs: NO INCOME DOCS · 640+ FICO · UP TO 85% LTV · NO APPRAISAL. Gold pill "SEE YOUR TERMS". Rate-card, premium fintech, no people/icons.
+```
+
+**Shortcut prompts:**
+
+- `Label this ad for Mr. Waiz — give me overview, ad_name, summary, and visual_notes.`
+- `Creative is done. Give me the Mr. Waiz registration block.`
 
 ### Variation of a winner
 
@@ -178,17 +316,7 @@ replace stock person, anchor bottom edge).
 - No guarantees; no tax/legal advice?
 - Operator tone, not senior/checklist-card generic?
 - Text spelled correctly; legible at feed size?
-
-### Asset naming (optional)
-
-If you want consistency in Ads Manager / UTMs:
-
-```
-dscr_[short-concept-slug]_[ratio]_[YYYY-MM-DD]_v[#]
-```
-
-Example: `dscr_balloon-exit_4x5_2026-06-11_v1`. Use whatever slug describes the concept — no angle
-codes required.
+- Mr. Waiz row created with `overview`, `ad_name`, `summary`, `visual_notes`, and `drive_url`?
 
 ## Related Docs
 
@@ -197,4 +325,5 @@ codes required.
 - [DSCR Ads Playbook](dscr-ads-playbook.md) — full creative playbook (repo reference, not required in project)
 - [DSCR Compliance Guardrails](dscr-compliance-guardrails.md) — full compliance doc (repo reference)
 - [DSCR Ad Creative — Batch 01](dscr-ad-creative-batch-01.md) — optional example statics
+- [Ad Intelligence Bridge](../../operations/ad-intelligence-bridge.md) — Mr. Waiz `ad_library` fields + winner capture
 - RM rigid workflow analog: [AI RM Ad Image Creation SOP](../media-buying/ai-rm-ad-image-creation-sop.md)

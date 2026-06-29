@@ -14,3 +14,4 @@ Offer architecture beyond company-level money model. Canonical offer overview co
 ## Canonical Docs
 
 - Company-level source of truth: [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md)
+- Team tier pricing (2-20+ LOs): [Pricing Architecture — Team Tiers](pricing-architecture.md)

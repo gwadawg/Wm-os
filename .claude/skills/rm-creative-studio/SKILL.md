@@ -27,6 +27,7 @@ Read these from `docs/client-fulfillment/media-buying/creative-studio/`:
 5. [compliance-gate-checklist.md](../../../docs/client-fulfillment/media-buying/creative-studio/compliance-gate-checklist.md) — the gate every output passes (incl. Part E format checks).
 6. [higgsfield-prompt-builder.md](../../../docs/client-fulfillment/media-buying/creative-studio/higgsfield-prompt-builder.md) — concept → Higgsfield AI-video prompt (short UGC) + the shared production mechanics. Load for the `prompt` command.
 7. [higgsfield-format-modules.md](../../../docs/client-fulfillment/media-buying/creative-studio/higgsfield-format-modules.md) — spoken testimonial (T1, dramatization rule), silent text-overlay testimonial (T2), educational/explainer (E1, B-Roll Sourcing Plan). Load with the prompt builder whenever the concept's format is not UGC.
+7b. [silent-story-ad-playbook.md](../../../docs/client-fulfillment/media-buying/creative-studio/silent-story-ad-playbook.md) — **T2 caption-engine stories**: punchy frames, emotional+secret+proof layers, multi-hook packs, B-roll matrix, story spines. Load for silent story brainstorm, script, B-roll plan, or "caption ad" requests.
 
 Pull voice/pain/objections from [intelligence-icp-rm.md](../../../docs/client-fulfillment/reverse-mortgage-dna/intelligence-icp-rm.md)
 and structure from [rm-ad-playbook.md](../../../docs/client-fulfillment/client-marketing/rm-ad-playbook.md).

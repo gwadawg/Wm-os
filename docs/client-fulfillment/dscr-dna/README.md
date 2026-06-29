@@ -41,7 +41,8 @@ End-to-end DSCR refinance funnel assets. **Read the GTM brief first** for the be
 | [MB DSCR Ad Copy Standards](mb-dscr-ad-copy-standards.md) | 1 — ad creative | `draft` |
 | [DSCR Funnel-Stage Messaging (TOF/MOF/BOF)](dscr-funnel-stage-messaging.md) | 1 — ad creative (stage hooks + tokenized MOF/BOF numbers) | `draft` |
 | [DSCR Ad Creative — Batch 01](dscr-ad-creative-batch-01.md) | 1 — ad creative | `draft` |
-| [DSCR Campaign Master Angles](dscr-campaign-master-angles.md) | 1 — ad creative (the 5 locked campaign angles) | `draft` || [DSCR Static Image Generator — Claude Project Build Pack](dscr-static-image-generator-project.md) | 1 — ad creative (lightweight Claude project: DSCR context + angle store) | `draft` |
+| [DSCR Campaign Master Angles](dscr-campaign-master-angles.md) | 1 — ad creative (the 5 locked campaign angles) | `draft` |
+| [DSCR Static Image Generator — Claude Project Build Pack](dscr-static-image-generator-project.md) | 1 — static ad creation (Ideogram → Mr. Waiz → Meta) | `draft` |
 | [DSCR Landing Page And VSL Copy](dscr-landing-and-vsl.md) | 2 — landing/VSL | `draft` |
 | [DSCR Funnel Form Spec](dscr-funnel-form-spec.md) | 2 — funnel/form | `draft` |
 | [DSCR Lander Build Pack](dscr-lander-build-pack.md) | 2 — buildable page spec (Lander A/B split test) | `draft` |

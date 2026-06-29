@@ -2,7 +2,7 @@
 title: Intelligence RM Product
 domain: client-fulfillment
 owner: founder
-status: draft
+status: active
 last_updated: 2026-05-21
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Reverse Mortgage DNA/Intelligence -- RM Product -- 04.26.docx

@@ -88,5 +88,7 @@ Something came up in the market... You still trying to take cash out of your hom
 ## Related Docs
 
 - [RM iMessage Intent Drip (7-Day)](rm-imessage-intent-drip-7day.md) — current intent-segmented iMessage nurture (team Google Doc)
+- [RM iMessage Appointment Follow-Up](rm-imessage-appointment-followup.md) — first booking
+- [RM iMessage Second-Booking Follow-Up](rm-imessage-second-booking-followup.md) — rebook / second appointment (broad, lighter cadence)
 - [10-Day RM Drip Campaign](10-day-rm-drip-campaign.md)
 - [How The WM AI Bot Works](../crm-architecture/how-wm-ai-bot-works.md)

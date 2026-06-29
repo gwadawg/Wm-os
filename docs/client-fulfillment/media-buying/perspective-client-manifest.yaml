@@ -1,0 +1,76 @@
+workflow: perspective-funnel-intelligence
+version: 1
+status: draft
+last_updated: 2026-06-24
+
+owners:
+  media_buying_lead: media-buying-lead
+  founder: founder
+
+triggers:
+  - sync perspective manifest
+  - perspective funnel
+  - perspective mcp
+  - funnel registry
+  - perspective intelligence bridge
+
+load_order:
+  - perspective-funnel-setup-sop.md
+  - ../reverse-mortgage-dna/rm-funnel-form-spec.md
+  - ../../operations/perspective-intelligence-bridge.md
+  - perspective-client-manifest.yaml
+
+mcp:
+  server: perspective
+  endpoint: https://perspective-api.co/mcp
+  cursor_config: ~/.cursor/mcp.json
+  auth: oauth_via_mcp_remote
+
+supabase:
+  project_id: fszmndldcvrrmitfbwde
+  project_name: WM Reporting
+  join_tables:
+    - clients
+    - events
+  notes: Use events for CPL, qualified, appointments, shows after GHL ingest — not for funnel step structure.
+
+citation_format: "perspective:funnel:{funnel_id}"
+
+# Populate clients via Perspective MCP sync. One row per live published funnel.
+# client_slug must match Supabase clients.slug and DNA folder naming where applicable.
+clients:
+  - client_slug: reverse-template
+    display_name: Reverse Template
+    product: reverse
+    perspective_sub_account: Reverse Mortgage
+    funnel_id: "69757cd00857d77751570047"
+    funnel_name: Reverse Template
+    published_url: null
+    ghl_sub_account: null
+    domain: hecm.homequityhacks.com
+    status: active
+    step_count: 13
+    os_refs:
+      - ../reverse-mortgage-dna/rm-funnel-form-spec.md
+      - perspective-funnel-setup-sop.md
+    last_synced_at: "2026-06-24"
+    notes: >
+      Duplicate source for new RM client funnels. Canonical structure documented in
+      rm-funnel-form-spec.md. Template may include A/B landers (RMP vs Cash Out) or a split
+      last-name step — default new builds to single intent lander + combined opt-in per spec.
+
+# Example row for live client sync (fill from Perspective MCP — do not commit PII):
+# - client_slug: "{client_slug}"
+#   display_name: "{display_name}"
+#   product: reverse
+#   perspective_sub_account: Reverse Mortgage
+#   funnel_id: "{perspective_funnel_id}"
+#   funnel_name: "{funnel_name}"
+#   published_url: https://hecm.homequityhacks.com/{client_slug}
+#   ghl_sub_account: null
+#   domain: hecm.homequityhacks.com
+#   status: active
+#   os_refs:
+#     - ../reverse-mortgage-dna/rm-funnel-form-spec.md
+#   last_synced_at: null
+#   notes: null

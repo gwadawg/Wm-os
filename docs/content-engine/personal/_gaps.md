@@ -3,7 +3,7 @@ title: Content Engine — Knowledge Gaps
 domain: content-engine
 owner: founder
 status: draft
-last_updated: 2026-06-17
+last_updated: 2026-06-26
 review_cycle: weekly
 auto_update: true
 update_via: knowledge-capture
@@ -24,8 +24,6 @@ Topics found in transcripts/research that don't have a home in the OS yet. Revie
 | 2026-06-17 | Grilling R1 | IG baseline metrics unknown | personal-brand-dna.md §12 | open |
 | 2026-06-17 | Grilling R1 | Notion diary not ingested (may have more stories) | stories.md | open |
 | 2026-06-17 | Grilling R1 | Video transcripts not ingested | stories.md, hook-library.md | open |
-| 2026-06-17 | Grilling R1 | Swipe file empty | swipe-file.md | open |
-| 2026-06-17 | Grilling R1 | Apify competitor scrape not run | competitor-research.md | open |
 | 2026-06-17 | Grilling R1 | Round 1 #3 cut off — "Make sure that…" | personal-brand-dna.md §10 | open |
 | 2026-06-17 | Grilling R2 | S1 Part 4 — specific "what broke through" moment (first big client? bank?) | stories.md S1 turn | open |
 | 2026-06-17 | Grilling R2 | S6 ADHD — specific systems/tools not listed yet | stories.md S6 | open |
@@ -40,5 +38,9 @@ Topics found in transcripts/research that don't have a home in the OS yet. Revie
 | 2026-06-17 | Zero hooks / angles | hook-library.md, angle-library.md | 2026-06-17 |
 | 2026-06-17 | S1 story missing tension/turn detail | stories.md S1 (Rio arc full) | 2026-06-17 |
 | 2026-06-17 | Infra setup | Infrastructure docs created — INFRASTRUCTURE.md, LANE-BOUNDARIES.md | content-engine/ | 2026-06-17 |
+| 2026-06-18 | Apify integration | creator-research skill + manifest + routing wired | research/creator-research-manifest.yaml | 2026-06-18 |
+| 2026-06-17 | Grilling R1 | Swipe file empty | swipe-file.md (3 seeded swipes) | 2026-06-18 |
+| 2026-06-18 | Format library setup | No production format taxonomy | format-library.md (4 formats) | 2026-06-18 |
+| 2026-06-18 | creator-research | First Apify capture not run | swipe-file.md + angle-library.md via MCP scrape 2026-06-26 | 2026-06-26 |
 
 <!-- knowledge-capture: append new rows to Open gaps automatically -->

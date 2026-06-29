@@ -34,7 +34,7 @@ If ambiguous, ask: **"Personal, business, or client (which product)?"**
 
 ### Load by lane
 
-**Personal:** `_voice/personal-brand-dna.md` → `personal/content-pillars.md` → `beliefs.md` → `stories.md` → `hook-library.md` → `angle-library.md` → optional `inspiration/`
+**Personal:** `_voice/personal-brand-dna.md` → `personal/content-pillars.md` → `beliefs.md` → `stories.md` → `hook-library.md` → `angle-library.md` → `personal/format-library.md` → optional `inspiration/`
 
 **Business:** `.agents/product-marketing.md` → `_voice/waiz-media-brand-dna.md` → `business/content-pillars.md` → `business/hook-library.md`
 
@@ -47,12 +47,13 @@ If ambiguous, ask: **"Personal, business, or client (which product)?"**
 Default: lane from context, count = 15–20.
 
 **Steps:**
-1. Research pulse — skim `personal/inspiration/competitor-research.md` (and new Apify archive if user mentions it)
-2. Pull ideas from pillars, beliefs, stories, hooks, angles, swipes
+1. Research pulse — skim `personal/inspiration/competitor-research.md`; check `angle-library.md` for `status: remix-candidate` and recent entries in `swipe-file.md`; run `/apify-capture` first if user has new archive file
+2. Pull ideas from pillars, beliefs, stories, hooks, angles, swipes — **prioritize remix-candidates** as trial-concepts
 3. Mix formats: ~60% reel, ~25% trial-concept, ~15% carousel (adjust if user specifies)
 4. Tag each idea:
    - **discoverability:** searchable | shareable | both
    - **format:** reel | carousel | trial-concept
+   - **production_format:** yap | vo-montage | talking-head-broll | concept-edit (personal lane — see `format-library.md`)
    - **pillar**
    - **buyer stage** (if B2B): awareness | consideration | decision | implementation
 5. **Score** each idea (1–10 weighted):
@@ -63,6 +64,9 @@ Default: lane from context, count = 15–20.
 | Content-market fit | 30% |
 | Search / discovery potential | 20% |
 | Resource cost to film | 10% |
+
+**Remix bonus:** Ideas with `status: remix-candidate` or linked `format_ref` in
+swipe-file get **+2 on content-market fit** (format already proven elsewhere).
 
 6. Output table sorted by total score; mark top 5 as `recommended`
 
@@ -102,6 +106,43 @@ Include **editor_notes** (cuts, b-roll, text overlays) — user films, editor cu
 
 User marks ideas: `film-this-week` | `save-for-later` | `archive`. Update `angle-library.md` statuses.
 
+### `/push-clickup [script path or idea title]`
+
+Push a personal-lane script to ClickUp for editor execution. Read
+[clickup-personal-brand-pipeline.md](../../docs/content-engine/clickup-personal-brand-pipeline.md)
+for list ID, field mapping, and task vs subtask rules.
+
+**Trigger phrases:** "create ClickUp project", "push to editor", `/push-clickup`
+
+**Lane:** `personal` only. If business or client, stop and say business organic /
+client ads are not set up on this list (client → Ad Creative Pipeline).
+
+**Steps:**
+
+1. Load script from path, or run `/script` first if only an idea title was given
+2. Confirm script exists at `personal/scripts/YYYY-MM-DD-format-slug.md`
+3. Update `angle-library.md` row → `status: scripted` if linked via `source_idea`
+4. **Ask Gabe:**
+   - Editor assignee (no default — use `clickup_resolve_assignees`)
+   - Due date (optional)
+   - Starting status: `Scripting` (default) or `Ready to Edit` if footage exists
+   - Raw footage URL (optional)
+5. Build task `markdown_description` per clickup-personal-brand-pipeline.md:
+   Hook → timed script table → CTA → editor notes → links
+6. `clickup_create_task` on list `901327607346`:
+   - `name` = script `title` frontmatter
+   - `status` = chosen starting status (omit if list statuses not configured yet)
+   - `custom_fields` = map from frontmatter using ID registry in pipeline doc
+   - `due_date` if provided
+   - `assignees` = resolved editor ID
+7. **Zero subtasks** — one video = one task. Captions, export ratios, sound,
+   assembly all live in `## Editor notes` on this task. Never create workflow
+   step subtasks (Assembly, Captions, Export, etc.).
+8. Return `task_url`
+
+**After custom fields are added in ClickUp UI:** run `clickup_get_custom_fields`
+for list `901327607346` and update the ID registry in the pipeline doc.
+
 ## Format selection guide
 
 | Format | Use when |
@@ -122,6 +163,8 @@ Templates: [format-templates.md](format-templates.md)
 
 ## Related skills
 
+- [EditorProjectcreator](../editor-project-creator/SKILL.md) — call → editor projects; use `/push-clip` for `call-clip-edit` briefs (not `/push-clickup`)
+- [creator-research](../creator-research/SKILL.md) — Apify capture, viral format remix
 - [knowledge-capture](../knowledge-capture/SKILL.md) — feed transcripts into KB
 - [brainstorming](../brainstorming/SKILL.md) — optional deep ideation
 - [marketing-psychology](../marketing-psychology/SKILL.md) — angle sharpening
@@ -131,4 +174,5 @@ Templates: [format-templates.md](format-templates.md)
 
 - Index: `docs/content-engine/README.md`
 - Templates (duplicate): `docs/content-engine/_templates.md`
+- ClickUp handoff: `docs/content-engine/clickup-personal-brand-pipeline.md`
 - Repurpose: `docs/content-engine/repurposing/reels-to-ads-engine.md`

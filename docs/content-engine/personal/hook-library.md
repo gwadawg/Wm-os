@@ -3,7 +3,7 @@ title: Personal Hook Library
 domain: content-engine
 owner: founder
 status: draft
-last_updated: 2026-06-17
+last_updated: 2026-06-18
 review_cycle: monthly
 auto_update: true
 update_via: knowledge-capture
@@ -54,6 +54,13 @@ Running bank of hooks by type. Pull from here for `/weekly-ideas` and `/script`.
 | I worked on the floor of my apartment in Rio with no idea what my business would be | story | burn-the-boats | grilling R2 | 2026-06-17 |
 | You want Presidents Club results with part-time effort | callout | extreme beliefs | grilling R2 | 2026-06-17 |
 | Go days without catching a wave — that's what building a business feels like | story | extreme beliefs | grilling R2 | 2026-06-17 |
+| 4 paths in mortgage — which one works in 2025? | list | AI + ops | robert-moore-demo call | 2026-06-18 |
+| Stop running Meta ads for first-time buyers | contrarian | AI + ops | robert-moore-demo call | 2026-06-18 |
+| 3% rate. Still refinancing. | contrarian | extreme beliefs | robert-moore-demo call | 2026-06-18 |
+| Referrals aren't free — the hidden cost nobody invoices | contrarian | extreme beliefs | robert-moore-demo call | 2026-06-18 |
+| Reverse was predatory. I'll say it. | contrarian | extreme beliefs | robert-moore-demo call | 2026-06-18 |
+| Your face on the ad is a gimmick | contrarian | AI + ops | robert-moore-demo call | 2026-06-18 |
+| Why top LOs only close 6–7 loans a month | curiosity | AI + ops | robert-moore-demo call | 2026-06-18 |
 
 ## Swipe-adapted hooks
 

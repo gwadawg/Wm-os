@@ -3,7 +3,7 @@ title: Ad Intelligence Bridge — Supabase to Wm-os
 domain: operations
 owner: founder
 status: active
-last_updated: 2026-06-23
+last_updated: 2026-06-29
 review_cycle: quarterly
 artifact_type: playbook
 ---
@@ -106,6 +106,26 @@ Before capture:
 4. Scrub client names from OS entries (`client_count` only, not client names).
 
 `ad_library` has no `client_id` by design — patterns are cross-client. Scrub PII before distilling.
+
+## Creating new ads in Mr. Waiz (before they're winners)
+
+Log every new creative at launch so performance rolls up to one row.
+
+| Product | Creation SOP | When to log |
+|---------|--------------|-------------|
+| **RM** (video/static) | [ad-development-workflow.md](../client-fulfillment/media-buying/ad-development-workflow.md) | Before or right after Meta upload |
+| **DSCR** (Ideogram static) | [dscr-static-image-generator-project.md](../client-fulfillment/dscr-dna/dscr-static-image-generator-project.md) | After export; ask agent: `Label this ad for Mr. Waiz` |
+
+**Minimum fields at launch:** `ad_name`, `summary`, `visual_notes`, `product`, `ad_format`, `drive_url`, `status=testing`.
+
+**Field guide:**
+
+| Field | Use |
+|-------|-----|
+| **ad_name** | Short slug — same string in Meta Ads Manager. DSCR format: `dscr_[visual]_[spec1]_[spec2]_[spec3]` |
+| **summary** | Strategy: funnel stage, audience, hypothesis, named pattern. Primary input for knowledge capture. |
+| **visual_notes** | Layout, colors, verbatim on-image copy. |
+| **Description / overview (UI)** | One easy sentence — use the `overview` line from the DSCR static generator registration block; paste into summary too if Mr. Waiz has a single description field. |
 
 ## Source citation (required in every OS entry)
 

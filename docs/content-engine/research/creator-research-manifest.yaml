@@ -1,0 +1,180 @@
+workflow: creator-research
+version: 1
+status: active
+last_updated: 2026-06-26
+
+owners:
+  founder: founder
+
+# Machine-readable index for AI and manual Apify runs.
+# Skill: .claude/skills/creator-research/SKILL.md
+# Raw JSON never committed — save to wm-content-archive/research/apify/
+
+triggers:
+  - apify
+  - apify-capture
+  - creator research
+  - competitor scrape
+  - viral format
+  - remix format
+  - scrape instagram
+  - scrape meta ads
+  - swipe file
+  - format decomposition
+
+load_order:
+  - ../INFRASTRUCTURE.md
+  - ../LANE-BOUNDARIES.md
+  - ../personal/inspiration/competitor-research.md
+  - ../personal/inspiration/swipe-file.md
+  - creator-research-manifest.yaml
+
+archive:
+  root: ../wm-content-archive
+  apify_dir: research/apify
+  naming: "YYYY-MM-DD-{platform}-{scope-slug}.json"
+  bootstrap:
+    - mkdir -p ../wm-content-archive/research/apify
+    - mkdir -p ../wm-content-archive/transcripts
+    - mkdir -p ../wm-content-archive/published
+
+platforms:
+  instagram:
+    actor: apify/instagram-scraper
+    actor_url: https://apify.com/apify/instagram-scraper
+    scope_types:
+      - profile
+      - hashtag
+      - post_url
+    sort_by: engagement
+    sort_notes: "Rank by likes + comments; prefer Reels with high view-to-like ratio"
+    example_inputs:
+      profile:
+        directUrls:
+          - https://www.instagram.com/marcel.stxm/
+        resultsType: posts
+        resultsLimit: 20
+      profile_reels_yap:
+        directUrls:
+          - https://www.instagram.com/bigdaddyleads/
+        resultsType: reels
+        resultsLimit: 25
+        onlyPostsNewerThan: "6 months"
+        notes: "Prefer reels over posts for yap format mining; bigdaddyleads validated 2026-06-26"
+      hashtag:
+        directUrls:
+          - https://www.instagram.com/explore/tags/entrepreneur/
+        resultsType: posts
+        resultsLimit: 30
+    citation_prefix: apify:instagram
+
+  meta_ads:
+    actor: apify/facebook-ads-scraper
+    actor_url: https://apify.com/apify/facebook-ads-scraper
+    scope_types:
+      - keyword_search_url
+      - advertiser_page
+    sort_by: days_running
+    sort_notes: "Longevity proxy — active ads with high days-running likely converting. See DSCR method."
+    search_url_pattern: "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=US&q={keyword}&search_type=keyword_unordered&media_type=all"
+    example_inputs:
+      keyword_search:
+        startUrls:
+          - url: "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=US&q=loan+officer&search_type=keyword_unordered&media_type=all"
+        maxItems: 50
+    citation_prefix: apify:meta_ads
+    reference_doc: ../../client-fulfillment/dscr-dna/dscr-competitor-ad-intelligence.md
+
+viral_thresholds:
+  instagram:
+    top_n: 20
+    min_views: null
+    notes: "User sets min_views at prompt time; default top_n by engagement"
+  meta_ads:
+    top_n: 15
+    min_days_running: 30
+    notes: "Filter active ads with days_running >= min_days_running before decomposition"
+
+remix_scoring:
+  high_threshold: 7
+  criteria:
+    - pillar_fit
+    - voice_adaptability
+    - film_cost
+    - format_clarity
+  high_score_routes:
+    - personal/inspiration/swipe-file.md
+    - personal/angle-library.md
+
+competitor_watchlist:
+  - handle: bigdaddyleads
+    platform: instagram
+    notes: "Bold agency positioning, proof-heavy operator tone"
+  - handle: marcel.stxm
+    platform: instagram
+    notes: "UGC hooks, story + CTA structure"
+  - handle: lukaspakter
+    platform: instagram
+    notes: "Ambitious entrepreneur network energy"
+
+weekly_scrape_prompt_template: |
+  This week's scrape scope (pick one):
+  1. IG profile: @[handle] — top {N} posts by engagement
+  2. IG hashtag: #{tag} — top {N} Reels
+  3. Meta Ad Library: keyword "{keyword}" — ads running 30+ days, top {N} by longevity
+
+  After Apify run:
+  - Export JSON → wm-content-archive/research/apify/YYYY-MM-DD-{platform}-{slug}.json
+  - In agent: /apify-capture [path]
+  - Review swipes; /remix top candidate
+
+# Ready-to-paste JSON inputs live outside git:
+# wm-content-archive/research/apify/inputs/*.json
+yap_scrape_presets:
+  goal: "Hook + talking-head format inspiration for personal-lane yap content"
+  actor: apify/instagram-scraper
+  actor_url: https://apify.com/apify/instagram-scraper
+  filter_after_capture:
+    - "Prefer Reels / video (type Video or productType clips)"
+    - "Prefer talking head, walk-and-talk, car/desk yap — skip carousel-only"
+    - "Rank by likes + comments; bonus for high views on short Reels"
+    - "Remix score ≥7 → yap trial-concept in personal/scripts/"
+  presets:
+    - id: first-run-marcel-stxm
+      file: ../wm-content-archive/research/apify/inputs/01-first-run-marcel-stxm.json
+      scope: "@marcel.stxm profile — 20 posts, last 6 months"
+      why: "Hook + story + CTA structure; adapt beats to yap bullet prompts"
+      export_as: "YYYY-MM-DD-instagram-marcel-stxm.json"
+      run_order: 1
+    - id: yap-bigdaddyleads
+      file: ../wm-content-archive/research/apify/inputs/02-yap-bigdaddyleads.json
+      scope: "@bigdaddyleads profile — 25 posts, last 6 months"
+      why: "Bold operator hot takes — closest to Pillar 2 yap energy"
+      export_as: "YYYY-MM-DD-instagram-bigdaddyleads.json"
+      run_order: 2
+    - id: yap-lukaspakter
+      file: ../wm-content-archive/research/apify/inputs/03-yap-lukaspakter.json
+      scope: "@lukaspakter profile — 25 posts, last 6 months"
+      why: "Ambitious entrepreneur identity — Pillar 1 + 3 yap angles"
+      export_as: "YYYY-MM-DD-instagram-lukaspakter.json"
+      run_order: 3
+    - id: hashtag-entrepreneur
+      file: ../wm-content-archive/research/apify/inputs/04-hashtag-entrepreneur-reels.json
+      scope: "#entrepreneur — 30 recent posts"
+      why: "Format discovery beyond watchlist; run monthly max"
+      export_as: "YYYY-MM-DD-instagram-hashtag-entrepreneur.json"
+      run_order: 4
+  cadence: "1 profile scrape per week; hashtag monthly"
+
+first_run:
+  steps:
+    - "Apify account → subscribe to apify/instagram-scraper (pay-per-result ~$1.50/1k)"
+    - "Paste input from wm-content-archive/research/apify/inputs/01-first-run-marcel-stxm.json"
+    - "Run actor → Export dataset as JSON"
+    - "Save as wm-content-archive/research/apify/2026-06-26-instagram-marcel-stxm.json"
+    - "In agent: /apify-capture [path] — distills swipes + remix-candidates"
+    - "Run /remix on top yap-format swipe → trial-concept in personal/scripts/"
+    - "Close Apify gap row in personal/_gaps.md"
+  smoke_test_handle: marcel.stxm
+  smoke_test_limit: 20
+  preset_file: ../wm-content-archive/research/apify/inputs/01-first-run-marcel-stxm.json

@@ -11,6 +11,13 @@ artifact_type: automation
 
 # How The WM AI Bot Works
 
+> **Planned change:** This doc describes the **current** bot, which turns off after a booking
+> and does not reschedule, cancel, or run its own follow-ups. We are rebuilding the fulfillment
+> responder on CloseBot's Agent Node so the AI **stays on** to recover ghosts (with intent-based
+> follow-up cadences) and handle reschedule/cancel itself. See
+> [Fulfillment AI Agent — Purpose & Scope](fulfillment-ai-agent-purpose.md) for the target
+> behavior. Until that ships, the rules below are still in effect.
+
 ## Purpose
 
 Explains WM AI bot behavior in the CRM.
@@ -121,7 +128,7 @@ If you need to:
 ## Cancel an appointment
 ## Move an appointment
 ## Turn reminders on or off
-Please follow the SOP specifically designed for appointment management.
+Please follow the SOP specifically designed for appointment management — [RM iMessage Appointment Follow-Up](../client-marketing/rm-imessage-appointment-followup.md).
 
 ## If You Turn the AI Off, Don’t Forget This
 You may turn the AI off to write a personal message — even though we don’t recommend it.

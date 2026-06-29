@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Retirement Equity Assessment — V2 Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-canvas: #FAF7F2;
+      --bg-card: #FFFFFF;
+      --text-primary: #1B2A4A;
+      --text-muted: #5C6478;
+      --accent: #C4653A;
+      --accent-hover: #A8522E;
+      --trust: #2D6A6A;
+      --success: #3D6B4F;
+      --border: #E8E2D9;
+      --shadow: 0 8px 32px rgba(27, 42, 74, 0.08);
+      --radius: 16px;
+      --max-w: 480px;
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "DM Sans", system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-canvas);
+      color: var(--text-primary);
+      line-height: 1.55;
+      min-height: 100dvh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(196, 101, 58, 0.06), transparent),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .shell {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 24px 20px 120px;
+      min-height: 100dvh;
+    }
+
+    .page {
+      display: none;
+      animation: enter 0.4s ease-out both;
+    }
+
+    .page.active { display: block; }
+
+    @keyframes enter {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--trust);
+      margin-bottom: 12px;
+    }
+
+    h1, h2 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    h1 { font-size: clamp(1.75rem, 5vw, 2.125rem); margin-bottom: 16px; }
+    h2 { font-size: clamp(1.35rem, 4vw, 1.5rem); margin-bottom: 8px; }
+
+    .lead { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 20px; }
+    .sub { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 24px; }
+
+    .hero-illustration {
+      width: 100%;
+      height: 120px;
+      margin: 28px 0 32px;
+      opacity: 0.12;
+    }
+
+    .credibility {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 28px;
+      line-height: 1.6;
+    }
+
+    .progress-wrap { margin-bottom: 28px; }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .progress-bar {
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: width 0.5s ease;
+    }
+
+    .category-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--trust);
+      margin-bottom: 8px;
+    }
+
+    .momentum {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-style: italic;
+      margin-bottom: 12px;
+      font-family: var(--font-display);
+    }
+
+    .options { display: flex; flex-direction: column; gap: 12px; }
+
+    .option {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 16px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+      box-shadow: 0 1px 0 rgba(27, 42, 74, 0.04);
+    }
+
+    .option:hover {
+      border-color: rgba(196, 101, 58, 0.4);
+      box-shadow: var(--shadow);
+    }
+
+    .option:active { transform: scale(0.98); }
+
+    .option.selected {
+      border: 2px solid var(--accent);
+      box-shadow: var(--shadow);
+      padding: 15px 17px;
+    }
+
+    select.option-select {
+      width: 100%;
+      padding: 16px 18px;
+      font-size: 1rem;
+      font-family: var(--font-body);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%235C6478' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 18px center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 52px;
+      padding: 14px 24px;
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--accent);
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(196, 101, 58, 0.28);
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+      box-shadow: 0 6px 20px rgba(196, 101, 58, 0.35);
+    }
+
+    .btn:active { transform: translateY(1px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-muted);
+      box-shadow: none;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      min-height: 44px;
+      margin-top: 12px;
+    }
+
+    .btn-secondary:hover { background: rgba(27, 42, 74, 0.04); color: var(--text-primary); }
+
+    .btn-soft {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      box-shadow: none;
+    }
+
+    .time-badge {
+      display: block;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+
+    .micro-insight {
+      background: var(--bg-card);
+      border-left: 3px solid var(--trust);
+      padding: 16px 18px;
+      margin-bottom: 24px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--text-primary);
+      animation: enter 0.5s ease-out;
+    }
+
+    .loading-screen {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .form-group { margin-bottom: 16px; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"] {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 1rem;
+      font-family: var(--font-body);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg-card);
+    }
+
+    .consent {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 20px 0;
+    }
+
+    .consent input { margin-top: 3px; flex-shrink: 0; width: 18px; height: 18px; accent-color: var(--accent); }
+
+    .privacy { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
+
+    .privacy a { color: var(--trust); }
+
+    .check-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
+    }
+
+    .check-icon circle { fill: rgba(61, 107, 79, 0.12); }
+    .check-icon path {
+      stroke: var(--success);
+      stroke-width: 2.5;
+      fill: none;
+      stroke-dasharray: 48;
+      stroke-dashoffset: 48;
+      animation: draw 0.6s ease forwards 0.2s;
+    }
+
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+
+    .expectation-hero {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin: 24px 0;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .expectation-hero strong { color: var(--accent); }
+
+    .timeline { margin: 28px 0; }
+
+    .timeline-step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .timeline-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(45, 106, 106, 0.12);
+      color: var(--trust);
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .timeline-step h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .timeline-step p { font-size: 0.9rem; color: var(--text-muted); }
+
+    .faq { margin: 28px 0; }
+
+    .faq details {
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+
+    .faq summary {
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .faq summary::after { content: "+"; color: var(--accent); font-size: 1.2rem; }
+    .faq details[open] summary::after { content: "−"; }
+
+    .faq p { margin-top: 10px; font-size: 0.9rem; color: var(--text-muted); }
+
+    footer.compliance {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(250, 247, 242, 0.95);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid var(--border);
+      padding: 12px 20px;
+      font-size: 10px;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.5;
+      z-index: 10;
+    }
+
+    footer.compliance a { color: var(--text-muted); }
+
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 16px;
+      padding: 0;
+      font-family: var(--font-body);
+    }
+
+    .nav-back:hover { color: var(--text-primary); }
+
+    .exit-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid var(--border);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell" id="app">
+    <!-- LANDING -->
+    <section class="page active" data-page="landing">
+      <p class="eyebrow">Retirement Equity Assessment</p>
+      <h1>Could Your Home Equity Help You Live More Comfortably in Retirement?</h1>
+      <p class="lead">Many homeowners are sitting on significant equity — but aren't sure what options actually fit their situation. This short assessment helps you see where you stand — without a credit pull or obligation.</p>
+      <p class="sub">Answer <strong>10 quick questions</strong> → get a personalized <strong>Retirement Equity Assessment</strong> and clear next steps.</p>
+
+      <svg class="hero-illustration" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M40 90 L200 30 L360 90" stroke="#1B2A4A" stroke-width="1.5" fill="none"/>
+        <rect x="120" y="55" width="160" height="35" stroke="#1B2A4A" stroke-width="1.5" fill="none"/>
+        <path d="M200 30 L200 55" stroke="#1B2A4A" stroke-width="1.5"/>
+        <circle cx="200" cy="72" r="8" stroke="#C4653A" stroke-width="1.5" fill="none"/>
+      </svg>
+
+      <button class="btn" data-action="start">Check My Equity Options</button>
+      <span class="time-badge">Takes less than 3 minutes</span>
+
+      <p class="credibility">{company_name} · NMLS {nmls} · Equal Housing Lender<br>Licensed in {licensed_states}</p>
+    </section>
+
+    <!-- LOADING (after Q1) -->
+    <section class="page" data-page="loading">
+      <div class="loading-screen">
+        <div class="loading-spinner" aria-hidden="true"></div>
+        <p class="eyebrow">One moment</p>
+        <h2>Personalizing your assessment…</h2>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="page" data-page="quiz">
+      <button class="nav-back" data-action="back" type="button">← Back</button>
+      <div class="progress-wrap">
+        <div class="progress-meta">
+          <span id="category-label">Your Goal</span>
+          <span id="progress-text">Question 1 of 10</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width: 10%"></div></div>
+      </div>
+      <p class="momentum" id="momentum" hidden>Almost done — two more sections</p>
+      <div id="micro-insight" class="micro-insight" hidden></div>
+      <p class="category-label" id="cat-repeat"></p>
+      <h2 id="question-text"></h2>
+      <div class="options" id="options"></div>
+    </section>
+
+    <!-- OPT-IN -->
+    <section class="page" data-page="optin">
+      <h2>Where should we send your personalized Retirement Equity Assessment?</h2>
+      <p class="sub">Enter your details to see your results and what happens next.</p>
+      <form id="optin-form">
+        <div class="form-group">
+          <label for="first">First name</label>
+          <input type="text" id="first" name="first" required autocomplete="given-name" />
+        </div>
+        <div class="form-group">
+          <label for="last">Last name</label>
+          <input type="text" id="last" name="last" required autocomplete="family-name" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(555) 555-5555" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+        </div>
+        <label class="consent">
+          <input type="checkbox" id="sms" required />
+          <span>I consent to receive SMS notifications, alerts &amp; occasional marketing communication from <strong>{mlo_name}</strong>. Message and data rates may apply. Reply STOP to unsubscribe at any time.</span>
+        </label>
+        <button type="submit" class="btn">See My Results</button>
+        <p class="privacy" style="margin-top:16px">We respect your privacy. Your information is used only to provide your assessment and connect you with a licensed advisor. <a href="{privacy_policy_url}">Privacy Policy</a></p>
+      </form>
+    </section>
+
+    <!-- THANK YOU -->
+    <section class="page" data-page="thankyou">
+      <svg class="check-icon" viewBox="0 0 56 56" aria-hidden="true">
+        <circle cx="28" cy="28" r="26"/>
+        <path d="M16 28 L24 36 L40 20"/>
+      </svg>
+      <h2 id="ty-greeting">Thank you.</h2>
+      <p class="lead" id="ty-insight"></p>
+
+      <div class="expectation-hero">
+        <p>We're preparing your assessment now.</p>
+        <p><strong>Expect a call from {company_name} within 15 minutes.</strong></p>
+        <p style="margin-top:8px;font-size:0.9rem;color:var(--text-muted)">Watch for a <strong>{area_code}</strong> number.</p>
+      </div>
+
+      <h3 style="font-family:var(--font-display);margin-bottom:16px">What happens next</h3>
+      <div class="timeline">
+        <div class="timeline-step">
+          <span class="timeline-num">1</span>
+          <div>
+            <h3>We review your information now</h3>
+            <p>Your advisor is looking over the details you submitted to prepare your personalized assessment.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <span class="timeline-num">2</span>
+          <div>
+            <h3>We call you in the next 15 minutes</h3>
+            <p>You'll receive a personal call from a dedicated {company_name} advisor — not an automated system.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <span class="timeline-num">3</span>
+          <div>
+            <h3>We walk through your options together</h3>
+            <p><strong>15–20 minutes.</strong> No pressure. No commitment. Just clear answers about what may be available for your situation.</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="tel:{phone}" class="btn btn-soft" style="text-decoration:none;margin-bottom:24px">Save Our Number</a>
+
+      <div class="faq">
+        <h3 style="font-family:var(--font-display);margin-bottom:12px">About your call</h3>
+        <details>
+          <summary>How long will the call be?</summary>
+          <p>15–20 minutes. We respect your time. We'll cover what matters and never keep you longer than needed.</p>
+        </details>
+        <details>
+          <summary>Will I be pressured to sign anything?</summary>
+          <p>Absolutely not. This is an educational conversation, not a sales call. The decision is entirely yours, on your timeline.</p>
+        </details>
+        <details>
+          <summary>What should I have ready?</summary>
+          <p>Nothing. We have everything we need from your submission. Just answer when we call.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- SOFT EXIT (primary residence = No) -->
+    <section class="page" data-page="exit">
+      <h2>Thank you for your honesty.</h2>
+      <div class="exit-card">
+        <p class="lead">Based on your answer, this particular program is designed for <strong>primary residences</strong> — where you live most of the year.</p>
+        <p class="sub">We won't add you to a sales call list. If your situation changes, you're welcome to revisit this assessment anytime.</p>
+        <a href="{privacy_policy_url}" class="btn btn-secondary" style="text-decoration:none;display:block;text-align:center">Learn more about home equity options</a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="compliance">
+    {company_name} · NMLS #{nmls} · Equal Housing Lender · {phone} · {address}<br>
+    <a href="{terms_url}">Terms of Use</a> · <a href="{privacy_policy_url}">Privacy Policy</a> ·
+    Not a commitment to lend. All loans subject to credit approval and program guidelines.
+  </footer>
+
+  <script>
+    const INTENT_LABELS = {
+      remove_payment: "eliminate your monthly mortgage payment",
+      cash_out: "access equity without adding a new monthly bill",
+      pay_off_debt: "reduce debt that's weighing on your retirement",
+      protect_costs: "build a financial cushion for rising costs"
+    };
+
+    const QUESTIONS = [
+      {
+        id: "intent",
+        category: "Your Goal",
+        text: "If you could improve one thing about your housing costs or equity, what would it be?",
+        type: "select",
+        options: [
+          { value: "remove_payment", label: "Eliminate my monthly mortgage payment" },
+          { value: "cash_out", label: "Get extra cash without a new monthly bill" },
+          { value: "pay_off_debt", label: "Pay off debt that's stressing my retirement" },
+          { value: "protect_costs", label: "Protect myself from rising costs and unexpected expenses" }
+        ],
+        microAfter: (a) => `Got it — we'll tailor your assessment around ${a.label.toLowerCase()}.`
+      },
+      {
+        id: "primary",
+        category: "Your Home",
+        text: "Is this your primary residence — where you live most of the year?",
+        type: "yesno",
+        exitOn: "no"
+      },
+      {
+        id: "mortgage",
+        category: "Your Home",
+        text: "Do you currently have a mortgage on the property?",
+        type: "yesno",
+        skipNextIf: "no"
+      },
+      {
+        id: "balance",
+        category: "Your Home",
+        text: "About how much do you still owe?",
+        type: "select",
+        options: [
+          { value: "0", label: "$0" },
+          { value: "under_100k", label: "Under $100k" },
+          { value: "100k_250k", label: "$100k–$250k" },
+          { value: "250k_500k", label: "$250k–$500k" },
+          { value: "500k_plus", label: "$500k+" }
+        ]
+      },
+      {
+        id: "value",
+        category: "Your Home",
+        text: "What do you think your home is worth today?",
+        type: "select",
+        options: [
+          { value: "under_200k", label: "Under $200k" },
+          { value: "200k_400k", label: "$200k–$400k" },
+          { value: "400k_700k", label: "$400k–$700k" },
+          { value: "700k_1m", label: "$700k–$1M" },
+          { value: "1m_plus", label: "$1M+" }
+        ],
+        microAfter: () => "Thanks — equity looks like a meaningful part of your picture."
+      },
+      {
+        id: "state",
+        category: "Your Home",
+        text: "Which state is the property in?",
+        type: "state"
+      },
+      {
+        id: "age",
+        category: "You & Eligibility",
+        text: "What is your age?",
+        type: "select",
+        options: [
+          { value: "under_55", label: "Under 55" },
+          { value: "55_61", label: "55–61" },
+          { value: "62_69", label: "62–69" },
+          { value: "70_79", label: "70–79" },
+          { value: "80_plus", label: "80+" }
+        ]
+      },
+      {
+        id: "married",
+        category: "You & Eligibility",
+        text: "Are you currently married?",
+        type: "yesno",
+        skipNextIf: "no"
+      },
+      {
+        id: "spouse_age",
+        category: "You & Eligibility",
+        text: "How old is your spouse?",
+        type: "select",
+        options: [
+          { value: "under_62", label: "Under 62" },
+          { value: "62_plus", label: "62+" }
+        ]
+      },
+      {
+        id: "timeline",
+        category: "You & Eligibility",
+        text: "How soon would you want to explore your options if you qualify?",
+        type: "select",
+        options: [
+          { value: "ready_now", label: "Ready now" },
+          { value: "30_days", label: "Within 30 days" },
+          { value: "researching", label: "Just researching" }
+        ]
+      }
+    ];
+
+    const LICENSED_STATES = ["California", "Texas", "Florida", "Arizona", "Colorado", "Other"];
+
+    const state = {
+      step: 0,
+      answers: {},
+      history: [],
+      displayNum: 1,
+      totalDisplay: 10
+    };
+
+    function show(page) {
+      document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+      document.querySelector(`[data-page="${page}"]`).classList.add("active");
+      window.scrollTo(0, 0);
+    }
+
+    function getActiveQuestions() {
+      const active = [];
+      for (let i = 0; i < QUESTIONS.length; i++) {
+        const q = QUESTIONS[i];
+        if (q.id === "balance" && state.answers.mortgage === "no") continue;
+        if (q.id === "spouse_age" && state.answers.married === "no") continue;
+        active.push({ ...q, index: i });
+      }
+      return active;
+    }
+
+    function renderQuiz() {
+      const active = getActiveQuestions();
+      const current = active[state.step];
+      if (!current) { show("optin"); return; }
+
+      state.totalDisplay = active.length;
+      state.displayNum = state.step + 1;
+      const pct = (state.displayNum / state.totalDisplay) * 100;
+
+      document.getElementById("category-label").textContent = current.category;
+      document.getElementById("cat-repeat").textContent = current.category;
+      document.getElementById("progress-text").textContent = `Question ${state.displayNum} of ${state.totalDisplay}`;
+      document.getElementById("progress-fill").style.width = `${pct}%`;
+      document.getElementById("question-text").textContent = current.text;
+
+      const momentum = document.getElementById("momentum");
+      momentum.hidden = pct < 55 || pct > 70;
+
+      const micro = document.getElementById("micro-insight");
+      micro.hidden = true;
+
+      const opts = document.getElementById("options");
+      opts.innerHTML = "";
+
+      if (current.type === "state") {
+        const sel = document.createElement("select");
+        sel.className = "option-select";
+        sel.innerHTML = `<option value="">Select your state</option>` +
+          LICENSED_STATES.map(s => `<option value="${s}">${s}</option>`).join("");
+        sel.addEventListener("change", () => {
+          if (!sel.value) return;
+          answer(current, { value: sel.value, label: sel.value });
+        });
+        opts.appendChild(sel);
+      } else if (current.type === "yesno") {
+        ["yes", "no"].forEach(v => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "option";
+          btn.textContent = v === "yes" ? "Yes" : "No";
+          btn.addEventListener("click", () => answer(current, { value: v, label: btn.textContent }));
+          opts.appendChild(btn);
+        });
+      } else {
+        current.options.forEach(o => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "option";
+          btn.textContent = o.label;
+          btn.addEventListener("click", () => answer(current, o));
+          opts.appendChild(btn);
+        });
+      }
+
+      document.querySelector('[data-action="back"]').style.visibility = state.step === 0 ? "hidden" : "visible";
+      show("quiz");
+    }
+
+    function answer(q, opt) {
+      state.answers[q.id] = opt.value;
+      state.history.push({ step: state.step, micro: null });
+
+      if (q.exitOn && opt.value === q.exitOn) {
+        show("exit");
+        return;
+      }
+
+      const showMicro = q.microAfter;
+      if (showMicro) {
+        const text = typeof showMicro === "function" ? showMicro(opt) : showMicro;
+        document.getElementById("micro-insight").textContent = text;
+        document.getElementById("micro-insight").hidden = false;
+        setTimeout(() => advance(q), 800);
+        return;
+      }
+
+      if (q.id === "intent") {
+        show("loading");
+        setTimeout(() => { state.step++; renderQuiz(); }, 800);
+        return;
+      }
+
+      advance(q);
+    }
+
+    function advance(q) {
+      state.step++;
+      renderQuiz();
+    }
+
+    document.querySelector('[data-action="start"]').addEventListener("click", () => {
+      state.step = 0;
+      state.answers = {};
+      state.history = [];
+      renderQuiz();
+    });
+
+    document.querySelector('[data-action="back"]').addEventListener("click", () => {
+      if (state.step > 0) {
+        state.step--;
+        const lastKey = Object.keys(state.answers);
+        if (lastKey.length) delete state.answers[lastKey[lastKey.length - 1]];
+        renderQuiz();
+      }
+    });
+
+    document.getElementById("optin-form").addEventListener("submit", e => {
+      e.preventDefault();
+      const first = document.getElementById("first").value;
+      const intent = state.answers.intent || "cash_out";
+      const intentText = INTENT_LABELS[intent] || "explore your home equity options";
+
+      document.getElementById("ty-greeting").textContent = `Thank you, ${first}.`;
+      document.getElementById("ty-insight").textContent =
+        `Based on your answers — especially your goal to ${intentText} — you're in a strong position to explore your options with a licensed advisor.`;
+      show("thankyou");
+    });
+  </script>
+</body>
+</html>

@@ -143,6 +143,8 @@ Because the product name is an asset and demand exists, the funnel shifts from "
 
 **Static image:** Headline (≤10 words, name the refinance friction/outcome, may name DSCR) · Image direction (investor/property context, not distressed-senior imagery) · Body (2–4 sentences: friction → qualify on the property → CTA) · CTA (low-friction, see bank below).
 
+**Static production + Mr. Waiz:** Ideogram statics follow [DSCR Static Image Generator — Claude Project Build Pack](dscr-static-image-generator-project.md). After export, run **`Label this ad for Mr. Waiz`** for copy-paste `overview`, `ad_name`, `summary`, and `visual_notes`. Ad name: `dscr_[visual]_[spec1]_[spec2]_[spec3]`.
+
 **Video (45–90s):** (1) Hook 0–5s — name the friction, no "Hi I'm…"; (2) Relevance 5–20s — show you understand how investors operate; (3) Mechanism 20–45s — DSCR refinance in plain terms (qualify on the rent); (4) Proof 45–70s — funded outcome / DSCR fluency / reviews (substantiated); (5) CTA 70–90s — run-your-numbers invite.
 
 **Hook bank by persona** (refinance-only):
@@ -194,6 +196,7 @@ Build every ad on **one** angle for **one** persona. Use the 12 refinance-only a
 - [ ] No tax/legal advice; entity/depreciation routed to a CPA/attorney?
 - [ ] CTA from the approved bank?
 - [ ] All proof/testimonials real and substantiated?
+- [ ] Static logged in Mr. Waiz with `overview`, `ad_name`, `summary`, `visual_notes`, `drive_url`? (see [static generator pack](dscr-static-image-generator-project.md))
 
 If any item fails, the ad is not ready.
 

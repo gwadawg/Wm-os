@@ -3,7 +3,7 @@ title: Client Fulfillment — Reverse Mortgage DNA
 domain: client-fulfillment
 owner: founder
 status: active
-last_updated: 2026-05-21
+last_updated: 2026-06-24
 review_cycle: quarterly
 ---
 
@@ -21,10 +21,14 @@ RM product, ICP, marketing doctrine, and compliance for **client** campaigns and
 | [Doctrine Reverse Mortgage](doctrine-reverse-mortgage.md) | `active` |
 | [Doctrine RM Marketing](doctrine-rm-marketing.md) | `active` |
 | [RM High-Quality Lead Acquisition](../client-marketing/rm-high-quality-lead-acquisition.md) | `active` |
-| [Intelligence ICP RM](intelligence-icp-rm.md) | `draft` |
-| [Intelligence RM Product](intelligence-rm-product.md) | `draft` |
+| [Intelligence ICP RM](intelligence-icp-rm.md) | `active` |
+| [Intelligence RM Product](intelligence-rm-product.md) | `active` |
+| [RM Borrower Objections](rm-borrower-objections.md) | `active` |
+| [RM Funnel Form Spec](rm-funnel-form-spec.md) | `draft` — canonical Perspective funnel (questions, journey, GHL mapping) |
+| [RM Quiz Funnel V2 Blueprint](rm-quiz-funnel-v2-blueprint.md) | `draft` — quiz-native redesign (scoring tiers, UX, design system) |
 
 ## Related
 
 - [Fulfillment Operating System](../fulfillment-operating-system.md)
 - [Ad Copy And Angle Library](../media-buying/ad-copy-angle-library-rm.md)
+- [RM Fulfillment Agent](../reverse-mortgage-agent/README.md) — Claude Project deploy kit for internal team

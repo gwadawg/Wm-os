@@ -3,7 +3,7 @@ title: Client Fulfillment — Media Buying
 domain: client-fulfillment
 owner: media-buying-lead
 status: active
-last_updated: 2026-05-21
+last_updated: 2026-06-24
 review_cycle: weekly
 ---
 
@@ -22,7 +22,11 @@ Boundaries: [Waiz vs client marketing](../waiz-vs-client-marketing-boundaries.md
 | [Ad Copy And Angle Library (RM)](ad-copy-angle-library-rm.md) | `draft` |
 | [MB RM Ad Copy Standards](mb-rm-ad-copy-standards.md) | `draft` |
 | [AI RM Ad Image Creation SOP](ai-rm-ad-image-creation-sop.md) | `draft` |
+| [DSCR Static Image Generator (Ideogram → Mr. Waiz)](../dscr-dna/dscr-static-image-generator-project.md) | `draft` |
 | [Perspective Funnel Setup SOP](perspective-funnel-setup-sop.md) | `draft` |
+| [Perspective client manifest](perspective-client-manifest.yaml) | `draft` — funnel registry; sync via [Perspective MCP bridge](../../operations/perspective-intelligence-bridge.md) |
+| [RM Funnel Form Spec](../reverse-mortgage-dna/rm-funnel-form-spec.md) | `draft` — canonical RM Perspective funnel spec |
+| [RM Quiz Funnel V2 Blueprint](../reverse-mortgage-dna/rm-quiz-funnel-v2-blueprint.md) | `draft` — quiz redesign + conversion audit |
 | [Ads For Dummies WaizMedia SOP](ads-for-dummies-waizmedia-sop.md) | `draft` |
 
 ## Creative system

@@ -3,7 +3,7 @@ title: Content Engine
 domain: content-engine
 owner: founder
 status: active
-last_updated: 2026-06-17
+last_updated: 2026-06-24
 review_cycle: monthly
 artifact_type: index
 ---
@@ -21,6 +21,8 @@ and repurposing.
 |-----|---------|
 | [**INFRASTRUCTURE.md**](INFRASTRUCTURE.md) | Where everything goes, naming, dating, phases |
 | [**LANE-BOUNDARIES.md**](LANE-BOUNDARIES.md) | Personal vs business vs client — no voice bleed |
+| [**clickup-personal-brand-pipeline.md**](clickup-personal-brand-pipeline.md) | ClickUp production handoff (@gabeegoertzen) |
+| [**personal/projects/lifecycle.md**](personal/projects/lifecycle.md) | Repurpose project storage, WIP limits, archive |
 | [Personal lane README](personal/README.md) | @gabeegoertzen KB map |
 | [Business lane README](business/README.md) | Waiz Media KB map |
 
@@ -43,7 +45,9 @@ context makes it obvious. When ambiguous, ask once. See
 
 | Skill | Use when |
 |-------|----------|
-| [content-engine](../../.claude/skills/content-engine/SKILL.md) | Weekly ideation, `/script` *(Phase 2–3)* |
+| [content-engine](../../.claude/skills/content-engine/SKILL.md) | Weekly ideation, `/script`, `/push-clickup` *(Phase 2–4)* |
+| [EditorProjectcreator](../../.claude/skills/editor-project-creator/SKILL.md) | Call → editor projects, `/new-repurpose-project`, `/push-clip` |
+| [creator-research](../../.claude/skills/creator-research/SKILL.md) | Apify scrape capture, viral format remix, `/apify-capture`, `/remix` |
 | [knowledge-capture](../../.claude/skills/knowledge-capture/SKILL.md) | Transcript / diary / notes → update KB **now** |
 | [ugc-scriptwriter](../../.claude/skills/ugc-scriptwriter/SKILL.md) | Reel and UGC scripting *(Phase 3)* |
 | [copywriting](../../.claude/skills/copywriting/SKILL.md) | Carousel copy *(Phase 3)* |
@@ -61,7 +65,12 @@ Phase 2 — IDEATION (later)
 Phase 3 — SCRIPTING (later)
   /script → [lane]/scripts/YYYY-MM-DD-format-slug.md
 
-Phase 4 — PUBLISH LOG (later)
+Phase 4 — CLICKUP HANDOFF (later)
+  /push-clickup → filmed scripts (personal lane)
+  /push-clip → call-clip briefs (EditorProjectcreator skill)
+  Max 2 active repurpose projects — see personal/projects/lifecycle.md
+
+Phase 5 — PUBLISH LOG (later)
   wm-content-archive/published/ (outside git)
 ```
 
@@ -82,6 +91,8 @@ Raw material never lives in compiled docs. Distill via **knowledge-capture**.
 content-engine/
 ├── INFRASTRUCTURE.md      ← routing authority
 ├── LANE-BOUNDARIES.md     ← personal vs business rules
+├── research/
+│   └── creator-research-manifest.yaml  ← Apify actors, watchlist, archive naming
 ├── _voice/                ← brand DNA
 ├── personal/              ← @gabeegoertzen KB + scripts/
 ├── business/              ← Waiz Media KB + scripts/

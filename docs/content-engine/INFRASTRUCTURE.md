@@ -3,7 +3,7 @@ title: Content Engine — Infrastructure
 domain: content-engine
 owner: founder
 status: active
-last_updated: 2026-06-17
+last_updated: 2026-06-24
 review_cycle: quarterly
 artifact_type: playbook
 ---
@@ -13,8 +13,8 @@ artifact_type: playbook
 **Purpose:** Define where knowledge lives, how lanes stay separate, and how
 future ideas, scripts, and captures get stored — before any production starts.
 
-This doc is the routing authority. Skills (`content-engine`, `knowledge-capture`)
-follow it. When in doubt, read [LANE-BOUNDARIES.md](LANE-BOUNDARIES.md) first.
+This doc is the routing authority. Skills (`content-engine`, `creator-research`,
+`knowledge-capture`) follow it. When in doubt, read [LANE-BOUNDARIES.md](LANE-BOUNDARIES.md) first.
 
 ## Current phase
 
@@ -23,7 +23,11 @@ follow it. When in doubt, read [LANE-BOUNDARIES.md](LANE-BOUNDARIES.md) first.
 | **1 — KB build** | **Now** | Fill voice DNA, pillars, beliefs, stories, hooks, angles via grilling + knowledge-capture |
 | **2 — Ideation** | Later | `/weekly-ideas` pulls from KB; ideas tagged in `angle-library.md` |
 | **3 — Scripting** | Later | `/script` writes dated files to `[lane]/scripts/` |
-| **4 — Publish log** | Later | Published metadata → `wm-content-archive/published/` (not OS git) |
+| **4 — Production handoff** | Later | `/push-clickup` / `/push-clip` → ClickUp — [clickup-personal-brand-pipeline.md](clickup-personal-brand-pipeline.md) |
+| **5 — Publish log** | Later | Published metadata → `wm-content-archive/published/` (not OS git) |
+
+Repurpose call projects: `personal/projects/` — structure only; lifecycle in
+[personal/projects/lifecycle.md](personal/projects/lifecycle.md).
 
 Do not skip Phase 1 to script or film. Infrastructure first.
 
@@ -59,6 +63,8 @@ content-engine/
 ├── INFRASTRUCTURE.md         ← you are here (routing authority)
 ├── LANE-BOUNDARIES.md        Personal vs business vs client rules
 ├── _templates.md             Script frontmatter templates
+├── research/
+│   └── creator-research-manifest.yaml  Apify actors, watchlist, archive naming
 │
 ├── _voice/
 │   ├── personal-brand-dna.md     Gabe / @gabeegoertzen voice + audience
@@ -71,8 +77,12 @@ content-engine/
 │   ├── beliefs.md            B1, B2, …
 │   ├── stories.md            S1, S2, …
 │   ├── hook-library.md
-│   ├── angle-library.md      Ideas + status (idea → scripted → published)
+│   ├── angle-library.md      Ideas + status (idea → remix-candidate → selected → scripted → published)
+│   ├── format-library.md     Production formats (yap, VO montage, etc.)
 │   ├── _gaps.md              Unresolved topics; weekly review
+│   ├── projects/             Repurpose projects — PROJECT.md + clip briefs
+│   │   ├── README.md         Active / completed index (max 2 active)
+│   │   └── lifecycle.md      Storage layers, WIP limits, archive rules
 │   ├── inspiration/
 │   │   ├── competitor-research.md
 │   │   └── swipe-file.md
@@ -107,8 +117,10 @@ When new information arrives, ask in order:
 | LO pain / agency positioning | — | `product-marketing.md`, `business/hook-library.md` |
 | Waiz proof / case study | — | `product-marketing.md` (ask + verify approved) |
 | Finished script (reel/carousel/trial) | `personal/scripts/YYYY-MM-DD-format-slug.md` | `business/scripts/…` |
+| Call → clip repurpose project | `personal/projects/[slug]/` — [lifecycle](personal/projects/lifecycle.md) | — |
 | Raw transcript / video / diary | `wm-content-archive/transcripts/` → distill into KB | same |
 | Full Apify JSON | `wm-content-archive/research/apify/` only | same |
+| Apify distilled (hooks, swipes, remix) | `creator-research` `/apify-capture` → inspiration + angle-library | same |
 | No clear home yet | `personal/_gaps.md` or `business/_gaps.md` | same |
 
 ## File naming
@@ -146,6 +158,10 @@ wm-content-archive/
 
 Sibling to `Wm-os/`. Never commit raw transcripts or Apify dumps to OS.
 
+**Repurpose projects** (`personal/projects/`) stay in git — small distilled
+briefs only. Demote via index when complete; see
+[personal/projects/lifecycle.md](personal/projects/lifecycle.md).
+
 ## Frontmatter standards
 
 ### Knowledge base docs (all `personal/` and `business/` KB files)
@@ -172,7 +188,7 @@ update_types: [hooks, beliefs, stories, ...]  # optional
 | Location | Required fields |
 |----------|-----------------|
 | `hook-library.md` table | `Source`, `Date` columns on every row |
-| `angle-library.md` ideas | `Status`; add `Source: …` when from capture |
+| `angle-library.md` ideas | `Status` (`idea`, `remix-candidate`, `selected`, `scripted`, `published`); `Source`, `format_ref` when from Apify |
 | `beliefs.md` / `stories.md` | `Entries log` table: ID, Added, Source |
 | `_gaps.md` | `Date`, `Source`, `Status` on every row |
 
@@ -189,17 +205,40 @@ source_idea:   # link to angle-library title or hook
 belief_ref:    # optional B1, story_ref S2
 ```
 
+## Layer 0 — Supabase call store
+
+Sales, client, and team call transcripts live in the **WM Reporting** Supabase
+project (Mr. Waiz dashboard). Wm-os never stores full transcripts in git.
+
+| Layer | System | Contents |
+|-------|--------|----------|
+| 0 | `acquisition_calls`, `client_calls`, `team_calls` | Full transcript + metadata |
+| 1 | `call_intelligence` overlay | Extraction JSON, lanes, capture status |
+| 2 | Wm-os `docs/content-engine/` | Distilled hooks, angles, beliefs |
+| 2b | Wm-os `personal/projects/` | Clip structure for active repurpose work — [lifecycle](personal/projects/lifecycle.md) |
+| 3 | `[lane]/scripts/` | Dated content outputs |
+
+Bridge spec: [call-intelligence-bridge.md](../operations/call-intelligence-bridge.md)
+
+Operational mirror: Mr. Waiz `docs/CALL-INTELLIGENCE.md` in the dashboard repo.
+
+**Source citation for call-derived entries:** `supabase:call:{uuid}`
+
+**Source citation for Apify-derived entries:** `apify:{platform}:{archive-filename}`
+
 ## Knowledge update workflow
 
-When Gabe shares diary entries, video transcripts, grilling answers, or notes:
+When Gabe shares diary entries, video transcripts, grilling answers, notes, or
+points to a Supabase call:
 
 ```
-1. Raw input → wm-content-archive/transcripts/ (optional save)
-2. knowledge-capture skill extracts findings
+1. Raw input → Supabase call store OR wm-content-archive/transcripts/ (optional)
+2. knowledge-capture skill extracts findings (read extraction JSON first)
 3. Route per routing-table.md → correct lane + doc
 4. Append with Source + Date; bump last_updated on target doc
 5. Log unresolved items in [lane]/_gaps.md
 6. Summarize what changed (no full transcript in OS)
+7. Mark call knowledge_capture_status = processed in Supabase; record os_refs
 ```
 
 | Change type | Action |
@@ -236,6 +275,9 @@ Before any content-engine or knowledge-capture task:
 
 ## Related
 
+- [ClickUp personal brand pipeline](clickup-personal-brand-pipeline.md)
+- [Creator research manifest](research/creator-research-manifest.yaml)
+- [Call intelligence bridge](../operations/call-intelligence-bridge.md)
 - [LANE-BOUNDARIES.md](LANE-BOUNDARIES.md)
 - [Personal lane README](personal/README.md)
 - [Business lane README](business/README.md)

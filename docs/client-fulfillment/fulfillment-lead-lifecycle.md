@@ -242,7 +242,7 @@ What Happens After Booking
 
 Automated confirmation message sent immediately after booking
 
-Reminder sequences triggered at 24 hours, 4 hours, and 30 minutes before the call
+Reminder sequences triggered at 24 hours, 4 hours, and 30 minutes before the call — canonical copy: [RM iMessage Appointment Follow-Up](../client-marketing/rm-imessage-appointment-followup.md)
 
 Personalized messaging that reinforces the value of the upcoming conversation
 
@@ -258,7 +258,7 @@ The Disposition System
 
 After every scheduled appointment, you'll receive a simple text with two links: Yes or No. Did they show? Click the link. That's it.
 
-This isn't just for record-keeping. When a no-show is dispositioned immediately, our system triggers a re-engagement sequence to get them back on the calendar as fast as possible. The faster we know, the faster we act.
+This isn't just for record-keeping. When a no-show is dispositioned immediately, our system triggers a re-engagement sequence to get them back on the calendar as fast as possible. The faster we know, the faster we act. See [RM iMessage Appointment Follow-Up](../client-marketing/rm-imessage-appointment-followup.md) (Phase 4).
 
 Critical rule: Never leave an appointment undispositioned. It slows down the re-engagement process and costs you potential bookings.
 

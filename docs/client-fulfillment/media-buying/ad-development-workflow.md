@@ -39,6 +39,7 @@ When scripting a new RM ad, agents load sources in this order:
 4. [losers-log.md](creative-research/losers-log.md) — patterns to avoid
 5. On-demand: Mr. Waiz `ad_library` via `supabase:ad:{uuid}` or winners with `status=winner` + `product=reverse`
 6. Framework docs: [rm-ad-ideation-matrix.md](creative-studio/rm-ad-ideation-matrix.md), [rm-script-generator.md](creative-studio/rm-script-generator.md), [compliance-gate-checklist.md](creative-studio/compliance-gate-checklist.md)
+7. **Silent caption story format (T2):** [silent-story-ad-playbook.md](creative-studio/silent-story-ad-playbook.md) — load when format is silent text-overlay, caption-engine, multi-hook pack, or confession+proof story ads
 
 **Never** pull competitor Apify intel in this flow — use [creator-research](../../../.claude/skills/creator-research/SKILL.md) separately.
 
@@ -56,6 +57,8 @@ Before Step 1 (Concept) in [creative-studio](creative-studio/README.md):
 ```
 
 Invoked via [rm-creative-studio](../../../.claude/skills/rm-creative-studio/SKILL.md).
+
+**DSCR static ads:** use [DSCR Static Image Generator](../../dscr-dna/dscr-static-image-generator-project.md) — Ideogram → Mr. Waiz registration (`overview`, `ad_name`, `summary`, `visual_notes`) → Meta. Same `ad_library` table; set `product=dscr`.
 
 ## Learn mode — capture workflow
 

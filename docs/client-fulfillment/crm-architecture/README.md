@@ -17,6 +17,7 @@ GoHighLevel infrastructure, AI bot, and lead-ownership rules for client accounts
 |-----|--------|
 | [CRM Infrastructure](crm-infrastructure.md) | `active` |
 | [How The WM AI Bot Works](how-wm-ai-bot-works.md) | `active` |
+| [Fulfillment AI Agent — Purpose & Scope](fulfillment-ai-agent-purpose.md) | `draft` |
 | [How Claimed Tag Works](how-claimed-tag-works.md) | `active` |
 
 Hub alias: [infrastructure/](../infrastructure/README.md)

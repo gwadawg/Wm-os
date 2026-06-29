@@ -21,11 +21,13 @@ This repository is the Waiz Media operating system. Agents should treat `docs/` 
 | LinkedIn LO outreach (DMs, SN, angles) | [.claude/skills/linkedin-lo-outreach/SKILL.md](.claude/skills/linkedin-lo-outreach/SKILL.md) |
 | Pre-call objection videos (nurture URLs, transcripts, setter sends) | [.claude/skills/pre-call-objection-videos/SKILL.md](.claude/skills/pre-call-objection-videos/SKILL.md) — [manifest](docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml) |
 | **Content ideation + scripting (personal / business / client lanes)** | [.claude/skills/content-engine/SKILL.md](.claude/skills/content-engine/SKILL.md) — [content engine hub](docs/content-engine/README.md) |
+| **EditorProjectcreator (personal lane)** | [.claude/skills/editor-project-creator/SKILL.md](.claude/skills/editor-project-creator/SKILL.md) — [projects index](docs/content-engine/personal/projects/README.md) |
 | **Apify creator research + viral format remix** | [.claude/skills/creator-research/SKILL.md](.claude/skills/creator-research/SKILL.md) — [manifest](docs/content-engine/research/creator-research-manifest.yaml) |
 | **Transcript / research → knowledge base updates** | [.claude/skills/knowledge-capture/SKILL.md](.claude/skills/knowledge-capture/SKILL.md) |
 | **RM fulfillment (copy, drips, bot, objections, lifecycle)** | [.claude/skills/rm-fulfillment-agent/SKILL.md](.claude/skills/rm-fulfillment-agent/SKILL.md) — [deploy kit](docs/client-fulfillment/reverse-mortgage-agent/chatbot-deploy/README.md) |
 | **Call transcripts (Supabase → OS)** | [docs/operations/call-intelligence-bridge.md](docs/operations/call-intelligence-bridge.md) |
-| **Owned ad winners (Mr. Waiz → OS)** | [docs/operations/ad-intelligence-bridge.md](docs/operations/ad-intelligence-bridge.md) — [ad development workflow](docs/client-fulfillment/media-buying/ad-development-workflow.md) — [manifest](docs/client-fulfillment/media-buying/ad-creative-manifest.yaml) |
+| **Owned ad winners (Mr. Waiz → OS)** | [docs/operations/ad-intelligence-bridge.md](docs/operations/ad-intelligence-bridge.md) — [RM ad development workflow](docs/client-fulfillment/media-buying/ad-development-workflow.md) — [DSCR static ad creation](docs/client-fulfillment/dscr-dna/dscr-static-image-generator-project.md) — [manifest](docs/client-fulfillment/media-buying/ad-creative-manifest.yaml) |
+| **Perspective funnels (MCP → OS)** | [docs/operations/perspective-intelligence-bridge.md](docs/operations/perspective-intelligence-bridge.md) — [setup SOP](docs/client-fulfillment/media-buying/perspective-funnel-setup-sop.md) — [manifest](docs/client-fulfillment/media-buying/perspective-client-manifest.yaml) |
 
 Full index: [.claude/skills/README.md](.claude/skills/README.md)
 
@@ -33,7 +35,9 @@ Full index: [.claude/skills/README.md](.claude/skills/README.md)
 
 **Call intelligence:** Supabase WM Reporting stores all call transcripts. Wm-os stores distilled knowledge only. Bridge: [call-intelligence-bridge.md](docs/operations/call-intelligence-bridge.md).
 
-**Ad intelligence:** Mr. Waiz `ad_library` stores owned client creatives + performance. Wm-os stores distilled swipes and catalogs only. Bridge: [ad-intelligence-bridge.md](docs/operations/ad-intelligence-bridge.md). Create ads via [ad-development-workflow.md](docs/client-fulfillment/media-buying/ad-development-workflow.md).
+**Ad intelligence:** Mr. Waiz `ad_library` stores owned client creatives + performance. Wm-os stores distilled swipes and catalogs only. Bridge: [ad-intelligence-bridge.md](docs/operations/ad-intelligence-bridge.md). Create **RM** ads via [ad-development-workflow.md](docs/client-fulfillment/media-buying/ad-development-workflow.md). Create **DSCR statics** via [dscr-static-image-generator-project.md](docs/client-fulfillment/dscr-dna/dscr-static-image-generator-project.md) (Ideogram → Mr. Waiz registration → Meta).
+
+**Perspective funnels:** Perspective MCP (`perspective-api.co/mcp`) owns live funnel structure and in-platform analytics. Supabase owns post-GHL lead KPIs. Wm-os stores the client funnel registry and specs only. Bridge: [perspective-intelligence-bridge.md](docs/operations/perspective-intelligence-bridge.md). Cursor MCP: `perspective` in `~/.cursor/mcp.json`.
 
 **Product marketing context:** [.agents/product-marketing.md](.agents/product-marketing.md) — Waiz Media positioning for business-lane content.
 

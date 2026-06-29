@@ -3,7 +3,7 @@ title: Content Engine — Personal Lane
 domain: content-engine
 owner: founder
 status: active
-last_updated: 2026-06-17
+last_updated: 2026-06-24
 review_cycle: monthly
 ---
 
@@ -34,9 +34,11 @@ Gabe's personal brand KB. **Not Waiz Media B2B.** See
 | [`stories.md`](stories.md) | S1, S2, … narrative arcs | knowledge-capture |
 | [`hook-library.md`](hook-library.md) | Hook bank | knowledge-capture (auto) |
 | [`angle-library.md`](angle-library.md) | Ideas + status | knowledge-capture (auto) |
+| [`format-library.md`](format-library.md) | Production formats (yap, VO montage, etc.) | manual |
+| [`projects/`](projects/README.md) | Call editor projects (anchor + splinters) | EditorProjectcreator — max 2 active — [lifecycle](projects/lifecycle.md) |
 | [`_gaps.md`](_gaps.md) | Unresolved topics | knowledge-capture (auto) |
-| [`inspiration/swipe-file.md`](inspiration/swipe-file.md) | Saved formats | manual + capture |
-| [`inspiration/competitor-research.md`](inspiration/competitor-research.md) | Creator patterns | manual + Apify |
+| [`inspiration/swipe-file.md`](inspiration/swipe-file.md) | Creator swipes + format tags | creator-research `/apify-capture` |
+| [`inspiration/competitor-research.md`](inspiration/competitor-research.md) | Creator patterns | creator-research + Apify |
 
 **Dating:** Bump `last_updated` in frontmatter on every edit. New table rows
 need `Source` + `Date`.
@@ -44,8 +46,8 @@ need `Source` + `Date`.
 ## Load order (before ideation or scripting — Phase 2–3)
 
 1. `personal-brand-dna.md` → `content-pillars.md` → `beliefs.md` + `stories.md`
-2. `hook-library.md` + `angle-library.md`
-3. Optional: `inspiration/`
+2. `hook-library.md` + `angle-library.md` + `format-library.md`
+3. Optional: `inspiration/` (swipe-file, competitor-research)
 
 ## Output folder (Phase 3 only)
 

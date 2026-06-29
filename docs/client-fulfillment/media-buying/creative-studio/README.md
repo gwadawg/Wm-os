@@ -22,6 +22,8 @@ Invoked via the [rm-creative-studio skill](../../../../.claude/skills/rm-creativ
 - **Build** **Higgsfield AI-video prompts** (standard or chunked) straight from a concept, in four
   creative formats: UGC, spoken testimonial, silent text-overlay testimonial, and educational /
   explainer (with B-Roll Sourcing Plan).
+- **Run silent story ads** end-to-end via [silent-story-ad-playbook.md](silent-story-ad-playbook.md)
+  (caption-engine format, multi-hook packs, REAL/AI/STILL B-roll).
 - Everything grounded in named frameworks and screened by a compliance gate.
 
 ## Folder map
@@ -35,6 +37,7 @@ creative-studio/
 ├── rm-script-generator.md        ← the 5-part script engine + Video Brief (long-form 45-90s)
 ├── higgsfield-prompt-builder.md  ← concept → Higgsfield prompt (short UGC 18-32s) + shared mechanics
 ├── higgsfield-format-modules.md  ← testimonial (spoken + silent text-overlay) + educational formats
+├── silent-story-ad-playbook.md   ← T2 caption-engine stories: hooks, multi-pack, B-roll matrix, spines
 ├── compliance-gate-checklist.md  ← the gate every output passes (incl. Part E format checks)
 ├── FUTURE-video-agent-spec.md    ← Layer 2 (auto-render agent) — doc only
 ├── chatbot-deploy/               ← Claude Project / Custom GPT deploy kit

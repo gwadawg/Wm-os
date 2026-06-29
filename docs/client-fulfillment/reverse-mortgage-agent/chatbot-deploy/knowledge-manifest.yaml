@@ -1,0 +1,94 @@
+workflow: rm-fulfillment-agent
+version: 1
+status: active
+last_updated: 2026-06-22
+
+owners:
+  client_success: client-success
+  operations: operations
+
+# Machine-readable index for Claude Project knowledge upload.
+# Full setup: chatbot-deploy/README.md
+# Skill: .claude/skills/rm-fulfillment-agent/SKILL.md
+
+triggers:
+  - rm fulfillment
+  - reverse mortgage copy
+  - rm drip
+  - imessage drip
+  - rm bot
+  - borrower objection
+  - rm lifecycle
+  - rm fulfillment agent
+
+load_order:
+  - ../../reverse-mortgage-dna/rm-compliance-guardrails.md
+  - ../../reverse-mortgage-dna/doctrine-reverse-mortgage.md
+  - ../../reverse-mortgage-dna/doctrine-rm-marketing.md
+  - ../../reverse-mortgage-dna/intelligence-icp-rm.md
+  - ../../reverse-mortgage-dna/intelligence-rm-product.md
+  - ../../reverse-mortgage-dna/rm-borrower-objections.md
+  - ../../client-marketing/rm-high-quality-lead-acquisition.md
+  - ../../fulfillment-lead-lifecycle.md
+  - ../../crm-architecture/how-wm-ai-bot-works.md
+  - ../../crm-architecture/how-claimed-tag-works.md
+  - ../../client-marketing/rm-imessage-intent-drip-7day.md
+  - ../../call-center/script-appointment-setting-call.md
+  - ../waiz-vs-client-marketing-boundaries.md
+
+tier_1_upload:
+  - path: docs/client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md
+    role: binding compliance rules
+  - path: docs/client-fulfillment/reverse-mortgage-dna/doctrine-reverse-mortgage.md
+    role: product truth
+  - path: docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
+    role: archetypes, outcome-first marketing
+  - path: docs/client-fulfillment/reverse-mortgage-dna/intelligence-icp-rm.md
+    role: borrower VOC, pains, archetypes
+  - path: docs/client-fulfillment/reverse-mortgage-dna/intelligence-rm-product.md
+    role: HECM facts for education copy
+  - path: docs/client-fulfillment/reverse-mortgage-dna/rm-borrower-objections.md
+    role: unified objection handling (SMS, bot, call)
+  - path: docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md
+    role: intent/equity-rich lead playbook
+  - path: docs/client-fulfillment/fulfillment-lead-lifecycle.md
+    role: 6-stage A-to-Z engine map
+  - path: docs/client-fulfillment/crm-architecture/how-wm-ai-bot-works.md
+    role: bot scope and LO takeover rules
+  - path: docs/client-fulfillment/crm-architecture/how-claimed-tag-works.md
+    role: LO intervention and reporting
+  - path: docs/client-fulfillment/client-marketing/rm-imessage-intent-drip-7day.md
+    role: canonical 7-day intent nurture
+  - path: docs/client-fulfillment/call-center/script-appointment-setting-call.md
+    role: B2C appointment-setting script
+  - path: docs/client-fulfillment/waiz-vs-client-marketing-boundaries.md
+    role: lane guard (client vs Waiz acquisition)
+
+tier_2_optional:
+  - path: docs/client-fulfillment/client-marketing/rm-imessage-appointment-followup.md
+    role: pre-appointment nurture, show-rate copy
+  - path: docs/client-fulfillment/client-marketing/rm-imessage-second-booking-followup.md
+    role: no-show rebookers
+  - path: docs/client-fulfillment/crm-architecture/crm-infrastructure.md
+    role: GHL setup questions
+  - path: docs/client-fulfillment/media-buying/ad-copy-angle-library-rm.md
+    role: Meta static ad angles
+  - path: docs/client-fulfillment/media-buying/mb-rm-ad-copy-standards.md
+    role: ad copy quality bar
+  - path: docs/client-fulfillment/client-success/constraint-troubleshooting-sop.md
+    role: campaign diagnosis
+  - path: docs/client-fulfillment/fulfillment-operating-system.md
+    role: top-level fulfillment context
+  - path: docs/client-fulfillment/client-marketing/README.md
+    role: playbook index
+
+exclude_from_upload:
+  - docs/client-fulfillment/media-buying/creative-studio/
+  - docs/team-drafts/rm-*.team.md
+  - docs/acquisition/
+  - docs/content-engine/personal/projects/robert-moore-demo-may-2025/
+
+related_projects:
+  - name: RM Creative Studio
+    deploy: docs/client-fulfillment/media-buying/creative-studio/chatbot-deploy/README.md
+    scope: video ad scripts only

@@ -232,3 +232,14 @@ entries:
   template_based: true
   google_doc_id: 1HHgz95JyvFtOo29pJdee-GSZ71EV1Z-kmCKPp6esDEs
   last_published: '2026-05-28'
+- repo_path: docs/client-fulfillment/client-marketing/clients/momeson-johnson-meta-drip.md
+  team_title: RM Meta Drip — Momeson & Johnson
+  drive_folder: client_success
+  publish_status: active
+  team_role: client_success
+  team_doc_type: playbook
+  publish_pipeline: template
+  team_draft_path: docs/team-drafts/momeson-johnson-meta-drip.team.md
+  template_based: true
+  google_doc_id: 1Xe2W48gd2BoNDvYzP6RAk0pBke2QumTok-TjG08T1x0
+  last_published: '2026-06-23'

@@ -2,6 +2,18 @@
 
 Use for `/script` outputs. Save files under `[lane]/scripts/`.
 
+## Production formats (personal lane)
+
+**How you film/edit** — distinct from content formats below. Full specs:
+[`docs/content-engine/personal/format-library.md`](../../docs/content-engine/personal/format-library.md).
+
+| Production format | Script template |
+|-------------------|-----------------|
+| `yap` | trial-concept |
+| `vo-montage` | reel (VO + b-roll cues) |
+| `talking-head-broll` | reel (full cut marks) |
+| `concept-edit` | trial-concept → reel (visual beats) |
+
 ## Reel
 
 ```yaml

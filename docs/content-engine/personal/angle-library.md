@@ -3,7 +3,7 @@ title: Personal Angle Library
 domain: content-engine
 owner: founder
 status: draft
-last_updated: 2026-06-17
+last_updated: 2026-06-26
 review_cycle: monthly
 auto_update: true
 update_via: knowledge-capture
@@ -254,6 +254,102 @@ Angles and raw content ideas. Tag each: **searchable** | **shareable** | **both*
 - **Format:** reel
 - **Hook seed:** "You want the lifestyle but you won't pay the price"
 - **Status:** idea
+
+---
+
+### PROJECT — Robert Moore demo call (anchor + splinters)
+
+- **Pillar:** AI + ops (primary); extreme beliefs (splinters)
+- **Type:** both
+- **Format:** reel series (6 anchors + 16 splinters)
+- **Source:** call — Robert Moore demo May 2025 — [project](projects/robert-moore-demo-may-2025/PROJECT.md)
+- **Hook seed:** "4 paths in mortgage — which one works in 2025?"
+- **Status:** selected
+- **Clips:** 22 total — see project map
+
+---
+
+### 4 mortgage paths framework (anchor 01)
+
+- **Pillar:** AI + ops
+- **Type:** both
+- **Format:** reel
+- **Source:** robert-moore-demo-may-2025 / clip 01
+- **Hook seed:** "4 paths in mortgage — which one I'd pick"
+- **Status:** scripted
+- **Script:** [2026-06-18-reel-mortgage-paths-framework.md](scripts/2026-06-18-reel-mortgage-paths-framework.md)
+
+---
+
+### 3% rate doesn't matter on cash-out (splinter 01c)
+
+- **Pillar:** extreme beliefs
+- **Type:** shareable
+- **Format:** reel
+- **Source:** robert-moore-demo-may-2025 / clip 01c
+- **Hook seed:** "3% rate. Still refinancing."
+- **Status:** scripted
+- **Script:** [2026-06-18-reel-3pct-rate-cashout.md](scripts/2026-06-18-reel-3pct-rate-cashout.md)
+
+---
+
+### LO making 300k on broken leads (remix — incredulous yap)
+- **Pillar:** extreme beliefs
+- **Type:** shareable
+- **Format:** trial-concept
+- **Production format:** yap
+- **Hook seed:** "And this LO is somehow doing 300k a year 😭"
+- **Status:** remix-candidate
+- **Format ref:** swipe-2026-06-26-01
+- **Source:** apify:instagram:2026-06-26-instagram-bigdaddyleads.json · 2026-06-26
+
+---
+
+### Lead vendor dirty secret (remix — industry expose yap)
+- **Pillar:** AI + ops
+- **Type:** shareable
+- **Format:** trial-concept
+- **Production format:** yap
+- **Hook seed:** "The mortgage lead industry has a dirty secret."
+- **Status:** remix-candidate
+- **Format ref:** swipe-2026-06-26-02
+- **Source:** apify:instagram:2026-06-26-instagram-bigdaddyleads.json · 2026-06-26
+
+---
+
+### 4 questions before you buy leads again (remix — list yap)
+- **Pillar:** AI + ops
+- **Type:** shareable
+- **Format:** trial-concept
+- **Production format:** yap
+- **Hook seed:** "Before you buy another lead package, ask these 4 questions."
+- **Status:** remix-candidate
+- **Format ref:** swipe-2026-06-26-03
+- **Source:** apify:instagram:2026-06-26-instagram-bigdaddyleads.json · 2026-06-26
+
+---
+
+### Am I wrong about compassion in business? (remix — contrarian yap)
+- **Pillar:** extreme beliefs
+- **Type:** shareable
+- **Format:** trial-concept
+- **Production format:** yap
+- **Hook seed:** "I mean… am I wrong?"
+- **Status:** remix-candidate
+- **Format ref:** swipe-2026-06-26-04
+- **Source:** apify:instagram:2026-06-26-instagram-bigdaddyleads.json · 2026-06-26
+
+---
+
+### Unemploy yourself (remix — 2-word yap)
+- **Pillar:** burn-the-boats
+- **Type:** shareable
+- **Format:** trial-concept
+- **Production format:** yap
+- **Hook seed:** "Unemploy yourself."
+- **Status:** remix-candidate
+- **Format ref:** swipe-2026-06-26-06
+- **Source:** apify:instagram:2026-06-26-instagram-marcel-stxm.json · 2026-06-26
 
 ---
 

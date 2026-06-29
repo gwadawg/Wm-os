@@ -6,19 +6,22 @@ Full operating loop for a weekly content session (~60–90 min).
 
 - [ ] Lane confirmed: personal | business | client
 - [ ] Voice doc loaded
-- [ ] Optional: paste Apify export path or new transcript for knowledge-capture first
+- [ ] If new file in `wm-content-archive/research/apify/`, run `/apify-capture` first
+- [ ] Optional: paste transcript for knowledge-capture
 
 ## Step 1 — Research pulse (5 min)
 
 1. Read `personal/inspiration/competitor-research.md` Pattern log
-2. If user has `wm-content-archive/research/apify/YYYY-MM-DD-*.json`, run knowledge-capture on it
-3. Note 2–3 patterns to exploit this week
+2. Check `angle-library.md` for `status: remix-candidate` and recent `swipe-file.md` entries
+3. If user has `wm-content-archive/research/apify/YYYY-MM-DD-*.json`, run `/apify-capture` on it
+4. Note 2–3 patterns to exploit this week (include remix-candidates)
 
 ## Step 2 — Idea generation (20 min)
 
 Run `/weekly-ideas`:
 
 - Minimum 15 ideas if user didn't specify count
+- Include at least **2 remix-candidates** from swipe-file as trial-concepts when available
 - Balance pillars — don't stack one pillar unless user asks
 - Include at least 3 **trial-concepts** for fast validation
 - Tag searchable vs shareable on every idea
@@ -70,5 +73,6 @@ After filming/publishing:
 ## Apify cadence (optional weekly)
 
 - 1 scrape per week max unless launching new niche
+- Use [creator-research](../../../../.claude/skills/creator-research/SKILL.md): `/scrape-help` → Apify UI → `/apify-capture` → `/remix`
 - Always archive raw JSON outside repo
 - Never paste full Apify dump into OS — distill only

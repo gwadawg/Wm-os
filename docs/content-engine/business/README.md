@@ -50,6 +50,12 @@ Waiz Media B2B brand KB. **Not @gabeegoertzen personal.** See
 
 Cross-link client proof only from approved case studies — no unapproved metrics.
 
+## Repurpose projects
+
+| Project | Source | Status |
+|---------|--------|--------|
+| [brian-thomas-case-study-may-2026](projects/brian-thomas-case-study-may-2026/PROJECT.md) | Brian Thomas monthly check-in, May 2026 | Ready to Edit |
+
 ## Status
 
 Personal lane KB is ahead (grilling in progress). Business lane KB scaffold
