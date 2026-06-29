@@ -24,6 +24,7 @@ RM product, ICP, marketing doctrine, and compliance for **client** campaigns and
 | [Intelligence ICP RM](intelligence-icp-rm.md) | `active` |
 | [Intelligence RM Product](intelligence-rm-product.md) | `active` |
 | [RM Borrower Objections](rm-borrower-objections.md) | `active` |
+| [RM CloseBot Knowledge Base](rm-closebot-knowledge-base.md) | `draft` — CloseBot KB upload (PDF). Product + ICP + truth anchors only; role/booking in Job Information prompt |
 | [RM Funnel Form Spec](rm-funnel-form-spec.md) | `draft` — canonical Perspective funnel (questions, journey, GHL mapping) |
 | [RM Quiz Funnel V2 Blueprint](rm-quiz-funnel-v2-blueprint.md) | `draft` — quiz-native redesign (scoring tiers, UX, design system) |
 
