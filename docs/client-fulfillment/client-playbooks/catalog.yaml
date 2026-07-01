@@ -1,0 +1,1070 @@
+workflow: client-playbooks
+version: 1
+status: active
+last_synced: '2026-07-01'
+entry_count: 56
+delivery_groups:
+- id: onboarding
+  label: Onboarding & launch
+- id: lead-nurture
+  label: Lead nurture & follow-up
+- id: meta-ads-creative
+  label: Meta ads & creative
+- id: crm-automation
+  label: CRM, bots & automation
+- id: client-success
+  label: Client success & performance
+- id: course-material
+  label: Course material & client education
+- id: product-knowledge
+  label: Product knowledge & compliance
+- id: call-center
+  label: Call center & appointment setting
+- id: general
+  label: General fulfillment
+methodology_pools:
+  sales_objections:
+    label: Sales & objection handling
+    sources:
+    - path: docs/acquisition/sales/objection-handling-hub.md
+      role: Objection categories and reframes
+    - path: docs/acquisition/sales/wm-objection-categories.md
+      role: Category definitions for team + client comms
+    - path: docs/acquisition/intelligence/wm-sales-intelligence-bible.md
+      role: LO buyer psychology and pipeline beliefs
+  marketing_psychology:
+    label: Persuasion & marketing psychology
+    sources:
+    - path: .claude/skills/marketing-psychology/SKILL.md
+      role: Mental models for messaging and offers
+    - path: .claude/skills/copywriting/SKILL.md
+      role: Hooks, structure, and copy frameworks
+  nurture_sequences:
+    label: Nurture & follow-up systems
+    sources:
+    - path: docs/client-fulfillment/client-marketing/playbook-lead-nurture.md
+      role: Reference playbook — four pillars, rules, quality bar
+    - path: docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md
+      role: Education-first lead acquisition methodology
+    - path: docs/client-fulfillment/client-marketing/10-day-rm-drip-campaign.md
+      role: Canonical Meta lead drip sequence (execution)
+    - path: docs/client-fulfillment/fulfillment-lead-lifecycle.md
+      role: Lead engine lifecycle map
+  company_dna:
+    label: Company identity & brand
+    sources:
+    - path: docs/company/doctrine-identity-core-april-26.md
+      role: Waiz identity and positioning
+    - path: docs/company/doctrine-brand-and-visual-identity-april-26.md
+      role: Brand voice and visual standards
+  rm_compliance:
+    label: Reverse mortgage compliance
+    sources:
+    - path: docs/client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md
+      role: Binding compliance rules for all client copy
+    - path: docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
+      role: RM marketing doctrine and archetypes
+  team_operations:
+    label: Internal team execution (adapt for client training)
+    sources:
+    - path: docs/operations/systems/team-drive-publish.md
+      role: How team SOPs publish from repo
+    - path: .claude/skills/sop-builder/SKILL.md
+      role: SOP structure and cross-link standards
+exclude_paths:
+- docs/client-fulfillment/media-buying/creative-studio/outputs/validation-2026-05-30.md
+overrides:
+  docs/client-fulfillment/course-material/lead-nurture-playbook.md:
+    delivery_group: lead-nurture
+    canonical_parent: docs/client-fulfillment/client-marketing/playbook-lead-nurture.md
+    content_layer: course-material
+    audience:
+    - client
+    delivery:
+    - course-material
+    - github
+    notes: Course material wrapper — links to canonical playbook-lead-nurture.md
+entries:
+- repo_path: docs/client-fulfillment/call-center/script-appointment-setting-call.md
+  title: Call Center Appointment-Setting Call Script (Reverse Mortgage)
+  artifact_type: script
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: active
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: call-center
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-28'
+  source: scan
+- repo_path: docs/client-fulfillment/call-center/script-live-transfer-warm-handoff.md
+  title: Call Center Live Transfer Warm Hand-off Script (Reverse Mortgage)
+  artifact_type: script
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: call-center
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-28'
+  source: scan
+- repo_path: docs/client-fulfillment/call-center/script-boundary-rules.md
+  title: Call Center Script Boundary Rules
+  artifact_type: doctrine
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: call-center
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-26'
+  source: scan
+- repo_path: docs/client-fulfillment/call-center/sop-call-center-script-factory.md
+  title: Call Center Script Factory SOP
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: call-center
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-26'
+  source: scan
+- repo_path: docs/client-fulfillment/client-success/campaign-phase-performance-blueprint.md
+  title: Campaign Phase Performance Blueprint
+  artifact_type: doctrine
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: active
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: client-success
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/client-success/client-growth-stages.md
+  title: Client Growth Stages
+  artifact_type: doctrine
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: client-success
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/client-success/client-success-daily-responsibilities.md
+  title: Client Success Daily Responsibilities
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: client-success
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/client-success/constraint-troubleshooting-sop.md
+  title: Constraint Troubleshooting And Root Cause Diagnosis
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: active
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: client-success
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-20'
+  source: scan
+- repo_path: docs/client-fulfillment/client-success/overdue-payments-and-ghosting-clients.md
+  title: Overdue Payments And Ghosting Clients
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: client-success
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/client-success/post-launch-client-success-system.md
+  title: Post-Launch Client Success System
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: client-success
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/client-success/reset-call-sop.md
+  title: Reset Call SOP
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: client-success
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/crm-architecture/fulfillment-ai-agent-purpose.md
+  title: Fulfillment AI Agent — Purpose & Scope
+  artifact_type: overview
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: operations
+  domain: client-fulfillment
+  delivery_group: crm-automation
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-06-22'
+  source: scan
+- repo_path: docs/client-fulfillment/fulfillment-operating-system.md
+  title: Fulfillment Operating System
+  artifact_type: overview
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: active
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: general
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/meta-andromeda-rm-rules.md
+  title: Meta Andromeda Rules For Reverse Mortgages
+  artifact_type: doctrine
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: general
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/waiz-vs-client-marketing-boundaries.md
+  title: Waiz Marketing vs Client Marketing — Boundaries
+  artifact_type: guide
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: active
+  owner: operations
+  domain: client-fulfillment
+  delivery_group: general
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-20'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/10-day-rm-drip-campaign.md
+  title: 10-Day RM Drip Campaign (Email + SMS) — Meta Leads
+  artifact_type: script
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-06-23'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/playbook-lead-nurture.md
+  title: Lead Nurture Playbook
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - course-material
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: reverse-mortgage
+  methodology_sources:
+  - docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md
+  - docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
+  - docs/client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md
+  - docs/client-fulfillment/fulfillment-lead-lifecycle.md
+  last_updated: '2026-07-01'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/rm-imessage-appointment-followup.md
+  title: RM iMessage Appointment Follow-Up
+  artifact_type: script
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - team-drive
+  status: active
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-06-19'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/rm-imessage-intent-drip-7day.md
+  title: RM iMessage Intent Drip (7-Day)
+  artifact_type: script
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - team-drive
+  status: active
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-06-19'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/rm-imessage-second-booking-followup.md
+  title: RM iMessage Second-Booking Follow-Up
+  artifact_type: script
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - team-drive
+  status: active
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-06-19'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/rm-lead-nurture-drip-sequence.md
+  title: RM Lead Nurture Drip Sequence
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/rm-text-drip-2025.md
+  title: RM Text Drip 2025
+  artifact_type: script
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/clients/momeson-johnson-meta-drip.md
+  title: RM Meta Drip — Momeson & Johnson
+  artifact_type: script
+  content_layer: client-instance
+  audience:
+  - client
+  delivery:
+  - google-doc
+  - github
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-06-23'
+  source: scan
+- repo_path: docs/client-fulfillment/course-material/lead-nurture-playbook.md
+  title: Lead Nurture — Course Material
+  artifact_type: training
+  content_layer: course-material
+  audience:
+  - client
+  delivery:
+  - course-material
+  - github
+  status: draft
+  owner: community-education
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: reverse-mortgage
+  methodology_sources:
+  - docs/client-fulfillment/client-marketing/playbook-lead-nurture.md
+  - docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md
+  - docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
+  last_updated: '2026-07-01'
+  source: override
+  canonical_parent: docs/client-fulfillment/client-marketing/playbook-lead-nurture.md
+- repo_path: docs/client-fulfillment/dscr-dna/ad-copy-angle-library-dscr.md
+  title: Ad Copy And Angle Library (DSCR)
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-06-02'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/ad-copy-angle-library-rm.md
+  title: Ad Copy And Angle Library (RM)
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/ad-development-workflow.md
+  title: Ad Development Workflow (RM Client Ads)
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: active
+  owner: founder
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-06-23'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/ads-for-dummies-waizmedia-sop.md
+  title: Ads For Dummies WaizMedia SOP
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/ai-rm-ad-image-creation-sop.md
+  title: AI RM Ad Image Creation SOP
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/dscr-ads-playbook.md
+  title: DSCR Ads Playbook
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-06-02'
+  source: scan
+- repo_path: docs/client-fulfillment/fulfillment-lead-lifecycle.md
+  title: Fulfillment Lead Lifecycle
+  artifact_type: overview
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/creative-studio/higgsfield-format-modules.md
+  title: Higgsfield Format Modules (Testimonial + Educational)
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-06-10'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/creative-studio/higgsfield-prompt-builder.md
+  title: Higgsfield Prompt Builder (RM UGC)
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-06-10'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/month-1-ad-account-management-sop.md
+  title: Month 1 Ad Account Management SOP
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/new-client-campaign-setup-sop.md
+  title: New Client Campaign Setup SOP
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/perspective-funnel-setup-sop.md
+  title: Perspective Funnel Setup SOP
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/reverse-mortgage-ads-playbook.md
+  title: Reverse Mortgage Ads Playbook
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/creative-studio/rm-ad-ideation-matrix.md
+  title: RM Ad Ideation Matrix
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-06-23'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/rm-ad-playbook.md
+  title: RM Ad Playbook
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md
+  title: RM High-Quality Lead Acquisition
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - team-drive
+  status: active
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-27'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/creative-studio/rm-script-generator.md
+  title: RM Script Generator
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-30'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/creative-studio/silent-story-ad-playbook.md
+  title: Silent Story Ad Playbook (Caption-Engine Video)
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-06-28'
+  source: scan
+- repo_path: docs/client-fulfillment/course-material/sop-setting-up-facebook-lead-form.md
+  title: Setting Up Facebook Lead Form
+  artifact_type: sop
+  content_layer: course-material
+  audience:
+  - client
+  delivery:
+  - course-material
+  - github
+  status: draft
+  owner: community-education
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-20'
+  source: scan
+- repo_path: docs/client-fulfillment/onboarding/a-z-client-onboarding-sop.md
+  title: A-Z Client Onboarding SOP
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: onboarding
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-06-10'
+  source: scan
+- repo_path: docs/client-fulfillment/onboarding/onboarding-to-launch-client-communication.md
+  title: Onboarding To Launch Client Communication
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: onboarding
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/doctrine-dscr.md
+  title: Doctrine DSCR
+  artifact_type: doctrine
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: founder
+  domain: client-fulfillment
+  delivery_group: product-knowledge
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-05-30'
+  source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/doctrine-dscr-marketing.md
+  title: Doctrine DSCR Marketing
+  artifact_type: doctrine
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: founder
+  domain: client-fulfillment
+  delivery_group: product-knowledge
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-06-02'
+  source: scan
+- repo_path: docs/client-fulfillment/reverse-mortgage-dna/doctrine-reverse-mortgage.md
+  title: Doctrine Reverse Mortgage
+  artifact_type: doctrine
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: active
+  owner: founder
+  domain: client-fulfillment
+  delivery_group: product-knowledge
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
+  title: Doctrine RM Marketing
+  artifact_type: doctrine
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: active
+  owner: founder
+  domain: client-fulfillment
+  delivery_group: product-knowledge
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/dscr-compliance-guardrails.md
+  title: DSCR Compliance Guardrails
+  artifact_type: doctrine
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: founder
+  domain: client-fulfillment
+  delivery_group: product-knowledge
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-05-30'
+  source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/dscr-funnel-stage-messaging.md
+  title: DSCR Funnel-Stage Messaging (TOF / MOF / BOF)
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: founder
+  domain: client-fulfillment
+  delivery_group: product-knowledge
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-06-12'
+  source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/dscr-gtm-positioning-brief.md
+  title: DSCR GTM And Positioning Brief
+  artifact_type: doctrine
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: founder
+  domain: client-fulfillment
+  delivery_group: product-knowledge
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-06-02'
+  source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/dscr-setter-appointment-script.md
+  title: DSCR Setter / Appointment-Setting Call Script
+  artifact_type: script
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: product-knowledge
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-05-30'
+  source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/dscr-static-image-generator-project.md
+  title: DSCR Static Image Generator — Claude Project Build Pack
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: product-knowledge
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-06-29'
+  source: scan
+- repo_path: docs/client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md
+  title: RM Compliance Guardrails
+  artifact_type: doctrine
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: active
+  owner: founder
+  domain: client-fulfillment
+  delivery_group: product-knowledge
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/reverse-mortgage-dna/rm-quiz-funnel-v2-perspective-manual-build.md
+  title: RM Quiz Funnel V2 — Perspective Manual Build
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  status: draft
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: product-knowledge
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-06-24'
+  source: scan

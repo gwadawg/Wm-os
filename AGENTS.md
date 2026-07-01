@@ -20,6 +20,8 @@ This repository is the Waiz Media operating system. Agents should treat `docs/` 
 | Publish team Google Docs (author → approve → faithful publish) | [.claude/skills/team-doc-publish/SKILL.md](.claude/skills/team-doc-publish/SKILL.md) |
 | LinkedIn LO outreach (DMs, SN, angles) | [.claude/skills/linkedin-lo-outreach/SKILL.md](.claude/skills/linkedin-lo-outreach/SKILL.md) |
 | Pre-call objection videos (nurture URLs, transcripts, setter sends) | [.claude/skills/pre-call-objection-videos/SKILL.md](.claude/skills/pre-call-objection-videos/SKILL.md) — [manifest](docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml) |
+| Client playbooks — create / rebuild | [.claude/skills/client-playbook-creator/SKILL.md](.claude/skills/client-playbook-creator/SKILL.md) |
+| Client playbooks — catalog & placement | [.claude/skills/client-playbooks/SKILL.md](.claude/skills/client-playbooks/SKILL.md) — [hub](docs/client-fulfillment/client-playbooks/README.md) |
 | **Content ideation + scripting (personal / business / client lanes)** | [.claude/skills/content-engine/SKILL.md](.claude/skills/content-engine/SKILL.md) — [content engine hub](docs/content-engine/README.md) |
 | **EditorProjectcreator (personal lane)** | [.claude/skills/editor-project-creator/SKILL.md](.claude/skills/editor-project-creator/SKILL.md) — [projects index](docs/content-engine/personal/projects/README.md) |
 | **Apify creator research + viral format remix** | [.claude/skills/creator-research/SKILL.md](.claude/skills/creator-research/SKILL.md) — [manifest](docs/content-engine/research/creator-research-manifest.yaml) |

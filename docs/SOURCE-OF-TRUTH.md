@@ -40,6 +40,7 @@ Use this page before creating, moving, or converting any Waiz Media OS document.
 | Overview | `overview-{topic}.md` | `overview-money-model-april-26.md` |
 | SOP | `{workflow}-sop.md` | `discovery-call-sop.md` |
 | Playbook / daily checklist | `{topic}-playbook.md` or `{role}-daily-checklist.md` | `setter-daily-checklist.md` |
+| Client playbooks index | `client-playbooks/catalog.yaml` + generated `catalog.md` | Auto-sync via `scripts/sync-client-playbooks.py` |
 | Script | `script-{call}.md` | `script-demo-call.md` |
 | KPI | `{metric}-kpi.md` | `setter-show-rate-kpi.md` |
 | Automation | `{system}-automation-spec.md` | `wm-ai-bot-automation-spec.md` |
@@ -69,7 +70,7 @@ Fix typos in canonical names (`infrastructure` not `infrustructure`). Do not cop
 | `.xlsx` trackers | KPI/summary Markdown + keep spreadsheet in `waiz-os-archive/waiz-drive-export/` |
 | `.pptx`, `.mp4`, `.png`, `.pdf` | Keep raw; optional short reference doc |
 | Drive `Archive/` and old MASTER docs | Archive summary only after canonical replacement exists |
-| Skool course material | Convert last; often duplicate internal SOPs |
+| Skool course material | Convert last; often duplicate internal SOPs — file as **course material** linking to canonical |
 
 ## Team Publish Rules
 

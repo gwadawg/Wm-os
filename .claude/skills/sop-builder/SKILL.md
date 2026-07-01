@@ -5,7 +5,8 @@ description: >
   Use when the user wants to: document a business process, create an SOP, capture a workflow,
   brainstorm how a process should work, or define who owns and executes a repeatable task.
   Also use when the user says "help me build a SOP", "document this process", "how should we
-  handle X", "let's build out the process for", or "I want to create a playbook for".
+  handle X", or "let's build out the process for". For **client playbooks** for paying LO
+  clients, use client-playbook-creator instead.
 ---
 
 # Waiz SOP Builder
@@ -83,6 +84,8 @@ Use this map to determine the correct destination path in `docs/`:
 | Media buying — Meta, campaigns | `docs/client-fulfillment/media-buying/` | Campaign setup SOPs, optimization rules, QA |
 | Client success — retention, reporting | `docs/client-fulfillment/client-success/` | Post-launch SOPs, reset calls, KPI checks |
 | Onboarding — client or team | `docs/client-fulfillment/onboarding/` | A-Z onboarding SOPs, launch comms |
+| Client training — Skool, education | `docs/client-fulfillment/course-material/` | Training wrappers; link to canonical SOPs |
+| Per-client deliverables | `docs/client-fulfillment/client-marketing/clients/` | Client-specific deltas only |
 | CRM / automation | `docs/client-fulfillment/crm-architecture/` | CRM flows, bot logic, tag logic |
 | Hiring / HR | `docs/operations/hiring/` | Assessment SOPs, onboarding bootcamps, scorecards |
 | Team / people | `docs/operations/people/` | Role expectations, bonus tiers, task lists |
@@ -224,6 +227,17 @@ Search `docs/` for:
 
 Use only the categories that apply. Skip empty categories.
 
+### 7c — Methodology scan (client + team playbooks)
+
+1. Read [catalog.yaml](../../docs/client-fulfillment/client-playbooks/catalog.yaml) → `methodology_pools`.
+2. For each technique, framework, or rule in the new doc, check whether it already exists in the OS (pools, acquisition, company, skills).
+3. Populate `methodology_sources:` in frontmatter with paths to reused techniques.
+4. If a **reusable technique is new** (not in any pool or linked doc), ask verbatim:
+
+> I used **[technique]** in this playbook, but it is not in the knowledge base yet. Should I update **[candidate doc(s)]**, add it to a methodology pool in `client-playbooks/catalog.yaml`, or keep it local to this playbook only? (update KB / pool only / local only)
+
+Follow [client-playbooks](../client-playbooks/SKILL.md) for full rules.
+
 ---
 
 ## Step 8: Write the File
@@ -232,9 +246,20 @@ Write the completed document to the correct path. Use `status: draft` unless the
 
 Set `last_updated` to today's date.
 
+For **client-facing playbooks**, use [client-playbook-creator](../client-playbook-creator/SKILL.md) — not this skill.
+
 ---
 
-## Step 9: Summary and Next Steps
+## Step 9: Sync catalog (client-facing docs only)
+
+If the user created client-facing docs via [client-playbook-creator](../client-playbook-creator/SKILL.md), catalog sync is handled there. For other client-facing SOPs tagged `client_delivery: true`:
+
+1. Run `python scripts/sync-client-playbooks.py` from repo root.
+2. Confirm the entry appears in [catalog.md](../../docs/client-fulfillment/client-playbooks/catalog.md).
+
+---
+
+## Step 10: Summary and Next Steps
 
 After creating the file, return:
 
@@ -252,7 +277,7 @@ After creating the file, return:
 
 ---
 
-## Step 10: Publish Offer
+## Step 11: Publish Offer
 
 After writing the file, ask verbatim:
 
@@ -280,6 +305,8 @@ If publish now: use the [team-doc-translate](../team-doc-translate/SKILL.md) ski
 | Skill | When |
 |-------|------|
 | [waiz-business-os](../waiz-business-os/SKILL.md) | Broader OS work, repo structure, migration |
+| [client-playbook-creator](../client-playbook-creator/SKILL.md) | Create/rebuild client playbooks |
+| [client-playbooks](../client-playbooks/SKILL.md) | Catalog sync, methodology pools |
 | [team-doc-translate](../team-doc-translate/SKILL.md) | Convert repo SOP into branded team copy |
 | [team-doc-publish](../team-doc-publish/SKILL.md) | One-way publish to Google Drive |
 | [brainstorming](../brainstorming/SKILL.md) | Deep product/system design exploration |

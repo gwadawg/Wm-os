@@ -15,6 +15,8 @@ artifact_type: script
 
 Nurture **Meta instant-form** reverse mortgage leads who have not replied or booked with the **loan officer (LO)**. Combines educational email depth with conversational SMS/iMessage to elicit a reply so the AI booking agent can take over.
 
+**Strategic layer:** [Lead Nurture Playbook](playbook-lead-nurture.md) — pillars, rules, quality bar. This doc is **execution** (copy + GHL).
+
 Extends into **long-term nurture** (Days 11–90) for leads who complete the 10-day arc without booking.
 
 ## Scope

@@ -18,7 +18,7 @@ Prevent mixing **Waiz Media’s own growth** (selling Waiz to loan officers) wit
 | Question | If **yes** → folder |
 |----------|---------------------|
 | Is this about selling **Waiz Media** (demos, Boot Camp offer, Waiz brand)? | [`docs/acquisition/`](../acquisition/README.md) — especially [`marketing/`](../acquisition/marketing/README.md) and [`sales/`](../acquisition/sales/README.md) |
-| Is this about **a paying client’s** campaigns, CRM, ads, or Skool training? | [`docs/client-fulfillment/`](README.md) — see map below |
+| Is this about **a paying client's** campaigns, CRM, ads, or client training? | [`docs/client-fulfillment/`](README.md) — see map below |
 | Is this Waiz **internal** ops (hiring MBs, billing, VA tasks)? | [`docs/operations/`](../operations/README.md) |
 
 **Never** file client Facebook ad SOPs under `acquisition/marketing/`. **Never** file Waiz case-study emails under `client-fulfillment/media-buying/`.
@@ -31,7 +31,7 @@ Prevent mixing **Waiz Media’s own growth** (selling Waiz to loan officers) wit
 | **Audience** | Reverse mortgage LO prospects | Homeowners / borrowers (client’s market) |
 | **Brand voice** | Waiz Media ([brand doctrine](../company/doctrine-brand-and-visual-identity-april-26.md)) | Client / RM compliant ([reverse-mortgage-dna/](reverse-mortgage-dna/README.md)) |
 | **Canonical home** | `docs/acquisition/marketing/` | `docs/client-fulfillment/client-marketing/` + `media-buying/` |
-| **Drive source (export)** | `01 _ Acquisition/Marketing/` | `03 _ Client Fulfillment/Media Buying/` + Skool course material |
+| **Drive source (export)** | `01 _ Acquisition/Marketing/` | `03 _ Client Fulfillment/Media Buying/` + client course material |
 | **Examples** | Money Tales emails, Waiz ad scripts, ICP for **buying Waiz** | Campaign setup, ad copy library, Meta BM setup **for clients** |
 
 ## Client Fulfillment Map (client-side only)
@@ -48,7 +48,7 @@ flowchart TB
     MB[media-buying → execution SOPs]
     CS[client-success]
     ON[onboarding]
-    CO[course-material → Skool / Bootcamp]
+    CO[course-material → client education]
   end
   AM -->|"sells Waiz"| LO[Loan officer prospect]
   MB -->|"runs ads for"| CLIENT[Paying LO client]
@@ -62,7 +62,8 @@ flowchart TB
 | [media-buying/](media-buying/README.md) | Day-to-day ad account ops, campaign setup, MB resources |
 | [client-success/](client-success/README.md) | Performance, constraints, KPIs after launch |
 | [onboarding/](onboarding/README.md) | Post-close client onboarding |
-| [course-material/](course-material/README.md) | Skool / Bootcamp **training** (not Waiz sales collateral) |
+| [course-material/](course-material/README.md) | Client course material & education (links to canonical) |
+| [client-playbooks/](client-playbooks/README.md) | Playbook index, methodology pools, creation guide |
 | [reverse-mortgage-dna/](reverse-mortgage-dna/README.md) | RM market knowledge for **client** campaigns |
 
 ## Infrastructure (on GitHub)
@@ -82,7 +83,7 @@ When converting from Drive:
 1. Check this page.
 2. If path starts with `01 _ Acquisition` → `docs/acquisition/`.
 3. If path starts with `03 _ Client Fulfillment/Media Buying` → `docs/client-fulfillment/media-buying/` (and link from `client-marketing/` when it’s playbook-level).
-4. If Skool / Bootcamp → `course-material/` unless it’s the canonical internal SOP (then `media-buying/` per [duplicate-resolutions](../_inventory/duplicate-resolutions.md)).
+4. If client course material → `course-material/` unless it's the canonical internal SOP (then `media-buying/` per [duplicate-resolutions](../_inventory/duplicate-resolutions.md)).
 
 ## Related
 

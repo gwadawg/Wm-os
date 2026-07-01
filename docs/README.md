@@ -50,7 +50,7 @@ Top-level domains stay as listed below. Add **subfolders only as canonical docs 
 | [Company](company/README.md) | Flat (doctrines, overviews) |
 | [Acquisition](acquisition/README.md) | `sales/`, `outbound/`, `marketing/`, `intelligence/`, `offer/` |
 | [Operations](operations/README.md) | `people/`, `hiring/`, `systems/`, `reporting/` |
-| [Client Fulfillment](client-fulfillment/README.md) | `infrastructure/`, `client-marketing/`, `media-buying/`, `onboarding/`, `client-success/`, `crm-architecture/`, `reverse-mortgage-dna/`, `course-material/` — [Waiz vs client marketing](client-fulfillment/waiz-vs-client-marketing-boundaries.md) |
+| [Client Fulfillment](client-fulfillment/README.md) | `client-playbooks/`, `client-marketing/`, `media-buying/`, `onboarding/`, `client-success/`, `course-material/`, `crm-architecture/`, `reverse-mortgage-dna/` — [Waiz vs client marketing](client-fulfillment/waiz-vs-client-marketing-boundaries.md) |
 | [Automations](automations/README.md) | `crm/`, `ai-bots/`, `reporting/`, `sales/` |
 | [Prompts](prompts/README.md) | Mirror operating domain |
 | [KPIs](kpis/README.md) | Mirror operating domain |

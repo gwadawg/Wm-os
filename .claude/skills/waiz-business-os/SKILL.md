@@ -52,6 +52,8 @@ Use these default principles:
 | [team-doc-translate](../team-doc-translate/SKILL.md) | Humanize repo docs into scannable team-facing copy |
 | [team-doc-publish](../team-doc-publish/SKILL.md) | One-way publish of approved docs to team Google Drive |
 | [pre-call-objection-videos](../pre-call-objection-videos/SKILL.md) | Prospect nurture videos — URLs, transcripts, objection mapping for sales/marketing |
+| [client-playbook-creator](../client-playbook-creator/SKILL.md) | **Create/rebuild** client playbooks (interview + layers + sync) |
+| [client-playbooks](../client-playbooks/SKILL.md) | Catalog, pools, placement |
 
 Repo index: [../README.md](../README.md). Canonical rules: [docs/SOURCE-OF-TRUTH.md](../../docs/SOURCE-OF-TRUTH.md).
 
@@ -114,12 +116,13 @@ Before changing the repo:
 When you finish a new or updated canonical doc under `docs/` (especially SOPs, playbooks, scripts):
 
 1. Ensure `status: active` only when the user has approved it for team use.
-2. Ask verbatim:
+2. **Client-facing playbooks:** use [client-playbook-creator](../client-playbook-creator/SKILL.md) — interview, layers, methodology scan, sync catalog.
+3. Ask verbatim:
 
 > This SOP is updated in the repo (`status: …`). Do you want to **prepare a team draft** for Google Drive? (prepare / skip / later)
 
-3. If yes, use [team-doc-publish](../team-doc-publish/SKILL.md): `team-doc-prepare` → edit `docs/team-drafts/` → `team-doc-approve` → `publish-team-doc.py`.
-4. GitHub remains source of truth; Google Drive is downstream team access only.
+4. If yes, use [team-doc-publish](../team-doc-publish/SKILL.md): `team-doc-prepare` → edit `docs/team-drafts/` → `team-doc-approve` → `publish-team-doc.py`.
+5. GitHub remains source of truth; Google Drive is downstream team access only.
 
 ## Output Style
 

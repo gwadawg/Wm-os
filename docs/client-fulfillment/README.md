@@ -39,7 +39,8 @@ Everything Waiz delivers **after a client signs** — onboarding, CRM, marketing
 | [CRM architecture](crm-architecture/README.md) | Canonical CRM + bot paths |
 | [Reverse mortgage DNA](reverse-mortgage-dna/README.md) | Product, ICP, compliance |
 | [RM Fulfillment Agent](reverse-mortgage-agent/README.md) | Claude Project deploy kit for internal fulfillment team |
-| [Course material](course-material/README.md) | Skool training (links to canonical SOPs) |
+| [Client Playbooks](client-playbooks/README.md) | **Start here** — playbooks, SOPs, training index + creation guide |
+| [Course material](course-material/README.md) | Client education layer (links to canonical) |
 
 ## On GitHub today
 
@@ -60,7 +61,7 @@ Raw exports: `waiz-os-archive/waiz-drive-export/Waiz Media OS/03 _ Client Fulfil
 ## Still in Drive only (lower priority)
 
 - MB Resources: FB setup, fixing FB issues, comms templates, backup ad accounts spreadsheet
-- Skool-only duplicates — keep as training; do not duplicate in `media-buying/`
+- Skool-only duplicates — keep as course material; do not duplicate in `media-buying/`
 
 ## Related
 

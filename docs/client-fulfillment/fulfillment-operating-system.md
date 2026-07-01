@@ -106,5 +106,6 @@ Load this page first for any client-fulfillment question. Follow links to the ca
 | [client-success/](client-success/README.md) | Post-launch CS + troubleshooting |
 | [call-center/](call-center/README.md) | B2C fulfillment call-center scripts and QA lifecycle |
 | [reverse-mortgage-dna/](reverse-mortgage-dna/README.md) | Product, ICP, compliance |
-| [course-material/](course-material/README.md) | Skool training (links to canonical) |
+| [client-playbooks/](client-playbooks/README.md) | Client playbooks index + creation guide |
+| [course-material/](course-material/README.md) | Course material & client education (links to canonical) |
 

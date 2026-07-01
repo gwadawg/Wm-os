@@ -17,6 +17,7 @@ Read [Waiz vs client marketing boundaries](../waiz-vs-client-marketing-boundarie
 
 | Doc | Status |
 |-----|--------|
+| [Lead Nurture Playbook](playbook-lead-nurture.md) | `draft` — **reference format**; strategic layer for nurture |
 | [RM Ad Playbook](rm-ad-playbook.md) | `draft` — strategy reference; prefer [Reverse Mortgage Ads Playbook](reverse-mortgage-ads-playbook.md) for operational steps |
 | [Reverse Mortgage Ads Playbook](reverse-mortgage-ads-playbook.md) | `draft` — operational ads playbook |
 | [Meta Andromeda Rules For Reverse Mortgages](meta-andromeda-rm-rules.md) | `draft` |
@@ -33,7 +34,7 @@ Read [Waiz vs client marketing boundaries](../waiz-vs-client-marketing-boundarie
 | [RM iMessage Appointment Follow-Up](rm-imessage-appointment-followup.md) | `active` |
 | [RM iMessage Second-Booking Follow-Up](rm-imessage-second-booking-followup.md) | `active` |
 
-Skool [Lead Nurture Playbook](../course-material/lead-nurture-playbook.md) is training — link here for operational copy.
+[Lead Nurture course material](../course-material/lead-nurture-playbook.md) is client education — canonical playbook: [playbook-lead-nurture.md](playbook-lead-nurture.md); execution copy: [10-Day RM Drip](10-day-rm-drip-campaign.md).
 
 ## Execution SOPs
 
