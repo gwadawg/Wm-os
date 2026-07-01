@@ -1,22 +1,55 @@
 # Client Playbook Creator — Examples
 
-## Example 1: Lead nurture (gold standard)
+## Example 1: Conceptual beliefs (default — single client playbook)
 
-**User:** "Create lead nurture playbook"
+**User:** "Build playbook on conceptual beliefs for RM LO sales calls"
 
-**Layers built:**
+**Built:**
 
-| Layer | Path |
-|-------|------|
-| Canonical | `docs/client-fulfillment/client-marketing/playbook-lead-nurture.md` |
-| Execution | `docs/client-fulfillment/client-marketing/10-day-rm-drip-campaign.md` (pre-existing) |
-| Course material | `docs/client-fulfillment/course-material/lead-nurture-playbook.md` |
+| Artifact | Path |
+|----------|------|
+| Team framework | `docs/acquisition/sales/conceptual-beliefs-framework.md` — universal seven beliefs |
+| Client playbook | `docs/client-fulfillment/client-sales/playbook-rm-conceptual-beliefs.md` — RM lines, worksheet, decision rules **in one file** |
 
-**Why it works:** Canonical has four pillars + decision rules; execution holds 900+ lines of copy; course material is ~100 lines teaching + links.
+**Why it works:** One doc for LOs to train and run calls from. Universal model lives in acquisition for team + other products. No question bank, no course-material wrapper.
 
 ---
 
-## Example 2: RM ads (split candidate)
+## Example 2: Lead nurture (legacy multi-doc stack)
+
+**User:** "Create lead nurture playbook"
+
+**Existing stack** (pre-dates single-playbook default):
+
+| Layer | Path |
+|-------|------|
+| Framework | `playbook-nurture-framework.md` |
+| Application | `playbook-lead-nurture.md` — Waiz Meta stack |
+| Long script | `10-day-rm-drip-campaign.md` — drip copy justifies separate doc |
+| Course material | `course-material/lead-nurture-playbook.md` |
+
+**Link rule:** Course material links **framework only** in lessons 1–4. Waiz stack + drip → gated appendix (*Waiz DFY clients only*). Never link `internal-fulfillment` paths in prospect course body.
+
+**Why split here:** Drip is 200+ lines of copy; Waiz GHL stack is a separate application layer. **New topics** should not copy this pattern unless similar length/script needs exist.
+
+---
+
+## Example 3: Long sales script (split justified)
+
+**User:** "Add full RM discovery call script"
+
+**Built:**
+
+| Artifact | Path |
+|----------|------|
+| Playbook | `playbook-rm-conceptual-beliefs.md` — beliefs + short lines (link to script) |
+| Long script | `script-rm-discovery-call.md` — full word-for-word call flow |
+
+**Rule:** Playbook keeps mental model + key lines; standalone script doc when the call script is long enough to run independently.
+
+---
+
+## Example 4: RM ads (split candidate)
 
 **User:** "Split rm-ad-playbook into proper format"
 
@@ -24,15 +57,14 @@
 
 | Layer | Path | Content |
 |-------|------|---------|
-| Canonical | `playbook-rm-meta-ads.md` (new) | TOF/MOF/BOF framework, angle system, quality bar, links |
-| Execution | `rm-ad-playbook.md` (trim or rename) | Angle bank, script concepts, checklists |
-| Course material | `course-material/rm-meta-ads-course-material.md` (optional) | LO education on creative strategy |
+| Playbook | `playbook-rm-meta-ads.md` | Strategy, angles, quality bar, links |
+| Execution | `rm-ad-playbook.md` (trim) | Angle bank, long script concepts |
 
-**Interview stops** until user approves split plan — do not delete `rm-ad-playbook.md` without approval.
+**Interview stops** until user approves — do not delete original without approval.
 
 ---
 
-## Example 3: References from Drive
+## Example 5: References from Drive
 
 **User:** "Build playbook from Bootcamp doc in archive"
 
@@ -40,24 +72,30 @@
 
 1. Locate row in [google-drive-inventory.md](../../docs/_inventory/google-drive-inventory.md)
 2. Read `.docx` via [docx](../docx/SKILL.md) from `waiz-os-archive`
-3. Extract framework → canonical; steps/copy → execution or link existing SOP
+3. Write **one client playbook** with inline lines; split only if source contains a full long script
 4. Check [duplicate-resolutions.md](../../docs/_inventory/duplicate-resolutions.md)
 5. Sync catalog
 
 ---
 
-## Example 4: Methodology propagation
+## Anti-patterns
 
-**After build**, agent finds new "education-first objection sequence" pattern not in OS:
+**Bad:** Three files for one training topic — `playbook-x.md` + `x-question-bank.md` + `course-material/x-education.md`
 
-Ask:
+**Fix:** Merge into one client playbook. Link team framework in acquisition if reusable.
 
-> I used **education-first objection sequence** in this playbook, but it is not in the knowledge base yet. Should I update **docs/client-fulfillment/reverse-mortgage-dna/rm-borrower-objections.md**, add it to a methodology pool in `client-playbooks/catalog.yaml`, or keep it local to this playbook only? (update KB / pool only / local only)
+**Bad:** 1000-line playbook with full drip + GHL steps + strategy
+
+**Fix:** Playbook stays strategy + key lines; drip/GHL in dedicated script/SOP doc.
+
+**Bad:** LO course or framework links internal fulfillment — `playbook-lead-nurture.md`, `10-day-rm-drip-campaign.md`, `crm-architecture/`, `media-buying/`, `how-wm-ai-bot-works.md` in main lesson body
+
+**Fix:** Link `playbook-*-framework.md` only. Waiz DFY context → gated appendix (`paying-client`). Grep blocked paths before sync. See **No internal process links** in [SKILL.md](SKILL.md).
 
 ---
 
-## Anti-pattern: monolith playbook
+## Methodology propagation
 
-**Bad:** 1000-line `playbook-*.md` with strategy + full ad scripts + GHL steps + client teaching.
+**After build**, if a reusable technique is new:
 
-**Fix:** Split mode — canonical ~150–300 lines, execution doc(s) for copy, course material for teaching.
+> I used **[technique]** in this playbook, but it is not in the knowledge base yet. Should I update **[candidate doc(s)]**, add it to a methodology pool in `client-playbooks/catalog.yaml`, or keep it local to this playbook only? (update KB / pool only / local only)

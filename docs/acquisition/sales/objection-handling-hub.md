@@ -31,6 +31,8 @@ Intro, discovery, and demo conversations with reverse mortgage loan officer pros
 | [WM Objection Categories](wm-objection-categories.md) | Taxonomy of objection types |
 | [WM Objection Handling Word Tracking](wm-objection-handling-word-tracking.md) | Phrasing and word-level tracking |
 | [WM Reframe Beliefs](wm-reframe-beliefs.md) | Belief reframes |
+| [Prospect Fallacies Framework](prospect-fallacies-framework.md) | Name deferral patterns → belief gaps before word tracks |
+| [Conceptual Beliefs Framework](conceptual-beliefs-framework.md) | Seven-belief installation map |
 | [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md) | Buyer psychology and selling points |
 | [Pre-Call Objection Video Assets](../marketing/pre-call-objection-videos.md) | Trust / belief pre-handle before calls; send prospect links + transcripts |
 

@@ -56,6 +56,7 @@ Media buying lead (Gabriela primary); Client Success and Operations use for diag
 | Doc | Role |
 |-----|------|
 | [Doctrine Reverse Mortgage](../reverse-mortgage-dna/doctrine-reverse-mortgage.md) | Methodology pillars (friction, frame shift) |
+| [Nurture Framework](playbook-nurture-framework.md) | Follow-up principles — speed, volume, beliefs (client + team) |
 | [RM Ad Playbook](rm-ad-playbook.md) | TOF/MOF/BOF execution, nine angles |
 | [Ad Copy And Angle Library (RM)](../media-buying/ad-copy-angle-library-rm.md) | Tiered copy blocks |
 | [Meta Andromeda RM Rules](meta-andromeda-rm-rules.md) | Creative diversification |

@@ -42,6 +42,8 @@ LEGACY_DELIVERY_ALIASES = {
     "boot-camp": "course-material",
 }
 
+SHAREABILITY_TIERS = frozenset({"lo-course", "paying-client", "internal-fulfillment"})
+
 
 @dataclass
 class CatalogEntry:
@@ -59,6 +61,7 @@ class CatalogEntry:
     canonical_parent: str | None
     methodology_sources: list[str]
     portal_url: str | None
+    shareability: str
     last_updated: str
     source: str
 
@@ -70,6 +73,7 @@ class CatalogEntry:
             "content_layer": self.content_layer,
             "audience": self.audience,
             "delivery": self.delivery,
+            "shareability": self.shareability,
             "status": self.status,
             "owner": self.owner,
             "domain": self.domain,
@@ -120,6 +124,8 @@ def _default_config() -> dict[str, Any]:
         "status": "active",
         "last_synced": None,
         "delivery_groups": [],
+        "shareability_tiers": [],
+        "protected_path_prefixes": [],
         "methodology_pools": {},
         "exclude_paths": [],
         "overrides": {},
@@ -236,6 +242,47 @@ def _portal_url(meta: dict[str, Any]) -> str | None:
     return None
 
 
+def _infer_shareability(meta: dict[str, Any], repo_path: str, artifact_type: str) -> str:
+    raw = meta.get("shareability")
+    if raw in SHAREABILITY_TIERS:
+        return str(raw)
+
+    path = repo_path.lower()
+
+    if path.endswith("-framework.md") and "/playbook-" in path:
+        return "lo-course"
+
+    if "/course-material/" in path:
+        return "lo-course"
+
+    if "/crm-architecture/" in path:
+        return "internal-fulfillment"
+    if "/onboarding/a-z" in path or "/onboarding/" in path and "a-z" in path:
+        return "internal-fulfillment"
+    if "/media-buying/" in path:
+        return "internal-fulfillment"
+    if "/client-success/" in path:
+        return "internal-fulfillment"
+    if "10-day" in path or "drip-campaign" in path or "imessage-intent-drip" in path:
+        return "internal-fulfillment"
+    if "how-wm-ai-bot" in path:
+        return "internal-fulfillment"
+
+    if artifact_type == "playbook" and "/playbook-" in path and not path.endswith("-framework.md"):
+        if "/client-marketing/" in path:
+            return "paying-client"
+
+    if "/client-marketing/" in path:
+        if "sop-lo-" in path or "playbook-bamfam" in path or "playbook-rm-conceptual" in path:
+            return "lo-course"
+        return "paying-client"
+
+    if "/reverse-mortgage-dna/" in path or "/dscr-dna/" in path:
+        return "lo-course"
+
+    return "internal-fulfillment"
+
+
 def _should_include(path: Path, meta: dict[str, Any], root: Path, config: dict[str, Any]) -> bool:
     repo_path = rel_repo_path(path, root)
     if path.name in EXCLUDE_FILENAMES:
@@ -287,10 +334,11 @@ def scan_entry(path: Path, root: Path, config: dict[str, Any]) -> CatalogEntry |
     if canonical:
         canonical = str(canonical).replace("\\", "/")
 
+    artifact_type = _infer_artifact_type(meta, path.name)
     entry = CatalogEntry(
         repo_path=repo_path,
         title=str(meta.get("title") or meta["_title"]),
-        artifact_type=_infer_artifact_type(meta, path.name),
+        artifact_type=artifact_type,
         content_layer=content_layer,
         audience=_infer_audience(meta, repo_path),
         delivery=_infer_delivery(meta, content_layer),
@@ -302,6 +350,7 @@ def scan_entry(path: Path, root: Path, config: dict[str, Any]) -> CatalogEntry |
         canonical_parent=canonical,
         methodology_sources=[str(m).replace("\\", "/") for m in methodology],
         portal_url=_portal_url(meta),
+        shareability=_infer_shareability(meta, repo_path, artifact_type),
         last_updated=str(meta.get("last_updated") or ""),
         source="scan",
     )
@@ -420,16 +469,30 @@ def render_markdown(config: dict[str, Any], entries: list[CatalogEntry]) -> str:
         label = _group_label(config, group_id)
         lines.append(f"### {label} (`{group_id}`)")
         lines.append("")
-        lines.append("| Title | Type | Layer | Status | Audience | Delivery |")
-        lines.append("|-------|------|-------|--------|----------|----------|")
+        lines.append("| Title | Type | Layer | Shareability | Status | Audience | Delivery |")
+        lines.append("|-------|------|-------|--------------|--------|----------|----------|")
         for e in by_group[group_id]:
             link = _entry_link(e.repo_path)
             aud = ", ".join(e.audience)
             deliv = ", ".join(e.delivery)
             lines.append(
                 f"| [{e.title}]({link}) | {e.artifact_type} | {e.content_layer} | "
-                f"{e.status} | {aud} | {deliv} |"
+                f"{e.shareability} | {e.status} | {aud} | {deliv} |"
             )
+        lines.append("")
+
+    lo_course = [e for e in entries if e.shareability == "lo-course"]
+    if lo_course:
+        lines.extend(["## LO course — `lo-course` only", ""])
+        lines.append(
+            "Safe for prospect LO course modules. See "
+            "[shareability boundaries](../shareability-boundaries.md) and "
+            "[checklist](SHAREABILITY-CHECKLIST.md)."
+        )
+        lines.append("")
+        for e in lo_course:
+            link = _entry_link(e.repo_path)
+            lines.append(f"- [{e.title}]({link}) — `{e.delivery_group}`")
         lines.append("")
 
     wrappers = [e for e in entries if e.content_layer == "course-material"]
@@ -445,6 +508,8 @@ def render_markdown(config: dict[str, Any], entries: list[CatalogEntry]) -> str:
             "## Related",
             "",
             "- [Client Playbooks README](README.md)",
+            "- [Shareability boundaries](../shareability-boundaries.md)",
+            "- [Shareability checklist](SHAREABILITY-CHECKLIST.md)",
             "- [Course material](../course-material/README.md)",
             "- [Fulfillment Operating System](../fulfillment-operating-system.md)",
             "- [Client playbook template](../../templates/client-playbook-template.md)",

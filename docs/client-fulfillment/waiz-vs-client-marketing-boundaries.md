@@ -45,6 +45,7 @@ flowchart TB
   subgraph fulfillment [Client Fulfillment]
     INF[infrastructure → CRM / bots]
     CM[client-marketing → strategy & playbooks]
+    CSL[client-sales → live-call LO training]
     MB[media-buying → execution SOPs]
     CS[client-success]
     ON[onboarding]
@@ -58,12 +59,14 @@ flowchart TB
 | Subfolder | What belongs here |
 |-----------|-------------------|
 | [infrastructure/](infrastructure/README.md) | GHL, tags, AI bot, client CRM — **systems clients run on** |
-| [client-marketing/](client-marketing/README.md) | RM ad playbooks, funnels, angles — **what we market for clients** (links to media-buying SOPs) |
+| [client-marketing/](client-marketing/README.md) | RM ad playbooks, funnels, drips, nurture — **what we market for clients** (links to media-buying SOPs) |
+| [client-sales/](client-sales/README.md) | Live-call LO training — discovery, beliefs, BAMFAM, close mechanics |
 | [media-buying/](media-buying/README.md) | Day-to-day ad account ops, campaign setup, MB resources |
 | [client-success/](client-success/README.md) | Performance, constraints, KPIs after launch |
 | [onboarding/](onboarding/README.md) | Post-close client onboarding |
-| [course-material/](course-material/README.md) | Client course material & education (links to canonical) |
+| [course-material/](course-material/README.md) | Client course material & education — **`shareability: lo-course`** for prospect LO course |
 | [client-playbooks/](client-playbooks/README.md) | Playbook index, methodology pools, creation guide |
+| [shareability-boundaries.md](shareability-boundaries.md) | **LO course vs DFY fulfillment** — what not to expose to non-clients |
 | [reverse-mortgage-dna/](reverse-mortgage-dna/README.md) | RM market knowledge for **client** campaigns |
 
 ## Infrastructure (on GitHub)
@@ -88,5 +91,6 @@ When converting from Drive:
 ## Related
 
 - [Client Fulfillment README](README.md)
+- [Shareability boundaries](shareability-boundaries.md)
 - [Acquisition Marketing](../acquisition/marketing/README.md)
 - [Approved Operating Spine](../SPINE.md)

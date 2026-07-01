@@ -5,6 +5,7 @@ owner: client-success
 status: draft
 last_updated: YYYY-MM-DD
 review_cycle: quarterly
+shareability: lo-course   # lo-course | paying-client | internal-fulfillment
 artifact_type: playbook
 audience:
   - client

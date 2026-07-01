@@ -56,6 +56,8 @@ Channel-appropriate response patterns with compliance flags.
 | **Call center** | Keep conversation alive; hand off to LO | Front-desk version only |
 | **LO call** | Full product answer | LO's job — not covered here |
 
+**LO mindset before objections:** [LO D2C Sales Foundations](../client-sales/playbook-lo-d2c-sales-foundations-rm.md) · [Nurture Framework §2 — Limiting beliefs](../client-marketing/playbook-nurture-framework.md#2-limiting-beliefs-to-break). **Install beliefs first:** [RM Conceptual Beliefs Playbook](../client-sales/playbook-rm-conceptual-beliefs.md) — check Pain, Doubt, Cost, etc. before pitching. **Name deferral patterns:** [Prospect Fallacies Framework](../../acquisition/sales/prospect-fallacies-framework.md) — if-when and sunk cost map to unchecked beliefs (rep-side labels; don't lecture borrowers). **This doc:** word tracks when pushback still surfaces — diagnose which belief gap was missed on the playbook worksheet.
+
 Always run [RM Compliance Guardrails](rm-compliance-guardrails.md) before deploying any response.
 
 ---

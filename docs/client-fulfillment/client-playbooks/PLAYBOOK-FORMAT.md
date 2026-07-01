@@ -1,8 +1,83 @@
 # Client Playbook Format
 
-Gold-standard structure for client playbooks. **Reference implementation:** [playbook-lead-nurture.md](../client-marketing/playbook-lead-nurture.md).
+Gold-standard structure for client playbooks. **Reference implementations:**
+
+- **Principles:** [playbook-nurture-framework.md](../client-marketing/playbook-nurture-framework.md) — flow-agnostic rules
+- **Application:** [playbook-lead-nurture.md](../client-marketing/playbook-lead-nurture.md) — Waiz Meta stack (links to framework; no duplicate principles)
 
 Use this doc when creating playbooks so future ones stay consistent.
+
+---
+
+## Default: single client playbook
+
+**New client playbooks** should be **one file** unless the topic includes a **long standalone script** (full sales call, drip sequence, call-center script).
+
+| In the playbook | Separate doc only when |
+|-----------------|------------------------|
+| North star, framework, decision rules | Full word-for-word call script (200+ lines) |
+| Usable lines — questions, smoke screens, short pitch weaves | Drip/SMS copy libraries |
+| Metrics, related links | GHL step-by-step build docs |
+
+**Team/universal frameworks** → `docs/acquisition/sales/` (e.g. [conceptual-beliefs-framework.md](../../acquisition/sales/conceptual-beliefs-framework.md)). Product playbooks link and add product-specific lines.
+
+**Do not create** by default: `{topic}-question-bank.md`, `{topic}-education.md`, or `course-material/` wrappers for the same topic.
+
+---
+
+## Three layers (lead nurture — legacy exception)
+
+When a topic has both **universal principles** and a **Waiz-specific implementation**, split across docs — never maintain two copies of the same rules.
+
+| Layer | Doc pattern | Contains | Example |
+|-------|-------------|----------|---------|
+| **Framework** | `playbook-{topic}-framework.md` | Why, mental models, universal rules, backlinks | `playbook-nurture-framework.md` |
+| **Application** | `playbook-{topic}.md` | How Waiz runs one flow (GHL, phases, metrics) | `playbook-lead-nurture.md` (Meta stack) |
+| **Execution** | `*-drip*.md`, `*-script.md`, `*-sop.md` | Copy, steps, word tracks | `10-day-rm-drip-campaign.md` |
+
+**Course material** teaches from the **framework** first; Waiz DFY automation belongs in a **gated appendix** (`paying-client` only) — never in the prospect LO course body.
+
+---
+
+## Shareability (required)
+
+Every playbook, course module, and execution doc must declare who may see it. Full doctrine: [shareability-boundaries.md](../shareability-boundaries.md).
+
+| Tier | LO course (non-clients)? | Use for |
+|------|--------------------------|---------|
+| `lo-course` | **Yes** | Frameworks, generic LO skills, RM education |
+| `paying-client` | **No** | Waiz application playbooks, client portal modules |
+| `internal-fulfillment` | **No** | GHL builds, drip copy, bot specs, MB/onboarding SOPs |
+
+**Frontmatter:**
+
+```yaml
+shareability: lo-course   # lo-course | paying-client | internal-fulfillment
+```
+
+**Defaults by layer:**
+
+| Layer | Default |
+|-------|---------|
+| `playbook-*-framework.md` | `lo-course` |
+| `playbook-*.md` (application) | `paying-client` |
+| `course-material/` (prospect course) | `lo-course` |
+| Drip copy, GHL steps, `crm-architecture/` | `internal-fulfillment` |
+
+Before publishing course material, run [SHAREABILITY-CHECKLIST.md](SHAREABILITY-CHECKLIST.md).
+
+---
+
+## Overlap check (required before saving)
+
+Before adding or expanding any playbook section, ask:
+
+1. **Does this principle already exist** in a framework, doctrine, or methodology pool doc? → **Link**, don't rewrite.
+2. **Does another playbook in the same `delivery_group` cover this?** → Grep [catalog.md](catalog.md) and consolidate.
+3. **Is this Waiz-flow-specific or universal?** → Universal → framework; GHL/Meta/bot → application playbook.
+4. **Would course material repeat canonical copy?** → One-line summary + link only.
+
+**Flag overlaps to the owner** when building — propose merge, split, or link before duplicating content.
 
 ---
 
@@ -10,7 +85,7 @@ Use this doc when creating playbooks so future ones stay consistent.
 
 | Layer | Folder | Contains |
 |-------|--------|----------|
-| **Canonical playbook** | `client-marketing/`, `media-buying/`, etc. | System, rules, frameworks, links to execution |
+| **Canonical playbook** | `client-marketing/`, `client-sales/`, `media-buying/`, etc. | System, rules, frameworks, links to execution |
 | **Course material** | `course-material/` | Client education only — why, mental model, checklist, links |
 
 Never put full copy libraries or GHL step lists in both places.
@@ -56,6 +131,7 @@ Never put full copy libraries or GHL step lists in both places.
 ## Frontmatter (canonical)
 
 ```yaml
+shareability: lo-course          # lo-course | paying-client | internal-fulfillment
 artifact_type: playbook
 audience: [client, team]
 content_layer: canonical
@@ -65,6 +141,8 @@ is_reference_playbook: true   # only on gold-standard examples
 methodology_sources: [...]
 delivery: [github, course-material, team-drive]
 ```
+
+Course material frontmatter must include `shareability: lo-course` unless the module is **paying-client portal only**.
 
 ---
 

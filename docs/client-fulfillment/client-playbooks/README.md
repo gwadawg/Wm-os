@@ -15,9 +15,12 @@ review_cycle: weekly
 |-------|---------|
 | [Catalog (auto-index)](catalog.md) | Every indexed playbook, SOP, and training doc |
 | [Playbook format spec](PLAYBOOK-FORMAT.md) | **Section order + two-layer rules** |
+| [Shareability boundaries](../shareability-boundaries.md) | **LO course vs DFY fulfillment — what not to leak** |
+| [Shareability checklist](SHAREABILITY-CHECKLIST.md) | Pre-publish audit for prospect course modules |
 | [catalog.yaml](catalog.yaml) | Methodology pools, topic groups, per-doc overrides |
 | [Playbook template](../../templates/client-playbook-template.md) | Copy-paste frontmatter + structure |
-| [Reference playbook](../client-marketing/playbook-lead-nurture.md) | Gold-standard example (lead nurture) |
+| [Nurture Framework](../client-marketing/playbook-nurture-framework.md) | Principles — lead nurture example |
+| [Lead Nurture Playbook — Waiz Meta Stack](../client-marketing/playbook-lead-nurture.md) | Application layer example |
 | [Course material](../course-material/README.md) | Client education layer |
 
 Sync after changes: `python scripts/sync-client-playbooks.py`
@@ -29,6 +32,7 @@ Sync after changes: `python scripts/sync-client-playbooks.py`
 ```mermaid
 flowchart TD
   Q{What are you creating?}
+  Q -->|Live sales / discovery call training| CSAL[client-sales/]
   Q -->|Executable playbook or SOP| CAN[client-marketing/ or media-buying/ or client-success/]
   Q -->|Client education / how-to for LOs| CM[course-material/]
   Q -->|One client's custom deliverable| CI[client-marketing/clients/]
@@ -39,11 +43,13 @@ flowchart TD
 
 | Layer | Folder | Use when |
 |-------|--------|----------|
-| **Canonical** | `../client-marketing/`, `../media-buying/`, `../client-success/`, `../onboarding/` | Steps, copy libraries, rules — source of truth |
+| **Canonical** | `../client-marketing/`, `../client-sales/`, `../media-buying/`, `../client-success/`, `../onboarding/` | Steps, copy libraries, rules — source of truth |
 | **Course material** | `../course-material/` | Client-facing education; **link** to canonical, do not duplicate ops copy |
 | **Client instance** | `../client-marketing/clients/` | Per-client delta only (names, market, approved variants) |
 
-Read [Waiz vs client marketing boundaries](../waiz-vs-client-marketing-boundaries.md) before filing.
+Read [Waiz vs client marketing boundaries](../waiz-vs-client-marketing-boundaries.md) and [shareability boundaries](../shareability-boundaries.md) before filing.
+
+**Prospect LO course:** only `shareability: lo-course` docs in lesson bodies. Waiz DFY stack → gated appendix or client portal.
 
 ---
 
@@ -113,4 +119,5 @@ Team training, acquisition docs, company DNA, and skills are **pull sources**, n
 
 - [Fulfillment Operating System](../fulfillment-operating-system.md)
 - [Client marketing](../client-marketing/README.md)
+- [Client sales](../client-sales/README.md)
 - [SOURCE-OF-TRUTH](../../SOURCE-OF-TRUTH.md)

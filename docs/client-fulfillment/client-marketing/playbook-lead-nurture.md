@@ -1,9 +1,9 @@
 ---
-title: Lead Nurture Playbook
+title: Lead Nurture Playbook — Waiz Meta Stack
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-07-01
+last_updated: 2026-07-02
 review_cycle: quarterly
 artifact_type: playbook
 audience:
@@ -12,35 +12,38 @@ audience:
 content_layer: canonical
 product: reverse-mortgage
 delivery_group: lead-nurture
+shareability: paying-client
 is_reference_playbook: true
 methodology_sources:
+  - docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
   - docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md
   - docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
   - docs/client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md
   - docs/client-fulfillment/fulfillment-lead-lifecycle.md
 delivery:
   - github
-  - course-material
   - team-drive
 ---
 
-# Lead Nurture Playbook
+# Lead Nurture Playbook — Waiz Meta Stack
 
-> **Reference playbook** — gold-standard format for future client playbooks.  
-> **North star:** Turn cold Meta leads into booked conversations through education-first follow-up from the loan officer's team — not pressure.
+> **Application layer** — how Waiz runs automated nurture for **Meta instant-form leads**.  
+> **Principles** (why nurture matters, four pillars, beliefs, manual cadence): [Nurture Framework](playbook-nurture-framework.md).  
+> **North star:** Turn cold Meta leads into booked conversations through education-first automated follow-up — not pressure.
 
 ## Purpose
 
-Define **how and why** Waiz nurtures reverse mortgage leads after the ad click — the system, rules, and quality bar. Message copy and GHL build details live in linked execution docs; this playbook is the strategic layer clients and team align on first.
+Define **how Waiz implements** nurture for Meta RM leads: bot → drip → AI booking, phase cadence, GHL routing, and CS quality bar. **Do not duplicate** universal follow-up principles — those live in the [Nurture Framework](playbook-nurture-framework.md).
 
 ## Scope
 
 | Included | Excluded |
 |----------|----------|
-| Four-pillar nurture framework (Availability, Speed, Personalization, Volume) | Full email/SMS copy (→ [10-Day RM Drip](10-day-rm-drip-campaign.md)) |
-| Waiz nurture stack: bot → drip → AI booking | Speed-to-lead bot logic (→ [How WM AI Bot Works](../crm-architecture/how-wm-ai-bot-works.md)) |
-| Phase cadence, routing rules, exit conditions | Meta ad creative (→ [RM Ad Playbook](rm-ad-playbook.md)) |
-| RM compliance + outcome-first language standards | Per-client custom drips (→ `clients/` folder) |
+| Waiz nurture stack: bot → drip → AI booking | Why follow-up is sales, RM psychology (→ [Nurture Framework](playbook-nurture-framework.md)) |
+| Four-pillar **Waiz implementation** for Meta | Pillar definitions and universal rules (→ framework § Four pillars) |
+| Phase cadence (Days 1–90), routing, exit conditions | Manual dial, BAMFAM, reactivation (→ framework §2–4 + linked scripts) |
+| GHL decision rules and CS metrics | Full email/SMS copy (→ [10-Day RM Drip](10-day-rm-drip-campaign.md)) |
+| RM compliance + outcome-first standards for automated touches | Speed-to-lead bot logic (→ [How WM AI Bot Works](../crm-architecture/how-wm-ai-bot-works.md)) |
 
 ## Owner
 
@@ -51,9 +54,11 @@ Client Success (build + QA). LO approves voice-sensitive lines and composite sto
 Use this playbook when:
 
 - Onboarding a client who will receive Meta form leads
-- Building or auditing a nurture workflow in GHL
+- Building or auditing the **Waiz automated** nurture workflow in GHL
 - Client asks "what happens after someone fills out my form?"
-- CS diagnoses low reply or show rates post-launch
+- CS diagnoses low reply or show rates on the **automated** sequence
+
+For coaching on manual follow-up or "leads are ghosting," start with [Nurture Framework](playbook-nurture-framework.md).
 
 ## Inputs
 
@@ -70,41 +75,18 @@ Use this playbook when:
 - No reply by Day 30 → Phase 3 (Days 31–90)
 - Appointment booked → nurture off; appointment reminders only
 
-## The four pillars
+## Waiz implementation — four pillars
 
-All four must work together. Weakness in one pillar shows up as "bad leads" or "ads don't work."
+Pillar definitions and universal rules: [Nurture Framework — Four pillars](playbook-nurture-framework.md#the-four-pillars-universal).
 
-| Pillar | Question it answers | Waiz implementation |
-|--------|---------------------|---------------------|
-| **I — Availability** | Can they take the next step immediately? | Instant Meta form; thank-you path clear; AI offers booking in first minutes; calendar accessible |
-| **II — Speed** | How fast do you show up after interest peaks? | WM AI bot: 0–5 min; first drip touch ~4 hrs after form; reply to inbound within the hour |
-| **III — Personalization** | Does follow-up feel relevant to *their* intent? | Intent routing on `form_intent`; LO assistant voice; outcome-first copy matched to form promise |
-| **IV — Volume** | Do you quit before the lead is ready? | ~18 touches Days 1–10; 8 touches Days 11–30; 6 touches Days 31–90 — most conversions happen after touch 5+ |
+| Pillar | Waiz implementation | LO action |
+|--------|---------------------|-----------|
+| **Availability** | Instant Meta form; thank-you path clear; AI offers booking in first minutes | Keep calendar slots open; confirm booking link weekly |
+| **Speed** | WM AI bot: 0–5 min; first drip touch ~4 hrs after form | Respond personally if lead replies to SMS/email — hot lead |
+| **Personalization** | Intent routing on `form_intent`; LO assistant voice; outcome-first copy | Approve LO voice; match form promise |
+| **Volume** | ~18 touches Days 1–10; 8 Days 11–30; 6 Days 31–90 | Trust 90-day arc; don't stop at Day 3 on silence alone |
 
-### Pillar I — Availability
-
-- **Rule:** Every motivated lead must know the single next step within 3 seconds of submitting the form.
-- **Waiz:** Form → bot conversation or booking path → no dead ends, no "check your email in 45 minutes" as the only action.
-- **LO action:** Keep calendar slots open; confirm booking link works weekly.
-
-### Pillar II — Speed
-
-- **Rule:** First human/system touch in **under 5 minutes**; gold standard under 60 seconds (bot).
-- **Waiz:** Bot handles peak-motivation window; drip starts ~4 hours later so the LO's assistant voice doesn't collide with bot.
-- **LO action:** Respond personally if a lead replies to SMS/email — treat as hot lead.
-
-### Pillar III — Personalization
-
-- **Rule:** Reference what they asked for on the form; lead with **outcome**, not product jargon.
-- **Waiz:** Segment openers by intent (remove payment, pay debt, cash out). Sender = LO's assistant, not a brand.
-- **Language:** See outcome-first table in [10-Day RM Drip — Outcome-first language](10-day-rm-drip-campaign.md#outcome-first-language-use-vs-avoid).
-- **Compliance:** [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md) — no tax advice in SMS; say *retired homeowners* not age targeting in copy.
-
-### Pillar IV — Volume
-
-- **Rule:** Assume the lead needs education before booking; plan for 5–12+ contacts before giving up.
-- **Waiz:** Three-phase arc (primary → long-term A → long-term B). Do not stop at Day 3 because "they're cold."
-- **Exit only on:** reply, book, unsubscribe, or hard disqualify — not silence alone before Day 90.
+Outcome-first language: [10-Day RM Drip — Outcome-first language](10-day-rm-drip-campaign.md#outcome-first-language-use-vs-avoid). Compliance: [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md).
 
 ---
 
@@ -125,6 +107,7 @@ flowchart LR
 
 | Stage | Doc | Owner |
 |-------|-----|-------|
+| Principles | [Nurture Framework](playbook-nurture-framework.md) | CS / Education |
 | Lifecycle context | [Fulfillment Lead Lifecycle](../fulfillment-lead-lifecycle.md) | CS |
 | Speed-to-lead + booking | [How WM AI Bot Works](../crm-architecture/how-wm-ai-bot-works.md) | Ops |
 | Primary + long-term copy | [10-Day RM Drip Campaign](10-day-rm-drip-campaign.md) | CS |
@@ -162,7 +145,7 @@ Full cadence, themes, and copy: [10-Day RM Drip Campaign](10-day-rm-drip-campaig
 ## Quality bar
 
 - **Voice:** LO's assistant reaches out — personal, educational, not corporate blast.
-- **Frame:** Outcome-first per [Doctrine RM Marketing](../reverse-mortgage-dna/doctrine-rm-marketing.md); name HECM/reverse mortgage only when teaching mechanics.
+- **Frame:** Outcome-first per [Doctrine RM Marketing](../reverse-mortgage-dna/doctrine-rm-marketing.md).
 - **Compliance:** [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md) on every touch.
 - **Stories:** Carol/Ruth/Tom-style composites — LO-approved or labeled internal composite.
 - **Meta leads:** Acknowledge form source Day 1; address scam/social-media fear by Day 8.
@@ -185,29 +168,22 @@ Formal KPI definitions: [Fulfillment Constraint Diagnosis KPI Standards](../clie
 
 ## Related docs
 
-### Methodology (from OS)
-
-| Doc | What we reuse |
-|-----|----------------|
-| [RM High-Quality Lead Acquisition](rm-high-quality-lead-acquisition.md) | Education-first, quality-over-volume mindset |
-| [Doctrine RM Marketing](../reverse-mortgage-dna/doctrine-rm-marketing.md) | Archetypes, outcome-first framing |
-| [Fulfillment Lead Lifecycle](../fulfillment-lead-lifecycle.md) | Where nurture sits in full engine |
-
-### Execution (do not duplicate here)
+### Principles (do not duplicate here)
 
 | Doc | Role |
 |-----|------|
-| [10-Day RM Drip Campaign](10-day-rm-drip-campaign.md) | **Primary execution** — copy, GHL, phases |
+| [Nurture Framework](playbook-nurture-framework.md) | **Parent** — why, pillars, beliefs, cadence, reactivation |
+| [LO Lead Dialing SOP — RM](sop-lo-lead-dialing-rm.md) | Manual dial execution |
+| [BAMFAM Playbook — RM](../client-sales/playbook-bamfam-rm.md) | Book next step on the phone |
+| [Lead Nurture — Course Material](../course-material/lead-nurture-playbook.md) | Client education hub |
+
+### Execution (copy + GHL)
+
+| Doc | Role |
+|-----|------|
+| [10-Day RM Drip Campaign](10-day-rm-drip-campaign.md) | Primary execution — copy, GHL, phases |
 | [RM iMessage Intent Drip (7-Day)](rm-imessage-intent-drip-7day.md) | Intent-segmented SMS path |
 | [How WM AI Bot Works](../crm-architecture/how-wm-ai-bot-works.md) | Pre-drip speed + booking |
-
-### Course material (client education)
-
-| Doc | Role |
-|-----|------|
-| [Lead Nurture — Course Material](../course-material/lead-nurture-playbook.md) | Client-facing teaching layer; links here |
-
----
 
 ## Open questions
 

@@ -17,7 +17,11 @@ Read [Waiz vs client marketing boundaries](../waiz-vs-client-marketing-boundarie
 
 | Doc | Status |
 |-----|--------|
-| [Lead Nurture Playbook](playbook-lead-nurture.md) | `draft` — **reference format**; strategic layer for nurture |
+| [Nurture Framework](playbook-nurture-framework.md) | `draft` — **principles** — why, pillars, beliefs, cadence (client + team) |
+| [Lead Nurture Playbook — Waiz Meta Stack](playbook-lead-nurture.md) | `draft` — **application** — bot + drip + GHL; links framework |
+| [LO Lead Dialing SOP — RM](sop-lo-lead-dialing-rm.md) | `draft` — manual dial blocks (LO self-serve) |
+
+**Live sales training** (beliefs, BAMFAM, discovery) → [client-sales/](../client-sales/README.md).
 | [RM Ad Playbook](rm-ad-playbook.md) | `draft` — strategy reference; prefer [Reverse Mortgage Ads Playbook](reverse-mortgage-ads-playbook.md) for operational steps |
 | [Reverse Mortgage Ads Playbook](reverse-mortgage-ads-playbook.md) | `draft` — operational ads playbook |
 | [Meta Andromeda Rules For Reverse Mortgages](meta-andromeda-rm-rules.md) | `draft` |
@@ -34,7 +38,7 @@ Read [Waiz vs client marketing boundaries](../waiz-vs-client-marketing-boundarie
 | [RM iMessage Appointment Follow-Up](rm-imessage-appointment-followup.md) | `active` |
 | [RM iMessage Second-Booking Follow-Up](rm-imessage-second-booking-followup.md) | `active` |
 
-[Lead Nurture course material](../course-material/lead-nurture-playbook.md) is client education — canonical playbook: [playbook-lead-nurture.md](playbook-lead-nurture.md); execution copy: [10-Day RM Drip](10-day-rm-drip-campaign.md).
+[Lead Nurture course material](../course-material/lead-nurture-playbook.md) links to [Nurture Framework](playbook-nurture-framework.md) (principles) and [Lead Nurture Playbook — Waiz Meta Stack](playbook-lead-nurture.md) (automation). Execution copy: [10-Day RM Drip](10-day-rm-drip-campaign.md).
 
 ## Execution SOPs
 

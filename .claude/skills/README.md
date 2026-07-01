@@ -29,8 +29,8 @@ Reference files: [content-engine/weekly-workflow.md](content-engine/weekly-workf
 |-------|------|----------|
 | **Waiz Business OS** | [waiz-business-os/SKILL.md](waiz-business-os/SKILL.md) | Any work in `docs/`, migration, SOPs, KPIs, repo structure, company operations — team Drive copies match [Objection Categories format](https://docs.google.com/document/d/19creUTdx5cTwWJVjdX3qPUMY40v1z379bCNoieY_Q5Y/edit) |
 | **SOP Builder** | [sop-builder/SKILL.md](sop-builder/SKILL.md) | Brainstorm or build a new SOP/playbook/guide from scratch — guides discovery, picks the right doc type, maps to the correct folder, drafts the file, and offers Drive publish |
-| **Client playbook creator** | [client-playbook-creator/SKILL.md](client-playbook-creator/SKILL.md) | Interview, build, split, and store new client playbooks + course material |
-| **Client playbooks** | [client-playbooks/SKILL.md](client-playbooks/SKILL.md) | Catalog sync, methodology pools, placement reference |
+| **Client playbook creator** | [client-playbook-creator/SKILL.md](client-playbook-creator/SKILL.md) | Interview, build, split client playbooks; enforces no internal links in LO course |
+| **Client playbooks** | [client-playbooks/SKILL.md](client-playbooks/SKILL.md) | Catalog sync, methodology pools, shareability / link allowlist |
 | **LinkedIn LO outreach** | [linkedin-lo-outreach/SKILL.md](linkedin-lo-outreach/SKILL.md) | LinkedIn DMs to reverse mortgage LOs — entry: [outbound/linkedin/manifest.yaml](../../docs/acquisition/outbound/linkedin/manifest.yaml) |
 | **Pre-call objection videos** | [pre-call-objection-videos/SKILL.md](pre-call-objection-videos/SKILL.md) | Prospect nurture videos before strategy/demo — [manifest](../../docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml) |
 | **DOCX** | [docx/SKILL.md](docx/SKILL.md) | Reading or converting `.docx` from **waiz-os-archive** (`waiz-drive-export/`) |

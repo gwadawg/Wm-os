@@ -2,12 +2,14 @@ workflow: client-playbooks
 version: 1
 status: active
 last_synced: '2026-07-01'
-entry_count: 56
+entry_count: 65
 delivery_groups:
 - id: onboarding
   label: Onboarding & launch
 - id: lead-nurture
   label: Lead nurture & follow-up
+- id: client-sales
+  label: Client sales & live-call training
 - id: meta-ads-creative
   label: Meta ads & creative
 - id: crm-automation
@@ -22,6 +24,21 @@ delivery_groups:
   label: Call center & appointment setting
 - id: general
   label: General fulfillment
+shareability_tiers:
+- id: lo-course
+  label: LO course — any loan officer (prospects OK)
+  course_safe: true
+- id: paying-client
+  label: Paying Waiz DFY clients only
+  course_safe: false
+- id: internal-fulfillment
+  label: Waiz team — fulfillment execution
+  course_safe: false
+protected_path_prefixes:
+- docs/client-fulfillment/crm-architecture/
+- docs/client-fulfillment/onboarding/a-z
+- docs/client-fulfillment/media-buying/
+- docs/client-fulfillment/client-success/
 methodology_pools:
   sales_objections:
     label: Sales & objection handling
@@ -42,14 +59,32 @@ methodology_pools:
   nurture_sequences:
     label: Nurture & follow-up systems
     sources:
+    - path: docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
+      role: Flow-agnostic nurture principles — why, beliefs, cadence, reactivation
     - path: docs/client-fulfillment/client-marketing/playbook-lead-nurture.md
-      role: Reference playbook — four pillars, rules, quality bar
+      role: Waiz Meta application — GHL phases, bot+drip; links nurture framework
     - path: docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md
       role: Education-first lead acquisition methodology
+    - path: docs/client-fulfillment/client-marketing/sop-lo-lead-dialing-rm.md
+      role: LO manual dial blocks — cadence, VM/text, dispositions
+    - path: docs/acquisition/sales/conceptual-beliefs-framework.md
+      role: Universal seven prospect beliefs — team training; product playbooks link
+        here
     - path: docs/client-fulfillment/client-marketing/10-day-rm-drip-campaign.md
       role: Canonical Meta lead drip sequence (execution)
     - path: docs/client-fulfillment/fulfillment-lead-lifecycle.md
       role: Lead engine lifecycle map
+  client_sales:
+    label: Client sales & live-call training
+    sources:
+    - path: docs/acquisition/sales/conceptual-beliefs-framework.md
+      role: Universal seven prospect beliefs — team training
+    - path: docs/client-fulfillment/client-sales/playbook-lo-d2c-sales-foundations-rm.md
+      role: LO mindset + D2C call approach — prerequisite to beliefs
+    - path: docs/client-fulfillment/client-sales/playbook-rm-conceptual-beliefs.md
+      role: RM application — discovery beliefs + inline lines for LO clients
+    - path: docs/client-fulfillment/client-sales/playbook-bamfam-rm.md
+      role: BAMFAM — book next appointment from live call
   company_dna:
     label: Company identity & brand
     sources:
@@ -76,14 +111,37 @@ exclude_paths:
 overrides:
   docs/client-fulfillment/course-material/lead-nurture-playbook.md:
     delivery_group: lead-nurture
-    canonical_parent: docs/client-fulfillment/client-marketing/playbook-lead-nurture.md
+    canonical_parent: docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
+    content_layer: course-material
+    shareability: lo-course
+    audience:
+    - client
+    delivery:
+    - course-material
+    - github
+    notes: Prospect LO course — framework links only; DFY appendix gated separately
+  docs/client-fulfillment/course-material/rm-borrower-icp-education.md:
+    delivery_group: lead-nurture
+    canonical_parent: docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
     content_layer: course-material
     audience:
     - client
     delivery:
     - course-material
     - github
-    notes: Course material wrapper — links to canonical playbook-lead-nurture.md
+    notes: Client-safe RM borrower psychology — Section 1 teaching spoke
+  docs/client-fulfillment/course-material/rm-d2c-sales-foundations.md:
+    delivery_group: client-sales
+    canonical_parent: docs/client-fulfillment/client-sales/playbook-lo-d2c-sales-foundations-rm.md
+    content_layer: course-material
+    shareability: lo-course
+    audience:
+    - client
+    delivery:
+    - course-material
+    - github
+    notes: Prospect LO course — merged mindset + call approach; links to Conceptual
+      Beliefs next
 entries:
 - repo_path: docs/client-fulfillment/call-center/script-appointment-setting-call.md
   title: Call Center Appointment-Setting Call Script (Reverse Mortgage)
@@ -94,6 +152,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: active
   owner: client-success
   domain: client-fulfillment
@@ -111,6 +170,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -128,6 +188,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -145,6 +206,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -153,6 +215,101 @@ entries:
   methodology_sources: []
   last_updated: '2026-05-26'
   source: scan
+- repo_path: docs/client-fulfillment/client-sales/playbook-bamfam-rm.md
+  title: BAMFAM Playbook — RM
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - course-material
+  - team-drive
+  shareability: lo-course
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: client-sales
+  product: reverse-mortgage
+  methodology_sources:
+  - docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
+  last_updated: '2026-07-02'
+  source: scan
+- repo_path: docs/client-fulfillment/client-sales/playbook-lo-d2c-sales-foundations-rm.md
+  title: LO D2C Sales Foundations Playbook — RM
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - course-material
+  - team-drive
+  shareability: lo-course
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: client-sales
+  product: reverse-mortgage
+  methodology_sources:
+  - docs/client-fulfillment/course-material/rm-borrower-icp-education.md
+  - docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
+  - docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
+  - docs/client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md
+  - docs/client-fulfillment/client-sales/playbook-rm-conceptual-beliefs.md
+  last_updated: '2026-07-01'
+  source: scan
+- repo_path: docs/client-fulfillment/client-sales/playbook-rm-conceptual-beliefs.md
+  title: RM Conceptual Beliefs Playbook
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - course-material
+  - team-drive
+  shareability: lo-course
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: client-sales
+  product: reverse-mortgage
+  methodology_sources:
+  - docs/acquisition/sales/conceptual-beliefs-framework.md
+  - docs/acquisition/sales/prospect-fallacies-framework.md
+  - docs/client-fulfillment/reverse-mortgage-dna/intelligence-icp-rm.md
+  - docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
+  - docs/client-fulfillment/reverse-mortgage-dna/rm-borrower-objections.md
+  - docs/client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md
+  - docs/client-fulfillment/client-sales/playbook-lo-d2c-sales-foundations-rm.md
+  - docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
+  - docs/client-fulfillment/course-material/rm-borrower-icp-education.md
+  last_updated: '2026-07-01'
+  source: scan
+- repo_path: docs/client-fulfillment/course-material/rm-d2c-sales-foundations.md
+  title: D2C Sales Foundations — Course Material
+  artifact_type: training
+  content_layer: course-material
+  audience:
+  - client
+  delivery:
+  - course-material
+  - github
+  shareability: lo-course
+  status: draft
+  owner: community-education
+  domain: client-fulfillment
+  delivery_group: client-sales
+  product: reverse-mortgage
+  methodology_sources:
+  - docs/client-fulfillment/client-sales/playbook-lo-d2c-sales-foundations-rm.md
+  - docs/client-fulfillment/course-material/rm-borrower-icp-education.md
+  last_updated: '2026-07-01'
+  source: override
+  canonical_parent: docs/client-fulfillment/client-sales/playbook-lo-d2c-sales-foundations-rm.md
 - repo_path: docs/client-fulfillment/client-success/campaign-phase-performance-blueprint.md
   title: Campaign Phase Performance Blueprint
   artifact_type: doctrine
@@ -163,6 +320,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: active
   owner: client-success
   domain: client-fulfillment
@@ -181,6 +339,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -199,6 +358,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -217,6 +377,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: active
   owner: client-success
   domain: client-fulfillment
@@ -235,6 +396,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -253,6 +415,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -271,6 +434,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -288,6 +452,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: operations
   domain: client-fulfillment
@@ -305,6 +470,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: active
   owner: client-success
   domain: client-fulfillment
@@ -322,6 +488,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: paying-client
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -329,6 +496,24 @@ entries:
   product: reverse-mortgage
   methodology_sources: []
   last_updated: '2026-05-21'
+  source: scan
+- repo_path: docs/client-fulfillment/shareability-boundaries.md
+  title: Shareability Boundaries — LO Course vs Internal Fulfillment
+  artifact_type: guide
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  shareability: internal-fulfillment
+  status: active
+  owner: operations
+  domain: client-fulfillment
+  delivery_group: general
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-07-02'
   source: scan
 - repo_path: docs/client-fulfillment/waiz-vs-client-marketing-boundaries.md
   title: Waiz Marketing vs Client Marketing — Boundaries
@@ -339,6 +524,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: active
   owner: operations
   domain: client-fulfillment
@@ -356,6 +542,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -364,8 +551,72 @@ entries:
   methodology_sources: []
   last_updated: '2026-06-23'
   source: scan
+- repo_path: docs/client-fulfillment/client-marketing/script-aged-lead-reactivation-rm.md
+  title: Aged Lead Reactivation Script — RM
+  artifact_type: script
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - course-material
+  - team-drive
+  shareability: lo-course
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: reverse-mortgage
+  methodology_sources:
+  - docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
+  last_updated: '2026-07-02'
+  source: scan
 - repo_path: docs/client-fulfillment/client-marketing/playbook-lead-nurture.md
-  title: Lead Nurture Playbook
+  title: Lead Nurture Playbook — Waiz Meta Stack
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  shareability: paying-client
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: reverse-mortgage
+  methodology_sources:
+  - docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
+  - docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md
+  - docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
+  - docs/client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md
+  - docs/client-fulfillment/fulfillment-lead-lifecycle.md
+  last_updated: '2026-07-02'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/sop-lo-lead-dialing-rm.md
+  title: LO Lead Dialing SOP — RM
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - course-material
+  - team-drive
+  shareability: lo-course
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: reverse-mortgage
+  methodology_sources:
+  - docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
+  last_updated: '2026-07-02'
+  source: scan
+- repo_path: docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
+  title: Nurture Framework
   artifact_type: playbook
   content_layer: canonical
   audience:
@@ -375,17 +626,17 @@ entries:
   - github
   - course-material
   - team-drive
+  shareability: lo-course
   status: draft
   owner: client-success
   domain: client-fulfillment
   delivery_group: lead-nurture
   product: reverse-mortgage
   methodology_sources:
-  - docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md
   - docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
+  - docs/client-fulfillment/reverse-mortgage-dna/doctrine-reverse-mortgage.md
   - docs/client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md
-  - docs/client-fulfillment/fulfillment-lead-lifecycle.md
-  last_updated: '2026-07-01'
+  last_updated: '2026-07-03'
   source: scan
 - repo_path: docs/client-fulfillment/client-marketing/rm-imessage-appointment-followup.md
   title: RM iMessage Appointment Follow-Up
@@ -396,6 +647,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: paying-client
   status: active
   owner: client-success
   domain: client-fulfillment
@@ -413,6 +665,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: active
   owner: client-success
   domain: client-fulfillment
@@ -430,6 +683,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: paying-client
   status: active
   owner: client-success
   domain: client-fulfillment
@@ -447,6 +701,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: paying-client
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -464,6 +719,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: paying-client
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -481,6 +737,7 @@ entries:
   delivery:
   - google-doc
   - github
+  shareability: paying-client
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -498,18 +755,39 @@ entries:
   delivery:
   - course-material
   - github
+  shareability: lo-course
   status: draft
   owner: community-education
   domain: client-fulfillment
   delivery_group: lead-nurture
   product: reverse-mortgage
   methodology_sources:
-  - docs/client-fulfillment/client-marketing/playbook-lead-nurture.md
-  - docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md
+  - docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
+  - docs/acquisition/sales/prospect-fallacies-framework.md
+  last_updated: '2026-07-02'
+  source: override
+  canonical_parent: docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
+- repo_path: docs/client-fulfillment/course-material/rm-borrower-icp-education.md
+  title: RM Borrower ICP — Client Education
+  artifact_type: training
+  content_layer: course-material
+  audience:
+  - client
+  delivery:
+  - course-material
+  - github
+  shareability: lo-course
+  status: draft
+  owner: community-education
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: reverse-mortgage
+  methodology_sources:
   - docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
+  - docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
   last_updated: '2026-07-01'
   source: override
-  canonical_parent: docs/client-fulfillment/client-marketing/playbook-lead-nurture.md
+  canonical_parent: docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
 - repo_path: docs/client-fulfillment/dscr-dna/ad-copy-angle-library-dscr.md
   title: Ad Copy And Angle Library (DSCR)
   artifact_type: playbook
@@ -519,6 +797,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: lo-course
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -537,6 +816,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -555,6 +835,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: active
   owner: founder
   domain: client-fulfillment
@@ -573,6 +854,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -591,6 +873,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -608,6 +891,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: lo-course
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -625,6 +909,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -643,6 +928,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -661,6 +947,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -679,6 +966,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -697,6 +985,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -715,6 +1004,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -732,6 +1022,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: paying-client
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -750,6 +1041,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -767,6 +1059,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: paying-client
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -784,6 +1077,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: paying-client
   status: active
   owner: media-buying-lead
   domain: client-fulfillment
@@ -802,6 +1096,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -820,6 +1115,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -837,6 +1133,7 @@ entries:
   delivery:
   - course-material
   - github
+  shareability: lo-course
   status: draft
   owner: community-education
   domain: client-fulfillment
@@ -855,6 +1152,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -873,6 +1171,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: internal-fulfillment
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -890,6 +1189,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: lo-course
   status: draft
   owner: founder
   domain: client-fulfillment
@@ -907,6 +1207,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: lo-course
   status: draft
   owner: founder
   domain: client-fulfillment
@@ -924,6 +1225,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: lo-course
   status: active
   owner: founder
   domain: client-fulfillment
@@ -941,6 +1243,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: lo-course
   status: active
   owner: founder
   domain: client-fulfillment
@@ -958,6 +1261,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: lo-course
   status: draft
   owner: founder
   domain: client-fulfillment
@@ -975,6 +1279,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: lo-course
   status: draft
   owner: founder
   domain: client-fulfillment
@@ -992,6 +1297,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: lo-course
   status: draft
   owner: founder
   domain: client-fulfillment
@@ -1009,6 +1315,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: lo-course
   status: draft
   owner: client-success
   domain: client-fulfillment
@@ -1026,6 +1333,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: lo-course
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment
@@ -1043,6 +1351,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: lo-course
   status: active
   owner: founder
   domain: client-fulfillment
@@ -1060,6 +1369,7 @@ entries:
   delivery:
   - github
   - team-drive
+  shareability: lo-course
   status: draft
   owner: media-buying-lead
   domain: client-fulfillment

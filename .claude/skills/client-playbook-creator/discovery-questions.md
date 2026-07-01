@@ -8,9 +8,19 @@ Ask **one question at a time**. Skip any already answered in the thread or attac
 
 "What playbook are we creating? In one sentence, what outcome should a loan officer (or their team) achieve when they follow it?"
 
-### 2. Audience
+### 2. Audience and shareability
 
 "Who is the primary user — the LO, their assistant/setter, Waiz CS, or a mix?"
+
+Follow-up: **"Will this appear in the prospect LO course (non-clients), paying client portal, or Waiz team only?"**
+
+| Answer | Set `shareability` |
+|--------|-------------------|
+| Any LO / prospect course | `lo-course` |
+| Paying Waiz DFY clients | `paying-client` |
+| Waiz team building or running fulfillment | `internal-fulfillment` |
+
+If **`lo-course`:** agent must not link internal fulfillment docs in the playbook body — frameworks and generic LO skills only. See SKILL.md → **No internal process links**.
 
 ### 3. Product lane
 

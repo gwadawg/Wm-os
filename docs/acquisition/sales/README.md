@@ -27,6 +27,8 @@ See [Approved Operating Spine](../../SPINE.md) and [SOURCE-OF-TRUTH](../../SOURC
 | Setter SMS / follow-up | Setter | [Setter Lead Messaging](setter-lead-messaging.md) |
 | Discovery | Closer | [Discovery Call Script](discovery-call-script-2026.md) |
 | Demo / close | Closer | [Demo Call Script](script-demo-call.md) |
+| Conceptual beliefs (prospect) | Closer / LO training | [Conceptual Beliefs Framework](conceptual-beliefs-framework.md) (`draft`) |
+| Prospect fallacies (recognition) | Closer / LO training | [Prospect Fallacies Framework](prospect-fallacies-framework.md) (`draft`) |
 | Objections | Closer / setter | [Objection Handling Hub](objection-handling-hub.md) |
 | Pre-call nurture videos | Setter / closer | [Pre-Call Objection Video Assets](../marketing/pre-call-objection-videos.md) — [manifest](../marketing/pre-call-objection-videos-manifest.yaml) |
 
@@ -75,6 +77,8 @@ Pricing and packaging: [Money Model](../../company/overview-money-model-april-26
 
 ### Training and analysis
 
+- [Conceptual Beliefs Framework](conceptual-beliefs-framework.md) (`draft`)
+- [Prospect Fallacies Framework](prospect-fallacies-framework.md) (`draft`) — deferral pattern recognition; sprinkle in belief/objection training
 - [Sales Discovery Framework (Hell, Bridges, Heaven, Fuel)](sales-discovery-framework-hell-bridges-heaven-fuel.md)
 - [Sales Calls Demo Analysis](sales-calls-demo-analysis.md)
 - [EOD Report SOP (Setters And Closers)](eod-report-sop-setters-closers.md)

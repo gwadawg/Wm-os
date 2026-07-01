@@ -7,6 +7,7 @@ last_updated: 2026-06-23
 review_cycle: monthly
 source_document: internal — conversation + rm-imessage-intent-drip-7day.md evolution
 artifact_type: script
+shareability: internal-fulfillment
 ---
 
 # 10-Day RM Drip Campaign (Email + SMS) — Meta Leads

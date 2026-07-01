@@ -20,7 +20,7 @@ Everything Waiz delivers **after a client signs** — onboarding, CRM, marketing
 | | Waiz (acquisition) | Client (this folder) |
 |--|-------------------|----------------------|
 | **Marketing** | [acquisition/marketing/](../acquisition/marketing/README.md) | [client-marketing/](client-marketing/README.md) + [media-buying/](media-buying/README.md) |
-| **Sales** | [acquisition/sales/](../acquisition/sales/README.md) | — |
+| **Sales** | [acquisition/sales/](../acquisition/sales/README.md) | [client-sales/](client-sales/README.md) |
 | **Infrastructure** | Internal ops stack | [infrastructure/](infrastructure/README.md) → CRM, AI bot |
 
 ## Subfolders
@@ -32,6 +32,7 @@ Everything Waiz delivers **after a client signs** — onboarding, CRM, marketing
 | [Onboarding](onboarding/README.md) | A-Z post-close through launch |
 | [Infrastructure](infrastructure/README.md) | Client CRM, GHL, WM AI bot |
 | [Client marketing](client-marketing/README.md) | Playbooks, drips, ad strategy |
+| [Client sales](client-sales/README.md) | Live-call LO training — beliefs, BAMFAM, discovery |
 | [Media buying](media-buying/README.md) | Campaign execution SOPs |
 | [Ad development workflow](media-buying/ad-development-workflow.md) | **RM ad learn + create loop** (Mr. Waiz winners → creative-research → creative studio) |
 | [Client success](client-success/README.md) | Post-launch CS, phases, troubleshooting |
