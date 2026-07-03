@@ -38,7 +38,7 @@ Everything Waiz delivers **after a client signs** — onboarding, CRM, marketing
 | [Client success](client-success/README.md) | Post-launch CS, phases, troubleshooting |
 | [Call center](call-center/README.md) | B2C fulfillment call-center scripts and QA lifecycle |
 | [CRM architecture](crm-architecture/README.md) | Canonical CRM + bot paths |
-| [Reverse mortgage DNA](reverse-mortgage-dna/README.md) | Product, ICP, compliance |
+| [Reverse mortgage DNA](reverse-mortgage-dna/README.md) | Product, ICP, compliance — incl. [product lines + ad-angle fit](reverse-mortgage-dna/rm-product-lines.md) |
 | [RM Fulfillment Agent](reverse-mortgage-agent/README.md) | Claude Project deploy kit for internal fulfillment team |
 | [Client Playbooks](client-playbooks/README.md) | **Start here** — playbooks, SOPs, training index + creation guide |
 | [Course material](course-material/README.md) | Client education layer (links to canonical) |

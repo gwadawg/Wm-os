@@ -3,7 +3,7 @@ title: Silent Story Ad Playbook (Caption-Engine Video)
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-06-28
+last_updated: 2026-07-01
 review_cycle: monthly
 artifact_type: playbook
 ---
@@ -160,15 +160,15 @@ Produce **3–4 videos** from one body to isolate hook performance on Meta.
 
 Mix variables — do not copy-paste one ad’s hook into another angle without changing the inciting incident.
 
-| Formula | Example |
-|---------|---------|
-| **At [age], I thought [expectation]. [Reality].** | At 67, I thought retirement was stress-free. It wasn't. |
-| **[Rate asset]. We refused to touch it. Still needed cash.** | 3% mortgage. We weren't touching it. Still needed cash from the house. |
-| **[Good thing] + [bad trap].** | Our first rate was too good to give up. We still needed equity cash. |
-| **How do [audience] [desired outcome] without [fear]?** | How do retired homeowners get cash out without a new monthly payment? |
-| **Only options? A or B. [Constraint].** | Only options? Refinance or sell. Another payment? Not on the table. |
-| **We almost didn't share this…** | I'm 67. We almost didn't post this — wish someone told us at 65. |
-| **Smart [audience] do X. We didn't know how.** | Smart retirees don't refinance a great rate. They do this instead. |
+| Formula | Example | Product |
+|---------|---------|---------|
+| **At [age], I thought [expectation]. [Reality].** | At 67, I thought retirement was stress-free. It wasn't. | Either |
+| **[Rate asset]. We refused to touch it. Still needed cash.** | 3% mortgage. We weren't touching it. Still needed cash from the house. | **HomeSafe Second only** |
+| **[Good thing] + [bad trap].** | Our first rate was too good to give up. We still needed equity cash. | **HomeSafe Second only** |
+| **How do [audience] [desired outcome] without [fear]?** | How do retired homeowners get cash out without a new monthly payment? | Either |
+| **Only options? A or B. [Constraint].** | Only options? Refinance or sell. Another payment? Not on the table. | **HomeSafe Second** if "refinance" is the bad option |
+| **We almost didn't share this…** | I'm 67. We almost didn't post this — wish someone told us at 65. | Either |
+| **Smart [audience] do X. We didn't know how.** | Smart retirees don't refinance a great rate. They do this instead. | **HomeSafe Second only** |
 
 **Split-screen hooks:** pair **document still** (rate, receipt, statement) with **human still/video** (couple, home).
 
@@ -178,14 +178,16 @@ Mix variables — do not copy-paste one ad’s hook into another angle without c
 
 Use one spine per ad. Hook batches vary; body follows spine.
 
-| Spine | Inciting pain | Revelation | Results (late frames) |
-|-------|---------------|------------|------------------------|
-| **Mortgage elimination** | Still paying mortgage in retirement | Eliminate payment · stay in home | Bills easy · grandkids · living not surviving |
-| **Leave first rate** | Low first mortgage · need cash · no new payment | Access equity **without** refinancing first | Balances cleared · home upgraded · cash flow |
-| **Surviving → living** | Retirement shrunk · not leaving house | Equity unlock · dignity | Travel · grandkids · identity shift |
-| **Trapped asset** | House-rich · cash-poor paradox | Soft equity access · no sell | Relief · concrete life wins |
-| **Inflation / fixed income** | Flat income · rising costs | Monthly cash flow from equity | Prepared · not scared monthly |
-| **Growing LOC / hedge** | Plan incomplete · idle equity | Standby line · optionality | Expense hits · portfolio preserved |
+| Spine | Inciting pain | Revelation | Results (late frames) | Product |
+|-------|---------------|------------|------------------------|---------|
+| **Mortgage elimination** | Still paying mortgage in retirement | Eliminate payment · stay in home | Bills easy · grandkids · living not surviving | **HECM** (first lien) |
+| **Leave first rate** | Low first mortgage · need cash · no new payment | Access equity **without** refinancing first | Balances cleared · home upgraded · cash flow | **HomeSafe Second only** — not HECM |
+| **Surviving → living** | Retirement shrunk · not leaving house | Equity unlock · dignity | Travel · grandkids · identity shift | Either (TOF-agnostic) |
+| **Trapped asset** | House-rich · cash-poor paradox | Soft equity access · no sell | Relief · concrete life wins | Either |
+| **Inflation / fixed income** | Flat income · rising costs | Monthly cash flow from equity | Prepared · not scared monthly | Either |
+| **Growing LOC / hedge** | Plan incomplete · idle equity | Standby line · optionality | Expense hits · portfolio preserved | **HECM LOC** primary — confirm if HS2 LOC |
+
+> **Product fit:** Full matrix in [rm-product-lines.md](../../reverse-mortgage-dna/rm-product-lines.md). Do not run **Leave first rate** or refi-vs-keep-rate comparison hooks for HECM-only clients.
 
 ---
 

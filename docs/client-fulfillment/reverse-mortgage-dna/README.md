@@ -3,7 +3,7 @@ title: Client Fulfillment — Reverse Mortgage DNA
 domain: client-fulfillment
 owner: founder
 status: active
-last_updated: 2026-06-24
+last_updated: 2026-07-01
 review_cycle: quarterly
 ---
 
@@ -22,7 +22,8 @@ RM product, ICP, marketing doctrine, and compliance for **client** campaigns and
 | [Doctrine RM Marketing](doctrine-rm-marketing.md) | `active` |
 | [RM High-Quality Lead Acquisition](../client-marketing/rm-high-quality-lead-acquisition.md) | `active` |
 | [Intelligence ICP RM](intelligence-icp-rm.md) | `active` |
-| [Intelligence RM Product](intelligence-rm-product.md) | `active` |
+| [Intelligence RM Product](intelligence-rm-product.md) | `active` — HECM facts (default product) |
+| [RM Product Lines](rm-product-lines.md) | `active` — **product catalog + ad-angle fit** (HECM vs HomeSafe Second, etc.) |
 | [RM Borrower Objections](rm-borrower-objections.md) | `active` |
 | [RM CloseBot Knowledge Base](rm-closebot-knowledge-base.md) | `draft` — CloseBot KB upload (PDF). Product + ICP + truth anchors only; role/booking in Job Information prompt |
 | [RM Funnel Form Spec](rm-funnel-form-spec.md) | `draft` — canonical Perspective funnel (questions, journey, GHL mapping) |

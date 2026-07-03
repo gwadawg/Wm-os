@@ -25,6 +25,7 @@ A concept is one point in this space:
 | Dimension | Options | Source |
 |-----------|---------|--------|
 | **Archetype** | Security-Seeker, Financially Squeezed, Strategic Retiree, Legacy Planner, Veteran, Pre-Retiree | [rm-archetypes-canonical.md](rm-archetypes-canonical.md) |
+| **Product line** | HECM (default), HomeSafe Second, other proprietary | [rm-product-lines.md](../../reverse-mortgage-dna/rm-product-lines.md) — **required before angle selection** |
 | **Angle** | Burden, Trapped Asset, Surviving vs Living, Breaking News / New Program, No Monthly Payment, Exclusive Access, Cash Out, State-Specific Bulletin, Regret / Social Proof, Heirs Get Equity, Inflation Hedge, Aging-in-Place | [rm-ad-playbook.md](../../client-marketing/rm-ad-playbook.md) + [ad-copy-angle-library-rm.md](../ad-copy-angle-library-rm.md) |
 | **Awareness / Stage** | TOF (Unaware/Problem-aware), MOF (Solution/Product-aware), BOF (Most-aware) | frameworks-reference awareness bridge |
 | **Hook type** | Rhetorical question, Confessional, Specific pain, Demonstration, Myth-bust, Authority, Curiosity gap, Social proof, Niche callout, Paradox | frameworks-reference hook taxonomy (F7) |
@@ -51,11 +52,14 @@ Input: an **archetype** (or "any"), a **stage**, a **count** N, and optionally a
 1. **Anchor the emotion.** Pull the archetype's core fear + desire + best angles from
    [rm-archetypes-canonical.md](rm-archetypes-canonical.md), and the matching VOC phrases +
    pain->impact pairs from the [ICP doc](../../reverse-mortgage-dna/intelligence-icp-rm.md).
-2. **Spread across the space.** Produce N concepts that vary on angle AND hook type — never
+2. **Confirm product line.** Load [rm-product-lines.md](../../reverse-mortgage-dna/rm-product-lines.md).
+   If the client brief does not specify, default to **HECM** and **exclude** HomeSafe-only angles
+   (keep your rate, don't refinance, refi-vs-keep-rate comparisons, Leave first rate spine).
+3. **Spread across the space.** Produce N concepts that vary on angle AND hook type — never
    N variations of the same idea. Aim for coverage: different angle for each, rotating hook types.
-3. **Respect the stage rules.** TOF concepts never name the product and lead with the
+4. **Respect the stage rules.** TOF concepts never name the product and lead with the
    prospect's world; MOF can introduce the category in context + bust myths; BOF positions the LO.
-4. **Tag + screen.** Each concept is tagged with its frameworks and run through the
+5. **Tag + screen.** Each concept is tagged with its frameworks and run through the
    [compliance gate](compliance-gate-checklist.md). Anything that fails is fixed or dropped, not shown.
 
 ## Winner-informed ideation (Step 0)
@@ -79,6 +83,7 @@ Cite `winner_ref` or `supabase:ad:{uuid}` on every concept row when building fro
 |-------|---------|
 | ID | IDEA-001 |
 | Archetype | Legacy Planner |
+| Product line | HECM |
 | Angle | Heirs Get the Equity |
 | Stage | MOF |
 | Hook type | Myth-bust |

@@ -11,6 +11,10 @@ artifact_type: reference
 
 # Intelligence RM Product
 
+> **Product scope:** This doc is the deep reference for **HECM** (federally insured first-lien reverse mortgage) — Waiz's default assumption for generic fulfillment copy.
+>
+> For **which product an ad angle applies to** (HECM vs HomeSafe Second vs other proprietary lines), use **[RM Product Lines](rm-product-lines.md)** first. Critical rule: **"keep your rate / don't refinance" angles are HomeSafe Second only** — HECM typically pays off the first lien at closing.
+
 ## Purpose
 
 Product facts and value framing for compliant copy.

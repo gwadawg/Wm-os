@@ -31,6 +31,7 @@ Read these from `docs/client-fulfillment/media-buying/creative-studio/`:
 
 Pull voice/pain/objections from [intelligence-icp-rm.md](../../../docs/client-fulfillment/reverse-mortgage-dna/intelligence-icp-rm.md)
 and structure from [rm-ad-playbook.md](../../../docs/client-fulfillment/client-marketing/rm-ad-playbook.md).
+**Product line fit:** [rm-product-lines.md](../../../docs/client-fulfillment/reverse-mortgage-dna/rm-product-lines.md) — load before concepting; default HECM unless client offers HomeSafe Second.
 
 Related skills: [copywriting](../copywriting/SKILL.md) · [marketing-psychology](../marketing-psychology/SKILL.md) · [ugc-scriptwriter](../ugc-scriptwriter/SKILL.md) (generic non-RM UGC only — RM scripts stay here for the compliance gate).
 
@@ -43,6 +44,7 @@ before advancing. Do not skip ahead, do not run multiple steps in one pass, and 
 file until the user explicitly says to save (see File Policy).
 
 ### Step 0 — Pull proven patterns (before Concept)
+0. Confirm **client product line** via [rm-product-lines.md](../../../docs/client-fulfillment/reverse-mortgage-dna/rm-product-lines.md). Default **HECM**; block HomeSafe-only angles unless client offers HomeSafe Second.
 1. Read [ad-development-workflow.md](../../../docs/client-fulfillment/media-buying/ad-development-workflow.md) retrieval order.
 2. Scan script-archetypes + editing-styles catalogs and 2–3 relevant swipes (or query Mr. Waiz `ad_library` when user names `supabase:ad:{uuid}`).
 3. State **"Patterns I'm building from:"** with citations on every concept row (`swipe-id` or `supabase:ad:{uuid}`).

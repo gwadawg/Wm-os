@@ -38,6 +38,8 @@ Writing or reviewing ad copy.
 
 ## Operating Content
 
+> **Product fit:** Headlines tagged **HS** ("Say goodbye to refinancing…") are **HomeSafe Second only** — not valid for HECM-only clients. See [RM Product Lines](../reverse-mortgage-dna/rm-product-lines.md).
+
 Ad Headlines
 
 Angle

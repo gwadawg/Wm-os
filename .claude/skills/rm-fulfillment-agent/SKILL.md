@@ -31,7 +31,7 @@ Internal fulfillment assistant for reverse mortgage **client delivery**. Open Q&
 | Borrower objections | [rm-borrower-objections](../../../docs/client-fulfillment/reverse-mortgage-dna/rm-borrower-objections.md) |
 | Bot/CRM | [how-wm-ai-bot-works](../../../docs/client-fulfillment/crm-architecture/how-wm-ai-bot-works.md) + [claimed tag](../../../docs/client-fulfillment/crm-architecture/how-claimed-tag-works.md) |
 | Lifecycle | [fulfillment-lead-lifecycle](../../../docs/client-fulfillment/fulfillment-lead-lifecycle.md) |
-| Static ad angles | [doctrine-rm-marketing](../../../docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md) + [angle library](../../../docs/client-fulfillment/media-buying/ad-copy-angle-library-rm.md) |
+| Static ad angles | [doctrine-rm-marketing](../../../docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md) + [angle library](../../../docs/client-fulfillment/media-buying/ad-copy-angle-library-rm.md) + [product lines](../../../docs/client-fulfillment/reverse-mortgage-dna/rm-product-lines.md) |
 | Video ad scripts | **Stop** → [rm-creative-studio](../rm-creative-studio/SKILL.md) |
 | Campaign diagnosis | [constraint-troubleshooting](../../../docs/client-fulfillment/client-success/constraint-troubleshooting-sop.md) + [high-quality leads](../../../docs/client-fulfillment/client-marketing/rm-high-quality-lead-acquisition.md) |
 | Sub-agent design | Output mini deploy kit per [chatbot-deploy/README.md](../../../docs/client-fulfillment/reverse-mortgage-agent/chatbot-deploy/README.md) |

@@ -3,7 +3,7 @@ title: Ad Development Workflow (RM Client Ads)
 domain: client-fulfillment
 owner: founder
 status: active
-last_updated: 2026-06-23
+last_updated: 2026-07-01
 review_cycle: monthly
 artifact_type: playbook
 ---
@@ -39,7 +39,8 @@ When scripting a new RM ad, agents load sources in this order:
 4. [losers-log.md](creative-research/losers-log.md) — patterns to avoid
 5. On-demand: Mr. Waiz `ad_library` via `supabase:ad:{uuid}` or winners with `status=winner` + `product=reverse`
 6. Framework docs: [rm-ad-ideation-matrix.md](creative-studio/rm-ad-ideation-matrix.md), [rm-script-generator.md](creative-studio/rm-script-generator.md), [compliance-gate-checklist.md](creative-studio/compliance-gate-checklist.md)
-7. **Silent caption story format (T2):** [silent-story-ad-playbook.md](creative-studio/silent-story-ad-playbook.md) — load when format is silent text-overlay, caption-engine, multi-hook pack, or confession+proof story ads
+7. **Product line fit:** [rm-product-lines.md](../reverse-mortgage-dna/rm-product-lines.md) — confirm client offers the product before using angle (e.g. **keep your rate / don't refinance = HomeSafe Second only**)
+8. **Silent caption story format (T2):** [silent-story-ad-playbook.md](creative-studio/silent-story-ad-playbook.md) — load when format is silent text-overlay, caption-engine, multi-hook pack, or confession+proof story ads
 
 **Never** pull competitor Apify intel in this flow — use [creator-research](../../../.claude/skills/creator-research/SKILL.md) separately.
 

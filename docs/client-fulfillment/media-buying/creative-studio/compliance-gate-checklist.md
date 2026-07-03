@@ -77,6 +77,16 @@ static, and long-form real-talent formats.
 - [ ] **Every SOURCE item flagged for licensing check** (licensed stock or client-approved
       footage only — never grabbed from the open web).
 
+## Part F — Product line fit (any FAIL = block or rewrite)
+
+Source: [rm-product-lines.md](../../reverse-mortgage-dna/rm-product-lines.md).
+
+- [ ] **Client product confirmed.** Concept tags `product: hecm` | `product: homesafe-second` | documented in brief.
+- [ ] **No "keep your rate / don't refinance" on HECM-only clients.** HECM typically pays off the first lien — refi-vs-keep-rate comparison ads and **Leave first rate** silent spines are **HomeSafe Second only**.
+- [ ] **No HECM/FHA claims on proprietary lines.** HomeSafe Second is not HECM; do not cite FHA insurance or HECM counseling unless accurate for that product.
+- [ ] **Payment elimination copy matches lien position.** "Mortgage payment eliminated" = HECM first-lien story. HomeSafe Second = no required payment on the **second** lien; first lien payment remains.
+- [ ] **State / age claims** match the product being sold (HECM 62+ vs HomeSafe Second state-varying floors).
+
 ## Result block (paste into each output)
 
 ```
@@ -86,6 +96,7 @@ B Stage:   PASS / FIX
 C Quality: PASS (VOC / mechanism / proof / awareness all present?) / DRAFT
 D Hygiene: PASS / FIX
 E Format:  PASS / FIX / N/A (testimonial + educational formats only)
+F Product: PASS / FAIL -> <which item> (see rm-product-lines.md)
 RESULT: READY  |  DRAFT (reason)  |  HUMAN REVIEW (reason)
 ```
 
