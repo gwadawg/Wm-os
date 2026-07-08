@@ -7,7 +7,10 @@ owner: setter
 status: active
 last_updated: 2026-06-29
 review_cycle: monthly
-artifact_type: reference
+artifact_type: training
+product: dscr
+delivery_group: call-center
+shareability: internal-fulfillment
 related_docs:
   - slug: dscr-setter-appointment-script
     label: DSCR Appointment Script

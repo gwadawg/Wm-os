@@ -14,8 +14,13 @@ Reusable AI prompts for RM creatives, follow-up copy, and fulfillment workflows.
 ## Required context (load before any prompt)
 
 1. [Fulfillment Operating System](../../client-fulfillment/fulfillment-operating-system.md)
-2. [RM Compliance Guardrails](../../client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md)
-3. Task-specific SOP or playbook from [client-fulfillment](../../client-fulfillment/README.md)
+2. Product compliance guardrails:
+   - **RM:** [RM Compliance Guardrails](../../client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md)
+   - **DSCR:** [DSCR Compliance Guardrails](../../client-fulfillment/dscr-dna/dscr-compliance-guardrails.md)
+3. Product pod (load before task-specific docs):
+   - **RM:** [Reverse Mortgage DNA](../../client-fulfillment/reverse-mortgage-dna/README.md)
+   - **DSCR:** [DSCR DNA](../../client-fulfillment/dscr-dna/README.md)
+4. Task-specific SOP or playbook from [client-fulfillment](../../client-fulfillment/README.md)
 
 ## Prompts
 

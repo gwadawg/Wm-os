@@ -33,6 +33,7 @@ Sync after changes: `python scripts/sync-client-playbooks.py`
 flowchart TD
   Q{What are you creating?}
   Q -->|Live sales / discovery call training| CSAL[client-sales/]
+  Q -->|Product DNA / ICP / compliance| DNA[reverse-mortgage-dna/ or dscr-dna/]
   Q -->|Executable playbook or SOP| CAN[client-marketing/ or media-buying/ or client-success/]
   Q -->|Client education / how-to for LOs| CM[course-material/]
   Q -->|One client's custom deliverable| CI[client-marketing/clients/]
@@ -43,6 +44,7 @@ flowchart TD
 
 | Layer | Folder | Use when |
 |-------|--------|----------|
+| **Product DNA** | `../reverse-mortgage-dna/`, `../dscr-dna/` | ICP, compliance, product doctrine — one pod per product line |
 | **Canonical** | `../client-marketing/`, `../client-sales/`, `../media-buying/`, `../client-success/`, `../onboarding/` | Steps, copy libraries, rules — source of truth |
 | **Course material** | `../course-material/` | Client-facing education; **link** to canonical, do not duplicate ops copy |
 | **Client instance** | `../client-marketing/clients/` | Per-client delta only (names, market, approved variants) |
@@ -120,4 +122,6 @@ Team training, acquisition docs, company DNA, and skills are **pull sources**, n
 - [Fulfillment Operating System](../fulfillment-operating-system.md)
 - [Client marketing](../client-marketing/README.md)
 - [Client sales](../client-sales/README.md)
+- [Reverse Mortgage DNA](../reverse-mortgage-dna/README.md)
+- [DSCR DNA](../dscr-dna/README.md)
 - [SOURCE-OF-TRUTH](../../SOURCE-OF-TRUTH.md)

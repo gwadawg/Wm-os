@@ -3,7 +3,7 @@ title: Client Fulfillment
 domain: client-fulfillment
 owner: operations
 status: active
-last_updated: 2026-05-21
+last_updated: 2026-07-08
 review_cycle: monthly
 ---
 

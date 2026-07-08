@@ -34,3 +34,4 @@ RM product, ICP, marketing doctrine, and compliance for **client** campaigns and
 - [Fulfillment Operating System](../fulfillment-operating-system.md)
 - [Ad Copy And Angle Library](../media-buying/ad-copy-angle-library-rm.md)
 - [RM Fulfillment Agent](../reverse-mortgage-agent/README.md) — Claude Project deploy kit for internal team
+- [DSCR DNA (sibling product)](../dscr-dna/README.md) — investor refinance pod; mirrors this structure

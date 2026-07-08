@@ -5,6 +5,8 @@ domain: client-fulfillment
 department: call-center
 owner: setter
 status: active
+product: dscr
+delivery_group: call-center
 last_updated: 2026-06-29
 review_cycle: monthly
 artifact_type: script

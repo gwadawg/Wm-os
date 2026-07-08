@@ -13,6 +13,18 @@ Marketing **for paying loan officer clients** — strategy, playbooks, funnels, 
 
 Read [Waiz vs client marketing boundaries](../waiz-vs-client-marketing-boundaries.md) before adding docs.
 
+## DSCR refinance product line
+
+All DSCR client assets live in the **[DSCR DNA pod](../dscr-dna/README.md)** — not in this folder. Use the pod README **Quick load by task** table before writing copy.
+
+| Need | Doc |
+|------|-----|
+| Strategy / positioning | [DSCR GTM Brief](../dscr-dna/dscr-gtm-positioning-brief.md) |
+| Nurture / Laura booking | [DSCR Lead Nurture And Booking](../dscr-dna/dscr-nurture-and-booking-laura.md) |
+| Ads strategy | [DSCR Ads Playbook](../dscr-dna/dscr-ads-playbook.md) |
+
+Execution SOPs (campaign setup, statics, funnels) → [media-buying/](../media-buying/README.md).
+
 ## Strategy & playbooks
 
 | Doc | Status |
@@ -48,4 +60,5 @@ See [media-buying/](../media-buying/README.md) for campaign setup and month-1 op
 
 - [Fulfillment Operating System](../fulfillment-operating-system.md)
 - [Reverse mortgage DNA](../reverse-mortgage-dna/README.md)
+- [DSCR DNA](../dscr-dna/README.md) — investor refinance product pod
 - [Acquisition marketing](../../acquisition/marketing/README.md) — **Waiz only**

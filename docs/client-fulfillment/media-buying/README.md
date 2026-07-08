@@ -3,7 +3,7 @@ title: Client Fulfillment — Media Buying
 domain: client-fulfillment
 owner: media-buying-lead
 status: active
-last_updated: 2026-06-24
+last_updated: 2026-07-08
 review_cycle: weekly
 ---
 
@@ -22,12 +22,27 @@ Boundaries: [Waiz vs client marketing](../waiz-vs-client-marketing-boundaries.md
 | [Ad Copy And Angle Library (RM)](ad-copy-angle-library-rm.md) | `draft` |
 | [MB RM Ad Copy Standards](mb-rm-ad-copy-standards.md) | `draft` |
 | [AI RM Ad Image Creation SOP](ai-rm-ad-image-creation-sop.md) | `draft` |
-| [DSCR Static Image Generator (Ideogram → Mr. Waiz)](../dscr-dna/dscr-static-image-generator-project.md) | `draft` |
 | [Perspective Funnel Setup SOP](perspective-funnel-setup-sop.md) | `draft` |
 | [Perspective client manifest](perspective-client-manifest.yaml) | `draft` — funnel registry; sync via [Perspective MCP bridge](../../operations/perspective-intelligence-bridge.md) |
 | [RM Funnel Form Spec](../reverse-mortgage-dna/rm-funnel-form-spec.md) | `draft` — canonical RM Perspective funnel spec |
 | [RM Quiz Funnel V2 Blueprint](../reverse-mortgage-dna/rm-quiz-funnel-v2-blueprint.md) | `draft` — quiz redesign + conversion audit |
 | [Ads For Dummies WaizMedia SOP](ads-for-dummies-waizmedia-sop.md) | `draft` |
+
+## DSCR refinance (product pod)
+
+**Start:** [DSCR DNA README](../dscr-dna/README.md) — quick load by task.
+
+| Doc | Status |
+|-----|--------|
+| [DSCR Ads Playbook](../dscr-dna/dscr-ads-playbook.md) | `draft` |
+| [Ad Copy And Angle Library (DSCR)](../dscr-dna/ad-copy-angle-library-dscr.md) | `draft` |
+| [MB DSCR Ad Copy Standards](../dscr-dna/mb-dscr-ad-copy-standards.md) | `draft` |
+| [DSCR Campaign Master Angles](../dscr-dna/dscr-campaign-master-angles.md) | `draft` |
+| [DSCR Funnel-Stage Messaging](../dscr-dna/dscr-funnel-stage-messaging.md) | `draft` |
+| [DSCR Static Image Generator (Ideogram → Mr. Waiz)](../dscr-dna/dscr-static-image-generator-project.md) | `draft` |
+| [DSCR Funnel Form Spec](../dscr-dna/dscr-funnel-form-spec.md) | `draft` |
+| [DSCR Lander Build Pack](../dscr-dna/dscr-lander-build-pack.md) | `draft` |
+| [Ad development workflow](ad-development-workflow.md) | RM + DSCR learn/create loop (Mr. Waiz → Meta) |
 
 ## Creative system
 
@@ -47,5 +62,6 @@ Boundaries: [Waiz vs client marketing](../waiz-vs-client-marketing-boundaries.md
 ## Related
 
 - [Fulfillment Operating System](../fulfillment-operating-system.md)
+- [DSCR DNA](../dscr-dna/README.md)
 - [RM Ad Playbook](../client-marketing/rm-ad-playbook.md)
 - [Operations hiring (MB)](../../operations/hiring/README.md)

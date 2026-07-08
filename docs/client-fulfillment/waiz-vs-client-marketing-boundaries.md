@@ -68,6 +68,7 @@ flowchart TB
 | [client-playbooks/](client-playbooks/README.md) | Playbook index, methodology pools, creation guide |
 | [shareability-boundaries.md](shareability-boundaries.md) | **LO course vs DFY fulfillment** — what not to expose to non-clients |
 | [reverse-mortgage-dna/](reverse-mortgage-dna/README.md) | RM market knowledge for **client** campaigns |
+| [dscr-dna/](dscr-dna/README.md) | DSCR refinance product knowledge for **client** campaigns (investor ICP; refinance only) |
 
 ## Infrastructure (on GitHub)
 

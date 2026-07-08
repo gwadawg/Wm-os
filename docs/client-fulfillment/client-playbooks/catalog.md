@@ -3,7 +3,7 @@ title: Client Playbooks — Catalog
 domain: client-fulfillment
 owner: community-education
 status: active
-last_updated: 2026-07-01
+last_updated: 2026-07-08
 review_cycle: weekly
 generated: true
 ---
@@ -14,7 +14,7 @@ generated: true
 > Regenerate: `python scripts/sync-client-playbooks.py`
 > Start here: [README.md](README.md) · Config: [catalog.yaml](catalog.yaml)
 
-Last synced: **2026-07-01** · **65** playbooks, SOPs, and training docs indexed
+Last synced: **2026-07-08** · **66** playbooks, SOPs, and training docs indexed
 
 See [Client Playbooks README](README.md) for how to create new assets.
 
@@ -73,6 +73,8 @@ See [Client Playbooks README](README.md) for how to create new assets.
 | [Call Center Live Transfer Warm Hand-off Script (Reverse Mortgage)](../call-center/script-live-transfer-warm-handoff.md) | script | canonical | internal-fulfillment | draft | team | github, team-drive |
 | [Call Center Script Boundary Rules](../call-center/script-boundary-rules.md) | doctrine | canonical | internal-fulfillment | draft | team | github, team-drive |
 | [Call Center Script Factory SOP](../call-center/sop-call-center-script-factory.md) | sop | canonical | internal-fulfillment | draft | team | github, team-drive |
+| [DSCR Setter / Appointment-Setting Call Script](../dscr-dna/dscr-setter-appointment-script.md) | script | canonical | lo-course | active | team | github, team-drive |
+| [DSCR Team Product FAQ — Internal Training](../dscr-dna/dscr-team-product-faq.md) | training | canonical | internal-fulfillment | active | team | github, team-drive |
 
 ### Client sales & live-call training (`client-sales`)
 
@@ -170,7 +172,6 @@ See [Client Playbooks README](README.md) for how to create new assets.
 | [DSCR Compliance Guardrails](../dscr-dna/dscr-compliance-guardrails.md) | doctrine | canonical | lo-course | draft | team | github, team-drive |
 | [DSCR Funnel-Stage Messaging (TOF / MOF / BOF)](../dscr-dna/dscr-funnel-stage-messaging.md) | playbook | canonical | lo-course | draft | team | github, team-drive |
 | [DSCR GTM And Positioning Brief](../dscr-dna/dscr-gtm-positioning-brief.md) | doctrine | canonical | lo-course | draft | team | github, team-drive |
-| [DSCR Setter / Appointment-Setting Call Script](../dscr-dna/dscr-setter-appointment-script.md) | script | canonical | lo-course | draft | team | github, team-drive |
 | [DSCR Static Image Generator — Claude Project Build Pack](../dscr-dna/dscr-static-image-generator-project.md) | sop | canonical | lo-course | draft | team | github, team-drive |
 | [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md) | doctrine | canonical | lo-course | active | team | github, team-drive |
 | [RM Quiz Funnel V2 — Perspective Manual Build](../reverse-mortgage-dna/rm-quiz-funnel-v2-perspective-manual-build.md) | sop | canonical | lo-course | draft | team | github, team-drive |
@@ -179,6 +180,7 @@ See [Client Playbooks README](README.md) for how to create new assets.
 
 Safe for prospect LO course modules. See [shareability boundaries](../shareability-boundaries.md) and [checklist](SHAREABILITY-CHECKLIST.md).
 
+- [DSCR Setter / Appointment-Setting Call Script](../dscr-dna/dscr-setter-appointment-script.md) — `call-center`
 - [BAMFAM Playbook — RM](../client-sales/playbook-bamfam-rm.md) — `client-sales`
 - [LO D2C Sales Foundations Playbook — RM](../client-sales/playbook-lo-d2c-sales-foundations-rm.md) — `client-sales`
 - [RM Conceptual Beliefs Playbook](../client-sales/playbook-rm-conceptual-beliefs.md) — `client-sales`
@@ -198,7 +200,6 @@ Safe for prospect LO course modules. See [shareability boundaries](../shareabili
 - [DSCR Compliance Guardrails](../dscr-dna/dscr-compliance-guardrails.md) — `product-knowledge`
 - [DSCR Funnel-Stage Messaging (TOF / MOF / BOF)](../dscr-dna/dscr-funnel-stage-messaging.md) — `product-knowledge`
 - [DSCR GTM And Positioning Brief](../dscr-dna/dscr-gtm-positioning-brief.md) — `product-knowledge`
-- [DSCR Setter / Appointment-Setting Call Script](../dscr-dna/dscr-setter-appointment-script.md) — `product-knowledge`
 - [DSCR Static Image Generator — Claude Project Build Pack](../dscr-dna/dscr-static-image-generator-project.md) — `product-knowledge`
 - [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md) — `product-knowledge`
 - [RM Quiz Funnel V2 — Perspective Manual Build](../reverse-mortgage-dna/rm-quiz-funnel-v2-perspective-manual-build.md) — `product-knowledge`

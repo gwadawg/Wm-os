@@ -3,7 +3,7 @@ title: Waiz Media OS
 domain: company
 owner: operations
 status: active
-last_updated: 2026-05-28
+last_updated: 2026-07-08
 review_cycle: weekly
 ---
 
@@ -23,7 +23,8 @@ Edit files in `docs/`, save, then **Commit** and **Push** in GitHub Desktop (or 
 | Setter | [Sales Operating Hub](acquisition/sales/README.md) — intro qualify, show rate, [demo confirmation script](acquisition/sales/script-demo-appointment-confirmation.md); pre-call videos: [objection video assets](acquisition/marketing/pre-call-objection-videos.md) |
 | Closer | [Sales Operating Hub](acquisition/sales/README.md) — discovery, demo, [Objection Hub](acquisition/sales/objection-handling-hub.md), [pre-call videos](acquisition/marketing/pre-call-objection-videos.md) |
 | Client success | [Fulfillment Operating System](client-fulfillment/fulfillment-operating-system.md) → [Client success hub](client-fulfillment/client-success/README.md) |
-| Media buyer | [Fulfillment OS](client-fulfillment/fulfillment-operating-system.md), [Media buying](client-fulfillment/media-buying/README.md), [Client marketing](client-fulfillment/client-marketing/README.md) |
+| Media buyer | [Fulfillment OS](client-fulfillment/fulfillment-operating-system.md), [Media buying](client-fulfillment/media-buying/README.md), [Client marketing](client-fulfillment/client-marketing/README.md) — **DSCR client:** [DSCR DNA pod](client-fulfillment/dscr-dna/README.md) |
+| DSCR setter / intake | [DSCR Team Product FAQ](client-fulfillment/dscr-dna/dscr-team-product-faq.md) → [DSCR Setter Script](client-fulfillment/dscr-dna/dscr-setter-appointment-script.md) |
 | Ops | [OPS Priority Ladder](operations/systems/ops-manager-priority-ladder.md), [Operations](operations/README.md) |
 | Migrating docs | [Drive inventory](_inventory/google-drive-inventory.md), [Migration backlog](_inventory/migration-backlog.md) |
 
@@ -50,7 +51,7 @@ Top-level domains stay as listed below. Add **subfolders only as canonical docs 
 | [Company](company/README.md) | Flat (doctrines, overviews) |
 | [Acquisition](acquisition/README.md) | `sales/`, `outbound/`, `marketing/`, `intelligence/`, `offer/` |
 | [Operations](operations/README.md) | `people/`, `hiring/`, `systems/`, `reporting/` |
-| [Client Fulfillment](client-fulfillment/README.md) | `client-playbooks/`, `client-marketing/`, `media-buying/`, `onboarding/`, `client-success/`, `course-material/`, `crm-architecture/`, `reverse-mortgage-dna/` — [Waiz vs client marketing](client-fulfillment/waiz-vs-client-marketing-boundaries.md) |
+| [Client Fulfillment](client-fulfillment/README.md) | `client-playbooks/`, `client-marketing/`, `media-buying/`, `onboarding/`, `client-success/`, `course-material/`, `crm-architecture/`, `reverse-mortgage-dna/`, `dscr-dna/` — [Waiz vs client marketing](client-fulfillment/waiz-vs-client-marketing-boundaries.md) |
 | [Automations](automations/README.md) | `crm/`, `ai-bots/`, `reporting/`, `sales/` |
 | [Prompts](prompts/README.md) | Mirror operating domain |
 | [KPIs](kpis/README.md) | Mirror operating domain |
@@ -64,7 +65,7 @@ Top-level domains stay as listed below. Add **subfolders only as canonical docs 
 - [Company](company/README.md): identity, money model, brand, principles, company-level doctrine.
 - [Acquisition](acquisition/README.md): offer, sales, marketing, lead stages, buyer intelligence, scripts.
 - [Operations](operations/README.md): software stack, reporting systems, team responsibilities, internal operating cadence.
-- [Client Fulfillment](client-fulfillment/README.md): client delivery, onboarding, media buying, client success, course material, reverse mortgage knowledge.
+- [Client Fulfillment](client-fulfillment/README.md): client delivery, onboarding, media buying, client success, course material, reverse mortgage and DSCR product knowledge.
 - [Automations](automations/README.md): automation specs, CRM architecture, AI bots, data flows.
 - [Prompts](prompts/README.md): reusable AI prompts for operating workflows.
 - [KPIs](kpis/README.md): metric definitions, reporting cadence, scorecards.

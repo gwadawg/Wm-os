@@ -13,9 +13,32 @@ DSCR product, ICP, marketing doctrine, and compliance for **client** campaigns a
 
 **Load before any DSCR ad, SMS, email, or bot script.**
 
+**Repo home:** `docs/client-fulfillment/dscr-dna/` — all DSCR refinance assets live in this pod (mirrors [Reverse Mortgage DNA](../reverse-mortgage-dna/README.md)). Do not scatter DSCR docs across `client-marketing/` or `media-buying/`; link here instead.
+
 This pod was built by cloning the [Reverse Mortgage DNA](../reverse-mortgage-dna/README.md) pod per the [Product Launch Playbook](../../prompts/product-launch-playbook.md). **DSCR is the near-inverse of RM:** the borrower is a real-estate *investor* (not a retiree), and DSCR is typically **business-purpose lending** with a different compliance regime than consumer HUD/FHA. Do not assume RM framing carries over — see each doc.
 
 **Scope — refinance only.** The Waiz DSCR line covers **refinance transactions only** (rate/term and cash-out refinances of investment property the borrower already owns). **No purchase financing or purchase angles.** All docs and downstream assets must assume the investor already owns the property.
+
+## Quick load by task
+
+| I'm working on… | Load in order |
+|-----------------|---------------|
+| **Any DSCR copy or creative** | [Compliance Guardrails](dscr-compliance-guardrails.md) → [ICP](intelligence-icp-dscr.md) → [GTM Brief](dscr-gtm-positioning-brief.md) → task doc below |
+| **Meta ads / statics** | Above → [Offer Map](dscr-offer-and-funnel-map.md) → [Angle Library](ad-copy-angle-library-dscr.md) → [Ads Playbook](dscr-ads-playbook.md) → [Static Image Generator](dscr-static-image-generator-project.md) |
+| **Funnel / Perspective build** | [Offer Map](dscr-offer-and-funnel-map.md) → [Lander Build Pack](dscr-lander-build-pack.md) → [Form Spec](dscr-funnel-form-spec.md) → [Landing + VSL Copy](dscr-landing-and-vsl.md) |
+| **Nurture / Laura booking** | [Offer Map](dscr-offer-and-funnel-map.md) → [Nurture And Booking — Laura](dscr-nurture-and-booking-laura.md) |
+| **Setter / call-center shift** | [Team Product FAQ](dscr-team-product-faq.md) → [Setter Script](dscr-setter-appointment-script.md) → [Objection Guide](dscr-objection-handling-guide.md) |
+| **CloseBot / AI agent** | [Compliance Guardrails](dscr-compliance-guardrails.md) → [CloseBot Job Information](dscr-closebot-job-information.md) → [CloseBot Knowledge Base](dscr-closebot-knowledge-base.md) |
+| **Launch QA / measurement** | [KPI And Test Scorecard](dscr-kpi-and-test-scorecard.md) — full funnel checklist: [Product Launch Playbook §09](../../prompts/product-launch-playbook.md) |
+
+**Cross-repo entry points:** [Fulfillment OS](../fulfillment-operating-system.md) (DSCR lead-engine section) · [Call center](../call-center/README.md) (DSCR scripts) · [Media buying](../media-buying/README.md) (static ad workflow) · [Ad intelligence bridge](../../operations/ad-intelligence-bridge.md) (Mr. Waiz winners)
+
+## Folder layout
+
+| Path | What lives here |
+|------|-----------------|
+| `dscr-dna/*.md` | All canonical DSCR docs (this pod) |
+| `dscr-dna/_research/` | Raw competitor/ad research JSON — **not canonical**; distilled intel is in [Competitor Ad Intelligence](dscr-competitor-ad-intelligence.md) |
 
 ## Team training
 

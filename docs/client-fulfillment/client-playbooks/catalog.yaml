@@ -1,8 +1,8 @@
 workflow: client-playbooks
 version: 1
 status: active
-last_synced: '2026-07-01'
-entry_count: 65
+last_synced: '2026-07-08'
+entry_count: 66
 delivery_groups:
 - id: onboarding
   label: Onboarding & launch
@@ -215,6 +215,42 @@ entries:
   methodology_sources: []
   last_updated: '2026-05-26'
   source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/dscr-setter-appointment-script.md
+  title: DSCR Setter / Appointment-Setting Call Script
+  artifact_type: script
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  shareability: lo-course
+  status: active
+  owner: setter
+  domain: client-fulfillment
+  delivery_group: call-center
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-06-29'
+  source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/dscr-team-product-faq.md
+  title: DSCR Team Product FAQ — Internal Training
+  artifact_type: training
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  shareability: internal-fulfillment
+  status: active
+  owner: setter
+  domain: client-fulfillment
+  delivery_group: call-center
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-06-29'
+  source: scan
 - repo_path: docs/client-fulfillment/client-sales/playbook-bamfam-rm.md
   title: BAMFAM Playbook — RM
   artifact_type: playbook
@@ -279,7 +315,6 @@ entries:
   product: reverse-mortgage
   methodology_sources:
   - docs/acquisition/sales/conceptual-beliefs-framework.md
-  - docs/acquisition/sales/prospect-fallacies-framework.md
   - docs/client-fulfillment/reverse-mortgage-dna/intelligence-icp-rm.md
   - docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
   - docs/client-fulfillment/reverse-mortgage-dna/rm-borrower-objections.md
@@ -287,7 +322,7 @@ entries:
   - docs/client-fulfillment/client-sales/playbook-lo-d2c-sales-foundations-rm.md
   - docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
   - docs/client-fulfillment/course-material/rm-borrower-icp-education.md
-  last_updated: '2026-07-01'
+  last_updated: '2026-07-03'
   source: scan
 - repo_path: docs/client-fulfillment/course-material/rm-d2c-sales-foundations.md
   title: D2C Sales Foundations — Course Material
@@ -477,7 +512,7 @@ entries:
   delivery_group: general
   product: reverse-mortgage
   methodology_sources: []
-  last_updated: '2026-05-21'
+  last_updated: '2026-07-08'
   source: scan
 - repo_path: docs/client-fulfillment/client-marketing/meta-andromeda-rm-rules.md
   title: Meta Andromeda Rules For Reverse Mortgages
@@ -636,6 +671,8 @@ entries:
   - docs/client-fulfillment/reverse-mortgage-dna/doctrine-rm-marketing.md
   - docs/client-fulfillment/reverse-mortgage-dna/doctrine-reverse-mortgage.md
   - docs/client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md
+  - docs/acquisition/sales/conceptual-beliefs-framework.md
+  - docs/client-fulfillment/client-sales/playbook-rm-conceptual-beliefs.md
   last_updated: '2026-07-03'
   source: scan
 - repo_path: docs/client-fulfillment/client-marketing/rm-imessage-appointment-followup.md
@@ -763,8 +800,8 @@ entries:
   product: reverse-mortgage
   methodology_sources:
   - docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
-  - docs/acquisition/sales/prospect-fallacies-framework.md
-  last_updated: '2026-07-02'
+  - docs/client-fulfillment/client-sales/playbook-rm-conceptual-beliefs.md
+  last_updated: '2026-07-03'
   source: override
   canonical_parent: docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
 - repo_path: docs/client-fulfillment/course-material/rm-borrower-icp-education.md
@@ -842,7 +879,7 @@ entries:
   delivery_group: meta-ads-creative
   product: reverse-mortgage
   methodology_sources: []
-  last_updated: '2026-06-23'
+  last_updated: '2026-07-01'
   source: scan
 - repo_path: docs/client-fulfillment/media-buying/ads-for-dummies-waizmedia-sop.md
   title: Ads For Dummies WaizMedia SOP
@@ -1122,7 +1159,7 @@ entries:
   delivery_group: meta-ads-creative
   product: reverse-mortgage
   methodology_sources: []
-  last_updated: '2026-06-28'
+  last_updated: '2026-07-01'
   source: scan
 - repo_path: docs/client-fulfillment/course-material/sop-setting-up-facebook-lead-form.md
   title: Setting Up Facebook Lead Form
@@ -1305,24 +1342,6 @@ entries:
   product: dscr
   methodology_sources: []
   last_updated: '2026-06-02'
-  source: scan
-- repo_path: docs/client-fulfillment/dscr-dna/dscr-setter-appointment-script.md
-  title: DSCR Setter / Appointment-Setting Call Script
-  artifact_type: script
-  content_layer: canonical
-  audience:
-  - team
-  delivery:
-  - github
-  - team-drive
-  shareability: lo-course
-  status: draft
-  owner: client-success
-  domain: client-fulfillment
-  delivery_group: product-knowledge
-  product: dscr
-  methodology_sources: []
-  last_updated: '2026-05-30'
   source: scan
 - repo_path: docs/client-fulfillment/dscr-dna/dscr-static-image-generator-project.md
   title: DSCR Static Image Generator — Claude Project Build Pack
