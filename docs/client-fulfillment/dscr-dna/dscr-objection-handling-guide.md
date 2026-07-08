@@ -87,6 +87,7 @@ The sales conversation (consultation/close). For front-desk/booking objections, 
 
 ## Related Docs
 
+- **Start here (team onboarding):** [DSCR Team Product FAQ — Internal Training](dscr-team-product-faq.md)
 - [Intelligence ICP DSCR](intelligence-icp-dscr.md)
 - [DSCR Setter / Appointment-Setting Call Script](dscr-setter-appointment-script.md)
 - [DSCR Compliance Guardrails](dscr-compliance-guardrails.md)

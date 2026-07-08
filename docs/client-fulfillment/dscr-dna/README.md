@@ -3,7 +3,7 @@ title: Client Fulfillment — DSCR DNA
 domain: client-fulfillment
 owner: founder
 status: draft
-last_updated: 2026-06-02
+last_updated: 2026-07-08
 review_cycle: quarterly
 ---
 
@@ -16,6 +16,17 @@ DSCR product, ICP, marketing doctrine, and compliance for **client** campaigns a
 This pod was built by cloning the [Reverse Mortgage DNA](../reverse-mortgage-dna/README.md) pod per the [Product Launch Playbook](../../prompts/product-launch-playbook.md). **DSCR is the near-inverse of RM:** the borrower is a real-estate *investor* (not a retiree), and DSCR is typically **business-purpose lending** with a different compliance regime than consumer HUD/FHA. Do not assume RM framing carries over — see each doc.
 
 **Scope — refinance only.** The Waiz DSCR line covers **refinance transactions only** (rate/term and cash-out refinances of investment property the borrower already owns). **No purchase financing or purchase angles.** All docs and downstream assets must assume the investor already owns the property.
+
+## Team training
+
+**Start here** for internal Waiz onboarding on DSCR — ICP, product primer, vocabulary, objections, and disqualifiers in one doc.
+
+| Doc | Status | Mr. Waiz Library |
+|-----|--------|------------------|
+| [DSCR Team Product FAQ — Internal Training](dscr-team-product-faq.md) | `active` | `/library/dscr-team-product-faq` |
+| [DSCR Setter / Appointment-Setting Call Script](dscr-setter-appointment-script.md) | `active` | `/library/dscr-setter-appointment-script` |
+
+Read the FAQ before your first DSCR shift, then open the appointment script on dialer.
 
 ## Canonical docs
 
@@ -47,13 +58,20 @@ End-to-end DSCR refinance funnel assets. **Read the GTM brief first** for the be
 | [DSCR Funnel Form Spec](dscr-funnel-form-spec.md) | 2 — funnel/form | `draft` |
 | [DSCR Lander Build Pack](dscr-lander-build-pack.md) | 2 — buildable page spec (Lander A/B split test) | `draft` |
 | [DSCR Lead Nurture And Booking — Laura](dscr-nurture-and-booking-laura.md) | 3 — nurture/booking | `draft` |
-| [DSCR Setter / Appointment-Setting Call Script](dscr-setter-appointment-script.md) | 4 — setter | `draft` |
+| [DSCR Setter / Appointment-Setting Call Script](dscr-setter-appointment-script.md) | 4 — setter | `active` |
 | [DSCR Objection-Handling Guide](dscr-objection-handling-guide.md) | 4 — objections | `draft` |
 | [DSCR KPI And Test Scorecard](dscr-kpi-and-test-scorecard.md) | 5 — measurement | `draft` |
 
+## Wave B — AI agent (build after Wave A traction)
+
+| Doc | Status |
+|-----|--------|
+| [DSCR CloseBot Job Information](dscr-closebot-job-information.md) | `draft` |
+| [DSCR CloseBot Knowledge Base](dscr-closebot-knowledge-base.md) | `draft` |
+
 ## Status note
 
-Every doc in this pod is `status: draft` pending owner review. Product mechanics (rates, LTV, DSCR tiers, credit floors) are **illustrative 2026 market ranges from public sources — not Waiz or client pricing**, and must be reconciled against the approved pricing sheet and active lender programs before client use. The compliance doc requires **licensed-counsel / compliance review** before any copy ships.
+Team training docs (FAQ + setter script) are `active` for internal use. All other docs remain `status: draft` pending owner review. Product mechanics (rates, LTV, DSCR tiers, credit floors) are **illustrative 2026 market ranges from public sources — not Waiz or client pricing**, and must be reconciled against the approved pricing sheet and active lender programs before client use. The compliance doc requires **licensed-counsel / compliance review** before any copy ships.
 
 ## Related
 

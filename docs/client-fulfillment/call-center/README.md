@@ -3,7 +3,7 @@ title: Client Fulfillment — Call Center
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-05-26
+last_updated: 2026-07-08
 review_cycle: weekly
 ---
 
@@ -27,6 +27,16 @@ Client-side B2C conversations only (onboarding, follow-up, recovery, retention-r
 | [Call Center Script Boundary Rules](script-boundary-rules.md) | `draft` |
 | [Appointment-Setting Call Script](script-appointment-setting-call.md) | `draft` |
 | [Live Transfer Warm Hand-off Script](script-live-transfer-warm-handoff.md) | `draft` |
+
+## DSCR (investor refinance)
+
+When a client runs the DSCR refinance line, load the [DSCR DNA pod](../dscr-dna/README.md) first. Operational scripts:
+
+| Doc | Status |
+|-----|--------|
+| [DSCR Team Product FAQ — Internal Training](../dscr-dna/dscr-team-product-faq.md) | `active` |
+| [DSCR Setter / Appointment-Setting Call Script](../dscr-dna/dscr-setter-appointment-script.md) | `active` |
+| [DSCR Objection-Handling Guide](../dscr-dna/dscr-objection-handling-guide.md) | `draft` |
 
 ## Related
 

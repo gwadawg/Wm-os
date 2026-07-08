@@ -39,6 +39,7 @@ Everything Waiz delivers **after a client signs** — onboarding, CRM, marketing
 | [Call center](call-center/README.md) | B2C fulfillment call-center scripts and QA lifecycle |
 | [CRM architecture](crm-architecture/README.md) | Canonical CRM + bot paths |
 | [Reverse mortgage DNA](reverse-mortgage-dna/README.md) | Product, ICP, compliance — incl. [product lines + ad-angle fit](reverse-mortgage-dna/rm-product-lines.md) |
+| [DSCR DNA](dscr-dna/README.md) | DSCR refinance product pod — ICP, ads, funnel, nurture, setter (refinance only) |
 | [RM Fulfillment Agent](reverse-mortgage-agent/README.md) | Claude Project deploy kit for internal fulfillment team |
 | [Client Playbooks](client-playbooks/README.md) | **Start here** — playbooks, SOPs, training index + creation guide |
 | [Course material](course-material/README.md) | Client education layer (links to canonical) |
@@ -55,6 +56,7 @@ Everything Waiz delivers **after a client signs** — onboarding, CRM, marketing
 | **Media buying** | Campaign setup, month 1, creative library, AI images — `draft` |
 | **Client marketing** | Playbooks, drips, Andromeda — `draft` |
 | **RM DNA** | Doctrine + compliance — `active` on guardrails/doctrine |
+| **DSCR DNA** | [DSCR pod](dscr-dna/README.md) — team FAQ + setter `active`; launch build `draft` |
 | **Course material** | Partial; links to canonical |
 
 Raw exports: `waiz-os-archive/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/` — [archive setup](../_inventory/raw-export-archive.md)

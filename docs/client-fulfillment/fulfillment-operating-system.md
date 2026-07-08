@@ -3,7 +3,7 @@ title: Fulfillment Operating System
 domain: client-fulfillment
 owner: client-success
 status: active
-last_updated: 2026-05-21
+last_updated: 2026-07-08
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/(synthesized)
 artifact_type: overview
@@ -36,7 +36,7 @@ Any AI or team work on client fulfillment, onboarding, creatives, nurture, or ac
 ## Quality Bar
 
 - Align with [Identity Core](../company/doctrine-identity-core-april-26.md) and [SOURCE-OF-TRUTH](../SOURCE-OF-TRUTH.md).
-- Client-facing copy must follow [RM Compliance Guardrails](../client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md) when applicable.
+- Client-facing copy must follow product compliance guardrails: [RM Compliance Guardrails](../client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md) for reverse mortgage; [DSCR Compliance Guardrails](../client-fulfillment/dscr-dna/dscr-compliance-guardrails.md) for DSCR refinance.
 
 ## Operating Content
 
@@ -66,6 +66,19 @@ Load this page first for any client-fulfillment question. Follow links to the ca
 | Nurture | [RM Text Drip 2025](client-marketing/rm-text-drip-2025.md), [10-Day RM Drip](client-marketing/10-day-rm-drip-campaign.md), [RM Lead Nurture Drip](client-marketing/rm-lead-nurture-drip-sequence.md) |
 | Call center scripts | [Call Center Script Factory SOP](call-center/sop-call-center-script-factory.md) |
 
+### DSCR refinance line (when client product = DSCR)
+
+| Stage | Doc |
+|-------|-----|
+| Product pod (load first) | [DSCR DNA](dscr-dna/README.md) |
+| Strategy | [DSCR GTM And Positioning Brief](dscr-dna/dscr-gtm-positioning-brief.md) |
+| Offer anchor | [DSCR Offer And Funnel Map](dscr-dna/dscr-offer-and-funnel-map.md) |
+| Ads & creative | [DSCR Ads Playbook](dscr-dna/dscr-ads-playbook.md), [Ad Copy And Angle Library (DSCR)](dscr-dna/ad-copy-angle-library-dscr.md), [DSCR Static Image Generator](dscr-dna/dscr-static-image-generator-project.md) |
+| Funnel / lander | [DSCR Lander Build Pack](dscr-dna/dscr-lander-build-pack.md), [DSCR Funnel Form Spec](dscr-dna/dscr-funnel-form-spec.md) |
+| Nurture | [DSCR Lead Nurture And Booking — Laura](dscr-dna/dscr-nurture-and-booking-laura.md) |
+| Setter / team training | [DSCR Team Product FAQ](dscr-dna/dscr-team-product-faq.md), [DSCR Setter Script](dscr-dna/dscr-setter-appointment-script.md) |
+| Measurement | [DSCR KPI And Test Scorecard](dscr-dna/dscr-kpi-and-test-scorecard.md) |
+
 ## Campaign Maturity (CS Lens)
 
 | Phase | Weeks | Doc |
@@ -83,9 +96,10 @@ Load this page first for any client-fulfillment question. Follow links to the ca
 
 ## Compliance (Always)
 
-- [RM Compliance Guardrails](reverse-mortgage-dna/rm-compliance-guardrails.md)
-- [Doctrine Reverse Mortgage](reverse-mortgage-dna/doctrine-reverse-mortgage.md)
-- [Doctrine RM Marketing](reverse-mortgage-dna/doctrine-rm-marketing.md)
+Load the guardrails for the **client's product line**:
+
+- **Reverse mortgage:** [RM Compliance Guardrails](reverse-mortgage-dna/rm-compliance-guardrails.md), [Doctrine Reverse Mortgage](reverse-mortgage-dna/doctrine-reverse-mortgage.md), [Doctrine RM Marketing](reverse-mortgage-dna/doctrine-rm-marketing.md)
+- **DSCR refinance:** [DSCR Compliance Guardrails](dscr-dna/dscr-compliance-guardrails.md), [Doctrine DSCR](dscr-dna/doctrine-dscr.md), [Doctrine DSCR Marketing](dscr-dna/doctrine-dscr-marketing.md)
 
 ## AI Quick Load Order
 
@@ -106,6 +120,7 @@ Load this page first for any client-fulfillment question. Follow links to the ca
 | [client-success/](client-success/README.md) | Post-launch CS + troubleshooting |
 | [call-center/](call-center/README.md) | B2C fulfillment call-center scripts and QA lifecycle |
 | [reverse-mortgage-dna/](reverse-mortgage-dna/README.md) | Product, ICP, compliance |
+| [dscr-dna/](dscr-dna/README.md) | DSCR refinance product, ICP, funnel, setter |
 | [client-playbooks/](client-playbooks/README.md) | Client playbooks index + creation guide |
 | [course-material/](course-material/README.md) | Course material & client education (links to canonical) |
 
