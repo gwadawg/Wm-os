@@ -54,7 +54,7 @@ Load this page first for any client-fulfillment question. Follow links to the ca
 | 4 | Onboarding call | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Kickoff form |
 | 5 | Implementation | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [New Client Campaign Setup](media-buying/new-client-campaign-setup-sop.md) | Kickoff complete |
 | 6 | QA | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | QA form |
-| 7 | Launch | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [Onboarding To Launch Communication](onboarding/onboarding-to-launch-client-communication.md) | Launch form |
+| 7 | Launch | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [Client Success Slack Touchpoint Playbook](onboarding/onboarding-to-launch-client-communication.md) | Launch form |
 
 ## Lead Engine (After Launch)
 

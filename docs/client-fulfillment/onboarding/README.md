@@ -16,7 +16,7 @@ Post-close client launch: gated phases from payment through go-live.
 | Doc | Status |
 |-----|--------|
 | [A-Z Client Onboarding SOP](a-z-client-onboarding-sop.md) | `draft` |
-| [Onboarding To Launch Client Communication](onboarding-to-launch-client-communication.md) | `draft` |
+| [Client Success Slack Touchpoint Playbook](onboarding-to-launch-client-communication.md) (Post-OB → Month 2+) | `draft` |
 
 ## Related
 

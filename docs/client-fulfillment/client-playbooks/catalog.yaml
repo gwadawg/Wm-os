@@ -1199,7 +1199,7 @@ entries:
   last_updated: '2026-06-10'
   source: scan
 - repo_path: docs/client-fulfillment/onboarding/onboarding-to-launch-client-communication.md
-  title: Onboarding To Launch Client Communication
+  title: Client Success Slack Touchpoint Playbook
   artifact_type: sop
   content_layer: canonical
   audience:

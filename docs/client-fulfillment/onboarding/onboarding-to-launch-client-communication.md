@@ -1,164 +1,588 @@
 ---
-title: Onboarding To Launch Client Communication
+title: Client Success Slack Touchpoint Playbook
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-05-21
+last_updated: 2026-07-17
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Onboarding/Onboarding (SOPs)/Onboarding To Launch Client Communication.docx
 artifact_type: sop
+supersedes_note: Replaces day-by-day clinic/patient cadence with milestone Slack touchpoints (Post-OB through Month 2+)
 ---
 
-# Onboarding To Launch Client Communication
+# Client Success Slack Touchpoint Playbook
 
 ## Purpose
 
-Client-facing communication templates and timing tied to onboarding milestones.
+Give the Client Success Manager a clear Slack standard from the
+onboarding call through Month 2 and beyond so every client gets the
+right kind of update at the right stage — without forgetting touchpoints
+or sending empty check-ins.
+
+This playbook answers three questions for every account:
+
+1. Where is this client in the lifecycle?
+2. What type of Slack update belongs here?
+3. How do I write it so it feels specific, not stock?
 
 ## Scope
 
-Emails, Slack, SMS patterns from welcome through launch.
+**In scope:** CSM-owned messages in the client Slack channel from
+**post-OB call** through **Month 2+** (including launch and Month 1).
+
+**Out of scope:**
+
+- Pre-OB welcome / booking nudges (owned by existing automations)
+- Weekly check-in **call** scripts and checklists — see
+  [Post-Launch Client Success System](../client-success/post-launch-client-success-system.md)
+- Billing, ghosting, and overdue payment sequences — see
+  [Overdue Payments And Ghosting Clients](../client-success/overdue-payments-and-ghosting-clients.md)
+- Media buyer / ops build chatter unless it becomes a CSM Mid-build
+  update (tangible progress or a named blocker)
+
+## Owner
+
+Client Success (CSM). Media Buyer and Ops own build execution; CSM owns
+the client-facing Slack narrative at each milestone.
 
 ## Trigger
 
-Each onboarding phase transition per A-Z SOP.
+Use this playbook whenever a client crosses a stage gate or a Month 1 /
+Month 2+ event fires (see Cadence map).
 
 ## Inputs
 
-- Phase completion in ClickUp
-- Client contact info
+- Stage or event (Post-OB, Mid-build, Pre-launch, Launch, Month 1 reset,
+  Month 1 event, Month 2+ pulse)
+- One real account fact (what shipped, what happened, what KPI moved)
+- Client first name and any open ask (access, review, calendar habits)
 
 ## Outputs
 
-- Client informed at each gate
-- Reduced launch confusion
+- A sent Slack message that matches stage job + universal skeleton
+- Client clarity on progress, meaning, and next step
+- No radio silence during build; no hype during slow Month 1
 
 ## Quality Bar
 
-- Align with [Identity Core](../../company/doctrine-identity-core-april-26.md) and [SOURCE-OF-TRUTH](../../SOURCE-OF-TRUTH.md).
-- Client-facing copy must follow [RM Compliance Guardrails](../../client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md) when applicable.
+- Align with [Identity Core](../../company/doctrine-identity-core-april-26.md)
+  and [SOURCE-OF-TRUTH](../../SOURCE-OF-TRUTH.md)
+- Client-facing copy must follow
+  [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md)
+  when applicable
+- Every send includes **at least one real account fact** — never pure stock
+- No invented metrics, guarantees, or timelines you cannot back
+- Set expectations low; overdeliver
 
-## Operating Content
+---
 
-INTERNAL | Client Success
+## Voice and tone
 
-INTERNAL | Client Success
+**Register: warm peer.** Write like a sharp teammate in Slack — clear,
+human, lightly casual. Short paragraphs. Second person. Honest about
+pace and constraints. Light humor is fine when it lands; never at the
+client’s expense.
 
-Initial Client Experience
+**Guardrails:**
 
-The purpose of this document is to help provide a world-class experience to our clients.
+- Confident, not hype (“crushing it,” empty “so excited!!”)
+- Specific beats vague (“3 qualified conversations this week” >
+  “things are picking up”)
+- Especially in Month 1: normalize the slow start without sounding
+  dismissive
+- Prefer one clear next step or ask over a wall of status
 
-Overview:
+**Language (from Identity Core):**
 
-"If a tree falls in a forest and no one is around to hear it, does it make a sound?"
+| Prefer | Avoid |
+|--------|--------|
+| Qualified conversations | Leads (as a commodity pitch) |
+| Acquisition system / engine | Lead gen service |
+| Reverse Sales Assistant | Call center (as a dump) |
+| Strategic partner | Generic “agency” fluff |
+| Done-for-you | Vague “we’ll handle it” |
+| Closed deals / appointments shown | Empty volume brags |
 
-Our business operates similarly. If we hire someone and don’t hear from them in 7 days, did they even do any work?
+---
 
-Onboarding and first impressions are crucial. The client experience in the first 7 days is more important than the immediate results. To provide a world-class experience, we need to establish ourselves as experts and demonstrate the value of their investment by giving frequent updates and showcasing the complexity of our work.
+## Universal skeleton
 
-REMEMBER: Set expectations low, and overdeliver!
+Every stage uses the same four beats:
 
-Target Metrics:
+1. **Context** — why you’re pinging (stage or event)
+2. **Update** — one concrete fact (`[what shipped / what happened]`)
+3. **Meaning** — what it means for them right now
+4. **Next** — what happens next, or what you need from them
+   (or “no action needed”)
 
-Minimum 1 update per day for the first 7 days.
+**Swap-in rule:** Fill `[brackets]` with live account detail. If you
+cannot name a real fact, do not send — wait until you can, or escalate
+internally first.
 
-Time to launch date within 7 days.
+---
 
-First new patient appointment within 7 days of launching (Likely will come from database reactivation)
+## Anti-patterns (do not send)
 
-### Day 0: On The Day They Sign Up - Text Their Cell Phone…
+- Daily “just checking in” with no news
+- A second monologue that only repeats the check-in call with zero new
+  info (post-call Slack = short summary + commitments, not a re-pitch)
+- Panic framing on normal Phase 1 noise (slow Week 1–2)
+- Blame on Meta, setters, or the client without an owned next step
+- Pre-OB welcome messages (automations own that window)
 
-Hey FIRST NAME, it’s YOURNAME here! Just wanted to say I’m so excited to start working with you and your company. I spoke to Gabriel  and listened to the call that you had with him to get caught up! I’m going to spend a few hours today and do some research and start putting together an action plan for us. If there’s anything you need in the meantime, just shoot me a message here!
+---
 
-### (Check To See If They Booked Onboarding Call!)
+## Cadence map
 
-### Day 1: Same Day As The Onboarding Call - Before End Of Day Via Slack
+Milestone-triggered only. No daily message quota.
 
-Hey FIRST NAME, I spent a couple hours after our call building out your sales CRM, and passing everything we covered on our call to our Reverse sales co-ordinator who will be conducting some sales roleplay first thing tomorrow with our patient sales team. Things are on track and everything should be set 5-7 days from now!
+| Stage | Trigger | Job of the message |
+|-------|---------|-------------------|
+| Post-OB | Same day as OB call | Recap alignment; set timeline; name next proof of work |
+| Mid-build | Tangible progress ships | Prove motion; cut radio-silence anxiety |
+| Pre-launch | 24–48h before go-live (or launch call day) | Readiness + slow-start frame |
+| Launch day | Ads live | Confirm live + Week 1 norms |
+| Month 1 — expectation reset | ~Day 5–7 post-launch | Protect motivation; define “good” this month |
+| Month 1 — events | First lead / QC / booking / show; yellow-red KPI; training need | Celebrate or diagnose with a next step |
+| Month 2+ | Biweekly pulse + events | Softer, higher-value; skip pulse if a strong event already covered the week |
 
-I also filed the details that you gave us in the onboarding form and I have submitted it to the Phone registry to get your phone line approved for texting and calling. Now, we just need to wait for them to approve the application. It typically takes 4-7 days. I’ll give them a call tomorrow to see if we can expedite it. I’ll keep you updated!
+**Calls:** Weekly check-in calls in Month 1 stay on the
+[Post-Launch Client Success System](../client-success/post-launch-client-success-system.md).
+This playbook owns **written Slack presence**, not the call agenda.
 
-### Day 2:
+---
 
-What’s going on FIRST NAME! I just wanted to give you an update here, I did go ahead and call the phone registration support team to see if we can expedite anything, but they told me that we just have to wait. In the meantime, I’ve met with our media team and started drafting different angles for your ad campaign.
+## Stage playbooks
 
-We’re also going to do a little more market research just to make sure we’re targeting the right areas. I’ll send you what we find. We usually like to map out an ‘’ideal client’’ avatar so we know who we’re trying to target if that makes sense.
+### 1. Post-OB
 
-At the same time, we’re going to get started on writing the ad copy / headlines / and creatives. We should have it for you to review early next week. Let me know if you have any questions!
+**Job:** “We’re aligned; here’s the build path.”
 
-### Day 5:
+**Trigger:** Same day as the onboarding call (before EOD).
 
-Morning! The team and I ran a simulated traffic analyzer (basically to see what we can expect when we turn on ads) and we’re almost done drafting a few different ad angles for you to review. I will be finishing those up in the next few days. Yesterday, I built out your patient tracking sheet so we can keep track of the key metrics like show rate and return on investment
+**Skeleton:**
 
-Only send if they’re running a database reactivation: I also took a look at your past client list and I’ll be drafting up a few “reactivation” scripts so that we can reach out to your past clients and get some quick wins by getting some existing leads back through the door.
+```text
+Hey [FIRST NAME] — quick recap from today’s OB.
 
-Let me know if you have any questions. Ad copy coming soon!
+We locked [decision / offer nuance / market / calendar setup].
+Next up on our side: [first tangible deliverable] with a target
+launch window of [timeline].
 
-DAY 6: (Day before launch call)
+[Meaning: what they should expect while we build.]
 
-Hey [FIRST NAME],
+Next from you (if anything): [ask — logo, calendar access, offer
+detail] — or no action needed on your end for now.
+```
 
-“When you have written your headline, you have spent eighty cents out of your dollar.” - David Ogilvy
+**Swap-ins:** `[FIRST NAME]`, `[decision]`, `[first tangible
+deliverable]`, `[timeline]`, `[ask]`
 
-I finally finished some ad copy + headlines for you to review. I like to spend more time here since it’s very important to the campaign’s success so I appreciate your patience!
+**Filled example:**
 
-Here are a few different ad angles + ad copy that I put together for us!
+```text
+Hey Marcus — quick recap from today’s OB.
 
-Next step: ad creatives!
+We locked your primary market (Phoenix metro) and the calendar
+rules for setter bookings. Next up on our side: CRM + dialer
+routing live, then ad angles drafted — targeting go-live inside
+[5–7 business days] once phone registry clears.
 
-I’ll be working on building some ad creatives for our campaign here. Keep in mind that sometimes the most boring ads do really well which is why we make our ads a certain way!
+You’ll hear from me when something tangible ships; radio silence
+usually means we’re in build, not that nothing’s moving.
 
-Link to the creatives:
+Next from you: confirm the calendar invite access we pinged —
+that’s the only blocker on your side right now.
+```
 
-Review Request
+**Personalization cues:** Name one decision from *their* call. Name one
+thing they still owe. Do not invent a launch date you cannot defend.
 
-(Works best when sent as a voice note)
+---
 
-Hey [NAME] quick question. Seen as you’ve been crushing it over the last couple weeks which Im super happy to see, Im wondering if you’d be open to leaving us a quick review on trust pilot just based on your overall experience with support, communication, performance etc etc
+### 2. Mid-build
 
-No worries if not, as you know with us being a small business online reputation is huge and it helps us TONS more than you can imagine
+**Job:** Prove work is happening; reduce “did we fall off?” anxiety.
 
-I wont send anything without your permission of course lol, so let me know! Thanks :)
+**Trigger:** Something real shipped — CRM live, phone registry filed,
+ad angles drafted, creatives in review, reactivation scripts ready, etc.
 
-When Client Is Underperforming:
+**Skeleton:**
 
-(1) [NAME] as we know right now performance isnt 100% where we want it to be, and I wanted to let you know that we’re on top of it and are pulling all the levers we can to bring appointment flow back up to where we want it to be
+```text
+Hey [FIRST NAME] — update.
 
-I actually just got done talking with our fulfillment team, and here’s what we decided we’re going to do
+[What shipped / what’s in review]. [Who’s owning the next piece]
+and ETA [timeline].
 
-Run a re-blast of all the existing leads in the pipeline that we haven't engaged with in the last 7 days to get quick conversations flowing with our sales team.
+[Meaning: why this matters for launch / pipeline.]
 
-The media team is scanning all our other clinic partner accounts as we speak for similarities in treatments and angles that are performing best for them so we can replicate whats working best for other offices right now on the ads side
+Next: [review request / no action / waiting on X].
+```
 
-I’ve assigned one specific patient sales co-ordinator to go into your account and dial all the leads 2x more than we currently area over the course of the next few days to ensure we dont have any leads slip through the cracks
+**Swap-ins:** `[what shipped]`, `[owner]`, `[timeline]`, `[review
+request]`
 
-We’re conducting some market research in [LOCATION] to check if anyone is running something similar at the moment in your location; if so, what we’ll do is let you know and make the necessary adjustments on  the marketing side to differentiate you from all your competitors
+**Filled example:**
 
-Let me know if you have any questions - Again, we want you to win more than you can image, so we’re doing everything we can!
+```text
+Hey Marcus — update.
 
-Launch +
+CRM + pipeline views are live for your account, and we filed the
+phone registry application today (typical wait [4–7 days]). Media
+is drafting first ad angles this week — I’ll send those for review
+when they’re ready.
 
-DAY 8: (Day we go live)
+This is the “plumbing” week: once registry + creatives clear, we
+can flip live without scrambling.
 
-Alright, ads are live! Just a reminder, the first few weeks are ALWAYS the slowest and once Facebook starts finding the correct audience, that’s when things start to pick up. If we get ZERO leads in the first week, don’t panic - it is part of the process!
+Next: no action needed unless registry asks for more business docs
+— I’ll ping you if they do.
+```
 
-Just know that you got our team carefully monitoring the performance of the ads every day so you don’t have to worry about it!
+**Personalization cues:** Only send if you can point at a concrete
+artifact or filed action. If blocked, say the blocker + owner + ETA —
+do not send vibes.
 
-DAY 2 Post Launch:
+---
 
-Hey team! I see that we’ve already gotten X leads and our team is working on contacting them now! That’s a really good indicator that the campaign is starting to pick up already!
+### 3. Pre-launch
 
-DAY 3 Post Launch:
+**Job:** Readiness + normalize the slow start before emotions spike.
 
-Hey FIRST NAME, just a heads up that leads are flowing in and some are already starting to engage in conversations - I’ll keep you posted with when they convert!
+**Trigger:** 24–48 hours before go-live, or launch-call day.
 
-### Day 12:
+**Skeleton:**
 
-Hey FIRST NAME, I wanted to create some sales targets for us because I know our goal is to reach X appointments / month. That means we just need to talk to X leads, book X of them, and close X of them at you’d be looking at generating $$$!
+```text
+Hey [FIRST NAME] — we’re [on track / clearing final X] for launch
+[day / window].
 
-When They Get Their First Booking
+At go-live: [what turns on]. Week 1 is usually the slowest while
+the system finds traction — [what “normal” looks like]. We’ll watch
+[what you’ll monitor] daily on our side.
 
-BOOM! Super happy to see we got our first appointment that came in. More to come, and lets ride the positive momentum!
+What to watch for: [signals]. What not to panic about: [normal
+noise].
 
-### [Send Gif To The Client By Using /Gif In Slack]
+Next: [any last ask from them] / see you on the launch call.
+```
 
+**Swap-ins:** `[day / window]`, `[what turns on]`, `[signals]`,
+`[normal noise]`, `[last ask]`
+
+**Filled example:**
+
+```text
+Hey Marcus — we’re clearing final creative review and targeting
+go-live [tomorrow / Thursday].
+
+At go-live ads + routing turn on. Week 1 is usually the slowest
+while Meta and the dial motion find rhythm — low volume early is
+normal, not a failure signal. We’ll monitor spend, opt-ins, and
+conversations daily on our side.
+
+What to watch for: first qualified conversations and how calendar
+confirmations land. What not to panic about: a quiet first few days
+with spend still learning.
+
+Next: hop on the short launch call if it’s on the calendar — no
+other action needed from you tonight.
+```
+
+**Personalization cues:** Tie “normal” to
+[Client Growth Stages](../client-success/client-growth-stages.md)
+Phase 1 (Testing). Be explicit about what *they* should vs should not
+react to.
+
+---
+
+### 4. Launch day
+
+**Job:** Confirm live + restate Week 1 norms in one short ping.
+
+**Trigger:** Ads are live.
+
+**Skeleton:**
+
+```text
+Hey [FIRST NAME] — we’re live.
+
+[What’s on]. First stretch is the learning window — [expectation].
+We’re monitoring [cadence] so you don’t have to stare at dashboards.
+
+I’ll ping you when we hit real signals ([first lead / first QC /
+booking / etc.]).
+No action needed unless [ask].
+```
+
+**Filled example:**
+
+```text
+Hey Marcus — we’re live.
+
+Ads are on and routing is pointing at your Reverse Sales Assistant
+team. First stretch is the learning window — quiet early days are
+common; the team is watching performance daily.
+
+I’ll ping you when we hit real signals (first lead / first qualified
+conversations / first booking). No action needed on your end today.
+```
+**Personalization cues:** Confirm what actually went live for *this*
+account. Do not promise Day-1 appointment volume.
+
+---
+
+### 5. Month 1 — expectation reset
+
+**Job:** Protect motivation in the slowest month; set what “good” looks
+like; offer training/support without sounding alarmed.
+
+**Trigger:** ~Day 5–7 post-launch (even if volume is fine — especially
+if the client is quiet or anxious).
+
+**Skeleton:**
+
+```text
+Hey [FIRST NAME] — quick Month 1 frame so we’re synced.
+
+We’re in the testing phase: [what that means in plain English].
+“Good” this month looks like [signals — conversations, show habits,
+feedback loops] more than [vanity metric].
+
+On our side we’re [what you’re doing — monitoring, iterating,
+coaching setters]. If you want help on [calendar / confirmation /
+show habits / offer clarity], say the word and we’ll lock a short
+training block.
+
+Next: [upcoming check-in call] / no action needed.
+```
+
+**Filled example:**
+
+```text
+Hey Marcus — quick Month 1 frame so we’re synced.
+
+We’re in the testing phase: ads and dial motion are collecting
+signal, not “compounding” yet. “Good” this month looks like steady
+qualified conversations, clean calendar confirms, and us iterating
+fast when something’s off — not peak monthly appointment volume on
+Week 1.
+
+On our side we’re watching CPL/conversation quality daily and
+coaching the setter lane on your account. If you want a short
+session on confirmation scripts or show-rate habits, say the word
+and I’ll book it.
+
+Next: we still have our weekly check-in on [day] — bring any gut
+feelings from your side and we’ll match them to the numbers.
+```
+
+**Personalization cues:** Reference Phase 1 from
+[Client Growth Stages](../client-success/client-growth-stages.md).
+Offer one concrete support lane (training, calendar, confirmations) —
+not a vague “here if you need anything.”
+
+---
+
+### 6. Month 1 — event library
+
+**Job:** Celebrate with specificity *or* diagnose with an owned next
+step. No vibes-only wins; no “we’re on it” without a lever.
+
+**Cadence:** Event-triggered only in Month 1 (plus the expectation
+reset above). No fixed weekly Slack quota on top of check-in calls.
+
+#### 6a. First lead
+
+**Job:** Confirm the acquisition system is receiving traffic — without
+over-celebrating a single opt-in.
+
+```text
+Hey [FIRST NAME] — first lead just came in.
+
+[Light context: market / angle if useful]. The team is on it —
+speed-to-lead and dial follow-up start now. One opt-in isn’t the
+whole story, but it’s the first proof the funnel is live.
+
+Next: I’ll ping you when we get a real conversation going / no
+action needed on your end.
+```
+
+**Personalization cues:** Keep it calm and short. Do not imply the
+campaign is “winning” off one lead. If leads are coming but nobody is
+answering yet, say that plainly and own the dial motion.
+
+#### 6b. First qualified conversation / early pipeline signal
+
+```text
+Hey [FIRST NAME] — first signal.
+
+We’re seeing [N] qualified conversations [today / this week] and
+the team is [working them / dialing follow-ups]. That’s a healthy
+early indicator for Phase 1 — not the finish line, but real motion.
+
+Next: I’ll update you when one converts to a booking / no action
+needed.
+```
+
+#### 6c. First booking
+
+```text
+Hey [FIRST NAME] — first booking is on the board.
+
+[Prospect / time / setter note if useful]. More important than the
+single win: the loop (opt-in → conversation → book) is working.
+We’ll stay on confirmation so show rate doesn’t leak.
+
+Next: [any prep they need] / no action needed — we’ll keep you
+posted on show.
+```
+
+#### 6d. First show
+
+```text
+Hey [FIRST NAME] — they showed.
+
+[Light context]. That’s the outcome we optimize toward. If you
+want a 10-minute debrief after you talk to them, I’m around.
+
+Next: no action needed unless you want that debrief.
+```
+
+#### 6e. Yellow / red KPI (underperformance with owned lever)
+
+```text
+Hey [FIRST NAME] — transparency check.
+
+[Metric] isn’t where we want it yet ([brief reality]). We’re not
+guessing — here’s what we’re pulling:
+
+1. [Lever 1 — owner]
+2. [Lever 2 — owner]
+3. [Lever 3 — owner / timeline]
+
+I’ll report back by [date] with what moved. Questions welcome —
+we want this working as much as you do.
+```
+
+**Personalization cues:** Name the constraint in plain English. Tie
+levers to real owners (MB / CCM / CSM follow-up). Never blame without
+a next step. For diagnosis depth, use
+[Constraint Troubleshooting SOP](../client-success/constraint-troubleshooting-sop.md).
+
+#### 6f. Training / support offer (when habits are the bottleneck)
+
+```text
+Hey [FIRST NAME] — one support offer.
+
+We’re seeing [pattern: soft confirms / no-shows / LO slow to
+follow]. That’s fixable with a short working session on [topic].
+
+Want me to book [15–20 min] this week? I’ll bring [agenda].
+```
+
+#### 6g. Trustpilot / review ask (only when experience is genuinely strong)
+
+```text
+Hey [FIRST NAME] — quick favor when you have a sec.
+
+You’ve been solid to work with on [support / communication /
+early results]. Would you be open to a short Trustpilot review on
+that experience?
+
+Totally fine if not — and I won’t send anything without your OK.
+```
+
+**Personalization cues:** Only ask after a real positive stretch. Never
+tie a review ask to a rescue conversation.
+
+---
+
+### 7. Month 2+ — biweekly pulse + events
+
+**Job:** Softer, higher-value updates. Not status spam.
+
+**Default cadence:** Light pulse about every other week, plus event
+triggers when something meaningful happens (win, phase shift, material
+change, yellow-red, coaching tip worth sharing).
+
+**Skip the biweekly pulse** if you already sent a strong event message
+that same week — don’t double-ping for the sake of the calendar.
+
+**Skeleton (biweekly pulse):**
+
+```text
+Hey [FIRST NAME] — biweekly note.
+
+[One high-value update: win / phase shift / coaching tip / material
+change]. [Meaning for them.]
+
+Next: [ask] / no action needed. Ping me anytime if something feels
+off on your side.
+```
+
+**Filled example:**
+
+```text
+Hey Marcus — biweekly note.
+
+We’re shifting more budget toward the angle that’s producing the
+cleaner conversations (the [angle name] set). That’s the
+optimization phase in practice — less spray, more of what’s
+working.
+
+No action needed. If appointments feel “feast/famine” on your
+calendar, tell me and we’ll look at confirm + show habits together.
+```
+
+**Event triggers (Month 2+):** Same spirit as Month 1 events — wins,
+phase change (testing → optimization → compounding per
+[Client Growth Stages](../client-success/client-growth-stages.md)),
+material product/process changes, or health drops that need a clear
+lever.
+
+---
+
+## How this fits the CS day
+
+Use this playbook during proactive check-ins on the
+[Client Success Daily OS](../../operations/people/client-success-daily-os.md).
+Healthy accounts get stage-appropriate Slack; red accounts get event
+messages with owned levers — not silence until the client complains.
+
+Build ownership and launch gates still follow
+[A-Z Client Onboarding SOP](a-z-client-onboarding-sop.md). CSM narrates;
+MB/Ops execute the checklist.
+
+---
+
+## Related docs
+
+- [CS Touchpoints Queue Design (Mr. Waiz)](../../plans/2026-07-17-cs-touchpoints-queue-design.md) —
+  Follow-ups queue + Client File history (implementation design)
+- [Identity Core](../../company/doctrine-identity-core-april-26.md) —
+  voice and positioning language
+- [Client Growth Stages](../client-success/client-growth-stages.md) —
+  Phase 1–3 framing for Month 1 / Month 2+
+- [Post-Launch Client Success System](../client-success/post-launch-client-success-system.md) —
+  Week 1–4 check-in **calls**
+- [Client Success Daily OS](../../operations/people/client-success-daily-os.md) —
+  daily priority stack
+- [A-Z Client Onboarding SOP](a-z-client-onboarding-sop.md) — build
+  phases and launch gate
+- [Constraint Troubleshooting SOP](../client-success/constraint-troubleshooting-sop.md) —
+  yellow/red diagnosis
+- [Client Success hub](../client-success/README.md)
+
+---
+
+## Metrics (playbook health)
+
+- Every client in build has Post-OB + Mid-build + Pre-launch Slack on
+  record before launch
+- Every new launch gets Launch day + Month 1 expectation reset
+- Month 1 event messages cite a real fact and (if yellow/red) a named
+  lever + owner
+- Month 2+ accounts get a biweekly pulse or a meaningful event — not
+  radio silence for 3+ weeks without cause

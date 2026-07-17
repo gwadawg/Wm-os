@@ -140,3 +140,11 @@ Materials Prepared: A checkbox to confirm you are ready for a call.
 
 CSM Notes: Private internal notes just for you.
 
+## Related docs
+
+- [Client Success Slack Touchpoint Playbook](../onboarding/onboarding-to-launch-client-communication.md) —
+  CSM Slack cadence (Post-OB → Month 2+); use for written updates
+  alongside these weekly check-in calls
+- [Client Growth Stages](client-growth-stages.md) — Phase 1–3 framing
+- [Client Success Daily OS](../../operations/people/client-success-daily-os.md)
+

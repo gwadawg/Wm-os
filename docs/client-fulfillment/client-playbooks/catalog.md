@@ -159,7 +159,7 @@ See [Client Playbooks README](README.md) for how to create new assets.
 | Title | Type | Layer | Shareability | Status | Audience | Delivery |
 |-------|------|-------|--------------|--------|----------|----------|
 | [A-Z Client Onboarding SOP](../onboarding/a-z-client-onboarding-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
-| [Onboarding To Launch Client Communication](../onboarding/onboarding-to-launch-client-communication.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
+| [Client Success Slack Touchpoint Playbook](../onboarding/onboarding-to-launch-client-communication.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 
 ### Product knowledge & compliance (`product-knowledge`)
 

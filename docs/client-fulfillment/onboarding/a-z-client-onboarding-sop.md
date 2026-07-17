@@ -187,6 +187,6 @@ Client-facing: Live Launch Call; Launch notification message.
 
 ## Related Docs
 
-- [Onboarding To Launch Communication](onboarding-to-launch-client-communication.md)
+- [Client Success Slack Touchpoint Playbook](onboarding-to-launch-client-communication.md)
 - [Campaign Phase Performance Blueprint](../client-success/campaign-phase-performance-blueprint.md)
 - [Fulfillment Lead Lifecycle](../fulfillment-lead-lifecycle.md)

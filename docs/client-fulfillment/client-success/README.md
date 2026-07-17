@@ -31,6 +31,8 @@ Post-launch performance, campaign phases, constraints, and account health.
 
 ## Related
 
+- [Client Success Slack Touchpoint Playbook](../onboarding/onboarding-to-launch-client-communication.md) — CSM Slack cadence Post-OB → Month 2+
 - [Fulfillment Operating System](../fulfillment-operating-system.md)
 - [Approved Operating Spine](../../SPINE.md)
 - [CRM Architecture](../crm-architecture/README.md)
+- [Client Success Daily OS](../../operations/people/client-success-daily-os.md)

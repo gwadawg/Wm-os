@@ -415,5 +415,12 @@ When generating client-facing language about performance, always frame concerns 
 
 When in doubt about phase identification, use campaign launch date plus current date to calculate week number. Weeks 1–4 = Phase 1. Weeks 4–8 = Phase 2. Week 8+ = Phase 3.
 
+## Related docs
+
+- [Client Success Slack Touchpoint Playbook](../onboarding/onboarding-to-launch-client-communication.md) —
+  client-facing Slack language by stage (uses Phase 1–3 framing)
+- [Campaign Phase Performance Blueprint](campaign-phase-performance-blueprint.md)
+- [Post-Launch Client Success System](post-launch-client-success-system.md)
+
 Waiz Media  |  Client Fulfillment Doctrine  |  Internal Use Only  |  March 2026
 
