@@ -3,7 +3,7 @@ title: Client Success Slack Touchpoint Playbook
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-07-17
+last_updated: 2026-07-20
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Onboarding/Onboarding (SOPs)/Onboarding To Launch Client Communication.docx
 artifact_type: sop
@@ -47,8 +47,8 @@ the client-facing Slack narrative at each milestone.
 
 ## Trigger
 
-Use this playbook whenever a client crosses a stage gate or a Month 1 /
-Month 2+ event fires (see Cadence map).
+Use this playbook whenever a client crosses a stage gate, a Month 1
+event fires, or a Month 2+ biweekly pulse is due (see Cadence map).
 
 ## Inputs
 
@@ -144,7 +144,7 @@ Milestone-triggered only. No daily message quota.
 | Launch day | Ads live | Confirm live + Week 1 norms |
 | Month 1 — expectation reset | ~Day 5–7 post-launch | Protect motivation; define “good” this month |
 | Month 1 — events | First lead / QC / booking / show; yellow-red KPI; training need | Celebrate or diagnose with a next step |
-| Month 2+ | Biweekly pulse + events | Softer, higher-value; skip pulse if a strong event already covered the week |
+| Month 2+ | Biweekly scheduled pulse only | Softer, higher-value check-in on a fixed cadence |
 
 **Calls:** Weekly check-in calls in Month 1 stay on the
 [Post-Launch Client Success System](../client-success/post-launch-client-success-system.md).
@@ -499,16 +499,16 @@ tie a review ask to a rescue conversation.
 
 ---
 
-### 7. Month 2+ — biweekly pulse + events
+### 7. Month 2+ — biweekly scheduled pulse
 
 **Job:** Softer, higher-value updates. Not status spam.
 
-**Default cadence:** Light pulse about every other week, plus event
-triggers when something meaningful happens (win, phase shift, material
-change, yellow-red, coaching tip worth sharing).
-
-**Skip the biweekly pulse** if you already sent a strong event message
-that same week — don’t double-ping for the sake of the calendar.
+**Default cadence:** Scheduled light pulse every other week from tenure
+anchor + 30 days (Mr. Waiz Follow-ups). **Month 2+ is schedule-only** —
+do not queue new first-lead / first-booking / first-show touchpoints
+after day 30. If something material happens mid-cycle, handle it in the
+next biweekly or on a live check-in call — not as a separate event
+touchpoint in the queue.
 
 **Skeleton (biweekly pulse):**
 
@@ -536,11 +536,10 @@ No action needed. If appointments feel “feast/famine” on your
 calendar, tell me and we’ll look at confirm + show habits together.
 ```
 
-**Event triggers (Month 2+):** Same spirit as Month 1 events — wins,
-phase change (testing → optimization → compounding per
+**What belongs in the pulse:** Wins, phase change (testing → optimization → compounding per
 [Client Growth Stages](../client-success/client-growth-stages.md)),
 material product/process changes, or health drops that need a clear
-lever.
+lever — folded into the scheduled message, not a separate event queue item.
 
 ---
 
@@ -584,5 +583,5 @@ MB/Ops execute the checklist.
 - Every new launch gets Launch day + Month 1 expectation reset
 - Month 1 event messages cite a real fact and (if yellow/red) a named
   lever + owner
-- Month 2+ accounts get a biweekly pulse or a meaningful event — not
+- Month 2+ accounts get a biweekly scheduled pulse — not
   radio silence for 3+ weeks without cause

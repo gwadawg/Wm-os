@@ -3,7 +3,7 @@ title: CS Touchpoints Queue Design (Mr. Waiz)
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-07-17
+last_updated: 2026-07-20
 review_cycle: monthly
 artifact_type: design
 ---
@@ -24,8 +24,9 @@ into a daily clear-the-queue surface in Mr. Waiz without overloading
 | Data model | New `cs_touchpoints` table (Hybrid C) |
 | UI home | Client Success **hub**: Health \| Follow-ups |
 | Complete bar | Slack sent + required `slack_snippet` |
-| Rules v1 | Call-offset **and** first-fire events |
-| Mid-build / M2 biweekly | Time-based fallbacks (snooze/skip OK) |
+| Rules v1 | Call-offset **and** first-fire events **(Month 1 only)** |
+| Mid-build / M2 biweekly | Time-based; M2+ scans all active/onboarding by tenure |
+| Tenure anchor | `launch_date` → fall back `date_signed` |
 | Rule runner | App-side idempotent upserts |
 | Slack auto-send | Out of scope for v1 |
 
@@ -104,8 +105,17 @@ flowchart LR
 | `pre_launch` | Launch appt booked | `scheduled_at` − 1 day |
 | `launch_day` | Launch completed / `launch_date` set | That day |
 | `m1_expectation_reset` | Launch + 6 days | That day |
-| `first_*` | First matching event | Immediate |
-| `m2_biweekly` | After launch + 30 days, then every 14 days | Generator; skip if strong event completed in last 7 days |
+| `first_*` | First matching event **in Month 1 only** (days 0–29 from tenure anchor) | Immediate |
+| `m2_biweekly` | Tenure ≥ 30 days; every 14 days from anchor+30 | Schedule-only for active/onboarding clients |
+
+**Tenure anchor:** `launch_date`, fall back to `date_signed`. Schedule job
+scans all `active` / `onboarding` clients and upserts missing biweekly
+pulses. Event `first_*` hooks do **not** create after day 30.
+
+### Cadence rule (locked 2026-07-20)
+
+- **Month 1:** event-tailored (`first_lead`, `first_booking`, `first_show`) + appointment stages.
+- **Month 2+:** schedule-only biweekly pulses — no new event touchpoints.
 
 ## API
 
@@ -130,12 +140,17 @@ flowchart LR
 
 ## Implementation order
 
-1. Migration + schema mirror + types
-2. Rule helpers + hooks (appointments, ingest, schedule)
-3. Queue APIs + complete validation
-4. Client Success hub + Follow-ups UI
-5. Client File Touchpoints tab
-6. Playbook Related link back to this design
+1. Migration + schema mirror + types — **done**
+2. Rule helpers + hooks (appointments, ingest, schedule) — **done**
+3. Queue APIs + complete validation — **done**
+4. Client Success hub + Follow-ups UI — **done**
+5. Client File Touchpoints tab — **done**
+6. Playbook Related link back to this design — **done**
+
+**Shipped in Mr. Waiz:** `cs_touchpoints` table, rule hooks, APIs,
+Client Success hub (Health | Follow-ups), Client File Touchpoints tab.
+Schedule job: `POST /api/cs-touchpoints/run-schedule` with Bearer
+`CRON_SECRET` or `ADMIN_WEBHOOK_SECRET`.
 
 ## Related
 
