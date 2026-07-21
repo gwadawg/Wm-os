@@ -58,6 +58,7 @@ cadence instead of tribal memory.
 | Recording | Manual URL paste (existing Call Library pattern) |
 | Where it lives | Mr. Waiz (schedule + run + disposition); Wm-os owns cadence copy |
 | Generation | Recurring templates generate instances for a rolling window |
+| Timezone | All `default_time` / instance scheduling in `America/Sao_Paulo` (matches `CALL_CENTER_TIMEZONE`) |
 
 ## Approaches considered
 
@@ -139,7 +140,7 @@ title           text
 theme           text          -- short theme label
 call_type       text          -- maps to team_calls.call_type
 weekday         int[]         -- 1=Mon … 7=Sun; empty = daily Mon–Fri
-default_time    time          -- America/New_York local
+default_time    time          -- America/Sao_Paulo local
 duration_min    int
 host_role       text          -- ccm | client_success | ceo | shared
 attendee_roles  text[]
@@ -188,9 +189,15 @@ UNIQUE (template_id, scheduled_at)
 | `thu-kpi-commitment-check` | Thu | client_success | `team_meeting` |
 | `fri-exec-qa` | Fri | ceo | `team_review` |
 
-Exact default times are set at seed from the Daily OS / restructure docs
-(training morning block; KPI ~25 min; Ops Planning after KPI; Fri Q&A
-afternoon). Adjustable in template rows without code change.
+v1 seed times (`America/Sao_Paulo`), adjustable in template rows:
+
+| Slug | Local time | Duration |
+|------|------------|----------|
+| `daily-setter-training` | 09:00 | 20 min |
+| `mon-kpi-week-plan` | 10:00 | 25 min |
+| `mon-ops-planning` | 10:30 | 60 min |
+| `thu-kpi-commitment-check` | 10:00 | 25 min |
+| `fri-exec-qa` | 16:00 | 40 min |
 
 ## UI
 
@@ -266,7 +273,7 @@ Meeting rules (In / Out) live in `agenda_md` and mirror
 
 ## Testing
 
-- Unit: checklist validation per template; generator weekday math in ET
+- Unit: checklist validation per template; generator weekday math in `America/Sao_Paulo`
 - API: create window → open → patch checks → complete → `team_calls` row
   has expected tags + recording_url
 - UI smoke: list shows today’s series; runbook saves progress
