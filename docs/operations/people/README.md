@@ -25,6 +25,11 @@ Role clarity and daily operating pages for the Waiz team.
 
 **Lead-seat EOD (Mr. Waiz):** [Lead Seat EOD Forms](lead-seat-eod-forms.md) — `/forms/eod/media-buyer`, `/forms/eod/client-success`, `/forms/eod/ccm`.
 
+**Team Meetings (Mr. Waiz):** `/dashboard?view=team_meetings` — scheduled Q3
+runbooks (checklist → recording → disposition → Team Calls). Design:
+[Team Call Runbooks](../../plans/2026-07-21-team-call-runbooks-design.md).
+Cadence/SOP copy is placeholder until authored.
+
 **Media Buyer Command (Mr. Waiz):** `/dashboard?view=team_dashboard_media` — Christian’s daily home (underperforming ads, 7-day launch checks, OB queue).
 
 ## Related
