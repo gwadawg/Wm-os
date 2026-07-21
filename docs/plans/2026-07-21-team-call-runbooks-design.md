@@ -28,7 +28,8 @@ cadence instead of tribal memory.
 ### In (v1)
 
 - Five recurring series from the lean CEO rhythm:
-  - Daily setter training
+  - Mon Setter Weekly Review (CCM + setters)
+  - Daily setter training (Tue–Fri)
   - Mon KPI — Week Plan
   - Mon Ops Planning — Launch + Systems
   - Thu KPI — Commitment Check
@@ -53,7 +54,7 @@ cadence instead of tribal memory.
 
 | Topic | Choice |
 |-------|--------|
-| Meetings | Q3 lean CEO rhythm only (five series above) |
+| Meetings | Q3 lean CEO rhythm (six series incl. Mon setter weekly review) |
 | Who submits | Host / facilitator for that series (one submission per instance) |
 | Recording | Manual URL paste (existing Call Library pattern) |
 | Where it lives | Mr. Waiz (schedule + run + disposition); Wm-os owns cadence copy |
@@ -183,7 +184,8 @@ UNIQUE (template_id, scheduled_at)
 
 | Slug | When | Host | `call_type` |
 |------|------|------|-------------|
-| `daily-setter-training` | Mon–Fri | ccm | `training` |
+| `mon-setter-weekly-review` | Mon | ccm | `team_review` |
+| `daily-setter-training` | Tue–Fri | ccm | `training` |
 | `mon-kpi-week-plan` | Mon | client_success | `team_meeting` |
 | `mon-ops-planning` | Mon | ceo | `team_meeting` |
 | `thu-kpi-commitment-check` | Thu | client_success | `team_meeting` |
@@ -193,11 +195,15 @@ v1 seed times (`America/Sao_Paulo`), adjustable in template rows:
 
 | Slug | Local time | Duration |
 |------|------------|----------|
+| `mon-setter-weekly-review` | 09:00 | 30 min |
 | `daily-setter-training` | 09:00 | 20 min |
 | `mon-kpi-week-plan` | 10:00 | 25 min |
 | `mon-ops-planning` | 10:30 | 60 min |
 | `thu-kpi-commitment-check` | 10:00 | 25 min |
 | `fri-exec-qa` | 16:00 | 40 min |
+
+**Mon Setter Weekly Review (CCM):** last week + this week catch-up, priority
+accounts, day-by-day dial plan for the week, watch shift schedule.
 
 ## UI
 
