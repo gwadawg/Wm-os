@@ -57,6 +57,7 @@ explanation of what went wrong.
 | Doc packaging | Two linked docs; Mon + Thu are **two sections of the meeting SOP** |
 | Delivery | Approach 2 — docs + library + light runbook links |
 | Numbers source of truth | Mr. Waiz live grading + reporting `docs/KPIS.md` (do not copy tier tables into the SOP) |
+| Iteration | Meeting format may be refined in Mr. Waiz as the team runs it; Wm-os SOPs stay the canonical cadence copy and should be updated when the format stabilizes |
 
 ## Architecture
 
