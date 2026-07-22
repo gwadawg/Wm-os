@@ -40,7 +40,11 @@ explanation of what went wrong.
 
 ### Out (this design)
 
-- New disposition fields or structured commitment / RYG board objects.
+- ~~New disposition fields or structured commitment / RYG board objects.~~
+  **Superseded for commitments:** see
+  [2026-07-22-kpi-meeting-commitments-design.md](2026-07-22-kpi-meeting-commitments-design.md)
+  (structured `meeting_commitments` + Team Meetings panels). Checklist keys
+  in this SOP design remain stable.
 - SOPs for other meeting series (setter weekly, daily training, ops planning,
   Fri Exec Q&A).
 - Rewriting the Client Health grader, KPI bands, or full diagnostic rulebook.
@@ -53,7 +57,7 @@ explanation of what went wrong.
 | Audience | Company standard — **positions only** (Client Success, Media Buyer, Call Center Manager, Founder, Ops) |
 | Host | Client Success for Mon and Thu |
 | Success bar | Every red leaves Mon with **action plan + short “what went wrong” explanation**; Thu verifies land / adjust |
-| Notes storage (near-term) | Existing meeting disposition notes; SOP defines copy-paste line format; **no new form fields this pass** |
+| Notes storage (near-term) | **Updated 2026-07-22:** structured Commitments panel + `meeting_commitments` table — see [kpi-meeting-commitments-design](2026-07-22-kpi-meeting-commitments-design.md). Checklist keys unchanged. |
 | Doc packaging | Two linked docs; Mon + Thu are **two sections of the meeting SOP** |
 | Delivery | Approach 2 — docs + library + light runbook links |
 | Numbers source of truth | Mr. Waiz live grading + reporting `docs/KPIS.md` (do not copy tier tables into the SOP) |

@@ -46,7 +46,8 @@ cadence instead of tribal memory.
 - Multi-attendee parallel form fills (host submits once)
 - Editable Google Calendar sync
 - Commitment objects / red-yellow board as first-class DB entities
-  (capture summary text only; Phase 2 structures them)
+  (capture summary text only; **Phase 2 shipped 2026-07-22** — see
+  [kpi-meeting-commitments-design](../superpowers/specs/2026-07-22-kpi-meeting-commitments-design.md))
 - Christian Tue/Wed tech blocks (solo work, not a group call)
 - Setter EOD or lead-seat EOD changes
 
@@ -297,7 +298,9 @@ Meeting rules (In / Out) live in `agenda_md` and mirror
 
 ## Phase 2 hooks
 
-- Structured commitment objects shared with Laura’s KPI board
+- ~~Structured commitment objects shared with Laura’s KPI board~~ →
+  **Done:** [2026-07-22-kpi-meeting-commitments-design.md](../superpowers/specs/2026-07-22-kpi-meeting-commitments-design.md)
+  + Mr. Waiz `meeting_commitments` / Team Meetings panels
 - Fri Q&A intake as its own form feeding Fri instance
 - Auto-pull recording from known conference provider
 - Transcript → `call_intelligence` for team domain
