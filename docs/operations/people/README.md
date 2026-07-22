@@ -28,7 +28,8 @@ Role clarity and daily operating pages for the Waiz team.
 **Team Meetings (Mr. Waiz):** `/dashboard?view=team_meetings` — scheduled Q3
 runbooks (checklist → recording → disposition → Team Calls). Design:
 [Team Call Runbooks](../../plans/2026-07-21-team-call-runbooks-design.md).
-Cadence/SOP copy is placeholder until authored.
+KPI Review cadence: [KPI Review Meeting SOP](kpi-review-meeting-sop.md) ·
+[Under-KPI Diagnosis Ladder](under-kpi-diagnosis-ladder.md).
 
 **Media Buyer Command (Mr. Waiz):** `/dashboard?view=team_dashboard_media` — Christian’s daily home (underperforming ads, 7-day launch checks, OB queue).
 

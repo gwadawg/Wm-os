@@ -92,8 +92,8 @@ If P0 hits more than ~2–3× in a week → raise on **Mon Planning** (system/ti
 
 | When | Meeting | Your job |
 |------|---------|----------|
-| Mon | KPI → then Ops Planning | Your reds + OB tech timeline |
-| Thu | KPI | Your reds + next actions |
+| Mon | KPI → then Ops Planning | Your reds + OB tech timeline — [KPI Review Meeting SOP](kpi-review-meeting-sop.md) |
+| Thu | KPI | Your reds + next actions — same SOP · [Under-KPI Ladder](under-kpi-diagnosis-ladder.md) |
 | Fri | Exec Q&A | Pre-submit questions only |
 
 ## Escalation
