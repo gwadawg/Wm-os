@@ -2,11 +2,12 @@
 title: KPI Meeting Commitments Design
 domain: operations
 owner: client-success
-status: draft
-last_updated: 2026-07-22
+status: superseded
+last_updated: 2026-08-06
 review_cycle: monthly
 artifact_type: overview
 related_docs:
+  - docs/superpowers/specs/2026-08-06-account-week-plans-design.md
   - docs/superpowers/specs/2026-07-21-kpi-review-meeting-sop-design.md
   - docs/plans/2026-07-21-team-call-runbooks-design.md
   - docs/operations/people/kpi-review-meeting-sop.md
@@ -16,6 +17,12 @@ related_docs:
 ---
 
 # KPI Meeting Commitments Design
+
+> **Superseded for the target product path (2026-08-06):** weekly account
+> work with multi-task person/day scheduling now lives in
+> [Account Week Plans Design](2026-08-06-account-week-plans-design.md).
+> Keep this doc as history of the meeting-commitments design;
+> `meeting_commitments` may remain in Mr. Waiz until migration/retire.
 
 ## Purpose
 
