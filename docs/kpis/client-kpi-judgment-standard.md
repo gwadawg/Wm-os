@@ -83,7 +83,7 @@ The legacy docs measure **Booking Rate = booked ÷ leads *contacted*** and **Con
 
 Operationally: `Booked/QL ≈ (cumulative contact rate) × (booking rate per contacted)`. When contact rate over the full dial cadence is high, `Booked/QL ≈ Booking Rate` and the legacy number is usable as-is.
 
-**Mr. Waiz Client Success grading pin (2026-08):** the graded `show_rate` KPI is **Book-to-Conversation** — unique people we booked who eventually spoke to the LO (`show ∪ claimed ∪ live_transfer`), ÷ unique booked. Not calendar slot net show. Use board counts `spoke / unique booked` on Mon/Thu review.
+**Mr. Waiz Client Success grading pin (2026-08):** the graded `show_rate` KPI is **Show Rate** — unique people we booked who eventually spoke to the LO (`show ∪ claimed ∪ live_transfer`), ÷ unique booked. Not **True Show** (slot took-place). Use board counts `spoke / unique booked` on Mon/Thu review.
 
 - [ ] **Founder sign-off:** start reporting booking on a *qualified-lead* basis (`Booked/QL`) so CPConv is fully decomposable. Until then, treat legacy booking rate as an approximation and flag accounts with contact rate < 30%.
 
@@ -115,7 +115,7 @@ Choosing `CPQL ≤ $25` and `CY ≥ 0.167` gives `25 / 0.167 = $150` exactly. Th
 |--------|------------------------|----------|----------------|
 | **CPQL** (Spend ÷ QL) | Above < $18 · At $18–25 · Below $25.01–32 · 911 > $32 | At $20–29.99 · 911 > $35 | Old At-ceiling ($30) **cannot** produce an At-KPI CPConv unless downstream is elite. Tightened to $25 so CPQL "At" actually maps to CPConv "At". |
 | **Conversation Yield (CY = Booked/QL × Show)** | Above > 0.24 · At 0.167–0.24 · Below 0.12–0.167 · 911 < 0.12 | (did not exist) | New derived lever. Replaces judging booking and show in isolation. Floor 0.167 set by the math above. |
-| **Show Rate** (operational key: `show_rate`) | **Book-to-conversation** in Mr. Waiz: unique booked leads who eventually spoke (show ∪ claimed ∪ live transfer) ÷ unique booked. Bands: Above > 70% · At 60–70% · Below 52–60% · 911 < 52% (aligned to Client Success grader ~55/63/70 until re-benchmarked) | Slot “net show” was Shows÷(Shows+No-shows) only — ignored cancels and double-counted rebooks. Book→spoke is recovery-inclusive and what Mon KPI / CCM grade. |
+| **Show Rate** (operational key: `show_rate`) | Unique booked leads who eventually spoke (show ∪ claimed ∪ live transfer) ÷ unique booked. Bands: Above > 70% · At 60–70% · Below 52–60% · 911 < 52%. **True Show** = Shows÷(Shows+No-shows+LO bail) is secondary process quality only. | Slot “net show” only; ignored recovery and multi-path speak. |
 | **Booked/QL** (booking, QL basis) | Above > 34% · At 28–34% · Below 22–28% · 911 < 22% | At 25–30% (contacted basis) · 911 < 20% | Re-based to qualified leads (§2.1) and raised so `Booked/QL × Show` clears the CY floor. |
 | **Lead-to-Qual %** | Above > 65% · At 50–65% · Below 40–50% · 911 < 40% | At 50–65% · 911 < 40% | Unchanged — already consistent. Gates whether a CPQL miss is *quality* (targeting). |
 | **CPL** (Spend ÷ leads) | **Diagnostic only — no independent verdict** (reference: At ~$12–17 implied by CPQL × qual) | At $15–19.99 · 911 > $25 | **Demoted.** CPL = CPQL × Lead-to-Qual. It can never gate a verdict by itself (this is the founder's example). Shown for context, never RED on its own. |
@@ -185,7 +185,7 @@ Read top to bottom; the **first** matching row is the verdict. "CPConv" = W14 ti
 | R3 | **CPQL Below** + **Lead-to-Qual Below** | **Lead Quality** (L1–L2) | Targeting/messaging attracts wrong people. Sharpen archetype. |
 | R4 | **CPQL Below** + **Lead-to-Qual At** + CPL Below | **Lead Cost** (L1) | Acquisition cost itself too high. Rotate creative, widen audience, check frequency. |
 | R5 | **CPQL At** + **CY Below** | **Downstream conversion** (L3/L4) | Split: is `Booked/QL` Below (call center) or Show Below (LO/reminders)? Fix the lower one. |
-| R6 | CPQL At + Booked/QL At + **Book→spoke Below** | **Book→spoke / L4** (confirmations, rebook, speak logging) | GHL reminder sequence + disposition logging + near-term slots + rebook after no-show. |
+| R6 | CPQL At + Booked/QL At + **Show Rate Below** | **Show Rate / L4** (confirmations, rebook, speak logging) | GHL reminder sequence + disposition logging + near-term slots + rebook after no-show. |
 | R7 | **Opt-in Above** + **CPQL Below** | **Qualification too soft** (L2) | Add friction/qual questions. Do **not** celebrate the high opt-in. |
 | R8 | **CTR/Frequency 911 or Below** + **CPConv At/Above** | **WATCH — creative fatigue** | Refresh creative; do **not** change targeting or pause. Re-check in 7 days. |
 | R9 | **All layer metrics At KPI** + **CPConv Below/911** | **DATA_HOLD — attribution** | Stop. No operational changes. Escalate to founder (tracking/dispo issue). |
