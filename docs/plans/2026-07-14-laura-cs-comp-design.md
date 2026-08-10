@@ -183,3 +183,7 @@ Sheet: `logo | product | streak | event | amount`.
 - [Client Success Daily OS](../operations/people/client-success-daily-os.md)
 - [Product Margin Model](../company/product-margin-model.md)
 - [Q3 Pricing + Retention Analysis](../company/reflections/2026-q3-pricing-retention-analysis.md)
+- **Payment streak timeline (Mr. Waiz):** sibling reporting repo
+  `docs/superpowers/specs/2026-08-10-payment-streak-timeline-design.md` —
+  CS Hub **Stickiness** tab derives consecutive full-freight months from
+  `client_billings` (hybrid overrides). Commission dollars stay on this plan.
