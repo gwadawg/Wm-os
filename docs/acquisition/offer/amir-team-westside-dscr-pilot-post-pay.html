@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Westside · You’re Paid · Onboarding Timeline · Waiz Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #061A4A;
+    --royal: #0E2F73;
+    --accent: #4FA3FF;
+    --accent-deep: #2B7DE0;
+    --green: #7CFF7A;
+    --gold: #F5C842;
+    --white: #FFFFFF;
+    --light: #F4F7FC;
+    --dark: #0B1220;
+    --mid: #5B6475;
+    --soft: #8B93A7;
+    --divider: #D1D9F0;
+    --line: rgba(255, 255, 255, 0.12);
+    --shadow: 0 18px 50px rgba(6, 26, 74, 0.12);
+    --radius: 6px;
+    --spine: #4FA3FF;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  a { color: inherit; }
+
+  .banner {
+    background: #0d7a3e;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    padding: 11px 20px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .banner strong { color: var(--white); font-weight: 600; }
+
+  .hero {
+    background:
+      radial-gradient(ellipse 70% 80% at 100% 0%, rgba(124, 255, 122, 0.12), transparent 55%),
+      radial-gradient(ellipse 50% 60% at 0% 100%, rgba(79, 163, 255, 0.18), transparent 50%),
+      var(--navy);
+    color: var(--white);
+    padding: 48px 28px 56px;
+  }
+
+  .hero-inner {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(40px, 5.5vw, 64px);
+    font-weight: 900;
+    line-height: 0.95;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .hero h1 span { color: var(--accent); }
+
+  .hero-sub {
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.78);
+    max-width: 36em;
+    line-height: 1.65;
+    margin-bottom: 22px;
+  }
+  .hero-sub strong { color: var(--white); font-weight: 500; }
+
+  .total-window {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  .total-window dt {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 2px;
+  }
+  .total-window dd {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 28px 72px;
+  }
+
+  .label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 800;
+    color: var(--navy);
+    text-transform: uppercase;
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+
+  .section-lead {
+    font-size: 16px;
+    color: var(--mid);
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 42em;
+  }
+
+  /* ── Roadmap strip (maps the sequence upfront) ── */
+  .roadmap {
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: var(--radius);
+    padding: 22px 20px 20px;
+    margin-bottom: 36px;
+  }
+
+  .roadmap-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .roadmap-head h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--navy);
+    letter-spacing: 0.04em;
+  }
+
+  .roadmap-head span {
+    font-size: 13px;
+    color: var(--soft);
+    font-weight: 500;
+  }
+
+  .roadmap-track {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .roadmap-track::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--navy));
+    opacity: 0.35;
+    z-index: 0;
+  }
+
+  .rm-step {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 4px;
+  }
+
+  .rm-dot {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    box-shadow: 0 0 0 4px var(--white);
+  }
+
+  .rm-step.is-now .rm-dot {
+    background: var(--accent);
+    color: var(--navy);
+    box-shadow: 0 0 0 4px var(--white), 0 0 0 7px rgba(79, 163, 255, 0.35);
+  }
+
+  .rm-step.is-goal .rm-dot {
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  .rm-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--navy);
+    line-height: 1.25;
+  }
+
+  .rm-sub {
+    font-size: 11px;
+    color: var(--soft);
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+
+  .rm-step.is-now .rm-label { color: var(--accent-deep); }
+
+  /* ── Vertical spine timeline ── */
+  .timeline {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  .timeline-rail {
+    position: absolute;
+    left: 27px;
+    top: 28px;
+    bottom: 28px;
+    width: 3px;
+    background: linear-gradient(
+      180deg,
+      var(--accent) 0%,
+      var(--royal) 70%,
+      var(--gold) 100%
+    );
+    border-radius: 2px;
+    opacity: 0.55;
+  }
+
+  .tl-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 0 20px;
+    padding-bottom: 8px;
+  }
+
+  .tl-item:last-child { padding-bottom: 0; }
+
+  .tl-marker {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+  }
+
+  .tl-node {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 5px var(--light);
+    flex-shrink: 0;
+  }
+
+  .tl-item:nth-child(1) .tl-node {
+    background: var(--accent);
+    color: var(--navy);
+    box-shadow: 0 0 0 5px var(--light), 0 0 0 8px rgba(79, 163, 255, 0.25);
+  }
+
+  .tl-item:nth-child(2) .tl-node { background: var(--royal); }
+  .tl-item:nth-child(3) .tl-node { background: var(--accent-deep); }
+  .tl-item:nth-child(4) .tl-node { background: #1a4a9e; }
+  .tl-item.is-finish .tl-node {
+    background: var(--gold);
+    color: var(--navy);
+    box-shadow: 0 0 0 5px var(--light), 0 0 0 8px rgba(245, 200, 66, 0.3);
+  }
+
+  .tl-card {
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: var(--radius);
+    padding: 20px 22px 18px;
+    margin-bottom: 4px;
+  }
+
+  .tl-item.is-now .tl-card {
+    border-color: var(--accent);
+    box-shadow: 0 8px 28px rgba(79, 163, 255, 0.12);
+  }
+
+  .tl-item.is-finish .tl-card {
+    background: var(--navy);
+    border-color: transparent;
+    box-shadow: var(--shadow);
+  }
+
+  .tl-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    margin-bottom: 10px;
+  }
+
+  .tl-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+    background: #eef4ff;
+    padding: 4px 9px;
+    border-radius: 3px;
+  }
+
+  .tl-item.is-now .tl-badge {
+    background: rgba(79, 163, 255, 0.2);
+    color: var(--royal);
+  }
+
+  .tl-item.is-finish .tl-badge {
+    background: rgba(245, 200, 66, 0.18);
+    color: var(--gold);
+  }
+
+  .tl-duration {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--mid);
+  }
+
+  .tl-item.is-finish .tl-duration { color: rgba(255, 255, 255, 0.65); }
+
+  .tl-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--navy);
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+
+  .tl-item.is-finish .tl-card h3 { color: var(--white); }
+
+  .tl-card p {
+    font-size: 15px;
+    color: var(--mid);
+    line-height: 1.6;
+  }
+
+  .tl-item.is-finish .tl-card p { color: rgba(255, 255, 255, 0.75); }
+
+  .tl-card p strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  .tl-item.is-finish .tl-card p strong { color: var(--white); }
+
+  .asap {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #b45309;
+    background: #fff7ed;
+    border: 1px solid #fdba74;
+    padding: 6px 10px;
+    border-radius: 3px;
+  }
+
+  /* Connector between steps */
+  .tl-connector {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0 14px 4px;
+    color: var(--soft);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .tl-connector::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid var(--accent);
+    opacity: 0.7;
+  }
+
+  .tl-item:last-child .tl-connector { display: none; }
+
+  /* Primary dual CTAs — form + calendar */
+  .do-now {
+    margin: 0 0 36px;
+    background:
+      linear-gradient(145deg, rgba(79, 163, 255, 0.07), rgba(124, 255, 122, 0.05)),
+      var(--white);
+    border: 1px solid var(--divider);
+    border-radius: var(--radius);
+    padding: 22px 22px 20px;
+    box-shadow: var(--shadow);
+  }
+
+  .do-now-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 16px;
+    margin-bottom: 16px;
+  }
+
+  .do-now-head p.now-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #b45309;
+  }
+
+  .do-now-head h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(26px, 3.5vw, 34px);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--navy);
+    line-height: 1;
+    width: 100%;
+  }
+
+  .do-now-head .hint {
+    font-size: 14px;
+    color: var(--mid);
+    max-width: 36em;
+    line-height: 1.5;
+  }
+
+  .cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  a.cta-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+    border-radius: var(--radius);
+    padding: 20px 18px 18px;
+    border: 2px solid transparent;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    min-height: 100%;
+  }
+
+  a.cta-card:hover {
+    transform: translateY(-2px);
+  }
+
+  a.cta-card:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  a.cta-card.primary {
+    background: var(--navy);
+    color: var(--white);
+    box-shadow: 0 12px 28px rgba(6, 26, 74, 0.28);
+  }
+  a.cta-card.primary:hover {
+    border-color: var(--accent);
+    box-shadow: 0 16px 36px rgba(6, 26, 74, 0.34);
+  }
+
+  a.cta-card.secondary {
+    background: var(--white);
+    color: var(--dark);
+    border-color: var(--divider);
+  }
+  a.cta-card.secondary:hover {
+    border-color: var(--accent-deep);
+    box-shadow: 0 12px 28px rgba(6, 26, 74, 0.1);
+  }
+
+  .cta-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cta-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  a.cta-card.primary .cta-num {
+    background: var(--green);
+    color: var(--navy);
+  }
+
+  a.cta-card.secondary .cta-num {
+    background: rgba(79, 163, 255, 0.15);
+    color: var(--royal);
+  }
+
+  .cta-kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  a.cta-card.primary .cta-kicker { color: var(--green); }
+  a.cta-card.secondary .cta-kicker { color: var(--accent-deep); }
+
+  .cta-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
+
+  a.cta-card.primary h3 { color: var(--white); }
+  a.cta-card.secondary h3 { color: var(--navy); }
+
+  .cta-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    flex: 1;
+  }
+
+  a.cta-card.primary p { color: rgba(255, 255, 255, 0.78); }
+  a.cta-card.secondary p { color: var(--mid); }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 4px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  a.cta-card.primary .cta-btn {
+    background: var(--green);
+    color: var(--navy);
+  }
+
+  a.cta-card.secondary .cta-btn {
+    background: var(--royal);
+    color: var(--white);
+  }
+
+  .cta-btn .arrow {
+    font-size: 16px;
+    line-height: 1;
+    transition: transform 0.15s ease;
+  }
+
+  a.cta-card:hover .cta-btn .arrow {
+    transform: translateX(3px);
+  }
+
+  .tl-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  a.tl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+
+  a.tl-btn:hover { transform: translateY(-1px); }
+
+  a.tl-btn.form {
+    background: var(--navy);
+    color: var(--white);
+    box-shadow: 0 8px 18px rgba(6, 26, 74, 0.2);
+  }
+
+  a.tl-btn.cal {
+    background: rgba(79, 163, 255, 0.12);
+    color: var(--royal);
+    border: 1.5px solid rgba(43, 125, 224, 0.35);
+  }
+
+  a.tl-btn .arrow { transition: transform 0.12s ease; }
+  a.tl-btn:hover .arrow { transform: translateX(2px); }
+
+  .next-box {
+    margin-top: 32px;
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+  }
+
+  .next-box .now-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #b45309;
+    margin-bottom: 6px;
+  }
+
+  .next-box h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .next-box p {
+    font-size: 15px;
+    color: var(--mid);
+    line-height: 1.55;
+  }
+
+  .next-box p strong { color: var(--navy); }
+
+  .next-box .cta-grid {
+    margin-top: 16px;
+  }
+
+  .doc-footer {
+    background: var(--dark);
+    padding: 28px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+  }
+
+  .doc-footer .inner {
+    max-width: 880px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .doc-footer .brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.06em;
+  }
+
+  @media (max-width: 720px) {
+    .roadmap-track {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 8px;
+    }
+    .roadmap-track::before { display: none; }
+    .cta-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 560px) {
+    .hero, .wrap { padding-left: 20px; padding-right: 20px; }
+    .timeline-rail { left: 21px; }
+    .tl-node { width: 44px; height: 44px; font-size: 18px; }
+    .tl-item { grid-template-columns: 44px 1fr; gap: 0 14px; }
+    .tl-marker { width: 44px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  Payment received · <strong>Team Westside</strong> · Your onboarding path
+</div>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">You’re locked in</p>
+    <h1>Thanks — <span>here’s the path</span></h1>
+    <p class="hero-sub">
+      Paid is step zero. Below is the <strong>order of events</strong> from paperwork to live exclusive DSCR leads —
+      each stop has how long it usually takes.
+    </p>
+    <dl class="total-window">
+      <div>
+        <dt>Full path</dt>
+        <dd>1.5–2.5 weeks</dd>
+      </div>
+      <div>
+        <dt>Finish line</dt>
+        <dd>Leads same day</dd>
+      </div>
+    </dl>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="label">Onboarding sequence</p>
+  <h2 class="section-title">Paid → form → build → launch</h2>
+  <p class="section-lead">
+    Read this as a timeline: <strong>step 1 happens first</strong>, then 2, then 3…
+    Use the two buttons below — form first if you haven’t yet, then book your onboarding call.
+  </p>
+
+  <!-- Dual CTAs: form + calendar — clear click targets -->
+  <section class="do-now" aria-label="Your next actions">
+    <div class="do-now-head">
+      <p class="now-label">Your next two clicks</p>
+      <h2>Start here</h2>
+      <p class="hint">
+        Both open in a new tab. Complete the form as soon as you can, then grab a time on the calendar.
+      </p>
+    </div>
+    <div class="cta-grid">
+      <a
+        class="cta-card primary"
+        href="https://os.waizmedia.net/onboard/dscr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="cta-top">
+          <span class="cta-num">1</span>
+          <span class="cta-kicker">Do this first</span>
+        </div>
+        <h3>DSCR onboarding form</h3>
+        <p>
+          Access, branding, CRM, markets — everything we need to start build-out.
+          Takes a few minutes.
+        </p>
+        <span class="cta-btn">Open form <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a
+        class="cta-card secondary"
+        href="https://PLACEHOLDER-ONBOARDING-CALENDAR"
+        target="_blank"
+        rel="noopener noreferrer"
+        id="ob-calendar-link"
+      >
+        <div class="cta-top">
+          <span class="cta-num">2</span>
+          <span class="cta-kicker">Then book</span>
+        </div>
+        <h3>Onboarding calendar</h3>
+        <p>
+          30–40 min with your project manager. Pick a slot after the form is in
+          so the call is productive.
+        </p>
+        <span class="cta-btn">Book OB call <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- At-a-glance horizontal roadmap -->
+  <div class="roadmap" aria-label="Five-step overview">
+    <div class="roadmap-head">
+      <h3>At a glance · 5 stops</h3>
+      <span>Start left → finish right</span>
+    </div>
+    <div class="roadmap-track">
+      <div class="rm-step is-now">
+        <div class="rm-dot">1</div>
+        <div class="rm-label">Form</div>
+        <div class="rm-sub">Do ASAP</div>
+      </div>
+      <div class="rm-step">
+        <div class="rm-dot">2</div>
+        <div class="rm-label">OB call</div>
+        <div class="rm-sub">30–40 min</div>
+      </div>
+      <div class="rm-step">
+        <div class="rm-dot">3</div>
+        <div class="rm-label">Build</div>
+        <div class="rm-sub">1–2 weeks</div>
+      </div>
+      <div class="rm-step">
+        <div class="rm-dot">4</div>
+        <div class="rm-label">Launch call</div>
+        <div class="rm-sub">Training</div>
+      </div>
+      <div class="rm-step is-goal">
+        <div class="rm-dot">5</div>
+        <div class="rm-label">Leads on</div>
+        <div class="rm-sub">Same day</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detailed vertical timeline -->
+  <ol class="timeline">
+    <div class="timeline-rail" aria-hidden="true"></div>
+
+    <li class="tl-item is-now">
+      <div class="tl-marker">
+        <div class="tl-node">01</div>
+      </div>
+      <div>
+        <article class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-badge">Start here · you</span>
+            <span class="tl-duration">Duration: do ASAP</span>
+          </div>
+          <h3>Onboarding form</h3>
+          <p>
+            Fill this out <strong>as soon as you can</strong> so we can start build-out.
+            You can open it from the button below.
+          </p>
+          <span class="asap">Try to complete today if possible</span>
+          <div class="tl-actions">
+            <a
+              class="tl-btn form"
+              href="https://os.waizmedia.net/onboard/dscr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open DSCR form <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+        <div class="tl-connector">Then</div>
+      </div>
+    </li>
+
+    <li class="tl-item">
+      <div class="tl-marker">
+        <div class="tl-node">02</div>
+      </div>
+      <div>
+        <article class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-badge">Step 2 · with PM</span>
+            <span class="tl-duration">Duration: 30–40 minutes</span>
+          </div>
+          <h3>Onboarding call</h3>
+          <p>
+            Live call with your <strong>project manager</strong>.
+            Get logged in, confirm access, and make sure we have everything we need
+            (page, CRM, branding, markets).
+          </p>
+          <div class="tl-actions">
+            <a
+              class="tl-btn cal"
+              href="https://PLACEHOLDER-ONBOARDING-CALENDAR"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-ob-calendar
+            >
+              Book on calendar <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+        <div class="tl-connector">Then</div>
+      </div>
+    </li>
+
+    <li class="tl-item">
+      <div class="tl-marker">
+        <div class="tl-node">03</div>
+      </div>
+      <div>
+        <article class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-badge">Step 3 · our team</span>
+            <span class="tl-duration">Duration: up to 1–2 weeks</span>
+          </div>
+          <h3>Tech · ads · funnel build-out</h3>
+          <p>
+            We build your campaigns, landing page, and drip.
+            Timing depends on access and how fast reviews turn around —
+            this is usually the longest stop on the path.
+          </p>
+        </article>
+        <div class="tl-connector">Then</div>
+      </div>
+    </li>
+
+    <li class="tl-item">
+      <div class="tl-marker">
+        <div class="tl-node">04</div>
+      </div>
+      <div>
+        <article class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-badge">Step 4 · together</span>
+            <span class="tl-duration">Duration: training call</span>
+          </div>
+          <h3>Launch call</h3>
+          <p>
+            Training on best practices, dial path, and readiness check
+            so you’re caught up before spend goes live.
+          </p>
+        </article>
+        <div class="tl-connector">Then</div>
+      </div>
+    </li>
+
+    <li class="tl-item is-finish">
+      <div class="tl-marker">
+        <div class="tl-node">05</div>
+      </div>
+      <div>
+        <article class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-badge">Finish · go-live</span>
+            <span class="tl-duration">Duration: leads same day</span>
+          </div>
+          <h3>Launch · leads on</h3>
+          <p>
+            You can start receiving exclusive inbound DSCR leads
+            <strong>as soon as that day</strong>.
+            After go-live, <strong>you control volume</strong> — we throttle pace
+            to match how hard you want the desk working.
+          </p>
+        </article>
+      </div>
+    </li>
+  </ol>
+
+  <div class="next-box">
+    <p class="now-label">Your actions right now</p>
+    <h3>Form first · then book the call</h3>
+    <p>
+      Same two links as above — form unlocks build-out; the calendar locks in your
+      <strong>30–40 min onboarding call</strong> so we don’t lose time waiting on email.
+    </p>
+    <div class="cta-grid">
+      <a
+        class="cta-card primary"
+        href="https://os.waizmedia.net/onboard/dscr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="cta-top">
+          <span class="cta-num">1</span>
+          <span class="cta-kicker">Required</span>
+        </div>
+        <h3>Open form</h3>
+        <p>DSCR onboarding intake on Waiz OS.</p>
+        <span class="cta-btn">os.waizmedia.net/onboard/dscr <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a
+        class="cta-card secondary"
+        href="https://PLACEHOLDER-ONBOARDING-CALENDAR"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-ob-calendar
+      >
+        <div class="cta-top">
+          <span class="cta-num">2</span>
+          <span class="cta-kicker">Schedule</span>
+        </div>
+        <h3>Book call</h3>
+        <p>Onboarding calendar — pick any open slot.</p>
+        <span class="cta-btn">Open calendar <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="doc-footer">
+  <div class="inner">
+    <div class="brand">WAIZ MEDIA</div>
+    <div>Team Westside · Post-payment · 5-step onboarding path</div>
+  </div>
+</footer>
+
+</body>
+</html>
