@@ -185,5 +185,5 @@ Sheet: `logo | product | streak | event | amount`.
 - [Q3 Pricing + Retention Analysis](../company/reflections/2026-q3-pricing-retention-analysis.md)
 - **Payment streak timeline (Mr. Waiz):** sibling reporting repo
   `docs/superpowers/specs/2026-08-10-payment-streak-timeline-design.md` —
-  CS Hub **Stickiness** tab derives consecutive full-freight months from
+  Client Billing **Stickiness** tab derives consecutive full-freight months from
   `client_billings` (hybrid overrides). Commission dollars stay on this plan.
