@@ -30,7 +30,7 @@ Read before building any DSCR asset. Update here first if the offer, funnel, or 
 
 ## Inputs
 
-- [Intelligence ICP DSCR](intelligence-icp-dscr.md), [Doctrine DSCR Marketing](doctrine-dscr-marketing.md)
+- [Intelligence ICP DSCR](intelligence-icp-dscr.md), [GTM Brief](dscr-gtm-positioning-brief.md)
 - [DSCR Compliance Guardrails](dscr-compliance-guardrails.md)
 
 ## Outputs
@@ -142,7 +142,6 @@ All **outbound conversational** messaging (SMS, email nurture, booking confirmat
 
 - [DSCR DNA README](README.md)
 - [Intelligence ICP DSCR](intelligence-icp-dscr.md)
-- [Doctrine DSCR Marketing](doctrine-dscr-marketing.md)
-- [Ad Copy And Angle Library (DSCR)](ad-copy-angle-library-dscr.md)
-- [DSCR Ads Playbook](dscr-ads-playbook.md)
+- [GTM Brief](dscr-gtm-positioning-brief.md)
+- [Campaign Master Angles](dscr-campaign-master-angles.md)
 - [DSCR Compliance Guardrails](dscr-compliance-guardrails.md)

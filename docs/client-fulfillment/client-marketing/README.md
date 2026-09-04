@@ -21,7 +21,7 @@ All DSCR client assets live in the **[DSCR DNA pod](../dscr-dna/README.md)** —
 |------|-----|
 | Strategy / positioning | [DSCR GTM Brief](../dscr-dna/dscr-gtm-positioning-brief.md) |
 | Nurture / Laura booking | [DSCR Lead Nurture And Booking](../dscr-dna/dscr-nurture-and-booking-laura.md) |
-| Ads strategy | [DSCR Ads Playbook](../dscr-dna/dscr-ads-playbook.md) |
+| Ads strategy | [Intelligence ICP DSCR](../dscr-dna/intelligence-icp-dscr.md) · [GTM Brief](../dscr-dna/dscr-gtm-positioning-brief.md) |
 
 Execution SOPs (campaign setup, statics, funnels) → [media-buying/](../media-buying/README.md).
 

@@ -3,47 +3,106 @@ title: DSCR Campaign Master Angles
 domain: client-fulfillment
 owner: founder
 status: draft
-last_updated: 2026-06-12
+last_updated: 2026-09-04
 review_cycle: monthly
 artifact_type: creative
 ---
 
 # DSCR Campaign Master Angles
 
-> **DRAFT — REFINANCE ONLY.** The five locked master angles for DSCR refinance campaigns. Each is a
-> full ad concept (persona, big idea, hooks, primary text, visual direction, BOF variant) and runs as
-> its own ad set. TOF copy is **number-free**; BOF variants use **program-fact tokens** per
-> [DSCR Funnel-Stage Messaging](dscr-funnel-stage-messaging.md), filled only from the client's current
-> approved pricing sheet. Every asset passes [DSCR Compliance Guardrails](dscr-compliance-guardrails.md).
+> **Human expand only — not default AI context.**
+> AI creative loads [intelligence-icp-dscr.md](intelligence-icp-dscr.md)
+> only. This file = full writeups for **five proven angles** + MOF/BOF
+> tokens. Not a closed menu — invent beyond these in the ICP; come here
+> when expanding a winner into a full ad set.
 
 ## Purpose
 
-The canonical creative slate for DSCR campaign launches: five master angles covering cold-traffic psychology (loss aversion, urgency, curiosity/reveal), an outcome-led mid-funnel bridge, and a dedicated BOF closer.
+Expand a proven ICP angle into a full ad set. Hold stage logic + program-fact
+tokens so numbers stay evergreen per client. New angles invented in testing
+don't need a writeup here until they win.
 
 ## Scope
 
-Meta primary (Financial Products & Services Special Ad Category); reusable on Google/YouTube. LO/brand voice in ads; Laura is the follow-up voice only. Adapt to each client's voice and market — don't run verbatim.
+Meta primary (Special Ad Category); reusable on Google/YouTube. Adapt to
+client voice — don't run verbatim.
 
 ## Trigger
 
-New DSCR campaign launch or creative refresh. Fill the client token sheet first (activation checklist in [DSCR Funnel-Stage Messaging](dscr-funnel-stage-messaging.md)).
+Human expands a chosen ICP angle, or fills MOF/BOF tokens from a client's
+approved pricing sheet.
 
 ## Inputs
 
-- [DSCR Funnel-Stage Messaging](dscr-funnel-stage-messaging.md) (stage logic + token system)
-- [Intelligence ICP DSCR](intelligence-icp-dscr.md) · [Doctrine DSCR Marketing](doctrine-dscr-marketing.md)
-- Client token sheet (from current approved pricing sheet)
+- [Intelligence ICP DSCR](intelligence-icp-dscr.md) (locked slate)
+- Client token sheet from current approved pricing sheet
+- [DSCR Compliance Guardrails](dscr-compliance-guardrails.md) before ship
 
 ## Outputs
 
-- Five persona-mapped ad concepts ready for client adaptation and production.
+- Full ad-set copy for one angle; filled client token sheet for MOF/BOF
 
 ## Quality Bar
 
-- Align with [Identity Core](../../company/doctrine-identity-core-april-26.md) and [SOURCE-OF-TRUTH](../../SOURCE-OF-TRUTH.md).
-- One persona per concept · refinance only · business-purpose · no guarantees ("may qualify," "many close") · TOF number-free · BOF tokens from the approved sheet only · proof substantiated.
+- One persona per concept · refinance only · business-purpose
+- TOF number-free · BOF tokens from approved sheet only · no guarantees
+- Proof substantiated
 
 ## Operating Content
+
+### Stage logic (TOF / MOF / BOF)
+
+| Stage | Job | Numbers? |
+|-------|-----|----------|
+| **TOF idea** | Stop scroll with an **idea or pain** | Prefer **no** — filters optional later |
+| **Filter / spec card** | Self-qualify junk out (loan range, FICO, LTV, APR, appraisal) | **Yes** — confirmed tokens only |
+| **MOF** | Competence: mechanism + proof | Soft tokens / substantiated proof |
+| **BOF** | Qualification stack + low-friction CTA | **Yes** — tokenized program facts |
+
+### Lead-filter token sheet (confirm before creative)
+
+**Waiz working defaults for DSCR filter copy** — overwrite per client /
+lender program every refresh. Do not ship numbered creatives until this
+row is filled and checked.
+
+| Token | Confirm default | Use in copy | Notes |
+|-------|-----------------|-------------|-------|
+| `[NO_APPRAISAL]` | Yes on **qualifying products only** | "No appraisal on qualifying products" | Never imply every DSCR loan; omit if program doesn't allow |
+| `[MIN_LOAN]` | $75,000 | "Financing from [MIN_LOAN]" | Pair with max |
+| `[MAX_LOAN]` | $5,000,000 | "… to [MAX_LOAN]" | |
+| `[FICO_FLOOR]` | 660 | "FICO [FICO_FLOOR]+" / "as low as …" | Never "you qualify at" |
+| `[APR]` | **Must confirm — changes** | "From [APR] APR" only if client approves rate-in-ads | Highest FTC MAP risk |
+| `[MAX_LTV]` | 80% | "Up to [MAX_LTV] LTV" | Program-dependent (cash-out vs rate/term may differ) |
+
+**Other tokens (as needed):**
+
+| Token | Framing when filled |
+|-------|---------------------|
+| `[MAX_LTV_CASHOUT]` / `[MAX_LTV_RT]` | Split LTV if cash-out ≠ rate/term |
+| `[MIN_DSCR]` | "Properties cash-flowing at …+ may qualify" |
+| `[CLOSE_RANGE]` | "Many close in …" — never guaranteed |
+| `[STATE]` | Licensed-state list only |
+| `[PROOF_OUTCOME]` | Real, documented, representative funded outcome |
+
+**Hard rules:** never invent tokens from memory. Soften with "as low as /
+up to / from / may qualify." Standing disclosure where licensing requires.
+Re-verify `[APR]` and `[NO_APPRAISAL]` every refresh.
+
+### Per-client activation
+
+1. Fill lead-filter token sheet from approved pricing + lender guidelines
+2. Confirm which products get `[NO_APPRAISAL]`
+3. Confirm whether `[APR]` is allowed in ads for this client
+4. Confirm licensed `[STATE]` + Meta Special Ad Category
+5. Verify every `[PROOF_OUTCOME]`
+6. Compliance pre-flight on filled variants
+7. Re-verify tokens on every creative refresh
+
+### UTM
+
+```
+utm_source={{site_source_name}}&utm_medium={{adset.name}}&utm_campaign={{campaign.name}}&utm_content={{ad.name}}&utm_term={{placement}}
+```
 
 ### The slate
 
@@ -58,19 +117,27 @@ New DSCR campaign launch or creative refresh. Fill the client token sheet first 
 Each angle runs as its own ad set (distinct algorithmic signal). TOF angles (1, 2, 3, 5) feed one
 retargeting pool; angle 4 serves that pool from day one. Kill/scale per
 [DSCR KPI And Test Scorecard](dscr-kpi-and-test-scorecard.md); plan refresh cadence up front
-(~76% of category ads die inside two weeks per [competitor intel](dscr-competitor-ad-intelligence.md)).
+(~76% of category ads die inside two weeks — plan concept volume).
 
 ---
 
 ### Angle 1 — The Idle-Equity Tax · Portfolio Scaler · TOF
 
-**Big idea:** Leaving equity parked isn't "playing it safe" — it's an expense. Every month it sits, it costs the next deal. Loss framing attacks the status-quo bias that keeps investors from acting.
+**Big idea:** Leaving equity parked isn't "playing it safe" — it's an expense.
+Every month it sits, it costs the next deal. Loss framing attacks the
+status-quo bias that keeps investors from acting.
+
+**Angle mode:** [Behavioral modeling / equity velocity](intelligence-icp-dscr.md)
+— reveal how scaling investors already operate; break the "leave equity alone"
+belief; sell identity and habit before naming DSCR.
 
 **Hooks:**
 
 1. Your equity is just sitting there. Put it to work.
 2. The most expensive thing you own is the equity you're not using.
 3. You don't have to sell a door to get your capital back.
+4. Real investors don't wait for capital. They take it from what they already own.
+5. If you already have a portfolio, you've done the hardest part.
 
 **Primary text:**
 
@@ -160,32 +227,44 @@ retargeting pool; angle 4 serves that pool from day one. Kill/scale per
 >
 > CTA: **See the Checklist**
 
-**BOF core asset (tokenized):**
+**BOF / filter-spec core asset (tokenized — confirm sheet first):**
 
-> **See if your rental qualifies — the whole checklist, up front:**
-> ✅ FICO as low as `[FICO_FLOOR]`
-> ✅ Cash out up to `[MAX_LTV_CASHOUT]` of the property's value
-> ✅ Property cash-flowing at `[MIN_DSCR]`+
-> ✅ No tax returns, W-2s, or DTI — the rent qualifies the loan
+> **See if your rental qualifies — the stack, up front:**
+> ✅ FICO `[FICO_FLOOR]`+
+> ✅ Financing `[MIN_LOAN]`–`[MAX_LOAN]`
+> ✅ Up to `[MAX_LTV]` LTV
+> ✅ `[NO_APPRAISAL]` *(qualifying products only — omit line if not offered)*
+> ✅ From `[APR]` APR *(omit entire line if rate-in-ads not approved)*
+> ✅ No tax returns / W-2s — qualify on the rent
 > ✅ Close in your LLC
-> ✅ Many close in `[CLOSE_RANGE]`
 > *Program-dependent; subject to underwriting and property qualification. Business-purpose investment financing — non-owner-occupied property only.*
 >
 > CTA: **Check Your Property in 2 Minutes — No Credit Pull, No Obligation**
 
-**Visual:** Clean checklist card, single accent color, zero stock photography. Design it like a term sheet, not an ad — the specificity *is* the creative.
+**Visual:** Clean checklist / rate-card, single accent, zero stock photography.
+Specificity *is* the creative — and the junk-lead filter.
 
 ---
 
 ### Angle 5 — "What You Could Do With It" · Equity-Holding Investor · TOF/MOF
 
-**Big idea:** Stop selling the mechanism, sell the *uses*. Call out the investor, then paint the concrete moves this refinance unlocks. Outcome vividness + the velocity-of-capital driver.
+**Big idea:** Stop selling the mechanism, sell the *uses*. Call out the
+investor, then paint the concrete moves this refinance unlocks. Outcome
+vividness + the velocity-of-capital driver.
+
+**Angle mode:** same
+[behavioral modeling](intelligence-icp-dscr.md) lane as Angle 1 —
+peer strategy reveal ("here's how operators scale") rather than loan pitch.
+Ego stroke for portfolio owners; aspiration for smaller landlords who already
+own doors.
 
 **Hooks:**
 
 1. Real estate investors: here's what a DSCR cash-out refinance actually lets you do.
 2. If you own rentals, this one refinance can fund your next three moves.
 3. Your rental already earned you this — most investors just never collect it.
+4. Real investors don't wait for capital. They take it from what they already own.
+5. If you already have a portfolio, you've done the hardest part.
 
 **Primary text:**
 
@@ -220,9 +299,8 @@ retargeting pool; angle 4 serves that pool from day one. Kill/scale per
 
 ## Related Docs
 
-- [DSCR Funnel-Stage Messaging](dscr-funnel-stage-messaging.md)
-- [Ad Copy And Angle Library (DSCR)](ad-copy-angle-library-dscr.md)
-- [DSCR Ad Creative — Batch 01](dscr-ad-creative-batch-01.md)
-- [DSCR Ads Playbook](dscr-ads-playbook.md)
+- [Intelligence ICP DSCR](intelligence-icp-dscr.md) — AI creative (locked slate)
+- [DSCR GTM Brief](dscr-gtm-positioning-brief.md) — beachhead + test rules
 - [DSCR KPI And Test Scorecard](dscr-kpi-and-test-scorecard.md)
 - [DSCR Compliance Guardrails](dscr-compliance-guardrails.md)
+- [DSCR Static Image Generator](dscr-static-image-generator-project.md)

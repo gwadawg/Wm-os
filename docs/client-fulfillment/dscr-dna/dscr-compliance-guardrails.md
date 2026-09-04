@@ -98,10 +98,8 @@ If any answer is no, the output is **not ready** — flag for human/counsel revi
 ## Related
 
 - [DSCR DNA README](README.md)
-- [Doctrine DSCR](doctrine-dscr.md)
-- [Doctrine DSCR Marketing](doctrine-dscr-marketing.md)
-- [Intelligence DSCR Product](intelligence-dscr-product.md)
 - [Intelligence ICP DSCR](intelligence-icp-dscr.md)
+- [Intelligence DSCR Product](intelligence-dscr-product.md)
 - RM analog (do not apply RM rules to DSCR): [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md)
 
 ### Sources (public, 2026 — for the draft compliance summary above)

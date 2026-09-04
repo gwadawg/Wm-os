@@ -3,7 +3,7 @@ title: Client Fulfillment — Media Buying
 domain: client-fulfillment
 owner: media-buying-lead
 status: active
-last_updated: 2026-07-08
+last_updated: 2026-08-24
 review_cycle: weekly
 ---
 
@@ -30,24 +30,30 @@ Boundaries: [Waiz vs client marketing](../waiz-vs-client-marketing-boundaries.md
 
 ## DSCR refinance (product pod)
 
-**Start:** [DSCR DNA README](../dscr-dna/README.md) — quick load by task.
+**Start:** [DSCR DNA README](../dscr-dna/README.md).
+**AI ads/copy/statics:** load **only**
+[intelligence-icp-dscr.md](../dscr-dna/intelligence-icp-dscr.md).
+Expand → [Campaign Master Angles](../dscr-dna/dscr-campaign-master-angles.md).
+Test order → [GTM Brief](../dscr-dna/dscr-gtm-positioning-brief.md).
 
 | Doc | Status |
 |-----|--------|
-| [DSCR Ads Playbook](../dscr-dna/dscr-ads-playbook.md) | `draft` |
-| [Ad Copy And Angle Library (DSCR)](../dscr-dna/ad-copy-angle-library-dscr.md) | `draft` |
-| [MB DSCR Ad Copy Standards](../dscr-dna/mb-dscr-ad-copy-standards.md) | `draft` |
-| [DSCR Campaign Master Angles](../dscr-dna/dscr-campaign-master-angles.md) | `draft` |
-| [DSCR Funnel-Stage Messaging](../dscr-dna/dscr-funnel-stage-messaging.md) | `draft` |
-| [DSCR Static Image Generator (Ideogram → Mr. Waiz)](../dscr-dna/dscr-static-image-generator-project.md) | `draft` |
+| [Intelligence ICP DSCR](../dscr-dna/intelligence-icp-dscr.md) | `draft` — AI SOT |
+| [DSCR Campaign Master Angles](../dscr-dna/dscr-campaign-master-angles.md) | `draft` — expand + tokens |
+| [DSCR GTM Brief](../dscr-dna/dscr-gtm-positioning-brief.md) | `draft` |
+| [DSCR Static Image Generator](../dscr-dna/dscr-static-image-generator-project.md) | `draft` |
 | [DSCR Funnel Form Spec](../dscr-dna/dscr-funnel-form-spec.md) | `draft` |
 | [DSCR Lander Build Pack](../dscr-dna/dscr-lander-build-pack.md) | `draft` |
+
+*(Angle library, ads playbook, MB copy standards, funnel-stage messaging,
+doctrines = superseded stubs — see DSCR DNA README.)*
 | [Ad development workflow](ad-development-workflow.md) | RM + DSCR learn/create loop (Mr. Waiz → Meta) |
 
 ## Creative system
 
 | Folder | What it does | Status |
 |--------|--------------|--------|
+| [Creative production loop](creative-production-loop.md) | Umbrella: research → make → Drive → Mr. Waiz → OS swipe (stills and video) | `draft` |
 | [creative-studio/](creative-studio/README.md) | Brainstorm RM ad ideas + write compliant video scripts (skill: `rm-creative-studio`) | `draft` |
 | [creative-research/](creative-research/README.md) | Decompose ads you admire (Poppy.ai input) into reusable editing/script patterns | `draft` |
 

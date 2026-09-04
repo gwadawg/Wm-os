@@ -22,6 +22,7 @@ includes `Source` + `Date`. For Supabase calls, use `supabase:call:{uuid}` as So
 | Swipe / creator ref | `personal/inspiration/swipe-file.md` | Swipe entry with `Production format` | auto |
 | Competitor pattern | `personal/inspiration/competitor-research.md` | Pattern log row | auto |
 | New production format | `personal/format-library.md` | New format section | ask |
+| Carousel layout / size / export rule | `docs/content-engine/carousel-production.md` | Edit SOP quality bar | ask — do not create a second carousel SOP |
 | No home for theme | `personal/_gaps.md` | Open gaps row | auto |
 
 ## Business lane (Waiz Media)
@@ -92,7 +93,7 @@ Cite sources as `supabase:ad:{uuid}`.
 | Editing style | `creative-research/editing-styles-catalog.md` | Table row with Source swipe | ask until 3rd repeat |
 | Loser / fatigue pattern | `creative-research/losers-log.md` | Log row with reason + date | auto |
 | RM angle validated by data | `reverse-mortgage-dna/` angle docs | ask | ask |
-| DSCR angle | `dscr-dna/ad-copy-angle-library-dscr.md` | ask | ask |
+| DSCR angle | `dscr-dna/intelligence-icp-dscr.md` + `dscr-dna/dscr-campaign-master-angles.md` | ask | ask |
 | Compliance-sensitive claim | RM compliance guardrails | — | ask — never auto |
 | Unresolved theme | `client-fulfillment/media-buying/_gaps.md` | Gap row | auto |
 

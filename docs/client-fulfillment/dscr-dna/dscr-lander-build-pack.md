@@ -421,7 +421,7 @@ Judged on **refi-ready CPL → booked → showed** per the
 
 **URL/UTM convention:** one Perspective funnel (or variant page) per cell with distinct slugs, e.g.
 `/dscr-rent` (A1), `/dscr-exit` (A2), `/dscr-terms` (B). UTMs per
-[MB DSCR Ad Copy Standards](mb-dscr-ad-copy-standards.md) so the scorecard can split angle × lander.
+[Campaign Master Angles](dscr-campaign-master-angles.md) so the scorecard can split angle × lander.
 
 #### 5.2 Build checklist (per [Perspective Funnel Setup SOP](../media-buying/perspective-funnel-setup-sop.md))
 

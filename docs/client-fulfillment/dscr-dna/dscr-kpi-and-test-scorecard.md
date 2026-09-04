@@ -73,7 +73,7 @@ Leads failing 1–2 are **disqualified** (out of scope), not "low quality" — t
 
 - **Judge on the funnel, not vanity metrics.** A high-CTR ad that produces unqualified leads loses to a lower-CTR ad that books refi-ready investors. Weight toward **CPL at acceptable lead quality** and, once volume allows, **cost per booked/showed**.
 - **Let an ad spend ~2–3× target CPL before judging** (set the figure with the media buyer).
-- **Kill** concepts below the lead-quality or CPL bar; **scale** winners with variations (per the [ads playbook](dscr-ads-playbook.md)).
+- **Kill** concepts below the lead-quality or CPL bar; **scale** winners with variations (per [GTM test rules](dscr-gtm-positioning-brief.md)).
 - Track **winning angle × persona** so the next creative batch leans into what books, not just what clicks.
 
 ### Weekly scorecard (template)
@@ -85,7 +85,7 @@ Leads failing 1–2 are **disqualified** (out of scope), not "low quality" — t
 ### Pre-launch tracking checklist
 
 - [ ] Meta/Google pixel + `lead` event firing on form submit (verified with a test lead)?
-- [ ] UTM convention live (see [MB DSCR Ad Copy Standards](mb-dscr-ad-copy-standards.md))?
+- [ ] UTM convention live (see [Campaign Master Angles](dscr-campaign-master-angles.md))?
 - [ ] CRM tags for refi-ready vs. DQ vs. booked vs. showed?
 - [ ] Calendar/booking events flowing back to the scorecard?
 - [ ] Funded-loan outcomes reported back from the LO (close the loop)?
@@ -93,7 +93,9 @@ Leads failing 1–2 are **disqualified** (out of scope), not "low quality" — t
 ## Related Docs
 
 - [DSCR Offer And Funnel Map](dscr-offer-and-funnel-map.md)
-- [DSCR Ads Playbook](dscr-ads-playbook.md)
-- [MB DSCR Ad Copy Standards](mb-dscr-ad-copy-standards.md)
+- [Intelligence ICP DSCR](intelligence-icp-dscr.md)
+- [Campaign Master Angles](dscr-campaign-master-angles.md)
+- [GTM Brief](dscr-gtm-positioning-brief.md)
+- [DSCR Compliance Guardrails](dscr-compliance-guardrails.md)
 - [DSCR Lead Nurture And Booking — Laura](dscr-nurture-and-booking-laura.md)
 - [DSCR Compliance Guardrails](dscr-compliance-guardrails.md)

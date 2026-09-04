@@ -173,27 +173,25 @@ Definition of done: <checklist>
   `doctrine-reverse-mortgage.md`, `intelligence-rm-product.md`,
   `rm-compliance-guardrails.md`, `doctrine-rm-marketing.md`.
 - Output: `docs/client-fulfillment/dscr-dna/intelligence-icp-dscr.md`,
-  `doctrine-dscr.md`, `intelligence-dscr-product.md`, `dscr-compliance-guardrails.md`,
-  `doctrine-dscr-marketing.md`.
+  `intelligence-dscr-product.md`, `dscr-compliance-guardrails.md`,
+  `dscr-gtm-positioning-brief.md`, `dscr-campaign-master-angles.md`.
 - Risks: **ICP inversion** (real-estate investors, not retirees) — different
   psychographics, platforms, proof. **Compliance regime change** (DSCR is largely
   business-purpose lending vs consumer HUD/FHA) — get this confirmed before any copy.
-- DoD: ICP with personas + top objections; product doctrine; compliance guardrails;
-  all `status: draft`; cross-linked; pod README created.
+- DoD: One lean ICP (AI creative SOT) with personas + selling points + NEVER list;
+  thin product mechanics; compliance guardrails; GTM beachhead; optional master-angle
+  expand doc; all `status: draft`; cross-linked; pod README created. **Do not** clone
+  RM into parallel doctrine essays / angle libraries / ads playbooks — those dilute AI.
 
 ### 02 — Offer / angles / objections  (skills: copywriting + marketing-psychology)
-- Clone: `docs/client-fulfillment/media-buying/ad-copy-angle-library-rm.md` + the
-  objections section of `intelligence-icp-dscr.md` (from 01).
-- Output: `docs/client-fulfillment/media-buying/ad-copy-angle-library-dscr.md`.
+- Fold angles + objections into `intelligence-icp-dscr.md` (proven slate + invent-freely).
+- Expand winners only into `dscr-campaign-master-angles.md` (tokens + full writeups).
 - Risks: angles must map to investor pains (cash-flow qualifying, portfolio scale,
-  speed/closing), not retiree security framing.
+  speed/closing), not retiree security framing. Don't create a second angle menu.
 
 ### 03 — Ads / creative  (skills: copywriting + marketing-psychology)
-- Clone: `docs/client-fulfillment/client-marketing/reverse-mortgage-ads-playbook.md`,
-  `rm-ad-playbook.md`, `docs/client-fulfillment/media-buying/mb-rm-ad-copy-standards.md`,
-  `docs/client-fulfillment/client-marketing/meta-andromeda-rm-rules.md`.
-- Output: `docs/client-fulfillment/client-marketing/dscr-ads-playbook.md`,
-  `docs/client-fulfillment/media-buying/mb-dscr-ad-copy-standards.md`.
+- Creative rules live in the ICP + GTM test rules — not a separate ads playbook.
+- Statics: `dscr-static-image-generator-project.md` (knowledge = ICP only).
 - Risks: creative/compliance rules differ; confirm platform ad-policy treatment for the
   investor offer.
 

@@ -12,8 +12,9 @@ artifact_type: creative
 
 > **DRAFT — REFINANCE ONLY · NUMBER-FREE.** Conversion copy for the DSCR funnel: landing-page sections,
 > angle-matched variants, a VSL script, and the opt-in form (the canonical refi-readiness questions).
-> Message-matches [DSCR Ad Creative — Batch 01](dscr-ad-creative-batch-01.md) and the offer/CTA in
-> [DSCR Offer And Funnel Map](dscr-offer-and-funnel-map.md). Passes
+> Message-matches the offer/CTA in
+> [DSCR Offer And Funnel Map](dscr-offer-and-funnel-map.md). Voice from
+> [Intelligence ICP DSCR](intelligence-icp-dscr.md). Passes
 > [DSCR Compliance Guardrails](dscr-compliance-guardrails.md).
 
 ## Purpose
@@ -31,7 +32,7 @@ New client funnel build or page refresh — swap in the client's brand, proof, a
 ## Inputs
 
 - Offer + qualifying questions: [DSCR Offer And Funnel Map](dscr-offer-and-funnel-map.md)
-- Angles/headlines: [Ad Copy And Angle Library (DSCR)](ad-copy-angle-library-dscr.md)
+- Angles/headlines: [Intelligence ICP DSCR](intelligence-icp-dscr.md) · [Campaign Master Angles](dscr-campaign-master-angles.md)
 - Personas: [Intelligence ICP DSCR](intelligence-icp-dscr.md)
 
 ## Outputs
@@ -209,7 +210,6 @@ Does four jobs: confirm, let high-intent leads **self-book instead of waiting** 
 ## Related Docs
 
 - [DSCR Offer And Funnel Map](dscr-offer-and-funnel-map.md)
-- [DSCR Ad Creative — Batch 01](dscr-ad-creative-batch-01.md)
-- [Ad Copy And Angle Library (DSCR)](ad-copy-angle-library-dscr.md)
 - [Intelligence ICP DSCR](intelligence-icp-dscr.md)
+- [Campaign Master Angles](dscr-campaign-master-angles.md)
 - [DSCR Compliance Guardrails](dscr-compliance-guardrails.md)

@@ -27,7 +27,7 @@ What others in your space are doing — patterns to learn from, gaps to fill.
    - Meta Ad Library: keyword search — ads running 30+ days
 2. **Run actor** in Apify UI (see manifest for actor IDs and example inputs):
    - Instagram: `apify/instagram-scraper`
-   - Meta Ads: `apify/facebook-ads-scraper` (same method as [DSCR competitor intel](../../../client-fulfillment/dscr-dna/dscr-competitor-ad-intelligence.md))
+   - Meta Ads: `apify/facebook-ads-scraper` (same method as DSCR `_research/` scrapes; distill into [GTM Brief](../../../client-fulfillment/dscr-dna/dscr-gtm-positioning-brief.md))
 3. **Export raw** to archive (never into OS git):
    ```
    wm-content-archive/research/apify/YYYY-MM-DD-platform-scope.json

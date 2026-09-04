@@ -134,12 +134,10 @@ See [Client Playbooks README](README.md) for how to create new assets.
 
 | Title | Type | Layer | Shareability | Status | Audience | Delivery |
 |-------|------|-------|--------------|--------|----------|----------|
-| [Ad Copy And Angle Library (DSCR)](../dscr-dna/ad-copy-angle-library-dscr.md) | playbook | canonical | lo-course | draft | team | github, team-drive |
 | [Ad Copy And Angle Library (RM)](../media-buying/ad-copy-angle-library-rm.md) | playbook | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [Ad Development Workflow (RM Client Ads)](../media-buying/ad-development-workflow.md) | playbook | canonical | internal-fulfillment | active | client, team | github, team-drive |
 | [Ads For Dummies WaizMedia SOP](../media-buying/ads-for-dummies-waizmedia-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [AI RM Ad Image Creation SOP](../media-buying/ai-rm-ad-image-creation-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
-| [DSCR Ads Playbook](../dscr-dna/dscr-ads-playbook.md) | playbook | canonical | lo-course | draft | team | github, team-drive |
 | [Fulfillment Lead Lifecycle](../fulfillment-lead-lifecycle.md) | overview | canonical | internal-fulfillment | draft | team | github, team-drive |
 | [Higgsfield Format Modules (Testimonial + Educational)](../media-buying/creative-studio/higgsfield-format-modules.md) | playbook | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [Higgsfield Prompt Builder (RM UGC)](../media-buying/creative-studio/higgsfield-prompt-builder.md) | playbook | canonical | internal-fulfillment | draft | client, team | github, team-drive |
@@ -165,12 +163,9 @@ See [Client Playbooks README](README.md) for how to create new assets.
 
 | Title | Type | Layer | Shareability | Status | Audience | Delivery |
 |-------|------|-------|--------------|--------|----------|----------|
-| [Doctrine DSCR](../dscr-dna/doctrine-dscr.md) | doctrine | canonical | lo-course | draft | team | github, team-drive |
-| [Doctrine DSCR Marketing](../dscr-dna/doctrine-dscr-marketing.md) | doctrine | canonical | lo-course | draft | team | github, team-drive |
 | [Doctrine Reverse Mortgage](../reverse-mortgage-dna/doctrine-reverse-mortgage.md) | doctrine | canonical | lo-course | active | team | github, team-drive |
 | [Doctrine RM Marketing](../reverse-mortgage-dna/doctrine-rm-marketing.md) | doctrine | canonical | lo-course | active | team | github, team-drive |
 | [DSCR Compliance Guardrails](../dscr-dna/dscr-compliance-guardrails.md) | doctrine | canonical | lo-course | draft | team | github, team-drive |
-| [DSCR Funnel-Stage Messaging (TOF / MOF / BOF)](../dscr-dna/dscr-funnel-stage-messaging.md) | playbook | canonical | lo-course | draft | team | github, team-drive |
 | [DSCR GTM And Positioning Brief](../dscr-dna/dscr-gtm-positioning-brief.md) | doctrine | canonical | lo-course | draft | team | github, team-drive |
 | [DSCR Static Image Generator — Claude Project Build Pack](../dscr-dna/dscr-static-image-generator-project.md) | sop | canonical | lo-course | draft | team | github, team-drive |
 | [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md) | doctrine | canonical | lo-course | active | team | github, team-drive |
@@ -190,15 +185,10 @@ Safe for prospect LO course modules. See [shareability boundaries](../shareabili
 - [Nurture Framework](../client-marketing/playbook-nurture-framework.md) — `lead-nurture`
 - [Lead Nurture — Course Material](../course-material/lead-nurture-playbook.md) — `lead-nurture`
 - [RM Borrower ICP — Client Education](../course-material/rm-borrower-icp-education.md) — `lead-nurture`
-- [Ad Copy And Angle Library (DSCR)](../dscr-dna/ad-copy-angle-library-dscr.md) — `meta-ads-creative`
-- [DSCR Ads Playbook](../dscr-dna/dscr-ads-playbook.md) — `meta-ads-creative`
 - [Setting Up Facebook Lead Form](../course-material/sop-setting-up-facebook-lead-form.md) — `meta-ads-creative`
-- [Doctrine DSCR](../dscr-dna/doctrine-dscr.md) — `product-knowledge`
-- [Doctrine DSCR Marketing](../dscr-dna/doctrine-dscr-marketing.md) — `product-knowledge`
 - [Doctrine Reverse Mortgage](../reverse-mortgage-dna/doctrine-reverse-mortgage.md) — `product-knowledge`
 - [Doctrine RM Marketing](../reverse-mortgage-dna/doctrine-rm-marketing.md) — `product-knowledge`
 - [DSCR Compliance Guardrails](../dscr-dna/dscr-compliance-guardrails.md) — `product-knowledge`
-- [DSCR Funnel-Stage Messaging (TOF / MOF / BOF)](../dscr-dna/dscr-funnel-stage-messaging.md) — `product-knowledge`
 - [DSCR GTM And Positioning Brief](../dscr-dna/dscr-gtm-positioning-brief.md) — `product-knowledge`
 - [DSCR Static Image Generator — Claude Project Build Pack](../dscr-dna/dscr-static-image-generator-project.md) — `product-knowledge`
 - [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md) — `product-knowledge`

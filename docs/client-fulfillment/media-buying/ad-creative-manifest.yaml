@@ -15,6 +15,8 @@ triggers:
 
 load_order:
   - ad-development-workflow.md
+  - ad-naming-convention.md
+  - ad-name-library.yaml
   - ../../operations/ad-intelligence-bridge.md
   - creative-research/script-archetypes-catalog.md
   - creative-research/editing-styles-catalog.md
@@ -49,7 +51,8 @@ product_routing:
   - creative-studio/
   - reverse-mortgage-dna/
   dscr:
-  - dscr-dna/ad-copy-angle-library-dscr.md
+  - dscr-dna/intelligence-icp-dscr.md
+  - dscr-dna/dscr-campaign-master-angles.md
   broad_forward:
   - client-marketing/
 

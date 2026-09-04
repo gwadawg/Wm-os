@@ -825,24 +825,6 @@ entries:
   last_updated: '2026-07-01'
   source: override
   canonical_parent: docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
-- repo_path: docs/client-fulfillment/dscr-dna/ad-copy-angle-library-dscr.md
-  title: Ad Copy And Angle Library (DSCR)
-  artifact_type: playbook
-  content_layer: canonical
-  audience:
-  - team
-  delivery:
-  - github
-  - team-drive
-  shareability: lo-course
-  status: draft
-  owner: media-buying-lead
-  domain: client-fulfillment
-  delivery_group: meta-ads-creative
-  product: dscr
-  methodology_sources: []
-  last_updated: '2026-06-02'
-  source: scan
 - repo_path: docs/client-fulfillment/media-buying/ad-copy-angle-library-rm.md
   title: Ad Copy And Angle Library (RM)
   artifact_type: playbook
@@ -918,24 +900,6 @@ entries:
   product: reverse-mortgage
   methodology_sources: []
   last_updated: '2026-05-21'
-  source: scan
-- repo_path: docs/client-fulfillment/dscr-dna/dscr-ads-playbook.md
-  title: DSCR Ads Playbook
-  artifact_type: playbook
-  content_layer: canonical
-  audience:
-  - team
-  delivery:
-  - github
-  - team-drive
-  shareability: lo-course
-  status: draft
-  owner: media-buying-lead
-  domain: client-fulfillment
-  delivery_group: meta-ads-creative
-  product: dscr
-  methodology_sources: []
-  last_updated: '2026-06-02'
   source: scan
 - repo_path: docs/client-fulfillment/fulfillment-lead-lifecycle.md
   title: Fulfillment Lead Lifecycle
@@ -1217,42 +1181,6 @@ entries:
   methodology_sources: []
   last_updated: '2026-05-21'
   source: scan
-- repo_path: docs/client-fulfillment/dscr-dna/doctrine-dscr.md
-  title: Doctrine DSCR
-  artifact_type: doctrine
-  content_layer: canonical
-  audience:
-  - team
-  delivery:
-  - github
-  - team-drive
-  shareability: lo-course
-  status: draft
-  owner: founder
-  domain: client-fulfillment
-  delivery_group: product-knowledge
-  product: dscr
-  methodology_sources: []
-  last_updated: '2026-05-30'
-  source: scan
-- repo_path: docs/client-fulfillment/dscr-dna/doctrine-dscr-marketing.md
-  title: Doctrine DSCR Marketing
-  artifact_type: doctrine
-  content_layer: canonical
-  audience:
-  - team
-  delivery:
-  - github
-  - team-drive
-  shareability: lo-course
-  status: draft
-  owner: founder
-  domain: client-fulfillment
-  delivery_group: product-knowledge
-  product: dscr
-  methodology_sources: []
-  last_updated: '2026-06-02'
-  source: scan
 - repo_path: docs/client-fulfillment/reverse-mortgage-dna/doctrine-reverse-mortgage.md
   title: Doctrine Reverse Mortgage
   artifact_type: doctrine
@@ -1306,24 +1234,6 @@ entries:
   product: dscr
   methodology_sources: []
   last_updated: '2026-05-30'
-  source: scan
-- repo_path: docs/client-fulfillment/dscr-dna/dscr-funnel-stage-messaging.md
-  title: DSCR Funnel-Stage Messaging (TOF / MOF / BOF)
-  artifact_type: playbook
-  content_layer: canonical
-  audience:
-  - team
-  delivery:
-  - github
-  - team-drive
-  shareability: lo-course
-  status: draft
-  owner: founder
-  domain: client-fulfillment
-  delivery_group: product-knowledge
-  product: dscr
-  methodology_sources: []
-  last_updated: '2026-06-12'
   source: scan
 - repo_path: docs/client-fulfillment/dscr-dna/dscr-gtm-positioning-brief.md
   title: DSCR GTM And Positioning Brief

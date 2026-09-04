@@ -3,7 +3,7 @@ title: Ad Intelligence Bridge — Supabase to Wm-os
 domain: operations
 owner: founder
 status: active
-last_updated: 2026-06-29
+last_updated: 2026-08-24
 review_cycle: quarterly
 artifact_type: playbook
 ---
@@ -14,7 +14,9 @@ artifact_type: playbook
 
 **One-sentence job:** When an owned ad beats our winner thresholds over a defined window, we capture why in one distilled swipe and promote repeating patterns to catalogs.
 
-**Ad development entry:** [ad-development-workflow.md](../client-fulfillment/media-buying/ad-development-workflow.md)
+**Production loop (umbrella):** [creative-production-loop.md](../client-fulfillment/media-buying/creative-production-loop.md)
+
+**Ad development entry (RM):** [ad-development-workflow.md](../client-fulfillment/media-buying/ad-development-workflow.md)
 
 ## System of record
 
@@ -22,8 +24,8 @@ artifact_type: playbook
 |--------|------|-------------------------------------|
 | **Supabase — WM Reporting** | Layer 0: `ad_library`, `meta_ad_insights`, funnel `events` | Yes (canonical operational data) |
 | **Wm-os (git)** | Layer 2: distilled swipes, script archetypes, editing styles | No — patterns only |
-| **Creative studio outputs** | Layer 3: dated script + Higgsfield outputs | No — per-ad deliverables |
-| **wm-content-archive/ads/** | Optional mirror for Poppy dumps, frames, mp4 | Yes (outside git) |
+| **Creative studio outputs** | Layer 3: dated **markdown** scripts (not PNG/MP4) | No — per-ad deliverables |
+| **wm-content-archive/ads/** | Optional bulky dumps (Poppy, frames) **outside git** — not an agent stills cache | Yes (outside git) |
 
 Supabase project: **WM Reporting** (`fszmndldcvrrmitfbwde`). Same database as the Mr. Waiz dashboard (`call-center-reporting-template`).
 
@@ -40,7 +42,8 @@ Layer 2 — Wm-os distilled knowledge (git)
   creative-research/swipes/ · script-archetypes-catalog · editing-styles-catalog · losers-log
 
 Layer 3 — Content outputs
-  creative-studio/outputs/ · client ad batches
+  creative-studio/outputs/ (markdown scripts only) · client ad batches
+  Drive stores the file (humans). Mr. Waiz stores what the agent reads (`summary`, tags, type, KPIs).
 ```
 
 **Rule:** Layer 0 owns raw creative text and metrics. Layers 2+ never store `meta_ad_insights` daily rows or duplicate full `summary` text from `ad_library`.
@@ -50,7 +53,7 @@ Layer 3 — Content outputs
 | Pipeline | Source | OS destination | Use when |
 |----------|--------|----------------|----------|
 | **Owned winners** | Mr. Waiz `ad_library` + performance rollups | `creative-research/` swipes + catalogs | Scripting RM/DSCR client ads |
-| **Competitor intel** | Apify, Meta Ad Library, Poppy swipes | `creator-research` / `dscr-competitor-ad-intelligence.md` | External format research only |
+| **Competitor intel** | Apify, Meta Ad Library, Poppy swipes | `creator-research` / distill into `dscr-dna/dscr-gtm-positioning-brief.md` | External format research only |
 
 Do not pull competitor Apify intel when scripting owned RM ads via [rm-creative-studio](../../.claude/skills/rm-creative-studio/SKILL.md).
 
@@ -122,7 +125,7 @@ Log every new creative at launch so performance rolls up to one row.
 
 | Field | Use |
 |-------|-----|
-| **ad_name** | Short slug — same string in Meta Ads Manager. DSCR format: `dscr_[visual]_[spec1]_[spec2]_[spec3]` |
+| **ad_name** | Short slug — same string in Meta Ads Manager. Canonical rules: [ad-naming-convention.md](../client-fulfillment/media-buying/ad-naming-convention.md) + [ad-name-library.yaml](../client-fulfillment/media-buying/ad-name-library.yaml). Default: `{product}_{concept}_{fmt}_v{#}[letter]`. DSCR rate-card exception: `dscr_[visual]_[spec1]_[spec2]_[spec3]` |
 | **summary** | Strategy: funnel stage, audience, hypothesis, named pattern. Primary input for knowledge capture. |
 | **visual_notes** | Layout, colors, verbatim on-image copy. |
 | **Description / overview (UI)** | One easy sentence — use the `overview` line from the DSCR static generator registration block; paste into summary too if Mr. Waiz has a single description field. |
@@ -151,7 +154,7 @@ os_refs:
 | Editing style | `editing-styles-catalog.md` | ask until 3rd repeat |
 | Loser / fatigue pattern | `creative-research/losers-log.md` | auto |
 | RM angle validated by data | `reverse-mortgage-dna/` | ask |
-| DSCR angle | `dscr-dna/ad-copy-angle-library-dscr.md` | ask |
+| DSCR angle | `dscr-dna/dscr-campaign-master-angles.md` (expand) / `dscr-dna/intelligence-icp-dscr.md` (AI) | ask |
 | Compliance-sensitive claim | RM compliance guardrails | ask — never auto |
 
 Full matrix: [knowledge-capture routing-table](../../.claude/skills/knowledge-capture/routing-table.md).
@@ -210,7 +213,7 @@ order by updated_at desc;
 
 - `meta_ad_insights` daily rows
 - Full `summary` duplicated outside swipe decomposition
-- Video/mp4 files (use Drive URL in Supabase + optional `wm-content-archive/ads/`)
+- Video/mp4/PNG files (humans keep them on Drive; agent reads `summary` / tags / KPIs in Mr. Waiz, not `drive_url`)
 - Client names from cross-client winners
 - Competitor Apify dumps mixed into owned-winner swipes
 

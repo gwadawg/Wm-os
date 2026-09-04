@@ -73,7 +73,7 @@ Load this page first for any client-fulfillment question. Follow links to the ca
 | Product pod (load first) | [DSCR DNA](dscr-dna/README.md) |
 | Strategy | [DSCR GTM And Positioning Brief](dscr-dna/dscr-gtm-positioning-brief.md) |
 | Offer anchor | [DSCR Offer And Funnel Map](dscr-dna/dscr-offer-and-funnel-map.md) |
-| Ads & creative | [DSCR Ads Playbook](dscr-dna/dscr-ads-playbook.md), [Ad Copy And Angle Library (DSCR)](dscr-dna/ad-copy-angle-library-dscr.md), [DSCR Static Image Generator](dscr-dna/dscr-static-image-generator-project.md) |
+| Ads & creative | [Intelligence ICP DSCR](dscr-dna/intelligence-icp-dscr.md) (AI), [Campaign Master Angles](dscr-dna/dscr-campaign-master-angles.md) (expand), [DSCR Static Image Generator](dscr-dna/dscr-static-image-generator-project.md) |
 | Funnel / lander | [DSCR Lander Build Pack](dscr-dna/dscr-lander-build-pack.md), [DSCR Funnel Form Spec](dscr-dna/dscr-funnel-form-spec.md) |
 | Nurture | [DSCR Lead Nurture And Booking — Laura](dscr-dna/dscr-nurture-and-booking-laura.md) |
 | Setter / team training | [DSCR Team Product FAQ](dscr-dna/dscr-team-product-faq.md), [DSCR Setter Script](dscr-dna/dscr-setter-appointment-script.md) |
@@ -99,7 +99,7 @@ Load this page first for any client-fulfillment question. Follow links to the ca
 Load the guardrails for the **client's product line**:
 
 - **Reverse mortgage:** [RM Compliance Guardrails](reverse-mortgage-dna/rm-compliance-guardrails.md), [Doctrine Reverse Mortgage](reverse-mortgage-dna/doctrine-reverse-mortgage.md), [Doctrine RM Marketing](reverse-mortgage-dna/doctrine-rm-marketing.md)
-- **DSCR refinance:** [DSCR Compliance Guardrails](dscr-dna/dscr-compliance-guardrails.md), [Doctrine DSCR](dscr-dna/doctrine-dscr.md), [Doctrine DSCR Marketing](dscr-dna/doctrine-dscr-marketing.md)
+- **DSCR refinance:** [DSCR Compliance Guardrails](dscr-dna/dscr-compliance-guardrails.md), [Intelligence ICP DSCR](dscr-dna/intelligence-icp-dscr.md)
 
 ## AI Quick Load Order
 
