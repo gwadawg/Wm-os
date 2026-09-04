@@ -1,0 +1,73 @@
+# CSM kit allowlist — paths relative to Wm-os repo root.
+# Promote target: sibling ../wm-csm-kit/source/wm-os/
+# Brand extracts refresh kit brand/ separately.
+
+kit_relative_root: ../wm-csm-kit
+source_subdir: source/wm-os
+
+docs:
+  - docs/client-fulfillment/fulfillment-operating-system.md
+  - docs/client-fulfillment/client-success/README.md
+  - docs/client-fulfillment/onboarding/README.md
+  - docs/client-fulfillment/shareability-boundaries.md
+  - docs/client-fulfillment/waiz-vs-client-marketing-boundaries.md
+  - docs/client-fulfillment/onboarding/a-z-client-onboarding-sop.md
+  - docs/client-fulfillment/onboarding/onboarding-to-launch-client-communication.md
+  - docs/client-fulfillment/client-success/post-launch-client-success-system.md
+  - docs/client-fulfillment/client-success/campaign-phase-performance-blueprint.md
+  - docs/client-fulfillment/client-success/constraint-troubleshooting-sop.md
+  - docs/client-fulfillment/client-success/fulfillment-constraint-diagnosis-kpi-standards.md
+  - docs/client-fulfillment/client-success/reset-call-sop.md
+  - docs/client-fulfillment/client-success/client-growth-stages.md
+  - docs/client-fulfillment/client-success/overdue-payments-and-ghosting-clients.md
+  - docs/client-fulfillment/client-success/client-success-daily-responsibilities.md
+  - docs/operations/people/client-success-daily-os.md
+  - docs/operations/people/kpi-review-meeting-sop.md
+  - docs/operations/people/under-kpi-diagnosis-ladder.md
+  - docs/operations/people/team-responsibility-directory.md
+  - docs/kpis/client-kpi-judgment-standard.md
+  - docs/kpis/client-diagnostic-playbook-runnable.md
+  - docs/kpis/client-performance-diagnostic-rulebook.md
+  - docs/client-fulfillment/client-playbooks/README.md
+  - docs/client-fulfillment/client-playbooks/PLAYBOOK-FORMAT.md
+  - docs/client-fulfillment/client-playbooks/SHAREABILITY-CHECKLIST.md
+  - docs/templates/client-playbook-template.md
+  - docs/client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md
+  - docs/client-fulfillment/dscr-dna/dscr-compliance-guardrails.md
+  - docs/company/doctrine-brand-and-visual-identity-april-26.md
+  - docs/templates/wm-team-doc-format-spec.md
+  - docs/templates/wm-team-draft-authoring-contract.md
+
+# Paths that need redaction hooks in promote-csm-kit.py
+redact:
+  - docs/client-fulfillment/client-success/overdue-payments-and-ghosting-clients.md
+
+# Also mirror into kit warm folders after promote
+mirrors:
+  - src: docs/client-fulfillment/shareability-boundaries.md
+    dest: boundaries/shareability-boundaries.md
+  - src: docs/client-fulfillment/waiz-vs-client-marketing-boundaries.md
+    dest: boundaries/waiz-vs-client-marketing-boundaries.md
+  - src: docs/client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md
+    dest: product/rm-compliance-guardrails.md
+  - src: docs/client-fulfillment/dscr-dna/dscr-compliance-guardrails.md
+    dest: product/dscr-compliance-guardrails.md
+  - src: docs/company/doctrine-brand-and-visual-identity-april-26.md
+    dest: brand/source/doctrine-brand-and-visual-identity-april-26.md
+
+brand:
+  # Refresh tokens from this HTML (:root CSS vars)
+  css_source: docs/content-engine/production/carousel-kit/canvas.html
+  # Fallback offer sheet if canvas missing
+  css_fallback: docs/acquisition/offer/angelo-castello-dscr-offer-sheet.html
+  doctrine: docs/company/doctrine-brand-and-visual-identity-april-26.md
+
+never_promote_globs:
+  - docs/company/**
+  - docs/acquisition/**
+  - docs/plans/**
+  - "**/expense*"
+  - docs/SPINE.md
+  - scripts/**
+  - config/**
+# Note: doctrine brand path is explicitly allowlisted above as an exception.

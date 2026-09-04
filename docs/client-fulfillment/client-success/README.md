@@ -36,3 +36,4 @@ Post-launch performance, campaign phases, constraints, and account health.
 - [Approved Operating Spine](../../SPINE.md)
 - [CRM Architecture](../crm-architecture/README.md)
 - [Client Success Daily OS](../../operations/people/client-success-daily-os.md)
+- [CSM Kit Sync](../../operations/systems/csm-kit-sync.md) — promote CS-safe docs into sibling `wm-csm-kit` (**Promote to CSM kit?** when adding docs)
