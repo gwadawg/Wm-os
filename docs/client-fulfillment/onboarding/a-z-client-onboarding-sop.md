@@ -3,7 +3,7 @@ title: A-Z Client Onboarding SOP
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-06-10
+last_updated: 2026-09-04
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Onboarding/Updated A-Z Onboarding Document.docx
 artifact_type: sop
@@ -13,180 +13,186 @@ artifact_type: sop
 
 ## Purpose
 
-Gated, step-by-step onboarding from payment through launch.
+Gated client onboarding from close through go-live. Each step exists for a clear handoff reason — so the next person (or system) can do their job without confusion, chase-downs, or rework.
 
 ## Scope
 
-CSM, tech, media buying, fulfillment manager from close to go-live.
+Closer, CSM, tech/ops, media buying, and fulfillment from payment through launch.
 
 ## Trigger
 
-New client payment confirmed and New Client Form submitted.
+New client payment confirmed; Closer submits the New Client Form.
 
 ## Inputs
 
 - New Client Form
-- Onboarding form
-- Kickoff form
-- QA form
-- Launch form
+- Onboarding Form
+- Kickoff Form
+- QA Form
+- Launch Form
 
 ## Outputs
 
-- Live ads
-- Slack channels
-- GHL configured
-- Launch call complete
+- CSM fully briefed for the OB call
+- Client equipped and OB call booked
+- Account buildable without further client chase
+- Ops / media buying working from full project clarity
+- Setup owners accountable for completed work
+- Client trained, expectations set, account live with correct status
 
 ## Quality Bar
 
 - Align with [Identity Core](../../company/doctrine-identity-core-april-26.md) and [SOURCE-OF-TRUTH](../../SOURCE-OF-TRUTH.md).
-- Client-facing copy must follow [RM Compliance Guardrails](../../client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md) when applicable.
+- Client-facing copy must follow product compliance guardrails when applicable ([RM](../reverse-mortgage-dna/rm-compliance-guardrails.md) / [DSCR](../dscr-dna/dscr-compliance-guardrails.md)).
+- No stage starts until its gate is complete.
+- After Kickoff, ops and media buying should not need to ask CSM or the client for missing setup facts.
 
 ## Operating Content
 
-Updated A-Z Onboarding Document
+### Core principles
 
-Updated A-Z Onboarding Document
+1. **Gated workflow** — each step only starts when the prior gate is done.
+2. **Handoff clarity** — every form and call exists to transfer complete context to the next role.
+3. **No chase after Kickoff** — client-facing collection ends at Kickoff; build runs from a complete packet.
+4. **Ownership at QA** — whoever built a piece confirms it; missed items stay on that owner.
 
-This document outlines the complete, step-by-step client onboarding process, integrating the original A-Z technical setup with the newly structured dependency and communication framework.
+**System of record (activation):** Mr. Waiz (Supabase `clients`) holds the master client record. ClickUp Client Hub is the task layer. Make.com orchestrates — call Mr. Waiz **before** GHL contact creation and Slack setup. Do not manually add every new close in Mr. Waiz Client Roster (that tab is for corrections / missing fields).
 
-Core Principles
+---
 
-Gated Workflow: Tasks only begin when their required input (milestone) is completed.
+### Step 1 — New Client Form
 
-Clear Communication: Client communication is tied to specific stage changes, not internal confusion.
+**Gate:** Closer submits the New Client Form after payment / agreement.
 
-Systematic Readiness: Launch readiness is a calculated state based on QA and department completion.
+**Why this step exists**
 
-## Phase 1: New Client Paid & Activation
+1. **Activate the system** — fire automations that create the client record, tasks, Slack channels, and notifications so onboarding actually starts.
+2. **Brief Client Success** — capture everything CSM needs to walk into the onboarding call already understanding the project (offer, deal context, who the client is, what was sold). CSM should not hop on cold or confused.
 
-This phase kicks off once a new client has formally agreed to the terms of service and completed the payment. It involves critical actions by the Closer and automated steps to initiate the onboarding journey.
+**Owner:** Closer (form). Automations (Mr. Waiz → GHL → Slack → ClickUp).
 
-**System of record:** Mr. Waiz (Supabase `clients` table) holds the master client record for reporting, billing, and CEO metrics. ClickUp Client Hub remains the task execution layer for onboarding checklists. Make.com orchestrates both — call Mr. Waiz **before** GHL contact creation and Slack setup.
+**Unlocks:** Step 2 outreach and CSM prep.
 
-Actions & Dependencies
+---
 
-Closer fills out the **GHL New Client Form** (Business Name, Client Name, Email, Phone, Contract, Offer, etc.).
+### Step 2 — Outreach
 
-Make.com automation (in order):
+**Gate:** Welcome / outreach sequence runs; CSM engages to book the OB call.
 
-1. **Mr. Waiz** — `POST /api/admin/onboard` creates/updates the Supabase client (`lifecycle_status: new_account`) and a ClickUp Client Hub task; returns `client_id` and `clickup_task_id`.
-2. **GHL** — contact creation in the client subaccount (unchanged).
-3. **Slack** — team notification, manager assignment, channel creation (General & Scheduling).
-4. **ClickUp** — downstream onboarding checklist tasks may reference the Client Hub task id from step 1.
+**Why this step exists**
 
-Do **not** manually add clients in Mr. Waiz Client Roster for every new close — that tab is for corrections and missing fields (e.g. `ghl_location_id`).
+1. **Equip the client** — give them everything they need (forms, access links, Slack/Skool, reminders) so they can move without friction.
+2. **Show we are on it** — immediate, organized contact signals that delivery has started.
+3. **Schedule the OB call** — lock the next live milestone so the timeline does not stall.
 
-Communication
+**Owner:** Automations (welcome assets) + CSM (call / book).
 
-Internal: Slack notification alerts the team.
+**Unlocks:** Client path to Step 3; calendar for Step 4.
 
-Client-facing: No direct communication yet beyond the sales handoff.
+---
 
-## Phase 2: Welcome Email & CSM Outreach
+### Step 3 — Onboarding Form (OB Form)
 
-This phase focuses on formally welcoming the client, providing essential resources, and scheduling the onboarding call.
+**Gate:** Client submits the Onboarding Form.
 
-Actions & Dependencies
+**Why this step exists**
 
-Automation sends the Onboarding Welcome Email (includes Onboarding Form link, contract reminder, Slack/Skool sign-in).
+Collect the **deep client-side detail** required to build the account — business/legal facts, markets, assets, access paths, and anything else that creates clarity before the live call. This is the client’s structured dump of “who we are and what you need from us.”
 
-CSM is notified internally to prepare for engagement.
+**Owner:** Client (submit). Automations (notify, Drive, task update). Tech may start gated work that only needs form data (e.g. A2P when EIN is present).
 
-CSM calls the client to welcome them, schedule the Onboarding Call, and remind them to complete the Onboarding Form.
+**Unlocks:** Step 4 with enough raw material to run a useful OB call.
 
-Communication
+---
 
-Client-facing: Welcome email sent; CSM phone call.
+### Step 4 — Onboarding Call (OB Call)
 
-## Phase 3: Onboarding Form Submitted
+**Gate:** Live OB call completed; remaining collectibles confirmed on the call.
 
-The client submits the detailed onboarding form, providing critical information for technical setup and A2P registration.
+**Why this step exists**
 
-Actions & Dependencies
+1. **Software setup + access** — get the client set up where needed and obtain ad account / page (and related) access for Waiz.
+2. **Finish collection** — confirm and fill every remaining gap so we do not chase the client later for build-critical info.
+3. **Mini strategy session** — plan the account at a high level and demonstrate that the work is custom to them — not a generic template dump.
 
-Blocked until: Client submits the Onboarding Form.
+**Owner:** CSM (lead). Client (access + decisions).
 
-Automation triggers: Slack notification, ClickUp task updated with onboarding info, Google Drive folder created, resource links added.
+**Unlocks:** Step 5 Kickoff packet can be completed with confidence.
 
-Tech team begins A2P Verification process if EIN is provided.
+---
 
-Communication
+### Step 5 — Kickoff Form
 
-Internal: Slack notification informs the team.
+**Gate:** CSM submits the Kickoff Form.
 
-## Phase 4: Pre-Call Review & Onboarding Call
+**Why this step exists**
 
-The CSM prepares for and conducts the onboarding call to align on strategy, expectations, and next steps.
+This is the **complete project brief for ops and media buying**. It must contain every last critical fact needed to understand and set up the account.
 
-Actions & Dependencies
+Goal: after Kickoff, the build team goes to work with **no reason** to ping Client Success or the client for missing information. Full clarity of account setup lives here.
 
-CSM completes Pre-Call Checklist (reviews form, contract, sales notes).
+**Owner:** CSM (form). Ops / media buying (consume and build).
 
-Onboarding Call takes place: Establish leadership, build implementation pathway, get FB/CRM access, get assets, set ROI projections, and book the Launch Call.
+**What follows (not a separate form gate):** Tech and media buying execute setup from the Kickoff packet (CRM, phone, funnel, bot, ads, pixel, tracker, etc.). See [New Client Campaign Setup SOP](../media-buying/new-client-campaign-setup-sop.md) for the ads launch frame.
 
-CSM fills out the Kickoff Form to confirm all details.
+**Unlocks:** Build → Step 6 QA when implementation is done.
 
-Communication
+---
 
-Client-facing: Live Onboarding Call.
+### Step 6 — QA
 
-## Phase 5: Kickoff Completed & Implementation
+**Gate:** Assigned owners submit QA for their portion of setup.
 
-With the strategy aligned and kickoff form submitted, the focus shifts to the technical and media setup.
+**Why this step exists**
 
-Actions & Dependencies
+Hold each setup owner **responsible for their own work**. They walk their checklist, confirm it is done, and catch misses before the client sees anything.
 
-Blocked until: Kickoff Form is submitted.
+If something was forgotten, accountability stays with the person who owned that build — not a vague “someone should have caught it.”
 
-Tech Team Tasks: Phone number setup, edit custom values, configure calendars, funnel design, AI Bot (Closebot) setup, call center setup.
+**Owner:** Whoever built each piece (tech, media buying, etc.).
 
-Media Buyer Tasks: Data & pixel configuration, Facebook Ads buildout, update fulfillment tracker.
+**Unlocks:** Step 7 Launch Call / Launch Form.
 
-Communication
+---
 
-Client-facing: Slack General channel for questions/issues; Slack Scheduling channel for appointments.
+### Step 7 — Launch Call + Launch Form
 
-## Phase 6: Quality Assurance (QA)
+**Gate:** Launch Call complete; Launch Form submitted when the account is ready / scheduled to go live.
 
-Internal quality assurance checks on the technical and media setup before launch.
+**Why this step exists**
 
-Actions & Dependencies
+**Launch Call**
 
-Blocked until: Department implementation tasks are completed.
+1. **Show the work** — walk the client through what was built and get final approval.
+2. **Coach / train** — teach them how to operate inside the system so they can get the best results.
+3. **Set hard expectations** — frame timelines, early-phase reality, and roles clearly to reduce churn from surprise or impatience.
 
-Tech QA: Check A2P, funnel (price, color, offer, mobile view), calendar integration, triggers.
+**Launch Form**
 
-Media Buyer QA: Check campaign name, budget, page/ad account, offer details, landing page link, pixel.
+Submitted after everything is done and go-live is scheduled. Final triple-check of the work, then activate automations and set account status correctly so the company treats the client as live.
 
-QA Form submission automatically updates the main ClickUp task.
+**Owner:** CSM (Launch Call). Fulfillment / assigned owner (Launch Form).
 
-Communication
+**Unlocks:** Live account; post-launch CS cadence ([Slack Touchpoint Playbook](onboarding-to-launch-client-communication.md), [Post-Launch Client Success System](../client-success/post-launch-client-success-system.md)).
 
-Internal: QA confirmation and launch readiness signal.
+---
 
-## Phase 7: Launch Call & Go-Live
+### Flow (summary)
 
-The final comprehensive walkthrough with the client and the official launch of their campaigns.
-
-Actions & Dependencies
-
-Blocked until: QA is fully completed and approved.
-
-CSM conducts Launch Call: Set expectations, show assets created, book 7-day check-in.
-
-Project Manager does final check-in (ads, funnels, payments).
-
-Fulfillment manager fills out Launch Form to notify team and client that ads are live.
-
-Communication
-
-Client-facing: Live Launch Call; Launch notification message.
-
+```text
+New Client Form
+  → Outreach (equip + book OB)
+  → OB Form (deep client data)
+  → OB Call (access + finish collection + mini strat)
+  → Kickoff Form (full ops/MB packet → build)
+  → QA (owner accountability)
+  → Launch Call + Launch Form (approve, train, expect, go live)
+```
 
 ## Related Docs
 
 - [Client Success Slack Touchpoint Playbook](onboarding-to-launch-client-communication.md)
+- [Fulfillment Operating System](../fulfillment-operating-system.md)
+- [New Client Campaign Setup SOP](../media-buying/new-client-campaign-setup-sop.md)
 - [Campaign Phase Performance Blueprint](../client-success/campaign-phase-performance-blueprint.md)
 - [Fulfillment Lead Lifecycle](../fulfillment-lead-lifecycle.md)

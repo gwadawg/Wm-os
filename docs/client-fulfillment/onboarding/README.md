@@ -3,19 +3,19 @@ title: Client Fulfillment — Onboarding
 domain: client-fulfillment
 owner: client-success
 status: active
-last_updated: 2026-05-21
+last_updated: 2026-09-04
 review_cycle: weekly
 ---
 
 # Client Fulfillment — Onboarding
 
-Post-close client launch: gated phases from payment through go-live.
+Post-close client launch: gated steps from New Client Form through Launch Form.
 
 ## Canonical docs
 
 | Doc | Status |
 |-----|--------|
-| [A-Z Client Onboarding SOP](a-z-client-onboarding-sop.md) | `draft` |
+| [A-Z Client Onboarding SOP](a-z-client-onboarding-sop.md) — purpose outline per step | `draft` |
 | [Client Success Slack Touchpoint Playbook](onboarding-to-launch-client-communication.md) (Post-OB → Month 2+) | `draft` |
 
 ## Related

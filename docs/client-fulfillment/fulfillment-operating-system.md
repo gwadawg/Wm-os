@@ -3,7 +3,7 @@ title: Fulfillment Operating System
 domain: client-fulfillment
 owner: client-success
 status: active
-last_updated: 2026-07-08
+last_updated: 2026-09-04
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/(synthesized)
 artifact_type: overview
@@ -46,15 +46,17 @@ Load this page first for any client-fulfillment question. Follow links to the ca
 
 ## Delivery Timeline (Gated)
 
-| Phase | Name | Canonical doc | Gate |
-|-------|------|---------------|------|
-| 1 | Paid & activation | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | New Client Form |
-| 2 | Welcome & CSM | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Welcome email + call |
-| 3 | Onboarding form | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Form submitted |
-| 4 | Onboarding call | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Kickoff form |
-| 5 | Implementation | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [New Client Campaign Setup](media-buying/new-client-campaign-setup-sop.md) | Kickoff complete |
-| 6 | QA | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | QA form |
-| 7 | Launch | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [Client Success Slack Touchpoint Playbook](onboarding/onboarding-to-launch-client-communication.md) | Launch form |
+Purpose-first outline lives in the A-Z SOP. Build runs after Kickoff until QA — not a separate form gate.
+
+| Step | Name | Canonical doc | Gate |
+|------|------|---------------|------|
+| 1 | New Client Form | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Form submitted (activate + CSM brief) |
+| 2 | Outreach | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Client equipped + OB call booked |
+| 3 | OB Form | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Form submitted |
+| 4 | OB Call | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Access + collection complete |
+| 5 | Kickoff Form → build | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [New Client Campaign Setup](media-buying/new-client-campaign-setup-sop.md) | Kickoff submitted (full ops/MB packet) |
+| 6 | QA | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Owners confirm their work |
+| 7 | Launch Call + Launch Form | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [Client Success Slack Touchpoint Playbook](onboarding/onboarding-to-launch-client-communication.md) | Call done + Launch Form (status / automations) |
 
 ## Lead Engine (After Launch)
 
