@@ -54,7 +54,7 @@ doctrines = superseded stubs — see DSCR DNA README.)*
 | Folder | What it does | Status |
 |--------|--------------|--------|
 | [Creative production loop](creative-production-loop.md) | Umbrella: research → make → Drive → Mr. Waiz → OS swipe (stills and video) | `draft` |
-| [creative-studio/](creative-studio/README.md) | Brainstorm RM ad ideas + write compliant video scripts (skill: `rm-creative-studio`) | `draft` |
+| [creative-studio/](creative-studio/README.md) | RM concept → script → Arcads handoff (`rm-creative-studio`); produce in wm-creative | `active` |
 | [creative-research/](creative-research/README.md) | Decompose ads you admire (Poppy.ai input) into reusable editing/script patterns | `draft` |
 
 ## Pending (Drive only)

@@ -38,7 +38,10 @@ If ambiguous, ask: **"Personal, business, or client (which product)?"**
 
 **Business:** `.agents/product-marketing.md` → `_voice/waiz-media-brand-dna.md` → `business/content-pillars.md` → `business/hook-library.md`
 
-**Client:** Client DNA README + compliance + angle library; use `rm-creative-studio` or client playbooks for ad scripts
+**Client:** Client DNA README + compliance + angle library. Ad scripts by product:
+- **RM** → `rm-creative-studio` then wm-creative (Arcads)
+- **DSCR** → [dscr-video-script-playbook.md](../../docs/client-fulfillment/dscr-dna/dscr-video-script-playbook.md) then wm-creative
+Never route DSCR through `rm-creative-studio`.
 
 ## Commands
 
@@ -96,7 +99,7 @@ Full SOP: [weekly-workflow.md](weekly-workflow.md)
 2. Load voice DNA + relevant belief/story if linked
 3. Apply template from [format-templates.md](format-templates.md)
 4. For **reel** / UGC: also follow [ugc-scriptwriter](../ugc-scriptwriter/SKILL.md)
-5. For **carousel**: also follow [copywriting](../copywriting/SKILL.md)
+5. For **carousel**: follow copy rules in [carousel-production.md](../../docs/content-engine/carousel-production.md), then produce HTML→PNG with [instagram-carousel](../instagram-carousel/SKILL.md). Do **not** use GPT Image 2 / Ideogram for carousel slides.
 6. Save to `[lane]/scripts/YYYY-MM-DD-format-slug.md`
 7. Set frontmatter `status: scripted`
 
@@ -149,9 +152,9 @@ for list `901327607346` and update the ID registry in the pipeline doc.
 |--------|----------|
 | **trial-concept** | Test hook/angle fast; low edit cost; validate before full script |
 | **reel** | Story, belief, or tactical piece with clear spoken arc |
-| **carousel** | List, framework, myth-bust, searchable topic |
+| **carousel** | List, framework, myth-bust, searchable topic — then [instagram-carousel](../instagram-carousel/SKILL.md) for 1080×1350 HTML cards |
 
-Templates: [format-templates.md](format-templates.md)
+Templates: [format-templates.md](format-templates.md) · Carousel SOP: [carousel-production.md](../../docs/content-engine/carousel-production.md)
 
 ## Quality bar
 
@@ -168,7 +171,9 @@ Templates: [format-templates.md](format-templates.md)
 - [knowledge-capture](../knowledge-capture/SKILL.md) — feed transcripts into KB
 - [brainstorming](../brainstorming/SKILL.md) — optional deep ideation
 - [marketing-psychology](../marketing-psychology/SKILL.md) — angle sharpening
-- [rm-creative-studio](../rm-creative-studio/SKILL.md) — client RM ads
+- [rm-creative-studio](../rm-creative-studio/SKILL.md) — client RM ads → wm-creative
+- DSCR video: [dscr-video-script-playbook.md](../../docs/client-fulfillment/dscr-dna/dscr-video-script-playbook.md)
+- [instagram-carousel](../instagram-carousel/SKILL.md) — HTML type cards → PNG (all lanes)
 
 ## OS paths
 

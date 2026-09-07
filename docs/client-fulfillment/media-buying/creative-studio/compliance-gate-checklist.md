@@ -3,7 +3,7 @@ title: Creative Studio Compliance Gate Checklist
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-06-10
+last_updated: 2026-09-07
 review_cycle: monthly
 artifact_type: reference
 ---
@@ -57,7 +57,7 @@ Source: [frameworks-reference.md §F1](frameworks-reference.md). Copy without al
 
 ## Part E — Format-specific (testimonial + educational only; any FAIL = fix)
 
-Source: [higgsfield-format-modules.md](higgsfield-format-modules.md). Skip this part for UGC,
+Source: [format-rules-video.md](format-rules-video.md). Skip this part for UGC,
 static, and long-form real-talent formats.
 
 **Testimonial (spoken or silent text-overlay):**

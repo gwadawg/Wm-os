@@ -17,7 +17,7 @@ Internal fulfillment assistant for reverse mortgage client delivery — copy, dr
 | Project | Use when |
 |---------|----------|
 | **RM Fulfillment Assistant** (this agent) | SMS/iMessage drips, bot replies, objections, lifecycle, static ad angles, campaign diagnosis, designing other RM agents |
-| **RM Creative Studio** | Gated 4-step video ad flow (concept → script → Higgsfield prompt) |
+| **RM Creative Studio** | Gated flow: concept → script → Arcads handoff → wm-creative |
 
 ## Lane
 

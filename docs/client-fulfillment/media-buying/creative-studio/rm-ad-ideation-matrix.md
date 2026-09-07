@@ -29,7 +29,7 @@ A concept is one point in this space:
 | **Angle** | Burden, Trapped Asset, Surviving vs Living, Breaking News / New Program, No Monthly Payment, Exclusive Access, Cash Out, State-Specific Bulletin, Regret / Social Proof, Heirs Get Equity, Inflation Hedge, Aging-in-Place | [rm-ad-playbook.md](../../client-marketing/rm-ad-playbook.md) + [ad-copy-angle-library-rm.md](../ad-copy-angle-library-rm.md) |
 | **Awareness / Stage** | TOF (Unaware/Problem-aware), MOF (Solution/Product-aware), BOF (Most-aware) | frameworks-reference awareness bridge |
 | **Hook type** | Rhetorical question, Confessional, Specific pain, Demonstration, Myth-bust, Authority, Curiosity gap, Social proof, Niche callout, Paradox | frameworks-reference hook taxonomy (F7) |
-| **Format** | UGC video (Higgsfield, 18–32s), Spoken testimonial (Higgsfield, 25–40s), Silent text-overlay testimonial (Higgsfield b-roll, 45–60s), Educational explainer (Higgsfield + sourced b-roll, 30–60s), Long-form video script (45–90s, real talent), Static image, Carousel | [higgsfield-prompt-builder.md](higgsfield-prompt-builder.md) + [higgsfield-format-modules.md](higgsfield-format-modules.md) + playbook two-format system |
+| **Format** | UGC video (Arcads, ~10–30s), Spoken testimonial (T1, 25–40s), Silent text-overlay testimonial (T2, 45–60s), Educational explainer (E1 + sourced b-roll, 30–60s), Long-form video script (45–90s, real talent), Static image, Carousel | [format-rules-video.md](format-rules-video.md) + [arcads-handoff.md](arcads-handoff.md) + playbook two-format system |
 
 ### Format ↔ stage fit (use when picking or recommending a format)
 
@@ -42,7 +42,7 @@ A concept is one point in this space:
 | Long-form script (real talent) | OK | Strong | Strong | Any (full education arc) |
 
 Both testimonial formats are **composites (dramatizations)** and carry the disclosure rule —
-see [higgsfield-format-modules.md](higgsfield-format-modules.md).
+see [format-rules-video.md](format-rules-video.md).
 
 ## Generation logic (how `brainstorm` works)
 
@@ -87,7 +87,7 @@ Cite `winner_ref` or `supabase:ad:{uuid}` on every concept row when building fro
 | Angle | Heirs Get the Equity |
 | Stage | MOF |
 | Hook type | Myth-bust |
-| Format | Educational explainer (Higgsfield) |
+| Format | Educational explainer (E1 → Arcads) |
 | One-line premise | Dismantle the "my kids inherit the debt" fear by showing the non-recourse guarantee. |
 | Lead hook (direction) | "Worried your kids will inherit a bill? Here's what actually happens." |
 | VOC anchor | "I don't want to ask my kids for help." |

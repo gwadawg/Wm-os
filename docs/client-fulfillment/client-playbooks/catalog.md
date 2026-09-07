@@ -139,8 +139,8 @@ See [Client Playbooks README](README.md) for how to create new assets.
 | [Ads For Dummies WaizMedia SOP](../media-buying/ads-for-dummies-waizmedia-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [AI RM Ad Image Creation SOP](../media-buying/ai-rm-ad-image-creation-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [Fulfillment Lead Lifecycle](../fulfillment-lead-lifecycle.md) | overview | canonical | internal-fulfillment | draft | team | github, team-drive |
-| [Higgsfield Format Modules (Testimonial + Educational)](../media-buying/creative-studio/higgsfield-format-modules.md) | playbook | canonical | internal-fulfillment | draft | client, team | github, team-drive |
-| [Higgsfield Prompt Builder (RM UGC)](../media-buying/creative-studio/higgsfield-prompt-builder.md) | playbook | canonical | internal-fulfillment | draft | client, team | github, team-drive |
+| [RM Video Format Rules (T1 / T2 / E1)](../media-buying/creative-studio/format-rules-video.md) | playbook | canonical | internal-fulfillment | active | client, team | github, team-drive |
+| [Arcads Handoff Packet](../media-buying/creative-studio/arcads-handoff.md) | playbook | canonical | internal-fulfillment | active | client, team | github, team-drive |
 | [Month 1 Ad Account Management SOP](../media-buying/month-1-ad-account-management-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [New Client Campaign Setup SOP](../media-buying/new-client-campaign-setup-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [Perspective Funnel Setup SOP](../media-buying/perspective-funnel-setup-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |

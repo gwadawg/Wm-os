@@ -216,5 +216,5 @@
 
 - [DSCR DNA README](../docs/client-fulfillment/dscr-dna/README.md)
 - [Reverse Mortgage DNA](../docs/client-fulfillment/reverse-mortgage-dna/README.md)
-- [Creative Studio — Higgsfield Format Modules](../docs/client-fulfillment/media-buying/creative-studio/higgsfield-format-modules.md)
+- [Creative Studio — Video Format Rules](../docs/client-fulfillment/media-buying/creative-studio/format-rules-video.md)
 

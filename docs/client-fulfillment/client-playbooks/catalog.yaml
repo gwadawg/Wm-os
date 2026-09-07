@@ -919,8 +919,8 @@ entries:
   methodology_sources: []
   last_updated: '2026-05-21'
   source: scan
-- repo_path: docs/client-fulfillment/media-buying/creative-studio/higgsfield-format-modules.md
-  title: Higgsfield Format Modules (Testimonial + Educational)
+- repo_path: docs/client-fulfillment/media-buying/creative-studio/format-rules-video.md
+  title: RM Video Format Rules (T1 / T2 / E1)
   artifact_type: playbook
   content_layer: canonical
   audience:
@@ -930,16 +930,16 @@ entries:
   - github
   - team-drive
   shareability: internal-fulfillment
-  status: draft
+  status: active
   owner: media-buying-lead
   domain: client-fulfillment
   delivery_group: meta-ads-creative
   product: reverse-mortgage
   methodology_sources: []
-  last_updated: '2026-06-10'
+  last_updated: '2026-09-07'
   source: scan
-- repo_path: docs/client-fulfillment/media-buying/creative-studio/higgsfield-prompt-builder.md
-  title: Higgsfield Prompt Builder (RM UGC)
+- repo_path: docs/client-fulfillment/media-buying/creative-studio/arcads-handoff.md
+  title: Arcads Handoff Packet (RM Creative Studio Step 4)
   artifact_type: playbook
   content_layer: canonical
   audience:
@@ -949,13 +949,13 @@ entries:
   - github
   - team-drive
   shareability: internal-fulfillment
-  status: draft
+  status: active
   owner: media-buying-lead
   domain: client-fulfillment
   delivery_group: meta-ads-creative
   product: reverse-mortgage
   methodology_sources: []
-  last_updated: '2026-06-10'
+  last_updated: '2026-09-07'
   source: scan
 - repo_path: docs/client-fulfillment/media-buying/month-1-ad-account-management-sop.md
   title: Month 1 Ad Account Management SOP

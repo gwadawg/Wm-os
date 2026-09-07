@@ -8,6 +8,8 @@ review_cycle: once
 artifact_type: creative-output
 ---
 
+> **Legacy sample (2026-05):** Higgsfield prompt sections are historical only. New work uses Arcads handoff → wm-creative.
+
 # RM TOF Legacy Planner — Concepts + Script + Higgsfield Prompt (2026-05-30)
 
 A `brainstorm` batch (6 concepts), one selected `script` rewritten for natural UGC delivery, and

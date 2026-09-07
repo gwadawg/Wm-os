@@ -56,4 +56,4 @@ Circular customer photo + purple name/age tag is instant demographic mirror — 
 
 ## RM adaptation note
 
-Apply dramatization + Composite tag per [higgsfield-format-modules.md](../../creative-studio/higgsfield-format-modules.md). No client names in generic RM remix — use archetype label instead of "Rita." Age in overlay is format-specific; check compliance for generic ads.
+Apply dramatization + Composite tag per [format-rules-video.md](../../creative-studio/format-rules-video.md). No client names in generic RM remix — use archetype label instead of "Rita." Age in overlay is format-specific; check compliance for generic ads.

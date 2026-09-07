@@ -25,7 +25,10 @@ the same creative prompt.
 | Expand a *winning* proven angle + MOF/BOF tokens | [Campaign Master Angles](dscr-campaign-master-angles.md) |
 | Beachhead / test rules | [GTM Brief](dscr-gtm-positioning-brief.md) |
 | Ship / legal | [Compliance Guardrails](dscr-compliance-guardrails.md) |
-| Statics pipeline | [Static Image Generator](dscr-static-image-generator-project.md) |
+| **UGC / video scripts** | [Video Script Playbook](dscr-video-script-playbook.md) → **wm-creative** Arcads |
+| Statics pipeline | [Static Image Generator](dscr-static-image-generator-project.md) or wm-creative `wm-static-studio` |
+
+Do **not** use `rm-creative-studio` for DSCR.
 
 ## Live docs
 

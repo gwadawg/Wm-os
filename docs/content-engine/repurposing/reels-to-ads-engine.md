@@ -51,5 +51,5 @@ Use [rm-creative-studio](../../../.claude/skills/rm-creative-studio/SKILL.md) or
 
 ## Related
 
-- [Higgsfield format modules](../../client-fulfillment/media-buying/creative-studio/higgsfield-format-modules.md)
+- [RM video format rules](../../client-fulfillment/media-buying/creative-studio/format-rules-video.md)
 - [Content engine README](../README.md)

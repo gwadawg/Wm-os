@@ -11,7 +11,7 @@ artifact_type: playbook
 # Silent Story Ad Playbook (Caption-Engine Video)
 
 Canonical playbook for **silent text-overlay story ads** (Format **T2** in
-[higgsfield-format-modules.md](higgsfield-format-modules.md)): caption-driven narrative over
+[format-rules-video.md](format-rules-video.md)): caption-driven narrative over
 B-roll, **mute-first**, confession + hidden secret + proof. Distilled from the reference
 pattern (“$50K house / $5K down” silent storyteller), validated RM outputs, and the 2026-06
 creative sprint (rate-protection pack + mortgage-elimination variants).
@@ -24,8 +24,8 @@ high-converting RM story ads without re-deriving structure each time.
 ## Scope
 
 - **In:** TOF/MOF silent caption ads for generic RM fulfillment (composite dramatization).
-- **Out:** Spoken UGC (prompt builder), static images, long-form LO talking head — see sibling docs.
-- **Format module:** T2 — production prompts still live in [higgsfield-format-modules.md](higgsfield-format-modules.md).
+- **Out:** Spoken UGC (Arcads handoff), static images, long-form LO talking head — see sibling docs.
+- **Format module:** T2 — format rules live in [format-rules-video.md](format-rules-video.md); render in wm-creative (Arcads).
 
 ## Trigger
 
@@ -64,7 +64,7 @@ New story ad concept, hook batch, caption script, B-roll plan, or editor handoff
 | **Runtime** | ~42–56s · **16–19 frames** at 2–2.5s each (preferred) or 12–14 frames at 3–4s (legacy) |
 | **Audio** | Melancholic indie/piano → bittersweet; **no VO**; music in post only |
 | **Talent** | Couple/homeowner as **proof** — never speaks to camera, documentary observe |
-| **Text** | Burned-in captions in editor — **never** AI-rendered in Higgsfield frames |
+| **Text** | Burned-in captions in editor — **never** AI-rendered in model frames |
 | **Story type** | Composite dramatization — disclosure required (Part E) |
 
 **Core insight:** The viewer reads micro-story beats like a screenplay; B-roll supplies credibility
@@ -224,7 +224,7 @@ Extend T2 with explicit **REAL / AI / STILL / EDITOR** tags (borrowed from E1).
 | Tag | Use for | Notes |
 |-----|---------|-------|
 | **REAL** | Home exterior, porch, contractor, hands on door | Bookend same house |
-| **AI (Higgsfield)** | Consistent couple · kitchen · friend+phone · skeptic · relief | Never render text/music |
+| **AI (Arcads)** | Consistent couple · kitchen · friend+phone · skeptic · relief | Never render text/music |
 | **STILL** | Mortgage statements, mailers, calendars, PAID IN FULL mocks | Legible text · Canva/Figma mocks |
 | **EDITOR** | Captions, disclosure, split-screen, quiz end card, rate circles | Ken Burns on stills 2–2.5s |
 
@@ -326,7 +326,7 @@ Format: T2 silent story · multi-hook pack · REAL/AI/STILL matrix
 
 ## Related
 
-- Format module (T2 prompts): [higgsfield-format-modules.md](higgsfield-format-modules.md)
+- Format module (T2): [format-rules-video.md](format-rules-video.md)
 - Editing style row: [editing-styles-catalog.md](../creative-research/editing-styles-catalog.md) — `silent-caption-story`
 - Script pattern row: [script-archetypes-catalog.md](../creative-research/script-archetypes-catalog.md) — `silent-caption-confession-proof`
 - Skill entry: [rm-creative-studio SKILL](../../../../.claude/skills/rm-creative-studio/SKILL.md)

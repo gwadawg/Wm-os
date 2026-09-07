@@ -1,12 +1,13 @@
 ---
 name: ugc-scriptwriter
 description: |
-  Helps outline and draft generic UGC-style scripts for paid social ads (non-reverse-mortgage products).
-  Use when the user has an ad concept for a general product and wants a creator/talking-head/testimonial script.
-  Triggers: "UGC script", "creator script", "talking head script", "testimonial script",
-  "influencer script", "script for TikTok", "script for Reels".
-  Do NOT use for reverse-mortgage / loan-officer client ads — use rm-creative-studio instead
-  (it is grounded in the RM ICP and enforces a compliance gate). For non-RM "write a script" requests, this skill applies.
+  Helps outline and draft generic UGC-style scripts for paid social ads for non-Waiz-client products.
+  Use when the user has an ad concept for a general consumer product and wants a creator/talking-head script.
+  Triggers: "UGC script", "creator script", "talking head script" for generic/CPG products.
+  Do NOT use for Waiz client Meta ads:
+  - Reverse mortgage → rm-creative-studio
+  - DSCR → dscr-video-script-playbook + wm-creative
+  Those paths enforce product DNA and compliance.
 ---
 
 # UGC Script Development
@@ -17,11 +18,10 @@ This skill helps you develop scripts for user-generated content (UGC) style ads.
 
 | Task | Use Instead |
 |------|-------------|
-| **Reverse-mortgage / loan-officer client ad scripts** | **rm-creative-studio** (RM ICP + compliance gate — required for Waiz client fulfillment) |
-| Writing hooks and opening lines | **hook-writing** |
-| Developing hooks into concepts | **ad-concept-generator** |
+| **Reverse-mortgage client ad scripts** | **rm-creative-studio** → wm-creative Arcads |
+| **DSCR client ad scripts** | **dscr-video-script-playbook** → wm-creative Arcads |
 
-> **Scope:** This skill is for *generic* UGC (non-RM products). All reverse-mortgage ad work for Waiz clients must go through [rm-creative-studio](../rm-creative-studio/SKILL.md), which is grounded in the RM ICP and passes every output through a compliance gate.
+> **Scope:** Generic / non-client UGC only. Waiz **RM** and **DSCR** client Meta ads must not use this skill.
 
 ---
 

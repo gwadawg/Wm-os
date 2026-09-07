@@ -3,7 +3,7 @@ title: Ad Development Workflow (RM Client Ads)
 domain: client-fulfillment
 owner: founder
 status: active
-last_updated: 2026-07-01
+last_updated: 2026-09-07
 review_cycle: monthly
 artifact_type: playbook
 ---
@@ -12,6 +12,8 @@ artifact_type: playbook
 
 Single entry for how Waiz develops **reverse-mortgage client Meta ads** end-to-end: learn from winners, create new scripts, close the loop in Mr. Waiz.
 
+**Umbrella (all products, stills + video):** [creative-production-loop.md](creative-production-loop.md). This page is the RM create/learn implementation.
+
 **Bridge spec:** [ad-intelligence-bridge.md](../../operations/ad-intelligence-bridge.md)
 
 ## Two modes
@@ -19,14 +21,14 @@ Single entry for how Waiz develops **reverse-mortgage client Meta ads** end-to-e
 | Mode | When | Output |
 |------|------|--------|
 | **Learn** | Weekly — ad performed well in accounts | Swipe + catalog pattern in `creative-research/` |
-| **Create** | On demand — new ad for a client | Concept → script → Higgsfield prompt in chat / `creative-studio/outputs/` |
+| **Create** | On demand — new ad for a client | Concept → script → Arcads handoff → wm-creative / `creative-studio/outputs/` |
 
 ## Full lifecycle
 
 ```
 Tag winner (Mr. Waiz) → Capture to swipe (KB) → Promote to catalogs (repeat patterns)
         ↑                                                      ↓
-   Performance data ← Launch ← Higgsfield ← Script ← Concept ← Step 0 pull patterns
+   Performance data ← Launch ← Arcads (wm-creative) ← Script ← Concept ← Step 0 pull patterns
 ```
 
 ## Create mode — retrieval order (Step 0)
@@ -38,11 +40,12 @@ When scripting a new RM ad, agents load sources in this order:
 3. Relevant [creative-research/swipes/](creative-research/swipes/) (filter: product=RM, format, funnel stage)
 4. [losers-log.md](creative-research/losers-log.md) — patterns to avoid
 5. On-demand: Mr. Waiz `ad_library` via `supabase:ad:{uuid}` or winners with `status=winner` + `product=reverse`
-6. Framework docs: [rm-ad-ideation-matrix.md](creative-studio/rm-ad-ideation-matrix.md), [rm-script-generator.md](creative-studio/rm-script-generator.md), [compliance-gate-checklist.md](creative-studio/compliance-gate-checklist.md)
+6. Framework docs: [rm-ad-ideation-matrix.md](creative-studio/rm-ad-ideation-matrix.md), [rm-script-generator.md](creative-studio/rm-script-generator.md), [compliance-gate-checklist.md](creative-studio/compliance-gate-checklist.md), [format-rules-video.md](creative-studio/format-rules-video.md), [arcads-handoff.md](creative-studio/arcads-handoff.md)
 7. **Product line fit:** [rm-product-lines.md](../reverse-mortgage-dna/rm-product-lines.md) — confirm client offers the product before using angle (e.g. **keep your rate / don't refinance = HomeSafe Second only**)
 8. **Silent caption story format (T2):** [silent-story-ad-playbook.md](creative-studio/silent-story-ad-playbook.md) — load when format is silent text-overlay, caption-engine, multi-hook pack, or confession+proof story ads
 
 **Never** pull competitor Apify intel in this flow — use [creator-research](../../../.claude/skills/creator-research/SKILL.md) separately.
+**Never** use this workflow for DSCR — use [dscr-video-script-playbook.md](../dscr-dna/dscr-video-script-playbook.md).
 
 ### Step 0 contract
 
@@ -59,7 +62,8 @@ Before Step 1 (Concept) in [creative-studio](creative-studio/README.md):
 
 Invoked via [rm-creative-studio](../../../.claude/skills/rm-creative-studio/SKILL.md).
 
-**DSCR static ads:** use [DSCR Static Image Generator](../../dscr-dna/dscr-static-image-generator-project.md) — Ideogram → Mr. Waiz registration (`overview`, `ad_name`, `summary`, `visual_notes`) → Meta. Same `ad_library` table; set `product=dscr`.
+**DSCR video:** [dscr-video-script-playbook.md](../dscr-dna/dscr-video-script-playbook.md) → wm-creative Arcads.  
+**DSCR static ads:** [DSCR Static Image Generator](../dscr-dna/dscr-static-image-generator-project.md) or wm-creative `wm-static-studio` — Mr. Waiz registration with `product=dscr`.
 
 ## Learn mode — capture workflow
 
@@ -77,6 +81,7 @@ Invoked via [rm-creative-studio](../../../.claude/skills/rm-creative-studio/SKIL
 | "Pull from our winners first" | Step 0 only, then wait |
 | "Capture pending RM winners" | Knowledge-capture ad pull mode |
 | "Vary this winner" + `supabase:ad:{uuid}` | Load Layer 0 detail, produce variations |
+| "Label this ad" / new creative ready to log | Assign `ad_name` from [ad-naming-convention.md](ad-naming-convention.md) + [ad-name-library.yaml](ad-name-library.yaml); never rename spend-bearing names |
 
 ## Acceptance test
 
@@ -93,6 +98,8 @@ Expected:
 
 ## Related
 
+- [Ad Naming Convention](ad-naming-convention.md) — `ad_name` pattern + variation letters
+- [Ad Name Library](ad-name-library.yaml) — controlled concept / format slugs (no synonym forks)
 - [Creative Studio](creative-studio/README.md) — outbound script engine
 - [Creative Research](creative-research/README.md) — inbound pattern library
 - [AI RM Ad Images](ai-rm-ad-image-creation-sop.md) — static ad path (also uses Step 0)

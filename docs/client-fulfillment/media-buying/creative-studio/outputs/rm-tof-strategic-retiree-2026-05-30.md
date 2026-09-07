@@ -8,6 +8,8 @@ review_cycle: once
 artifact_type: creative-output
 ---
 
+> **Legacy sample (2026-05):** Higgsfield prompt sections are historical only. New work uses Arcads handoff → wm-creative.
+
 # RM TOF Strategic Retiree — Concepts + Script (2026-05-30)
 
 A `brainstorm` batch (5 concepts) and one full `script`, produced with the

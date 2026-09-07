@@ -7,10 +7,11 @@ Skills in this folder are **repo-local**. Cursor and Claude Code discover them f
 | Skill | Path | Use when |
 |-------|------|----------|
 | **content-engine** | [content-engine/SKILL.md](content-engine/SKILL.md) | Weekly ideas, `/weekly-ideas`, `/script`, reels, carousels, trial concepts |
+| **instagram-carousel** | [instagram-carousel/SKILL.md](instagram-carousel/SKILL.md) | Any IG carousel: 1080×1350 HTML cards → PNG. SOP: [carousel-production.md](../../docs/content-engine/carousel-production.md) |
 | **EditorProjectcreator** | [editor-project-creator/SKILL.md](editor-project-creator/SKILL.md) | Editor projects from calls; `/new-repurpose-project`, `/push-clip`, `/archive-project` — [lifecycle](../../docs/content-engine/personal/projects/lifecycle.md) |
 | **creator-research** | [creator-research/SKILL.md](creator-research/SKILL.md) | Apify capture, viral format decomposition, `/apify-capture`, `/remix` |
 | **knowledge-capture** | [knowledge-capture/SKILL.md](knowledge-capture/SKILL.md) | Paste transcript/call/research → update hook/angle/belief libraries |
-| copywriting | [copywriting/SKILL.md](copywriting/SKILL.md) | Hooks, captions, carousel copy |
+| copywriting | [copywriting/SKILL.md](copywriting/SKILL.md) | Hooks, captions, page copy — carousel **slides** use instagram-carousel |
 | ugc-scriptwriter | [ugc-scriptwriter/SKILL.md](ugc-scriptwriter/SKILL.md) | UGC / talking-head scripts |
 | marketing-psychology | [marketing-psychology/SKILL.md](marketing-psychology/SKILL.md) | Angles, persuasion |
 | brainstorming | [brainstorming/SKILL.md](brainstorming/SKILL.md) | Deep ideation |
@@ -50,7 +51,7 @@ Waiz Business OS references:
 |-------|----------|
 | [rm-creative-studio/SKILL.md](rm-creative-studio/SKILL.md) | Brainstorm reverse-mortgage ad ideas and write compliant video ad scripts for client fulfillment — engine: [creative-studio/](../../docs/client-fulfillment/media-buying/creative-studio/README.md) |
 | [rm-fulfillment-agent/SKILL.md](rm-fulfillment-agent/SKILL.md) | RM client fulfillment — drips, bot copy, objections, lifecycle, sub-agent design — deploy: [reverse-mortgage-agent/chatbot-deploy/](../../docs/client-fulfillment/reverse-mortgage-agent/chatbot-deploy/README.md) |
-| [ugc-scriptwriter/SKILL.md](ugc-scriptwriter/SKILL.md) | Draft **generic** (non-RM) UGC scripts — talking-head, testimonial, creator — from a hook + product. For reverse-mortgage client ads use [rm-creative-studio](rm-creative-studio/SKILL.md) (compliance gate) |
+| [ugc-scriptwriter/SKILL.md](ugc-scriptwriter/SKILL.md) | Draft **generic** (non-client) UGC scripts. RM → [rm-creative-studio](rm-creative-studio/SKILL.md); DSCR → [dscr-video-script-playbook](../../docs/client-fulfillment/dscr-dna/dscr-video-script-playbook.md) |
 | [copywriting/SKILL.md](copywriting/SKILL.md) | Marketing copy, landing pages, email voice |
 | [pre-call-objection-videos/SKILL.md](pre-call-objection-videos/SKILL.md) | LO prospect video sends, transcripts, ad/nurture alignment |
 | [marketing-psychology/SKILL.md](marketing-psychology/SKILL.md) | Mental models, persuasion, buyer psychology for messaging and offers |
