@@ -20,7 +20,8 @@ All DSCR client assets live in the **[DSCR DNA pod](../dscr-dna/README.md)** —
 | Need | Doc |
 |------|-----|
 | Strategy / positioning | [DSCR GTM Brief](../dscr-dna/dscr-gtm-positioning-brief.md) |
-| Nurture / Laura booking | [DSCR Lead Nurture And Booking](../dscr-dna/dscr-nurture-and-booking-laura.md) |
+| Nurture / Laura booking (Waiz call center) | [DSCR Lead Nurture And Booking](../dscr-dna/dscr-nurture-and-booking-laura.md) |
+| Nurture / self-serve (no call center) | [DSCR Prospecting Playbook](../dscr-dna/playbook-dscr-self-serve-lead-nurture.md) → [Cash-Out drip](../dscr-dna/dscr-cash-out-self-serve-crm-drip.md) (Launch Kit `05-Playbooks/`) · [10-Day drip](../dscr-dna/dscr-10-day-self-serve-crm-drip.md) |
 | Ads strategy | [Intelligence ICP DSCR](../dscr-dna/intelligence-icp-dscr.md) · [GTM Brief](../dscr-dna/dscr-gtm-positioning-brief.md) |
 
 Execution SOPs (campaign setup, statics, funnels) → [media-buying/](../media-buying/README.md).

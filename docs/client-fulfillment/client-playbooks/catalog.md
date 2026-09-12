@@ -3,7 +3,7 @@ title: Client Playbooks — Catalog
 domain: client-fulfillment
 owner: community-education
 status: active
-last_updated: 2026-07-08
+last_updated: 2026-09-12
 review_cycle: weekly
 generated: true
 ---
@@ -14,7 +14,7 @@ generated: true
 > Regenerate: `python scripts/sync-client-playbooks.py`
 > Start here: [README.md](README.md) · Config: [catalog.yaml](catalog.yaml)
 
-Last synced: **2026-07-08** · **66** playbooks, SOPs, and training docs indexed
+Last synced: **2026-09-12** · **69** playbooks, SOPs, and training docs indexed
 
 See [Client Playbooks README](README.md) for how to create new assets.
 
@@ -116,8 +116,12 @@ See [Client Playbooks README](README.md) for how to create new assets.
 
 | Title | Type | Layer | Shareability | Status | Audience | Delivery |
 |-------|------|-------|--------------|--------|----------|----------|
+| [10-Day DSCR Self-Serve CRM Drip — LO First Person](../dscr-dna/dscr-10-day-self-serve-crm-drip.md) | script | canonical | paying-client | draft | team | github, team-drive |
 | [10-Day RM Drip Campaign (Email + SMS) — Meta Leads](../client-marketing/10-day-rm-drip-campaign.md) | script | canonical | internal-fulfillment | draft | client | github, team-drive |
 | [Aged Lead Reactivation Script — RM](../client-marketing/script-aged-lead-reactivation-rm.md) | script | canonical | lo-course | draft | client | github, course-material, team-drive |
+| [DSCR Cash-Out Drip — client delivery](../dscr-dna/assets/playbook-self-serve-nurture/DSCR-Cash-Out-Drip.md) | script | canonical | paying-client | draft | client | github, team-drive |
+| [DSCR Cash-Out Drip — LO First Person (12 touches + long tail)](../dscr-dna/dscr-cash-out-self-serve-crm-drip.md) | script | canonical | paying-client | draft | client, team | github, team-drive |
+| [DSCR Prospecting Playbook](../dscr-dna/playbook-dscr-self-serve-lead-nurture.md) | playbook | canonical | paying-client | draft | client, team | github, team-drive |
 | [Lead Nurture Playbook — Waiz Meta Stack](../client-marketing/playbook-lead-nurture.md) | playbook | canonical | paying-client | draft | client, team | github, team-drive |
 | [LO Lead Dialing SOP — RM](../client-marketing/sop-lo-lead-dialing-rm.md) | sop | canonical | lo-course | draft | client | github, course-material, team-drive |
 | [Nurture Framework](../client-marketing/playbook-nurture-framework.md) | playbook | canonical | lo-course | draft | client, team | github, course-material, team-drive |
@@ -136,11 +140,12 @@ See [Client Playbooks README](README.md) for how to create new assets.
 |-------|------|-------|--------------|--------|----------|----------|
 | [Ad Copy And Angle Library (RM)](../media-buying/ad-copy-angle-library-rm.md) | playbook | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [Ad Development Workflow (RM Client Ads)](../media-buying/ad-development-workflow.md) | playbook | canonical | internal-fulfillment | active | client, team | github, team-drive |
+| [Ad Naming Convention (Mr. Waiz + Meta)](../media-buying/ad-naming-convention.md) | playbook | canonical | internal-fulfillment | active | client, team | github, team-drive |
 | [Ads For Dummies WaizMedia SOP](../media-buying/ads-for-dummies-waizmedia-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [AI RM Ad Image Creation SOP](../media-buying/ai-rm-ad-image-creation-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
+| [Arcads Handoff Packet (RM Creative Studio Step 4)](../media-buying/creative-studio/arcads-handoff.md) | playbook | canonical | internal-fulfillment | active | client, team | github, team-drive |
+| [Creative Production Loop (research → make → Drive → Mr. Waiz → OS swipe)](../media-buying/creative-production-loop.md) | playbook | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [Fulfillment Lead Lifecycle](../fulfillment-lead-lifecycle.md) | overview | canonical | internal-fulfillment | draft | team | github, team-drive |
-| [RM Video Format Rules (T1 / T2 / E1)](../media-buying/creative-studio/format-rules-video.md) | playbook | canonical | internal-fulfillment | active | client, team | github, team-drive |
-| [Arcads Handoff Packet](../media-buying/creative-studio/arcads-handoff.md) | playbook | canonical | internal-fulfillment | active | client, team | github, team-drive |
 | [Month 1 Ad Account Management SOP](../media-buying/month-1-ad-account-management-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [New Client Campaign Setup SOP](../media-buying/new-client-campaign-setup-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [Perspective Funnel Setup SOP](../media-buying/perspective-funnel-setup-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
@@ -149,6 +154,7 @@ See [Client Playbooks README](README.md) for how to create new assets.
 | [RM Ad Playbook](../client-marketing/rm-ad-playbook.md) | playbook | canonical | paying-client | draft | client | github, team-drive |
 | [RM High-Quality Lead Acquisition](../client-marketing/rm-high-quality-lead-acquisition.md) | playbook | canonical | paying-client | active | client | github, team-drive |
 | [RM Script Generator](../media-buying/creative-studio/rm-script-generator.md) | playbook | canonical | internal-fulfillment | draft | client, team | github, team-drive |
+| [RM Video Format Rules (T1 / T2 / E1)](../media-buying/creative-studio/format-rules-video.md) | playbook | canonical | internal-fulfillment | active | client, team | github, team-drive |
 | [Silent Story Ad Playbook (Caption-Engine Video)](../media-buying/creative-studio/silent-story-ad-playbook.md) | playbook | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [Setting Up Facebook Lead Form](../course-material/sop-setting-up-facebook-lead-form.md) | sop | course-material | lo-course | draft | client | course-material, github |
 
@@ -157,6 +163,7 @@ See [Client Playbooks README](README.md) for how to create new assets.
 | Title | Type | Layer | Shareability | Status | Audience | Delivery |
 |-------|------|-------|--------------|--------|----------|----------|
 | [A-Z Client Onboarding SOP](../onboarding/a-z-client-onboarding-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
+| [Client Launch Kit SOP](../onboarding/sop-client-launch-kit.md) | sop | canonical | internal-fulfillment | draft | team | github, team-drive |
 | [Client Success Slack Touchpoint Playbook](../onboarding/onboarding-to-launch-client-communication.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 
 ### Product knowledge & compliance (`product-knowledge`)
@@ -168,6 +175,7 @@ See [Client Playbooks README](README.md) for how to create new assets.
 | [DSCR Compliance Guardrails](../dscr-dna/dscr-compliance-guardrails.md) | doctrine | canonical | lo-course | draft | team | github, team-drive |
 | [DSCR GTM And Positioning Brief](../dscr-dna/dscr-gtm-positioning-brief.md) | doctrine | canonical | lo-course | draft | team | github, team-drive |
 | [DSCR Static Image Generator — Claude Project Build Pack](../dscr-dna/dscr-static-image-generator-project.md) | sop | canonical | lo-course | draft | team | github, team-drive |
+| [DSCR Video Script Playbook](../dscr-dna/dscr-video-script-playbook.md) | playbook | canonical | lo-course | active | team | github, team-drive |
 | [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md) | doctrine | canonical | lo-course | active | team | github, team-drive |
 | [RM Quiz Funnel V2 — Perspective Manual Build](../reverse-mortgage-dna/rm-quiz-funnel-v2-perspective-manual-build.md) | sop | canonical | lo-course | draft | team | github, team-drive |
 
@@ -191,6 +199,7 @@ Safe for prospect LO course modules. See [shareability boundaries](../shareabili
 - [DSCR Compliance Guardrails](../dscr-dna/dscr-compliance-guardrails.md) — `product-knowledge`
 - [DSCR GTM And Positioning Brief](../dscr-dna/dscr-gtm-positioning-brief.md) — `product-knowledge`
 - [DSCR Static Image Generator — Claude Project Build Pack](../dscr-dna/dscr-static-image-generator-project.md) — `product-knowledge`
+- [DSCR Video Script Playbook](../dscr-dna/dscr-video-script-playbook.md) — `product-knowledge`
 - [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md) — `product-knowledge`
 - [RM Quiz Funnel V2 — Perspective Manual Build](../reverse-mortgage-dna/rm-quiz-funnel-v2-perspective-manual-build.md) — `product-knowledge`
 

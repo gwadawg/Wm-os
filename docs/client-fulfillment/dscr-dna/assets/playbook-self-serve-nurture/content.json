@@ -1,0 +1,712 @@
+[
+  {
+    "type": "h1",
+    "text": "The first 48 hours decide the file"
+  },
+  {
+    "type": "body",
+    "text": "This is the Waiz playbook for DSCR clients who work their own leads. No call center. No Laura. No setter pod. You — or your VA — are the system."
+  },
+  {
+    "type": "callout",
+    "text": "North star: show up like an operator, book the call while the lead is still hot, and never hang up without the next step on the calendar."
+  },
+  {
+    "type": "body",
+    "text": "DSCR investors are not reverse-mortgage seniors. They already own rentals. They think in cash flow, equity, and deadlines. They reply faster. They also disappear faster. Ads create the conversation. You capture it. If you are late, another broker is not."
+  },
+
+  {"type": "h1", "text": "How to use this playbook"},
+  {
+    "type": "numbered",
+    "text": "Read Chapter 01 so you stop treating these leads like seniors."
+  },
+  {
+    "type": "numbered",
+    "text": "Believe the clock in Chapter 02. Speed is the offer."
+  },
+  {
+    "type": "numbered",
+    "text": "Run the first 48 hours exactly as written. That is the file."
+  },
+  {
+    "type": "numbered",
+    "text": "When they text back, call. Do not type a novel."
+  },
+  {
+    "type": "numbered",
+    "text": "Never end a live conversation without a calendar hold (BAMFAM)."
+  },
+  {
+    "type": "numbered",
+    "text": "The drip is the safety net. It does not replace you."
+  },
+
+  {"type": "h2", "text": "What this covers — and what it does not"},
+  {
+    "type": "table",
+    "headers": ["In", "Out"],
+    "col_widths": [0.5, 0.5],
+    "rows": [
+      ["Speed, cadence, BAMFAM, show-rate hygiene", "Waiz call center / Laura — do not run both"],
+      ["Investor-tone word tracks", "Purchase, primary residence, RM voice"],
+      ["If / then response rules", "Full consult / close script"],
+      ["How the drip supports you", "Invented rates, LTV, FICO, day-counts"]
+    ]
+  },
+  {
+    "type": "body",
+    "text": "Owner: the loan officer. A VA can dial and text. The LO owns the calendar, the speed standard, and whether a live conversation ends with a hold."
+  },
+
+  {"type": "pagebreak"},
+
+  {"type": "h1", "text": "01  Why this ICP is different"},
+  {
+    "type": "body",
+    "text": "These leads already own rentals. They are buying a better position on a property they already have — not a loan. Write-offs killing DTI. A balloon coming due. Idle equity sitting in a door. That changes follow-up."
+  },
+  {
+    "type": "table",
+    "headers": ["", "Reverse mortgage", "DSCR investor"],
+    "col_widths": [0.22, 0.39, 0.39],
+    "rows": [
+      ["Energy", "Cautious, family in the loop", "Operator. Inbox is deal flow"],
+      ["Time", "Will research for weeks", "Will give you 12 minutes if you earned it"],
+      ["Responsiveness", "Silence on Day 3 is normal", "They do reply — then they move on"],
+      ["What hot means", "Long education arc after the form", "Minutes, and the first two days"],
+      ["What they punish", "Pressure and jargon", "Slowness and circling back"],
+      ["Who they pick", "The person they trust", "Whoever showed up first and sounded real"]
+    ]
+  },
+  {
+    "type": "callout",
+    "text": "Treat every new DSCR lead like a bid that expires. Not with fake scarcity. With speed."
+  },
+  {
+    "type": "body",
+    "text": "They opted in because something is live right now. If you wait until Thursday to work leads, that file is already talking to someone else."
+  },
+
+  {"type": "h2", "text": "Same four pillars. Different human."},
+  {
+    "type": "body",
+    "text": "Availability, speed, personalization, and volume still apply. This playbook does not rewrite them. It applies them to an operator."
+  },
+  {
+    "type": "table",
+    "headers": ["Pillar", "RM default", "DSCR self-serve"],
+    "col_widths": [0.22, 0.38, 0.4],
+    "rows": [
+      ["Availability", "Long trust cycle; family often joins", "Short call, same week, respect the clock"],
+      ["Speed", "Important", "The offer. First competent person wins"],
+      ["Personalization", "Education before pressure", "Peer-to-operator. Name DSCR. Their door."],
+      ["Volume", "5–12+ touches over weeks", "Front-load Days 1–2. After that you chase."]
+    ]
+  },
+
+  {"type": "pagebreak"},
+
+  {"type": "h1", "text": "02  The data — why speed wins"},
+  {
+    "type": "body",
+    "text": "You do not need a speech. You need to believe the clock. This ICP is more responsive than a senior RM lead, so the data hits harder. They will pick up. They will text back. They will also take the next broker’s calendar link if you leave them on read."
+  },
+  {
+    "type": "chart",
+    "chart_type": "bar",
+    "title": "What the research says",
+    "labels": ["60-sec lift", "1-hr qualify", "First reply wins", "Quit after try 1"],
+    "datasets": [
+      {"label": "Indexed finding", "values": [391, 700, 78, 44]}
+    ],
+    "y_label": "Index / percent (see table)",
+    "caption": "391% conversion lift inside 60 seconds (Velocify). 7× more likely to qualify inside one hour vs the next hour (HBR). 78% buy from whoever responds first (Lead Connect). 44% of salespeople stop after the first attempt (InsideSales / RAIN)."
+  },
+  {
+    "type": "table",
+    "headers": ["Finding", "What it means on your desk", "Source"],
+    "col_widths": [0.38, 0.40, 0.22],
+    "rows": [
+      ["~391% higher conversion if contacted in 60 seconds", "First touch is a sprint, not after this call", "Velocify"],
+      ["7× more likely to qualify inside 1 hour vs the next hour; 60× vs 24 hours", "Same-day is not enough if you mean 6pm", "Harvard Business Review"],
+      ["78% buy from whoever responds first", "You compete with the next text, not the market", "Lead Connect"],
+      ["44% stop after attempt one; average 1.3 attempts", "Persistence is not annoying. Quitting is expensive", "InsideSales / RAIN"],
+      ["Faster first contact → fewer total touches later", "Speed is how you work less later", "Speed-to-lead research"]
+    ]
+  },
+  {
+    "type": "callout",
+    "text": "Litmus test: if you are not hearing “that was fast” at least once a week, you are late."
+  },
+
+  {"type": "h2", "text": "Three speeds. Learn the names."},
+  {
+    "type": "table",
+    "headers": ["Speed", "Definition", "Waiz standard"],
+    "col_widths": [0.28, 0.36, 0.36],
+    "rows": [
+      ["Speed to first contact", "Opt-in → first call or text", "≤5 minutes when working. Gold: under 60 seconds"],
+      ["Speed to first appointment", "Interest → live conversation", "Same day, next day, or day after. 72 hours max"],
+      ["Speed of response", "They engage → you reply", "Same hour. A text back is a call."]
+    ]
+  },
+
+  {"type": "pagebreak"},
+
+  {"type": "h1", "text": "03  The first 48 hours"},
+  {
+    "type": "body",
+    "text": "This is the file. Everything after Day 2 is recovery."
+  },
+  {
+    "type": "flowchart",
+    "nodes": [
+      {"id": "opt", "label": "Lead opts in", "shape": "oval"},
+      {"id": "call", "label": "Call now", "shape": "rect"},
+      {"id": "ans", "label": "They answer?", "shape": "diamond"},
+      {"id": "live", "label": "Talk or BAMFAM", "shape": "rect"},
+      {"id": "dd", "label": "Double-dial", "shape": "rect"},
+      {"id": "vm", "label": "VM + text", "shape": "rect"},
+      {"id": "d2", "label": "Day 1–2 cadence", "shape": "rect"}
+    ],
+    "edges": [
+      {"from": "opt", "to": "call"},
+      {"from": "call", "to": "ans"},
+      {"from": "ans", "to": "live", "label": "Yes"},
+      {"from": "ans", "to": "dd", "label": "No"},
+      {"from": "dd", "to": "vm"},
+      {"from": "vm", "to": "d2"}
+    ],
+    "caption": "Hour 0: call, double-dial, voicemail and text. Do all three. Do not pick one."
+  },
+
+  {"type": "h2", "text": "Hour 0 — they just opted in"},
+  {
+    "type": "numbered",
+    "text": "Call. Now. From a number they can save."
+  },
+  {
+    "type": "numbered",
+    "text": "If no answer: double-dial immediately. Many phones silence call one and let call two through."
+  },
+  {
+    "type": "numbered",
+    "text": "Voicemail + text in the same breath. Who you are, DSCR refinance on a rental, one clear ask."
+  },
+  {
+    "type": "h3",
+    "text": "First SMS"
+  },
+  {
+    "type": "callout",
+    "text": "[First name] — [Your name] here. Saw you came through on a DSCR refinance. I qualify these on the property’s rent, not your tax returns. Got 10 minutes today? (Txt STOP to opt out)"
+  },
+  {
+    "type": "h3",
+    "text": "Voicemail"
+  },
+  {
+    "type": "callout",
+    "text": "[First name], [Your name] — you asked about a DSCR refi on a rental. I can tell you in one short call whether the property even makes sense. I’ll text you this number. Call or text me back."
+  },
+
+  {"type": "h2", "text": "Rest of Day 1 and Day 2"},
+  {
+    "type": "table",
+    "headers": ["Window", "Move"],
+    "col_widths": [0.38, 0.62],
+    "rows": [
+      ["+2–4 hours, no connect", "Second double-dial. Different time of day."],
+      ["Late afternoon / evening", "One more live attempt. Do not spam. Do not disappear."],
+      ["They reply", "Stop the drip. Call them. Chapter 04."],
+      ["Day 2 morning + evening", "Still hot. They remember the ad."],
+      ["Day 3+", "Cadence tapers. Drip covers the hours you are on other calls."]
+    ]
+  },
+  {
+    "type": "h3",
+    "text": "What “on top of it” looks like"
+  },
+  {
+    "type": "bullet",
+    "text": "Fresh leads are the top of every queue. Not after you finish this file."
+  },
+  {
+    "type": "bullet",
+    "text": "Calendar has same-day and next-day holes on purpose. Those holes are for new leads."
+  },
+  {
+    "type": "bullet",
+    "text": "Your VA can fire the first text. You own the first live conversation when they engage."
+  },
+  {
+    "type": "bullet",
+    "text": "After hours: text now, first call at 8am their time."
+  },
+
+  {"type": "pagebreak"},
+
+  {"type": "h1", "text": "04  How you respond"},
+  {
+    "type": "body",
+    "text": "This chapter is the operating system. Memorize the table. Use the lines."
+  },
+  {
+    "type": "flowchart",
+    "nodes": [
+      {"id": "txt", "label": "They text back", "shape": "parallelogram"},
+      {"id": "ring", "label": "Call immediately", "shape": "rect"},
+      {"id": "pick", "label": "They pick up?", "shape": "diamond"},
+      {"id": "talk", "label": "Book the look", "shape": "rect"},
+      {"id": "sms", "label": "One short text", "shape": "rect"}
+    ],
+    "edges": [
+      {"from": "txt", "to": "ring"},
+      {"from": "ring", "to": "pick"},
+      {"from": "pick", "to": "talk", "label": "Yes"},
+      {"from": "pick", "to": "sms", "label": "No"}
+    ],
+    "caption": "A reply is a hand-raise. Calling is how you book. Do not write a paragraph."
+  },
+
+  {"type": "h2", "text": "If / then"},
+  {
+    "type": "table",
+    "headers": ["If", "Then", "Why"],
+    "col_widths": [0.32, 0.38, 0.3],
+    "rows": [
+      ["New lead lands while you are working", "Call and text inside 5 minutes", "Peak motivation is a timer"],
+      ["First call rings out", "Double-dial, then VM + text", "One ring is not a work ethic"],
+      ["They text back", "Call immediately", "A reply is a hand-raise"],
+      ["They answer and can talk", "Run the call now", "Same-moment talk is a 100% show"],
+      ["They answer and are busy", "BAMFAM — two real slots", "I’ll circle back is how files die"],
+      ["They already booked; you have a hole today", "Pull the appointment forward", "Sooner shows higher"],
+      ["Question after booking", "Reply the same hour. If meaty, call", "Slow replies train sloppiness"],
+      ["After hours", "Text now. Call at 8am their time", "Do not go dark on a Day-0 lead"],
+      ["STOP / unsubscribe", "Kill everything. Honor it", "Non-negotiable"],
+      ["They book", "Kill the chase drip. Reminders only", "Chapter 07"]
+    ]
+  },
+
+  {"type": "h2", "text": "They texted. Call them."},
+  {
+    "type": "body",
+    "text": "Do not write: thanks for getting back, I’d love to learn more, what does next week look like. Ring them. If they do not pick up:"
+  },
+  {
+    "type": "callout",
+    "text": "Just called — easier to do this live. You around for 8 minutes?"
+  },
+  {
+    "type": "body",
+    "text": "If they insist on texting: one question, then the book."
+  },
+  {
+    "type": "callout",
+    "text": "Got it. Is this a rental you already own that you want to refinance? I can look at it on a short call today — 11:30 or 4:00. Which is less annoying?"
+  },
+
+  {"type": "h2", "text": "First 15 seconds"},
+  {
+    "type": "body",
+    "text": "Peer. Not closer-voice. Not a courtesy call from the team."
+  },
+  {
+    "type": "callout",
+    "text": "[First name], it’s [Your name] — you came through on the DSCR refinance. I don’t want to waste your time. Is now a terrible moment?"
+  },
+  {
+    "type": "body",
+    "text": "If yes → BAMFAM. If no:"
+  },
+  {
+    "type": "callout",
+    "text": "Cool. Quick version: I look at rentals you already own. Qualification is the property’s rent versus the payment — not your W-2. What prompted you to look at this?"
+  },
+  {
+    "type": "body",
+    "text": "Then shut up. They will tell you write-off, balloon, or idle equity. That is the call."
+  },
+
+  {"type": "h2", "text": "Availability"},
+  {
+    "type": "bullet",
+    "text": "Take calls when investors actually answer — early, lunch, late afternoon. Not only 10–2 Tuesday."
+  },
+  {
+    "type": "bullet",
+    "text": "Offer two concrete times, 15-minute increments if you can. Whenever you’re free next week is how you lose."
+  },
+  {
+    "type": "bullet",
+    "text": "Inbound, outbound, and a booking link. Walk them onto the calendar while you are on the phone."
+  },
+  {
+    "type": "bullet",
+    "text": "Same-day is the goal. Next day is fine. Day-after is the ceiling. Past 72 hours is an objection, not a preference."
+  },
+
+  {"type": "pagebreak"},
+
+  {"type": "h1", "text": "05  Contact rate and conversation rate"},
+  {
+    "type": "body",
+    "text": "These are two different problems. Do not mix the medicine."
+  },
+  {
+    "type": "table",
+    "headers": ["Metric", "What it is", "If it is weak"],
+    "col_widths": [0.28, 0.36, 0.36],
+    "rows": [
+      ["Contact rate", "They pick up or reply", "Number health, speed, cadence, channel"],
+      ["Conversation rate", "Once live, they stay and book", "Script, respect for time, one clear ask"]
+    ]
+  },
+
+  {"type": "h2", "text": "Contact — get them to engage"},
+  {
+    "type": "bullet",
+    "text": "Local / trusted caller ID. Rotate if you are getting voicemail-only."
+  },
+  {
+    "type": "bullet",
+    "text": "iMessage when you can. Blue bubbles read like a person. Green blasts read like a sequence."
+  },
+  {
+    "type": "bullet",
+    "text": "Double-dial. Always on the first two days."
+  },
+  {
+    "type": "bullet",
+    "text": "Call, text, email. Start on all three if you have them. Continue where they answered."
+  },
+  {
+    "type": "bullet",
+    "text": "Short texts. Two or three lines. Not a block. Front-load Days 1–2. Do not diagnose the lead on touch one."
+  },
+
+  {"type": "h3", "text": "Default cadence (self-serve, no call center)"},
+  {
+    "type": "table",
+    "headers": ["When", "Attempts"],
+    "col_widths": [0.28, 0.72],
+    "rows": [
+      ["Day 1", "Double-dial 3× across the day. VM + text on the first miss. Space later attempts by a few hours."],
+      ["Day 2", "Double-dial morning and later. Text after the second miss."],
+      ["Days 3–4", "One call + one text per day."],
+      ["Days 5–7", "One touch per day (call or text, not both stacked)."],
+      ["After Day 7", "Drip + periodic manual re-touch. Stop calling like it is Day 1."]
+    ]
+  },
+  {
+    "type": "body",
+    "text": "Obey TCPA, quiet hours (~8am–7pm lead local), and your state’s rules. Consent was on the form. This playbook does not create consent."
+  },
+
+  {"type": "h2", "text": "Conversation — get them to stay"},
+  {
+    "type": "body",
+    "text": "Once they are live, you are not working a lead. You are an investor talking to an investor."
+  },
+  {
+    "type": "bullet",
+    "text": "One idea. One ask. The ask is a short call on the property, not an application."
+  },
+  {
+    "type": "bullet",
+    "text": "Name DSCR. Do not hide the product. Do not underwrite on the first text thread."
+  },
+  {
+    "type": "bullet",
+    "text": "If they are qualified and free now — take the meeting now."
+  },
+  {
+    "type": "bullet",
+    "text": "Notes every touch. A dial with no note did not happen."
+  },
+
+  {"type": "h3", "text": "Queue when you sit down"},
+  {"type": "numbered", "text": "Fresh (today)"},
+  {"type": "numbered", "text": "Inbound replies — call these. Do not get to them."},
+  {"type": "numbered", "text": "Promised callbacks"},
+  {"type": "numbered", "text": "Unreached, still inside the first week"},
+  {"type": "numbered", "text": "Aged (different job)"},
+
+  {"type": "pagebreak"},
+
+  {"type": "h1", "text": "06  BAMFAM"},
+  {
+    "type": "body",
+    "text": "BAMFAM = Book A Meeting From A Meeting. You never end a live conversation with I’ll send some times or I’ll follow up later. On DSCR this matters more, not less. This ICP will not sit in limbo. If you leave the next step in no-man’s-land, they take the next broker’s slot."
+  },
+  {
+    "type": "flowchart",
+    "nodes": [
+      {"id": "live", "label": "Live conversation", "shape": "oval"},
+      {"id": "free", "label": "Free now?", "shape": "diamond"},
+      {"id": "now", "label": "Take the call now", "shape": "rect"},
+      {"id": "book", "label": "Book two real times", "shape": "rect"},
+      {"id": "hold", "label": "Confirm + text hold", "shape": "rect"}
+    ],
+    "edges": [
+      {"from": "live", "to": "free"},
+      {"from": "free", "to": "now", "label": "Yes"},
+      {"from": "free", "to": "book", "label": "Busy"},
+      {"from": "book", "to": "hold"},
+      {"from": "now", "to": "hold"}
+    ],
+    "caption": "Never hang up empty. Two real options. 72-hour ceiling."
+  },
+
+  {"type": "h2", "text": "Rules"},
+  {
+    "type": "table",
+    "headers": ["Rule", "Why"],
+    "col_widths": [0.48, 0.52],
+    "rows": [
+      ["No I’ll call you back without a hold", "Motivation dies in hours"],
+      ["Book inside 72 hours", "Sooner shows. Prefer same day or next day"],
+      ["Confirm while you still have them", "Day, time, timezone, number you will call from"],
+      ["Text the confirmation before you hang up", "Watch for an email means you already lost"],
+      ["Pull forward when you can", "Same-day talk is the best show rate you will ever get"],
+      ["Two real options, not an open calendar", "Operators pick faster when the choice is small"]
+    ]
+  },
+  {
+    "type": "body",
+    "text": "If they push past 72 hours, that is an obstacle to solve on this call — not permission to book three weeks out and hope."
+  },
+
+  {"type": "h2", "text": "Five outcomes (every live attempt)"},
+  {
+    "type": "table",
+    "headers": ["#", "Outcome", "Action"],
+    "col_widths": [0.08, 0.32, 0.6],
+    "rows": [
+      ["1", "No answer", "Cadence in Chapter 05 — not a BAMFAM moment"],
+      ["2", "Unqualified / wrong product", "Clean exit. Do not keep them on a fake calendar"],
+      ["3", "Qualified + free now", "Take the conversation now. Best show rate possible"],
+      ["4", "Qualified + pulled forward", "Move the existing slot earlier while they are on the line"],
+      ["5", "Qualified + confirmed", "Book the soonest honest slot. Confirm. Send the text"]
+    ]
+  },
+
+  {"type": "h2", "text": "Word tracks — investor tone"},
+  {
+    "type": "h3",
+    "text": "They don’t have time right now"
+  },
+  {
+    "type": "callout",
+    "text": "Totally fine — I’m not going to keep you. Let’s lock 12 minutes so we’re not playing tag. I’ve got tomorrow at 8:30 or 4:15. Which is less painful?"
+  },
+  {
+    "type": "h3",
+    "text": "They want you to send times"
+  },
+  {
+    "type": "callout",
+    "text": "I can text the link — I’ll do it right now while we’re on. Easier if we just pick: today at 5 or tomorrow at 9. I’ll hold it so it doesn’t disappear."
+  },
+  {
+    "type": "h3",
+    "text": "Pull forward"
+  },
+  {
+    "type": "callout",
+    "text": "[Name], [Your name] — you’ve got us on Thursday. A slot opened this afternoon at 3:30. Want to knock the property out sooner so you’re not carrying it all week?"
+  },
+  {
+    "type": "h3",
+    "text": "Confirm + save the contact"
+  },
+  {
+    "type": "callout",
+    "text": "You’re set for Tuesday, 4:00 your time. I’ll call from this number. Save it as [Your name] — DSCR so it doesn’t look like spam. Texting the confirm now."
+  },
+  {
+    "type": "h3",
+    "text": "I’ll think about it"
+  },
+  {
+    "type": "callout",
+    "text": "Fair. That’s why the first call is short — your numbers, whether the property even belongs in a DSCR box. Hold Wednesday at 11. Cancel if it’s not useful. Morning or afternoon better?"
+  },
+  {
+    "type": "body",
+    "text": "Do not argue. Do not pitch the loan. Book the look."
+  },
+
+  {"type": "h2", "text": "Anti-patterns"},
+  {
+    "type": "table",
+    "headers": ["Don’t", "Do"],
+    "col_widths": [0.48, 0.52],
+    "rows": [
+      ["I’ll follow up next week", "Book next week now — then try to pull it forward"],
+      ["Text a calendar link and hang up", "Stay on until the slot is on both calendars"],
+      ["Book 10 days out as the default", "Fight for 72 hours or less"],
+      ["Let a VA circle back with times after the call", "The live call is the booking window"]
+    ]
+  },
+
+  {"type": "pagebreak"},
+
+  {"type": "h1", "text": "07  Show-rate hygiene"},
+  {
+    "type": "body",
+    "text": "Booking is not the win. Show is the win. Investors no-show when the meeting feels optional or you went silent after the book."
+  },
+  {
+    "type": "h2",
+    "text": "Right after they book"
+  },
+  {
+    "type": "callout",
+    "text": "Locked: [day], [time] [timezone] with me. I’ll call you. If the property details are handy (address + rent), grab them — we’ll go faster."
+  },
+  {
+    "type": "body",
+    "text": "If they reply with a question — same hour. If the answer is longer than two sentences, call."
+  },
+
+  {"type": "h2", "text": "Reminders"},
+  {
+    "type": "body",
+    "text": "Say the automated ones are automated. People do not mind reminders. They mind being lied to. Include the area code you will call from. Pickup roughly doubles when they recognize it."
+  },
+  {
+    "type": "table",
+    "headers": ["When", "Who", "What"],
+    "col_widths": [0.28, 0.28, 0.44],
+    "rows": [
+      ["Immediately", "You / CRM", "Confirm time, your name, number you will call from"],
+      ["24 hours before", "Automated", "Same facts. Local timezone"],
+      ["12 hours before", "Automated", "Short"],
+      ["3 hours before", "Automated", "Short"],
+      ["Night before", "You, real phone", "One line. Human"],
+      ["Morning of", "You, real phone", "One line"],
+      ["60 minutes prior", "You, if flaky or high-intent", "Still good for :00?"]
+    ]
+  },
+  {
+    "type": "h2",
+    "text": "If they go quiet after booking"
+  },
+  {
+    "type": "body",
+    "text": "Do not wait for the slot to no-show you. Call. One time, day before or morning of:"
+  },
+  {
+    "type": "callout",
+    "text": "Still good for tomorrow at 4 — or do you want me to slide you to a time that actually works?"
+  },
+  {
+    "type": "body",
+    "text": "If they no-show: BAMFAM on the first connect. Do not send them back to the drip as if they were never booked."
+  },
+
+  {"type": "h1", "text": "08  The drip — safety net, not strategy"},
+  {
+    "type": "body",
+    "text": "The drip covers the hours you are on other calls, in a closing, or asleep. It does not replace Chapters 03–06."
+  },
+  {
+    "type": "bullet",
+    "text": "Day 1 of the drip is not a substitute for the 5-minute call. If you have no human speed-to-lead, Day 1 is the first text — send it the minute they land (quiet hours)."
+  },
+  {
+    "type": "bullet",
+    "text": "Any inbound reply → kill the drip. Then Chapter 04: call them."
+  },
+  {
+    "type": "bullet",
+    "text": "Any book → kill the drip. Then Chapter 07."
+  },
+  {
+    "type": "bullet",
+    "text": "STOP → kill immediately."
+  },
+  {
+    "type": "bullet",
+    "text": "One sender identity. You. Not the team, not Laura, not a bot pretending to be you."
+  },
+  {
+    "type": "callout",
+    "text": "Paste file: 10-Day DSCR Self-Serve CRM Drip — LO first person. Copy SMS into your CRM. Exit on reply, book, and STOP."
+  },
+
+  {"type": "pagebreak"},
+
+  {"type": "h1", "text": "Decision board"},
+  {
+    "type": "table",
+    "headers": ["Condition", "Action"],
+    "col_widths": [0.42, 0.58],
+    "rows": [
+      ["Lead is fresh (0–48 hours)", "Chapters 03–04. Highest priority on the board"],
+      ["Day 3–7, no connect", "Chapter 05 cadence + drip"],
+      ["Inbound text or missed call", "Call now. Do not answer in a paragraph"],
+      ["Live, no time", "BAMFAM (Chapter 06)"],
+      ["Live, time now", "Take the meeting"],
+      ["Booked", "Reminders only (Chapter 07)"],
+      ["No-show", "Rebook on first connect. Do not restart Day-1 chase"],
+      ["Wrong product", "Exit clean. Do not keep dialing"],
+      ["They use the Waiz call center", "This playbook is not theirs"]
+    ]
+  },
+
+  {"type": "h1", "text": "Quality bar"},
+  {
+    "type": "bullet",
+    "text": "Peer-to-operator. Name DSCR. Refinance of a rental they already own."
+  },
+  {
+    "type": "bullet",
+    "text": "Fast, short, specific. No just checking in, circling back, or bumping this."
+  },
+  {
+    "type": "bullet",
+    "text": "One ask: a short call on their property."
+  },
+  {
+    "type": "bullet",
+    "text": "May qualify. No guarantees. No invented numbers. Tax / entity → their CPA."
+  },
+  {
+    "type": "bullet",
+    "text": "Quiet hours and STOP are part of the craft, not extras."
+  },
+
+  {"type": "h1", "text": "What to measure"},
+  {
+    "type": "table",
+    "headers": ["Metric", "Direction", "Notes"],
+    "col_widths": [0.34, 0.28, 0.38],
+    "rows": [
+      ["Speed to first contact", "Down — minutes, not hours", "Median and % under 5 minutes"],
+      ["Contact rate (Days 1–2)", "Up", "Pickup + reply. Diagnose number / speed first"],
+      ["Reply → call-back time", "Down", "Target: immediate"],
+      ["Booked inside 72 hours", "Up", "Far-out books inflate no-shows"],
+      ["Show rate", "Up", "Hygiene in Chapter 07"],
+      ["Lead → booked", "Up", "Work ethic and skill in one number"],
+      ["Drip reply rate (by day)", "Watch", "Weak Day 1 = opener or sender ID"]
+    ]
+  },
+  {
+    "type": "callout",
+    "text": "You do not get to call the leads bad until speed, cadence, and BAMFAM have been run."
+  },
+
+  {
+    "type": "bibliography",
+    "title": "Sources",
+    "items": [
+      {"id": "1", "text": "Velocify. Speed-to-lead research: ~391% conversion lift when contacted within 60 seconds."},
+      {"id": "2", "text": "Harvard Business Review. Companies that contact within one hour are 7× more likely to qualify the lead than those who wait another hour, and 60× more likely than those who wait 24 hours."},
+      {"id": "3", "text": "Lead Connect. 78% of customers buy from the company that responds first."},
+      {"id": "4", "text": "InsideSales.com / RAIN Group. 44% of salespeople stop after the first attempt; average ~1.3 attempts before giving up."}
+    ]
+  }
+]

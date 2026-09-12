@@ -1,8 +1,8 @@
 workflow: client-playbooks
 version: 1
 status: active
-last_synced: '2026-07-08'
-entry_count: 66
+last_synced: '2026-09-12'
+entry_count: 69
 delivery_groups:
 - id: onboarding
   label: Onboarding & launch
@@ -512,7 +512,7 @@ entries:
   delivery_group: general
   product: reverse-mortgage
   methodology_sources: []
-  last_updated: '2026-07-08'
+  last_updated: '2026-09-11'
   source: scan
 - repo_path: docs/client-fulfillment/client-marketing/meta-andromeda-rm-rules.md
   title: Meta Andromeda Rules For Reverse Mortgages
@@ -568,6 +568,24 @@ entries:
   methodology_sources: []
   last_updated: '2026-05-20'
   source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/dscr-10-day-self-serve-crm-drip.md
+  title: 10-Day DSCR Self-Serve CRM Drip — LO First Person
+  artifact_type: script
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  shareability: paying-client
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-09-11'
+  source: scan
 - repo_path: docs/client-fulfillment/client-marketing/10-day-rm-drip-campaign.md
   title: 10-Day RM Drip Campaign (Email + SMS) — Meta Leads
   artifact_type: script
@@ -605,6 +623,67 @@ entries:
   methodology_sources:
   - docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
   last_updated: '2026-07-02'
+  source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/assets/playbook-self-serve-nurture/DSCR-Cash-Out-Drip.md
+  title: DSCR Cash-Out Drip — client delivery
+  artifact_type: script
+  content_layer: canonical
+  audience:
+  - client
+  delivery:
+  - github
+  - team-drive
+  shareability: paying-client
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-09-12'
+  source: scan
+  canonical_parent: docs/client-fulfillment/dscr-dna/dscr-cash-out-self-serve-crm-drip.md
+- repo_path: docs/client-fulfillment/dscr-dna/dscr-cash-out-self-serve-crm-drip.md
+  title: DSCR Cash-Out Drip — LO First Person (12 touches + long tail)
+  artifact_type: script
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  shareability: paying-client
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-09-12'
+  source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/playbook-dscr-self-serve-lead-nurture.md
+  title: DSCR Prospecting Playbook
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  shareability: paying-client
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: lead-nurture
+  product: dscr
+  methodology_sources:
+  - docs/client-fulfillment/client-marketing/playbook-nurture-framework.md
+  - docs/client-fulfillment/client-sales/playbook-bamfam-rm.md
+  - docs/client-fulfillment/dscr-dna/intelligence-icp-dscr.md
+  - docs/client-fulfillment/dscr-dna/dscr-compliance-guardrails.md
+  last_updated: '2026-09-12'
   source: scan
 - repo_path: docs/client-fulfillment/client-marketing/playbook-lead-nurture.md
   title: Lead Nurture Playbook — Waiz Meta Stack
@@ -861,7 +940,26 @@ entries:
   delivery_group: meta-ads-creative
   product: reverse-mortgage
   methodology_sources: []
-  last_updated: '2026-07-01'
+  last_updated: '2026-09-07'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/ad-naming-convention.md
+  title: Ad Naming Convention (Mr. Waiz + Meta)
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  shareability: internal-fulfillment
+  status: active
+  owner: founder
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-08-20'
   source: scan
 - repo_path: docs/client-fulfillment/media-buying/ads-for-dummies-waizmedia-sop.md
   title: Ads For Dummies WaizMedia SOP
@@ -901,43 +999,6 @@ entries:
   methodology_sources: []
   last_updated: '2026-05-21'
   source: scan
-- repo_path: docs/client-fulfillment/fulfillment-lead-lifecycle.md
-  title: Fulfillment Lead Lifecycle
-  artifact_type: overview
-  content_layer: canonical
-  audience:
-  - team
-  delivery:
-  - github
-  - team-drive
-  shareability: internal-fulfillment
-  status: draft
-  owner: client-success
-  domain: client-fulfillment
-  delivery_group: meta-ads-creative
-  product: reverse-mortgage
-  methodology_sources: []
-  last_updated: '2026-05-21'
-  source: scan
-- repo_path: docs/client-fulfillment/media-buying/creative-studio/format-rules-video.md
-  title: RM Video Format Rules (T1 / T2 / E1)
-  artifact_type: playbook
-  content_layer: canonical
-  audience:
-  - client
-  - team
-  delivery:
-  - github
-  - team-drive
-  shareability: internal-fulfillment
-  status: active
-  owner: media-buying-lead
-  domain: client-fulfillment
-  delivery_group: meta-ads-creative
-  product: reverse-mortgage
-  methodology_sources: []
-  last_updated: '2026-09-07'
-  source: scan
 - repo_path: docs/client-fulfillment/media-buying/creative-studio/arcads-handoff.md
   title: Arcads Handoff Packet (RM Creative Studio Step 4)
   artifact_type: playbook
@@ -956,6 +1017,43 @@ entries:
   product: reverse-mortgage
   methodology_sources: []
   last_updated: '2026-09-07'
+  source: scan
+- repo_path: docs/client-fulfillment/media-buying/creative-production-loop.md
+  title: Creative Production Loop (research → make → Drive → Mr. Waiz → OS swipe)
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  shareability: internal-fulfillment
+  status: draft
+  owner: founder
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-09-07'
+  source: scan
+- repo_path: docs/client-fulfillment/fulfillment-lead-lifecycle.md
+  title: Fulfillment Lead Lifecycle
+  artifact_type: overview
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  shareability: internal-fulfillment
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-05-21'
   source: scan
 - repo_path: docs/client-fulfillment/media-buying/month-1-ad-account-management-sop.md
   title: Month 1 Ad Account Management SOP
@@ -1106,6 +1204,25 @@ entries:
   methodology_sources: []
   last_updated: '2026-05-30'
   source: scan
+- repo_path: docs/client-fulfillment/media-buying/creative-studio/format-rules-video.md
+  title: RM Video Format Rules (T1 / T2 / E1)
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - client
+  - team
+  delivery:
+  - github
+  - team-drive
+  shareability: internal-fulfillment
+  status: active
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: meta-ads-creative
+  product: reverse-mortgage
+  methodology_sources: []
+  last_updated: '2026-09-07'
+  source: scan
 - repo_path: docs/client-fulfillment/media-buying/creative-studio/silent-story-ad-playbook.md
   title: Silent Story Ad Playbook (Caption-Engine Video)
   artifact_type: playbook
@@ -1160,7 +1277,28 @@ entries:
   delivery_group: onboarding
   product: reverse-mortgage
   methodology_sources: []
-  last_updated: '2026-06-10'
+  last_updated: '2026-09-11'
+  source: scan
+- repo_path: docs/client-fulfillment/onboarding/sop-client-launch-kit.md
+  title: Client Launch Kit SOP
+  artifact_type: sop
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  shareability: internal-fulfillment
+  status: draft
+  owner: client-success
+  domain: client-fulfillment
+  delivery_group: onboarding
+  product: general
+  methodology_sources:
+  - docs/client-fulfillment/onboarding/a-z-client-onboarding-sop.md
+  - docs/client-fulfillment/fulfillment-lead-lifecycle.md
+  - docs/client-fulfillment/shareability-boundaries.md
+  last_updated: '2026-09-12'
   source: scan
 - repo_path: docs/client-fulfillment/onboarding/onboarding-to-launch-client-communication.md
   title: Client Success Slack Touchpoint Playbook
@@ -1179,7 +1317,7 @@ entries:
   delivery_group: onboarding
   product: reverse-mortgage
   methodology_sources: []
-  last_updated: '2026-05-21'
+  last_updated: '2026-07-20'
   source: scan
 - repo_path: docs/client-fulfillment/reverse-mortgage-dna/doctrine-reverse-mortgage.md
   title: Doctrine Reverse Mortgage
@@ -1251,7 +1389,7 @@ entries:
   delivery_group: product-knowledge
   product: dscr
   methodology_sources: []
-  last_updated: '2026-06-02'
+  last_updated: '2026-09-03'
   source: scan
 - repo_path: docs/client-fulfillment/dscr-dna/dscr-static-image-generator-project.md
   title: DSCR Static Image Generator — Claude Project Build Pack
@@ -1269,7 +1407,25 @@ entries:
   delivery_group: product-knowledge
   product: dscr
   methodology_sources: []
-  last_updated: '2026-06-29'
+  last_updated: '2026-09-03'
+  source: scan
+- repo_path: docs/client-fulfillment/dscr-dna/dscr-video-script-playbook.md
+  title: DSCR Video Script Playbook
+  artifact_type: playbook
+  content_layer: canonical
+  audience:
+  - team
+  delivery:
+  - github
+  - team-drive
+  shareability: lo-course
+  status: active
+  owner: media-buying-lead
+  domain: client-fulfillment
+  delivery_group: product-knowledge
+  product: dscr
+  methodology_sources: []
+  last_updated: '2026-09-07'
   source: scan
 - repo_path: docs/client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md
   title: RM Compliance Guardrails

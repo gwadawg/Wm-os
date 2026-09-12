@@ -25,7 +25,7 @@ the same creative prompt.
 | Expand a *winning* proven angle + MOF/BOF tokens | [Campaign Master Angles](dscr-campaign-master-angles.md) |
 | Beachhead / test rules | [GTM Brief](dscr-gtm-positioning-brief.md) |
 | Ship / legal | [Compliance Guardrails](dscr-compliance-guardrails.md) |
-| **UGC / video scripts** | [Video Script Playbook](dscr-video-script-playbook.md) → **wm-creative** Arcads |
+| **UGC / video scripts** | Skill [dscr-creative-studio](../../../.claude/skills/dscr-creative-studio/SKILL.md) (rulebook: [Video Script Playbook](dscr-video-script-playbook.md)) → **wm-creative** Arcads |
 | Statics pipeline | [Static Image Generator](dscr-static-image-generator-project.md) or wm-creative `wm-static-studio` |
 
 Do **not** use `rm-creative-studio` for DSCR.
@@ -55,7 +55,8 @@ competitor ad intelligence essay (insights live in GTM; raw scrape in
 | Task | Load |
 |------|------|
 | Funnel build | [Offer Map](dscr-offer-and-funnel-map.md) → [Lander Build Pack](dscr-lander-build-pack.md) → [Form Spec](dscr-funnel-form-spec.md) → [Landing + VSL](dscr-landing-and-vsl.md) |
-| Nurture / Laura | [Nurture And Booking — Laura](dscr-nurture-and-booking-laura.md) |
+| Nurture / Laura (Waiz call center) | [Nurture And Booking — Laura](dscr-nurture-and-booking-laura.md) |
+| Nurture / self-serve (no call center) | [DSCR Prospecting Playbook](playbook-dscr-self-serve-lead-nurture.md) → [Cash-Out drip](dscr-cash-out-self-serve-crm-drip.md) (Launch Kit `05-Playbooks/`) · [10-Day LO First-Person Drip](dscr-10-day-self-serve-crm-drip.md) |
 | Setter | [Team FAQ](dscr-team-product-faq.md) → [Setter Script](dscr-setter-appointment-script.md) → [Objection Guide](dscr-objection-handling-guide.md) |
 | CloseBot | [Job Info](dscr-closebot-job-information.md) → [KB](dscr-closebot-knowledge-base.md) |
 | KPIs | [KPI Scorecard](dscr-kpi-and-test-scorecard.md) |

@@ -3,7 +3,7 @@ title: Client Launch Kit SOP
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-09-11
+last_updated: 2026-09-12
 review_cycle: monthly
 shareability: internal-fulfillment
 artifact_type: sop
@@ -79,11 +79,11 @@ The template in this repo is the **source of truth for every word** in the kit. 
 
 1. **Open the kit.** Mr. Waiz → Client Roster → client row → **Kit**. Available once Kickoff is complete (GHL mapping + OB recording). The wizard prefills product, who works leads, contact, company, go-live, funnel, CRM, and Drive root from the client file.
 2. **Confirm the variant.** Product (Reverse mortgage / DSCR) × who works leads (Waiz call center / Laura vs. LO / VA). This picks the Week 1 page and the resource index. Call Center legacy clients require you to pick the product.
-3. **Fill What's live.** Every URL from QA. Mark a property *Not part of this account* if it truly does not exist — never leave a guessed link. Funnel and CRM can never be N/A. Slack channel name is optional but recommended.
+3. **Fill Your access (01).** Every URL from QA plus, per property, **Owner** (`You` / `Waiz` / `Shared`) and **the client's access** in one phrase. Mark a property *Not part of this account* if it truly does not exist — never leave a guessed link. Funnel and CRM can never be N/A. Record where logins were sent (Slack DM / password manager) — never a password. Fill the **build inventory (02)**: real creative counts, form filters, drop rows that were not built.
 4. **Operator setup.** CSM name, who works leads (as a sentence subject), speed standard exactly as sold (leave blank if none was sold — the kit will say "as agreed on your kickoff"), market.
 5. **Shareability gate.** Review step — the copy is fixed, so the gate is about the fields: no internal names, no numbers you did not sell, no repo paths. Save a draft if a URL is still pending.
 6. **Generate.** Mr. Waiz renders the PDF, stores it as `v{n}` (regenerate = new version, nothing overwritten), logs a `launch_kit` submission on the client file, and posts a download link to the ops Slack channel. Open the PDF and eyeball every page.
-7. **Stage the Drive folder.** Under the existing client Drive folder, create `Launch Kit/` with the subfolders in **Drive pack**. Download the PDF from Mr. Waiz and put it in `01-Launch-PDF`. Put only client-safe creatives in `03-Swipe-and-Ads`. Paste the `Launch Kit/` folder link back into the wizard (What's live → Launch Kit folder) and regenerate if it was blank.
+7. **Stage the Drive folder.** Under the existing client Drive folder, create `Launch Kit/` with the subfolders in **Drive pack**. Download the PDF from Mr. Waiz and put it in `01-Launch-PDF`. Put shortcuts in `02-Links`. Put only client-safe creatives in `03-Swipe-and-Ads`. Drop kickoff / launch recordings into `04-Recordings`. **DSCR self-serve only:** create `05-Playbooks/` and drop both client-delivery files from [assets/playbook-self-serve-nurture/](../dscr-dna/assets/playbook-self-serve-nurture/) — `DSCR-Prospecting-Playbook.pdf` and `DSCR-Cash-Out-Drip.md`. Paste the `Launch Kit/` folder link back into the wizard (Your access → Launch Kit folder) and regenerate if it was blank.
 8. **Pre-launch Slack.** Send the existing pre-launch touchpoint. Do not send the PDF yet unless the client asks — the call is the first walkthrough.
 9. **Run the Launch Call off the PDF.** Follow **Launch Call agenda**. Screen-share the PDF. Click the live URLs. Get verbal approval on what was built.
 10. **Send to client channel before hangup.** In the wizard's version list, click **Send to client** on the version you walked. Mr. Waiz posts a 7-day download link + the Drive folder link to the client's Slack channel and stamps the version as sent. Confirm they can open both. Drive is the permanent home; the Slack link expires.
@@ -95,25 +95,37 @@ Walk the PDF in order. Do not open internal SOPs on the call.
 
 | # | PDF section | Job of the beat |
 |---|-------------|-----------------|
-| 1 | Cover + Welcome | Why they have this document. It is their map, not homework. Show "What's inside." |
-| 2 | What's live | Click each URL. Confirm they can log in. Get approval on the build. |
-| 3 | How the engine works | One-page client lens — ads → funnel → CRM → first contact → calendar. No build specs. |
-| 4 | Week 1 operator checklist | Who dials, speed standard, BAMFAM, what to do when a lead hits. Role-play one inbound if time. |
-| 5 | Resource index | Point at the playbooks. Do not teach them on this call. |
-| 6 | Creative + swipe pack | Open the Drive folder. What they may use vs what Waiz runs. |
-| 7 | First 30 days | Testing-phase frame in client language. Protect Week 1 motivation. |
-| 8 | Who to ping | Slack for urgent; weekly call for everything else. |
+| 1 | Cover + Welcome | Why they have this document: every login and file we built, plus the short training. Show the three acts (review / train / aftercare). |
+| 2 | 01 Your access | Click each URL. Confirm they can log in. Walk the Owner column — who holds what. Confirm where logins were sent. |
+| 3 | 02 What we built for you | Read the inventory row by row. Get verbal approval on the build. Open the Drive folder and show the five subfolders. Say the "what is yours" line out loud. |
+| 4 | 03 How the engine works | One-page client lens — ads → landing page → first contact → booking → pre-appointment → long-term. Land the three jobs. No build specs. |
+| 5 | 04 Working a lead | Walk the When / Do this table. Print the speed standard. Role-play one inbound if time. |
+| 6 | 05 Playbooks and creative | Point at the playbooks; do not teach them. What they may use vs what Waiz runs. How to ask for a change. |
+| 7 | 06 First 30 days | Testing-phase frame in client language. How we score Month 1. Protect Week 1 motivation. |
+| 8 | 07 Who to ping | Slack for urgent; weekly call for everything else. CSM is the single point of contact. |
 | 9 | Close | Questions, approval, send PDF + folder, confirm next CS check-in. |
 
 ### Drive pack
 
 ```text
 {Client Drive}/Launch Kit/
-  01-Launch-PDF/          ← this client's PDF only
-  02-Links/               ← optional shortcuts; URLs also live in the PDF
+  01-Launch-PDF/          ← this client's PDF, every version
+  02-Links/               ← shortcuts to every page in Section 01
   03-Swipe-and-Ads/       ← their live ads + approved examples they can use
-  04-Recordings/          ← launch-call recording after the call (optional)
+  04-Recordings/          ← kickoff, onboarding, and launch-call recordings
+  05-Playbooks/           ← DSCR self-serve only (see below)
 ```
+
+Folder names must match the "Creative and swipe files" table in the PDF exactly.
+
+**DSCR self-serve (`05-Playbooks/`) — required before Send to client**
+
+| File | Source |
+|------|--------|
+| `DSCR-Prospecting-Playbook.pdf` | [assets/playbook-self-serve-nurture/DSCR-Prospecting-Playbook.pdf](../dscr-dna/assets/playbook-self-serve-nurture/DSCR-Prospecting-Playbook.pdf) |
+| `DSCR-Cash-Out-Drip.md` | [assets/playbook-self-serve-nurture/DSCR-Cash-Out-Drip.md](../dscr-dna/assets/playbook-self-serve-nurture/DSCR-Cash-Out-Drip.md) (canonical: [dscr-cash-out-self-serve-crm-drip.md](../dscr-dna/dscr-cash-out-self-serve-crm-drip.md)) |
+
+Do **not** add this folder for DSCR Laura / Waiz-dials clients, or for RM.
 
 **Client-safe swipe pack** = this client's live ads and approved examples they can reference or remix. Not the OS swipe library, not `creative-research/swipes/`, not Mr. Waiz rows.
 
@@ -126,7 +138,7 @@ The PDF is `paying-client`. The Drive pack is `paying-client`. This SOP is `inte
 - A-Z onboarding, Kickoff internals, QA checklists
 - Media-buying SOPs, campaign setup, Andromeda ops
 - GHL / bot / tag architecture
-- Drip copy libraries and executable sequences
+- Drip copy libraries and executable sequences — **except** the two DSCR self-serve files listed under Drive pack `05-Playbooks/` (paying-client)
 - [Campaign Phase Performance Blueprint](../client-success/campaign-phase-performance-blueprint.md) (translate expectations; do not attach)
 - Internal swipe research or competitor ads we have not cleared for the client
 - Pricing, internal KPI targets, phase numbers
@@ -135,7 +147,9 @@ The PDF is `paying-client`. The Drive pack is `paying-client`. This SOP is `inte
 
 - Their live URLs
 - Client-lens engine map (from [Fulfillment Lead Lifecycle](../fulfillment-lead-lifecycle.md), not how we build it)
-- Week 1 operator rules in plain language
+- Access & ownership register (URL, owner, client's access — never credentials)
+- Build inventory in client language (what each piece does, where to see it)
+- Working-a-lead rules in plain language
 - Links to `paying-client` or `lo-course` playbooks (resource index only)
 - Drive folder link for swipes
 - First-30-days frame in client language
@@ -145,11 +159,11 @@ The PDF is `paying-client`. The Drive pack is `paying-client`. This SOP is `inte
 
 ### Product routing
 
-| Path | Week 1 operator page | Resource index |
+| Path | 03 three jobs + 04 Working a lead | 05 Resource index |
 |------|----------------------|----------------|
 | Reverse mortgage | LO / VA / call center as sold | Nurture playbook, RM ads playbook, HQ lead acquisition, BAMFAM |
-| DSCR — self-serve | LO or VA works every lead; drip is the safety net | [DSCR Self-Serve Lead Response](../dscr-dna/playbook-dscr-self-serve-lead-nurture.md) |
-| DSCR — Laura | Laura owns SMS / booking; LO owns consults | Do not also hand them the self-serve playbook as the daily system |
+| DSCR — self-serve | LO or VA works every lead; drip is the safety net | [DSCR Prospecting Playbook](../dscr-dna/playbook-dscr-self-serve-lead-nurture.md) PDF + [Cash-Out Drip](../dscr-dna/dscr-cash-out-self-serve-crm-drip.md) in `05-Playbooks/` |
+| DSCR — Laura | Laura owns SMS / booking; LO owns consults | Do not also hand them the self-serve playbook or drip as the daily system |
 
 ## Decision Rules
 
