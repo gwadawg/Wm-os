@@ -3,7 +3,7 @@ title: A-Z Client Onboarding SOP
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-09-04
+last_updated: 2026-09-11
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Onboarding/Updated A-Z Onboarding Document.docx
 artifact_type: sop
@@ -39,6 +39,7 @@ New client payment confirmed; Closer submits the New Client Form.
 - Ops / media buying working from full project clarity
 - Setup owners accountable for completed work
 - Client trained, expectations set, account live with correct status
+- [Client Launch Kit](sop-client-launch-kit.md) PDF + Drive swipe pack delivered on the Launch Call
 
 ## Quality Bar
 
@@ -167,11 +168,13 @@ If something was forgotten, accountability stays with the person who owned that 
 2. **Coach / train** — teach them how to operate inside the system so they can get the best results.
 3. **Set hard expectations** — frame timelines, early-phase reality, and roles clearly to reduce churn from surprise or impatience.
 
+Run the call off the **[Client Launch Kit](sop-client-launch-kit.md)** — branded PDF + living Drive folder. The kit is a required output of this step. Generate it in **Mr. Waiz → Client Roster → Kit** (prefilled from the client file, versioned, posted to Slack); the Launch checklist flags when no kit exists. Agenda, shareability gate, and Drive pack live in that SOP.
+
 **Launch Form**
 
 Submitted after everything is done and go-live is scheduled. Final triple-check of the work, then activate automations and set account status correctly so the company treats the client as live.
 
-**Owner:** CSM (Launch Call). Fulfillment / assigned owner (Launch Form).
+**Owner:** CSM (Launch Call + Launch Kit). Fulfillment / assigned owner (Launch Form).
 
 **Unlocks:** Live account; post-launch CS cadence ([Slack Touchpoint Playbook](onboarding-to-launch-client-communication.md), [Post-Launch Client Success System](../client-success/post-launch-client-success-system.md)).
 
@@ -186,11 +189,12 @@ New Client Form
   → OB Call (access + finish collection + mini strat)
   → Kickoff Form (full ops/MB packet → build)
   → QA (owner accountability)
-  → Launch Call + Launch Form (approve, train, expect, go live)
+  → Launch Call + Launch Kit + Launch Form (approve, train, expect, go live)
 ```
 
 ## Related Docs
 
+- [Client Launch Kit SOP](sop-client-launch-kit.md)
 - [Client Success Slack Touchpoint Playbook](onboarding-to-launch-client-communication.md)
 - [Fulfillment Operating System](../fulfillment-operating-system.md)
 - [New Client Campaign Setup SOP](../media-buying/new-client-campaign-setup-sop.md)
