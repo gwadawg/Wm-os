@@ -21,9 +21,11 @@ Media buyer hiring, onboarding, assessment, scorecard, and bootcamp.
 
 ## Lead MB PJ pack (new hire — payment + expectations)
 
-Design: [Lead MB PJ Comp Design](../../superpowers/specs/2026-09-15-lead-media-buyer-pj-comp-design.md) · [plans pointer](../../plans/2026-09-15-lead-media-buyer-pj-comp-design.md)
+**Start here for onboarding:** [Soft Trial Agreement (2 months)](../people/lead-mb-pj-trial-agreement.md) · [PDF](../people/assets/lead-mb-pj-trial-agreement.pdf)
 
-- [Payment agreement](../people/lead-mb-pj-payment-agreement.md)
+Fuller design / long-term pack: [Lead MB PJ Comp Design](../../superpowers/specs/2026-09-15-lead-media-buyer-pj-comp-design.md) · [plans pointer](../../plans/2026-09-15-lead-media-buyer-pj-comp-design.md)
+
+- [Payment agreement (full)](../people/lead-mb-pj-payment-agreement.md) · [PDF pack](../people/assets/lead-mb-pj-payment-agreement.pdf)
 - [SOW](../people/lead-mb-pj-sow.md)
 - [Level checklist](../people/lead-mb-pj-level-checklist.md)
 - [Commission appendix](../people/lead-mb-pj-commission-appendix.md)

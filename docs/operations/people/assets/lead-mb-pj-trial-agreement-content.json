@@ -1,0 +1,197 @@
+[
+  {
+    "type": "callout",
+    "text": "Soft trial agreement for the first 2 months only. Clear on pay, expectations, and mutual exit. Not a CLT contract and not deep legal counsel. KPI standards may change with written notice."
+  },
+  {
+    "type": "h1",
+    "text": "Parties"
+  },
+  {
+    "type": "table",
+    "headers": ["Field", "Value"],
+    "rows": [
+      ["Company", "Waiz Media (\"Company\")"],
+      ["Contractor", "________________________________ (\"you\"), Brazil PJ"],
+      ["PJ / tax ID", "________________________________"],
+      ["Trial start", "________________________________"]
+    ],
+    "col_widths": [0.28, 0.72]
+  },
+  {
+    "type": "h1",
+    "text": "1. What this is"
+  },
+  {
+    "type": "bullet",
+    "text": "A <b>2-month testing phase</b> so both sides can see if the seat is a fit."
+  },
+  {
+    "type": "bullet",
+    "text": "During these <b>first 2 months</b>, <b>either party may end the engagement</b> for any reason with <b>written notice</b> (email or message is enough)."
+  },
+  {
+    "type": "bullet",
+    "text": "After the trial, if both want to continue, we align on ongoing pay, levels, and commissions. Nothing here locks long-term salary, levels, or commissions beyond the trial terms below."
+  },
+  {
+    "type": "h1",
+    "text": "2. Pay during the trial (agreed)"
+  },
+  {
+    "type": "table",
+    "headers": ["Month", "Pay", "Notes"],
+    "rows": [
+      ["Month 1", "R$4,000", "Flat. No commissions."],
+      ["Month 2", "R$4,000", "Flat. No commissions during trial."]
+    ],
+    "col_widths": [0.22, 0.28, 0.5]
+  },
+  {
+    "type": "bullet",
+    "text": "Currency: <b>BRL</b>. You invoice as PJ."
+  },
+  {
+    "type": "bullet",
+    "text": "<b>Payday: 9th of each month</b> for the <b>prior</b> month’s work, after a simple invoice."
+  },
+  {
+    "type": "bullet",
+    "text": "If the trial ends mid-month, Company pays a <b>pro-rata</b> share of that month’s R$4,000 for days worked."
+  },
+  {
+    "type": "h1",
+    "text": "3. What we expect from you (trial)"
+  },
+  {
+    "type": "body",
+    "text": "Plain expectations — not a full job description:"
+  },
+  {
+    "type": "numbered",
+    "text": "Show up consistently and communicate clearly."
+  },
+  {
+    "type": "numbered",
+    "text": "Learn Waiz systems / OS and follow the buying process we teach."
+  },
+  {
+    "type": "numbered",
+    "text": "Work assigned accounts carefully; ask before big changes you are unsure about."
+  },
+  {
+    "type": "numbered",
+    "text": "Help with creative/ad concepts as asked (learning mode in trial)."
+  },
+  {
+    "type": "numbered",
+    "text": "Hit toward the KPI standards we set for your accounts (see §4)."
+  },
+  {
+    "type": "numbered",
+    "text": "Be coachable; flag problems early."
+  },
+  {
+    "type": "h1",
+    "text": "4. KPIs (subject to change)"
+  },
+  {
+    "type": "bullet",
+    "text": "Company will share KPI targets for accounts you touch (e.g. CPQL / related buying standards)."
+  },
+  {
+    "type": "bullet",
+    "text": "Those KPI standards are <b>subject to change</b> as we learn the accounts and what “good” looks like. Changes will be communicated in writing."
+  },
+  {
+    "type": "bullet",
+    "text": "Missing a KPI in month 1–2 is a <b>coaching signal</b>, not an automatic firing clause — but repeated disregard for process or communication is a reason either side may end the trial under §1."
+  },
+  {
+    "type": "h1",
+    "text": "5. What this trial is not"
+  },
+  {
+    "type": "bullet",
+    "text": "Not CLT employment."
+  },
+  {
+    "type": "bullet",
+    "text": "Not a guarantee of continuing after 2 months."
+  },
+  {
+    "type": "bullet",
+    "text": "Not a lock on higher levels (R$5k / R$6k / R$7k) or commissions — those are discussed if we continue after the trial."
+  },
+  {
+    "type": "bullet",
+    "text": "Not deep legal terms. If we continue long term, we can add a fuller agreement."
+  },
+  {
+    "type": "h1",
+    "text": "6. Ending the trial"
+  },
+  {
+    "type": "bullet",
+    "text": "<b>Either party</b> may end during the 2-month testing phase with written notice."
+  },
+  {
+    "type": "bullet",
+    "text": "Final pay = days worked (pro-rata) for the current month + any unpaid prior month, on the normal payday cycle (or sooner if Company chooses)."
+  },
+  {
+    "type": "bullet",
+    "text": "Access to ad accounts and tools ends on the last working day unless otherwise agreed."
+  },
+  {
+    "type": "pagebreak"
+  },
+  {
+    "type": "h1",
+    "text": "7. Signatures"
+  },
+  {
+    "type": "body",
+    "text": "By signing, we agree this soft trial covers <b>initial pay</b>, <b>mutual exit during months 1–2</b>, and <b>expectations</b> as written above."
+  },
+  {
+    "type": "spacer",
+    "pt": 20
+  },
+  {
+    "type": "h2",
+    "text": "Company — Waiz Media"
+  },
+  {
+    "type": "body",
+    "text": "Name: ________________________________"
+  },
+  {
+    "type": "body",
+    "text": "Signature: _____________________________"
+  },
+  {
+    "type": "body",
+    "text": "Date: _________________________________"
+  },
+  {
+    "type": "spacer",
+    "pt": 28
+  },
+  {
+    "type": "h2",
+    "text": "Contractor"
+  },
+  {
+    "type": "body",
+    "text": "Name: ________________________________"
+  },
+  {
+    "type": "body",
+    "text": "Signature: _____________________________"
+  },
+  {
+    "type": "body",
+    "text": "Date: _________________________________"
+  }
+]
