@@ -253,6 +253,12 @@ Accountant/lawyer finalizes Brazilian PJ wording before signature.
 ## Related docs
 
 - [Christian Media Buyer Comp Design](../../plans/2026-07-15-christian-media-buyer-comp-design.md)
+- [Plans pointer](../../plans/2026-09-15-lead-media-buyer-pj-comp-design.md)
+- [Payment agreement](../../operations/people/lead-mb-pj-payment-agreement.md)
+- [SOW](../../operations/people/lead-mb-pj-sow.md)
+- [Level checklist](../../operations/people/lead-mb-pj-level-checklist.md)
+- [Commission appendix](../../operations/people/lead-mb-pj-commission-appendix.md)
+- [EOM sheet template](../../operations/people/lead-mb-pj-eom-sheet-template.md)
 - [Product Margin Model](../../company/product-margin-model.md)
 - [Media Buyer Job Scorecard](../../operations/hiring/media-buyer-job-scorecard.md)
 - [Media Buyer Daily OS](../../operations/people/media-buyer-daily-os.md)
