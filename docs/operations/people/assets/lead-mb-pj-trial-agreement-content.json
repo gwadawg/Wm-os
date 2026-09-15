@@ -24,7 +24,7 @@
   },
   {
     "type": "code",
-    "text": "START (may be mid-month)\n    |\n    v\nTRAINING  — R$25/hr — until you pass the competency test\n            (length = how fast you learn)\n    |\n    v\nSALARY    — R$4,000/month — day after you pass\n            (still in trial window)\n    |\n    v\nCOMMISSIONS eligible after one full month of work on salary"
+    "text": "START (may be mid-month)\n    |\n    v\nTRAINING  — R$25/hr — until you pass the competency test\n            (length = how fast you learn)\n    |\n    v\nSALARY    — only after pass + written FT/PT seat confirmation\n            Full-time = R$4,000/mo (still in trial window)\n    |\n    v\nCOMMISSIONS eligible after one full month of work on salary"
   },
   {
     "type": "body",
@@ -59,16 +59,28 @@
     "text": "3. After training — salary (still trial)"
   },
   {
-    "type": "bullet",
-    "text": "Day after you pass: automatic move to <b>salary R$4,000 / month</b> (no longer hourly)."
+    "type": "callout",
+    "text": "Salary starts only after you pass <b>and</b> Company confirms full-time or part-time seat load in writing. Do not assume R$4,000 for a part-time load."
   },
   {
     "type": "bullet",
-    "text": "If salary starts mid-month: pro-rate by calendar days (R$4,000 ÷ days in month × days on salary)."
+    "text": "<b>Full-time:</b> <b>R$4,000 / month</b> (no longer hourly), starting the day after pass <b>and</b> that written confirmation (whichever is later)."
   },
   {
     "type": "bullet",
-    "text": "You stay in the trial window until the end of your first full month on salary."
+    "text": "<b>Part-time:</b> Company states hours and pay in the same written note (reduced monthly salary or continued hourly)."
+  },
+  {
+    "type": "bullet",
+    "text": "If work is still light after pass, Company may keep you on <b>hourly R$25</b> until it confirms a salary seat in writing."
+  },
+  {
+    "type": "bullet",
+    "text": "If salary starts mid-month: pro-rate by calendar days (monthly salary ÷ days in month × days on salary)."
+  },
+  {
+    "type": "bullet",
+    "text": "Trial window runs through the end of your first full month once salary begins."
   },
   {
     "type": "h1",

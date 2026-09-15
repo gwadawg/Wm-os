@@ -35,8 +35,8 @@ START (may be mid-month)
 TRAINING  ── hourly R$25/hr ── until you pass the competency test
     │         (length depends on how fast you learn)
     ▼
-SALARY    ── R$4,000/month ── starts the day after you pass
-    │         (you are still in the trial window)
+SALARY    ── only after pass + written FT/PT seat confirmation
+    │         Full-time = R$4,000/month (still in trial window)
     ▼
 COMMISSIONS eligible after one full month of work on salary
 ```
@@ -64,12 +64,19 @@ both sides, not a punishment clause.
 
 ## 3. After training — salary (still trial)
 
-- The day after you pass: you move automatically to **salary R$4,000 per month**
-  (no longer hourly).
+- Salary starts only after you **pass** the competency check **and** Company confirms
+  in writing whether the seat is **full-time** or **part-time** (and the matching pay).
+- **Full-time:** **R$4,000 per month** (no longer hourly), starting the day after pass
+  *and* that written seat-load confirmation (whichever is later).
+- **Part-time:** Company states hours and pay in that same written note (e.g. reduced
+  monthly salary or continued hourly). Do **not** assume full R$4,000 for a part-time load.
+- If work is still light after pass, Company may keep you on **hourly R$25** until it
+  confirms a salary seat in writing.
 - First salary month may be **pro-rated by calendar days** if it does not start on
-  the 1st (daily rate = R$4,000 ÷ days in that calendar month × days on salary).
+  the 1st (daily rate = monthly salary ÷ days in that calendar month × days on salary).
 - You remain in the **trial window** until the end of your first full month on salary
-  (§1).
+  (§1). If you stay hourly longer, the trial window still runs through the end of your
+  first full month once salary begins.
 
 ## 4. Commissions
 
