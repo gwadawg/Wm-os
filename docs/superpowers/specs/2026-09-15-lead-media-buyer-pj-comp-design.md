@@ -3,13 +3,15 @@ title: Lead Media Buyer PJ Comp + Expectations Design
 domain: operations
 subdomain: people
 owner: founder
-status: draft
+status: active
 confidentiality: owner-only
 last_updated: 2026-09-15
 review_cycle: quarterly
 artifact_type: policy
 related_docs:
   - docs/plans/2026-07-15-christian-media-buyer-comp-design.md
+  - docs/plans/2026-09-15-lead-media-buyer-pj-comp-design.md
+  - docs/operations/people/lead-mb-pj-payment-agreement.md
   - docs/company/product-margin-model.md
   - docs/operations/hiring/media-buyer-job-scorecard.md
   - docs/operations/people/media-buyer-daily-os.md
@@ -27,8 +29,9 @@ without locking a US-style high base.
 
 ## Status
 
-**DRAFT — awaiting founder review of this spec** before drafting the PJ agreement
-pack and implementation plan.
+**ACTIVE — design locked; hire-facing pack drafted.** Fill placeholders, accountant/
+lawyer PJ pass, then send for signature. Live commissions still require L2 + targets +
+shadow EOM.
 
 ## Scope
 

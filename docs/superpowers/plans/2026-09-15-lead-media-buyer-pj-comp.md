@@ -268,11 +268,11 @@ EOF
 
 ## Done when
 
-- [ ] All five hire-facing docs exist and match the locked spec numbers
-- [ ] Hubs link the pack
-- [ ] Pointer exists under `docs/plans/`
-- [ ] Founder can fill placeholders → accountant pass → send for signature
-- [ ] No changes to Christian’s Phase 1 plan
+- [x] All five hire-facing docs exist and match the locked spec numbers
+- [x] Hubs link the pack
+- [x] Pointer exists under `docs/plans/`
+- [x] Founder can fill placeholders → accountant pass → send for signature
+- [x] No changes to Christian’s Phase 1 plan
 
 ## Out of scope (do not do in this plan)
 

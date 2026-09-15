@@ -3,7 +3,7 @@ title: Operations — Hiring (Media Buyer)
 domain: operations
 owner: media-buying-lead
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-09-15
 review_cycle: monthly
 ---
 
@@ -18,3 +18,13 @@ Media buyer hiring, onboarding, assessment, scorecard, and bootcamp.
 - [Media Buyer Assessment Call SOP](media-buyer-assessment-call-sop.md)
 - [Media Buyer Job Scorecard](media-buyer-job-scorecard.md) — single canonical; see [duplicate-resolutions](../../_inventory/duplicate-resolutions.md)
 - [Media Buyer Onboarding And Bootcamp](media-buyer-onboarding-bootcamp.md)
+
+## Lead MB PJ pack (new hire — payment + expectations)
+
+Design: [Lead MB PJ Comp Design](../../superpowers/specs/2026-09-15-lead-media-buyer-pj-comp-design.md) · [plans pointer](../../plans/2026-09-15-lead-media-buyer-pj-comp-design.md)
+
+- [Payment agreement](../people/lead-mb-pj-payment-agreement.md)
+- [SOW](../people/lead-mb-pj-sow.md)
+- [Level checklist](../people/lead-mb-pj-level-checklist.md)
+- [Commission appendix](../people/lead-mb-pj-commission-appendix.md)
+- [EOM sheet template](../people/lead-mb-pj-eom-sheet-template.md)

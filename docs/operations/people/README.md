@@ -3,7 +3,7 @@ title: People Operations Hub
 domain: operations
 owner: operations
 status: draft
-last_updated: 2026-07-16
+last_updated: 2026-09-15
 review_cycle: monthly
 artifact_type: overview
 ---
@@ -41,6 +41,8 @@ KPI Review cadence: [KPI Review Meeting SOP](kpi-review-meeting-sop.md) ·
 - [Q3 Comp Foreshadow](q3-comp-foreshadow.md) — setter/CS pay redesign (gated on attribution)
 - [CS Comp Design — Laura](../../plans/2026-07-14-laura-cs-comp-design.md) — base + stickiness milestones/trailers
 - [Media Buyer Comp Design — Christian](../../plans/2026-07-15-christian-media-buyer-comp-design.md) — base + CPL hits + 80% book bonus
+- [Lead MB PJ Comp Design](../../superpowers/specs/2026-09-15-lead-media-buyer-pj-comp-design.md) — BRL ladder L1–L4 + L2+ CPQL commissions ([pointer](../../plans/2026-09-15-lead-media-buyer-pj-comp-design.md))
+  - Pack: [Payment](lead-mb-pj-payment-agreement.md) · [SOW](lead-mb-pj-sow.md) · [Levels](lead-mb-pj-level-checklist.md) · [Commissions](lead-mb-pj-commission-appendix.md) · [EOM](lead-mb-pj-eom-sheet-template.md)
 - [CCM Comp Plan V1 — Pedro](../../plans/2026-07-14-ccm-pedro-comp-plan-v1.md) — Rio base + show-rate pool + B2B
 - [Team Responsibility Directory](team-responsibility-directory.md)
 - [Product Margin Model — RM/DSCR](../../company/product-margin-model.md)
