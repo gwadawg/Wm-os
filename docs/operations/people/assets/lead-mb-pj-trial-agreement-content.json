@@ -1,7 +1,7 @@
 [
   {
     "type": "callout",
-    "text": "Soft trial agreement for the first 2 months only. Clear on pay, expectations, and mutual exit. Not a CLT contract and not deep legal counsel. KPI standards may change with written notice."
+    "text": "Soft agreement: training is hourly (R$25/hr) until you pass; then salary R$4,000/mo. Either party may end during the trial window. Not CLT. KPIs may change with written notice."
   },
   {
     "type": "h1",
@@ -14,149 +14,168 @@
       ["Company", "Waiz Media (\"Company\")"],
       ["Contractor", "________________________________ (\"you\"), Brazil PJ"],
       ["PJ / tax ID", "________________________________"],
-      ["Trial start", "________________________________"]
+      ["Start date", "________________________________ (mid-month OK)"]
     ],
     "col_widths": [0.28, 0.72]
   },
   {
     "type": "h1",
-    "text": "1. What this is"
+    "text": "1. How the phases work"
   },
   {
-    "type": "bullet",
-    "text": "A <b>2-month testing phase</b> so both sides can see if the seat is a fit."
-  },
-  {
-    "type": "bullet",
-    "text": "During these <b>first 2 months</b>, <b>either party may end the engagement</b> for any reason with <b>written notice</b> (email or message is enough)."
-  },
-  {
-    "type": "bullet",
-    "text": "After the trial, if both want to continue, we align on ongoing pay, levels, and commissions. Nothing here locks long-term salary, levels, or commissions beyond the trial terms below."
-  },
-  {
-    "type": "h1",
-    "text": "2. Pay during the trial (agreed)"
-  },
-  {
-    "type": "table",
-    "headers": ["Month", "Pay", "Notes"],
-    "rows": [
-      ["Month 1", "R$4,000", "Flat. No commissions."],
-      ["Month 2", "R$4,000", "Flat. No commissions during trial."]
-    ],
-    "col_widths": [0.22, 0.28, 0.5]
-  },
-  {
-    "type": "bullet",
-    "text": "Currency: <b>BRL</b>. You invoice as PJ."
-  },
-  {
-    "type": "bullet",
-    "text": "<b>Payday: 9th of each month</b> for the <b>prior</b> month’s work, after a simple invoice."
-  },
-  {
-    "type": "bullet",
-    "text": "If the trial ends mid-month, Company pays a <b>pro-rata</b> share of that month’s R$4,000 for days worked."
-  },
-  {
-    "type": "h1",
-    "text": "3. What we expect from you (trial)"
+    "type": "code",
+    "text": "START (may be mid-month)\n    |\n    v\nTRAINING  — R$25/hr — until you pass the competency test\n            (length = how fast you learn)\n    |\n    v\nSALARY    — R$4,000/month — day after you pass\n            (still in trial window)\n    |\n    v\nCOMMISSIONS eligible after one full month of work on salary"
   },
   {
     "type": "body",
-    "text": "Plain expectations — not a full job description:"
-  },
-  {
-    "type": "numbered",
-    "text": "Show up consistently and communicate clearly."
-  },
-  {
-    "type": "numbered",
-    "text": "Learn Waiz systems / OS and follow the buying process we teach."
-  },
-  {
-    "type": "numbered",
-    "text": "Work assigned accounts carefully; ask before big changes you are unsure about."
-  },
-  {
-    "type": "numbered",
-    "text": "Help with creative/ad concepts as asked (learning mode in trial)."
-  },
-  {
-    "type": "numbered",
-    "text": "Hit toward the KPI standards we set for your accounts (see §4)."
-  },
-  {
-    "type": "numbered",
-    "text": "Be coachable; flag problems early."
+    "text": "<b>Trial window (mutual freedom):</b> From start through the end of your <b>first full month on salary</b>, <b>either party may end</b> for any reason with <b>written notice</b> (email or message is enough)."
   },
   {
     "type": "h1",
-    "text": "4. KPIs (subject to change)"
+    "text": "2. Training period (hourly)"
   },
   {
     "type": "bullet",
-    "text": "Company will share KPI targets for accounts you touch (e.g. CPQL / related buying standards)."
+    "text": "Pay: <b>R$25 per hour</b>, invoiced in BRL as PJ."
   },
   {
     "type": "bullet",
-    "text": "Those KPI standards are <b>subject to change</b> as we learn the accounts and what “good” looks like. Changes will be communicated in writing."
+    "text": "Mid-month start is fine — training pay is <b>hourly</b>, not a fraction of R$4,000."
   },
   {
     "type": "bullet",
-    "text": "Missing a KPI in month 1–2 is a <b>coaching signal</b>, not an automatic firing clause — but repeated disregard for process or communication is a reason either side may end the trial under §1."
+    "text": "Training <b>ends as soon as you fully pass</b> the competency check on: (1) mortgages basics for the seat, (2) software/tools, (3) ad account setup, (4) client onboarding, (5) managing an account."
+  },
+  {
+    "type": "bullet",
+    "text": "Length depends on <b>how long you take to learn</b> — no fixed calendar end date."
+  },
+  {
+    "type": "bullet",
+    "text": "Company confirms pass <b>in writing</b>. That note switches you from hourly → salary."
   },
   {
     "type": "h1",
-    "text": "5. What this trial is not"
+    "text": "3. After training — salary (still trial)"
   },
   {
     "type": "bullet",
-    "text": "Not CLT employment."
+    "text": "Day after you pass: automatic move to <b>salary R$4,000 / month</b> (no longer hourly)."
   },
   {
     "type": "bullet",
-    "text": "Not a guarantee of continuing after 2 months."
+    "text": "If salary starts mid-month: pro-rate by calendar days (R$4,000 ÷ days in month × days on salary)."
   },
   {
     "type": "bullet",
-    "text": "Not a lock on higher levels (R$5k / R$6k / R$7k) or commissions — those are discussed if we continue after the trial."
-  },
-  {
-    "type": "bullet",
-    "text": "Not deep legal terms. If we continue long term, we can add a fuller agreement."
+    "text": "You stay in the trial window until the end of your first full month on salary."
   },
   {
     "type": "h1",
-    "text": "6. Ending the trial"
+    "text": "4. Commissions"
   },
   {
     "type": "bullet",
-    "text": "<b>Either party</b> may end during the 2-month testing phase with written notice."
+    "text": "<b>No commissions</b> during training."
   },
   {
     "type": "bullet",
-    "text": "Final pay = days worked (pro-rata) for the current month + any unpaid prior month, on the normal payday cycle (or sooner if Company chooses)."
+    "text": "On salary: eligible only after completing <b>one full month of work on salary</b>."
   },
   {
     "type": "bullet",
-    "text": "Access to ad accounts and tools ends on the last working day unless otherwise agreed."
+    "text": "Commission rules are set separately when activated. KPI targets are <b>subject to change</b> with written notice."
+  },
+  {
+    "type": "h1",
+    "text": "5. Payday"
+  },
+  {
+    "type": "bullet",
+    "text": "<b>9th of each month</b> for the prior month’s approved hours and/or salary (and commissions when eligible), after PJ invoice."
+  },
+  {
+    "type": "bullet",
+    "text": "Mid-month start: first invoice = <b>hours × R$25</b> for training days (+ any salary days if you already passed that month)."
+  },
+  {
+    "type": "h1",
+    "text": "6. What we expect"
+  },
+  {
+    "type": "numbered",
+    "text": "Show up, communicate clearly, be coachable."
+  },
+  {
+    "type": "numbered",
+    "text": "Learn systems and the process we teach."
+  },
+  {
+    "type": "numbered",
+    "text": "Ask before big account changes you are unsure about."
+  },
+  {
+    "type": "numbered",
+    "text": "Help with creative/ad concepts as asked while learning."
+  },
+  {
+    "type": "numbered",
+    "text": "Work toward KPI standards we set — standards may change with written notice."
+  },
+  {
+    "type": "numbered",
+    "text": "Flag problems early."
+  },
+  {
+    "type": "body",
+    "text": "Missing a KPI early = coaching. Ignoring process or going dark = either side may end under the trial window."
+  },
+  {
+    "type": "h1",
+    "text": "7. What this is not"
+  },
+  {
+    "type": "bullet",
+    "text": "Not CLT employment / not a guarantee after the trial window."
+  },
+  {
+    "type": "bullet",
+    "text": "Not a lock on R$5k / R$6k / R$7k levels — those only if we continue later."
+  },
+  {
+    "type": "bullet",
+    "text": "Not deep legal terms. Fuller agreement possible if we continue long term."
+  },
+  {
+    "type": "h1",
+    "text": "8. Ending during the trial window"
+  },
+  {
+    "type": "bullet",
+    "text": "Either party may end with written notice during training or the first full salary month."
+  },
+  {
+    "type": "bullet",
+    "text": "Final pay = approved hours at R$25 and/or pro-rated salary for days worked."
+  },
+  {
+    "type": "bullet",
+    "text": "Tool/account access ends on the last working day unless otherwise agreed."
   },
   {
     "type": "pagebreak"
   },
   {
     "type": "h1",
-    "text": "7. Signatures"
+    "text": "9. Signatures"
   },
   {
     "type": "body",
-    "text": "By signing, we agree this soft trial covers <b>initial pay</b>, <b>mutual exit during months 1–2</b>, and <b>expectations</b> as written above."
+    "text": "By signing, we agree on training pay, salary switch after pass, commission timing, and mutual exit during the trial window."
   },
   {
     "type": "spacer",
-    "pt": 20
+    "pt": 18
   },
   {
     "type": "h2",
@@ -176,7 +195,7 @@
   },
   {
     "type": "spacer",
-    "pt": 28
+    "pt": 24
   },
   {
     "type": "h2",
