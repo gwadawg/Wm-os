@@ -1,0 +1,418 @@
+[
+  {
+    "type": "callout",
+    "text": "Independent contractor (Brazil PJ) payment and expectations agreement. Not a CLT employment contract. PJ legal/tax wording should be finalized by the Company’s accountant or lawyer before signature."
+  },
+  {
+    "type": "h1",
+    "text": "Parties"
+  },
+  {
+    "type": "table",
+    "headers": ["Field", "Value"],
+    "rows": [
+      ["Company", "Waiz Media (founder as authorized signatory)"],
+      ["Contractor", "________________________________ (\"Contractor\"), Brazil PJ"],
+      ["PJ / tax ID", "________________________________"],
+      ["Start date", "________________________________ (defines Month 1 calendar)"]
+    ],
+    "col_widths": [0.28, 0.72]
+  },
+  {
+    "type": "h1",
+    "text": "1. Engagement"
+  },
+  {
+    "type": "body",
+    "text": "Contractor provides Lead Media Buyer services as described in the attached Statement of Work, invoiced monthly in <b>Brazilian reais (BRL)</b>."
+  },
+  {
+    "type": "body",
+    "text": "Contractor is responsible for their own taxes, contributions, and PJ compliance."
+  },
+  {
+    "type": "h1",
+    "text": "2. Month 1 — Ramp"
+  },
+  {
+    "type": "table",
+    "headers": ["Component", "Amount"],
+    "rows": [
+      ["Base", "R$4,000 (flat)"],
+      ["Commissions", "R$0"]
+    ],
+    "col_widths": [0.4, 0.6]
+  },
+  {
+    "type": "body",
+    "text": "Month 1 focuses on systems access, OS walkthrough, shadowing live accounts, and supervised onboard / funnel / headline reps. End of Month 1: founder check-in. No automatic raise."
+  },
+  {
+    "type": "h1",
+    "text": "3. Month 2+ — Base by level"
+  },
+  {
+    "type": "table",
+    "headers": ["Level", "Base (BRL/month)", "Commissions"],
+    "rows": [
+      ["L1", "R$4,000", "None"],
+      ["L2", "R$5,000", "Per Commission Appendix"],
+      ["L3", "R$6,000", "Same as L2"],
+      ["L4", "R$7,000", "Same as L2"]
+    ],
+    "col_widths": [0.2, 0.35, 0.45]
+  },
+  {
+    "type": "body",
+    "text": "Contractor starts Month 2 at <b>L1</b> unless founder has already signed an unlock on the Level Checklist."
+  },
+  {
+    "type": "h1",
+    "text": "4. Level raises"
+  },
+  {
+    "type": "body",
+    "text": "Levels unlock by <b>skills demonstration only</b> (founder sign-off on the checklist). New base starts the <b>next full pay month</b> after sign-off (no retroactive base unless founder writes an exception)."
+  },
+  {
+    "type": "table",
+    "headers": ["Level", "Unlock when Contractor can…"],
+    "rows": [
+      ["L2", "Manage all accounts · onboard a client · create a basic funnel · understand/write headlines · run KPI client reviews"],
+      ["L3", "Own creative process: clear analysis + scripts/concepts fully written for production"],
+      ["L4", "Produce and edit ads end-to-end"]
+    ],
+    "col_widths": [0.15, 0.85]
+  },
+  {
+    "type": "body",
+    "text": "Mentoring other team members is <b>not</b> a level gate."
+  },
+  {
+    "type": "h1",
+    "text": "5. Commissions (L2+ only)"
+  },
+  {
+    "type": "bullet",
+    "text": "Available only after <b>L2</b> (or higher) unlock."
+  },
+  {
+    "type": "bullet",
+    "text": "<b>R$100</b> per eligible account at <b>CPQL</b> KPI that month."
+  },
+  {
+    "type": "bullet",
+    "text": "Monthly media-buyer scorecard must be <b>≥ B</b>, or commissions = <b>R$0</b> (base still pays)."
+  },
+  {
+    "type": "bullet",
+    "text": "Full rules: Commission Appendix (attached)."
+  },
+  {
+    "type": "bullet",
+    "text": "Cash commissions do <b>not</b> pay until: L2+ unlock, written CPQL targets on scored accounts, and one <b>shadow EOM</b> month approved by founder."
+  },
+  {
+    "type": "h1",
+    "text": "6. Payday"
+  },
+  {
+    "type": "bullet",
+    "text": "<b>Pay day: 9th of every month</b> (BRL)."
+  },
+  {
+    "type": "bullet",
+    "text": "Pays the <b>prior calendar month</b> base (level then in force) + approved commissions."
+  },
+  {
+    "type": "bullet",
+    "text": "Example: September work → approve early October → paid <b>9 October</b>."
+  },
+  {
+    "type": "bullet",
+    "text": "If the 9th is not a banking day, pay the next banking day (per accountant)."
+  },
+  {
+    "type": "bullet",
+    "text": "Contractor prepares the EOM sheet; founder approves; Contractor invoices; Company pays."
+  },
+  {
+    "type": "h1",
+    "text": "7. Changes"
+  },
+  {
+    "type": "body",
+    "text": "Company may adjust rates, floors, grace, or level criteria with <b>30 days’ written notice</b>, typically at quarterly review. Structure changes should not conflict with work already completed in a closed pay month without written agreement."
+  },
+  {
+    "type": "h1",
+    "text": "8. Attachments (part of this agreement)"
+  },
+  {
+    "type": "numbered",
+    "text": "Statement of Work (SOW)"
+  },
+  {
+    "type": "numbered",
+    "text": "Level Unlock Checklist"
+  },
+  {
+    "type": "numbered",
+    "text": "Commission Appendix"
+  },
+  {
+    "type": "numbered",
+    "text": "EOM Sheet Template (operating tool; provided separately in company OS)"
+  },
+  {
+    "type": "pagebreak"
+  },
+  {
+    "type": "h1",
+    "text": "9. Signatures"
+  },
+  {
+    "type": "body",
+    "text": "By signing, both parties agree to the terms in this Payment & Expectations Agreement and its listed attachments."
+  },
+  {
+    "type": "spacer",
+    "pt": 18
+  },
+  {
+    "type": "h2",
+    "text": "Company — Waiz Media"
+  },
+  {
+    "type": "body",
+    "text": "Name: ________________________________"
+  },
+  {
+    "type": "body",
+    "text": "Signature: _____________________________"
+  },
+  {
+    "type": "body",
+    "text": "Date: _________________________________"
+  },
+  {
+    "type": "spacer",
+    "pt": 24
+  },
+  {
+    "type": "h2",
+    "text": "Contractor"
+  },
+  {
+    "type": "body",
+    "text": "Name: ________________________________"
+  },
+  {
+    "type": "body",
+    "text": "Signature: _____________________________"
+  },
+  {
+    "type": "body",
+    "text": "Date: _________________________________"
+  },
+  {
+    "type": "pagebreak"
+  },
+  {
+    "type": "h1",
+    "text": "Attachment A — Statement of Work"
+  },
+  {
+    "type": "h2",
+    "text": "Mission"
+  },
+  {
+    "type": "body",
+    "text": "Own assigned client ad accounts to hit written <b>CPQL</b> targets, keep buying hygiene tight, communicate clearly with clients and Client Success, and grow into owning creative packages and (at L4) production/editing — inside Waiz Media OS systems."
+  },
+  {
+    "type": "h2",
+    "text": "Core accountabilities (all levels)"
+  },
+  {
+    "type": "numbered",
+    "text": "Buying: structure, budgets, testing cadence, daily/weekly account hygiene"
+  },
+  {
+    "type": "numbered",
+    "text": "Targets: pursue written per-account KPIs; document tests and learnings"
+  },
+  {
+    "type": "numbered",
+    "text": "Fulfillment flags: notify Client Success early when booking/flow metrics slip"
+  },
+  {
+    "type": "numbered",
+    "text": "Client clarity: updates, wins, changes; KPI reviews required from L2+"
+  },
+  {
+    "type": "numbered",
+    "text": "OS compliance: work inside Waiz media-buying SOPs and the Media Buyer Daily OS"
+  },
+  {
+    "type": "numbered",
+    "text": "Scorecard: graded monthly on the media-buyer scorecard"
+  },
+  {
+    "type": "h2",
+    "text": "Creative progression"
+  },
+  {
+    "type": "table",
+    "headers": ["Level", "Expectation"],
+    "rows": [
+      ["L1", "Learn creative system; contribute angles/notes; does not own production-ready packages"],
+      ["L2", "Manage accounts, onboard a client, basic funnel, headlines, KPI client reviews"],
+      ["L3", "Production-ready packages: clear analysis + scripts/concepts fully written"],
+      ["L4", "Produce and edit ads end-to-end"]
+    ],
+    "col_widths": [0.15, 0.85]
+  },
+  {
+    "type": "body",
+    "text": "Mentoring other media buyers is <b>not</b> required to unlock levels."
+  },
+  {
+    "type": "pagebreak"
+  },
+  {
+    "type": "h1",
+    "text": "Attachment B — Level Unlock Checklist"
+  },
+  {
+    "type": "body",
+    "text": "Unlock = skills only (founder judgment). New base starts the next full pay month after sign-off."
+  },
+  {
+    "type": "h2",
+    "text": "L2 — R$5,000 + commissions eligible"
+  },
+  {
+    "type": "bullet",
+    "text": "[ ] Manage all assigned accounts"
+  },
+  {
+    "type": "bullet",
+    "text": "[ ] Onboard a client"
+  },
+  {
+    "type": "bullet",
+    "text": "[ ] Create a basic funnel"
+  },
+  {
+    "type": "bullet",
+    "text": "[ ] Understand / write headlines"
+  },
+  {
+    "type": "bullet",
+    "text": "[ ] Run KPI client reviews"
+  },
+  {
+    "type": "body",
+    "text": "Founder initials ______  Contractor initials ______  Date ______  First L2 pay month ______"
+  },
+  {
+    "type": "h2",
+    "text": "L3 — R$6,000"
+  },
+  {
+    "type": "bullet",
+    "text": "[ ] Clear analysis"
+  },
+  {
+    "type": "bullet",
+    "text": "[ ] Scripts/concepts fully written for production"
+  },
+  {
+    "type": "body",
+    "text": "Founder initials ______  Contractor initials ______  Date ______  First L3 pay month ______"
+  },
+  {
+    "type": "h2",
+    "text": "L4 — R$7,000"
+  },
+  {
+    "type": "bullet",
+    "text": "[ ] Produce ads end-to-end"
+  },
+  {
+    "type": "bullet",
+    "text": "[ ] Edit ads end-to-end"
+  },
+  {
+    "type": "body",
+    "text": "Founder initials ______  Contractor initials ______  Date ______  First L4 pay month ______"
+  },
+  {
+    "type": "pagebreak"
+  },
+  {
+    "type": "h1",
+    "text": "Attachment C — Commission Appendix"
+  },
+  {
+    "type": "callout",
+    "text": "Commissions available only at L2+. Paid KPI is CPQL (cost per qualified lead), not CPL. Phase 1: R$100 per eligible hit; no book bonus."
+  },
+  {
+    "type": "h2",
+    "text": "When commissions can pay"
+  },
+  {
+    "type": "numbered",
+    "text": "Unlocked at L2 or higher"
+  },
+  {
+    "type": "numbered",
+    "text": "Live commission month (after shadow EOM sign-off)"
+  },
+  {
+    "type": "numbered",
+    "text": "Monthly scorecard ≥ B — else commissions = R$0 (base still pays)"
+  },
+  {
+    "type": "h2",
+    "text": "Hit definition"
+  },
+  {
+    "type": "code",
+    "text": "actual CPQL = account ad spend ÷ qualified leads\nHIT = actual ≤ written target OR within 10% over (Phase 1 grace ON)"
+  },
+  {
+    "type": "h2",
+    "text": "Eligible account"
+  },
+  {
+    "type": "bullet",
+    "text": "Assigned to Contractor that month"
+  },
+  {
+    "type": "bullet",
+    "text": "Written CPQL target on file"
+  },
+  {
+    "type": "bullet",
+    "text": "Ads meaningfully running"
+  },
+  {
+    "type": "bullet",
+    "text": "Spend ≥ US$1,000 and qualified leads ≥ 10"
+  },
+  {
+    "type": "h2",
+    "text": "Payout"
+  },
+  {
+    "type": "code",
+    "text": "commissions = hits × R$100\ntotal = base(level) + commissions"
+  },
+  {
+    "type": "body",
+    "text": "Payday: <b>9th of each month</b> for the prior calendar month, after founder approval of the EOM sheet and Contractor invoice."
+  }
+]

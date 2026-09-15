@@ -120,3 +120,11 @@ work already completed in a closed pay month without written agreement.
 - [ ] Accountant/lawyer review of PJ wrapper
 - [ ] Initial account assignment list
 - [ ] Replace placeholders above before PDF/signature send
+
+## PDF (signature pack)
+
+Printable pack (agreement + SOW + level checklist + commission appendix):
+
+[assets/lead-mb-pj-payment-agreement.pdf](assets/lead-mb-pj-payment-agreement.pdf)
+
+Source for rebuild: [assets/lead-mb-pj-payment-agreement-content.json](assets/lead-mb-pj-payment-agreement-content.json)
