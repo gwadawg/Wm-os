@@ -3,7 +3,7 @@ title: Client Fulfillment — DSCR DNA
 domain: client-fulfillment
 owner: founder
 status: draft
-last_updated: 2026-09-03
+last_updated: 2026-09-16
 review_cycle: quarterly
 ---
 
@@ -12,18 +12,19 @@ review_cycle: quarterly
 DSCR fulfillment for client campaigns targeting real-estate investors.
 **Refinance only.** Business-purpose. Not reverse mortgage.
 
-## AI creative — one file
+## AI creative — load these two
 
-→ **Only** [intelligence-icp-dscr.md](intelligence-icp-dscr.md)
+1. **[intelligence-icp-dscr.md](intelligence-icp-dscr.md)** — who, product, NEVER, creative bar
+2. **[dscr-creative-taxonomy.md](dscr-creative-taxonomy.md)** — buckets, angles, jobs, labeling
 
-Proven angles inside the ICP are a **starting slate**, not a closed menu —
-invent freely; stay inside the NEVER list. Do not load extra DSCR docs into
-the same creative prompt.
+Proven angles are a **starting slate**, not a closed menu — invent freely;
+stay inside the NEVER list. Do not load nurture, setter, product ops, or
+RM docs into the same creative prompt.
 
 | After ideation | File |
 |----------------|------|
 | Expand a *winning* proven angle + MOF/BOF tokens | [Campaign Master Angles](dscr-campaign-master-angles.md) |
-| Beachhead / test rules | [GTM Brief](dscr-gtm-positioning-brief.md) |
+| Beachhead / test waves | [GTM Brief](dscr-gtm-positioning-brief.md) |
 | Ship / legal | [Compliance Guardrails](dscr-compliance-guardrails.md) |
 | **UGC / video scripts** | Skill [dscr-creative-studio](../../../.claude/skills/dscr-creative-studio/SKILL.md) (rulebook: [Video Script Playbook](dscr-video-script-playbook.md)) → **wm-creative** Arcads |
 | Statics pipeline | [Static Image Generator](dscr-static-image-generator-project.md) or wm-creative `wm-static-studio` |
@@ -34,14 +35,16 @@ Do **not** use `rm-creative-studio` for DSCR.
 
 | Doc | Role |
 |-----|------|
-| [intelligence-icp-dscr.md](intelligence-icp-dscr.md) | **AI creative SOT** |
+| [intelligence-icp-dscr.md](intelligence-icp-dscr.md) | **AI creative bar** (who + NEVER) |
+| [dscr-creative-taxonomy.md](dscr-creative-taxonomy.md) | **Buckets / angles / naming SOT** (draft) |
+| [dscr-creative-labeling-playbook.md](dscr-creative-labeling-playbook.md) | **Media-buyer PDF** — label + structure |
 | [dscr-campaign-master-angles.md](dscr-campaign-master-angles.md) | Expand winners + tokens |
-| [dscr-gtm-positioning-brief.md](dscr-gtm-positioning-brief.md) | Strategy / test order |
+| [dscr-gtm-positioning-brief.md](dscr-gtm-positioning-brief.md) | Strategy / test waves |
 | [dscr-compliance-guardrails.md](dscr-compliance-guardrails.md) | Ship gate |
 | [dscr-static-image-generator-project.md](dscr-static-image-generator-project.md) | Ideogram → Mr. Waiz |
 | [intelligence-dscr-product.md](intelligence-dscr-product.md) | Ops mechanics |
 | Funnel: offer map, lander, landing+VSL, form | Build packs |
-| FAQ, setter, objections, nurture | Call-center / SMS |
+| FAQ, setter, objections, nurture | Call-center / SMS *(separate purpose — do not mix into creative prompts)* |
 | CloseBot job + KB | Wave B |
 | KPI scorecard | Measurement |
 
@@ -66,3 +69,4 @@ competitor ad intelligence essay (insights live in GTM; raw scrape in
 - [Fulfillment OS](../fulfillment-operating-system.md)
 - [Media buying](../media-buying/README.md)
 - [Ad intelligence bridge](../../operations/ad-intelligence-bridge.md)
+- Working brainstorm dump (not canonical): [demos/dscr-knowledge-breakdown-WORKING-DRAFT.md](../../../demos/dscr-knowledge-breakdown-WORKING-DRAFT.md)

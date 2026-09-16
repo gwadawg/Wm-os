@@ -1,0 +1,270 @@
+[
+  {
+    "type": "callout",
+    "text": "Internal media-buyer playbook. DSCR refinance only. Housing Special Ad Category — creative is the targeting. Stamp from draft after founder approval."
+  },
+  {
+    "type": "h1",
+    "text": "1. What you're optimizing for"
+  },
+  {
+    "type": "body",
+    "text": "You are not targeting demographics. You are sorting investors by <b>what stops them from acting today</b>. That constraint decides the message, the label, and the ad set."
+  },
+  {
+    "type": "bullet",
+    "text": "<b>Who:</b> Real-estate investors who already own rentals. Operator energy. Not seniors. Not consumer relief."
+  },
+  {
+    "type": "bullet",
+    "text": "<b>Product:</b> DSCR refinance only — business-purpose. The property qualifies on rent vs payment, not W-2s / tax returns / DTI."
+  },
+  {
+    "type": "bullet",
+    "text": "<b>Big idea:</b> \"The property qualifies itself.\" Honest trade: rates often higher than conventional — you win on access and process."
+  },
+  {
+    "type": "callout",
+    "text": "Governing question for every creative: What stops this investor from acting today? Not who they are. Not the property type. Not what they'd do with the money."
+  },
+  {
+    "type": "h1",
+    "text": "2. The four buckets"
+  },
+  {
+    "type": "body",
+    "text": "Three constraint buckets move people. One in-market lane harvests people already shopping. Every creative gets exactly one."
+  },
+  {
+    "type": "figure",
+    "path": "fig-bucket-map.png",
+    "caption": "Bucket map — cold job per door, shared warm jobs after entry"
+  },
+  {
+    "type": "table",
+    "headers": ["Bucket", "Constraint", "Enemy", "Cold job", "Slug"],
+    "col_widths": [0.16, 0.28, 0.18, 0.18, 0.20],
+    "rows": [
+      ["DENIED", "Would fail conventional today", "Bank's basis", "Program reveal", "nodocs-speed"],
+      ["DEADLINE", "Note has a maturity date", "The calendar", "Mapped exit", "balloon-exit"],
+      ["IDLE", "Equity sits by choice", "Status-quo bias", "Belief break", "cashout-grow"],
+      ["IN-MARKET", "Already shopping DSCR", "—", "Offer / terms", "ratecard-centered"]
+    ]
+  },
+  {
+    "type": "h2",
+    "text": "What the ad sounds like"
+  },
+  {
+    "type": "figure",
+    "path": "fig-ad-examples.png",
+    "caption": "Quick recognition — if the hook doesn't match, re-bucket it"
+  },
+  {
+    "type": "h2",
+    "text": "Aliases (do not invent peer labels)"
+  },
+  {
+    "type": "table",
+    "headers": ["Use", "Old / alias names (not separate buckets)"],
+    "col_widths": [0.22, 0.78],
+    "rows": [
+      ["DENIED", "Write-Off, Self-Employed, property-count, STR, Foreign National"],
+      ["DEADLINE", "Hard-Money, Balloon, Bridge"],
+      ["IDLE", "Portfolio Scaler, Idle-Equity, Trapped, Dormant"],
+      ["IN-MARKET", "Rate-card, terms shopper, product-aware"]
+    ]
+  },
+  {
+    "type": "h1",
+    "text": "3. How to sort any ad"
+  },
+  {
+    "type": "body",
+    "text": "Overlap is real (balloon + write-offs). Priority order makes buckets mutually exclusive so Mr. Waiz rollups stay clean."
+  },
+  {
+    "type": "figure",
+    "path": "fig-sort-rule.png",
+    "caption": "Check top to bottom — first yes wins"
+  },
+  {
+    "type": "callout",
+    "text": "IN-MARKET is only for product-named + terms/spec creatives with no pain messaging. If the ad speaks to a constraint, it is never IN-MARKET."
+  },
+  {
+    "type": "h2",
+    "text": "Modifiers vs use cases (not buckets)"
+  },
+  {
+    "type": "bullet",
+    "text": "<b>Modifiers</b> (write-offs, STR, FN, property-count) change the example inside DENIED — same enemy, same job."
+  },
+  {
+    "type": "bullet",
+    "text": "<b>Use cases</b> (pay off balloon, fund rehab, reserves, LLC) answer \"what would you do with it?\" — illustrate the ad; do not organize by them."
+  },
+  {
+    "type": "pagebreak"
+  },
+  {
+    "type": "h1",
+    "text": "4. How to label every ad"
+  },
+  {
+    "type": "figure",
+    "path": "fig-label-card.png",
+    "caption": "Four fields required before a concept ships or registers"
+  },
+  {
+    "type": "h2",
+    "text": "Ad name vs tags"
+  },
+  {
+    "type": "code",
+    "language": "text",
+    "text": "dscr_{concept-slug}_{format}_v{n}\n\nExamples:\n  dscr_nodocs-speed_st_v1\n  dscr_balloon-exit_ugc_v1\n  dscr_cashout-grow_st_v1\n  dscr_ratecard-centered_st_v1"
+  },
+  {
+    "type": "bullet",
+    "text": "Bucket + creative job live in overview / summary / tags — <b>not</b> inside the ad_name token."
+  },
+  {
+    "type": "bullet",
+    "text": "One primary creative job per ad. Don't average reveal + authority into one bland concept."
+  },
+  {
+    "type": "h2",
+    "text": "Proven angles → home"
+  },
+  {
+    "type": "table",
+    "headers": ["#", "Angle", "Bucket", "Job", "Slug"],
+    "col_widths": [0.08, 0.28, 0.18, 0.22, 0.24],
+    "rows": [
+      ["3", "Did You Know?", "DENIED", "Program reveal", "nodocs-speed"],
+      ["2", "The Deadline", "DEADLINE", "Mapped exit", "balloon-exit"],
+      ["1", "Idle-Equity Tax", "IDLE", "Belief break", "cashout-grow"],
+      ["5", "What You Could Do", "IDLE → warm", "Outcome / uses", "cashout-grow var"],
+      ["4", "Checklist / rate-card", "Warm or IN-MARKET", "Offer / terms", "ratecard-centered"],
+      ["—", "Lender authority", "Shared warm", "Why this LO", "lo-authority*"]
+    ]
+  },
+  {
+    "type": "caption",
+    "text": "* lo-authority / qualify-stack = proposed slugs — register before first use."
+  },
+  {
+    "type": "h1",
+    "text": "5. Campaign & ad set structure"
+  },
+  {
+    "type": "body",
+    "text": "Campaign = temperature + budget logic. Ad set = one bucket × one creative job. That is how you get a clean read under Andromeda."
+  },
+  {
+    "type": "figure",
+    "path": "fig-campaign-structure.png",
+    "caption": "Launch shape — cold test earns reads; scale opens only after winners; warm owns shared jobs"
+  },
+  {
+    "type": "table",
+    "headers": ["Ad set", "Bucket", "Job", "Slug"],
+    "col_widths": [0.32, 0.18, 0.25, 0.25],
+    "rows": [
+      ["cold_denied_reveal", "DENIED", "Program reveal", "nodocs-speed"],
+      ["cold_deadline_exit", "DEADLINE", "Mapped exit", "balloon-exit"],
+      ["cold_idle_belief", "IDLE", "Belief break", "cashout-grow"],
+      ["cold_inmarket_terms", "IN-MARKET", "Offer / terms", "ratecard-centered"],
+      ["warm_outcome", "Shared", "Outcome / uses", "cashout-grow var"],
+      ["warm_offer", "Shared", "Checklist / offer", "qualify-stack*"],
+      ["warm_authority", "Shared", "Lender authority", "lo-authority*"]
+    ]
+  },
+  {
+    "type": "callout",
+    "text": "One bucket × one job = one ad set = one primary creative. Do not dump three angles into one ad set."
+  },
+  {
+    "type": "h2",
+    "text": "Budget barbell (while proving)"
+  },
+  {
+    "type": "bullet",
+    "text": "~80% DENIED + DEADLINE (+ IN-MARKET terms if approved numbers exist)."
+  },
+  {
+    "type": "bullet",
+    "text": "~20% IDLE — belief-change lane; don't kill it on day-3 CPL alone, but it still needs a terminal CPQL + review date."
+  },
+  {
+    "type": "bullet",
+    "text": "Warm authority opens when an engager pool exists — not as the only cold creative."
+  },
+  {
+    "type": "bullet",
+    "text": "Don't build cold_scale until a concept hits your CPL threshold for 7 consecutive days."
+  },
+  {
+    "type": "h2",
+    "text": "How to judge each bucket"
+  },
+  {
+    "type": "table",
+    "headers": ["Bucket", "Touches", "Judge cold on"],
+    "col_widths": [0.22, 0.18, 0.60],
+    "rows": [
+      ["DEADLINE", "1–2", "CPL → cost per qualified lead"],
+      ["DENIED", "1–2", "CPL → cost per qualified lead"],
+      ["IDLE", "3+", "Engagement / LP first, then CPQL with a kill date"],
+      ["IN-MARKET", "1–2", "CPL → CPQL (watch rate-shopper quality)"],
+      ["Authority (warm)", "1", "CPQL, booked rate, show rate — not vanity CTR"]
+    ]
+  },
+  {
+    "type": "pagebreak"
+  },
+  {
+    "type": "h1",
+    "text": "6. Media-buyer checklist"
+  },
+  {
+    "type": "numbered",
+    "text": "Read the creative. Run the sorting rule (deadline → denied → idle → in-market)."
+  },
+  {
+    "type": "numbered",
+    "text": "Fill four labels: bucket · creative_job · concept_slug · angle_ref."
+  },
+  {
+    "type": "numbered",
+    "text": "Name the ad: dscr_{slug}_{format}_v{n}."
+  },
+  {
+    "type": "numbered",
+    "text": "Place it in the matching ad set (one bucket × one job)."
+  },
+  {
+    "type": "numbered",
+    "text": "Cold numbers only if tokens are client-confirmed. Otherwise idea-first / number-free."
+  },
+  {
+    "type": "numbered",
+    "text": "Never: purchase framing, guarantees, invented rates, RM/senior tone, literal \"exclusive.\""
+  },
+  {
+    "type": "h2",
+    "text": "Cold launch order"
+  },
+  {
+    "type": "body",
+    "text": "When you need a starting slate: <b>DENIED → DEADLINE → IDLE</b>. Add IN-MARKET when the client's rate/spec sheet is approved for ads."
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "caption",
+    "text": "Source: dscr-creative-taxonomy.md · intelligence-icp-dscr.md · Waiz Media OS · Draft 2026-09-16"
+  }
+]

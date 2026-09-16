@@ -3,17 +3,24 @@ title: Intelligence ICP DSCR
 domain: client-fulfillment
 owner: founder
 status: draft
-last_updated: 2026-09-04
+last_updated: 2026-09-16
 review_cycle: monthly
 artifact_type: reference
 ---
 
 # Intelligence ICP DSCR
 
-> **AI CREATIVE — LOAD THIS FILE ONLY.**
+> **AI CREATIVE — LOAD THIS FILE + the taxonomy.**
 > Ads, hooks, statics, funnel messaging, Ideogram prompts, concept riffs.
-> Do **not** also load doctrines, angle library, ads playbook, product
-> mechanics, landers, or the full compliance essay — they dilute output.
+>
+> **Also load for naming / buckets / angles:**
+> [dscr-creative-taxonomy.md](dscr-creative-taxonomy.md)
+>
+> Do **not** also load doctrines, nurture drips, setter scripts, product
+> mechanics, landers, the full compliance essay, campaign architecture, or
+> team training primers (including
+> [new-hire-mortgage-icp-primer.md](../../company/new-hire-mortgage-icp-primer.md))
+> — they dilute output.
 >
 > Full legal/compliance essay (human/ship gate):
 > [dscr-compliance-guardrails.md](dscr-compliance-guardrails.md)
@@ -27,25 +34,46 @@ artifact_type: reference
 Active **real-estate investor** who already owns rentals. Operator energy —
 cash flow, equity, speed. Not a retiree. Not consumer relief.
 
-**Constraint:** trapped equity or bad financing they can't refi conventionally
-(write-offs/DTI, property caps, hard-money/balloon, messy income docs).
-
 **They're not buying a loan.** They're buying a better position on property
 they already own — equity redeployed, payment fixed, or exit from short-term
 debt — without W-2/DTI underwriting.
 
 **Tone:** peer-to-operator. Name **DSCR** openly. Never senior/relief/fear.
 
+**Frame:** Investor-Partner (competence) — not Commodity-Lender (rate shop).
+
 ---
 
-## 2. Beachhead (one persona per asset)
+## 2. Constraint buckets (how we sort creative)
 
-| Priority | Persona | Pain (their words) | Hook direction |
-|----------|---------|-------------------|----------------|
-| 1 | Self-Employed / Write-Off | "Write-offs kill my DTI." | Qualify on the rent, not tax returns |
-| 2 | Hard-Money / Balloon | "Balloon's coming due." | Exit into long-term DSCR before the note |
-| 3 | Portfolio Scaler | "Equity's safer sitting there." | Scale by moving idle equity (§4) |
-| Later | STR / Foreign National | Niche / program-gated | Only after core proven |
+> Full map, sorting rule, modifiers, jobs, labeling:
+> **[dscr-creative-taxonomy.md](dscr-creative-taxonomy.md)**
+
+**Governing question:** *What stops this investor from acting today?*
+
+| Bucket | Constraint | Enemy | Cold job | Slug |
+|--------|------------|-------|----------|------|
+| **DENIED** | Would fail conventional underwriting today | Bank's basis of approval | Program reveal | `nodocs-speed` |
+| **DEADLINE** | Note has a maturity date | The calendar | Mapped exit | `balloon-exit` |
+| **IDLE** | Nothing broken — equity sits by choice | Status-quo bias | Belief break | `cashout-grow` |
+| **IN-MARKET** | Already shopping DSCR (no constraint) | — | Offer / terms | `ratecard-centered` |
+
+**Sort in order (one creative = one bucket):**  
+deadline on note? → **DEADLINE** → else conventional would say no? → **DENIED** → else could act but isn't? → **IDLE** → else already shopping terms? → **IN-MARKET**.
+
+**Beachhead order (cold):** DENIED → DEADLINE → IDLE.  
+STR / Foreign National / property-count = **modifiers inside DENIED**, not peer buckets.
+
+**VOC (recognition phrases):**
+
+- "Conventional won't refinance my rental."
+- "My tax write-offs are killing my DTI."
+- "My balloon's coming due — I need to refinance fast."
+- "Can I refinance this in my LLC?"
+- "Does the property cash-flow enough?"
+- "I'm tired of documenting my whole life every time I refinance."
+- "I've got the equity — I just need to pull it out and redeploy it."
+- "I need a lender who actually understands investors."
 
 ---
 
@@ -71,7 +99,7 @@ freed equity, and process. Never invent rates/LTV/day-counts in cold ads.
 
 ---
 
-## 4. Equity velocity — strongest creative mode
+## 4. Equity velocity — strongest IDLE creative mode
 
 **Limiting belief:** idle equity = safe / prudent.
 
@@ -101,28 +129,27 @@ name DSCR lightly → CTA ("see what your doors may unlock") — not "apply for 
 
 Use these when you want a known lane. **Invent new angles freely** when
 exploring — one idea per concept, still inside the NEVER list (§7). Don't
-average five angles into one bland ad.
+average five angles into one bland ad. Tag every concept with a **bucket**.
 
-| # | Angle | Persona | Example hook | Mode |
-|---|-------|---------|--------------|------|
-| 1 | Idle-Equity Tax | Portfolio | "Real investors don't wait for capital. They take it from what they already own." | Behavioral modeling (§4) |
-| 2 | The Deadline | Hard-Money | "Balloon coming due? Refinance before it hits." | Real urgency |
-| 3 | Did You Know? | Write-Off | "Did you know you can refinance a rental with zero tax returns?" | Curiosity + program reveal |
-| 4 | Checklist | Warm/BOF only | "Here's exactly what it takes — no mystery pitch." | Specificity (client sheet tokens only) |
-| 5 | What You Could Do With It | Equity holder | "If you already have a portfolio, you've done the hardest part." | Outcome vividness + §4 |
+| # | Angle | Bucket | Example hook | Job |
+|---|-------|--------|--------------|-----|
+| 3 | Did You Know? | DENIED | "Did you know you can refinance a rental with zero tax returns?" | Program reveal |
+| 2 | The Deadline | DEADLINE | "Balloon coming due? Refinance before it hits." | Mapped exit |
+| 1 | Idle-Equity Tax | IDLE | "Real investors don't wait for capital. They take it from what they already own." | Belief break |
+| 5 | What You Could Do With It | IDLE → shared warm | "If you already have a portfolio, you've done the hardest part." | Outcome / uses |
+| 4 | Checklist / rate-card | Shared warm **or** IN-MARKET | "Here's exactly what it takes — no mystery pitch." | Offer / terms |
 
-Default cold test order when you need a starting slate: **3 → 2 → 1/5**.
-Full writeups for these five (when expanding a winner):
-[Campaign Master Angles](dscr-campaign-master-angles.md).
+Default cold slate: **3 → 2 → 1** (DENIED → DEADLINE → IDLE).  
+Full writeups: [Campaign Master Angles](dscr-campaign-master-angles.md).  
+Naming map: [Creative Taxonomy](dscr-creative-taxonomy.md).
 
 ---
 
 ## 6. Lead-filter program facts (confirm before creative)
 
-Use these on **filter / spec / checklist creatives** to push out junk leads.
-**Do not invent.** Confirm against the client's current lender/program sheet
-before any numbered creative ships. Programs differ — some claims only apply
-on qualifying products.
+Use these on **filter / spec / checklist / IN-MARKET** creatives to push out
+junk leads. **Do not invent.** Confirm against the client's current
+lender/program sheet before any numbered creative ships.
 
 | Filter (marketing) | Token | Confirm default* | Framing |
 |--------------------|-------|------------------|---------|
@@ -132,48 +159,44 @@ on qualifying products.
 | Rate | `[APR]` | **Variable — confirm each refresh** | Highest-risk claim; client-approved only |
 | LTV | `[MAX_LTV]` | Up to 80% | "Up to [MAX_LTV] LTV" — program-dependent |
 
-\*Defaults are Waiz working assumptions for DSCR filter creatives — **overwrite
-per client / per refresh.** Full token sheet + activation:
-[Campaign Master Angles](dscr-campaign-master-angles.md).
+\*Defaults are Waiz working assumptions — **overwrite per client / per refresh.**
+Full token sheet: [Campaign Master Angles](dscr-campaign-master-angles.md).
 
-**When to use:** MOF/BOF, rate-card/spec statics, Angle 4 checklist — lead
-quality filter. **When to skip:** idea-first TOF hooks (equity velocity,
-write-off reframe, balloon) can stay number-free; add the filter stack on
-the follow-up creative or lander.
-
-**Pre-flight before any numbered ad:** all five confirmed (or explicitly
-omitted) · APR approved for ads · no-appraisal limited to qualifying
-products · "may qualify" / "up to" / "from" softening on.
+**When to use:** MOF/BOF, rate-card/spec statics, Angle 4, IN-MARKET.  
+**When to skip:** idea-first cold (DENIED / DEADLINE / IDLE belief) can stay
+number-free; add the filter stack on follow-up creative or lander.
 
 ---
 
 ## 7. Bad vs good (match this bar)
 
-**BAD — sea of sameness (never ship):**
+**BAD — sea of sameness (never ship as a constraint ad):**
 
 > ✅ No income verification ✅ No tax returns ✅ Fast closing  
 > Get a DSCR loan today! Guaranteed approvals for investors.
 
-Why it fails: feature checklist, loan pitch, guarantee, no idea, no persona.
+Why it fails as DENIED/DEADLINE/IDLE creative: feature checklist, loan pitch,
+guarantee, no idea. *(A clean terms card tagged **IN-MARKET** is different —
+specificity is intentional there.)*
 
-**GOOD — Write-Off / big idea:**
+**GOOD — DENIED:**
 
 > Your tax returns say you're broke. Your rentals say otherwise.  
 > A DSCR refinance qualifies on the property's rent — not your W-2.  
 > See if your rental may qualify.
 
-**GOOD — equity velocity / identity:**
+**GOOD — IDLE:**
 
 > Real investors don't wait for capital. They take it from what they already own.  
 > If you've got doors, you've done the hardest part — the equity is sitting there.  
 > A DSCR cash-out puts it back to work. Qualify on the rent, not your paperwork.
 
-**GOOD — hard-money urgency:**
+**GOOD — DEADLINE:**
 
 > That bridge loan did its job. It was never meant to be permanent.  
 > Map a DSCR refinance exit before the balloon — qualify on the rent, not your income.
 
-If your draft could be any lender's "no income / fast" ad, rewrite.
+If a *constraint* draft could be any lender's "no income / fast" ad, rewrite.
 
 ---
 
@@ -185,29 +208,29 @@ If your draft could be any lender's "no income / fast" ad, rewrite.
 - Guarantees: "you qualify," "approved," "locked rate," guaranteed scale
 - Tax/legal advice (entity/1031/depreciation → their CPA)
 - RM senior / relief / fear tone
-- Feature-list checklist with **no idea** (filters alone ≠ a concept)
+- Feature-list checklist with **no idea** when claiming a constraint bucket
 - Personal use-of-proceeds (tuition, credit cards, etc.)
 - Fabricated testimonials / fake proof
 - "No appraisal" without confirming it applies to that product
+- Literal "exclusive" + unavailability claims
 
-**Idea-first TOF:** can stay number-free. **Filter / spec creatives:** only
+**Idea-first cold:** can stay number-free. **Filter / IN-MARKET:** only
 confirmed tokens from §6. Never paste stale APR from memory.
 
 **Always:** investors/operators · refinance/cash-out · qualify on the property ·
 name DSCR · "may qualify" · peer tone.
-
-**Frame:** Investor-Partner (competence) — not Commodity-Lender (rate shop).
 
 ---
 
 ## 9. Task prompt (paste + fill brackets)
 
 ```text
-Using ONLY the DSCR ICP context in this chat, create [N] [ad concepts / hooks /
-primary texts / Ideogram prompts / lander headlines].
+Using ONLY the DSCR ICP + Creative Taxonomy in this chat, create [N]
+[ad concepts / hooks / primary texts / Ideogram prompts / lander headlines].
 
-PERSONA: [Write-Off | Hard-Money | Portfolio | or invent a sharp sub-niche]
-ANGLE: [use a proven #1–5 as a springboard OR invent a new idea — say which]
+BUCKET: [DENIED | DEADLINE | IDLE | IN-MARKET]
+ANGLE: [proven #1–5 as springboard OR invent a new idea — say which]
+CREATIVE_JOB: [reveal | exit | belief | outcome | terms | authority]
 MODE: [A friction→reframe→DSCR | B behavioral modeling / equity velocity | C new]
 FORMAT: [static headline | primary text | 4:5 Ideogram prompt | carousel | filter/spec card]
 PROGRAM FACTS: [CONFIRMED — paste filled tokens | NOT CONFIRMED — idea-only, no numbers]
@@ -220,14 +243,16 @@ Confirmed filter tokens (only if CONFIRMED):
   MAX_LTV: [e.g. up to 80%]
 
 Rules:
-- One persona, one idea per concept. Refinance only. Name DSCR after the idea lands.
-- Peer-to-operator. No checklist-only creatives without an idea.
+- One bucket, one idea per concept. Refinance only. Name DSCR after the idea lands (except IN-MARKET terms cards, which may lead with DSCR).
+- Peer-to-operator. Constraint ads need an idea — not checklist-only.
+- IN-MARKET = product + terms only; if the ad speaks to a pain, re-bucket it.
 - No invented numbers — if PROGRAM FACTS = NOT CONFIRMED, stay qualitative.
-- Prefer identity/strategy reveal over loan pitch when MODE=B.
+- Prefer identity/strategy reveal over loan pitch when MODE=B (IDLE).
 - Explore outside the proven slate when asked — stay inside NEVER list only.
-- If a draft looks like every other "no income / fast" DSCR ad, rewrite it.
+- If a DENIED/DEADLINE/IDLE draft looks like every other "no income / fast" DSCR ad, rewrite it.
 
 Output: [hooks only | full primary text | Ideogram prompt in a code block]
+Also label: bucket · creative_job · concept_slug · angle_ref
 ```
 
 ---
@@ -236,7 +261,9 @@ Output: [hooks only | full primary text | Ideogram prompt in a code block]
 
 | Need | File |
 |------|------|
+| Buckets / angles / labeling SOT | [Creative Taxonomy](dscr-creative-taxonomy.md) |
 | Ship / legal review | [Compliance Guardrails](dscr-compliance-guardrails.md) |
 | Expand a proven angle + full token sheet | [Campaign Master Angles](dscr-campaign-master-angles.md) |
-| Beachhead / test order | [GTM Brief](dscr-gtm-positioning-brief.md) |
+| Beachhead / test waves | [GTM Brief](dscr-gtm-positioning-brief.md) |
 | Setter / product mechanics | [Team FAQ](dscr-team-product-faq.md) · [Product](intelligence-dscr-product.md) |
+| Nurture / drips | Self-serve playbooks + cash-out drip *(separate purpose)* |

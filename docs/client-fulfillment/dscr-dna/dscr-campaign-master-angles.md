@@ -3,7 +3,7 @@ title: DSCR Campaign Master Angles
 domain: client-fulfillment
 owner: founder
 status: draft
-last_updated: 2026-09-04
+last_updated: 2026-09-16
 review_cycle: monthly
 artifact_type: creative
 ---
@@ -12,9 +12,13 @@ artifact_type: creative
 
 > **Human expand only — not default AI context.**
 > AI creative loads [intelligence-icp-dscr.md](intelligence-icp-dscr.md)
-> only. This file = full writeups for **five proven angles** + MOF/BOF
-> tokens. Not a closed menu — invent beyond these in the ICP; come here
-> when expanding a winner into a full ad set.
+> + [dscr-creative-taxonomy.md](dscr-creative-taxonomy.md).
+> This file = full writeups for **five proven angles** + MOF/BOF tokens.
+> Not a closed menu — invent beyond these in the ICP; come here when
+> expanding a winner into a full ad set.
+>
+> Bucket / job / slug map lives in the taxonomy — do not invent parallel
+> persona systems here.
 
 ## Purpose
 
@@ -44,9 +48,10 @@ approved pricing sheet.
 
 ## Quality Bar
 
-- One persona per concept · refinance only · business-purpose
+- One **bucket** per concept · refinance only · business-purpose
 - TOF number-free · BOF tokens from approved sheet only · no guarantees
 - Proof substantiated
+- Label: `bucket` · `creative_job` · `concept_slug` · `angle_ref`
 
 ## Operating Content
 
@@ -106,22 +111,26 @@ utm_source={{site_source_name}}&utm_medium={{adset.name}}&utm_campaign={{campaig
 
 ### The slate
 
-| # | Angle | Persona | Stage | Big idea | Psychology |
-|---|-------|---------|-------|----------|------------|
-| 1 | The Idle-Equity Tax | Portfolio Scaler | TOF | Unused equity is an invisible monthly cost | Loss aversion, mental accounting |
-| 2 | The Deadline | Hard-Money / Balloon Refinancer | TOF | The note has a date — map the exit before it | Real urgency, regret aversion |
-| 3 | "Did You Know?" / Program Call-Out | Self-Employed / Write-Off | TOF | A program for RE investors with zero income docs — most have never been offered it | Curiosity gap, ICP call-out, specific access |
-| 4 | The Checklist | Warm / retarget (any persona) | BOF | Publish exactly what it takes to qualify | Radical specificity, self-qualification, goal-gradient |
-| 5 | "What You Could Do With It" | Equity-holding investor (LTR or STR) | TOF/MOF | Outcome-led: the concrete moves a cash-out unlocks | Outcome vividness, velocity of capital |
+| # | Angle | Bucket | Stage | Big idea | Psychology | Slug |
+|---|-------|--------|-------|----------|------------|------|
+| 3 | "Did You Know?" / Program Call-Out | **DENIED** | Cold | A program for RE investors with zero income docs — most have never been offered it | Curiosity gap, ICP call-out | `nodocs-speed` |
+| 2 | The Deadline | **DEADLINE** | Cold | The note has a date — map the exit before it | Real urgency, regret aversion | `balloon-exit` |
+| 1 | The Idle-Equity Tax | **IDLE** | Cold | Unused equity is an invisible monthly cost | Loss aversion, mental accounting | `cashout-grow` |
+| 5 | "What You Could Do With It" | **IDLE** → shared warm | Warm / MOF | Outcome-led: the concrete moves a cash-out unlocks | Outcome vividness, velocity of capital | `cashout-grow` variant |
+| 4 | The Checklist / rate-card | Shared warm **or** **IN-MARKET** | Warm; cold if terms-only | Publish exactly what it takes to qualify | Radical specificity, self-qualification | `ratecard-centered` |
 
-Each angle runs as its own ad set (distinct algorithmic signal). TOF angles (1, 2, 3, 5) feed one
-retargeting pool; angle 4 serves that pool from day one. Kill/scale per
-[DSCR KPI And Test Scorecard](dscr-kpi-and-test-scorecard.md); plan refresh cadence up front
-(~76% of category ads die inside two weeks — plan concept volume).
+Bucket definitions + sorting rule:
+[dscr-creative-taxonomy.md](dscr-creative-taxonomy.md).
+
+Cold angles (1, 2, 3) feed one retargeting pool; angle 4 serves that pool
+and can also run cold as IN-MARKET terms harvest. Campaign structure is
+owned by media-buying docs — not this file. Kill/scale per
+[DSCR KPI And Test Scorecard](dscr-kpi-and-test-scorecard.md); plan refresh
+cadence up front (~76% of category ads die inside two weeks).
 
 ---
 
-### Angle 1 — The Idle-Equity Tax · Portfolio Scaler · TOF
+### Angle 1 — The Idle-Equity Tax · IDLE · Cold
 
 **Big idea:** Leaving equity parked isn't "playing it safe" — it's an expense.
 Every month it sits, it costs the next deal. Loss framing attacks the
@@ -155,7 +164,7 @@ belief; sell identity and habit before naming DSCR.
 
 ---
 
-### Angle 2 — The Deadline · Hard-Money / Balloon Refinancer · TOF
+### Angle 2 — The Deadline · DEADLINE · Cold
 
 **Big idea:** The only DSCR lane where urgency is real, not manufactured — compliant *and* scroll-stopping. Voice: an operator calmly mapping an exit, never panic.
 
@@ -181,7 +190,7 @@ belief; sell identity and habit before naming DSCR.
 
 ---
 
-### Angle 3 — "Did You Know?" / Program Call-Out · Self-Employed / Write-Off · TOF
+### Angle 3 — "Did You Know?" / Program Call-Out · DENIED · Cold
 
 **Big idea:** Most investors literally don't know this program exists for them. The hook is the reveal itself — curiosity plus the "wait, that's me" call-out. Exclusivity reads as *specific access* ("a program built for investors like you"); vague "exclusive offer" language is what burned operators scroll past.
 
@@ -215,9 +224,13 @@ belief; sell identity and habit before naming DSCR.
 
 ---
 
-### Angle 4 — The Checklist · Warm / Retarget · BOF
+### Angle 4 — The Checklist / rate-card · Shared warm or IN-MARKET
 
-**Big idea:** While the category hides the ball behind "book a call," we publish the qualification stack up front. Specificity reads as competence; the numbers self-filter lead quality upward. This is the campaign's dedicated BOF engine.
+**Bucket tag:** Shared warm (any door) **or** cold **IN-MARKET** when the
+creative is product-named + terms only (no constraint messaging) — see
+[taxonomy § IN-MARKET](dscr-creative-taxonomy.md).
+
+**Big idea:** While the category hides the ball behind "book a call," we publish the qualification stack up front. Specificity reads as competence; the numbers self-filter lead quality upward. Warm retarget engine — and the proven cold terms-card harvest.
 
 **TOF teaser (number-free, optional):**
 
@@ -246,7 +259,7 @@ Specificity *is* the creative — and the junk-lead filter.
 
 ---
 
-### Angle 5 — "What You Could Do With It" · Equity-Holding Investor · TOF/MOF
+### Angle 5 — "What You Could Do With It" · IDLE-flavored · Shared warm / MOF
 
 **Big idea:** Stop selling the mechanism, sell the *uses*. Call out the
 investor, then paint the concrete moves this refinance unlocks. Outcome
@@ -292,15 +305,17 @@ own doors.
 
 ### Pre-flight check (every asset)
 
-- [ ] One persona + one angle? Refinance-only, business-purpose framing?
+- [ ] One bucket + one angle + one creative job? Refinance-only, business-purpose framing?
+- [ ] Labeled per taxonomy: `bucket` · `creative_job` · `concept_slug` · `angle_ref`?
 - [ ] TOF: zero numbers? BOF: tokens filled from the current approved sheet, softened ("as low as / up to / many / may qualify")?
 - [ ] No guarantees; no tax/legal advice; proof substantiated?
 - [ ] Standing disclosure appended where licensing requires; licensed states + Special Ad Category confirmed?
 
 ## Related Docs
 
-- [Intelligence ICP DSCR](intelligence-icp-dscr.md) — AI creative (locked slate)
-- [DSCR GTM Brief](dscr-gtm-positioning-brief.md) — beachhead + test rules
+- [DSCR Creative Taxonomy](dscr-creative-taxonomy.md) — buckets / jobs / labeling
+- [Intelligence ICP DSCR](intelligence-icp-dscr.md) — AI creative bar + NEVER
+- [DSCR GTM Brief](dscr-gtm-positioning-brief.md) — beachhead + test waves
 - [DSCR KPI And Test Scorecard](dscr-kpi-and-test-scorecard.md)
 - [DSCR Compliance Guardrails](dscr-compliance-guardrails.md)
 - [DSCR Static Image Generator](dscr-static-image-generator-project.md)
