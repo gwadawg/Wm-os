@@ -40,6 +40,16 @@ Campaign planning, creative strategy, client onboarding call prep.
 
 ## Operating Content
 
+> **Archetype / persona cleanup (2026-09):** Use the active set in
+> [rm-archetypes-canonical.md](../media-buying/creative-studio/rm-archetypes-canonical.md)
+> — **3 archetypes** (Security-Seeker · Financially Squeezed · Strategic
+> Retiree) and **3 personas** (Widowed · Married Couple · Pre-Retiree). Family /
+> heirs = trigger content. Ignore "Six Archetypes" / Veteran / Legacy-as-archetype
+> in the legacy body below. Prefer
+> [rm-creative-taxonomy.md](../reverse-mortgage-dna/rm-creative-taxonomy.md)
+> for process + campaign shape. Archive:
+> [rm-archetypes-pre-2026-09-cleanup.md](../reverse-mortgage-dna/drafts/rm-archetypes-pre-2026-09-cleanup.md).
+
 ### Waiz Media
 
 Ad Creation Playbook

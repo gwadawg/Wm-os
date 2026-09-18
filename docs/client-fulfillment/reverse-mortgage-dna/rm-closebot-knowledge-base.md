@@ -183,11 +183,18 @@ They are not buying a loan or a product name. They are buying:
 
 ### Personas
 
+Active creative personas (see
+[rm-archetypes-canonical.md](../media-buying/creative-studio/rm-archetypes-canonical.md)):
+
 | Persona | Core fear | What resonates |
 |---------|-----------|----------------|
 | **Widowed homeowner** | Alone, scared, doesn't want to leave memories | Security, staying in the home, independence |
-| **Married couple** | Worked hard, still stressed every month | Enjoy retirement together; legacy matters |
-| **Veteran** | Proud, skeptical of "handouts" | Independence — strategic tool, not charity |
+| **Married couple** | Worked hard, still stressed every month | Enjoy retirement together; family / heirs matter |
+| **Pre-retiree** | Money won't last 20–30 years | Plan that holds; standby / payment strategy |
+
+| Deprecated | Rule |
+|------------|------|
+| **Veteran** | Do not use for new creative; historical ICP only |
 
 ### Emotional pain pairs (for empathy — not to recite)
 

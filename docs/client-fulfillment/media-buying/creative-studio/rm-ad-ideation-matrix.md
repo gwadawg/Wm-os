@@ -24,7 +24,7 @@ A concept is one point in this space:
 
 | Dimension | Options | Source |
 |-----------|---------|--------|
-| **Archetype** | Security-Seeker, Financially Squeezed, Strategic Retiree, Legacy Planner, Veteran, Pre-Retiree | [rm-archetypes-canonical.md](rm-archetypes-canonical.md) |
+| **Archetype** | Security-Seeker, Financially Squeezed, Strategic Retiree | [rm-archetypes-canonical.md](rm-archetypes-canonical.md) — family/heirs = trigger, not archetype |
 | **Product line** | HECM (default), HomeSafe Second, other proprietary | [rm-product-lines.md](../../reverse-mortgage-dna/rm-product-lines.md) — **required before angle selection** |
 | **Angle** | Burden, Trapped Asset, Surviving vs Living, Breaking News / New Program, No Monthly Payment, Exclusive Access, Cash Out, State-Specific Bulletin, Regret / Social Proof, Heirs Get Equity, Inflation Hedge, Aging-in-Place | [rm-ad-playbook.md](../../client-marketing/rm-ad-playbook.md) + [ad-copy-angle-library-rm.md](../ad-copy-angle-library-rm.md) |
 | **Awareness / Stage** | TOF (Unaware/Problem-aware), MOF (Solution/Product-aware), BOF (Most-aware) | frameworks-reference awareness bridge |
@@ -71,8 +71,9 @@ When the user says "new ad" without naming a winner, **do not start blank-page**
    [editing-styles-catalog.md](../creative-research/editing-styles-catalog.md), and recent
    [swipes/](../creative-research/swipes/).
 2. Build a coverage map: which archetype × angle × format combos already have proven swipes.
-3. **Ideation seed = the gap** — e.g. "Legacy Planner + UGC + comment-reply hook is unproven;
-   Strategic Retiree + static + five-icon grid is covered."
+3. **Ideation seed = the gap** — e.g. "Married Couple + Strategic Retiree +
+   heirs trigger + UGC is unproven; brief that. Strategic Retiree + static +
+   five-icon grid is covered."
 4. Optionally pull Mr. Waiz `ad_library` via `supabase:ad:{uuid}` when user names a winner to `vary`.
 
 Cite `winner_ref` or `supabase:ad:{uuid}` on every concept row when building from owned patterns.
@@ -82,7 +83,8 @@ Cite `winner_ref` or `supabase:ad:{uuid}` on every concept row when building fro
 | Field | Example |
 |-------|---------|
 | ID | IDEA-001 |
-| Archetype | Legacy Planner |
+| Archetype | Strategic Retiree |
+| Trigger | heirs |
 | Product line | HECM |
 | Angle | Heirs Get the Equity |
 | Stage | MOF |
@@ -105,7 +107,7 @@ instead of 10 rewordings.
 
 | Preset | What it generates |
 |--------|-------------------|
-| `cold-batch` | 6 TOF concepts, one per archetype, rotating hook types |
+| `cold-batch` | 3 TOF concepts, one per **active** archetype, rotating hook types |
 | `objection-batch` | One MOF myth-bust concept per top-5 objection (ICP §7) |
 | `winner-expand` | Takes one proven angle and spreads it across 5 hook types (feeds the `vary` command) |
 | `persona-deep` | 5 concepts all for one persona, across TOF->MOF->BOF |

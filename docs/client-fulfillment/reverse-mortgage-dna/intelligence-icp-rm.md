@@ -3,7 +3,7 @@ title: Intelligence ICP RM
 domain: client-fulfillment
 owner: founder
 status: active
-last_updated: 2026-05-21
+last_updated: 2026-09-18
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Reverse Mortgage DNA/Intelligence -- ICP RM -- 04.26.docx
 artifact_type: reference
@@ -17,7 +17,7 @@ Borrower ICP and archetypes for targeting and messaging.
 
 ## Scope
 
-Audience and creative angle selection.
+Audience and creative angle selection. Do **not** load the new-hire mortgage primer for this work.
 
 ## Trigger
 
@@ -386,9 +386,26 @@ High-converting for landing pages and email:
 
 "Before, I stayed home because I couldn't afford to go out. After, I visited my grandkids twice this year."
 
-6. The Four Primary Personas
+6. The Primary Personas
 
-While the core emotional profile is consistent across all prospects, these four demographic segments require tailored messaging. Use persona-specific language in your ad targeting and copy.
+**Active creative set (3):** Widowed Homeowner · Married Couple · Pre-Retiree.
+
+These are **demographic / casting** segments — who the person looks like and
+what VOC to use. Emotional driver / tone lives in the **archetypes**
+([doctrine-rm-marketing.md](doctrine-rm-marketing.md) §4 · bridge:
+[rm-archetypes-canonical.md](../media-buying/creative-studio/rm-archetypes-canonical.md)).
+
+Do not treat personas and archetypes as the same list. Pre-Retiree is a
+**persona only** (life stage). Family / heirs / living legacy is a **trigger**,
+not an archetype (Legacy Planner demoted 2026-09).
+
+**Deprecated for new creative:** Persona 3 — The Veteran (below). Retained for
+archive. Waiz has not run Veteran creative; do not brief, tag, or open Scale
+ladder cells for it.
+
+While the core emotional profile is consistent across all prospects, these
+segments require tailored messaging. Use persona-specific language in copy and
+casting.
 
 Persona 1: The Widowed Homeowner
 
@@ -462,7 +479,12 @@ Example Hook
 
 "You saved for retirement. Now it's time to actually enjoy it."
 
-Persona 3: The Veteran
+Persona 3: The Veteran — DEPRECATED (do not use for new creative)
+
+> **Status: deprecated (2026-09).** Never used in live Waiz RM campaigns.
+> Do not brief, tag, or fill awareness-ladder cells for Veteran. Prefer
+> Widowed / Married Couple / Pre-Retiree. Historical profile kept below for
+> archive only.
 
 Dimension
 
@@ -500,7 +522,7 @@ Example Hook
 
 "You served your country with honor. Access the benefits you've earned."
 
-Persona 4: The Pre-Retiree (62–65)
+Persona 4: The Pre-Retiree (active — persona only, not an archetype)
 
 Dimension
 
@@ -784,7 +806,10 @@ Paste this block into any AI tool before generating reverse mortgage marketing a
 
 WAIZ MEDIA — ICP QUICK REFERENCE (Copy/Paste into AI Prompts)
 
-TARGET: House-rich, cash-poor homeowner, 62+. Fixed income (SS + pension). Minimal savings. Significant home equity. Cannot qualify for traditional financing.THEY ARE BUYING: Peace of mind, dignity, independence, security, relief from fear — NOT a loan.NEVER SAY: 'reverse mortgage' in headline, 'loan', 'debt' negatively, 'free money', 'act now'.ALWAYS SAY: 'home equity program', 'no monthly payment required', 'stay in your home', 'access equity you've built', 'financial safety net'.TONE: Calm. Educational. Empathetic. Protective. Like a trusted advisor who genuinely cares.PRIMARY FEARS: Running out of money, losing the home, becoming a burden to children.PRIMARY DREAMS: Stay in home for life, stop worrying about money, maintain independence, help family without being a drain.FOUR PERSONAS: Widowed homeowner (70–78F), Married couple (65–75), Veteran (68–80M), Pre-retiree (62–65).
+TARGET: House-rich, cash-poor homeowner, 62+. Fixed income (SS + pension). Minimal savings. Significant home equity. Cannot qualify for traditional financing.THEY ARE BUYING: Peace of mind, dignity, independence, security, relief from fear — NOT a loan.NEVER SAY: 'reverse mortgage' in headline, 'loan', 'debt' negatively, 'free money', 'act now'.ALWAYS SAY: 'home equity program', 'no monthly payment required', 'stay in your home', 'access equity you've built', 'financial safety net'.TONE: Calm. Educational. Empathetic. Protective. Like a trusted advisor who genuinely cares.PRIMARY FEARS: Running out of money, losing the home, becoming a burden to children.PRIMARY DREAMS: Stay in home for life, stop worrying about money, maintain independence, help family without being a drain.**Personas (3 active):** Widowed homeowner · Married couple · Pre-retiree.
+Veteran = deprecated. Archetypes (tone, 3 active): Security-Seeker ·
+Financially Squeezed · Strategic Retiree. Family/heirs = trigger, not archetype.
+See [rm-archetypes-canonical.md](../media-buying/creative-studio/rm-archetypes-canonical.md).
 
 WAIZ MEDIA  |  ICP Doctrine — Reverse Mortgage  |  Internal Confidential  |  April 2026
 

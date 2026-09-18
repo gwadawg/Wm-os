@@ -3,7 +3,7 @@ title: Doctrine RM Marketing
 domain: client-fulfillment
 owner: founder
 status: active
-last_updated: 2026-05-21
+last_updated: 2026-09-18
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Reverse Mortgage DNA/Doctrine -- RM Marketing -- 04.26.docx
 artifact_type: doctrine
@@ -44,7 +44,13 @@ Doctrine — Reverse Mortgage Fulfillment  ·  Fulfillment Reference  ·  Confid
 
 What This Document Is
 
-This is the operating doctrine for every piece of fulfillment work produced for a reverse mortgage loan officer client. It establishes the market reality, prospect psychology, the two frames, the six archetypes, and the non-negotiable rules that govern every ad, email, script, and piece of content — without exception. Read this document before producing any output.
+This is the operating doctrine for every piece of fulfillment work produced for a reverse mortgage loan officer client. It establishes the market reality, prospect psychology, the two frames, the **active archetypes** (tone), and the non-negotiable rules that govern every ad, email, script, and piece of content — without exception. Read this document before producing any output.
+
+**Audience model (2026-09):** Personas and archetypes are separate lists. Active
+set and bridge:
+[rm-archetypes-canonical.md](../media-buying/creative-studio/rm-archetypes-canonical.md).
+Archive of the old six/Legacy-as-archetype model:
+[drafts/rm-archetypes-pre-2026-09-cleanup.md](drafts/rm-archetypes-pre-2026-09-cleanup.md).
 
 Section 1 — The Market Reality
 
@@ -150,11 +156,33 @@ How Decisions Are Made
 
 This prospect makes financial decisions emotionally first and logically second. They will not move forward on a product they don't trust, regardless of how sound the financial logic is. Trust is built through repeated positive exposure to educational content — not through a single ad, not through a single call. Multiple touchpoints over time, each delivering genuine value without asking for anything in return.
 
-Section 4 — The Six Archetypes
+Section 4 — The Archetypes (tone / emotional driver)
+
+**Active creative set (3):** Security-Seeker · Financially Squeezed · Strategic
+Retiree.
+
+These are **psychographic** — how the ad sounds and what fear it speaks to.
+**Who they look like** is a separate list (personas): Widowed · Married Couple ·
+Pre-Retiree. Family / heirs / burden / living legacy are **triggers and myth
+content**, not a fourth archetype. Bridge:
+[rm-archetypes-canonical.md](../media-buying/creative-studio/rm-archetypes-canonical.md).
+
+> **Cleanup (2026-09):**
+> - Title used to say "Six Archetypes." Body only ever defined five.
+> - Veteran (playbook/bridge #6) **deprecated** with the Veteran persona.
+> - Pre-Retiree was Archetype 5 → **persona only**.
+> - Legacy Planner was Archetype 4 → **demoted to family trigger / content**
+>   (heir concern is a universal gate, not a distinct purchase job). Full
+>   archived text:
+>   [drafts/rm-archetypes-pre-2026-09-cleanup.md](drafts/rm-archetypes-pre-2026-09-cleanup.md).
 
 The Non-Negotiable Rule
 
-One archetype per campaign. Always. Attempting to address multiple archetypes in a single piece of content produces messaging diluted to the point of ineffectiveness. Commit to a single archetype. The depth of resonance with the right person will always produce better results than breadth written for everyone.
+One archetype per sharp output. Always. Attempting to address multiple
+archetypes in a single TOF piece dilutes the message. Kitchen-sink MOF may
+touch more than one callout — still pick a primary archetype for tone.
+Commit to a single archetype. Depth with the right person beats breadth for
+everyone.
 
 Archetype 1 — The Security-Seeker
 
@@ -270,9 +298,16 @@ Generic 'get cash now' language
 
 Anything patronizing or oversimplified
 
-Archetype 4 — The Legacy Planner
+Archetype 4 — The Legacy Planner → DEMOTED TO TRIGGER / CONTENT (not an active archetype)
 
-Core driver: Generosity and family
+> **Status (2026-09):** Not an active archetype. Heir / family / burden /
+> living-legacy language is a **trigger + myth gate** on any of the three
+> active archetypes. Do not brief `archetype: legacy-planner`.
+> Brief e.g. `persona: married-couple` · `archetype: strategic-retiree` ·
+> `trigger: heirs`. Full archived profile:
+> [drafts/rm-archetypes-pre-2026-09-cleanup.md](drafts/rm-archetypes-pre-2026-09-cleanup.md).
+
+Core driver: Generosity and family *(archived — use as trigger)*
 
 Who they are: Financially comfortable but motivated by what happens to their wealth — or what they can do for family right now. Looks at home equity and sees an opportunity to create a living legacy: help adult children, secure a spouse's future, fund a grandchild's education, or make a meaningful gift while still alive to see it received.
 
@@ -304,13 +339,19 @@ Vague or evasive answers to inheritance questions
 
 Anything that sounds like a pitch rather than guidance
 
-Archetype 5 — The Pre-Retiree
+Archetype 5 — The Pre-Retiree → MOVED TO PERSONA (not an active archetype)
+
+> **Status (2026-09):** Pre-Retiree is an ICP **persona** (life stage), not a
+> fifth psychographic archetype. Do not brief "archetype: pre-retiree."
+> Use persona: Pre-Retiree + archetype: Strategic Retiree (longevity / standby)
+> or Financially Squeezed / Security-Seeker (payment / cash stress).
+> Language below is retained as VOC for that persona.
 
 Core driver: Longevity anxiety
 
 Who they are: At the earliest point of eligibility — typically 62 to 65 — and did not retire on their own timeline. A health event, layoff, caregiving obligation, or corporate restructuring pushed them into retirement earlier than planned. They may have started Social Security earlier than intended, locking in a permanently reduced benefit. Their dominant fear is outliving their money over a 25 to 30 year horizon — not running out next year, but running out in year 22.
 
-What moves them: Long-term security and proactive planning language. The growing HECM line of credit is the single most relevant product feature for this archetype. Reframing early retirement as a planning opportunity rather than a setback reduces shame and increases engagement.
+What moves them: Long-term security and proactive planning language. The growing HECM line of credit is the single most relevant product feature for this persona. Reframing early retirement as a planning opportunity rather than a setback reduces shame and increases engagement.
 
 Product frame: Long-term financial foundation — proactive planning by someone who is thinking ahead. "You have decades ahead of you. The decisions you make at 62 will determine what 80 looks like. Setting up a growing line of credit and eliminating your mortgage payment now means you're building a foundation that works for you for the rest of your life."
 
@@ -338,7 +379,7 @@ Anything implying they made a mistake retiring early
 
 Oversimplified or short-sighted benefit claims
 
-Master Reference Table
+Master Reference Table — active archetypes only
 
 Archetype
 
@@ -380,25 +421,7 @@ Making a suboptimal financial decision
 
 Optimization tool — a smart instrument in a broader plan
 
-Legacy Planner
-
-Generosity and family
-
-Wealth locked up when family needs it most
-
-"Living legacy," "protect your spouse," "non-recourse protection"
-
-Legacy instrument — deploy equity in service of family
-
-Pre-Retiree
-
-Longevity anxiety
-
-Outliving money over a 25–30 year horizon
-
-"Foundation that lasts," "proactive planning," "30-year runway"
-
-Long-term foundation — proactive, not reactive
+(Legacy Planner and Pre-Retiree removed from active archetype table — see demotion notes above + archive draft.)
 
 Section 5 — The Operating Rules
 
@@ -430,7 +453,11 @@ The first job of any piece of content is to educate — to shift the Debt Frame 
 
 Rule 3 — One Archetype Per Output
 
-When optimizing for **equity-rich, closable leads** (not raw volume), weight creative toward **Strategic Retiree** and **Legacy Planner** and use qual friction on the landing page. Full playbook: [RM High-Quality Lead Acquisition](../client-marketing/rm-high-quality-lead-acquisition.md).
+When optimizing for **equity-rich, closable leads** (not raw volume), weight
+creative toward **Strategic Retiree** (plus equity callouts and heir/family
+proof on the path — not a separate Legacy archetype) and use qual friction on
+the landing page. Full playbook:
+[RM High-Quality Lead Acquisition](../client-marketing/rm-high-quality-lead-acquisition.md).
 
 Every piece of content is written for one specific prospect archetype. Never for all of them. Before producing any output, identify the target archetype and write exclusively to that person's fears, language, and frame. Content written for everyone converts no one.
 

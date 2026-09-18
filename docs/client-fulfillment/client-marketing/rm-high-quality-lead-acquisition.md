@@ -3,7 +3,7 @@ title: RM High-Quality Lead Acquisition
 domain: client-fulfillment
 owner: media-buying-lead
 status: active
-last_updated: 2026-05-27
+last_updated: 2026-09-18
 review_cycle: monthly
 artifact_type: playbook
 ---
@@ -74,7 +74,7 @@ Media buying lead (Gabriela primary); Client Success and Operations use for diag
 
 **Quality lead (operational definition):** Homeowner 62+, primary residence, **meaningful equity** (paid-off or low mortgage balance relative to value), **intent aligned with ad promise**, able to discuss property charges honestly, completes qual steps on LP.
 
-**Highest-fit archetypes for equity + stability:** [Strategic Retiree](../reverse-mortgage-dna/doctrine-rm-marketing.md) and [Legacy Planner](../reverse-mortgage-dna/doctrine-rm-marketing.md) — smaller volume, higher close rate once engaged. **Security-Seeker** drives volume; thinner equity and heavier charge-risk mix — deprioritize when quality is the goal.
+**Highest-fit archetype for equity + stability:** [Strategic Retiree](../reverse-mortgage-dna/doctrine-rm-marketing.md) — smaller volume, higher close rate once engaged. Put **heir / family proof** on that path (trigger, not a separate Legacy archetype). **Security-Seeker** and **Financially Squeezed** drive volume; thinner equity and heavier charge-risk mix — deprioritize when quality is the goal. Active set: [rm-archetypes-canonical.md](../media-buying/creative-studio/rm-archetypes-canonical.md).
 
 ---
 
@@ -100,7 +100,7 @@ Media buying lead (Gabriela primary); Client Success and Operations use for diag
 2. **Funded-loan / booked-call lookalikes** — seed Meta from closes, not all form fills.
 3. **Intentional qual friction** — home value band + mortgage balance + primary residence (see §5).
 4. **Message match** — ad promise = LP headline (e.g. payment elimination ad → payment elimination LP).
-5. **Archetype mix shift** — 30–40% net new creative toward Strategic Retiree + Legacy Planner when quality is the goal.
+5. **Archetype mix shift** — 30–40% net new creative toward **Strategic Retiree** (with heir/family proof on-path) when quality is the goal.
 
 ### Tier B — Meta creative (Andromeda era)
 
@@ -146,15 +146,19 @@ Repo does not replace channel strategy here — flag to founder when Meta-only p
 - "Pulling from retirement accounts in a down market? There's a federally-insured way homeowners may access equity they've already built — without a required monthly mortgage payment."
 - "Many retirees use a growing standby line of credit as a buffer — so they're not forced to sell investments at the wrong time."
 
-### Legacy Planner (strong equity, family motivation)
+### Family / heirs path (trigger — not a separate archetype)
 
-**Frame:** Deploy equity in service of family; answer inheritance directly.
+**Frame:** Answer inheritance directly on the Strategic (or any) path; use as
+hook when helping family *now* is the lead story. Do not brief
+`archetype: legacy-planner` — see
+[rm-archetypes-canonical.md](../media-buying/creative-studio/rm-archetypes-canonical.md).
 
 | Use | Avoid |
 |-----|-------|
 | Living legacy, help adult children/grandkids while alive | Vague inheritance dismissals |
 | Spouse protection, non-recourse for heirs | Pure survival / charity framing |
 | "Equity you've already built" | Pressure tactics |
+| Trigger tags: `heirs` · `burden` · `living-legacy` | Treating family as a fourth peer archetype |
 
 ### Paid-off / low-balance (equity signal)
 
@@ -203,14 +207,14 @@ Per [Doctrine Reverse Mortgage](../reverse-mortgage-dna/doctrine-reverse-mortgag
 
 Each row is a **distinct emotional driver** — not a visual variant of the same ad.
 
-| # | Concept | Archetype | Job |
-|---|---------|-----------|-----|
+| # | Concept | Archetype / tag | Job |
+|---|---------|-----------------|-----|
 | 1 | Trapped equity — house rich, investments intact | Strategic Retiree | Stop scroll with sophistication |
 | 2 | Standby LOC that grows (unused buffer) | Strategic Retiree | Planner, not spender |
 | 3 | Stop draining the 401(k) | Strategic Retiree | Contrast frame |
-| 4 | Roof / HVAC / accessibility | Paid-off / Legacy | Real equity + real intent |
+| 4 | Roof / HVAC / accessibility | Squeezed or Strategic · paid-off | Real equity + real intent |
 | 5 | Couples who planned retirement — costs outran plan | Financially Squeezed w/ equity | Middle tier |
-| 6 | Living legacy — help family while you're here | Legacy Planner | Heir-aware |
+| 6 | Living legacy — help family while you're here | Strategic or Squeezed · **trigger: living-legacy** | Heir-aware hook |
 | 7 | BOF: how much you **may** access (estimate) | Retarget | Specificity selects |
 | 8 | Exclusion FAQ on LP | All | Filters misfit clicks |
 
@@ -241,7 +245,7 @@ See [Intelligence RM Product](../reverse-mortgage-dna/intelligence-rm-product.md
 
 ## 9. 30-day experiment stack
 
-1. Shift **30–40%** of new creative to Strategic Retiree + Legacy Planner.
+1. Shift **30–40%** of new creative to **Strategic Retiree** (include heir proof on-path).
 2. Add or enforce **home value + mortgage balance** qual fields; track lead-to-qual % weekly.
 3. Launch **one BOF retarget** campaign: 50%+ video viewers → estimate/education LP.
 4. **Disqual review every Monday** → one creative fix + one LP fix.
@@ -265,7 +269,8 @@ See [Intelligence RM Product](../reverse-mortgage-dna/intelligence-rm-product.md
 ```
 Role: RM Meta creative strategist for Waiz Media clients.
 Goal: Higher lead-to-qual % and equity-rich homeowners — not max form fills.
-Archetype: [Strategic Retiree | Legacy Planner | ...]
+Archetype: [Strategic Retiree | Financially Squeezed | Security-Seeker]
+Trigger (optional): [heirs | burden | living-legacy | …]
 Frame: Retirement Tool (not Debt Frame). Do not open with "reverse mortgage."
 Compliance: may qualify, could access, in many cases — no guarantees.
 Output: 1 hook (3 sec), 45-60s video outline OR static headline+primary, LP headline match, 3 qual questions.

@@ -80,7 +80,10 @@ Switch creative format — if running image, test video; if running talking-head
 
 Revisit the opening 3 seconds of any video — this determines whether the viewer continues
 
-Check that ad copy speaks to a single archetype (Security-Seeker, Strategic Retiree, Squeezed Homeowner, Legacy Planner) — diluted messaging kills CTR
+Check that ad copy speaks to a single active archetype (Security-Seeker,
+Financially Squeezed, Strategic Retiree) — diluted messaging kills CTR. Family /
+heirs = trigger content, not a fourth archetype. See
+[rm-archetypes-canonical.md](../media-buying/creative-studio/rm-archetypes-canonical.md).
 
 ## 1.2  Ad Frequency
 ## Owner: Media Buyer (Gabriela)

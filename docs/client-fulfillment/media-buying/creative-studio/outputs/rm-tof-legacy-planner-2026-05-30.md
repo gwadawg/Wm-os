@@ -8,7 +8,15 @@ review_cycle: once
 artifact_type: creative-output
 ---
 
-> **Legacy sample (2026-05):** Higgsfield prompt sections are historical only. New work uses Arcads handoff → wm-creative.
+> **Legacy sample (2026-05):** Higgsfield prompt sections are historical only.
+> New work uses Arcads handoff → wm-creative.
+>
+> **Audience model note (2026-09):** "Legacy Planner" is no longer an active
+> archetype. Treat this file as a **family-trigger** creative sample
+> (`trigger: heirs / burden / living-legacy` on Widowed or Married Couple +
+> an active archetype). Active set:
+> [rm-archetypes-canonical.md](../rm-archetypes-canonical.md). Archive:
+> [rm-archetypes-pre-2026-09-cleanup.md](../../../reverse-mortgage-dna/drafts/rm-archetypes-pre-2026-09-cleanup.md).
 
 # RM TOF Legacy Planner — Concepts + Script + Higgsfield Prompt (2026-05-30)
 

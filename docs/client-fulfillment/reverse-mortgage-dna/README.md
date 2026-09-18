@@ -24,6 +24,9 @@ RM product, ICP, marketing doctrine, and compliance for **client** campaigns and
 | [Intelligence ICP RM](intelligence-icp-rm.md) | `active` |
 | [Intelligence RM Product](intelligence-rm-product.md) | `active` — HECM facts (default product) |
 | [RM Product Lines](rm-product-lines.md) | `active` — **product catalog + ad-angle fit** (HECM vs HomeSafe Second, etc.) |
+| [RM Creative Taxonomy](rm-creative-taxonomy.md) | `draft` — **how we develop creatives + day-1 campaign shape** (strategy · outcome · stage) |
+| [RM Archetypes Canonical](../media-buying/creative-studio/rm-archetypes-canonical.md) | `draft` — **3 personas × 3 archetypes** (family = trigger) |
+| [Archive — pre-2026-09 archetypes](drafts/rm-archetypes-pre-2026-09-cleanup.md) | `draft` — superseded audience model (do not load for new creative) |
 | [RM Borrower Objections](rm-borrower-objections.md) | `active` |
 | [RM CloseBot Knowledge Base](rm-closebot-knowledge-base.md) | `draft` — CloseBot KB upload (PDF). Product + ICP + truth anchors only; role/booking in Job Information prompt |
 | [RM Funnel Form Spec](rm-funnel-form-spec.md) | `draft` — canonical Perspective funnel (questions, journey, GHL mapping) |

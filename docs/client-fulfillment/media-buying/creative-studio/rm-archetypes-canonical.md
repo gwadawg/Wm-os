@@ -3,54 +3,160 @@ title: RM Archetypes Canonical
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-05-30
+last_updated: 2026-09-18
 review_cycle: monthly
 artifact_type: reference
+canonical_for: rm-persona-archetype-bridge
+note: >-
+  Active audience model for RM creative. 3 personas × 3 archetypes. Family/heirs
+  = trigger content, not an archetype. Veteran deprecated. Archive of old model:
+  reverse-mortgage-dna/drafts/rm-archetypes-pre-2026-09-cleanup.md
 ---
 
 # RM Archetypes Canonical
 
-One canonical bridge so the studio speaks a single language. The
-[RM Ad Playbook](../../client-marketing/rm-ad-playbook.md) reasons in **6 psychographic
-archetypes**; the [ICP doctrine](../../reverse-mortgage-dna/intelligence-icp-rm.md) defines
-**4 demographic personas**. They are complementary, not contradictory: the psychographic
-archetype is the *emotional driver*; the persona is *who that driver tends to live in*.
+**Single bridge for personas + archetypes.** Load this (plus ICP + doctrine)
+when scripting. Campaign structure lives in
+[rm-creative-taxonomy.md](../../reverse-mortgage-dna/rm-creative-taxonomy.md) —
+do not invent ad sets from this file.
 
-> Source: this doc references the founder-owned ICP doc and the playbook. It does not modify
-> them. Example hooks below are compliance-screened (see note) and are *direction*, not
-> copy-paste ads.
+| List | Job | Active set |
+|------|-----|------------|
+| **Persona** | Who they look like — casting, VOC | **3:** Widowed · Married Couple · Pre-Retiree |
+| **Archetype** | Why they buy — tone, language bans | **3:** Security-Seeker · Financially Squeezed · Strategic Retiree |
+| **Family / heirs** | Gate + hook — not a fourth buyer type | Triggers: `burden` · `heirs` · `living-legacy` |
 
-## The bridge table
+> **Sources:** [intelligence-icp-rm.md](../../reverse-mortgage-dna/intelligence-icp-rm.md)
+> · [doctrine-rm-marketing.md](../../reverse-mortgage-dna/doctrine-rm-marketing.md)
+> · **Archive (old 4–6 archetype model):**
+> [rm-archetypes-pre-2026-09-cleanup.md](../../reverse-mortgage-dna/drafts/rm-archetypes-pre-2026-09-cleanup.md)
 
-| Psychographic archetype (playbook) | Core emotional driver | Maps to ICP persona(s) | Best angles | Best stage | Compliant example hook direction |
-|------------------------------------|-----------------------|------------------------|-------------|------------|----------------------------------|
-| **Security-Seeker** | Fear of running out / losing the home | Widowed Homeowner; any | Burden, No Monthly Payment, Stay in Home | TOF/MOF | "If you're a retired homeowner watching your savings shrink every month, this is for you." |
-| **Financially Squeezed** | House-rich, cash-poor frustration | Married Couple; Widowed | Trapped Asset, Surviving vs Living, Cash Out | TOF | "Your home is worth more than ever — so why is money tighter than ever?" |
-| **Strategic Retiree** | Wants the smart, optimized move | Married Couple; Pre-Retiree | Exclusive Access, Not a Last Resort, Comparison | MOF/BOF | "Most advisors won't mention this smarter way to manage retirement cash flow." |
-| **Legacy Planner** | Protect family / inheritance | Married Couple; any | Burden, Heirs Get the Equity, Regret/Social Proof | MOF | "Will your kids inherit a bill — or an asset? The answer surprises most people." |
-| **Veteran** | Honor, self-reliance, earned benefit | Veteran | Exclusive Access, Burden, No Monthly Payment | TOF/MOF | "You served your country. There's a federally-insured program built for homeowners like you." |
-| **Pre-Retiree** | Fear money won't last 25-30 years | Pre-Retiree | Trapped Asset, No Monthly Payment, Cash Out | TOF | "Retired earlier than planned? Here's how to build a safety net that actually lasts." |
+---
 
-## Persona quick reference (from ICP doc)
+## Purchase psychology (why only three archetypes)
 
-| ICP persona | Snapshot | Core fear | Core desire | Lead angle |
-|-------------|----------|-----------|-------------|------------|
-| Widowed Homeowner | Female, living alone, savings depleted | "I'm alone and watching my money disappear." | Security, not being a burden | Burden / Stay in Home |
-| Married Couple | Both retired, inflation eroding | "We worked our whole lives and we're still stressed." | Enjoy retirement together | Surviving vs Living / Legacy |
-| Veteran | Proud, independent, resistant to help | "I served — I shouldn't struggle in my own home." | Honor, self-sufficiency | Exclusive Access (earned benefit) |
-| Pre-Retiree (early retired) | Retired sooner than planned | "I'm terrified my money won't last 20+ years." | A plan that holds | No Monthly Payment / strategic |
+```text
+JOB A — RELIEVE PRESENT PRESSURE   → cash-out / payment-gone
+        Security-Seeker     (fear → safety; shame-sensitive)
+        Financially Squeezed (fairness → earned access; pride-sensitive)
 
-## Compliance note on example hooks
+JOB B — PROTECT THE FUTURE         → standby-line / planning
+        Strategic Retiree   (competence → optimization)
 
-Hooks above are screened against [RM compliance guardrails](../../reverse-mortgage-dna/rm-compliance-guardrails.md):
+FAMILY / HEIRS                     → not a job — a gate on both paths
+```
 
-- **No age in copy.** The playbook's raw hook bank sometimes uses "over 62"; the canonical
-  versions here use "retired homeowner" instead. Age is an eligibility/targeting fact, never ad copy.
-- **No product name in TOF hooks.** "Reverse mortgage" never opens a TOF ad.
-- **No guarantees / no fabricated proof / no false urgency.**
+Same pressure job, two dignity registers — wrong tone kills the ad. Planner
+job is a different purchase (often no present need). Legacy-as-archetype
+over-counted a universal objection as a segment.
 
-## How the studio uses this
+---
 
-- **Ideation matrix** picks an archetype here, then pulls its best angles + stage to generate concepts.
-- **Script generator** uses the persona's VOC and core fear/desire from the ICP doc to write the Empathy and Frame-Shift beats.
-- See [frameworks-reference.md](frameworks-reference.md) for the full hook taxonomy and awareness bridge.
+## Active personas (who)
+
+Full VOC → [intelligence-icp-rm.md](../../reverse-mortgage-dna/intelligence-icp-rm.md) §6.
+
+| Persona | Snapshot | Core fear | Core desire |
+|---------|----------|-----------|-------------|
+| **Widowed Homeowner** | Alone, income halved | Losing home / becoming a burden | Security, independence |
+| **Married Couple** | Both retired, inflation | Worked hard, still stressed | Enjoy retirement · protect heirs |
+| **Pre-Retiree** | Early retired / long runway | Money won't last 20–30 years | A plan that holds |
+
+| Deprecated | Rule |
+|------------|------|
+| **Veteran** | Do not brief, tag, or open Scale ladder cells. Archive text remains in ICP. |
+
+---
+
+## Active archetypes (why / tone)
+
+Full language banks → [doctrine-rm-marketing.md](../../reverse-mortgage-dna/doctrine-rm-marketing.md) §4.
+
+| Archetype | Driver | Fear | Conversion language | Never |
+|-----------|--------|------|---------------------|-------|
+| **Security-Seeker** | Fear / survival | Running out of options | Peace of mind · safety net · breathe again | Pity, “last resort,” urgency, complex jargon |
+| **Financially Squeezed** | Frustration / fairness | Retirement that never arrives | Unlock equity · you earned this · already yours | Help/charity framing, desperation, victim tone |
+| **Strategic Retiree** | Optimization / control | Suboptimal decision | Portfolio buffer · standby credit · sequence-of-returns | Emotional relief as lead, “get cash now,” oversimplification |
+
+| Demoted / removed | Use instead |
+|-------------------|-------------|
+| **Legacy Planner** | Trigger `heirs` / `burden` / `living-legacy` + heir myth content. Archive: [drafts](../../reverse-mortgage-dna/drafts/rm-archetypes-pre-2026-09-cleanup.md) |
+| **Pre-Retiree** (as archetype) | Persona Pre-Retiree + Strategic Retiree or Squeezed / Security-Seeker |
+| **Veteran** | Deprecated |
+
+---
+
+## Bridge (who × why)
+
+One ad = **one archetype** (sharp TOF). Kitchen-sink MOF may touch more than
+one callout — still pick a primary persona for casting.
+
+| Persona ↓ · Archetype → | Security-Seeker | Financially Squeezed | Strategic Retiree |
+|-------------------------|-----------------|----------------------|-------------------|
+| **Widowed** | **Primary** | Common | Rare |
+| **Married Couple** | Common | **Primary** | Common (quality) |
+| **Pre-Retiree** | If crisis | If payment / cash stress | **Primary** |
+
+### Family triggers (any persona × any archetype)
+
+| Trigger | When to lead with it | Typical stage |
+|---------|----------------------|---------------|
+| `burden` | Fear of asking kids for help | TOF / MOF |
+| `heirs` | Inheritance myth / remaining equity | MOF (myth-led or education) |
+| `living-legacy` | Help family *now* while alive | TOF/MOF · still one outcome (usually cash-out) |
+
+Heir / non-recourse proof belongs on **every** quality path — not only a
+“Legacy” brief.
+
+### Hook direction (compliance-screened)
+
+| Pair | Stage | Hook direction |
+|------|-------|----------------|
+| Widowed × Security-Seeker | TOF | Alone, savings shrinking · stay in the home |
+| Widowed × burden trigger | TOF/MOF | Kids shouldn't have to worry · independence |
+| Couple × Financially Squeezed | TOF | House worth more · money tighter |
+| Couple × Strategic Retiree | MOF | Smarter cash-flow tool · not a last resort |
+| Couple × heirs trigger | MOF | Heirs get remaining equity · non-recourse |
+| Pre-Retiree × Strategic Retiree | TOF/MOF | Early retirement · foundation · growing line |
+| Pre-Retiree × Financially Squeezed | TOF | Still making a payment · free up cash flow |
+
+---
+
+## Quality dial (creative mix)
+
+From [rm-high-quality-lead-acquisition.md](../../client-marketing/rm-high-quality-lead-acquisition.md):
+
+| Goal | Weight |
+|------|--------|
+| Volume | Security-Seeker + Financially Squeezed |
+| Qualified / closable | **Strategic Retiree** + equity callouts + heir proof on the path |
+
+---
+
+## Fit to creative taxonomy
+
+| Taxonomy layer | Persona / archetype role |
+|----------------|--------------------------|
+| Product · strategy · outcome · stage | Structure / learning |
+| Persona + archetype | Scripting only |
+| Trigger (incl. family) | Hook on the ad |
+
+Do not create ad sets named after archetypes. Persona in Scale names
+(`scale_widowed`, `scale_married`, `scale_pre-retiree`) only when funded —
+never `scale_veteran`.
+
+---
+
+## Compliance
+
+- No age in copy · no product name opening TOF (outcome-led) · no guarantees
+- Full gate: [rm-compliance-guardrails.md](../../reverse-mortgage-dna/rm-compliance-guardrails.md)
+
+## Related
+
+- [RM Creative Taxonomy](../../reverse-mortgage-dna/rm-creative-taxonomy.md)
+- [Intelligence ICP RM](../../reverse-mortgage-dna/intelligence-icp-rm.md)
+- [Doctrine RM Marketing](../../reverse-mortgage-dna/doctrine-rm-marketing.md)
+- [RM High-Quality Lead Acquisition](../../client-marketing/rm-high-quality-lead-acquisition.md)
+- [Creative Awareness Ladder](../creative-awareness-ladder.md)
+- [Archive](../../reverse-mortgage-dna/drafts/rm-archetypes-pre-2026-09-cleanup.md)

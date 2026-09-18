@@ -3,7 +3,7 @@ title: Doctrine Reverse Mortgage
 domain: client-fulfillment
 owner: founder
 status: active
-last_updated: 2026-05-21
+last_updated: 2026-09-18
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Reverse Mortgage DNA/Doctrine -- Reverse Mortgage -- 03.36.docx
 artifact_type: doctrine
@@ -37,6 +37,15 @@ Any RM messaging, ads, or nurture draft.
 - Client-facing copy must follow [RM Compliance Guardrails](../../client-fulfillment/reverse-mortgage-dna/rm-compliance-guardrails.md) when applicable.
 
 ## Operating Content
+
+> **Audience model (2026-09) — read first.** Active creative set is
+> **3 personas × 3 archetypes** in
+> [rm-archetypes-canonical.md](../media-buying/creative-studio/rm-archetypes-canonical.md).
+> Legacy Planner is **not** an active archetype (family = trigger). Process +
+> campaign shape:
+> [rm-creative-taxonomy.md](rm-creative-taxonomy.md). Archive:
+> [drafts/rm-archetypes-pre-2026-09-cleanup.md](drafts/rm-archetypes-pre-2026-09-cleanup.md).
+> Prefer those for new work; body below is historical methodology prose.
 
 ### Waiz Media
 
@@ -354,7 +363,12 @@ Why Specificity Is a Compounding Advantage
 
 Specificity in messaging does not just improve individual ad performance. It improves the performance of the entire system over time. When highly specific content attracts the right people, it feeds the algorithm better data — and better data produces better targeting, which produces better leads, which produces better conversion data, which further improves the algorithm's targeting. Generic content starts a negative loop. Specific content starts a positive one.
 
-The Four Archetypes
+The Three Active Archetypes (+ family as trigger)
+
+> **Active (2026-09):** Security-Seeker · Strategic Retiree · Financially
+> Squeezed. Legacy Planner below is retained as **family-trigger VOC**, not a
+> peer archetype. Full bridge:
+> [rm-archetypes-canonical.md](../media-buying/creative-studio/rm-archetypes-canonical.md).
 
 Archetype 1: The Security-Seeker
 
@@ -416,7 +430,11 @@ How the product must be positioned:  Frame:
 
 Rightful access — they built this equity over a lifetime, and this is the mechanism to use it.
 
-Archetype 4: The Legacy Planner
+Archetype 4: The Legacy Planner → DEMOTED TO FAMILY TRIGGER (2026-09)
+
+> Do not brief `archetype: legacy-planner`. Use triggers `heirs` / `burden` /
+> `living-legacy` on an active archetype. Archive:
+> [drafts/rm-archetypes-pre-2026-09-cleanup.md](drafts/rm-archetypes-pre-2026-09-cleanup.md).
 
 This prospect is financially comfortable but motivated by generosity and family. They are focused on what happens to their wealth after they are gone, or on what they can do for their family now. Their home equity represents an opportunity to create a living legacy — to help children, protect a spouse, or make a meaningful gift. Their primary fear is that the wealth they've built will be inaccessible when it's needed most.
 

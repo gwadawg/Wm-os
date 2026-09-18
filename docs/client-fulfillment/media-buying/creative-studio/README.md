@@ -16,7 +16,11 @@ compliant scripts, then hand off to **wm-creative** (Arcads). Sibling to
 [ad-development-workflow.md](../ad-development-workflow.md).
 Skill: [rm-creative-studio](../../../../.claude/skills/rm-creative-studio/SKILL.md).
 
-**DSCR:** use [dscr-video-script-playbook.md](../../dscr-dna/dscr-video-script-playbook.md) — not this folder.
+**Audience model:** [rm-archetypes-canonical.md](rm-archetypes-canonical.md) —
+3 personas × 3 archetypes; family/heirs = trigger. Process + campaign shape:
+[rm-creative-taxonomy.md](../../reverse-mortgage-dna/rm-creative-taxonomy.md).
+
+**DSCR:** use [dscr-creative-studio](../../../../.claude/skills/dscr-creative-studio/SKILL.md) + [dscr-video-script-playbook.md](../../dscr-dna/dscr-video-script-playbook.md) — not this folder.
 
 ## What this gives you
 

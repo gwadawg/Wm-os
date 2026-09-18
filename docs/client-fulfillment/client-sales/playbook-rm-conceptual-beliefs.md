@@ -137,10 +137,10 @@ Listen in the first few minutes; weight discovery toward the belief most likely 
 | Minimizes — "fine, just tight"     | Security-Seeker         | Pain + Trust                |
 | "Did everything right" frustration | Financially Squeezed    | Pain + Doubt (validation)   |
 | Compares options, asks detail      | Strategic Retiree       | Doubt + Trust (methodology) |
-| Kids, inheritance, help family now | Legacy Planner          | Support + Doubt (heirs)     |
-| Early retire, longevity worry      | Pre-Retiree             | Cost (long horizon) + Doubt |
-| Pride, military, resists "help"    | Veteran (ICP)           | Trust + Desire (dignity)    |
-| Widowed, alone, depleted savings   | Widowed homeowner (ICP) | Pain + Support + Trust      |
+| Kids, inheritance, help family now | Any + trigger: heirs / living-legacy | Support + Doubt (heirs) |
+| Early retire, longevity worry      | Pre-Retiree (persona) + Strategic Retiree | Cost (long horizon) + Doubt |
+| Pride, military, resists "help"    | Veteran (ICP) — deprecated | Do not brief new creative |
+| Widowed, alone, depleted savings   | Widowed homeowner (ICP) | Pain + Support + Trust |
 
 
 Archetype detail: [Doctrine RM Marketing §4](../reverse-mortgage-dna/doctrine-rm-marketing.md) · [Intelligence ICP RM §6](../reverse-mortgage-dna/intelligence-icp-rm.md).
@@ -283,7 +283,7 @@ Archetype detail: [Doctrine RM Marketing §4](../reverse-mortgage-dna/doctrine-r
 - **Not ask kids for help**
 - **Stay in the home** for life · fix what's breaking
 - Survive → **enjoy** retirement · travel · grandkids
-- **Help family while alive** (Legacy Planner)
+- **Help family while alive** (family trigger — not a Legacy Planner archetype)
 - **Spouse protected** if something happens to them
 - Confidence they **won't outlive** the plan (Pre-Retiree)
 
@@ -311,7 +311,7 @@ Archetype detail: [Doctrine RM Marketing §4](../reverse-mortgage-dna/doctrine-r
 **RM rules:**
 
 - Influencers not present → **joint call** before full pitch
-- **Legacy Planner:** involve heirs as educated allies early
+- **Family / heirs path:** involve heirs as educated allies early (trigger on any active archetype)
 - **Widow / secret mission:** adult kids may need their own call — don't burn pitch on proxy
 - **Non-borrowing spouse** on title → include in process
 

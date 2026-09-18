@@ -56,4 +56,4 @@ TikTok-native comment reply creates parasocial curiosity before any product ment
 
 ## RM adaptation note
 
-Do not use age in copy. Answer beat must stay educational, not product-named at TOF. Strong for Financially Squeezed + Legacy Planner archetypes.
+Do not use age in copy. Answer beat must stay educational, not product-named at TOF. Strong for Financially Squeezed + **heirs / burden triggers** (family gate — not a Legacy Planner archetype).

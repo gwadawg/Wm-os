@@ -5,7 +5,7 @@ description: >-
   video ad scripts for RM client fulfillment only. Use when the user names reverse
   mortgage, RM, HECM, HomeSafe, or retired-homeowner client Meta video ads.
   Do NOT use for DSCR, Waiz agency ads, or bare "write an ad script" without an RM
-  product signal — route DSCR to dscr-video-script-playbook + wm-creative.
+  product signal — route DSCR to dscr-creative-studio + wm-creative.
   After script lock, hand off to wm-creative (Arcads); Higgsfield is retired.
   Statics: ai-rm-ad-image-creation-sop or wm-static-studio. Research: creative-research.
 ---
@@ -30,7 +30,8 @@ Read these from `docs/client-fulfillment/media-buying/` and siblings:
 Read these from `docs/client-fulfillment/media-buying/creative-studio/`:
 
 1. [frameworks-reference.md](../../../docs/client-fulfillment/media-buying/creative-studio/frameworks-reference.md)
-2. [rm-archetypes-canonical.md](../../../docs/client-fulfillment/media-buying/creative-studio/rm-archetypes-canonical.md)
+2. [rm-archetypes-canonical.md](../../../docs/client-fulfillment/media-buying/creative-studio/rm-archetypes-canonical.md) — **3 personas × 3 archetypes** (family = trigger; Veteran deprecated)
+2b. [rm-creative-taxonomy.md](../../../docs/client-fulfillment/reverse-mortgage-dna/rm-creative-taxonomy.md) — process + day-1 campaign shape (strategy · outcome · stage)
 3. [rm-ad-ideation-matrix.md](../../../docs/client-fulfillment/media-buying/creative-studio/rm-ad-ideation-matrix.md)
 4. [rm-script-generator.md](../../../docs/client-fulfillment/media-buying/creative-studio/rm-script-generator.md)
 5. [compliance-gate-checklist.md](../../../docs/client-fulfillment/media-buying/creative-studio/compliance-gate-checklist.md)
@@ -41,6 +42,7 @@ Read these from `docs/client-fulfillment/media-buying/creative-studio/`:
 Pull VOC from [intelligence-icp-rm.md](../../../docs/client-fulfillment/reverse-mortgage-dna/intelligence-icp-rm.md)
 and structure from [rm-ad-playbook.md](../../../docs/client-fulfillment/client-marketing/rm-ad-playbook.md).
 **Product line fit:** [rm-product-lines.md](../../../docs/client-fulfillment/reverse-mortgage-dna/rm-product-lines.md).
+Do **not** load [new-hire-mortgage-icp-primer.md](../../../docs/company/new-hire-mortgage-icp-primer.md) — team training only; it dilutes RM VOC.
 
 Related: [copywriting](../copywriting/SKILL.md) · [marketing-psychology](../marketing-psychology/SKILL.md).  
 Do **not** use [ugc-scriptwriter](../ugc-scriptwriter/SKILL.md) for RM client ads.
@@ -106,4 +108,4 @@ Stay in chat through Steps 0–4. One consolidated file only on explicit save.
 - Produce video: sibling repo **wm-creative** (`wm-arcads-studio`)
 - Statics: [ai-rm-ad-image-creation-sop.md](../../../docs/client-fulfillment/media-buying/ai-rm-ad-image-creation-sop.md) or wm-creative `wm-static-studio`
 - Research: [creative-research/](../../../docs/client-fulfillment/media-buying/creative-research/)
-- DSCR video scripts: [dscr-video-script-playbook.md](../../../docs/client-fulfillment/dscr-dna/dscr-video-script-playbook.md)
+- DSCR equivalent: [dscr-creative-studio](../dscr-creative-studio/SKILL.md) (rulebook: [dscr-video-script-playbook.md](../../../docs/client-fulfillment/dscr-dna/dscr-video-script-playbook.md))

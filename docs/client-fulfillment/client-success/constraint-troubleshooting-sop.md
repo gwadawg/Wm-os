@@ -129,7 +129,10 @@ Test the full funnel on mobile: click ad → land on page → submit form → co
 
 Are we running at least 6–8 creatives covering different formats (video + image) and different archetype angles?
 
-Each of the four ICP archetypes (Security-Seeker, Strategic Retiree, Financially Squeezed, Legacy Planner) should have at least one dedicated creative angle in the active set.
+Each of the three active archetypes (Security-Seeker, Financially Squeezed,
+Strategic Retiree) should have at least one dedicated creative angle in the
+active set. Family / heirs = trigger content, not a fourth archetype. See
+[rm-archetypes-canonical.md](../media-buying/creative-studio/rm-archetypes-canonical.md).
 
 ## Is the ad messaging consistent with the landing page headline? (message match)
 The landing page headline must directly continue the promise made in the ad. Mismatch = people click then bounce instantly.
