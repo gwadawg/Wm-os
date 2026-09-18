@@ -137,8 +137,9 @@ visual_notes: …
 ```
 
 Tags are **not** a flat list. Pick `product` first, then select from that product’s
-category dropdowns in Ad Library (DSCR: bucket / creative_job / concept / angle /
-topic; RM: track / strategy / outcome / stage / equity_callout / concept / trigger).
+category dropdowns in Ad Library (DSCR: bucket / creative_job / concept /
+topic; Angle is legacy optional only. RM: track / strategy / outcome / stage /
+equity_callout / concept / trigger).
 Taxonomy docs define *which values mean what*; Mr. Waiz owns the live catalog.
 
 Remind: paste the same `ad_name` into Meta; set `status=testing` at launch.

@@ -312,14 +312,20 @@ track:          hecm | second
 strategy:       outcome-led | myth-led
 outcome:        payment-gone | cash-out | standby-line | multi
 stage:          tof | mof | bof
-equity_callout: soft | hard | none   # catalog values — not free text
-concept:        from ad-name-library
+equity_callout: soft | hard | none
+concept:        equity-trap | inflation-hedge | payment-gone | standby-line |
+                myth-scary | heirs-protected | grandkids-visit | keep-rate |
+                second-not-reverse | lo-authority | breaking-news |
+                strategic-options (label: Options grid) |
+                named-proof | comment-reply
+                — never "legacy-planner" (use heirs-protected / grandkids-visit)
 trigger:        burden | widow | …   # multi-select from catalog
 ```
 
 Ad name stays `rm_{concept}_{format}_v{n}` per
 [ad-naming-convention.md](../media-buying/ad-naming-convention.md).
 Do not stuff strategy / stage / outcome into the name.
+Concept = reusable idea family only — not archetype, persona, stage, or track.
 
 ---
 

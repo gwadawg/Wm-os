@@ -186,7 +186,7 @@ summary: …
 visual_notes: …
 ```
 
-DSCR example uses `bucket` / `creative_job` / `concept` / `angle` / `topic` instead of the RM categories above. Same slug may exist on both products as separate catalog rows (e.g. `cash-out`).
+DSCR example uses required `bucket` / `creative_job` / `concept` plus optional multi `topic` (Angle is legacy only). Same slug may exist on both products as separate catalog rows (e.g. `cash-out`).
 
 ## Quality bar
 

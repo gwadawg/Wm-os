@@ -187,20 +187,28 @@ tag primary job = offer/terms.
 
 ## 10. Labeling cheat sheet (brainstorm / Mr. Waiz)
 
-When naming or tagging a concept, fill these four fields:
+When naming or tagging a concept, fill these fields in Mr. Waiz:
 
 ```text
-bucket:        DENIED | DEADLINE | IDLE | IN-MARKET
-creative_job:  reveal | exit | belief | outcome | terms | authority
-concept_slug:  from ad-name-library (e.g. nodocs-speed)
-angle_ref:     proven #1–5 OR "new: <one-line idea>"
+bucket:        Denied | Deadline | Idle | In-market     (required, one)
+creative_job:  Reveal | Exit | Belief | Outcome | Terms | Authority  (required, one)
+concept:       nodocs-speed | balloon-exit | cashout-grow |
+               qualify-stack | lo-authority | ratecard-centered  (required, one)
+topic:         Write-offs | Property count | STR | Foreign national |
+               LLC | Free and clear | Cash-out | Rehab | Reserves | Rate/term
+               (optional, multi)
+angle:         legacy optional only — not used for rollups
 ```
 
 Ad name stays: `dscr_{concept}_{format}_v{n}` — see
 [ad-naming-convention.md](../media-buying/ad-naming-convention.md).
-Bucket, job, concept, angle, and topic are logged as **product × category tags**
-in Mr. Waiz (live catalog) — **not** in the `ad_name` token. This doc owns
-meaning; Mr. Waiz owns selectable rows.
+Bucket, job, concept, and topic are logged as **product × category tags**
+in Mr. Waiz (live catalog) — **not** in the `ad_name` token. Angle is
+deprecated. This doc owns meaning; Mr. Waiz owns selectable rows.
+
+Pairing (soft): In-market → Terms; Reveal → Denied + nodocs-speed;
+Exit → Deadline + balloon-exit; Belief/Outcome → Idle + cashout-grow;
+Authority → lo-authority.
 
 ---
 
