@@ -301,17 +301,20 @@ Lead quality is improved on the ad, not by inventing new categories.
 
 ## 7. Backend logging (not the strategy)
 
-Mr. Waiz tags / summary exist so we can **query** the library later. They do
-not decide campaign structure. Structure is §3. Process is §2.
+Mr. Waiz **product × category tags** + `summary` exist so we can **query** the
+library later. They do not decide campaign structure. Structure is §3. Process
+is §2. This doc owns meaning; Mr. Waiz owns the live selectable catalog.
 
-When logging a creative, record the decisions you already made:
+When logging a creative, record the decisions you already made as category tags:
 
 ```text
 track:          hecm | second
 strategy:       outcome-led | myth-led
 outcome:        payment-gone | cash-out | standby-line | multi
 stage:          tof | mof | bof
-equity_callout: yes | no
+equity_callout: soft | hard | none   # catalog values — not free text
+concept:        from ad-name-library
+trigger:        burden | widow | …   # multi-select from catalog
 ```
 
 Ad name stays `rm_{concept}_{format}_v{n}` per

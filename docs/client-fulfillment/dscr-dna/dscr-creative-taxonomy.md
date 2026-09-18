@@ -148,7 +148,10 @@ Nothing cut. Every old angle has a home:
 | 4 | The Checklist / rate-card | Shared **or** IN-MARKET | Warm; cold if terms-only | Offer / terms | `ratecard-centered` · proposed `qualify-stack` |
 | — | Lender authority | Shared | Warm / BOF | Why this LO / shop | proposed `lo-authority` |
 
-**Cold default test order (when you need a starting slate):** DENIED → DEADLINE → IDLE (old 3 → 2 → 1).
+**Cold default test order (when you need a starting slate):** DENIED + IDLE
+carry volume; DEADLINE is smaller — fund less (~20%). Old proven order 3 → 2 → 1
+maps to DENIED → DEADLINE → IDLE; **budget share** is not equal thirds.
+Day-1 structure: [DSCR Campaign Launch SOP](../media-buying/dscr-campaign-launch-sop.md).
 
 Full writeups: [dscr-campaign-master-angles.md](dscr-campaign-master-angles.md).
 
@@ -195,7 +198,9 @@ angle_ref:     proven #1–5 OR "new: <one-line idea>"
 
 Ad name stays: `dscr_{concept}_{format}_v{n}` — see
 [ad-naming-convention.md](../media-buying/ad-naming-convention.md).
-Bucket and job live in overview / summary / tags — **not** in the ad_name token.
+Bucket, job, concept, angle, and topic are logged as **product × category tags**
+in Mr. Waiz (live catalog) — **not** in the `ad_name` token. This doc owns
+meaning; Mr. Waiz owns selectable rows.
 
 ---
 
@@ -203,11 +208,13 @@ Bucket and job live in overview / summary / tags — **not** in the ad_name toke
 
 | This taxonomy owns | Other docs own |
 |--------------------|----------------|
-| Buckets, angles, creative jobs, labeling | Campaign / ad-set structure → media-buying SOPs (later) |
+| Buckets, angles, creative jobs, labeling | **Campaign / ad-set structure** → [DSCR Campaign Launch SOP](../media-buying/dscr-campaign-launch-sop.md) |
 | Cold vs warm *creative* jobs | Nurture / drip copy → cash-out drip + playbooks |
 | Angle → slug map | Product mechanics → [intelligence-dscr-product.md](intelligence-dscr-product.md) |
 | IN-MARKET terms exception | Compliance essay → [dscr-compliance-guardrails.md](dscr-compliance-guardrails.md) |
 | DSCR only | RM creative → reverse-mortgage-dna |
+
+Do **not** put campaign/ad-set counts in this file. Structure lives in the launch SOP only.
 
 ---
 
@@ -216,10 +223,10 @@ Bucket and job live in overview / summary / tags — **not** in the ad_name toke
 - [ ] Founder approves DENIED / DEADLINE / IDLE / IN-MARKET names
 - [ ] Validate sorting rule against ~20–30 call transcripts / form answers
 - [ ] Register `qualify-stack` + `lo-authority` in [ad-name-library.yaml](../media-buying/ad-name-library.yaml) when ready
-- [ ] Then: campaign-structure conversation inherits these definitions only
 
 ## Related
 
+- [DSCR Campaign Launch SOP](../media-buying/dscr-campaign-launch-sop.md) — day-1 Meta structure
 - [Intelligence ICP DSCR](intelligence-icp-dscr.md) — who + NEVER + creative bar
 - [Campaign Master Angles](dscr-campaign-master-angles.md) — full angle writeups + tokens
 - [GTM Brief](dscr-gtm-positioning-brief.md) — beachhead / test waves

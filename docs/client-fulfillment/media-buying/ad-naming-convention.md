@@ -144,8 +144,8 @@ Examples: `scale_broad` · `scale_widowed` · `test_w7_estimate-request` ·
 | Put in name | Put elsewhere |
 |-------------|----------------|
 | product, concept family, format code, gen/variation | — |
-| — | Funnel stage → `summary` |
-| — | Topic (rates, cash-out, HECM…) → Mr. Waiz **tags** |
+| — | Funnel stage → RM `stage` tag + `summary` |
+| — | Topic / angle / bucket / strategy → Mr. Waiz **product × category tags** (not a flat list) |
 | — | Client name → never (library is cross-client) |
 | — | Full hook sentence → `summary` / `visual_notes` |
 | — | APR, LTV, FICO, loan range, disclaimer → `visual_notes` (and export file) |
@@ -165,7 +165,7 @@ When creating or logging a new creative:
    - No siblings → `…_v1`
    - Parallel tests → next free letter on current gen (`v1a`, `v1b`…)
    - Learned remake → next gen (`v2`)
-5. Output the label block: `ad_name`, `overview`, `summary`, `visual_notes`, plus `product` + `ad_format` + suggested **tags**.
+5. Output the label block: `ad_name`, `overview`, `summary`, `visual_notes`, plus `product` + `ad_format` + suggested **category tags** from the Mr. Waiz catalog for that product.
 
 ### Label output shape
 
@@ -173,11 +173,20 @@ When creating or logging a new creative:
 ad_name: rm_equity-trap_ugc_v1b
 product: reverse
 ad_format: ugc
-tags: [cash-out, education]   # from Mr. Waiz tag catalog — not invented in the name
+tags:                         # product × category — Mr. Waiz catalog only; do not invent slugs
+  track: [hecm]
+  strategy: [myth-led]
+  outcome: [cash-out]
+  stage: [tof]
+  equity_callout: [soft]
+  concept: [equity-trap]
+  trigger: [burden]
 overview: …
 summary: …
 visual_notes: …
 ```
+
+DSCR example uses `bucket` / `creative_job` / `concept` / `angle` / `topic` instead of the RM categories above. Same slug may exist on both products as separate catalog rows (e.g. `cash-out`).
 
 ## Quality bar
 

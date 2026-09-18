@@ -3,7 +3,7 @@ title: Ad Intelligence Bridge — Supabase to Wm-os
 domain: operations
 owner: founder
 status: active
-last_updated: 2026-08-24
+last_updated: 2026-09-18
 review_cycle: quarterly
 artifact_type: playbook
 ---
@@ -43,10 +43,12 @@ Layer 2 — Wm-os distilled knowledge (git)
 
 Layer 3 — Content outputs
   creative-studio/outputs/ (markdown scripts only) · client ad batches
-  Drive stores the file (humans). Mr. Waiz stores what the agent reads (`summary`, tags, type, KPIs).
+  Drive stores the file (humans). Mr. Waiz stores what the agent reads (`summary`, product-category tags, type, KPIs).
 ```
 
 **Rule:** Layer 0 owns raw creative text and metrics. Layers 2+ never store `meta_ad_insights` daily rows or duplicate full `summary` text from `ad_library`.
+
+**Tags (Mr. Waiz live catalog):** `ad_tags` rows are scoped by `product` + `category` (not a flat global list). Junction links use `tag_id`. DSCR categories: bucket, creative_job, concept, angle, topic. RM categories: track, strategy, outcome, stage, equity_callout, concept, trigger. Taxonomy docs define meaning; agents must pick existing catalog values — never invent flat tags like `[cash-out, education]`.
 
 ## Two pipelines (never merge)
 
@@ -125,8 +127,9 @@ Log every new creative at launch so performance rolls up to one row.
 
 | Field | Use |
 |-------|-----|
-| **ad_name** | Short slug — same string in Meta Ads Manager. Canonical rules: [ad-naming-convention.md](../client-fulfillment/media-buying/ad-naming-convention.md) + [ad-name-library.yaml](../client-fulfillment/media-buying/ad-name-library.yaml). Default: `{product}_{concept}_{fmt}_v{#}[letter]`. DSCR rate-card exception: `dscr_[visual]_[spec1]_[spec2]_[spec3]` |
-| **summary** | Strategy: funnel stage, audience, hypothesis, named pattern. Primary input for knowledge capture. |
+| **ad_name** | Short slug — same string in Meta Ads Manager. Canonical rules: [ad-naming-convention.md](../client-fulfillment/media-buying/ad-naming-convention.md) + [ad-name-library.yaml](../client-fulfillment/media-buying/ad-name-library.yaml). Pattern for **all** products including DSCR statics: `{product}_{concept}_{fmt}_v{#}[letter]`. Never put APR/LTV/FICO/loan range in the name — those go in `visual_notes`. |
+| **summary** | Strategy narrative: audience, hypothesis, named pattern. Primary input for knowledge capture. Structured taxonomy (bucket/strategy/stage/…) lives in **tags**, not free-text alone. |
+| **tags** | Product × category multi-select from the Mr. Waiz catalog. Same slug may exist on DSCR and RM as separate rows. Empty tags = Ad Library **Needs tags** queue. |
 | **visual_notes** | Layout, colors, verbatim on-image copy. |
 | **Description / overview (UI)** | One easy sentence — use the `overview` line from the DSCR static generator registration block; paste into summary too if Mr. Waiz has a single description field. |
 
