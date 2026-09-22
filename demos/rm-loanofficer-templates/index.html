@@ -1,0 +1,1161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RM Virtual Card + Educate · Style Packs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link id="pack-fonts" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #f5f3ee;
+    --paper-deep: #ebe7df;
+    --ink: #17201b;
+    --ink-soft: #33413a;
+    --muted: #6b766f;
+    --faint: #9aa39d;
+    --line: rgba(23, 32, 27, 0.10);
+    --accent: #3d6b5a;
+    --accent-deep: #2b4f42;
+    --accent-wash: rgba(61, 107, 90, 0.09);
+    --on-accent: #f3f6f2;
+    --surface: rgba(255, 255, 255, 0.55);
+    --shadow: 0 18px 40px -24px rgba(23, 32, 27, 0.35);
+    --display: "Outfit", system-ui, sans-serif;
+    --body: "Source Sans 3", system-ui, sans-serif;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --radius: 16px;
+    --radius-pill: 999px;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: var(--body);
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, #ebe7e1, transparent),
+      #d4d0c9;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100dvh;
+  }
+
+  /* Studio chrome */
+  .studio {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.25rem 1rem 3rem;
+  }
+  .studio-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  .studio-bar h1 {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #3a3a3a;
+    margin: 0 0.75rem 0 0;
+  }
+  .studio-bar button {
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.42rem 0.85rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid rgba(42, 42, 42, 0.14);
+    background: rgba(255, 255, 255, 0.72);
+    color: #2a2a2a;
+    cursor: pointer;
+    transition: background 0.25s var(--ease), color 0.25s var(--ease), transform 0.2s var(--ease);
+  }
+  .studio-bar button:hover { transform: translateY(-1px); }
+  .studio-bar button[aria-pressed="true"] {
+    background: #1f1f1f;
+    color: #f5f3ef;
+    border-color: #1f1f1f;
+  }
+  .studio-meta {
+    font-size: 0.78rem;
+    color: #5a5550;
+    margin: 0 0 1.15rem;
+    max-width: 62ch;
+    line-height: 1.45;
+  }
+  .phones {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    justify-items: center;
+  }
+  @media (min-width: 860px) {
+    .phones { grid-template-columns: 390px 390px; justify-content: center; gap: 2rem; }
+  }
+  .phone-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #5a5550;
+    margin: 0 0 0.55rem;
+    text-align: center;
+  }
+  .phone {
+    width: 390px;
+    max-width: 100%;
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 11px #1c1c1c,
+      0 28px 70px rgba(0, 0, 0, 0.24);
+    min-height: 820px;
+    position: relative;
+    transition: background 0.45s var(--ease), color 0.45s var(--ease);
+  }
+  .phone::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 90% 45% at 50% -8%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 70%),
+      linear-gradient(180deg, color-mix(in srgb, var(--paper) 88%, white) 0%, var(--paper) 42%, var(--paper-deep) 100%);
+    transition: opacity 0.45s var(--ease);
+  }
+  .phone[data-mode="dark"]::before {
+    background:
+      radial-gradient(ellipse 90% 40% at 50% -5%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 65%),
+      linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 100%);
+  }
+  .phone::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.22;
+    z-index: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  .screen {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* —— CARD —— */
+  .card-screen {
+    min-height: 820px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.85rem 1.4rem 1.4rem;
+  }
+  .card-identity {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem 0 1.5rem;
+  }
+  .company {
+    font-size: 0.64rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 1.6rem;
+  }
+  .headshot-wrap {
+    position: relative;
+    width: 118px;
+    height: 118px;
+    margin: 0 auto 1.35rem;
+  }
+  .headshot-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    background: conic-gradient(from 210deg, var(--accent), transparent 40%, var(--accent-deep), transparent 75%, var(--accent));
+    opacity: 0.55;
+    animation: ring-spin 14s linear infinite;
+  }
+  .headshot-wrap::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: var(--paper);
+  }
+  .headshot {
+    position: relative;
+    z-index: 1;
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.55s var(--ease);
+  }
+  .headshot-wrap:hover .headshot { transform: scale(1.03); }
+  @keyframes ring-spin {
+    to { transform: rotate(360deg); }
+  }
+  .name {
+    font-family: var(--display);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    margin: 0;
+    line-height: 1.12;
+  }
+  .role {
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-weight: 500;
+    margin: 0.45rem 0 0;
+    letter-spacing: 0.01em;
+  }
+
+  .card-reach { flex-shrink: 0; }
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+  }
+  .btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.05rem;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    border: 1.5px solid transparent;
+    will-change: transform;
+    transition: background 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn.solid {
+    background: linear-gradient(165deg, color-mix(in srgb, var(--accent) 88%, white), var(--accent-deep));
+    color: var(--on-accent);
+    box-shadow: 0 10px 22px -14px color-mix(in srgb, var(--accent-deep) 70%, transparent);
+  }
+  .btn.solid:hover {
+    box-shadow: 0 12px 24px -12px color-mix(in srgb, var(--accent-deep) 80%, transparent);
+  }
+  .btn.ghost {
+    background: var(--surface);
+    color: var(--accent-deep);
+    border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+    backdrop-filter: blur(8px);
+  }
+  .btn.ghost:hover {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent-wash) 70%, var(--surface));
+  }
+  .btn.book {
+    grid-column: 1 / -1;
+    background: var(--surface);
+    color: var(--accent-deep);
+    border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+    backdrop-filter: blur(8px);
+  }
+  .btn.book:hover {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent-wash) 80%, var(--surface));
+  }
+  .save-link {
+    display: block;
+    text-align: center;
+    margin: 0.9rem 0 0;
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.25s var(--ease);
+  }
+  .save-link:hover { color: var(--accent); }
+  .edu-book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin: 1.35rem 0 1rem;
+    min-height: 3rem;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--on-accent);
+    background: linear-gradient(165deg, color-mix(in srgb, var(--accent) 88%, white), var(--accent-deep));
+    box-shadow: 0 14px 28px -16px color-mix(in srgb, var(--accent-deep) 80%, transparent);
+    transition: transform 0.2s var(--ease), box-shadow 0.25s var(--ease);
+  }
+  .edu-book:active { transform: translateY(1px); }
+  .edu-book .chev { transition: transform 0.25s var(--ease); }
+  .edu-book:hover .chev { transform: translateX(2px); }
+
+  .card-meta {
+    margin-top: 1.55rem;
+    padding: 1rem 1rem 0.85rem;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+  }
+  .card-meta .details { margin: 0 0 0.85rem; }
+  .card-meta .row {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: 0.45rem;
+    padding: 0.52rem 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.86rem;
+  }
+  .card-meta .row:last-child { border-bottom: none; }
+  .card-meta .row dt {
+    margin: 0;
+    color: var(--muted);
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+  .card-meta .row dd {
+    margin: 0;
+    text-align: right;
+    font-weight: 550;
+    color: var(--ink);
+    word-break: break-word;
+  }
+  .card-meta .row a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .learn-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    width: 100%;
+    margin: 0.85rem 0 1rem;
+    padding: 0.9rem 1.05rem;
+    min-height: 3.15rem;
+    box-sizing: border-box;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--accent-deep);
+    background: var(--accent-wash);
+    border: 1.5px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    transition: background 0.25s var(--ease), border-color 0.25s var(--ease), transform 0.2s var(--ease);
+  }
+  .learn-link:hover {
+    background: color-mix(in srgb, var(--accent-wash) 70%, var(--surface));
+    border-color: var(--accent);
+  }
+  .learn-link:active { transform: translateY(1px); }
+  .learn-link .copy {
+    display: grid;
+    gap: 0.12rem;
+    text-align: left;
+  }
+  .learn-link .copy strong {
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .learn-link .copy small {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .learn-link .chev {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--on-accent);
+    background: var(--accent);
+    transition: transform 0.25s var(--ease);
+  }
+  .learn-link:hover .chev { transform: translateX(2px); }
+  .compliance {
+    font-size: 0.62rem;
+    line-height: 1.45;
+    color: var(--faint);
+    text-align: center;
+    margin: 0;
+  }
+
+  /* —— EDUCATE —— */
+  .edu-screen {
+    padding: 1.15rem 1.25rem 1.75rem;
+    min-height: 820px;
+  }
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.25rem;
+  }
+  .top .back {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+  .top .back:hover { opacity: 0.75; }
+  .top .who {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-weight: 500;
+  }
+  .top .who img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--accent);
+  }
+  .eyebrow {
+    margin: 1.35rem 0 0.65rem;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .edu-h1 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(1.65rem, 6.2vw, 1.95rem);
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+    margin: 0 0 0.7rem;
+  }
+  .promise {
+    margin: 0 0 1.15rem;
+    font-size: 0.96rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .levers {
+    display: grid;
+    gap: 0;
+    margin: 0.15rem 0 0.35rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: linear-gradient(165deg, var(--accent-wash), color-mix(in srgb, var(--surface) 80%, transparent));
+    box-shadow: var(--shadow);
+  }
+  .lever {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1.05rem 1.1rem 1.1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .lever:last-child { border-bottom: none; }
+  .lever .label {
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .lever b {
+    display: block;
+    font-family: var(--display);
+    font-size: 1.08rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    margin: 0;
+    line-height: 1.25;
+  }
+  .lever span {
+    display: block;
+    font-size: 0.86rem;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+  .hero-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: calc(var(--radius) + 2px);
+    display: block;
+    box-shadow: var(--shadow);
+  }
+  .edu-h2 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 1.28rem;
+    letter-spacing: -0.015em;
+    margin: 2.1rem 0 0.95rem;
+  }
+  .myths { display: grid; gap: 0.7rem; }
+  .myth {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.05rem 1.05rem 1.05rem 2.85rem;
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow);
+    transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  }
+  .myth:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 44px -26px color-mix(in srgb, var(--ink) 40%, transparent);
+  }
+  .myth .n {
+    position: absolute;
+    left: 1rem;
+    top: 1.05rem;
+    font-family: var(--display);
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 1.15rem;
+  }
+  .myth .said {
+    margin: 0 0 0.28rem;
+    font-size: 0.88rem;
+    color: var(--faint);
+    text-decoration: line-through;
+    text-decoration-color: color-mix(in srgb, var(--ink) 32%, transparent);
+    text-decoration-thickness: 1.5px;
+  }
+  .myth .truth {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+  .myth .why {
+    margin: 0.32rem 0 0;
+    font-size: 0.84rem;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+  .outcomes {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0.15rem 0 0.55rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .outcomes::-webkit-scrollbar { display: none; }
+  .outcome {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--surface);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow);
+    transition: transform 0.4s var(--ease);
+  }
+  .outcome:hover { transform: translateY(-3px); }
+  .outcome img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+  }
+  .outcome .body { padding: 0.9rem 0.95rem 1.05rem; }
+  .outcome h3 {
+    font-family: var(--display);
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin: 0 0 0.35rem;
+    letter-spacing: -0.01em;
+  }
+  .outcome p {
+    margin: 0;
+    font-size: 0.86rem;
+    color: var(--muted);
+    line-height: 1.42;
+  }
+  .hedge {
+    margin: 0.45rem 0 0;
+    font-size: 0.76rem;
+    color: var(--faint);
+    line-height: 1.4;
+  }
+  .steps {
+    display: grid;
+    gap: 0;
+    border-left: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+    margin-left: 0.75rem;
+    padding-left: 1.2rem;
+  }
+  .step {
+    position: relative;
+    padding: 0 0 1.25rem;
+  }
+  .step:last-child { padding-bottom: 0; }
+  .step::before {
+    content: attr(data-n);
+    position: absolute;
+    left: -1.95rem;
+    top: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    font-family: var(--display);
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 12%, transparent);
+  }
+  .step b {
+    display: block;
+    font-size: 0.98rem;
+    margin-bottom: 0.22rem;
+  }
+  .step span {
+    display: block;
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+  .lo-note {
+    margin: 2rem 0 1rem;
+    padding: 1.1rem 1.1rem 1.05rem;
+    border-radius: var(--radius);
+    background: linear-gradient(145deg, var(--accent), var(--accent-deep));
+    color: var(--on-accent);
+    box-shadow: 0 20px 40px -22px color-mix(in srgb, var(--accent-deep) 75%, transparent);
+  }
+  .lo-note .who {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.65rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0.88;
+  }
+  .lo-note img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--on-accent) 35%, transparent);
+  }
+  .lo-note p {
+    margin: 0;
+    font-family: var(--display);
+    font-size: 1.08rem;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+  .lo-note small {
+    display: block;
+    margin-top: 0.65rem;
+    font-size: 0.76rem;
+    opacity: 0.75;
+  }
+  .back-card {
+    display: inline-block;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.88rem;
+    text-decoration: none;
+    margin-bottom: 1.35rem;
+  }
+  .edu-footer {
+    font-size: 0.66rem;
+    line-height: 1.45;
+    color: var(--faint);
+    text-align: center;
+  }
+
+  /* Reveal + entrance (21st-inspired) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(6px);
+    transition:
+      opacity 0.65s var(--ease),
+      transform 0.65s var(--ease),
+      filter 0.65s var(--ease);
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+  .stagger > .reveal:nth-child(1) { transition-delay: 0.02s; }
+  .stagger > .reveal:nth-child(2) { transition-delay: 0.08s; }
+  .stagger > .reveal:nth-child(3) { transition-delay: 0.14s; }
+  .stagger > .reveal:nth-child(4) { transition-delay: 0.2s; }
+  .stagger > .reveal:nth-child(5) { transition-delay: 0.26s; }
+  .stagger > .reveal:nth-child(6) { transition-delay: 0.32s; }
+
+  .table-wrap {
+    margin-top: 2.5rem;
+    overflow-x: auto;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 18px;
+    padding: 1.1rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .table-wrap h2 {
+    font-size: 0.78rem;
+    margin: 0 0 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #3a3a3a;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.76rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.55rem 0.45rem;
+    border-bottom: 1px solid #d4d0ca;
+    vertical-align: top;
+  }
+  th { color: #5a5550; font-weight: 600; }
+  .swatch {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; filter: none; transition: none; }
+    .headshot-wrap::before { animation: none; }
+    .btn:active { transform: none !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="studio">
+    <div class="studio-bar">
+      <h1>Style packs</h1>
+      <div id="pack-buttons"></div>
+    </div>
+    <p class="studio-meta" id="pack-mood"></p>
+    <div class="phones">
+      <div>
+        <p class="phone-label">Card · loanofficer.me/paul-scheper</p>
+        <div class="phone" id="card-phone" data-mode="light">
+          <div class="screen card-screen" id="card-root"></div>
+        </div>
+      </div>
+      <div>
+        <p class="phone-label">Educate · /paul-scheper/learn</p>
+        <div class="phone" id="edu-phone" data-mode="light">
+          <div class="screen edu-screen" id="edu-root"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <h2>Pack comparison</h2>
+      <table id="pack-table">
+        <thead>
+          <tr>
+            <th>Pack</th>
+            <th>Mood</th>
+            <th>Best for</th>
+            <th>Paper / Ink / Accent</th>
+            <th>Fonts</th>
+            <th>Mode</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+<script>
+const HEADSHOT = "https://fszmndldcvrrmitfbwde.supabase.co/storage/v1/object/public/client-headshots/3e331d02-98c8-4cce-92d6-0a4aa3988a3e.jpg";
+const LO = {
+  fullName: "Paul Scheper",
+  firstName: "Paul",
+  title: "Loan Officer",
+  company: "Loangevity Mortgage",
+  nmls: "1618305",
+  states: "CA",
+  phoneDisplay: "(949) 636-7242",
+  phoneTel: "+19496367242",
+  email: "TeamScheper@outlook.com",
+  /* Swap for the LO's real Calendly / Google / GHL booking link */
+  bookingUrl: "https://calendly.com/",
+  bookingLabel: "Book a call",
+};
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* Four packs only — each on a distinct axis */
+const PACKS = [
+  {
+    pack_id: "forest",
+    display_name: "Forest",
+    mood: "Calm professional green. Paul-like baseline; soft neutral paper, never cream.",
+    best_default_for: "rm",
+    light_or_dark: "light",
+    colors: {
+      paper: "#f3f4f1", paper_deep: "#e5e8e2", ink: "#15201b", ink_soft: "#2f3f37",
+      muted: "#647069", faint: "#939b94", line: "rgba(21, 32, 27, 0.10)",
+      accent: "#3a6a58", accent_deep: "#284f41", accent_wash: "rgba(58, 106, 88, 0.11)",
+      on_accent: "#f2f7f4", surface: "rgba(255, 255, 255, 0.58)",
+      shadow: "0 18px 40px -24px rgba(40, 79, 65, 0.34)"
+    },
+    fonts: {
+      display: "Outfit", body: "Source Sans 3",
+      google: "Outfit:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600"
+    }
+  },
+  {
+    pack_id: "coastal",
+    display_name: "Coastal",
+    mood: "Open sky blue-gray. Cool paper, soft blue accent; gentle and low-pressure.",
+    best_default_for: "rm",
+    light_or_dark: "light",
+    colors: {
+      paper: "#eef4f8", paper_deep: "#dde8ef", ink: "#153040", ink_soft: "#2a4556",
+      muted: "#5a7384", faint: "#8aa0ae", line: "rgba(21, 48, 64, 0.10)",
+      accent: "#3f6f8a", accent_deep: "#2c556c", accent_wash: "rgba(63, 111, 138, 0.12)",
+      on_accent: "#f1f7fb", surface: "rgba(255, 255, 255, 0.60)",
+      shadow: "0 18px 40px -24px rgba(44, 85, 108, 0.30)"
+    },
+    fonts: {
+      display: "Plus Jakarta Sans", body: "Source Sans 3",
+      google: "Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600"
+    }
+  },
+  {
+    pack_id: "heritage",
+    display_name: "Heritage",
+    mood: "Warm letter on cream paper. The only serif pack; deep burgundy, not brick.",
+    best_default_for: "rm",
+    light_or_dark: "light",
+    colors: {
+      paper: "#f6f0e6", paper_deep: "#ebe2d4", ink: "#1a1614", ink_soft: "#3b322c",
+      muted: "#73685e", faint: "#9e9388", line: "rgba(26, 22, 20, 0.11)",
+      accent: "#6e2f3a", accent_deep: "#511f2a", accent_wash: "rgba(110, 47, 58, 0.10)",
+      on_accent: "#f9f3ec", surface: "rgba(255, 251, 245, 0.64)",
+      shadow: "0 18px 40px -24px rgba(81, 31, 42, 0.28)"
+    },
+    fonts: {
+      display: "Literata", body: "Source Sans 3",
+      google: "Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=Source+Sans+3:wght@400;500;600"
+    }
+  },
+  {
+    pack_id: "night-desk",
+    display_name: "Night Desk",
+    mood: "Dark charcoal desk with soft brass accent. The only dark pack; senior-safe.",
+    best_default_for: "either",
+    light_or_dark: "dark",
+    colors: {
+      paper: "#17191c", paper_deep: "#0f1113", ink: "#ece9e3", ink_soft: "#c6c0b6",
+      muted: "#979187", faint: "#6c6760", line: "rgba(236, 233, 227, 0.12)",
+      accent: "#c9ad78", accent_deep: "#a88f5c", accent_wash: "rgba(201, 173, 120, 0.14)",
+      on_accent: "#17191c", surface: "rgba(255, 255, 255, 0.055)",
+      shadow: "0 18px 40px -18px rgba(0, 0, 0, 0.58)"
+    },
+    fonts: {
+      display: "Space Grotesk", body: "IBM Plex Sans",
+      google: "Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600"
+    }
+  }
+];
+
+function boot() {
+  renderPackButtons();
+  renderTable();
+  applyPack("forest");
+}
+
+function renderPackButtons() {
+  const el = document.getElementById("pack-buttons");
+  el.innerHTML = PACKS.map(p =>
+    `<button type="button" data-pack="${p.pack_id}" aria-pressed="false">${p.display_name}</button>`
+  ).join("");
+  el.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-pack]");
+    if (!btn) return;
+    applyPack(btn.dataset.pack);
+  });
+}
+
+function renderTable() {
+  const tb = document.querySelector("#pack-table tbody");
+  tb.innerHTML = PACKS.map(p => `
+    <tr>
+      <td><strong>${p.display_name}</strong><br/><code>${p.pack_id}</code></td>
+      <td>${p.mood}</td>
+      <td>${p.best_default_for}</td>
+      <td>
+        <span class="swatch" style="background:${p.colors.paper}"></span>${p.colors.paper}<br/>
+        <span class="swatch" style="background:${p.colors.ink}"></span>${p.colors.ink}<br/>
+        <span class="swatch" style="background:${p.colors.accent}"></span>${p.colors.accent}
+      </td>
+      <td>${p.fonts.display} / ${p.fonts.body}</td>
+      <td>${p.light_or_dark}</td>
+    </tr>
+  `).join("");
+}
+
+function applyPack(id) {
+  const pack = PACKS.find(p => p.pack_id === id);
+  if (!pack) return;
+  const c = pack.colors;
+  const root = document.documentElement;
+  Object.entries({
+    "--paper": c.paper,
+    "--paper-deep": c.paper_deep,
+    "--ink": c.ink,
+    "--ink-soft": c.ink_soft,
+    "--muted": c.muted,
+    "--faint": c.faint,
+    "--line": c.line,
+    "--accent": c.accent,
+    "--accent-deep": c.accent_deep,
+    "--accent-wash": c.accent_wash,
+    "--on-accent": c.on_accent,
+    "--surface": c.surface,
+    "--shadow": c.shadow,
+    "--display": `"${pack.fonts.display}", system-ui, sans-serif`,
+    "--body": `"${pack.fonts.body}", system-ui, sans-serif`,
+  }).forEach(([k, v]) => root.style.setProperty(k, v));
+
+  document.getElementById("pack-fonts").href =
+    `https://fonts.googleapis.com/css2?family=${pack.fonts.google}&display=swap`;
+
+  const mode = pack.light_or_dark;
+  document.getElementById("card-phone").dataset.mode = mode;
+  document.getElementById("edu-phone").dataset.mode = mode;
+
+  document.getElementById("pack-mood").textContent =
+    `${pack.display_name} · ${pack.mood}`;
+
+  document.querySelectorAll("#pack-buttons button").forEach(b => {
+    b.setAttribute("aria-pressed", b.dataset.pack === id ? "true" : "false");
+  });
+
+  renderCard();
+  renderEducate();
+}
+
+function renderCard() {
+  const root = document.getElementById("card-root");
+  root.innerHTML = `
+    <div class="card-identity stagger">
+      <p class="company reveal">${LO.company}</p>
+      <div class="headshot-wrap reveal">
+        <img class="headshot" src="${HEADSHOT}" alt="" width="118" height="118" />
+      </div>
+      <h1 class="name reveal">${LO.fullName}</h1>
+      <p class="role reveal">${LO.title}</p>
+    </div>
+    <div class="card-reach stagger">
+      <div class="actions reveal">
+        <a class="btn solid" href="tel:${LO.phoneTel}">Call</a>
+        <a class="btn ghost" href="sms:${LO.phoneTel}">Text</a>
+        ${LO.bookingUrl ? `<a class="btn book" href="${LO.bookingUrl}" target="_blank" rel="noopener noreferrer">${LO.bookingLabel || "Book a call"}</a>` : ""}
+      </div>
+      <a class="save-link reveal" href="#">Save contact</a>
+      <div class="card-meta reveal">
+        <dl class="details">
+          <div class="row"><dt>Company</dt><dd>${LO.company}</dd></div>
+          <div class="row"><dt>Phone</dt><dd><a href="tel:${LO.phoneTel}">${LO.phoneDisplay}</a></dd></div>
+          <div class="row"><dt>Email</dt><dd><a href="mailto:${LO.email}">${LO.email}</a></dd></div>
+          <div class="row"><dt>NMLS</dt><dd>${LO.nmls}</dd></div>
+          <div class="row"><dt>Licensed</dt><dd>${LO.states}</dd></div>
+        </dl>
+        <a class="learn-link" href="#educate">
+          <span class="copy">
+            <strong>How a reverse mortgage can help</strong>
+            <small>Open the plain-English guide</small>
+          </span>
+          <span class="chev" aria-hidden="true">→</span>
+        </a>
+        <p class="compliance">NMLS #${LO.nmls} · Licensed in ${LO.states}. This is not a commitment to lend.<br/>Equal Housing Opportunity.</p>
+      </div>
+    </div>
+  `;
+  requestAnimationFrame(() => {
+    armReveals(root);
+  });
+}
+
+function renderEducate() {
+  const root = document.getElementById("edu-root");
+  root.innerHTML = `
+    <div class="top reveal">
+      <a class="back" href="#card">‹ Back to card</a>
+      <div class="who">
+        <span>${LO.firstName}</span>
+        <img src="${HEADSHOT}" alt="" />
+      </div>
+    </div>
+    <p class="eyebrow reveal">What a reverse mortgage actually is</p>
+    <h1 class="edu-h1 reveal">Reverse mortgage basics: what changes, what stays the same.</h1>
+    <p class="promise reveal">Two things matter most for many retired homeowners: a monthly mortgage payment that can end, and equity in the home that can become cash to use, while you keep the title.</p>
+    <img class="hero-img reveal" src="./assets/hero-couple-kitchen.png" alt="A retired couple talking over coffee at their kitchen table" />
+
+    <h2 class="edu-h2 reveal">What can change</h2>
+    <div class="levers">
+      <div class="lever reveal">
+        <span class="label">Payment</span>
+        <b>The monthly mortgage payment can stop</b>
+        <span>If you still have a forward mortgage, it is typically paid off at closing. No required monthly mortgage payment on the new loan. Taxes, insurance, and upkeep still apply.</span>
+      </div>
+      <div class="lever reveal">
+        <span class="label">Equity</span>
+        <b>Built equity can become usable cash</b>
+        <span>Lump sum, line of credit, monthly deposits, or a mix, for bills, repairs, care, or a buffer. You stay the homeowner.</span>
+      </div>
+    </div>
+
+    <h2 class="edu-h2 reveal">What people get wrong</h2>
+    <div class="myths">
+      <div class="myth reveal">
+        <span class="n">1</span>
+        <p class="said">"The bank takes my house."</p>
+        <p class="truth">You keep the title. The home stays yours.</p>
+        <p class="why">While you live there and keep up property taxes, insurance and maintenance.</p>
+      </div>
+      <div class="myth reveal">
+        <span class="n">2</span>
+        <p class="said">"My kids will inherit the debt."</p>
+        <p class="truth">Your family is never personally on the hook.</p>
+        <p class="why">The loan is repaid from the home's value, never from their pockets. Remaining equity goes to them.</p>
+      </div>
+      <div class="myth reveal">
+        <span class="n">3</span>
+        <p class="said">"I've heard the horror stories."</p>
+        <p class="truth">Today's program is not those old headlines.</p>
+        <p class="why">Federally insured HECM loans require independent counseling and carry clear consumer protections.</p>
+      </div>
+    </div>
+
+    <h2 class="edu-h2 reveal">What life can feel like</h2>
+    <div class="outcomes reveal">
+      <article class="outcome">
+        <img src="./assets/outcome-bills-calm.png" alt="A retired homeowner going through the month's bills calmly" />
+        <div class="body">
+          <h3>Cash flow with less juggling</h3>
+          <p>When a mortgage payment ends, that money can stay home. Groceries, utilities, and medications stop competing as hard.</p>
+        </div>
+      </article>
+      <article class="outcome">
+        <img src="./assets/outcome-home-cared.png" alt="A retired homeowner keeping up his front porch and garden" />
+        <div class="body">
+          <h3>Cash for the house you live in</h3>
+          <p>Equity can fund the roof, the bathroom, or the fix you've been putting off, while you are still the one living there.</p>
+        </div>
+      </article>
+      <article class="outcome">
+        <img src="./assets/outcome-family-visit.png" alt="Family visiting for coffee at home" />
+        <div class="body">
+          <h3>Independence that stays with you</h3>
+          <p>A buffer or clearer monthly picture can mean family visits for coffee, not for bailouts.</p>
+        </div>
+      </article>
+    </div>
+    <p class="hedge reveal">Every home and situation is different. These are common outcomes, not guarantees or promises of amounts.</p>
+
+    <h2 class="edu-h2 reveal">How it works</h2>
+    <div class="steps">
+      <div class="step reveal" data-n="1">
+        <b>Talk it through</b>
+        <span>A real conversation about your payment, your equity, and what you'd like life to look like. No forms, no pressure.</span>
+      </div>
+      <div class="step reveal" data-n="2">
+        <b>Independent counseling</b>
+        <span>A HUD-approved counselor, not the lender, walks you through it. Required by the federally insured program.</span>
+      </div>
+      <div class="step reveal" data-n="3">
+        <b>You decide</b>
+        <span>With your family, on your timeline. It's fine to say no.</span>
+      </div>
+    </div>
+
+    <div class="lo-note reveal">
+      <div class="who">
+        <img src="${HEADSHOT}" alt="" />
+        <span>A note from ${LO.firstName}</span>
+      </div>
+      <p>Ask about ending a payment, unlocking equity, and what stays the same for your home. There are no silly questions.</p>
+      <small>${LO.fullName}, ${LO.company}</small>
+    </div>
+    ${LO.bookingUrl ? `<a class="edu-book reveal" href="${LO.bookingUrl}" target="_blank" rel="noopener noreferrer">Book a time with ${LO.firstName} <span class="chev">→</span></a>` : ""}
+    <a class="back-card reveal" href="#card">‹ Back to ${LO.firstName}'s card</a>
+    <p class="edu-footer reveal">This page is for education only and is not financial, tax or legal advice. For questions about taxes or benefits, please speak with a qualified professional. NMLS #${LO.nmls} · Licensed in ${LO.states}. This is not a commitment to lend. Equal Housing Opportunity.</p>
+  `;
+  requestAnimationFrame(() => {
+    armReveals(root);
+  });
+}
+
+/* 21st Reveal-inspired: fade + unblur when in view */
+function armReveals(scope) {
+  const nodes = [...scope.querySelectorAll(".reveal")];
+  if (reduceMotion) {
+    nodes.forEach(n => n.classList.add("is-in"));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-in");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, root: null });
+
+  nodes.forEach((n, i) => {
+    n.style.transitionDelay = `${Math.min(i * 0.05, 0.35)}s`;
+    /* Card identity is above fold — kick in immediately */
+    const rect = n.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.92) {
+      requestAnimationFrame(() => n.classList.add("is-in"));
+    } else {
+      io.observe(n);
+    }
+  });
+}
+
+boot();
+</script>
+</body>
+</html>
