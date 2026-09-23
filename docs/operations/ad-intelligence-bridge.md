@@ -157,7 +157,7 @@ os_refs:
 | Editing style | `editing-styles-catalog.md` | ask until 3rd repeat |
 | Loser / fatigue pattern | `creative-research/losers-log.md` | auto |
 | RM angle validated by data | `reverse-mortgage-dna/` | ask |
-| DSCR angle | `dscr-dna/dscr-campaign-master-angles.md` (expand) / `dscr-dna/intelligence-icp-dscr.md` (AI) | ask |
+| DSCR angle | `dscr-dna/intelligence-icp-dscr.md` (AI) + `dscr-dna/dscr-creative-taxonomy.md` (buckets) / `dscr-dna/dscr-campaign-master-angles.md` (expand) | ask |
 | Compliance-sensitive claim | RM compliance guardrails | ask — never auto |
 
 Full matrix: [knowledge-capture routing-table](../../.claude/skills/knowledge-capture/routing-table.md).

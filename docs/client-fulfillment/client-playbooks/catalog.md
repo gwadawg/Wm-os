@@ -116,7 +116,7 @@ See [Client Playbooks README](README.md) for how to create new assets.
 
 | Title | Type | Layer | Shareability | Status | Audience | Delivery |
 |-------|------|-------|--------------|--------|----------|----------|
-| [10-Day DSCR Self-Serve CRM Drip — LO First Person](../dscr-dna/dscr-10-day-self-serve-crm-drip.md) | script | canonical | paying-client | draft | team | github, team-drive |
+| [10-Day DSCR Self-Serve CRM Drip — LO First Person](../dscr-dna/dscr-10-day-self-serve-crm-drip.md) | script | alternate | paying-client | draft | team | github, team-drive |
 | [10-Day RM Drip Campaign (Email + SMS) — Meta Leads](../client-marketing/10-day-rm-drip-campaign.md) | script | canonical | internal-fulfillment | draft | client | github, team-drive |
 | [Aged Lead Reactivation Script — RM](../client-marketing/script-aged-lead-reactivation-rm.md) | script | canonical | lo-course | draft | client | github, course-material, team-drive |
 | [DSCR Cash-Out Drip — client delivery](../dscr-dna/assets/playbook-self-serve-nurture/DSCR-Cash-Out-Drip.md) | script | canonical | paying-client | draft | client | github, team-drive |
@@ -145,6 +145,10 @@ See [Client Playbooks README](README.md) for how to create new assets.
 | [AI RM Ad Image Creation SOP](../media-buying/ai-rm-ad-image-creation-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [Arcads Handoff Packet (RM Creative Studio Step 4)](../media-buying/creative-studio/arcads-handoff.md) | playbook | canonical | internal-fulfillment | active | client, team | github, team-drive |
 | [Creative Production Loop (research → make → Drive → Mr. Waiz → OS swipe)](../media-buying/creative-production-loop.md) | playbook | canonical | internal-fulfillment | draft | client, team | github, team-drive |
+| [DSCR Campaign Launch SOP](../media-buying/dscr-campaign-launch-sop.md) | sop | canonical | internal-fulfillment | active | client, team | github, team-drive |
+| [DSCR Creative Taxonomy](../dscr-dna/dscr-creative-taxonomy.md) | doctrine | canonical | internal-fulfillment | active | client, team | github, team-drive |
+| [DSCR Static Image Generator](../dscr-dna/dscr-static-image-generator-project.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
+| [DSCR Video Script Playbook](../dscr-dna/dscr-video-script-playbook.md) | playbook | canonical | internal-fulfillment | active | client, team | github, team-drive |
 | [Fulfillment Lead Lifecycle](../fulfillment-lead-lifecycle.md) | overview | canonical | internal-fulfillment | draft | team | github, team-drive |
 | [Month 1 Ad Account Management SOP](../media-buying/month-1-ad-account-management-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
 | [New Client Campaign Setup SOP](../media-buying/new-client-campaign-setup-sop.md) | sop | canonical | internal-fulfillment | draft | client, team | github, team-drive |
@@ -173,7 +177,9 @@ See [Client Playbooks README](README.md) for how to create new assets.
 | [Doctrine Reverse Mortgage](../reverse-mortgage-dna/doctrine-reverse-mortgage.md) | doctrine | canonical | lo-course | active | team | github, team-drive |
 | [Doctrine RM Marketing](../reverse-mortgage-dna/doctrine-rm-marketing.md) | doctrine | canonical | lo-course | active | team | github, team-drive |
 | [DSCR Compliance Guardrails](../dscr-dna/dscr-compliance-guardrails.md) | doctrine | canonical | lo-course | draft | team | github, team-drive |
+| [DSCR Creative Taxonomy](../dscr-dna/dscr-creative-taxonomy.md) | doctrine | canonical | internal-fulfillment | active | team | github, team-drive |
 | [DSCR GTM And Positioning Brief](../dscr-dna/dscr-gtm-positioning-brief.md) | doctrine | canonical | lo-course | draft | team | github, team-drive |
+| [Intelligence ICP DSCR](../dscr-dna/intelligence-icp-dscr.md) | reference | canonical | internal-fulfillment | active | team | github, team-drive |
 | [DSCR Static Image Generator — Claude Project Build Pack](../dscr-dna/dscr-static-image-generator-project.md) | sop | canonical | lo-course | draft | team | github, team-drive |
 | [DSCR Video Script Playbook](../dscr-dna/dscr-video-script-playbook.md) | playbook | canonical | lo-course | active | team | github, team-drive |
 | [RM Compliance Guardrails](../reverse-mortgage-dna/rm-compliance-guardrails.md) | doctrine | canonical | lo-course | active | team | github, team-drive |

@@ -56,7 +56,7 @@ Everything Waiz delivers **after a client signs** — onboarding, CRM, marketing
 | **Media buying** | Campaign setup, month 1, creative library, AI images — `draft` |
 | **Client marketing** | Playbooks, drips, Andromeda — `draft` |
 | **RM DNA** | Doctrine + compliance — `active` on guardrails/doctrine |
-| **DSCR DNA** | [DSCR pod](dscr-dna/README.md) — team FAQ + setter `active`; launch build `draft` |
+| **DSCR DNA** | [DSCR pod](dscr-dna/README.md) — ICP + taxonomy + campaign launch SOP `active`; FAQ + setter `active`; rest mostly `draft` |
 | **Course material** | Partial; links to canonical |
 
 Raw exports: `waiz-os-archive/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/` — [archive setup](../_inventory/raw-export-archive.md)

@@ -93,7 +93,7 @@ Cite sources as `supabase:ad:{uuid}`.
 | Editing style | `creative-research/editing-styles-catalog.md` | Table row with Source swipe | ask until 3rd repeat |
 | Loser / fatigue pattern | `creative-research/losers-log.md` | Log row with reason + date | auto |
 | RM angle validated by data | `reverse-mortgage-dna/` angle docs | ask | ask |
-| DSCR angle | `dscr-dna/intelligence-icp-dscr.md` + `dscr-dna/dscr-campaign-master-angles.md` | ask | ask |
+| DSCR angle | `dscr-dna/intelligence-icp-dscr.md` + `dscr-dna/dscr-creative-taxonomy.md` + `dscr-dna/dscr-campaign-master-angles.md` | ask | ask |
 | Compliance-sensitive claim | RM compliance guardrails | — | ask — never auto |
 | Unresolved theme | `client-fulfillment/media-buying/_gaps.md` | Gap row | auto |
 

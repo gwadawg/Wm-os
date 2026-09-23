@@ -68,8 +68,9 @@ Gated flow in chat; **pause after every step**. No files until explicit save.
 ### Step 0 — Confirm + patterns
 0. Confirm **DSCR** (investor refinance, business-purpose). Reject if user
    meant RM or Waiz.
-1. Load ICP file only. State **"Patterns I'm building from:"** — ICP slate
-   angles and, if pulled, Mr. Waiz DSCR winners with citations.
+1. Load **ICP + taxonomy**. State **"Patterns I'm building from:"** — ICP slate
+   angles, taxonomy bucket/job map, and, if pulled, Mr. Waiz DSCR winners with
+   citations.
 2. Name the **gap** → ideation seed.
 3. Pause if user said "pull from winners first."
 

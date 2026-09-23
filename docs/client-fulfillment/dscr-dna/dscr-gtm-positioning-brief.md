@@ -3,7 +3,7 @@ title: DSCR GTM And Positioning Brief
 domain: client-fulfillment
 owner: founder
 status: draft
-last_updated: 2026-09-16
+last_updated: 2026-09-23
 review_cycle: monthly
 artifact_type: doctrine
 ---
@@ -46,10 +46,14 @@ Canonical definitions: [dscr-creative-taxonomy.md](dscr-creative-taxonomy.md).
 
 | Rank | Bucket | Old persona labels (aliases) | Role |
 |------|--------|------------------------------|------|
-| **1** | **DENIED** | Write-Off / Self-Employed (+ STR, FN, property-count modifiers) | Always-on beachhead |
-| **2** | **DEADLINE** | Bridge / Hard-Money / Balloon | Urgency engine |
-| 3 | **IDLE** | Portfolio Scaler / idle equity | First expansion (belief-break lane) |
+| **1** | **DENIED** | Write-Off / Self-Employed (+ STR, FN, property-count modifiers) | Always-on beachhead (message priority) |
+| **2** | **DEADLINE** | Bridge / Hard-Money / Balloon | Urgency engine (real calendar; smaller pool) |
+| **3** | **IDLE** | Portfolio Scaler / idle equity | Belief-break lane — cold from day 1, slower KPI |
 | — | **IN-MARKET** | Terms / rate-card shoppers | Cold harvest when terms are approved |
+
+**Day-1 Meta funding** (not the same as message-priority rank): follow
+[DSCR Campaign Launch SOP](../media-buying/dscr-campaign-launch-sop.md) —
+DENIED + IDLE for volume; DEADLINE smaller share; park DEADLINE under ~$75/day.
 
 ### 3. Message-market match
 
@@ -85,17 +89,22 @@ Canonical definitions: [dscr-creative-taxonomy.md](dscr-creative-taxonomy.md).
 - **~76% of category ads die in two weeks** — budget concept volume;
   refresh on cadence.
 - **Low-friction CTA:** "See if your property qualifies" before hard quote.
-- **Wave 1:** Meta on DENIED + DEADLINE.
-- **Wave 2:** add Google Search on same beachhead.
-- **Wave 3:** expand IDLE → STR/FN modifiers → more IN-MARKET terms tests.
+- **Wave 1:** Meta cold on **all three** buckets per
+  [Campaign Launch SOP](../media-buying/dscr-campaign-launch-sop.md)
+  (DENIED + IDLE volume; DEADLINE smaller). Do not wait for a later wave to
+  fund IDLE.
+- **Wave 2:** add Google Search on DENIED / DEADLINE intent.
+- **Wave 3:** deepen STR/FN modifiers + more IN-MARKET terms tests.
 - **Judge:** refi-ready CPL → booked → showed (see
-  [KPI scorecard](dscr-kpi-and-test-scorecard.md)).
+  [KPI scorecard](dscr-kpi-and-test-scorecard.md)). IDLE may use engagement /
+  LP views on first pass — still set a review date (taxonomy honesty clause).
 
 ### 7. Decisions locked
 
-- Beachhead: DENIED + DEADLINE
+- Message beachhead order: DENIED → DEADLINE → IDLE (invent / prioritize copy)
+- Day-1 Meta budget: DENIED + IDLE volume; DEADLINE smaller —
+  [Campaign Launch SOP](../media-buying/dscr-campaign-launch-sop.md)
 - Big idea: property qualifies itself
-- Cold angle order when starting: taxonomy DENIED → DEADLINE → IDLE (proven 3 → 2 → 1)
 - Channels: Meta + Google Search first
 - Naming: [dscr-creative-taxonomy.md](dscr-creative-taxonomy.md)
 

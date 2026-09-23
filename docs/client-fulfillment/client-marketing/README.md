@@ -21,8 +21,9 @@ All DSCR client assets live in the **[DSCR DNA pod](../dscr-dna/README.md)** —
 |------|-----|
 | Strategy / positioning | [DSCR GTM Brief](../dscr-dna/dscr-gtm-positioning-brief.md) |
 | Nurture / Laura booking (Waiz call center) | [DSCR Lead Nurture And Booking](../dscr-dna/dscr-nurture-and-booking-laura.md) |
-| Nurture / self-serve (no call center) | [DSCR Prospecting Playbook](../dscr-dna/playbook-dscr-self-serve-lead-nurture.md) → [Cash-Out drip](../dscr-dna/dscr-cash-out-self-serve-crm-drip.md) (Launch Kit `05-Playbooks/`) · [10-Day drip](../dscr-dna/dscr-10-day-self-serve-crm-drip.md) |
-| Ads strategy | [Intelligence ICP DSCR](../dscr-dna/intelligence-icp-dscr.md) · [GTM Brief](../dscr-dna/dscr-gtm-positioning-brief.md) |
+| Nurture / self-serve (no call center) | **Default:** [Prospecting Playbook](../dscr-dna/playbook-dscr-self-serve-lead-nurture.md) → [Cash-Out drip](../dscr-dna/dscr-cash-out-self-serve-crm-drip.md) (Launch Kit `05-Playbooks/`). **Alternate** refinance-shaped: [10-Day drip](../dscr-dna/dscr-10-day-self-serve-crm-drip.md) |
+| Ads strategy | [Intelligence ICP](../dscr-dna/intelligence-icp-dscr.md) + [Creative Taxonomy](../dscr-dna/dscr-creative-taxonomy.md) · [GTM Brief](../dscr-dna/dscr-gtm-positioning-brief.md) |
+| Day-1 Meta | [DSCR Campaign Launch SOP](../media-buying/dscr-campaign-launch-sop.md) |
 
 Execution SOPs (campaign setup, statics, funnels) → [media-buying/](../media-buying/README.md).
 
@@ -48,8 +49,10 @@ Execution SOPs (campaign setup, statics, funnels) → [media-buying/](../media-b
 | [10-Day RM Drip Campaign (Email + SMS) — Meta Leads](10-day-rm-drip-campaign.md) | `draft` — Days 1–10 + long-term nurture through Day 90 |
 | [RM Lead Nurture Drip Sequence](rm-lead-nurture-drip-sequence.md) | `draft` |
 | [RM iMessage Intent Drip (7-Day)](rm-imessage-intent-drip-7day.md) | `active` |
-| [RM iMessage Appointment Follow-Up](rm-imessage-appointment-followup.md) | `active` |
+| [RM iMessage Appointment Follow-Up](rm-imessage-appointment-followup.md) | `active` — legacy full follow-up stack |
 | [RM iMessage Second-Booking Follow-Up](rm-imessage-second-booking-followup.md) | `active` |
+| [RM Calendar Booking Reminders](../reverse-mortgage-dna/rm-calendar-booking-reminders.md) | `draft` — new: confirm + 24h + 30m |
+| [DSCR Calendar Booking Reminders](../dscr-dna/dscr-calendar-booking-reminders.md) | `draft` — new: confirm + 24h + 30m |
 
 [Lead Nurture course material](../course-material/lead-nurture-playbook.md) links to [Nurture Framework](playbook-nurture-framework.md) (principles) and [Lead Nurture Playbook — Waiz Meta Stack](playbook-lead-nurture.md) (automation). Execution copy: [10-Day RM Drip](10-day-rm-drip-campaign.md).
 

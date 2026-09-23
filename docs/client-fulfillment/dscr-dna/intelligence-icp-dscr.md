@@ -2,8 +2,8 @@
 title: Intelligence ICP DSCR
 domain: client-fulfillment
 owner: founder
-status: draft
-last_updated: 2026-09-16
+status: active
+last_updated: 2026-09-23
 review_cycle: monthly
 artifact_type: reference
 ---
@@ -61,7 +61,9 @@ debt — without W-2/DTI underwriting.
 **Sort in order (one creative = one bucket):**  
 deadline on note? → **DEADLINE** → else conventional would say no? → **DENIED** → else could act but isn't? → **IDLE** → else already shopping terms? → **IN-MARKET**.
 
-**Beachhead order (cold):** DENIED → DEADLINE → IDLE.  
+**Beachhead order (cold messaging):** DENIED → DEADLINE → IDLE.
+**Day-1 Meta funding:** DENIED + IDLE for volume; DEADLINE smaller share —
+see [Campaign Launch SOP](../media-buying/dscr-campaign-launch-sop.md).
 STR / Foreign National / property-count = **modifiers inside DENIED**, not peer buckets.
 
 **VOC (recognition phrases):**
@@ -139,7 +141,8 @@ average five angles into one bland ad. Tag every concept with a **bucket**.
 | 5 | What You Could Do With It | IDLE → shared warm | "If you already have a portfolio, you've done the hardest part." | Outcome / uses |
 | 4 | Checklist / rate-card | Shared warm **or** IN-MARKET | "Here's exactly what it takes — no mystery pitch." | Offer / terms |
 
-Default cold slate: **3 → 2 → 1** (DENIED → DEADLINE → IDLE).  
+Default cold slate: **DENIED + IDLE** for volume; **DEADLINE** smaller share
+(~20%). Day-1 Meta structure: [Campaign Launch SOP](../media-buying/dscr-campaign-launch-sop.md).  
 Full writeups: [Campaign Master Angles](dscr-campaign-master-angles.md).  
 Naming map: [Creative Taxonomy](dscr-creative-taxonomy.md).
 

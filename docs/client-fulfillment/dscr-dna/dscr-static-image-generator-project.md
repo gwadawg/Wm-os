@@ -3,7 +3,7 @@ title: DSCR Static Image Generator — Claude Project Build Pack
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-09-03
+last_updated: 2026-09-13
 review_cycle: monthly
 artifact_type: sop
 ---
@@ -11,16 +11,19 @@ artifact_type: sop
 # DSCR Static Image Generator — Claude Project Build Pack
 
 > **DRAFT — REFINANCE ONLY · NUMBER-FREE.** Claude project for DSCR statics.
-> **Knowledge file = [intelligence-icp-dscr.md](intelligence-icp-dscr.md) only.**
-> Do not upload angle library, doctrines, product, or compliance essay — ICP
-> already has locked angles + NEVER list. If the live project drifts, update
-> this doc first, then re-paste.
+> **Claude project upload = [intelligence-icp-dscr.md](intelligence-icp-dscr.md)
+> only** (buckets / NEVER / slate already inside). Do not upload angle
+> library, doctrines, product essays, or compliance — those dilute the
+> project. **Cursor / agent ideation** still loads ICP +
+> [dscr-creative-taxonomy.md](dscr-creative-taxonomy.md) for labeling.
+> If the live project drifts, update this doc first, then re-paste.
 
 ## Purpose
 
 Give media buyers a Claude project that uses **one** knowledge file — the
 DSCR ICP — then helps with Ideogram prompts, headlines, variations, or
-concepts. No angle-library upload.
+concepts. Taxonomy stays in Cursor labeling (Mr. Waiz), not as a second
+Claude upload.
 
 ## Scope
 
@@ -103,10 +106,11 @@ VARIATIONS / HEADSHOTS — when asked:
 
 MR WAIZ — when they finish a static or ask to label, output four code blocks:
 1. overview — one plain sentence (what + who + hook)
-2. ad_name — concept-led: dscr_{concept}_st_v{#} OR rate-card:
-   dscr_[visual]_[spec1]_[spec2]_[spec3]
+2. ad_name — always concept-led: dscr_{concept}_st_v{#}[letter]
+   Concept = visual/idea family (layout + hook). Never put APR, LTV,
+   FICO, loan range, or "apr" tokens in ad_name. Put numbers in visual_notes.
 3. summary — 2–4 sentences: stage, persona, angle, hypothesis, pattern slug
-4. visual_notes — layout, colors, type, verbatim on-image copy
+4. visual_notes — layout, colors, type, verbatim on-image copy (incl. rates)
 Also remind: product=dscr, ad_format=static, drive_url when in Drive.
 
 Be a sparring partner, not a form. Rewrite weak checklist creatives.
@@ -137,7 +141,7 @@ roll up to one library row. Bridge spec: [ad-intelligence-bridge.md](../../opera
 | Mr. Waiz field | What to paste |
 |----------------|---------------|
 | **Description / overview** | `overview` — one easy sentence (see copy-paste blocks below) |
-| **ad_name** | Short slug: `dscr_[visual]_[spec1]_[spec2]_[spec3]` — same in Meta Ads Manager |
+| **ad_name** | Concept slug: `dscr_{concept}_st_v{#}` — same in Meta Ads Manager. Never encode APR/specs in the name. |
 | **summary** | Funnel stage, audience, hypothesis, named pattern |
 | **visual_notes** | Layout, colors, typography, verbatim on-image copy |
 | **product** | `dscr` |
@@ -152,7 +156,7 @@ overview:
 MOF DSCR static — blurred suburban rental on navy — headline "Refinance Your Rental / No Appraisal" with 5.99% APR and investor program specs.
 
 ad_name:
-dscr_navy-suburban_5.99apr_noappr_nodocs
+dscr_navy-suburban-headline_st_v1
 
 summary:
 MOF DSCR investor refinance static — headline-stack on blurred suburban rental with navy overlay. Targets active investors who already own rentals and respond to direct refi hooks (no appraisal + rate + program specs). Hypothesis: headline-led layout with rate callout converts better than generic checklist cards for warm investor traffic. Named pattern: navy-suburban-headline-stack.
@@ -168,7 +172,7 @@ overview:
 MOF DSCR static — centered rate card on luxury rental — $75K–$5M range, from 5.9% APR, stacked program specs.
 
 ad_name:
-dscr_ratecard_5.9apr_nodocs_85ltv
+dscr_ratecard-centered_st_v1
 
 summary:
 MOF/BOF DSCR investor refinance static — centered rate-card / program-spec format. Targets active investors ready to compare terms on a rental they already own. Leads with loan range + rate, then no income docs, FICO, LTV, no appraisal. Hypothesis: spec-card clarity beats generic checklist ads. Named pattern: investor-refi-rate-card.

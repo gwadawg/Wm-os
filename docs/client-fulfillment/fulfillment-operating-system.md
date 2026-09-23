@@ -3,7 +3,7 @@ title: Fulfillment Operating System
 domain: client-fulfillment
 owner: client-success
 status: active
-last_updated: 2026-09-04
+last_updated: 2026-09-23
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/(synthesized)
 artifact_type: overview
@@ -56,7 +56,7 @@ Purpose-first outline lives in the A-Z SOP. Build runs after Kickoff until QA â€
 | 4 | OB Call | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Access + collection complete |
 | 5 | Kickoff Form â†’ build | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [New Client Campaign Setup](media-buying/new-client-campaign-setup-sop.md) | Kickoff submitted (full ops/MB packet) |
 | 6 | QA | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Owners confirm their work |
-| 7 | Launch Call + Launch Form | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [Client Success Slack Touchpoint Playbook](onboarding/onboarding-to-launch-client-communication.md) | Call done + Launch Form (status / automations) |
+| 7 | Launch Call + Launch Form | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [Client Launch Kit SOP](onboarding/sop-client-launch-kit.md), [Client Success Slack Touchpoint Playbook](onboarding/onboarding-to-launch-client-communication.md) | Kit delivered + call done + Launch Form (status / automations) |
 
 ## Lead Engine (After Launch)
 
@@ -75,9 +75,10 @@ Purpose-first outline lives in the A-Z SOP. Build runs after Kickoff until QA â€
 | Product pod (load first) | [DSCR DNA](dscr-dna/README.md) |
 | Strategy | [DSCR GTM And Positioning Brief](dscr-dna/dscr-gtm-positioning-brief.md) |
 | Offer anchor | [DSCR Offer And Funnel Map](dscr-dna/dscr-offer-and-funnel-map.md) |
-| Ads & creative | [Intelligence ICP DSCR](dscr-dna/intelligence-icp-dscr.md) (AI), [Campaign Master Angles](dscr-dna/dscr-campaign-master-angles.md) (expand), [DSCR Static Image Generator](dscr-dna/dscr-static-image-generator-project.md) |
+| Ads & creative | [Intelligence ICP DSCR](dscr-dna/intelligence-icp-dscr.md) + [Creative Taxonomy](dscr-dna/dscr-creative-taxonomy.md) (AI SOT), [Campaign Master Angles](dscr-dna/dscr-campaign-master-angles.md) (expand), [Static Image Generator](dscr-dna/dscr-static-image-generator-project.md) |
+| Day-1 Meta structure | [DSCR Campaign Launch SOP](media-buying/dscr-campaign-launch-sop.md) |
 | Funnel / lander | [DSCR Lander Build Pack](dscr-dna/dscr-lander-build-pack.md), [DSCR Funnel Form Spec](dscr-dna/dscr-funnel-form-spec.md) |
-| Nurture | [DSCR Lead Nurture And Booking â€” Laura](dscr-dna/dscr-nurture-and-booking-laura.md) |
+| Nurture | [Laura](dscr-dna/dscr-nurture-and-booking-laura.md) Â· self-serve [Prospecting Playbook](dscr-dna/playbook-dscr-self-serve-lead-nurture.md) â†’ [Cash-Out drip](dscr-dna/dscr-cash-out-self-serve-crm-drip.md) |
 | Setter / team training | [DSCR Team Product FAQ](dscr-dna/dscr-team-product-faq.md), [DSCR Setter Script](dscr-dna/dscr-setter-appointment-script.md) |
 | Measurement | [DSCR KPI And Test Scorecard](dscr-dna/dscr-kpi-and-test-scorecard.md) |
 
@@ -101,12 +102,12 @@ Purpose-first outline lives in the A-Z SOP. Build runs after Kickoff until QA â€
 Load the guardrails for the **client's product line**:
 
 - **Reverse mortgage:** [RM Compliance Guardrails](reverse-mortgage-dna/rm-compliance-guardrails.md), [Doctrine Reverse Mortgage](reverse-mortgage-dna/doctrine-reverse-mortgage.md), [Doctrine RM Marketing](reverse-mortgage-dna/doctrine-rm-marketing.md)
-- **DSCR refinance:** [DSCR Compliance Guardrails](dscr-dna/dscr-compliance-guardrails.md), [Intelligence ICP DSCR](dscr-dna/intelligence-icp-dscr.md)
+- **DSCR refinance:** [DSCR Compliance Guardrails](dscr-dna/dscr-compliance-guardrails.md), [Intelligence ICP DSCR](dscr-dna/intelligence-icp-dscr.md) + [Creative Taxonomy](dscr-dna/dscr-creative-taxonomy.md)
 
 ## AI Quick Load Order
 
 1. This doc
-2. Compliance guardrails + angle library
+2. Compliance guardrails + product creative SOT (RM: angle library; DSCR: ICP + taxonomy)
 3. Lifecycle + phase blueprint
 4. Task-specific SOP (onboarding, MB, nurture, CS, call center)
 

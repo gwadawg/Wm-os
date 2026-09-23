@@ -189,23 +189,36 @@ Definition of done: <checklist>
 - Risks: angles must map to investor pains (cash-flow qualifying, portfolio scale,
   speed/closing), not retiree security framing. Don't create a second angle menu.
 
-### 03 — Ads / creative  (skills: copywriting + marketing-psychology)
-- Creative rules live in the ICP + GTM test rules — not a separate ads playbook.
-- Statics: `dscr-static-image-generator-project.md` (knowledge = ICP only).
+### 03 — Ads / creative  (skills: copywriting + marketing-psychology + dscr-creative-studio)
+- Creative SOT pair: `intelligence-icp-dscr.md` + `dscr-creative-taxonomy.md`
+  (DENIED / DEADLINE / IDLE / IN-MARKET). Expand winners in
+  `dscr-campaign-master-angles.md`. Day-1 Meta structure:
+  `media-buying/dscr-campaign-launch-sop.md`.
+- Statics: `dscr-static-image-generator-project.md` (Claude project upload = ICP
+  only — buckets already summarized there; Cursor agents still load taxonomy).
+- Video: skill `dscr-creative-studio` + `dscr-video-script-playbook.md`.
+- Do **not** recreate ads playbook / angle library / MB copy standards /
+  funnel-stage messaging — deleted as noise in the Sep 2026 slim.
 - Risks: creative/compliance rules differ; confirm platform ad-policy treatment for the
   investor offer.
 
 ### 04 — Landing page / VSL  (skill: copywriting)
 - Clone: `docs/client-fulfillment/media-buying/perspective-funnel-setup-sop.md`,
   `new-client-campaign-setup-sop.md`.
-- Output: `docs/client-fulfillment/media-buying/dscr-funnel-setup-sop.md`.
+- Output (live under DNA, not media-buying): `dscr-dna/dscr-offer-and-funnel-map.md`,
+  `dscr-lander-build-pack.md`, `dscr-funnel-form-spec.md`, `dscr-landing-and-vsl.md`.
+  There is **no** `dscr-funnel-setup-sop.md` — do not recreate it.
 - Risks: qualifying questions and lead-quality logic change for investors vs homeowners.
 
 ### 05 — Drip sequences  (skill: copywriting)  [Wave B]
 - Clone: `docs/client-fulfillment/client-marketing/10-day-rm-drip-campaign.md`,
   `rm-text-drip-2025.md`, `rm-imessage-intent-drip-7day.md`,
   `rm-lead-nurture-drip-sequence.md`.
-- Output: `docs/client-fulfillment/client-marketing/dscr-*-drip-*.md` (mirror names).
+- Output (under DNA, not client-marketing): Laura =
+  `dscr-dna/dscr-nurture-and-booking-laura.md`; self-serve default =
+  `playbook-dscr-self-serve-lead-nurture.md` → `dscr-cash-out-self-serve-crm-drip.md`;
+  alternate refinance-shaped = `dscr-10-day-self-serve-crm-drip.md`; calendar
+  reminders = `dscr-calendar-booking-reminders.md`.
 - Risks: cadence/compliance for business-purpose SMS; investor objections differ.
 
 ### 06 — GHL snapshot  (skill: sop-builder)

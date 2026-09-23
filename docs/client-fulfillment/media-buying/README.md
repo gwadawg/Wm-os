@@ -17,8 +17,16 @@ Boundaries: [Waiz vs client marketing](../waiz-vs-client-marketing-boundaries.md
 
 | Doc | Status |
 |-----|--------|
-| [New Client Campaign Setup SOP](new-client-campaign-setup-sop.md) | `draft` |
-| [Month 1 Ad Account Management SOP](month-1-ad-account-management-sop.md) | `draft` |
+| [Creative Testing Structure](creative-testing-structure.md) | `draft` — **proposed** Scale CBO + Test ABO / roster waves (not active) |
+| [Creative Awareness Ladder](creative-awareness-ladder.md) | `draft` — rung coverage grid + brief backlog |
+| [Creative Testing Scorecard](creative-testing-scorecard.md) | `draft` — wave readout template + gates |
+| [Performance Learnings](performance-learnings.md) | `draft` — wave log + standing learnings |
+| [Creative Similarity Audit](creative-similarity-audit.md) | `draft` — wave 0 baseline before migrating an account |
+| [Wave 1 Slate](wave-1-slate.md) | `draft` — first wave spec (RM) |
+| [DSCR Campaign Launch SOP](dscr-campaign-launch-sop.md) | `active` — day-1 Meta structure (DENIED / IDLE / DEADLINE + warm_convert) |
+| [DSCR ABO Launch Setup](dscr-abo-launch-setup.md) | `superseded` → use Campaign Launch SOP |
+| [New Client Campaign Setup SOP](new-client-campaign-setup-sop.md) | `draft` — current launch SOP (structure still live until proposal is approved) |
+| [Month 1 Ad Account Management SOP](month-1-ad-account-management-sop.md) | `draft` — current month-1 SOP (diagnostics + 4PI) |
 | [Ad Copy And Angle Library (RM)](ad-copy-angle-library-rm.md) | `draft` |
 | [MB RM Ad Copy Standards](mb-rm-ad-copy-standards.md) | `draft` |
 | [AI RM Ad Image Creation SOP](ai-rm-ad-image-creation-sop.md) | `draft` |
@@ -31,22 +39,28 @@ Boundaries: [Waiz vs client marketing](../waiz-vs-client-marketing-boundaries.md
 ## DSCR refinance (product pod)
 
 **Start:** [DSCR DNA README](../dscr-dna/README.md).
-**AI ads/copy/statics:** load **only**
-[intelligence-icp-dscr.md](../dscr-dna/intelligence-icp-dscr.md).
+**AI ads/copy/statics:** load
+[intelligence-icp-dscr.md](../dscr-dna/intelligence-icp-dscr.md) +
+[dscr-creative-taxonomy.md](../dscr-dna/dscr-creative-taxonomy.md).
+**Day-1 Meta structure:** [DSCR Campaign Launch SOP](dscr-campaign-launch-sop.md).
 Expand → [Campaign Master Angles](../dscr-dna/dscr-campaign-master-angles.md).
 Test order → [GTM Brief](../dscr-dna/dscr-gtm-positioning-brief.md).
 
 | Doc | Status |
 |-----|--------|
-| [Intelligence ICP DSCR](../dscr-dna/intelligence-icp-dscr.md) | `draft` — AI SOT |
+| [DSCR Campaign Launch SOP](dscr-campaign-launch-sop.md) | `active` — day-1 campaigns / ad sets |
+| [Campaign Launch Playbook (PDF)](assets/dscr-campaign-launch-playbook/README.md) | `draft` — team handout |
+| [Intelligence ICP DSCR](../dscr-dna/intelligence-icp-dscr.md) | `active` — AI SOT |
+| [DSCR Creative Taxonomy](../dscr-dna/dscr-creative-taxonomy.md) | `active` — buckets / labeling |
 | [DSCR Campaign Master Angles](../dscr-dna/dscr-campaign-master-angles.md) | `draft` — expand + tokens |
 | [DSCR GTM Brief](../dscr-dna/dscr-gtm-positioning-brief.md) | `draft` |
 | [DSCR Static Image Generator](../dscr-dna/dscr-static-image-generator-project.md) | `draft` |
 | [DSCR Funnel Form Spec](../dscr-dna/dscr-funnel-form-spec.md) | `draft` |
 | [DSCR Lander Build Pack](../dscr-dna/dscr-lander-build-pack.md) | `draft` |
 
-*(Angle library, ads playbook, MB copy standards, funnel-stage messaging,
-doctrines = superseded stubs — see DSCR DNA README.)*
+*(Former DSCR angle library, ads playbook, MB copy standards, funnel-stage
+messaging, and doctrines were **deleted** in the Sep 2026 slim — not stubs.
+Load ICP + taxonomy from [DSCR DNA](../dscr-dna/README.md).)*
 | [Ad development workflow](ad-development-workflow.md) | RM + DSCR learn/create loop (Mr. Waiz → Meta) |
 
 ## Creative system

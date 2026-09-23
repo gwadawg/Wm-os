@@ -3,7 +3,7 @@ title: DSCR Video Script Playbook
 domain: client-fulfillment
 owner: media-buying-lead
 status: active
-last_updated: 2026-09-07
+last_updated: 2026-09-23
 review_cycle: monthly
 artifact_type: playbook
 ---
@@ -13,12 +13,16 @@ artifact_type: playbook
 Thin path for **DSCR refinance** client UGC / talking-head scripts.  
 **Not** reverse mortgage. Do **not** use `rm-creative-studio`, RM archetypes, or RM compliance.
 
+**Skill entry:** [dscr-creative-studio](../../../.claude/skills/dscr-creative-studio/SKILL.md) runs this playbook as a gated chat flow (brainstorm → script → lock → handoff). This file is the rulebook.
+
 Production: **wm-creative** (`wm-arcads-studio` + Arcads).
 
 ## Product fence
 
 1. Confirm job is **DSCR** (investor refinance). If RM or Waiz, stop and switch.
-2. Ideation load: **only** [intelligence-icp-dscr.md](intelligence-icp-dscr.md) until a direction is chosen.
+2. Ideation load: [intelligence-icp-dscr.md](intelligence-icp-dscr.md) +
+   [dscr-creative-taxonomy.md](dscr-creative-taxonomy.md) (buckets / jobs /
+   naming). Do not load nurture, setter, or campaign-architecture docs.
 3. After direction: [dscr-campaign-master-angles.md](dscr-campaign-master-angles.md) for winning-angle expand; [dscr-gtm-positioning-brief.md](dscr-gtm-positioning-brief.md) for test order.
 4. Before ship: [dscr-compliance-guardrails.md](dscr-compliance-guardrails.md).
 5. Stay inside the ICP **NEVER** list. Ask if claims are thin — do not invent.
@@ -33,8 +37,10 @@ Pause after each step.
 - Do **not** pull RM swipes or RM script archetypes.
 
 ### Step 1 — Concept
-Minimal: angle (from ICP slate or new within NEVER), stage (TOF/MOF/BOF), format (UGC talking head default), count N.  
-Present short concept table; pause for pick.
+Minimal: **bucket** (DENIED / DEADLINE / IDLE / IN-MARKET), angle (from ICP
+slate or new within NEVER), creative job, stage (cold / warm), format (UGC
+talking head default), count N.  
+Present short concept table with `bucket · job · slug · angle`; pause for pick.
 
 ### Step 2 — Script (short beats)
 Default for Arcads UGC (~10–15s speakable; ~2.5 wps):

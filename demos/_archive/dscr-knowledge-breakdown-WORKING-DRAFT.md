@@ -1,18 +1,21 @@
 ---
-title: DSCR Knowledge Breakdown — Working Draft
-status: working-draft
+title: DSCR Knowledge Breakdown — Working Draft (Archived)
+status: archived
 canonical: false
 note: >-
-  Scratch dump for persona / angle cleanup. NOT part of DSCR DNA.
-  Do not load for ads, scripts, or fulfillment. Not linked from README.
+  Historical brainstorm dump. Folded into dscr-creative-taxonomy.md +
+  intelligence-icp-dscr.md (both active as of 2026-09-23). Do not load
+  for ads, scripts, or fulfillment.
 created: 2026-09-16
+archived: 2026-09-23
 ---
 
-# DSCR Knowledge Breakdown — Working Draft
+# DSCR Knowledge Breakdown — Working Draft (Archived)
 
-> **NOT CANONICAL.** Paste / edit / clean freely. When personas and angles
-> are clear, fold winners into `docs/client-fulfillment/dscr-dna/` properly.
-> Until then: ignore this file for creative AI and team SOPs.
+> **ARCHIVED 2026-09-23.** NOT CANONICAL. Content folded into
+> `docs/client-fulfillment/dscr-dna/dscr-creative-taxonomy.md` +
+> `intelligence-icp-dscr.md` (both `active`). Do not load for creative AI
+> or team SOPs. Kept only as historical brainstorm.
 
 ---
 
@@ -740,7 +743,7 @@ literal "exclusive" — use "a program most lenders don't offer."
 ### 18i. Open decisions before this becomes standard
 
 - [x] Rename locked: DENIED / DEADLINE / **IDLE** / IN-MARKET
-- [ ] Founder stamp taxonomy `status: active`
+- [x] Founder stamp taxonomy `status: active`
 - [ ] Confirm the sorting-rule priority order (deadline > denied > idle > in-market)
 - [ ] Validate buckets against real call transcripts / lead-form answers
 - [ ] Set IDLE's terminal metric + review date before it spends
@@ -754,5 +757,5 @@ literal "exclusive" — use "a program most lenders don't offer."
 - [ ] Lock creative jobs + register slugs: `qualify-stack`, `lo-authority`
 - [ ] Decide authority creative pack per client (face / multi-product / fluency / proof)
 - [ ] Confirm warm campaign always includes an authority ad set (not product-only)
-- [x] Promote creative layer into taxonomy + ICP + master angles + GTM (draft)
-- [ ] Delete or archive this file when taxonomy is `active`
+- [x] Promote creative layer into taxonomy + ICP + master angles + GTM (active)
+- [x] Delete or archive this file when taxonomy is `active`

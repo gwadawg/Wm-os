@@ -3,11 +3,14 @@ title: 10-Day DSCR Self-Serve CRM Drip — LO First Person
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-09-11
+last_updated: 2026-09-23
 review_cycle: monthly
 artifact_type: script
 product: dscr
 shareability: paying-client
+note: >-
+  Alternate refinance-shaped sequence. Launch Kit / cash-out ad default is
+  dscr-cash-out-self-serve-crm-drip.md via playbook-dscr-self-serve-lead-nurture.md.
 related_docs:
   - docs/client-fulfillment/dscr-dna/playbook-dscr-self-serve-lead-nurture.md
   - docs/client-fulfillment/dscr-dna/intelligence-icp-dscr.md
@@ -18,7 +21,11 @@ related_docs:
 
 # 10-Day DSCR Self-Serve CRM Drip — LO First Person
 
-> **DRAFT — REFINANCE ONLY · NUMBER-FREE · LO FIRST PERSON.** For DSCR clients who **do not** use the Waiz call center. The loan officer is the sender. Paste into the client's own CRM. Do **not** run this alongside [Laura](dscr-nurture-and-booking-laura.md).
+> **ALTERNATE — REFINANCE ONLY · NUMBER-FREE · LO FIRST PERSON.** Prefer the
+> [Cash-Out drip](dscr-cash-out-self-serve-crm-drip.md) (Launch Kit default) unless
+> the client needs this refinance-shaped 10-day pack. For DSCR clients who **do
+> not** use the Waiz call center. The loan officer is the sender. Paste into the
+> client's own CRM. Do **not** run this alongside [Laura](dscr-nurture-and-booking-laura.md).
 
 ## Purpose
 

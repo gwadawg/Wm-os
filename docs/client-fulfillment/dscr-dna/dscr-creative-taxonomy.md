@@ -2,20 +2,19 @@
 title: DSCR Creative Taxonomy
 domain: client-fulfillment
 owner: founder
-status: draft
-last_updated: 2026-09-16
+status: active
+last_updated: 2026-09-23
 review_cycle: monthly
 artifact_type: doctrine
 canonical_for: dscr-creative-buckets-angles-naming
 note: >-
   Creative-layer standard of truth for buckets, angles, creative jobs, and
   labeling. Not campaign architecture. Not nurture / setter / product ops.
-  Promote from draft after founder approval + transcript validation.
 ---
 
 # DSCR Creative Taxonomy
 
-> **Naming + creative sorting SOT (draft).**
+> **Naming + creative sorting SOT.**
 > Use this when brainstorming ads, tagging concepts, or deciding which
 > angle a creative belongs to.
 >
@@ -226,9 +225,8 @@ Do **not** put campaign/ad-set counts in this file. Structure lives in the launc
 
 ---
 
-## 12. Open before `status: active`
+## 12. Follow-ups (post-activation)
 
-- [ ] Founder approves DENIED / DEADLINE / IDLE / IN-MARKET names
 - [ ] Validate sorting rule against ~20–30 call transcripts / form answers
 - [ ] Register `qualify-stack` + `lo-authority` in [ad-name-library.yaml](../media-buying/ad-name-library.yaml) when ready
 
@@ -239,4 +237,4 @@ Do **not** put campaign/ad-set counts in this file. Structure lives in the launc
 - [Campaign Master Angles](dscr-campaign-master-angles.md) — full angle writeups + tokens
 - [GTM Brief](dscr-gtm-positioning-brief.md) — beachhead / test waves
 - [Ad name library](../media-buying/ad-name-library.yaml)
-- Working brainstorm dump: [demos/dscr-knowledge-breakdown-WORKING-DRAFT.md](../../../demos/dscr-knowledge-breakdown-WORKING-DRAFT.md) (not canonical)
+- Archived brainstorm dump: [demos/_archive/dscr-knowledge-breakdown-WORKING-DRAFT.md](../../../demos/_archive/dscr-knowledge-breakdown-WORKING-DRAFT.md) (historical — do not load)

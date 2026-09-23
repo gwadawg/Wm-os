@@ -5,7 +5,7 @@ domain: client-fulfillment
 department: call-center
 owner: setter
 status: active
-last_updated: 2026-06-29
+last_updated: 2026-09-23
 review_cycle: monthly
 artifact_type: training
 product: dscr
@@ -69,13 +69,16 @@ Your caller is **not** an anxious consumer shopping for relief. They are a **rea
 
 ### Five personas (recognize the caller type)
 
-| Persona | One-line signal |
-|---------|-----------------|
-| **Portfolio Scaler** | 5–30 doors; equity trapped; conventional won't cash-out refi because of property count |
-| **Write-Off Investor** | Self-employed; strong cash flow, "messy" tax returns; DTI kills conventional refi |
-| **STR / Airbnb Operator** | Short-term rental; conventional doesn't credit STR income well |
-| **Bridge / Hard-Money Refinancer** | Short-term note maturing; needs long-term exit before balloon hits |
-| **Foreign National** *(program-dependent)* | Owns US rental; no domestic income/credit history |
+Call recognition still uses these labels. Creative ads sort by **constraint
+bucket** — see [taxonomy](dscr-creative-taxonomy.md):
+
+| Persona | One-line signal | Creative bucket |
+|---------|-----------------|-----------------|
+| **Portfolio Scaler** | 5–30 doors; equity trapped; conventional won't cash-out refi because of property count | **IDLE** |
+| **Write-Off Investor** | Self-employed; strong cash flow, "messy" tax returns; DTI kills conventional refi | **DENIED** |
+| **STR / Airbnb Operator** | Short-term rental; conventional doesn't credit STR income well | **DENIED** (modifier) |
+| **Bridge / Hard-Money Refinancer** | Short-term note maturing; needs long-term exit before balloon hits | **DEADLINE** |
+| **Foreign National** *(program-dependent)* | Owns US rental; no domestic income/credit history | **DENIED** (modifier) |
 
 ### Phrases you'll hear on calls
 
@@ -245,9 +248,10 @@ Pattern: **validate → reframe → route to LO.** Setters and CS stay high-leve
 | LO objection word tracks | [DSCR Objection-Handling Guide](dscr-objection-handling-guide.md) |
 | Setter call script | [DSCR Setter / Appointment-Setting Call Script](dscr-setter-appointment-script.md) |
 | Full ICP + personas + ad angles | [Intelligence ICP DSCR](intelligence-icp-dscr.md) |
+| Creative buckets / labeling | [DSCR Creative Taxonomy](dscr-creative-taxonomy.md) |
+| GTM strategy + beachhead | [DSCR GTM And Positioning Brief](dscr-gtm-positioning-brief.md) |
 | Product mechanics + illustrative ranges | [Intelligence DSCR Product](intelligence-dscr-product.md) |
 | Nurture / Laura booking voice | [DSCR Lead Nurture And Booking — Laura](dscr-nurture-and-booking-laura.md) |
-| GTM strategy + beachhead persona | [DSCR GTM And Positioning Brief](dscr-gtm-positioning-brief.md) |
 
 ## Related
 
