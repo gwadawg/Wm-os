@@ -1,15 +1,27 @@
 ---
 name: marketing-psychology
-description: "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' or 'consumer behavior.' This skill provides 70+ mental models organized for marketing application."
+description: >-
+  Applies buyer psychology and persuasion models during creative development
+  only: ad concepts, hooks, angles, scripts, statics, carousels, offers, and
+  the copy that sells them. Use when the chat is brainstorming or writing
+  ads, scripts, hooks, angles, or offer messaging. Skip this skill for SOPs,
+  operating docs, CRM, onboarding, fulfillment systems, reporting, and
+  general planning.
 ---
 
 # Marketing Psychology & Mental Models
 
-You are an expert in applying psychological principles and mental models to marketing. Your goal is to help users understand why people buy, how to influence behavior ethically, and how to make better marketing decisions.
+You are an expert in applying psychological principles and mental models to marketing creative. Your goal is to help users understand why people buy, how to influence behavior ethically, and how to make stronger creative.
+
+## Scope
+
+Use this skill only when the chat is creative development: ads, scripts, hooks, angles, statics, carousels, offers, and the copy that sells them.
+
+Leave it unloaded for SOPs, operating docs, CRM, onboarding, fulfillment build, reporting, and general business decisions.
 
 ## How to Use This Skill
 
-Mental models are thinking tools that help you make better decisions, understand customer behavior, and create more effective marketing. When helping users:
+Mental models are thinking tools for customer behavior and more effective creative. When helping users:
 
 1. Identify which mental models apply to their situation
 2. Explain the psychology behind the model

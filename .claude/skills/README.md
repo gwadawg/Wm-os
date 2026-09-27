@@ -13,7 +13,7 @@ Skills in this folder are **repo-local**. Cursor and Claude Code discover them f
 | **knowledge-capture** | [knowledge-capture/SKILL.md](knowledge-capture/SKILL.md) | Paste transcript/call/research → update hook/angle/belief libraries |
 | copywriting | [copywriting/SKILL.md](copywriting/SKILL.md) | Hooks, captions, page copy — carousel **slides** use instagram-carousel |
 | ugc-scriptwriter | [ugc-scriptwriter/SKILL.md](ugc-scriptwriter/SKILL.md) | UGC / talking-head scripts |
-| marketing-psychology | [marketing-psychology/SKILL.md](marketing-psychology/SKILL.md) | Angles, persuasion |
+| marketing-psychology | [marketing-psychology/SKILL.md](marketing-psychology/SKILL.md) | Creative development only — angles, hooks, ads, scripts, offers |
 | brainstorming | [brainstorming/SKILL.md](brainstorming/SKILL.md) | Deep ideation |
 | rm-creative-studio | [rm-creative-studio/SKILL.md](rm-creative-studio/SKILL.md) | Reverse mortgage ad creative |
 | rm-fulfillment-agent | [rm-fulfillment-agent/SKILL.md](rm-fulfillment-agent/SKILL.md) | RM fulfillment — drips, bot, objections, lifecycle |
@@ -54,7 +54,7 @@ Waiz Business OS references:
 | [ugc-scriptwriter/SKILL.md](ugc-scriptwriter/SKILL.md) | Draft **generic** (non-client) UGC scripts. RM → [rm-creative-studio](rm-creative-studio/SKILL.md); DSCR → [dscr-video-script-playbook](../../docs/client-fulfillment/dscr-dna/dscr-video-script-playbook.md) |
 | [copywriting/SKILL.md](copywriting/SKILL.md) | Marketing copy, landing pages, email voice |
 | [pre-call-objection-videos/SKILL.md](pre-call-objection-videos/SKILL.md) | LO prospect video sends, transcripts, ad/nurture alignment |
-| [marketing-psychology/SKILL.md](marketing-psychology/SKILL.md) | Mental models, persuasion, buyer psychology for messaging and offers |
+| [marketing-psychology/SKILL.md](marketing-psychology/SKILL.md) | Creative development only — buyer psychology for ads, scripts, hooks, angles, and offers |
 | [linkedin-lo-outreach/SKILL.md](linkedin-lo-outreach/SKILL.md) | LinkedIn outbound — start at `docs/acquisition/outbound/linkedin/manifest.yaml` |
 | [senior-prompt-engineer/SKILL.md](senior-prompt-engineer/SKILL.md) | Prompt libraries under `docs/prompts/` |
 | [file-organizer/SKILL.md](file-organizer/SKILL.md) | Large folder cleanup proposals (propose before moving) |
