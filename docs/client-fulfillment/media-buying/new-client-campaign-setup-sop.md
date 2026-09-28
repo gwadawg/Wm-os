@@ -3,9 +3,9 @@ title: New Client Campaign Setup SOP
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-05-21
+last_updated: 2026-09-27
 review_cycle: monthly
-source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Media Buying/Media Buying (SOPs)/Ad Management/New Client Campaign Set-Up.docx
+source_document: ../waiz-os-archive/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Media Buying/Media Buying (SOPs)/Ad Management/New Client Campaign Set-Up.docx
 artifact_type: sop
 ---
 
@@ -21,7 +21,9 @@ Campaign structure, pixel, budgets, initial ad sets.
 
 ## Trigger
 
-Kickoff form submitted (A-Z Phase 5).
+Client is **In Build**: kickoff call held, Kickoff Form submitted, and
+Launch Call date set. See the
+[Client Onboarding Blueprint](../onboarding/client-onboarding-blueprint.md).
 
 ## Inputs
 
@@ -32,7 +34,7 @@ Kickoff form submitted (A-Z Phase 5).
 
 ## Outputs
 
-- Campaign ready for QA
+- Media Buying work package ready for Marketing QA
 - Fulfillment tracker current
 
 ## Quality Bar

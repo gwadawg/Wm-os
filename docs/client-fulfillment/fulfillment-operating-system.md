@@ -3,7 +3,7 @@ title: Fulfillment Operating System
 domain: client-fulfillment
 owner: client-success
 status: active
-last_updated: 2026-09-23
+last_updated: 2026-09-27
 review_cycle: monthly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/(synthesized)
 artifact_type: overview
@@ -46,17 +46,20 @@ Load this page first for any client-fulfillment question. Follow links to the ca
 
 ## Delivery Timeline (Gated)
 
-Purpose-first outline lives in the A-Z SOP. Build runs after Kickoff until QA — not a separate form gate.
+**Stage truth:** [Client Onboarding Blueprint](onboarding/client-onboarding-blueprint.md).
+Work inside a stage is in the A-Z SOP. If a step reads like its own stage, the blueprint wins.
 
-| Step | Name | Canonical doc | Gate |
-|------|------|---------------|------|
-| 1 | New Client Form | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Form submitted (activate + CSM brief) |
-| 2 | Outreach | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Client equipped + OB call booked |
-| 3 | OB Form | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Form submitted |
-| 4 | OB Call | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Access + collection complete |
-| 5 | Kickoff Form → build | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [New Client Campaign Setup](media-buying/new-client-campaign-setup-sop.md) | Kickoff submitted (full ops/MB packet) |
-| 6 | QA | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Owners confirm their work |
-| 7 | Launch Call + Launch Form | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [Client Launch Kit SOP](onboarding/sop-client-launch-kit.md), [Client Success Slack Touchpoint Playbook](onboarding/onboarding-to-launch-client-communication.md) | Kit delivered + call done + Launch Form (status / automations) |
+| Stage | Name | Canonical doc | Leaves when |
+|------|------|---------------|-------------|
+| 1 | Client Activated | [Onboarding Blueprint](onboarding/client-onboarding-blueprint.md), [A-Z SOP](onboarding/a-z-client-onboarding-sop.md) | OB call booked and Onboarding Form filled. Either order. |
+| 2 | Awaiting Kickoff | Blueprint + A-Z | Kickoff call held, Kickoff Form in, launch date set |
+| 3 | In Build | Blueprint, [New Client Campaign Setup](media-buying/new-client-campaign-setup-sop.md) | Tech QA and Marketing QA both Complete |
+| 4 | Launch | Blueprint, [Launch Kit SOP](onboarding/sop-client-launch-kit.md), [Slack Touchpoint Playbook](onboarding/onboarding-to-launch-client-communication.md) | Ads scheduled |
+| 5 | Account Live | Blueprint, [Post-Launch Client Success](client-success/post-launch-client-success-system.md) | Onboarding is over |
+
+While the client is in Launch, the Launch Gate is Call Pending,
+Revisions Required, or Approved — Schedule Ads. Those values do not move
+the client to Account Live; scheduled ads do.
 
 ## Lead Engine (After Launch)
 

@@ -3,7 +3,7 @@ title: Duplicate Resolutions
 domain: inventory
 owner: operations
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-09-27
 review_cycle: as-needed
 ---
 
@@ -65,6 +65,21 @@ Multiple sources (Skool, media buying SOPs). **Before converting:** pick one int
 | `docs/acquisition/sales/setter-daily-operations-playbook.md` | **Removed 2026-05-29** — duplicated P1–P7 and contradicted approved checklist rules |
 
 **Canonical path:** [setter-daily-checklist.md](../acquisition/sales/setter-daily-checklist.md) — run every shift; link out to intro, watchshift, dialer, LinkedIn, no-show, and EOD SOPs.
+
+## Client Onboarding Sources
+
+| Source | Action |
+|--------|--------|
+| `Onboarding/Overview -- Onboarding Steps_.docx` | **Superseded** — its older phase model is replaced by the five-stage blueprint. Do not convert separately. |
+| `Onboarding/Updated A-Z Onboarding Document.docx` | **Converted and realigned** — historical source for the A-Z SOP. Do not restore its seven-phase model. |
+| `Onboarding/Onboarding (SOPs)/Onboarding To Launch Client Communication.docx` | **Converted and superseded** — its daily-update cadence is replaced by milestone touchpoints. |
+| `Onboarding/Onboarding (SOPs)/Waiz Media Onboarding Call.pptx` | **Review later** — no separate canonical conversion. Use the blueprint and A-Z kickoff steps for current execution. |
+
+**Canonical paths:**
+
+- [Client Onboarding Blueprint](../client-fulfillment/onboarding/client-onboarding-blueprint.md)
+- [A-Z Client Onboarding SOP](../client-fulfillment/onboarding/a-z-client-onboarding-sop.md)
+- [Client Success Slack Touchpoint Playbook](../client-fulfillment/onboarding/onboarding-to-launch-client-communication.md)
 
 ## Related
 

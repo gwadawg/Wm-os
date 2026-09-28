@@ -3,7 +3,7 @@ title: Client Launch Kit SOP
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-09-12
+last_updated: 2026-09-27
 review_cycle: monthly
 shareability: internal-fulfillment
 artifact_type: sop
@@ -35,7 +35,10 @@ Give every launching client a tangible, Waiz-branded leave-behind on the Launch 
 
 ## Owner
 
-CSM (same as the Launch Call). Fulfillment / assigned owner still submits the Launch Form.
+CSM. The CSM also submits the Launch Form. That form sets Launch Gate to
+**Approved — Schedule Ads**. It does not make the account live. Account
+Live is when the media buyer has scheduled the ads. Stage names:
+[Client Onboarding Blueprint](client-onboarding-blueprint.md).
 
 ## Trigger
 
@@ -60,7 +63,7 @@ Do not start before QA. The PDF must describe what is actually live.
 - Client-safe swipe pack staged in the same folder
 - Client walked the PDF on the Launch Call
 - PDF link + folder link sent to the client Slack channel from Mr. Waiz before hangup
-- Launch Form submitted (account treated as live)
+- Launch Form submitted when the call has been held and nothing is left open (cue for the media buyer to schedule)
 
 ## Tools
 
@@ -77,7 +80,7 @@ The template in this repo is the **source of truth for every word** in the kit. 
 
 ## Process
 
-1. **Open the kit.** Mr. Waiz → Client Roster → client row → **Kit**. Available once Kickoff is complete (GHL mapping + OB recording). The wizard prefills product, who works leads, contact, company, go-live, funnel, CRM, and Drive root from the client file.
+1. **Open the kit.** Mr. Waiz → Client Roster → client row → **Kit**. Available once the kickoff call has been held (GHL mapping + OB recording). The wizard prefills product, who works leads, contact, company, go-live, funnel, CRM, and Drive root from the client file.
 2. **Confirm the variant.** Product (Reverse mortgage / DSCR) × who works leads (Waiz call center / Laura vs. LO / VA). This picks the Week 1 page and the resource index. Call Center legacy clients require you to pick the product.
 3. **Fill Your access (01).** Every URL from QA plus, per property, **Owner** (`You` / `Waiz` / `Shared`) and **the client's access** in one phrase. Mark a property *Not part of this account* if it truly does not exist — never leave a guessed link. Funnel and CRM can never be N/A. Record where logins were sent (Slack DM / password manager) — never a password. Fill the **build inventory (02)**: real creative counts, form filters, drop rows that were not built.
 4. **Operator setup.** CSM name, who works leads (as a sentence subject), speed standard exactly as sold (leave blank if none was sold — the kit will say "as agreed on your kickoff"), market.
@@ -87,7 +90,7 @@ The template in this repo is the **source of truth for every word** in the kit. 
 8. **Pre-launch Slack.** Send the existing pre-launch touchpoint. Do not send the PDF yet unless the client asks — the call is the first walkthrough.
 9. **Run the Launch Call off the PDF.** Follow **Launch Call agenda**. Screen-share the PDF. Click the live URLs. Get verbal approval on what was built.
 10. **Send to client channel before hangup.** In the wizard's version list, click **Send to client** on the version you walked. Mr. Waiz posts a 7-day download link + the Drive folder link to the client's Slack channel and stamps the version as sent. Confirm they can open both. Drive is the permanent home; the Slack link expires.
-11. **Launch Form.** Submit when go-live is scheduled and the kit is delivered. The Launch checklist shows a notice if no kit exists. → [A-Z Step 7](a-z-client-onboarding-sop.md#step-7--launch-call--launch-form)
+11. **Launch Form.** The CSM submits it when the call has been held and revisions are closed. That sets the client to Launch · Approved — Schedule Ads. Do not submit it to mean the ads are already on. Account Live is the media buyer scheduling. The Launch checklist shows a notice if no kit exists. → [A-Z Step 7](a-z-client-onboarding-sop.md#step-7--launch-call--launch-form)
 
 ### Launch Call agenda
 
@@ -187,14 +190,14 @@ The PDF is `paying-client`. The Drive pack is `paying-client`. This SOP is `inte
 
 - Missing build piece after QA → build owner, then CSM lead if it slips the call.
 - Client cannot access CRM / ads / calendar on the call → pause go-live; fix access before Launch Form.
-- Client rejects the build → do not submit Launch Form; log the delta and re-QA.
+- Client rejects the build → do not submit the Launch Form. Stay in Launch and set Launch Gate to Revisions Required. Do not send the client back to In Build.
 - Mr. Waiz Kit generate fails or Slack post fails → retry once; if still failing, render with the fallback script from the template and post the PDF manually. Report the error in ops Slack so it gets fixed.
 
 ## Metrics
 
 - Kit ready ≥ 24 hours before the Launch Call
 - PDF + Drive link sent before hangup
-- Launch Form submitted the same day the account is scheduled live
+- Launch Form submitted when the call is cleared, before the media buyer schedules
 
 ## Related Docs
 

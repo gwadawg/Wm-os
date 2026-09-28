@@ -3,9 +3,9 @@ title: A-Z Client Onboarding SOP
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-09-11
+last_updated: 2026-09-27
 review_cycle: monthly
-source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Onboarding/Updated A-Z Onboarding Document.docx
+source_document: ../waiz-os-archive/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Onboarding/Updated A-Z Onboarding Document.docx
 artifact_type: sop
 ---
 
@@ -13,7 +13,17 @@ artifact_type: sop
 
 ## Purpose
 
-Gated client onboarding from close through go-live. Each step exists for a clear handoff reason — so the next person (or system) can do their job without confusion, chase-downs, or rework.
+Work inside the stages in the [Client Onboarding Blueprint](client-onboarding-blueprint.md). Each step exists for a clear handoff reason — so the next person can do their job without chase-downs or rework.
+
+These steps are not a second stage list. Where a step sits:
+
+| Blueprint stage | Steps in this SOP |
+|-----------------|-------------------|
+| Client Activated | Step 1 opens the stage. Steps 2 and 3 are its two statuses. Either can finish first. |
+| Awaiting Kickoff | Steps 4 and 5, same session. Together they are the exit. |
+| In Build | The build that follows Step 5. Step 6 is the two QA statuses. |
+| Launch | Step 7. Launch Form sets Launch Gate to Approved — Schedule Ads. |
+| Account Live | Ads are scheduled. Not this SOP. |
 
 ## Scope
 
@@ -28,7 +38,8 @@ New client payment confirmed; Closer submits the New Client Form.
 - New Client Form
 - Onboarding Form
 - Kickoff Form
-- QA Form
+- Tech QA Form
+- Marketing QA Form
 - Launch Form
 
 ## Outputs
@@ -45,14 +56,14 @@ New client payment confirmed; Closer submits the New Client Form.
 
 - Align with [Identity Core](../../company/doctrine-identity-core-april-26.md) and [SOURCE-OF-TRUTH](../../SOURCE-OF-TRUTH.md).
 - Client-facing copy must follow product compliance guardrails when applicable ([RM](../reverse-mortgage-dna/rm-compliance-guardrails.md) / [DSCR](../dscr-dna/dscr-compliance-guardrails.md)).
-- No stage starts until its gate is complete.
+- No stage moves until every part of its exit is true. One status finishing does not move the client.
 - After Kickoff, ops and media buying should not need to ask CSM or the client for missing setup facts.
 
 ## Operating Content
 
 ### Core principles
 
-1. **Gated workflow** — each step only starts when the prior gate is done.
+1. **Gated workflow** — a stage moves only when every part of its exit is true. Two statuses in the same stage can finish in either order.
 2. **Handoff clarity** — every form and call exists to transfer complete context to the next role.
 3. **No chase after Kickoff** — client-facing collection ends at Kickoff; build runs from a complete packet.
 4. **Ownership at QA** — whoever built a piece confirms it; missed items stay on that owner.
@@ -86,9 +97,9 @@ New client payment confirmed; Closer submits the New Client Form.
 2. **Show we are on it** — immediate, organized contact signals that delivery has started.
 3. **Schedule the OB call** — lock the next live milestone so the timeline does not stall.
 
-**Owner:** Automations (welcome assets) + CSM (call / book).
+**Owner:** Automations (welcome assets) + CSM (book the call).
 
-**Unlocks:** Client path to Step 3; calendar for Step 4.
+**Stage:** Stays **Client Activated**. Booking the call is one status. It does not move the client. The Onboarding Form is the other status, and it may already be in.
 
 ---
 
@@ -100,15 +111,16 @@ New client payment confirmed; Closer submits the New Client Form.
 
 Collect the **deep client-side detail** required to build the account — business/legal facts, markets, assets, access paths, and anything else that creates clarity before the live call. This is the client’s structured dump of “who we are and what you need from us.”
 
-**Owner:** Client (submit). Automations (notify, Drive, task update). Tech may start gated work that only needs form data (e.g. A2P when EIN is present).
+**Owner:** Client (submit). CSM (chases). Tech may start gated work that only needs form data (e.g. A2P when EIN is present).
 
-**Unlocks:** Step 4 with enough raw material to run a useful OB call.
+**Stage:** Stays **Client Activated** until the call is also booked. The form arriving first does not move the client. When both statuses are done, the client is **Awaiting Kickoff**.
 
 ---
 
-### Step 4 — Onboarding Call (OB Call)
+### Step 4 — Kickoff Call (booked as the OB Call)
 
-**Gate:** Live OB call completed; remaining collectibles confirmed on the call.
+**Gate:** Live kickoff call completed; remaining collectibles confirmed on
+the call. This is the meeting booked through the OB Call field in ClickUp.
 
 **Why this step exists**
 
@@ -118,7 +130,7 @@ Collect the **deep client-side detail** required to build the account — busine
 
 **Owner:** CSM (lead). Client (access + decisions).
 
-**Unlocks:** Step 5 Kickoff packet can be completed with confidence.
+**Stage:** This call and the Kickoff Form are one exit from **Awaiting Kickoff**, in the same session. The call alone does not move the client.
 
 ---
 
@@ -134,9 +146,9 @@ Goal: after Kickoff, the build team goes to work with **no reason** to ping Clie
 
 **Owner:** CSM (form). Ops / media buying (consume and build).
 
-**What follows (not a separate form gate):** Tech and media buying execute setup from the Kickoff packet (CRM, phone, funnel, bot, ads, pixel, tracker, etc.). See [New Client Campaign Setup SOP](../media-buying/new-client-campaign-setup-sop.md) for the ads launch frame.
+**Stage:** Submitting this form, with the call held and the launch date set, moves the client to **In Build**.
 
-**Unlocks:** Build → Step 6 QA when implementation is done.
+**What follows (not a separate form gate):** Tech and media buying execute setup from the Kickoff packet (CRM, phone, funnel, bot, ads, pixel, tracker, etc.). See [New Client Campaign Setup SOP](../media-buying/new-client-campaign-setup-sop.md) for the ads launch frame.
 
 ---
 
@@ -150,15 +162,18 @@ Hold each setup owner **responsible for their own work**. They walk their checkl
 
 If something was forgotten, accountability stays with the person who owned that build — not a vague “someone should have caught it.”
 
-**Owner:** Whoever built each piece (tech, media buying, etc.).
+**Owner:** VA (Tech QA). Media Buyer (Marketing QA).
 
-**Unlocks:** Step 7 Launch Call / Launch Form.
+**Stage:** These are the two statuses on **In Build**. Either can finish
+first. The CSM moves the client to **Launch** when both are Complete.
 
 ---
 
 ### Step 7 — Launch Call + Launch Form
 
-**Gate:** Launch Call complete; Launch Form submitted when the account is ready / scheduled to go live.
+**Gate:** The client is in **Launch**. Its Launch Gate is Call Pending,
+Revisions Required, or Approved — Schedule Ads. The Launch Form is what
+sets Approved — Schedule Ads. It is not its own stage.
 
 **Why this step exists**
 
@@ -172,24 +187,31 @@ Run the call off the **[Client Launch Kit](sop-client-launch-kit.md)** — brand
 
 **Launch Form**
 
-Submitted after everything is done and go-live is scheduled. Final triple-check of the work, then activate automations and set account status correctly so the company treats the client as live.
+The CSM submits it when the call has been held and nothing is left open.
+That sets Launch Gate to **Approved — Schedule Ads**. It is the media
+buyer's cue. It does not make the account live.
 
-**Owner:** CSM (Launch Call + Launch Kit). Fulfillment / assigned owner (Launch Form).
+Do not submit it while revisions are open. The person who makes a revision does not submit it.
 
-**Unlocks:** Live account; post-launch CS cadence ([Slack Touchpoint Playbook](onboarding-to-launch-client-communication.md), [Post-Launch Client Success System](../client-success/post-launch-client-success-system.md)).
+**Owner:** CSM (Launch Call, Launch Kit, and Launch Form). Media Buyer schedules the ads after the form is in.
+
+**Unlocks:** **Account Live** when the ads are scheduled. Then the post-launch CS cadence ([Slack Touchpoint Playbook](onboarding-to-launch-client-communication.md), [Post-Launch Client Success System](../client-success/post-launch-client-success-system.md)).
 
 ---
 
 ### Flow (summary)
 
 ```text
-New Client Form
-  → Outreach (equip + book OB)
-  → OB Form (deep client data)
-  → OB Call (access + finish collection + mini strat)
-  → Kickoff Form (full ops/MB packet → build)
-  → QA (owner accountability)
-  → Launch Call + Launch Kit + Launch Form (approve, train, expect, go live)
+Client Activated
+  statuses: OB call booked · Onboarding Form filled (either order)
+Awaiting Kickoff
+  exit: kickoff call + Kickoff Form + launch date (same session)
+In Build
+  statuses: Tech QA · Marketing QA (Pending / Complete; either order)
+Launch
+  gate: Call Pending · Revisions Required · Approved — Schedule Ads
+Account Live
+  ads scheduled
 ```
 
 ## Related Docs

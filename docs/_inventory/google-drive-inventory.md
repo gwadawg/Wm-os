@@ -3,7 +3,7 @@ title: Google Drive Export Inventory
 domain: inventory
 owner: operations
 status: active
-last_updated: 2026-05-28
+last_updated: 2026-09-27
 review_cycle: as-needed
 ---
 
@@ -171,10 +171,10 @@ This is a non-destructive inventory of the raw Google Drive export in the **waiz
 | 145 | client-fulfillment/media-buying | sop | high | convert-first | `Waiz Media OS/03 _ Client Fulfillment/Media Buying/Media Buying (SOPs)/SOP -- Ads For Dummies - WaizMedia.docx` | `sop-ads-for-dummies-waizmedia` |
 | 146 | client-fulfillment/media-buying | sop | high | convert-first | `Waiz Media OS/03 _ Client Fulfillment/Media Buying/Media Buying (SOPs)/The New Rules of Meta Advertising - Andromeda (for Reverse Mortgages).docx` | `the-new-rules-of-meta-advertising-andromeda-for-reverse-mortgages` |
 | 147 | client-fulfillment/media-buying | playbook | high | convert-first | `Waiz Media OS/03 _ Client Fulfillment/Media Buying/RM Ad Playbook.docx` | `rm-ad-playbook` |
-| 148 | client-fulfillment/onboarding | sop | high | convert-first | `Waiz Media OS/03 _ Client Fulfillment/Onboarding/Onboarding (SOPs)/Onboarding To Launch Client Communication.docx` | `onboarding-to-launch-client-communication` |
+| 148 | client-fulfillment/onboarding | sop | high | converted → [Touchpoint Playbook](../client-fulfillment/onboarding/onboarding-to-launch-client-communication.md) | `Waiz Media OS/03 _ Client Fulfillment/Onboarding/Onboarding (SOPs)/Onboarding To Launch Client Communication.docx` | `onboarding-to-launch-client-communication` |
 | 149 | client-fulfillment/onboarding | sop | high | convert-first | `Waiz Media OS/03 _ Client Fulfillment/Onboarding/Onboarding (SOPs)/Waiz Media Onboarding Call.pptx` | `waiz-media-onboarding-call` |
-| 150 | client-fulfillment/onboarding | overview | low | review-later | `Waiz Media OS/03 _ Client Fulfillment/Onboarding/Overview -- Onboarding Steps_.docx` | `overview-onboarding-steps` |
-| 151 | client-fulfillment/onboarding | onboarding | high | convert-first | `Waiz Media OS/03 _ Client Fulfillment/Onboarding/Updated A-Z Onboarding Document.docx` | `updated-a-z-onboarding-document` |
+| 150 | client-fulfillment/onboarding | overview | low | superseded → [Client Onboarding Blueprint](../client-fulfillment/onboarding/client-onboarding-blueprint.md) | `Waiz Media OS/03 _ Client Fulfillment/Onboarding/Overview -- Onboarding Steps_.docx` | `overview-onboarding-steps` |
+| 151 | client-fulfillment/onboarding | onboarding | high | converted → [A-Z Client Onboarding SOP](../client-fulfillment/onboarding/a-z-client-onboarding-sop.md) | `Waiz Media OS/03 _ Client Fulfillment/Onboarding/Updated A-Z Onboarding Document.docx` | `updated-a-z-onboarding-document` |
 | 152 | client-fulfillment/reverse-mortgage-dna | reference | low | review-later | `Waiz Media OS/03 _ Client Fulfillment/RM _ Text drip 2025.docx` | `rm-text-drip-2025` |
 | 153 | client-fulfillment/reverse-mortgage-dna | doctrine | low | review-later | `Waiz Media OS/03 _ Client Fulfillment/Reverse Mortgage DNA/Doctrine -- RM Marketing -- 04.26.docx` | `doctrine-rm-marketing-26` |
 | 154 | client-fulfillment/reverse-mortgage-dna | doctrine | low | review-later | `Waiz Media OS/03 _ Client Fulfillment/Reverse Mortgage DNA/Doctrine -- Reverse Mortgage -- 03.36.docx` | `doctrine-reverse-mortgage-36` |

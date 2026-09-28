@@ -1769,10 +1769,11 @@
     "extension": "docx",
     "domain": "client-fulfillment/onboarding",
     "artifact_type": "sop",
-    "recommendation": "convert-first",
+    "recommendation": "converted",
     "priority": "high",
     "size_kb": 17.6,
     "target_slug": "onboarding-to-launch-client-communication",
+    "canonical_path": "docs/client-fulfillment/onboarding/onboarding-to-launch-client-communication.md",
     "preview": "INTERNAL | Client Success INTERNAL | Client Success Initial Client Experience The purpose of this document is to help provide a world-class experience to our clients. Overview: \"If a tree falls in a forest and no one is around to hear it, does it make a sound?\" Our business operates similarly. If we hire someone and don’t hear from them in 7 days, did they even do any work? Onboarding and first impressions are crucial. The client experience in the first 7 days is more important than the immediate results. To provide a world-class experience, we need to establish ourselves as experts and demonstrate the value of their investment by giving frequent updates and showcasing the complexity of our work. REMEMBER: Set expectations low, and overdeliver! Target Metrics: Minimum 1 update per day for the first 7 days. Time to launch date within 7 days. First new patient appointment within 7 days of "
   },
   {
@@ -1793,10 +1794,11 @@
     "extension": "docx",
     "domain": "client-fulfillment/onboarding",
     "artifact_type": "overview",
-    "recommendation": "review-later",
+    "recommendation": "superseded",
     "priority": "low",
     "size_kb": 25.5,
     "target_slug": "overview-onboarding-steps",
+    "canonical_path": "docs/client-fulfillment/onboarding/client-onboarding-blueprint.md",
     "preview": "Overview & AI Context WAIZ MEDIA — A-Z FULFILLMENT BLUEPRINT AI CONTEXT HEADER This document is the single source of truth for the Waiz Media client fulfillment and onboarding process. It is designed for both human team members and AI agents (Manus, GPT, Claude) to understand the exact operational steps, system configurations, and role responsibilities required to take a client from closed-won to fully launched. Every step in this document includes the specific clicks, tabs, and fields required inside GoHighLevel (GHL), ClickUp, Make.com, and Slack. SYSTEMS USED GoHighLevel (GHL) | ClickUp | Make.com | Slack | Facebook Business Manager | Twilio | CloseBot | Hot Prospector DEPENDENCY MAP — WHAT CANNOT START UNTIL WHAT IS DONE Step | Cannot Start Until Schedule Onboarding Call | New Client Form submitted Start A2P Registration | Onboarding Form submitted Begin Buildout (Tech + Media) | OB "
   },
   {
@@ -1805,10 +1807,11 @@
     "extension": "docx",
     "domain": "client-fulfillment/onboarding",
     "artifact_type": "onboarding",
-    "recommendation": "convert-first",
+    "recommendation": "converted",
     "priority": "high",
     "size_kb": 192.3,
     "target_slug": "updated-a-z-onboarding-document",
+    "canonical_path": "docs/client-fulfillment/onboarding/a-z-client-onboarding-sop.md",
     "preview": "Updated A-Z Onboarding Document Updated A-Z Onboarding Document This document outlines the complete, step-by-step client onboarding process, integrating the original A-Z technical setup with the newly structured dependency and communication framework. Core Principles Gated Workflow: Tasks only begin when their required input (milestone) is completed. Clear Communication: Client communication is tied to specific stage changes, not internal confusion. Systematic Readiness: Launch readiness is a calculated state based on QA and department completion. Phase 1: New Client Paid & Activation This phase kicks off once a new client has formally agreed to the terms of service and completed the payment. It involves critical actions by the Closer and automated steps to initiate the onboarding journey. Actions & Dependencies Closer fills out the New Client Form (Business Name, Client Name, Email, Pho"
   },
   {

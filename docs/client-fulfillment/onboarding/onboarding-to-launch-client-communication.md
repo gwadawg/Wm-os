@@ -3,9 +3,9 @@ title: Client Success Slack Touchpoint Playbook
 domain: client-fulfillment
 owner: client-success
 status: draft
-last_updated: 2026-07-20
+last_updated: 2026-09-27
 review_cycle: monthly
-source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Onboarding/Onboarding (SOPs)/Onboarding To Launch Client Communication.docx
+source_document: ../waiz-os-archive/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Onboarding/Onboarding (SOPs)/Onboarding To Launch Client Communication.docx
 artifact_type: sop
 supersedes_note: Replaces day-by-day clinic/patient cadence with milestone Slack touchpoints (Post-OB through Month 2+)
 ---
@@ -47,12 +47,12 @@ the client-facing Slack narrative at each milestone.
 
 ## Trigger
 
-Use this playbook whenever a client crosses a stage gate, a Month 1
-event fires, or a Month 2+ biweekly pulse is due (see Cadence map).
+Use this playbook whenever an onboarding touchpoint is triggered, a
+Month 1 event fires, or a Month 2+ biweekly pulse is due (see Cadence map).
 
 ## Inputs
 
-- Stage or event (Post-OB, Mid-build, Pre-launch, Launch, Month 1 reset,
+- Touchpoint or event (Post-OB, Mid-build, Pre-launch, Launch, Month 1 reset,
   Month 1 event, Month 2+ pulse)
 - One real account fact (what shipped, what happened, what KPI moved)
 - Client first name and any open ask (access, review, calendar habits)
@@ -136,8 +136,8 @@ internally first.
 
 Milestone-triggered only. No daily message quota.
 
-| Stage | Trigger | Job of the message |
-|-------|---------|-------------------|
+| Touchpoint | Trigger | Job of the message |
+|------------|---------|-------------------|
 | Post-OB | Same day as OB call | Recap alignment; set timeline; name next proof of work |
 | Mid-build | Tangible progress ships | Prove motion; cut radio-silence anxiety |
 | Pre-launch | 24–48h before go-live (or launch call day) | Readiness + slow-start frame |
@@ -146,13 +146,26 @@ Milestone-triggered only. No daily message quota.
 | Month 1 — events | First lead / QC / booking / show; yellow-red KPI; training need | Celebrate or diagnose with a next step |
 | Month 2+ | Biweekly scheduled pulse only | Softer, higher-value check-in on a fixed cadence |
 
+These are communication touchpoints, not extra onboarding stages:
+
+| Touchpoint | Canonical onboarding position |
+|------------|-------------------------------|
+| Post-OB | Entry to In Build after the kickoff session |
+| Mid-build | In Build |
+| Pre-launch | Launch, from Call Pending through Approved — Schedule Ads |
+| Launch day | After Account Live, when scheduled ads begin delivery |
+| Month 1 and Month 2+ | Post-launch Client Success |
+
+Stage names and movement rules come only from the
+[Client Onboarding Blueprint](client-onboarding-blueprint.md).
+
 **Calls:** Weekly check-in calls in Month 1 stay on the
 [Post-Launch Client Success System](../client-success/post-launch-client-success-system.md).
 This playbook owns **written Slack presence**, not the call agenda.
 
 ---
 
-## Stage playbooks
+## Touchpoint playbooks
 
 ### 1. Post-OB
 
@@ -547,10 +560,10 @@ lever — folded into the scheduled message, not a separate event queue item.
 
 Use this playbook during proactive check-ins on the
 [Client Success Daily OS](../../operations/people/client-success-daily-os.md).
-Healthy accounts get stage-appropriate Slack; red accounts get event
+Healthy accounts get lifecycle-appropriate Slack; red accounts get event
 messages with owned levers — not silence until the client complains.
 
-Build ownership and launch gates still follow
+Build ownership and the Launch Gate still follow
 [A-Z Client Onboarding SOP](a-z-client-onboarding-sop.md). CSM narrates;
 MB/Ops execute the checklist.
 
@@ -568,8 +581,10 @@ MB/Ops execute the checklist.
   Week 1–4 check-in **calls**
 - [Client Success Daily OS](../../operations/people/client-success-daily-os.md) —
   daily priority stack
-- [A-Z Client Onboarding SOP](a-z-client-onboarding-sop.md) — build
-  phases and launch gate
+- [Client Onboarding Blueprint](client-onboarding-blueprint.md) — stage
+  names, status fields, and Launch Gate
+- [A-Z Client Onboarding SOP](a-z-client-onboarding-sop.md) — build work
+  and Launch Gate
 - [Constraint Troubleshooting SOP](../client-success/constraint-troubleshooting-sop.md) —
   yellow/red diagnosis
 - [Client Success hub](../client-success/README.md)

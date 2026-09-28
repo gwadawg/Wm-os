@@ -9,6 +9,8 @@ docs:
   - docs/client-fulfillment/fulfillment-operating-system.md
   - docs/client-fulfillment/client-success/README.md
   - docs/client-fulfillment/onboarding/README.md
+  - docs/client-fulfillment/onboarding/client-onboarding-blueprint.md
+  - docs/client-fulfillment/onboarding/clickup-onboarding-structure.md
   - docs/client-fulfillment/shareability-boundaries.md
   - docs/client-fulfillment/waiz-vs-client-marketing-boundaries.md
   - docs/client-fulfillment/onboarding/a-z-client-onboarding-sop.md

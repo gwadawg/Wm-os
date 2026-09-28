@@ -81,7 +81,7 @@ def write_md(
 ) -> None:
     path = DOCS / rel_path
     path.parent.mkdir(parents=True, exist_ok=True)
-    src = f"source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/{source_rel}"
+    src = f"../waiz-os-archive/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/{source_rel}"
     inputs_md = "\n".join(f"- {i}" for i in inputs) or "- See operating content below."
     outputs_md = "\n".join(f"- {o}" for o in outputs) or "- See operating content below."
     related_md = ""
@@ -276,9 +276,9 @@ CONVERSIONS: list[dict] = [
         "artifact": "sop",
         "purpose": "Build and launch Meta campaigns for a new client after kickoff.",
         "scope": "Campaign structure, pixel, budgets, initial ad sets.",
-        "trigger": "Kickoff form submitted (A-Z Phase 5).",
+        "trigger": "Client entered In Build after the kickoff session.",
         "inputs": ["FB/BM access", "Funnel URL", "Creative assets", "Tracker updated"],
-        "outputs": ["Campaign ready for QA", "Fulfillment tracker current"],
+        "outputs": ["Media Buying work package ready for Marketing QA", "Fulfillment tracker current"],
     },
     {
         "rel": "media-buying/month-1-ad-account-management-sop.md",
@@ -300,7 +300,7 @@ CONVERSIONS: list[dict] = [
         "artifact": "sop",
         "purpose": "Configure Perspective funnel for client campaigns.",
         "scope": "Funnel tech setup.",
-        "trigger": "Implementation phase after kickoff.",
+        "trigger": "Client entered In Build after the kickoff session.",
         "inputs": ["Client branding", "Offer", "Qualification questions"],
         "outputs": ["Live funnel URL for ads"],
     },
@@ -521,15 +521,15 @@ Load this page first for any client-fulfillment question. Follow links to the ca
 
 ## Delivery Timeline (Gated)
 
-| Phase | Name | Canonical doc | Gate |
-|-------|------|---------------|------|
-| 1 | Paid & activation | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | New Client Form |
-| 2 | Welcome & CSM | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Welcome email + call |
-| 3 | Onboarding form | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Form submitted |
-| 4 | Onboarding call | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | Kickoff form |
-| 5 | Implementation | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [New Client Campaign Setup](media-buying/new-client-campaign-setup-sop.md) | Kickoff complete |
-| 6 | QA | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md) | QA form |
-| 7 | Launch | [A-Z Client Onboarding SOP](onboarding/a-z-client-onboarding-sop.md), [Onboarding To Launch Communication](onboarding/onboarding-to-launch-client-communication.md) | Launch form |
+**Stage truth:** [Client Onboarding Blueprint](onboarding/client-onboarding-blueprint.md).
+
+| Stage | Name | Canonical doc | Leaves when |
+|-------|------|---------------|-------------|
+| 1 | Client Activated | [Onboarding Blueprint](onboarding/client-onboarding-blueprint.md), [A-Z SOP](onboarding/a-z-client-onboarding-sop.md) | OB call booked and Onboarding Form filled |
+| 2 | Awaiting Kickoff | Blueprint + A-Z | Kickoff call held, Kickoff Form in, and Launch Call date set |
+| 3 | In Build | Blueprint, [New Client Campaign Setup](media-buying/new-client-campaign-setup-sop.md) | Tech QA and Marketing QA both Complete |
+| 4 | Launch | Blueprint, [Launch Kit SOP](onboarding/sop-client-launch-kit.md), [Slack Touchpoint Playbook](onboarding/onboarding-to-launch-client-communication.md) | Ads scheduled |
+| 5 | Account Live | Blueprint, [Post-Launch Client Success](client-success/post-launch-client-success-system.md) | Onboarding is over |
 
 ## Lead Engine (After Launch)
 

@@ -3,9 +3,9 @@ title: Perspective Funnel Setup SOP
 domain: client-fulfillment
 owner: media-buying-lead
 status: draft
-last_updated: 2026-05-21
+last_updated: 2026-09-27
 review_cycle: monthly
-source_document: source-docs/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Media Buying/Media Buying (SOPs)/MB Creative Process/Perspective Funnel Setup SOP.docx
+source_document: ../waiz-os-archive/waiz-drive-export/Waiz Media OS/03 _ Client Fulfillment/Media Buying/Media Buying (SOPs)/MB Creative Process/Perspective Funnel Setup SOP.docx
 artifact_type: sop
 ---
 
@@ -21,7 +21,9 @@ Funnel tech setup.
 
 ## Trigger
 
-Implementation phase after kickoff.
+Client is **In Build** after the kickoff call and Kickoff Form are complete.
+See the
+[Client Onboarding Blueprint](../onboarding/client-onboarding-blueprint.md).
 
 ## Inputs
 

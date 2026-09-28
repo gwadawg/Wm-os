@@ -3,7 +3,7 @@ title: Client Fulfillment
 domain: client-fulfillment
 owner: operations
 status: active
-last_updated: 2026-07-08
+last_updated: 2026-09-27
 review_cycle: monthly
 ---
 
@@ -49,7 +49,7 @@ Everything Waiz delivers **after a client signs** — onboarding, CRM, marketing
 | Area | Status |
 |------|--------|
 | **Operating system** | [Fulfillment OS](fulfillment-operating-system.md) + [Lead lifecycle](fulfillment-lead-lifecycle.md) — `active` |
-| **Onboarding** | [A-Z SOP](onboarding/a-z-client-onboarding-sop.md), [Slack Touchpoint Playbook](onboarding/onboarding-to-launch-client-communication.md) — `draft` |
+| **Onboarding** | [Hub](onboarding/README.md), [stage blueprint](onboarding/client-onboarding-blueprint.md), [ClickUp structure](onboarding/clickup-onboarding-structure.md), and [A-Z SOP](onboarding/a-z-client-onboarding-sop.md) — mixed `active`/`draft` |
 | **Infrastructure** | [CRM](crm-architecture/crm-infrastructure.md), [AI bot](crm-architecture/how-wm-ai-bot-works.md), [Claimed tag](crm-architecture/how-claimed-tag-works.md) — `active` |
 | **Client success** | Troubleshooting + KPIs + phase blueprint + post-launch SOPs — mixed `active`/`draft` |
 | **Call center** | [Call Center Script Factory SOP](call-center/sop-call-center-script-factory.md) — `draft` |
