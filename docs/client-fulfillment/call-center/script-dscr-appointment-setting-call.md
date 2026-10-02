@@ -1,282 +1,270 @@
 ---
-title: DSCR Setter / Appointment-Setting Call Script
+title: DSCR Call Script
 slug: dscr-setter-appointment-script
 domain: client-fulfillment
 department: call-center
-owner: setter
-status: active
+owner: client-success
+status: draft
 product: dscr
 delivery_group: call-center
-last_updated: 2026-06-29
+last_updated: 2026-10-01
 review_cycle: monthly
 artifact_type: script
 related_docs:
   - slug: dscr-team-product-faq
     label: DSCR Team Product FAQ
     relation: prerequisite
-  - slug: intro-call-script
-    label: RM Intro Script (acquisition)
+  - slug: dscr-offer-and-funnel-map
+    label: DSCR Offer And Funnel Map
     relation: reference
 ---
 
-# DSCR Setter / Appointment-Setting Call Script
+# DSCR Call Script
 
-> **DRAFT — REFINANCE ONLY · NUMBER-FREE.** Word-for-word language for a setter/intake agent booking
-> DSCR **refinance** consultations on behalf of a loan-officer client. Same flow as the
-> [RM appointment-setting script](../call-center/script-appointment-setting-call.md) — investor tone,
-> heavy LO branding. Anchored to [DSCR Offer And Funnel Map](dscr-offer-and-funnel-map.md).
+> **DRAFT — first pass. Not approved for the floor.**
+> Built on the [call framework](call-framework.md). Rules live in the [call center hub](README.md); this file is only the words. Where they disagree, the hub wins.
 
 ## Purpose
 
-Get a refi-ready investor **live-transferred to the LO** or **booked + confirmed** on the LO's calendar, with clean notes — without making them re-tell their story. Position **[LO NAME] as the DSCR specialist** — not a generalist bank, not another lender blast.
+Word tracks for a DSCR refinance call, stage by stage, so a rep sounds like a competent human assistant instead of a reader.
 
 ## Scope
 
-Client-side investor calls only. Excludes acquisition setter scripts in `docs/acquisition/sales/`.
+DSCR **refinance** of an investment property the lead already owns. Not purchase. Not a primary residence. Read the [DSCR Team Product FAQ](../dscr-dna/dscr-team-product-faq.md) before your first shift.
 
-## When To Use
+## Before you dial
 
-- Fresh lead from the funnel (speed-to-lead, day 1–2 priority)
-- Re-dial on an unreached lead
-- Confirmation call for a Laura-booked (AI) appointment
-- Callback after "now isn't a good time"
+Open the client file. You need the client's name, title, company, the states they are licensed in, their hours, how many lenders they work with, and whether they are approved for live transfer.
 
-## The one job of this call
+Open the lead's file. You need what they asked for and where the property is. You will say it back to them in stage 2.
 
-Live-transfer to the LO, or book + confirm. You are **[LO NAME]'s assistant** — warm, competent, investor-literate. You are **not** the loan officer and you do **not** quote numbers.
+## How to use this
 
----
+The stages are fixed. The words are a starting point. Say them the way you talk — contractions, short sentences, real reactions. A rep reading this aloud word for word sounds worse than a rep who knows the stage they are in and says it their own way.
 
-## Core operating frames (read before every shift)
-
-1. **Brand the LO early and often.** Every call should leave the investor thinking: *[LO NAME] is the DSCR person — that's who I want to talk to.* Say their name. Say what they specialize in. Say who they've helped.
-2. **Self-ID as the assistant in the first 15 seconds** — or they dump the whole deal on you and resent repeating it to the LO.
-3. **Be human first, then business.** "How are you doing?" is real — don't rush through it like a robot. Investors are busy; keep rapport to one beat, then pivot.
-4. **Speak investor.** "Cash-out," "rate/term," "the property's cash flow," "balloon," "refi in your LLC." Sound like you get it.
-5. **Never quote numbers.** No rate, LTV, payment, or approval. "[LO] runs your exact numbers live — that's the call."
-6. **Live transfer first, always.** Booking is the fallback.
-
-### LO positioning bank (weave in naturally — pick what fits)
-
-Use these to differentiate **[LO NAME]** from every other lender call the investor gets:
-
-
-| Moment             | Line                                                                                                                                                                                       |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Who is this?       | "[LO NAME] is a **DSCR and investor-financing specialist** — that's literally what they do all day. Not a generalist bank. They qualify on the **property's rent**, not your tax returns." |
-| Why this LO?       | "Your bank underwrites **you**. [LO NAME] underwrites the **property**. That's why investors who get told no conventionally end up here."                                                  |
-| Social proof       | "[LO NAME] works with investors who are **property-capped, write-off-heavy, or stuck in a balloon** — people conventional won't touch. That's their wheelhouse."                           |
-| Speed / competence | "Investors come to [LO NAME] because they actually **close** — entities, STR rentals, cash-out refis — without making you explain DSCR to someone who doesn't get it."                     |
-
-
-📋 Customize `[REGION]` / proof points per client once you have approved testimonials. Never invent outcomes.
+Brackets are things you fill from the file. Never guess one.
 
 ---
 
-## STAGE 1 — CONNECTION (first 15 seconds)
+## Stage 1 — Introduction
 
-### Greet
-
-> Hey, [BORROWER NAME]?
+> Hey — [FIRST NAME]?
 >
-> Hey [NAME], this is [AGENT NAME] calling from [LO NAME]'s office — how are you doing?
+> Hey [NAME], this is [REP] calling over from [CLIENT]'s office. How we doing?
 
-📋 Notes:
+Stop talking. Let them answer. One beat of being a human, then move.
 
-- Say **"from [LO NAME]'s office"** — NOT the bank name as the headline. You call **on behalf of** the LO.
-- Wait for their answer. Don't talk over it.
-
-### Pivot back to business (optional — keep it short for investors)
-
-Pick one if you need a human beat before the frame:
-
-> Doing great — thanks for asking. But anyways…
-
-> Not bad — can't complain. Anyways…
-
-📋 One beat max. Investors are operators — don't drag the small talk.
+> Good, good. So listen —
 
 ---
 
-## STAGE 2 — FRAME (the non-negotiable)
+## Stage 2 — Context
 
-**Do not skip this.** This is what stops the investor from dumping their whole portfolio on you and repeating it all to the LO.
+Say back what they asked for and where the property is. Then ask if that is right.
 
-### Set the assistant frame
+> I saw you were looking to pull some cash out of your rental over there in [STATE] — is that right?
 
-> So [NAME] — I'm [LO NAME]'s assistant. [He/She/They] saw you wanted to **[REFINANCE GOAL FROM FORM — e.g., refinance one of your rentals / see what your property qualifies for on DSCR / pull cash out of an investment property / get out of a short-term or balloon loan]**, and [he/she/they] asked me to give you a quick call. Does that ring a bell?
+Match it to what they actually came in for:
 
-> I just wanted to get a little clarity on your situation, so I can pass some notes over and introduce you guys directly. Can you help me understand how exactly we can help you out?
 
-📋 **REFINANCE GOAL** — pull from the form or ad source. Examples:
+| What they came in for          | Say it like this                                                                                |
+| ------------------------------ | ----------------------------------------------------------------------------------------------- |
+| Cash-out                       | "looking to pull some cash out of a rental you've got over in [STATE]"                          |
+| Lower or stabilize the payment | "looking at refinancing one of your rentals over in [STATE]"                                    |
+| Balloon or hard-money exit     | "you've got a note coming due on a property over in [STATE] and you're looking at your options" |
+| Qualify on the rent            | "wanting to see if a rental you own can qualify on its own income, without the tax returns"     |
 
-- "…refinance an investment property you already own"
-- "…see if your rental qualifies on its own income — without W-2s or tax returns"
-- "…pull cash out of a rental and redeploy it"
-- "…get out of a hard-money or balloon loan before it comes due"
 
-### If they ask "Who is this with?" / "What company?"
-
-> I'm calling on behalf of **[LO NAME]** — [he/she/they]'s a **investor-financing specialist** at [COMPANY]. [He/She/They] got your info when you inquired about **[REFINANCE GOAL]**. I'm part of [his/her/their] intake team — I tee you up so you're not starting from scratch when you two talk.
+You are after a yes. That yes is them confirming you are not a random dialer.
 
 ---
 
-## STAGE 3 — QUICK QUALIFICATION (notes for the LO — NOT underwriting)
+## Stage 3 — Reason for call
 
-You are gathering **enough to brief the LO**. Not enough to underwrite. Keep it conversational — let them talk.
+This is the frame. Do not skip it, and do not ask a single question before it.
 
-### Open (they may already answer in Stage 2)
+> Yeah, so — just so you know, I'm actually [CLIENT]'s assistant. He's the [TITLE] over at [COMPANY]. He wanted me to reach out and see if we could help you out with what you're looking for — and if it makes sense, I'd love to just get you two introduced.
 
-Listen. Capture in their words. Don't interrupt.
+**If they ask who you're with:**
 
-### Form callback + dig one level deeper
-
-> Beautiful. I saw on the form you filled out **[FORM DETAIL — e.g., you're looking to cash out / you've got a rental in Texas / you're trying to get out of a balloon loan]**, but other than that, is there anything else you're looking to accomplish here?
-
-### Follow-up questions (ask only what's missing — max 3–5 total)
-
-Pull from the canonical [refi-readiness questions](dscr-offer-and-funnel-map.md):
-
-> And the property you're looking to refinance — you **currently own it**, right? … And is it a rental / producing income?
-
-> Got it. So what are you trying to do — **pull cash out, lower the payment, or get out of a short-term or balloon loan**?
-
-> Makes sense. Is it held in your **name or an LLC**? … And what **state** is the property in?
-
-📋 You're briefing the LO, not pre-approving anything.
-
-### Hard disqualifiers (acknowledge, note, escalate — don't promise)
-
-
-| Condition                                                    | Action                                                                                                                                           |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Doesn't currently **own** the property (it's a purchase)     | Not a fit — **refinance only**. "Got it — we focus on refinancing property you already own. Let me flag it and we'll follow up if that changes." |
-| **Primary residence / personal use** (not investment)        | Not business-purpose. Note, don't transfer, escalate to manager.                                                                                 |
-| Property in a **state the LO isn't licensed/authorized** for | Note. Don't promise. Escalate — manager decides.                                                                                                 |
-| Owner-occupied / consumer-purpose signals                    | Stop qualification. Escalate.                                                                                                                    |
-
-
-📋 **Never silently disqualify in the dialer.** Send every borderline lead to the manager so reporting stays clean.
+> I'm calling on behalf of [CLIENT] — he's over at [COMPANY], he does investor financing. You came through on a DSCR refinance inquiry a little bit ago. I'm on his intake side, so I just grab the basics and tee you up so you're not starting from scratch when you two talk.
 
 ---
 
-## STAGE 4 — TRANSITION TO TRANSFER OR BOOK
+## Stage 4 — Discovery
 
-### Specialization pitch + live transfer (the money line)
+Open the file out loud. Reason first, then the question.
 
-> Awesome — that's actually exactly the kind of situation **[LO NAME] specializes in**.
+> So just so I have clarity here — I'm looking through your file. The property's over in [STATE], right? … And that's a rental, not where you live?
+
+> Got it. And just so based on the information you provided us, your balance is x? 
+
+> Okay. And how much were you looking to pull out, roughly?
+
+> Sweet. So what's the objective here — anything specific you're trying to get done, or you're kind of just looking at your options?
+
+Stop at four or five. You are taking notes for the client, not underwriting.
+
+**If they volunteer it all up front,** do not ask it again. Say it back:
+
+> Okay — so you're looking to pull cash out of the one in [STATE], move it into the next deal, and conventional's been giving you a hard time on the returns. That about right?
+
+**Listen for these.** They tell you which pitch to run in stage 5.
+
+
+| What you hear                  | What it means                          |
+| ------------------------------ | -------------------------------------- |
+| "My write-offs kill my DTI"    | Conventional said no on paper income   |
+| "My balloon's coming due"      | There is a clock on this               |
+| "I'm capped out on properties" | Conventional limit, not a deal problem |
+| "Can I do it in my LLC?"       | Entity investor                        |
+| "It's an Airbnb / short-term"  | STR income conventional won't credit   |
+
+
+---
+
+## Stage 5 — Pitch
+
+Relevance, then proof, then credibility, then the ask.
+
+> Perfect — I'm glad we're talking, honestly. What he offers is right up your alley.
 >
-> [He/She/They]'s a **DSCR and investor-financing specialist** — [he/she/they] works with investors who conventional banks turn down, qualifying on the **property's rent instead of tax returns**. [He's/She's/They've] helped other people in your same position **[PICK 1–2 OUTCOMES — e.g., pull cash out and redeploy it / get out of a hard-money loan into a 30-year refi / refinance in their LLC / lower the payment on a rental they already own]**, and I think it's definitely worth having a conversation with [him/her/them].
->
-> What I'd love to do is introduce you guys **right now** so [he/she/they] can point you in the right direction. Actually I think [he/she/they]'s free now — can you hang tight for me?
->
-> I'll go get [him/her/them] on the line, be right back.
+> [CLIENT] does DSCR and investor refis all day — that's basically the whole focus. He works with investors in [STATE] in your exact spot: [SAY THEIR SITUATION BACK]. 
 
-📋 **Outcome picks** — match what they told you. Never promise their deal will work the same way.
+Then the piece that separates him from every other call they get:
 
-### Try the live transfer first (always)
+> And the best part is, [CLIENT] isn't like most loan officers. He has access to over 100+ different lenders which allows him to shop for the best deal for you-- even products that don't require any income docs. 
 
-→ Use your team's warm hand-off process. LO gets the notes before pickup.
+Then the ask:
 
-### If transfer is not possible — book
+> So let's do this. Let me get you two introduced, he can walk you through what your options look like, and you can figure out the best path from there.
 
-> No worries — let me get you on **[LO NAME]'s** calendar. What works best for you — sometime later today, or first thing tomorrow?
+**Proof by situation.** Pick the one that matches what you heard.
 
-### Pull the appointment closer (every day out drops show rate)
 
-- Today → tomorrow AM → tomorrow PM → 2 days → (last resort) 3+ days.
-- "They've got a window at [TIME] today — want me to grab it before it's gone?"
+| They said             | Say                                                                                                                                        |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Write-offs / DTI      | "He works with self-employed investors all the time — guys whose returns make them look broke on paper even though the cash flow's there." |
+| Balloon or hard money | "A lot of what he does is exactly this — getting investors out of a short-term note into something long-term before it comes due."         |
+| Property capped       | "That's a conventional cap, not a DSCR one. He's got investors with way more doors than that."                                             |
+| LLC                   | "Refinancing in an entity is normal on this side. That's standard for the investors he works with."                                        |
+| STR                   | "Short-term rental income is one of those things conventional doesn't really know what to do with. He does."                               |
 
-### Book the invite NOW
 
-> Cool — putting you in for [DATE/TIME]. You'll get a text and an email with the calendar invite in just a second. Can you do me a quick favor and **confirm it on your end** so I can make sure that you got it?
->
-> And the number that you'll receive the text from will be the one that **[he/she/they]'ll** be calling you from. **Save this number** so you don't miss [him/her/them], alright?
 
-📋 Book in the CRM **while they're on the line**. Confirm text + email before hang-up.
 
----
+Say the number like it means something. Flat, it is a detail. With weight, it is the reason to take the call.
 
-## STAGE 5 — WRAP-UP
-
-> Perfect — you're all set for [DATE/TIME]. I'll pass **[LO NAME]** the notes from our conversation so [he/she/they]'re ready when you guys connect. If anything changes on your end, just shoot us a text at this number. Have a great rest of your day, [NAME].
+**Do not say** what rate they will get, what they will qualify for, how much they can pull out, or that this will work. Nobody on the phone knows that yet. See [Compliance guardrails](compliance-guardrails.md) and [DSCR Compliance Guardrails](../dscr-dna/dscr-compliance-guardrails.md).
 
 ---
 
-## CALL VARIANT A — Laura-booked (AI) appointment confirmation
+## Stage 6 — Find time or transfer
 
-> Hey [NAME], this is [AGENT NAME] calling from [LO NAME]'s office — how are you doing? [short pivot — Stage 1]
+**Live transfer** — only if the client file says approved, and you are inside their hours.
+
+> I know i called you out of the blue here, but i can try to introduce you to him now if You got a couple minutes to work with?    
+> Perfect, hang tight for me one sec, i'll put you on a quick hold so i can try him. 
+
+**Booking**, when transfer is not on the table or they can't talk now:
+
+> No worries at all. Let me get you on his calendar then. What's better for you — later today, or first thing tomorrow?
+
+Go for the soonest thing they will actually keep.
+
+**When the time is soft.** "You can try me at five and see if I'm around" is not a booking.
+
+> Yeah, we could try you at five — but why don't we find a time that actually works for you? That way we don't have to go back and forth and waste your time. 
 >
-> So I saw you've got a refinance review booked with **[LO NAME]** for [TIME] today — just wanted to confirm you're still good, and grab a few notes so [he/she/they] can hit the ground running.
+> What do you say — you more of a morning guy, or is later in the day better?
 
-Run Stage 3 (light). Then pull forward:
+**Then ask what would stop them:**
 
-> Awesome. Real quick — any chance you've got time before [SCHEDULED TIME]? **[LO NAME]** actually has a window at [EARLIER TIME] — would save you the wait.
+> And is there any reason you wouldn't be able to make it at [TIME]? Just so we can plan around it.
+
+If something comes up — the kids, a shift, a drive — move the time right there. That is the whole point of asking.
+
+**Size the call:**
+
+> And just so you know what you're walking into, it's like a 15-minute thing. You guys go over what you're trying to do, he'll tell you what the options look like. 
 
 ---
 
-## CALL VARIANT B — Callback after "not a good time"
+## Stage 7 — Tie down and wrap
 
-> Hey [NAME], this is [AGENT NAME] calling back from **[LO NAME]'s** office — you said to try you around [TIME]. How are you doing? [short pivot]
+> Sweet — I've got you down for [TIME] [TIME ZONE].
+
+>  we'll be calling you from [GHL Number]. Do me a favor and save it real quick — sometimes it comes up as spam on people and I don't want you missing him.
+
+> You'll get a text confirmation here in a second too, and we'll shoot you a reminder before the call so it doesn't sneak up on you.
+
+> And if something changes, just text that number back. I'll move it, no problem at all.
+
+> Any last questions before I let you go? … Sweet. Have a good one, [NAME].
+
+---
+
+## Objections
+
+Handle it, then go back to the stage you were in. Never answer and then float.
+
+### "What's the rate?" / "What's this gonna cost me?"
+
+> Honestly? I'm not licensed, so I'd just be guessing — and the last thing I want is to give you a number that turns out wrong. It depends on the property anyway. That's the whole reason I'm setting this up: he runs your actual property and gives you real numbers.
+
+Then back to where you were.
+
+### "I'm getting blown up with calls" / "you people sold my info"
+
+> Ah man, I hear that a lot. Let me just clear that up though — you came to us directly, through Facebook.  We don't sell anyone's info, it's genuinely not in our interest. So whatever else you've got coming in, that's not associated with us.
 >
-> Good news — **[LO NAME]** is actually around right now with a quick window. Got a couple minutes for me to introduce you?
+> In fact this will be the last call, since i can introduce you to [Client Name] Directly.  
+> Straight back into stage 3.
+
+### "I'm busy right now"
+
+> Totally fine, I'll get out of your hair. But real quick before i let you go, just so i understand. Are you still looking to get insight on our exclusive mortgge program where you can get qualified without income docs? 
+
+If yes, and they offer you a callback time — **do not take the callback.** They just gave you an open slot.
+
+> I can definitely call you back at five. But actually — what if we just put five on the calendar with you and him instead? He can walk you through the options directly and you skip the middle step. Save you a conversation.
+
+### "I'm already talking to a few lenders"
+
+> Smart, as you should. Which is perfect, since [Client Name] has access to 100+ lenders, he'll be able to show you whether your offers are truly the best you can get. So at minimum you've got a real comparison instead of guessing. It should be a fairly quick call as well. I can introduce you as soon as today, what do you say? 
+
+### "Does my property even qualify?"
+
+> It'd be hard to say with the information i have currently on your property-- which is actually the reason for the call. [Client Name] has access to dozens of different lenders and programs in which he'll be able to shop and find the best deal for you. How about i schedule a call with him to find out. 
+
+### "My bank already told me no"
+
+> Right — and usually that's a conventional thing, not a you thing. They're looking at your returns and your DTI. He's looking at the property. Different question entirely.
+
+### "Is this a scam?"
+
+> Haha, i don't blame you for asking since there's a lot of junk out there. But to answer, no this isn't a scam, if it were [Client name] and the whole company would lose their license. And to give you the peace of mind, i can send you all their information so you can look up their license and research before talking with them. Is that okay with you? 
 
 ---
 
-## OBJECTION HANDLING (front-desk version — keep the call alive, hand off)
+## Quality bar
 
-Deep loan objections are the LO's job — see [DSCR Objection-Handling Guide](dscr-objection-handling-guide.md). Your job: keep it alive long enough to transfer/book — and keep **[LO NAME]** positioned as the specialist.
+- Assistant frame delivered before any discovery question
+- The file read back to them out loud in stage 4
+- Four or five questions, no underwriting, no numbers
+- Their own situation repeated back in the pitch
+- Live transfer attempted whenever the client is approved and in hours
+- No soft times written down
+- "Any reason you wouldn't make it" asked on every booking
+- Number confirmed, save-it ask made, reminders mentioned
+- Scope breaches escalated, never silently dropped
 
-**"What's the rate?"**
+## Related
 
-> Totally fair — and honestly it depends on the property, so **[LO NAME]** runs your exact numbers live rather than me guessing. That's what [he/she/they] specializes in. Got a few minutes today or tomorrow?
-
-**"I'm just shopping / comparing lenders."**
-
-> Smart — you should. **[LO NAME]** does DSCR and investor refis all day — would it hurt to have [him/her/them] run your property too so you've got a real comparison? Takes about 15 minutes. What works?
-
-**"Is this refinance only? I wanted to buy."**
-
-> We focus on **refinancing property you already own** — that's [LO NAME]'s wheelhouse. If you've got a rental you want to refi, that's exactly what [he/she/they] does. Do you?
-
-**"Send me info by email."**
-
-> Of course — I'll have **[LO NAME]** send something directly. But the fastest read on your specific property is a quick call with [him/her/them] — want me to grab 15 minutes so it's worth your time?
-
-**"Where'd you get my number?"**
-
-> You came in through our DSCR refinance inquiry — I've got you down looking to **[GOAL]** on a **[PROPERTY TYPE]**. Ring a bell?
-
-**"Is this a scam?"**
-
-> Hear you — lots of junk calls out there. I'm [AGENT NAME] from **[LO NAME]'s** office at [COMPANY]. I can text you [his/her/their] direct line and site so you can verify. Want me to?
-
-**"How are you different from my bank?"**
-
-> Your bank underwrites **you** — tax returns, DTI, property caps. **[LO NAME]** underwrites the **property**. DSCR, entities, investor refis — that's all [he/she/they] does. You're not teaching [him/her/them] how investors work.
-
----
-
-## QUALITY BAR
-
-- **[LO NAME] named and positioned as DSCR specialist** in the first 30 seconds.
-- Self-ID as assistant + frame set **before** qualification.
-- Max 3–5 refi-readiness questions; **no underwriting, no numbers quoted**.
-- Specialization pitch delivered **before every transfer attempt**.
-- Live transfer attempted first on every qualified lead.
-- Booking confirmed via text + email before hang-up.
-- Every borderline/DQ lead escalated to manager, never silently killed.
-- Refinance/investment framing only; purchase/primary-residence = escalate.
-
-## METRICS
-
-Live-transfer rate · book rate (unreached→reached) · show rate · pull-forward rate · AI-booked confirmation success · manager-escalation rate. See [DSCR KPI And Test Scorecard](dscr-kpi-and-test-scorecard.md).
-
-## Related Docs
-
-- **Start here (team onboarding):** [DSCR Team Product FAQ — Internal Training](dscr-team-product-faq.md)
-- [DSCR Offer And Funnel Map](dscr-offer-and-funnel-map.md)
-- [DSCR Objection-Handling Guide](dscr-objection-handling-guide.md)
-- [DSCR Lead Nurture And Booking — Laura](dscr-nurture-and-booking-laura.md)
-- RM analog: [Call Center Appointment-Setting Script (RM)](../call-center/script-appointment-setting-call.md)
+- [Call framework](call-framework.md) — the stages and why they exist
+- [Call center hub](README.md) — the rules
+- [DSCR Team Product FAQ](../dscr-dna/dscr-team-product-faq.md) — read first
+- [DSCR Offer And Funnel Map](../dscr-dna/dscr-offer-and-funnel-map.md) — the offer and the canonical questions
+- [DSCR Compliance Guardrails](../dscr-dna/dscr-compliance-guardrails.md)
+- [DSCR Objection-Handling Guide](../dscr-dna/dscr-objection-handling-guide.md) — deeper tracks, loan officer side
 
