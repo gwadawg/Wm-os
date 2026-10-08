@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoHighLevel Foundations Bootcamp | Waiz Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===========================================
+   THEME: Waiz Media client-facing tokens
+   Source: wm-csm-kit/brand/tokens.css
+   =========================================== */
+:root {
+    --navy: #061A4A;
+    --royal: #0E2F73;
+    --accent: #4FA3FF;
+    --accent-deep: #2B7DE0;
+    --green: #7CFF7A;
+    --light: #F4F7FC;
+    --dark: #0B1220;
+    --mid: #5B6475;
+    --soft: #8B93A7;
+    --divider: #D1D9F0;
+    --shadow: 0 22px 56px rgba(6, 26, 74, 0.14);
+    --radius: 18px;
+    --font-display: "Barlow Condensed", sans-serif;
+    --font-body: "IBM Plex Sans", sans-serif;
+    --pad-x: 120px;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --stage-bg: #030c24;
+    --slide-bg: #fff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ===========================================
+   FIXED 16:9 STAGE (viewport-base.css, in full)
+   =========================================== */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: var(--stage-bg, #000);
+}
+
+.deck-viewport {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    background: var(--stage-bg, #000);
+}
+
+.deck-stage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    transform-origin: 0 0;
+    background: var(--slide-bg, #fff);
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    background: var(--slide-bg, #fff);
+}
+
+.slide.active,
+.slide.visible {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+img,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.deck-controls {
+    position: fixed;
+    left: 50%;
+    bottom: 22px;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+@media print {
+    html,
+    body {
+        width: 1920px;
+        height: auto;
+        overflow: visible;
+        background: #fff;
+    }
+    .deck-viewport {
+        position: static;
+        overflow: visible;
+        background: #fff;
+    }
+    .deck-stage {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: none !important;
+        background: none;
+    }
+    .slide {
+        position: relative;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        width: 1920px;
+        height: 1080px;
+        break-after: page;
+        page-break-after: always;
+    }
+    .slide:last-child {
+        break-after: auto;
+        page-break-after: auto;
+    }
+    .deck-controls {
+        display: none !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.2s !important;
+    }
+}
+
+/* ===========================================
+   SLIDE BACKGROUNDS
+   .light = teaching slides, .navy = title-level moments
+   =========================================== */
+body { font-family: var(--font-body); color: var(--dark); }
+
+.slide.light {
+    background: linear-gradient(180deg, #FFFFFF 0%, var(--light) 100%);
+}
+
+.slide.navy {
+    color: #fff;
+    background:
+        radial-gradient(900px 700px at 88% 12%, rgba(79, 163, 255, 0.22), transparent 62%),
+        radial-gradient(700px 600px at 6% 110%, rgba(124, 255, 122, 0.08), transparent 60%),
+        linear-gradient(135deg, var(--navy) 0%, var(--royal) 100%);
+}
+
+.slide.navy::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: linear-gradient(180deg, transparent 0%, #000 30%, #000 70%, transparent 100%);
+    pointer-events: none;
+}
+
+/* ===========================================
+   SLIDE CHROME: wordmark + page number (injected by JS)
+   =========================================== */
+.chrome {
+    position: absolute;
+    left: var(--pad-x);
+    right: var(--pad-x);
+    bottom: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--navy);
+    z-index: 5;
+}
+.navy .chrome { color: #fff; }
+.chrome .mark { width: 104px; height: 34px; }
+.chrome .num {
+    font: 600 20px/1 var(--font-body);
+    letter-spacing: 0.16em;
+    color: var(--soft);
+}
+.navy .chrome .num { color: rgba(255, 255, 255, 0.55); }
+.chrome .deck-name {
+    font: 600 18px/1 var(--font-body);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--soft);
+}
+.navy .chrome .deck-name { color: rgba(255, 255, 255, 0.45); }
+
+/* ===========================================
+   TYPOGRAPHY
+   =========================================== */
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font: 600 22px/1 var(--font-body);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+}
+.eyebrow::before {
+    content: "";
+    width: 36px;
+    height: 3px;
+    background: currentColor;
+    border-radius: 2px;
+}
+.navy .eyebrow { color: var(--accent); }
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--navy);
+    letter-spacing: 0.005em;
+}
+.navy h1, .navy h2, .navy h3 { color: #fff; }
+
+h1 { font-size: 172px; line-height: 0.88; }
+h2 { font-size: 116px; line-height: 0.9; }
+h3 { font-size: 52px; line-height: 1; }
+
+.hl { color: var(--accent-deep); }
+.navy .hl { color: var(--accent); }
+.grow { color: #1F9E3A; }
+.navy .grow { color: var(--green); }
+
+.lead {
+    font: 400 34px/1.4 var(--font-body);
+    color: var(--mid);
+    max-width: 760px;
+}
+.navy .lead { color: rgba(255, 255, 255, 0.78); }
+
+/* Bullets: short, scannable, max three per slide */
+.bullets { list-style: none; display: grid; gap: 30px; }
+.bullets li {
+    position: relative;
+    padding-left: 46px;
+    font: 500 36px/1.3 var(--font-body);
+    color: var(--dark);
+}
+.bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    background: var(--accent);
+    box-shadow: 0 0 0 6px rgba(79, 163, 255, 0.16);
+}
+.navy .bullets li { color: #fff; }
+.bullets li span { color: var(--mid); font-weight: 400; }
+
+/* ===========================================
+   LAYOUT HELPERS
+   =========================================== */
+.frame {
+    position: absolute;
+    inset: 110px var(--pad-x) 140px;
+}
+.split {
+    display: grid;
+    grid-template-columns: 760px 1fr;
+    gap: 70px;
+    align-items: center;
+    height: 100%;
+}
+.split.flip { grid-template-columns: 1fr 760px; }
+.stack { display: grid; gap: 34px; align-content: center; }
+
+/* Illustrations sit on white; multiply melts their white into the slide */
+.illo {
+    display: block;
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+    -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 72%, transparent 100%);
+    mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 72%, transparent 100%);
+}
+.illo-card {
+    background: #fff;
+    border-radius: 28px;
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+.illo-card img { display: block; width: 100%; height: auto; }
+
+.card {
+    background: #fff;
+    border: 1px solid var(--divider);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    font: 600 26px/1 var(--font-body);
+    background: #fff;
+    border: 1px solid var(--divider);
+    color: var(--navy);
+    white-space: nowrap;
+}
+.chip.accent { background: var(--accent); border-color: var(--accent); color: var(--navy); }
+.chip.navy-chip { background: var(--navy); border-color: var(--navy); color: #fff; }
+.chip.green-chip { background: rgba(124, 255, 122, 0.18); border-color: rgba(31, 158, 58, 0.35); color: #156B2A; }
+.chip.warn { background: #FFF4F2; border-color: #F5C2BA; color: #A3321F; }
+
+.dot { width: 14px; height: 14px; border-radius: 50%; background: currentColor; flex: none; }
+
+/* ===========================================
+   ANIMATION: staggered reveal on the active slide
+   Set --d on an element to control its delay.
+   =========================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    transition-delay: var(--d, 0s);
+}
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+    transition-delay: var(--d, 0s);
+}
+.slide.visible .reveal,
+.slide.visible .reveal-scale { opacity: 1; transform: none; }
+
+@keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.slide.visible .float { animation: floaty 6s ease-in-out infinite; }
+
+/* ===========================================
+   SLIDE 1: TITLE
+   =========================================== */
+.title-slide .title-mark { width: 250px; height: 82px; color: var(--navy); }
+.title-slide .copy {
+    position: absolute;
+    left: var(--pad-x);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 780px;
+    display: grid;
+    gap: 40px;
+    z-index: 2;
+}
+.title-slide h1 { font-size: 140px; }
+.title-slide .art {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    margin-top: -330px;
+    width: 990px;
+    z-index: 1;
+}
+.title-slide .meta {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+.title-slide .rule {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 12px;
+    background: linear-gradient(90deg, var(--navy), var(--royal) 60%, var(--accent));
+}
+
+/* ===========================================
+   SECTION SLIDES
+   =========================================== */
+.section-slide .copy {
+    position: absolute;
+    left: var(--pad-x);
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    gap: 40px;
+    width: 1300px;
+}
+.section-slide .big-num {
+    position: absolute;
+    right: 90px;
+    top: 50%;
+    transform: translateY(-54%);
+    font: 800 620px/0.8 var(--font-display);
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.14);
+}
+.section-slide h2 { font-size: 170px; }
+.section-slide .chips { display: flex; flex-wrap: wrap; gap: 16px; max-width: 1200px; }
+.section-slide .chips .chip {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.18);
+    color: #fff;
+}
+
+/* ===========================================
+   SLIDE 2: BLANK CANVAS
+   =========================================== */
+.versus { display: grid; gap: 22px; }
+.versus .row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 28px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid var(--divider);
+}
+.versus .row .tag {
+    font: 700 30px/1 var(--font-display);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--soft);
+}
+.versus .row.us { border-color: rgba(43, 125, 224, 0.45); box-shadow: 0 12px 32px rgba(43, 125, 224, 0.14); }
+.versus .row.us .tag { color: var(--accent-deep); }
+.versus .row p { font: 500 30px/1.3 var(--font-body); color: var(--dark); }
+
+.tradeoff {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid var(--divider);
+    background: #fff;
+}
+.tradeoff div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 20px;
+    font: 600 26px/1 var(--font-body);
+}
+.tradeoff .pro { background: rgba(124, 255, 122, 0.2); color: #156B2A; }
+.tradeoff .con { color: var(--accent-deep); }
+
+/* ===========================================
+   STEP TIMELINE (case studies)
+   =========================================== */
+.steps { list-style: none; display: grid; gap: 0; position: relative; }
+.steps li {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 28px;
+    align-items: start;
+    padding-bottom: 34px;
+    position: relative;
+}
+.steps li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 31px;
+    top: 64px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(var(--accent), rgba(79, 163, 255, 0.15));
+}
+.steps .n {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font: 800 32px/1 var(--font-display);
+    background: var(--navy);
+    color: #fff;
+}
+.steps li:last-child .n { background: var(--green); color: var(--navy); }
+.steps .t { font: 600 34px/1.25 var(--font-body); color: var(--dark); padding-top: 10px; }
+.steps .t small { display: block; margin-top: 6px; font: 400 26px/1.35 var(--font-body); color: var(--mid); }
+
+/* ===========================================
+   SLIDE 7: ACCOUNT MAP
+   =========================================== */
+.sidebar {
+    background: linear-gradient(180deg, var(--navy), #0A2460);
+    border-radius: 24px;
+    padding: 36px 28px;
+    color: #fff;
+    box-shadow: var(--shadow);
+    display: grid;
+    gap: 8px;
+}
+.sidebar .group {
+    font: 600 18px/1 var(--font-body);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    padding: 22px 18px 10px;
+}
+.sidebar .item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px;
+    border-radius: 12px;
+    font: 500 30px/1 var(--font-body);
+    color: rgba(255, 255, 255, 0.92);
+}
+.sidebar .item svg { width: 30px; height: 30px; flex: none; color: var(--accent); }
+.sidebar .item.on { background: rgba(79, 163, 255, 0.16); box-shadow: inset 3px 0 0 var(--accent); }
+.sidebar .item .k {
+    margin-left: auto;
+    font: 600 16px/1 var(--font-body);
+    letter-spacing: 0.12em;
+    color: var(--navy);
+    background: var(--accent);
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+/* ===========================================
+   SLIDE 8: CONTACT CARD (custom fields)
+   =========================================== */
+.contact { padding: 38px 42px; display: grid; gap: 26px; }
+.contact .who { display: flex; align-items: center; gap: 22px; }
+.avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--royal), var(--accent));
+    color: #fff;
+    font: 700 30px/1 var(--font-display);
+    letter-spacing: 0.05em;
+}
+.contact .who b { display: block; font: 600 34px/1.1 var(--font-body); color: var(--navy); }
+.contact .who span { font: 500 22px/1 var(--font-body); color: var(--soft); letter-spacing: 0.08em; text-transform: uppercase; }
+.fields { display: grid; gap: 14px; }
+.field {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    align-items: center;
+    padding: 18px 22px;
+    border-radius: 12px;
+    background: var(--light);
+    font: 500 27px/1 var(--font-body);
+}
+.field span { color: var(--mid); }
+.field b { color: var(--navy); font-weight: 600; }
+.field.focus { background: rgba(79, 163, 255, 0.14); box-shadow: inset 0 0 0 2px rgba(43, 125, 224, 0.5); }
+
+.filter-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.filter-row .arrow { font: 600 34px/1 var(--font-body); color: var(--accent-deep); }
+.footnote {
+    font: 400 24px/1.4 var(--font-body);
+    color: var(--mid);
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+}
+
+/* ===========================================
+   SLIDE 9: TAGS FIRE WORKFLOWS
+   =========================================== */
+.tagflow { display: grid; gap: 26px; justify-items: center; }
+.tagflow .chips { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+.tagflow .chip svg { width: 22px; height: 22px; }
+.down {
+    width: 2px;
+    height: 54px;
+    background: linear-gradient(var(--accent), var(--accent-deep));
+    position: relative;
+}
+.down::after {
+    content: "";
+    position: absolute;
+    left: -8px;
+    bottom: -4px;
+    border: 9px solid transparent;
+    border-top: 12px solid var(--accent-deep);
+}
+.mini-contact {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 24px 32px;
+    width: 760px;
+}
+.mini-contact .who b { display: block; font: 600 30px/1.1 var(--font-body); color: var(--navy); }
+.mini-contact .who span { font: 500 22px/1 var(--font-body); color: var(--soft); }
+.mini-contact .tags { margin-left: auto; display: flex; gap: 10px; }
+.mini-contact .tags .chip { font-size: 20px; padding: 10px 16px; }
+.workflow-card {
+    width: 760px;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, var(--navy), var(--royal));
+    color: #fff;
+    padding: 28px 34px;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 24px;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+.bolt {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: var(--green);
+    display: grid;
+    place-items: center;
+    color: var(--navy);
+}
+.bolt svg { width: 40px; height: 40px; }
+.workflow-card b { display: block; font: 700 36px/1.05 var(--font-display); letter-spacing: 0.04em; text-transform: uppercase; }
+.workflow-card span { font: 400 24px/1.3 var(--font-body); color: rgba(255, 255, 255, 0.75); }
+
+/* ===========================================
+   SLIDE 10: CUSTOM VALUES LIBRARY
+   =========================================== */
+.libflow { display: grid; grid-template-columns: 440px 150px 1fr; align-items: center; }
+.library {
+    border-radius: 22px;
+    background: linear-gradient(160deg, var(--navy), var(--royal));
+    padding: 32px;
+    display: grid;
+    gap: 14px;
+    color: #fff;
+    box-shadow: var(--shadow);
+}
+.library .lib-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font: 700 30px/1 var(--font-display);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.library .lib-head svg { width: 30px; height: 30px; color: var(--accent); }
+.libval {
+    display: grid;
+    gap: 8px;
+    padding: 18px 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.libval span { font: 500 19px/1 var(--font-body); letter-spacing: 0.06em; color: rgba(255, 255, 255, 0.55); }
+.libval b { font: 600 25px/1.1 var(--font-body); }
+.libval.on { border-color: var(--accent); background: rgba(79, 163, 255, 0.16); }
+.libval.on span::after { content: "  ✎ edit once"; color: var(--green); }
+.fan { width: 150px; height: 520px; }
+.msgs { display: grid; gap: 26px; }
+.msg {
+    background: #fff;
+    border: 1px solid var(--divider);
+    border-radius: 22px 22px 22px 6px;
+    padding: 24px 28px;
+    box-shadow: 0 14px 36px rgba(6, 26, 74, 0.1);
+    font: 400 25px/1.4 var(--font-body);
+    color: var(--dark);
+}
+.msg small {
+    display: block;
+    margin-bottom: 8px;
+    font: 600 17px/1 var(--font-body);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--soft);
+}
+.msg mark {
+    background: rgba(79, 163, 255, 0.18);
+    color: var(--accent-deep);
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+/* ===========================================
+   SLIDE 11: SIDE BY SIDE
+   =========================================== */
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.trio .card { padding: 48px 44px; display: grid; gap: 22px; align-content: start; }
+.trio .ico {
+    width: 92px;
+    height: 92px;
+    border-radius: 24px;
+    display: grid;
+    place-items: center;
+    background: var(--light);
+    color: var(--accent-deep);
+}
+.trio .ico svg { width: 50px; height: 50px; }
+.trio .kind { font: 600 24px/1 var(--font-body); letter-spacing: 0.16em; text-transform: uppercase; color: var(--soft); }
+.trio .word { font: 800 104px/0.9 var(--font-display); text-transform: uppercase; color: var(--navy); }
+.trio .q { font: 500 32px/1.3 var(--font-body); color: var(--dark); }
+.trio .ex { padding-top: 22px; border-top: 1px solid var(--divider); display: flex; gap: 12px; flex-wrap: wrap; }
+.trio .ex .chip { font-size: 22px; padding: 12px 18px; background: var(--light); }
+.trio .card.mid { border-color: rgba(43, 125, 224, 0.45); }
+
+/* ===========================================
+   SLIDE 13: PIPELINE STRIP
+   =========================================== */
+.stages { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
+.stage {
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid var(--divider);
+    padding: 20px;
+    display: grid;
+    gap: 14px;
+    align-content: start;
+    min-height: 196px;
+}
+.stage h4 {
+    display: flex;
+    justify-content: space-between;
+    font: 700 28px/1 var(--font-display);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--navy);
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--accent);
+}
+.stage:last-child h4 { border-color: var(--green); }
+.deal {
+    border-radius: 10px;
+    background: var(--light);
+    padding: 14px 16px;
+    font: 500 21px/1.25 var(--font-body);
+    color: var(--dark);
+}
+.deal span { display: block; color: var(--soft); font-size: 18px; margin-top: 4px; }
+.deal.moving { background: rgba(79, 163, 255, 0.16); box-shadow: inset 0 0 0 2px rgba(43, 125, 224, 0.45); }
+
+/* ===========================================
+   SLIDE 14: LIVE BUILD BRIDGE
+   =========================================== */
+.live-pill {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    background: rgba(124, 255, 122, 0.12);
+    border: 1px solid rgba(124, 255, 122, 0.4);
+    font: 600 22px/1 var(--font-body);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--green);
+}
+.live-pill i {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 0 0 rgba(124, 255, 122, 0.6);
+}
+.slide.visible .live-pill i { animation: pulse 1.8s infinite; }
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(124, 255, 122, 0.6); }
+    100% { box-shadow: 0 0 0 18px rgba(124, 255, 122, 0); }
+}
+.flow { display: grid; grid-template-columns: 1fr 56px 1fr 56px 1fr 56px 1fr; align-items: stretch; }
+.node {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 20px;
+    padding: 30px 28px;
+    display: grid;
+    gap: 14px;
+    align-content: start;
+}
+.node .k { font: 600 18px/1 var(--font-body); letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+.node b { font: 700 40px/1 var(--font-display); text-transform: uppercase; letter-spacing: 0.03em; }
+.node span { font: 400 23px/1.35 var(--font-body); color: rgba(255, 255, 255, 0.72); }
+.node.end { border-color: rgba(124, 255, 122, 0.55); background: rgba(124, 255, 122, 0.08); }
+.node.end .k { color: var(--green); }
+.join { display: grid; place-items: center; color: var(--accent); }
+.join svg { width: 40px; height: 40px; }
+
+/* ===========================================
+   SLIDE 15: NUMBER HEALTH
+   =========================================== */
+.checks { list-style: none; display: grid; gap: 22px; }
+.checks li {
+    display: grid;
+    grid-template-columns: 54px 1fr;
+    gap: 24px;
+    align-items: center;
+    padding: 22px 26px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid var(--divider);
+    font: 500 31px/1.3 var(--font-body);
+    color: var(--dark);
+}
+.checks li span { display: block; font: 400 23px/1.35 var(--font-body); color: var(--mid); margin-top: 4px; }
+.tick {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: rgba(124, 255, 122, 0.22);
+    color: #1F9E3A;
+}
+.tick svg { width: 30px; height: 30px; }
+
+/* ===========================================
+   SLIDE 16: HOMEWORK
+   =========================================== */
+.todo { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.todo .item {
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    gap: 26px;
+    align-items: center;
+    padding: 34px 36px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+.todo .box {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+    border: 3px solid var(--accent);
+    display: grid;
+    place-items: center;
+    color: var(--accent);
+    font: 800 30px/1 var(--font-display);
+}
+.todo b { display: block; font: 700 46px/1 var(--font-display); text-transform: uppercase; letter-spacing: 0.03em; }
+.todo span { font: 400 24px/1.35 var(--font-body); color: rgba(255, 255, 255, 0.7); }
+
+/* ===========================================
+   DECK UI (outside the slide design)
+   =========================================== */
+.progress {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    background: var(--accent);
+    z-index: 1000;
+    transition: width 0.4s var(--ease);
+}
+.edit-hotzone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    z-index: 10000;
+    cursor: pointer;
+}
+.edit-toggle {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 10001;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 0;
+    background: var(--navy);
+    color: #fff;
+    font: 600 14px/1 var(--font-body);
+    letter-spacing: 0.08em;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+.edit-toggle.show,
+.edit-toggle.active { opacity: 1; pointer-events: auto; }
+.edit-toggle.active { background: #1F9E3A; }
+body.editing [data-editable] { outline: 2px dashed rgba(79, 163, 255, 0.6); outline-offset: 6px; }
+</style>
+</head>
+<body>
+
+<!-- Waiz wordmark, defined once and reused via <use>. Fill follows currentColor. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="waiz" viewBox="0 80 1165 375">
+        <path d="M599.64 102.59C607.01 92.74 618.53 85.49 631.08 85.38C643.64 84.58 655.940 90.74 663.77 100.40C674.61 113.09 679.27 129.48 683.99 145.14C709.60 229.74 735.41 314.28 760.98 398.89C765.57 413.93 769.98 429.02 774.78 444.00C756.65 443.99 738.52 444.02 720.40 443.98C707.41 401.07 694.61 358.08 682.16 315.00C642.53 315.05 602.90 314.90 563.27 315.07C562.65 343.69 562.26 372.35 563.73 400.95C564.37 415.35 565.00 429.84 567.83 444.01C542.09 443.98 516.36 444.01 490.62 444.00C521.00 343.40 551.83 242.92 582.18 142.31C586.22 128.41 590.66 114.20 599.64 102.59M602.04 122.91C595.59 127.71 591.74 135.03 588.40 142.16C583.44 153.60 580.19 165.69 577.46 177.83C572.61 200.34 569.75 223.21 567.53 246.11C565.73 267.31 564.02 288.54 563.80 309.830C602.64 309.79 641.49 309.92 680.34 309.77C662.49 250.25 644.47 190.78 625.55 131.59C624.12 127.66 622.22 123.53 618.49 121.29C613.40 118.34 606.62 119.44 602.04 122.91Z"/>
+        <path d="M13.11 88.71C38.85 88.70 64.60 88.69 90.34 88.72C86.81 107.24 87.06 126.19 86.21 144.96C85.71 200.68 87.92 256.50 94.62 311.85C97.81 335.81 101.47 359.88 108.94 382.94C112.32 392.44 116.00 402.44 123.54 409.50C129.52 415.22 140.73 414.32 145.14 407.12C146.64 405.01 147.49 402.54 148.34 400.13C155.67 375.96 163.46 351.93 170.84 327.78C195.51 248.25 218.67 168.26 243.10 88.66C261.15 88.78 279.21 88.67 297.26 88.71C288.32 118.20 279.45 147.71 270.44 177.18C268.89 182.82 266.84 188.35 265.60 194.06C266.96 241.93 269.93 289.88 277.51 337.20C279.78 350.60 282.46 363.94 286.27 377.00C289.12 386.43 292.48 395.87 297.97 404.14C300.81 408.30 304.79 412.17 309.91 413.14C313.59 413.40 317.58 412.97 320.69 410.82C323.92 408.49 325.84 404.83 327.11 401.15C340.14 359.11 353.44 317.14 366.05 274.97C384.88 212.94 403.23 150.76 422.00 88.71C440.10 88.72 458.19 88.69 476.29 88.72C447.20 184.76 417.85 280.73 388.69 376.75C382.89 394.80 379.33 414.26 367.52 429.66C359.97 439.90 348.04 447.66 334.97 447.38C324.02 447.94 313.18 443.09 305.72 435.16C294.97 424.26 289.44 409.55 285.18 395.14C271.55 350.96 258.30 306.66 244.90 262.42C231.10 305.96 218.16 349.78 204.60 393.41C200.50 408.36 194.75 423.45 183.94 434.90C176.47 442.65 165.95 447.79 155.05 447.39C142.91 447.84 131.36 441.42 123.82 432.17C114.20 420.91 109.52 406.61 105.23 392.70C74.26 291.45 43.99 189.99 13.11 88.71Z"/>
+        <path d="M806.86 88.71C823.98 88.71 841.10 88.70 858.22 88.71C858.23 207.14 858.23 325.57 858.22 444.00C841.10 444.00 823.98 444.01 806.86 443.99C806.86 325.57 806.85 207.14 806.86 88.71Z"/>
+        <path d="M896.78 88.71C981.14 88.71 1065.49 88.70 1149.85 88.71C1084.15 205.48 1018.13 322.07 952.42 438.84C982.32 438.60 1012.47 440.12 1042.07 434.94C1065.42 431.04 1088.36 424.10 1109.56 413.48C1123.82 406.09 1137.61 397.32 1148.91 385.790C1149.03 405.19 1148.93 424.60 1148.97 444.00C1062.76 444.00 976.55 444.01 890.35 444.00C947.97 341.84 1005.66 239.72 1063.29 137.57C1071.51 123.19 1079.45 108.65 1087.82 94.36C1084.93 93.66 1081.94 93.930 1079.02 93.90C1060.02 93.98 1041.01 93.55 1022.05 94.76C986.68 97.10 950.85 106.03 921.27 126.22C912.38 132.23 904.09 139.16 896.75 146.99C896.83 127.56 896.78 108.13 896.78 88.71Z"/>
+    </symbol>
+</svg>
+
+<div class="deck-viewport">
+<main class="deck-stage" id="deckStage">
+
+<!-- ============================================================
+     SLIDE 1: TITLE
+     Notes: Welcome. One hour. Today is foundations, not every feature.
+     By the end you'll know the three building blocks and be able to
+     set up your own calendar and pipeline.
+     ============================================================ -->
+<section class="slide light title-slide" data-chrome="off">
+    <div class="copy">
+        <svg class="title-mark reveal" style="--d:.05s" aria-label="Waiz Media"><use href="#waiz"/></svg>
+        <div class="eyebrow reveal" style="--d:.15s">Loan Officer Bootcamp</div>
+        <h1 class="reveal" style="--d:.25s">GoHighLevel<br><span class="hl">Foundations</span></h1>
+        <p class="lead reveal" style="--d:.4s">The building blocks behind every automation, and how to set them up the right way.</p>
+        <div class="meta reveal" style="--d:.55s">
+            <span class="chip"><span class="dot" style="color:var(--accent)"></span>Tags</span>
+            <span class="chip"><span class="dot" style="color:var(--accent)"></span>Custom fields</span>
+            <span class="chip"><span class="dot" style="color:var(--accent)"></span>Custom values</span>
+            <span class="chip"><span class="dot" style="color:#1F9E3A"></span>Workflows</span>
+        </div>
+    </div>
+    <div class="art reveal-scale float" style="--d:.2s">
+        <img class="illo" src="assets/01-title.webp" alt="Modular CRM workspace assembling from blocks">
+    </div>
+    <div class="rule"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 2: A BLANK CANVAS
+     Notes: Most CRMs hand you their structure and you fit into it.
+     GHL hands you an empty workspace. That's the power: you build
+     exactly how you run your business. It's also why it feels harder
+     at first. Today is about building it clean.
+     ============================================================ -->
+<section class="slide light">
+    <div class="frame">
+        <div class="split">
+            <div class="stack">
+                <div class="eyebrow reveal" style="--d:.05s">What makes it different</div>
+                <h2 class="reveal" style="--d:.15s">A blank<br><span class="hl">canvas</span></h2>
+                <div class="versus">
+                    <div class="row reveal" style="--d:.3s">
+                        <div class="tag">Other CRMs</div>
+                        <p>You fit into their structure.</p>
+                    </div>
+                    <div class="row us reveal" style="--d:.42s">
+                        <div class="tag">GoHighLevel</div>
+                        <p>You build the structure yourself.</p>
+                    </div>
+                </div>
+                <div class="tradeoff reveal" style="--d:.56s">
+                    <div class="pro"><span class="dot"></span>Full control</div>
+                    <div class="con"><span class="dot"></span>More to learn</div>
+                </div>
+            </div>
+            <div class="reveal-scale" style="--d:.2s">
+                <img class="illo" src="assets/02-blank-canvas.webp" alt="A locked pre-built box beside an open grid where blocks are placed freely">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 3: SECTION - PROOF
+     Notes: Before we touch a single menu, here's what this
+     flexibility looks like when it's built right.
+     ============================================================ -->
+<section class="slide navy section-slide">
+    <div class="big-num">01</div>
+    <div class="copy">
+        <div class="eyebrow reveal" style="--d:.05s">Real client builds</div>
+        <h2 class="reveal" style="--d:.15s">What this<br><span class="hl">makes possible</span></h2>
+        <p class="lead reveal" style="--d:.3s">Two systems we built for loan officers. Nobody touches them after setup.</p>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 4: CASE STUDY - ANDY ZAO
+     Notes: When Andy closes a deal, a real handwritten thank-you
+     letter goes to the borrower's house, automatically, with a custom
+     message. Every birthday, a handwritten card goes out too. The
+     borrower feels remembered. Andy never lifts a finger.
+     ============================================================ -->
+<section class="slide light">
+    <div class="frame">
+        <div class="split">
+            <div class="stack">
+                <div class="eyebrow reveal" style="--d:.05s">Case study 01</div>
+                <h2 class="reveal" style="--d:.15s">Andy <span class="hl">Zao</span></h2>
+                <ol class="steps">
+                    <li class="reveal" style="--d:.3s"><div class="n">1</div><div class="t">Deal closes<small>Marked closed in GoHighLevel</small></div></li>
+                    <li class="reveal" style="--d:.42s"><div class="n">2</div><div class="t">Handwritten thank-you mailed<small>Custom message, sent to the borrower's home</small></div></li>
+                    <li class="reveal" style="--d:.54s"><div class="n">3</div><div class="t">Birthday card, every year<small>Handwritten, sent automatically</small></div></li>
+                </ol>
+            </div>
+            <div class="reveal-scale" style="--d:.2s">
+                <img class="illo" src="assets/04-handwritten-letter.webp" alt="Handwritten envelope with a wax seal at a home doorstep, with a birthday card">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 5: CASE STUDY - PERSONALIZED VIDEO
+     Notes: A client records one video. AI swaps in each lead's name
+     in their own voice, so it sounds made for that person. GHL knows
+     when the lead watches it, then sends a text a few minutes later.
+     It feels like perfect timing. It was built once.
+     ============================================================ -->
+<section class="slide light">
+    <div class="frame">
+        <div class="split flip">
+            <div class="reveal-scale" style="--d:.2s">
+                <img class="illo" src="assets/05-personal-video.webp" alt="Phone with a video play button, a viewed glow, and a text message appearing">
+            </div>
+            <div class="stack">
+                <div class="eyebrow reveal" style="--d:.05s">Case study 02</div>
+                <h2 class="reveal" style="--d:.15s">The <span class="hl">personal</span><br>video</h2>
+                <ol class="steps">
+                    <li class="reveal" style="--d:.3s"><div class="n">1</div><div class="t">Video says their name<small>Pre-recorded once. AI speaks each lead's name.</small></div></li>
+                    <li class="reveal" style="--d:.42s"><div class="n">2</div><div class="t">GoHighLevel sees the watch<small>You know exactly when they viewed it</small></div></li>
+                    <li class="reveal" style="--d:.54s"><div class="n">3</div><div class="t">Text lands minutes later<small>Feels like perfect timing</small></div></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 6: SECTION - THE BASICS
+     Notes: Those builds all sit on the same foundations. That's
+     what we cover today. Nothing fancy. Just the parts that make
+     everything else work.
+     ============================================================ -->
+<section class="slide navy section-slide">
+    <div class="big-num">02</div>
+    <div class="copy">
+        <div class="eyebrow reveal" style="--d:.05s">Today</div>
+        <h2 class="reveal" style="--d:.15s">The <span class="hl">foundations</span></h2>
+        <div class="chips reveal" style="--d:.3s">
+            <span class="chip">Account tour</span>
+            <span class="chip">Custom fields</span>
+            <span class="chip">Tags</span>
+            <span class="chip">Custom values</span>
+            <span class="chip">Calendars</span>
+            <span class="chip">Pipeline</span>
+            <span class="chip">First workflow</span>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 7: THE MAP
+     Notes: Here's where everything lives. Then switch to GHL and
+     tour in this order. Contacts, Calendars, Opportunities. Then
+     Settings for Tags, Custom Fields, Custom Values. Point out:
+     this gets messy fast if nobody owns it.
+     ============================================================ -->
+<section class="slide light">
+    <div class="frame">
+        <div class="split" style="grid-template-columns: 560px 1fr; gap: 90px;">
+            <div class="stack" style="gap: 30px;">
+                <div class="eyebrow reveal" style="--d:.05s">Account tour</div>
+                <h2 class="reveal" style="--d:.15s">The <span class="hl">map</span></h2>
+                <nav class="sidebar reveal" style="--d:.3s" aria-label="GoHighLevel sections">
+                    <div class="item on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-7 7-7s7 3 7 7"/><path d="M17 11a3 3 0 1 0 0-6M22 21c0-3-2-5.5-5-6"/></svg>Contacts</div>
+                    <div class="item on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Calendars</div>
+                    <div class="item on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h4v16H4zM10 4h4v11h-4zM16 4h4v7h-4z"/></svg>Opportunities</div>
+                    <div class="group">Settings</div>
+                    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>Tags</div>
+                    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg>Custom fields</div>
+                    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6"/></svg>Custom values</div>
+                </nav>
+            </div>
+            <div class="stack" style="gap: 26px;">
+                <div class="reveal-scale" style="--d:.25s">
+                    <img class="illo" src="assets/07-organized-vs-messy.webp" alt="Organized filing cabinet beside an overflowing messy drawer">
+                </div>
+                <h3 class="reveal" style="--d:.45s; text-align:center;">Organized now, <span class="hl">or messy later</span></h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 8: CUSTOM FIELDS
+     Notes: Custom fields are facts about the borrower. They're not
+     just notes. Because they're structured, you can filter on them
+     later, like everyone in Florida with a purchase goal for a
+     reactivation. And workflows can check them so you never text
+     someone who doesn't qualify. Quick note: a field is either on
+     the contact or on the opportunity. Pick carefully. You can't
+     switch it later.
+     ============================================================ -->
+<section class="slide light">
+    <div class="frame">
+        <div class="split" style="grid-template-columns: 720px 1fr; gap: 100px;">
+            <div class="stack">
+                <div class="eyebrow reveal" style="--d:.05s">Building block 01</div>
+                <h2 class="reveal" style="--d:.15s">Custom<br><span class="hl">fields</span></h2>
+                <p class="lead reveal" style="--d:.25s">Facts about the person.</p>
+                <ul class="bullets">
+                    <li class="reveal" style="--d:.35s">More than notes</li>
+                    <li class="reveal" style="--d:.45s">Filter for reactivations</li>
+                    <li class="reveal" style="--d:.55s">Keep workflows off unqualified leads</li>
+                </ul>
+            </div>
+            <div class="stack" style="gap: 28px;">
+                <div class="card contact reveal" style="--d:.3s">
+                    <div class="who">
+                        <div class="avatar">ME</div>
+                        <div><b>Margaret Ellis</b><span>Contact</span></div>
+                    </div>
+                    <div class="fields">
+                        <div class="field"><span>Loan purpose</span><b>Purchase</b></div>
+                        <div class="field"><span>Birthday</span><b>March 14</b></div>
+                        <div class="field focus"><span>Property state</span><b>Florida</b></div>
+                        <div class="field"><span>Est. home value</span><b>$420,000</b></div>
+                    </div>
+                </div>
+                <div class="filter-row reveal" style="--d:.5s">
+                    <span class="chip navy-chip">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 4h18l-7 9v6l-4 2v-8z"/></svg>
+                        Property state is Florida
+                    </span>
+                    <span class="arrow">→</span>
+                    <span class="chip accent">Your reactivation list</span>
+                </div>
+                <p class="footnote reveal" style="--d:.6s">Contact field or opportunity field? Choose once. It can't be switched later.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 9: TAGS
+     Notes: Tags log what happened: where the lead came from, that
+     they booked, that they no-showed. Two jobs. They start
+     workflows. And they let you filter by history and status later.
+     Keep names consistent or they pile up.
+     ============================================================ -->
+<section class="slide light">
+    <div class="frame">
+        <div class="split" style="grid-template-columns: 720px 1fr; gap: 100px;">
+            <div class="stack">
+                <div class="eyebrow reveal" style="--d:.05s">Building block 02</div>
+                <h2 class="reveal" style="--d:.15s"><span class="hl">Tags</span></h2>
+                <p class="lead reveal" style="--d:.25s">What happened.</p>
+                <ul class="bullets">
+                    <li class="reveal" style="--d:.35s">Log source, status, events</li>
+                    <li class="reveal" style="--d:.45s">Start workflows</li>
+                    <li class="reveal" style="--d:.55s">Filter by history</li>
+                </ul>
+            </div>
+            <div class="tagflow">
+                <div class="chips reveal" style="--d:.3s">
+                    <span class="chip">facebook lead</span>
+                    <span class="chip accent">booked</span>
+                    <span class="chip">no-show</span>
+                    <span class="chip">closed</span>
+                </div>
+                <div class="down reveal" style="--d:.42s"></div>
+                <div class="card mini-contact reveal" style="--d:.5s">
+                    <div class="avatar">ME</div>
+                    <div class="who"><b>Margaret Ellis</b><span>Tag added just now</span></div>
+                    <div class="tags"><span class="chip">facebook lead</span><span class="chip accent">booked</span></div>
+                </div>
+                <div class="down reveal" style="--d:.62s"></div>
+                <div class="workflow-card reveal" style="--d:.7s">
+                    <div class="bolt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+                    <div><b>Workflow starts</b><span>Trigger: tag "booked" added. Sends the confirmation text.</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 10: CUSTOM VALUES
+     Notes: Custom values are your library. One source of truth for
+     your own info: booking link, your name, NMLS, resource links.
+     Same for every contact, which is the difference from a custom
+     field. Use them in every message. Change one value and every
+     message that uses it updates.
+     ============================================================ -->
+<section class="slide light">
+    <div class="frame">
+        <div class="split" style="grid-template-columns: 600px 1fr; gap: 80px;">
+            <div class="stack">
+                <div class="eyebrow reveal" style="--d:.05s">Building block 03</div>
+                <h2 class="reveal" style="--d:.15s">Custom<br><span class="hl">values</span></h2>
+                <p class="lead reveal" style="--d:.25s">Your library.</p>
+                <ul class="bullets">
+                    <li class="reveal" style="--d:.35s">Same for every contact</li>
+                    <li class="reveal" style="--d:.45s">Links, name, NMLS</li>
+                    <li class="reveal" style="--d:.55s">Edit once, updates everywhere</li>
+                </ul>
+            </div>
+            <div class="libflow">
+                <div class="library reveal" style="--d:.3s">
+                    <div class="lib-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6"/></svg>Custom values</div>
+                    <div class="libval on"><span>BOOKING LINK</span><b>yourname.com/book</b></div>
+                    <div class="libval"><span>MY NAME</span><b>Your Name</b></div>
+                    <div class="libval"><span>NMLS</span><b>#123456</b></div>
+                </div>
+                <svg class="fan reveal" style="--d:.45s" viewBox="0 0 150 520" fill="none" aria-hidden="true">
+                    <path d="M0 220 C 80 220, 70 80, 150 80" stroke="#4FA3FF" stroke-width="3" stroke-dasharray="7 7"/>
+                    <path d="M0 220 C 80 220, 70 260, 150 260" stroke="#4FA3FF" stroke-width="3" stroke-dasharray="7 7"/>
+                    <path d="M0 220 C 80 220, 70 440, 150 440" stroke="#4FA3FF" stroke-width="3" stroke-dasharray="7 7"/>
+                    <circle cx="4" cy="220" r="7" fill="#7CFF7A"/>
+                </svg>
+                <div class="msgs">
+                    <div class="msg reveal" style="--d:.55s"><small>New lead text</small>Hi Margaret! Grab a time here: <mark>yourname.com/book</mark></div>
+                    <div class="msg reveal" style="--d:.65s"><small>Reminder text</small>See you tomorrow. Need to move it? <mark>yourname.com/book</mark></div>
+                    <div class="msg reveal" style="--d:.75s"><small>Email signature</small><mark>Your Name</mark> · NMLS <mark>#123456</mark></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 11: SIDE BY SIDE
+     Notes: Quick test. Birthday? Custom field. Person. Booked?
+     Tag. Event. Your booking link? Custom value. Library. If you
+     remember one slide, make it this one.
+     ============================================================ -->
+<section class="slide light">
+    <div class="frame" style="display:grid; align-content:center; gap:60px;">
+        <div style="display:grid; gap:24px;">
+            <div class="eyebrow reveal" style="--d:.05s">Remember this</div>
+            <h2 class="reveal" style="--d:.15s">Three blocks. <span class="hl">Three jobs.</span></h2>
+        </div>
+        <div class="trio">
+            <div class="card reveal" style="--d:.3s">
+                <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+                <div class="kind">Custom field</div>
+                <div class="word">Person</div>
+                <div class="q">Who they are</div>
+                <div class="ex"><span class="chip">Birthday</span><span class="chip">Loan purpose</span></div>
+            </div>
+            <div class="card mid reveal" style="--d:.42s">
+                <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg></div>
+                <div class="kind">Tag</div>
+                <div class="word"><span class="hl">Event</span></div>
+                <div class="q">What happened</div>
+                <div class="ex"><span class="chip">booked</span><span class="chip">no-show</span></div>
+            </div>
+            <div class="card reveal" style="--d:.54s">
+                <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg></div>
+                <div class="kind">Custom value</div>
+                <div class="word">Library</div>
+                <div class="q">What you always share</div>
+                <div class="ex"><span class="chip">Booking link</span><span class="chip">NMLS</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 12: CALENDAR
+     Notes: Switch to GHL and build a calendar live. Name it, set
+     availability, set the appointment length. Copy the booking link
+     and save it as a custom value. Now every message uses that one
+     link.
+     ============================================================ -->
+<section class="slide light">
+    <div class="frame">
+        <div class="split flip">
+            <div class="reveal-scale" style="--d:.2s">
+                <img class="illo" src="assets/12-calendar.webp" alt="Calendar card with a confirmed booking check">
+            </div>
+            <div class="stack">
+                <div class="eyebrow reveal" style="--d:.05s">Build it live</div>
+                <h2 class="reveal" style="--d:.15s">Your first<br><span class="hl">calendar</span></h2>
+                <ul class="bullets">
+                    <li class="reveal" style="--d:.3s">Set availability and length</li>
+                    <li class="reveal" style="--d:.4s">Save the link as a custom value</li>
+                    <li class="reveal" style="--d:.5s">Bookings feed your pipeline</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 13: PIPELINE
+     Notes: The pipeline is where deals live. Each stage tells the
+     story of the file. Build one live. Reminder: facts about the deal,
+     like loan amount, go on the opportunity. Facts about the person
+     stay on the contact.
+     ============================================================ -->
+<section class="slide light">
+    <div class="frame" style="display:grid; grid-template-rows: 1fr auto; gap: 40px;">
+        <div class="split" style="grid-template-columns: 780px 1fr; gap: 40px;">
+            <div class="stack" style="gap: 28px;">
+                <div class="eyebrow reveal" style="--d:.05s">Build it live</div>
+                <h2 class="reveal" style="--d:.15s">Your <span class="hl">pipeline</span></h2>
+                <ul class="bullets" style="gap: 20px;">
+                    <li class="reveal" style="--d:.3s">Stages tell the story of the file</li>
+                    <li class="reveal" style="--d:.4s">Deal facts live on the opportunity</li>
+                    <li class="reveal" style="--d:.5s">Person facts stay on the contact</li>
+                </ul>
+            </div>
+            <div class="reveal-scale" style="--d:.2s; align-self:center;">
+                <img class="illo" src="assets/13-pipeline.webp" alt="Deal cards moving along a track toward a house key" style="max-height: 470px; width:auto; margin-left:auto;">
+            </div>
+        </div>
+        <div class="stages">
+            <div class="stage reveal" style="--d:.4s"><h4>New lead <span>3</span></h4><div class="deal">M. Ellis<span>Purchase · FL</span></div></div>
+            <div class="stage reveal" style="--d:.48s"><h4>Contacted <span>2</span></h4><div class="deal moving">R. Patel<span>Refi · TX</span></div></div>
+            <div class="stage reveal" style="--d:.56s"><h4>Booked <span>2</span></h4><div class="deal">J. Moore<span>Purchase · AZ</span></div></div>
+            <div class="stage reveal" style="--d:.64s"><h4>Application <span>1</span></h4><div class="deal">L. Chen<span>Refi · CA</span></div></div>
+            <div class="stage reveal" style="--d:.72s"><h4>Closed <span>1</span></h4><div class="deal">D. Rivera<span>Purchase · NV</span></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 14: LIVE BUILD (bridge, stays up during freeflow)
+     Notes: Leave this up and build in GHL. New lead comes in, they
+     asked to hear from you. Add a source tag. Create the opportunity
+     in New Lead. Send one text that pulls the booking link and your
+     name from custom values. Point back to the three blocks as you go.
+     ============================================================ -->
+<section class="slide navy">
+    <div class="frame" style="display:grid; grid-template-rows: auto 1fr; gap: 60px;">
+        <div style="display:grid; grid-template-columns: 1fr 620px; gap: 60px; align-items:center;">
+            <div class="stack" style="gap: 30px;">
+                <span class="live-pill reveal" style="--d:.05s"><i></i>Live in GoHighLevel</span>
+                <h2 class="reveal" style="--d:.15s">Your first<br><span class="hl">workflow</span></h2>
+                <p class="lead reveal" style="--d:.25s">All three blocks working together.</p>
+            </div>
+            <div class="illo-card reveal-scale" style="--d:.2s">
+                <img src="assets/14-automation.webp" alt="Gears and flow pipes connecting a lead card to a text message">
+            </div>
+        </div>
+        <div class="flow" style="align-self:end;">
+            <div class="node reveal" style="--d:.35s"><div class="k">Trigger</div><b>New lead</b><span>They asked to hear from you</span></div>
+            <div class="join reveal" style="--d:.4s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="node reveal" style="--d:.45s"><div class="k">Tag</div><b>Source tag</b><span>Logs where they came from</span></div>
+            <div class="join reveal" style="--d:.5s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="node reveal" style="--d:.55s"><div class="k">Pipeline</div><b>Opportunity</b><span>Created in New Lead</span></div>
+            <div class="join reveal" style="--d:.6s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="node end reveal" style="--d:.65s"><div class="k">Action</div><b>First text</b><span>Booking link + your name from custom values</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 15: KEEP YOUR NUMBER HEALTHY
+     Notes: Your texting number is an asset. Carriers watch it. Get
+     it registered (A2P) under your real business details. Only text
+     people who opted in. For lending, carriers want appointment and
+     file updates, not promotional blasts. Never upload a bought list.
+     One bad blast can get you filtered or shut off.
+     ============================================================ -->
+<section class="slide light">
+    <div class="frame">
+        <div class="split flip" style="grid-template-columns: 1fr 820px;">
+            <div class="reveal-scale" style="--d:.2s">
+                <img class="illo" src="assets/15-number-health.webp" alt="Phone protected inside a shield with strong signal">
+            </div>
+            <div class="stack" style="gap: 30px;">
+                <div class="eyebrow reveal" style="--d:.05s">Protect the asset</div>
+                <h2 class="reveal" style="--d:.15s; font-size: 98px;">Keep your number<br><span class="hl">healthy</span></h2>
+                <ul class="checks">
+                    <li class="reveal" style="--d:.3s"><div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg></div><div>Registered to your real business<span>A2P details match your legal records</span></div></li>
+                    <li class="reveal" style="--d:.4s"><div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg></div><div>Only text people who opted in<span>Consent first, every time</span></div></li>
+                    <li class="reveal" style="--d:.5s"><div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg></div><div>Updates, not blasts<span>Appointments and file updates</span></div></li>
+                </ul>
+                <div class="reveal" style="--d:.6s"><span class="chip warn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>Never upload bought lists</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 16: YOUR HOMEWORK
+     Notes: Before next session: decide your own fields and tags.
+     No master list, build what fits how you work. Build one
+     calendar. Build one pipeline. Next time we copy the workflow
+     step by step.
+     ============================================================ -->
+<section class="slide navy">
+    <div class="frame" style="display:grid; align-content:center; gap: 60px;">
+        <div style="display:grid; gap: 26px;">
+            <div class="eyebrow reveal" style="--d:.05s">Before next session</div>
+            <h2 class="reveal" style="--d:.15s">Your <span class="hl">homework</span></h2>
+        </div>
+        <div class="todo">
+            <div class="item reveal" style="--d:.3s"><div class="box">1</div><div><b>Choose your fields</b><span>The facts you need on every borrower</span></div></div>
+            <div class="item reveal" style="--d:.38s"><div class="box">2</div><div><b>Choose your tags</b><span>Sources, statuses, key events</span></div></div>
+            <div class="item reveal" style="--d:.46s"><div class="box">3</div><div><b>Build one calendar</b><span>Save its link as a custom value</span></div></div>
+            <div class="item reveal" style="--d:.54s"><div class="box">4</div><div><b>Build one pipeline</b><span>Stages that match your file's story</span></div></div>
+        </div>
+        <p class="lead reveal" style="--d:.65s; max-width:none;">Next session: <span class="grow" style="font-weight:600;">we build the workflow together, step by step.</span></p>
+    </div>
+</section>
+
+</main>
+</div>
+
+<div class="progress" id="progress"></div>
+<div class="edit-hotzone" id="editHotzone"></div>
+<button class="edit-toggle" id="editToggle" title="Edit mode (E)">EDIT</button>
+
+<script>
+/* ===========================================
+   SLIDE PRESENTATION CONTROLLER
+   Arrows / Space / PageUp-Down / Home / End, wheel, swipe.
+   URL hash keeps your place on reload (#5 = slide 5).
+   =========================================== */
+class SlidePresentation {
+    constructor() {
+        this.slides = [...document.querySelectorAll('.slide')];
+        this.stage = document.getElementById('deckStage');
+        this.progress = document.getElementById('progress');
+        this.current = 0;
+        this.injectChrome();
+        this.setupStageScale();
+        this.setupKeyboardNav();
+        this.setupWheelNav();
+        this.setupTouchNav();
+        const fromHash = parseInt(location.hash.slice(1), 10);
+        this.show(Number.isFinite(fromHash) ? fromHash - 1 : 0);
+    }
+
+    /* Adds the wordmark + page number footer to every slide except the title */
+    injectChrome() {
+        const total = String(this.slides.length).padStart(2, '0');
+        this.slides.forEach((slide, i) => {
+            if (slide.dataset.chrome === 'off') return;
+            const el = document.createElement('div');
+            el.className = 'chrome';
+            el.innerHTML =
+                `<svg class="mark" aria-label="Waiz Media"><use href="#waiz"/></svg>` +
+                `<span class="deck-name">GoHighLevel Foundations</span>` +
+                `<span class="num">${String(i + 1).padStart(2, '0')} / ${total}</span>`;
+            slide.appendChild(el);
+        });
+    }
+
+    setupStageScale() {
+        const scale = () => {
+            const f = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+            const x = (window.innerWidth - 1920 * f) / 2;
+            const y = (window.innerHeight - 1080 * f) / 2;
+            this.stage.style.transform = `translate(${x}px, ${y}px) scale(${f})`;
+        };
+        scale();
+        window.addEventListener('resize', scale);
+    }
+
+    setupKeyboardNav() {
+        document.addEventListener('keydown', (e) => {
+            if (e.target.isContentEditable) return;
+            if (['ArrowRight', 'ArrowDown', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); this.show(this.current + 1); }
+            if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); this.show(this.current - 1); }
+            if (e.key === 'Home') this.show(0);
+            if (e.key === 'End') this.show(this.slides.length - 1);
+        });
+    }
+
+    setupWheelNav() {
+        let locked = false;
+        window.addEventListener('wheel', (e) => {
+            if (locked || Math.abs(e.deltaY) < 30 || document.body.classList.contains('editing')) return;
+            locked = true;
+            this.show(this.current + (e.deltaY > 0 ? 1 : -1));
+            setTimeout(() => { locked = false; }, 700);
+        }, { passive: true });
+    }
+
+    setupTouchNav() {
+        let startX = null;
+        window.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+        window.addEventListener('touchend', (e) => {
+            if (startX === null) return;
+            const dx = e.changedTouches[0].clientX - startX;
+            if (Math.abs(dx) > 50) this.show(this.current + (dx < 0 ? 1 : -1));
+            startX = null;
+        });
+    }
+
+    show(index) {
+        this.current = Math.max(0, Math.min(index, this.slides.length - 1));
+        this.slides.forEach((s, i) => {
+            s.classList.toggle('active', i === this.current);
+            s.classList.toggle('visible', i === this.current);
+        });
+        this.progress.style.width = `${((this.current + 1) / this.slides.length) * 100}%`;
+        history.replaceState(null, '', `#${this.current + 1}`);
+    }
+}
+
+/* ===========================================
+   INLINE EDITING
+   Hover the top-left corner or press E. Click any text to edit.
+   Edits auto-save in this browser. Ctrl/Cmd+S downloads a copy.
+   =========================================== */
+class InlineEditor {
+    constructor() {
+        this.key = 'ghl-bootcamp-edits-v1';
+        this.isActive = false;
+        this.targets = [...document.querySelectorAll(
+            '.slide h1, .slide h2, .slide h3, .slide .eyebrow, .slide .lead, .slide li, .slide .chip, ' +
+            '.slide .field b, .slide .msg, .slide .libval b, .slide .node b, .slide .node span, ' +
+            '.slide .todo b, .slide .todo span, .slide .versus p, .slide .q, .slide .deal'
+        )];
+        this.targets.forEach((el, i) => { el.dataset.editable = i; });
+        this.restore();
+        this.bindUI();
+    }
+
+    toggleEditMode() {
+        this.isActive = !this.isActive;
+        document.body.classList.toggle('editing', this.isActive);
+        document.getElementById('editToggle').classList.toggle('active', this.isActive);
+        document.getElementById('editToggle').textContent = this.isActive ? 'DONE' : 'EDIT';
+        this.targets.forEach((el) => { el.contentEditable = this.isActive; });
+        if (!this.isActive) this.save();
+    }
+
+    save() {
+        const data = {};
+        this.targets.forEach((el) => { data[el.dataset.editable] = el.innerHTML; });
+        localStorage.setItem(this.key, JSON.stringify(data));
+    }
+
+    restore() {
+        const raw = localStorage.getItem(this.key);
+        if (!raw) return;
+        try {
+            const data = JSON.parse(raw);
+            this.targets.forEach((el) => {
+                if (data[el.dataset.editable] !== undefined) el.innerHTML = data[el.dataset.editable];
+            });
+        } catch (e) { localStorage.removeItem(this.key); }
+    }
+
+    download() {
+        this.save();
+        const clone = document.documentElement.cloneNode(true);
+        clone.querySelectorAll('.chrome').forEach((c) => c.remove());
+        clone.querySelectorAll('[contenteditable]').forEach((c) => c.removeAttribute('contenteditable'));
+        clone.querySelector('body').classList.remove('editing');
+        const blob = new Blob(['<!DOCTYPE html>\n' + clone.outerHTML], { type: 'text/html' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'index.html';
+        a.click();
+    }
+
+    bindUI() {
+        const toggle = document.getElementById('editToggle');
+        const hotzone = document.getElementById('editHotzone');
+        let hideTimeout = null;
+        toggle.addEventListener('click', () => this.toggleEditMode());
+        hotzone.addEventListener('click', () => this.toggleEditMode());
+        hotzone.addEventListener('mouseenter', () => { clearTimeout(hideTimeout); toggle.classList.add('show'); });
+        hotzone.addEventListener('mouseleave', () => {
+            hideTimeout = setTimeout(() => { if (!this.isActive) toggle.classList.remove('show'); }, 400);
+        });
+        toggle.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
+        toggle.addEventListener('mouseleave', () => {
+            hideTimeout = setTimeout(() => { if (!this.isActive) toggle.classList.remove('show'); }, 400);
+        });
+        document.addEventListener('keydown', (e) => {
+            if ((e.key === 'e' || e.key === 'E') && !e.target.isContentEditable) this.toggleEditMode();
+            if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 's') { e.preventDefault(); this.download(); }
+        });
+        document.addEventListener('input', () => { if (this.isActive) this.save(); });
+    }
+}
+
+new SlidePresentation();
+new InlineEditor();
+</script>
+</body>
+</html>
