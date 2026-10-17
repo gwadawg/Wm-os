@@ -133,7 +133,7 @@ A Waiz Media design is on-brand when it:
 ## Related Docs
 
 - [Waiz Media Identity Core](doctrine-identity-core-april-26.md)
-- [Money Model And Offer Architecture](overview-money-model-april-26.md)
+- [Money Model](overview-money-model.md)
 - [Company Index](README.md)
 
 ## Open Questions

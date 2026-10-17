@@ -437,7 +437,7 @@ Break the **guarantee objection** — what Waiz guarantees vs. competitor “pay
 
 ### Compliance (read before live use)
 
-This video states **specific guarantee numbers** (e.g. 50 qualified conversations in 90 days, work-for-free clause). Per [Money Model](../../company/overview-money-model-april-26.md), pricing and deal terms are **founder-only**. Confirm current offer language on every call and in ad copy; do not let AI invent or drift from the live agreement.
+This video states **specific guarantee numbers** (e.g. 50 qualified conversations in 90 days, work-for-free clause). Per [Money Model](../../company/overview-money-model.md), pricing and deal terms are **founder-only**. Confirm current offer language on every call and in ad copy; do not let AI invent or drift from the live agreement.
 
 ### Objection / belief mapping
 

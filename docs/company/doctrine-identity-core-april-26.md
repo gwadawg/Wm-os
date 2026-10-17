@@ -3,7 +3,7 @@ title: Waiz Media Identity Core
 domain: company
 owner: operations
 status: active
-last_updated: 2026-05-17
+last_updated: 2026-10-16
 review_cycle: quarterly
 source_document: source-docs/waiz-drive-export/Waiz Media OS/00 _ Company DNA/Doctrine _ Identity Core _ April 26.docx
 ---
@@ -26,7 +26,10 @@ Operations owns this document. Company leadership should review it quarterly or 
 
 ## Company Snapshot
 
-Waiz Media is a marketing agency and call center hybrid that builds end-to-end client acquisition systems exclusively for reverse mortgage loan officers.
+Waiz Media is a marketing agency and call center hybrid that builds
+client acquisition systems for loan officers on two product lanes:
+DSCR and reverse mortgage. Offer scope and pricing shape live in the
+[money model](overview-money-model.md).
 
 The company handles the front end of a loan officer's business:
 
@@ -36,7 +39,9 @@ The company handles the front end of a loan officer's business:
 - CRM infrastructure.
 - Follow-up and nurture systems.
 
-Waiz Media's specialization in reverse mortgage loan officers is the company's core competitive advantage. The company does not position itself as a generic marketing agency or lead vendor.
+Specialization in DSCR and reverse mortgage is the competitive
+advantage. The company does not position itself as a generic marketing
+agency or a shared-lead vendor.
 
 ## Origin Story
 
@@ -46,7 +51,11 @@ The founder entered the mortgage space early, built a foundation in sales and cl
 
 The business originally served loan officers broadly. After working with a reverse mortgage loan officer, Waiz Media identified a bigger opportunity in the reverse mortgage market. The product was not lacking demand; it was constrained by poor marketing, stigma, and outdated acquisition strategies. Because reverse mortgage economics were stronger and the niche was underserved, Waiz Media deliberately pivoted to specialize in reverse mortgage acquisition.
 
-That specialization now defines the company.
+That reverse-mortgage specialization is the origin. The current
+product lanes are DSCR and reverse mortgage. Offer detail is in the
+[money model](overview-money-model.md). Mission and vision
+below still describe the reverse-mortgage origin and have not been
+rewritten for DSCR.
 
 ## Mission
 
@@ -150,7 +159,7 @@ Decisions should protect:
 
 ## Unique Differentiator
 
-Waiz Media is focused exclusively on reverse mortgage loan officers.
+Waiz Media is focused on DSCR and reverse mortgage loan officers.
 
 This specialization allows the company to:
 
@@ -163,7 +172,7 @@ Waiz Media does not sell leads. It builds acquisition engines.
 
 ## Who We Serve
 
-Waiz Media serves reverse mortgage loan officers who want to build predictable, scalable, modern businesses.
+Waiz Media serves DSCR and reverse mortgage loan officers who want to build predictable, scalable, modern businesses.
 
 The company's primary customer is the loan officer, not homeowners or the industry at large. Everything in the operating model should support that commitment.
 
@@ -186,9 +195,17 @@ Use this language:
 
 ## What Waiz Media Is Not
 
-Waiz Media is not a pay-later, revenue-share, or performance-only model. Serious operators invest in growth, and both sides need skin in the game.
+Waiz Media is not a pay-later or revenue-share model, and it is not
+performance-only. New clients pay a startup fee and a retainer. A
+conversation fee or a percent of ad spend can sit on top of that.
+Serious operators invest in growth, and both sides need skin in the
+game. The shapes are in the
+[money model](overview-money-model.md).
 
-Waiz Media is not a lead vendor. The company does not sell lists, shared leads, or plug-and-play contacts.
+Waiz Media is not a shared-lead vendor. The company does not sell
+lists, shared lead pools, or plug-and-play contacts. Leads produced
+for a client belong to that client. The leads-only offer is a
+marketing and funnel system with lead delivery, not a lead list.
 
 Waiz Media is not a generalist agency. It does not serve real estate agents, forward mortgage loan officers, insurance agents, or other niches.
 
@@ -218,7 +235,9 @@ Key principle: education-first marketing builds trust and creates real demand.
 
 ### Reverse Sales Assistant
 
-Waiz Media's team calls every new inbound lead, pre-qualifies the prospect, handles objections, and books appointments or live transfers directly onto the loan officer's calendar.
+On the core offer, Waiz Media's team calls new inbound leads,
+pre-qualifies them, and live-transfers or books the loan officer's
+calendar. The leads-only offer does not include this.
 
 Loan officers should wake up to appointments, not cold lead lists.
 
@@ -234,13 +253,17 @@ Key principle: automation creates consistency and maximizes lead value.
 
 | Term | Definition |
 |---|---|
-| DFY | Done-for-you. The core high-ticket service model where Waiz Media handles the acquisition system. |
+| Core offer | The forward full-service offer: marketing, WM Apex funnels, CRM, AI booking, call center, prequalification, live transfer or calendar booking, playbooks, reporting, and monthly strategy. Priced as startup, retainer, and pay per legitimate conversation. |
 | LO | Loan officer. Waiz Media's primary client. |
 | Reverse Sales Assistant | Waiz Media's call center team that handles lead qualification and appointment booking for the loan officer. |
 | Acquisition Engine / System | The full-service solution: ads, qualification, AI, CRM, support, and reporting. Preferred over "lead gen service." |
 | GHL | GoHighLevel, the CRM platform used for client accounts. |
 | Pre-seasoned Lead | A lead who has consumed educational content and arrives with reduced objections. |
-| Boot Camp | The 5-Day Ad-Building Boot Camp for prospects not ready for DFY. |
+| Leads-only offer | Working name. Marketing system, funnel development, and nurture playbooks. Optional Waiz CRM with a basic drip, or a lead drop into the client's CRM. No booking and no live transfer. Priced as startup, retainer, and a percent of monthly ad spend. |
+| WM Apex funnels | Proprietary method for the custom high-level landing pages included on the core offer. |
+| Pay per conversation | The third pricing leg on the core offer. Billed only for a legitimate introduction or conversation. |
+| DFY | Legacy name for the done-for-you acquisition system. New-client language is the core offer. |
+| Boot Camp | Legacy downsell: the 5-Day Ad-Building Boot Camp. Not part of the forward two-offer model unless Gabe revives it. |
 | Volume Imperative | The belief that qualified conversation volume is the primary business constraint for loan officers. |
 | Leaky Bucket | A poor-quality ad or follow-up process that wastes leads regardless of volume. |
 | LTV | Lifetime value of a client. A core metric for evaluating the community-to-DFY upsell strategy. |
@@ -249,7 +272,7 @@ Key principle: automation creates consistency and maximizes lead value.
 
 Company messaging, strategy, and operating decisions should:
 
-- Reinforce specialization in reverse mortgage loan officers.
+- Reinforce specialization in DSCR and reverse mortgage loan officers.
 - Prioritize qualified conversation volume.
 - Avoid commodity lead language.
 - Preserve clarity around what Waiz Media is and is not.
@@ -268,7 +291,7 @@ Suggested metrics tied to this doctrine:
 
 ## Related Docs
 
-- [Money Model And Offer Architecture](overview-money-model-april-26.md)
+- [Money Model](overview-money-model.md)
 - [Brand And Visual Identity](doctrine-brand-and-visual-identity-april-26.md)
 - [Company Index](README.md)
 

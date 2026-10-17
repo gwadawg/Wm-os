@@ -13,7 +13,7 @@ artifact_type: reference
 
 ## Purpose
 
-Historical AI instructions from Drive; compare with root CLAUDE.md.
+Historical AI instructions from Drive; compare with root CLAUDE.md. The offer section in this file is the April 2026 model. The current model is [overview-money-model.md](company/overview-money-model.md).
 
 ## Scope
 

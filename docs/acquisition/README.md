@@ -61,7 +61,7 @@ Offer, sales, marketing, lead generation, lead stages, objection handling, scrip
 - [Outbound](outbound/README.md) — LinkedIn LO outreach (`draft`) — [manifest](outbound/linkedin/manifest.yaml)
 - [Marketing](marketing/README.md) — Pre-call objection videos (`draft`), case study email framework, Money Tales SOP (`draft`)
 - [Intelligence](intelligence/README.md) — Sales Intelligence Bible (`active`)
-- [Offer](offer/README.md) — see [company money model](../company/overview-money-model-april-26.md)
+- [Offer](offer/README.md) — [money model](../company/overview-money-model.md) and [client offers](offer/client-offers.md)
 - [WM Sales Call Tracker](wm-sales-call-tracker.md) — spreadsheet wrapper (`draft`)
 - [Sales KPI Thresholds](../kpis/acquisition/sales-kpi-thresholds.md) — acquisition trigger guardrails (`draft`)
 

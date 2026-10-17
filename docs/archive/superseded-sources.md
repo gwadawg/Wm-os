@@ -15,7 +15,7 @@ Raw files remain in `waiz-os-archive/waiz-drive-export/` for history. **Do not u
 
 | Superseded source (Drive) | Use instead |
 |---------------------------|-------------|
-| `00 _ Company DNA/Archive/MASTER – WM Money Model 03.36.docx` | [Money Model And Offer Architecture](../company/overview-money-model-april-26.md) |
+| `00 _ Company DNA/Archive/MASTER – WM Money Model 03.36.docx` | [Money Model](../company/overview-money-model.md). The April 2026 markdown is history in [company drafts](../company/drafts/overview-money-model-april-26.md). |
 | `00 _ Company DNA/Archive/MASTER – Company Strategy, Beliefs & Positioning.docx` | [Identity Core](../company/doctrine-identity-core-april-26.md) |
 | `00 _ Company DNA/Archive/MASTER - Overall Company Doc #1.docx` | [Identity Core](../company/doctrine-identity-core-april-26.md) |
 | `00 _ Company DNA/Archive/Company Mission Statement.docx` | [Identity Core](../company/doctrine-identity-core-april-26.md) — mission section |

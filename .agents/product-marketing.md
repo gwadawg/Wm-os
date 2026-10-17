@@ -1,6 +1,6 @@
 # Product Marketing Context — Waiz Media
 
-*Last updated: 2026-06-18*
+*Last updated: 2026-10-16*
 *Status: draft — auto-drafted from OS docs; founder review required before treating as canonical*
 
 ## Product Overview
@@ -182,25 +182,34 @@
 
 ## Pricing Model
 
-> Full pricing architecture including value stacks, ad spend kicker tables, and ROI calculators:
-> [docs/acquisition/offer/pricing-architecture.md](../docs/acquisition/offer/pricing-architecture.md)
+How Waiz gets paid:
+[docs/company/overview-money-model.md](../docs/company/overview-money-model.md).
+What each offer includes:
+[docs/acquisition/offer/client-offers.md](../docs/acquisition/offer/client-offers.md).
 
-**Business model:** Retainer + ad spend performance kicker. Team tiers add a per-loan performance fee that activates above a volume threshold. A rev-share upgrade is available for proven accounts (6+ months, clean attribution).
+Do not quote dollar amounts in content. Amounts are founder-only.
 
-**Tier summary:**
+**Lanes:** DSCR and reverse mortgage. Same pricing shape on both.
 
-| Tier | LO Count | Min Ad Spend | Setup | Monthly | Ad Spend Kicker | Performance Kicker |
-|---|---|---|---|---|---|---|
-| Solo | 1 LO | $2,000/month | $2,500 | $1,689 | 10% over $4k | None |
-| Team Starter | 2–4 LOs | $4,000/month | $3,500 | $3,200 | 8% over $8k combined | $500/funded loan after 4+ loans/month |
-| Team Growth | 5–10 LOs | $10,000/month | $5,000 | $5,500 | 7% over $15k combined | $600/funded loan after 8+ loans/month |
-| Branch | 10–20+ LOs | $20,000/month | $7,500 | $8,000–12,000 (custom) | 5–6% over $25k (negotiated) | Custom |
+**Core offer:** Startup fee, retainer, and pay per legitimate
+conversation. Includes lead generation, WM Apex funnels, CRM, AI
+booking agent, call center, prequalification, live transfer or
+calendar booking, playbooks, support, reporting, and a monthly
+strategy session.
 
-**Performance rev-share option (proven accounts):** Reduces base retainer to $1,500–2,500/month in exchange for a $1,200–1,500/funded loan fee with no threshold. Requires 6+ months on standard retainer, clean attribution, and a signed addendum. Gabe must approve. Full details in [pricing-architecture.md](../docs/acquisition/offer/pricing-architecture.md).
+**Leads-only offer** (name not final): Startup fee, retainer, and a
+percent of monthly ad spend. Includes the marketing system, funnel
+development, and nurture playbooks. Optional Waiz CRM with a basic
+drip, or a lead drop into the client's CRM. No booking and no live
+transfer.
 
-**Performance kicker framing:** The kicker is positioned as a risk-removal close — the client only pays more when the team closes loans above the threshold. It aligns incentives and makes the retainer feel like a floor, not a ceiling.
+**Legacy:** The team-tier sheet
+([pricing-architecture.md](../docs/acquisition/offer/pricing-architecture.md))
+is not the new-client quote. Existing clients stay on their signed
+structure.
 
-**Pricing authority:** Gabe owns all pricing decisions. Setters never quote or discuss pricing.
+**Pricing authority:** Gabe owns all pricing decisions. Setters never
+quote or discuss pricing.
 
 ---
 

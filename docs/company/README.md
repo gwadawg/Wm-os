@@ -3,7 +3,7 @@ title: Company
 domain: company
 owner: operations
 status: active
-last_updated: 2026-05-17
+last_updated: 2026-10-16
 review_cycle: monthly
 ---
 
@@ -31,7 +31,8 @@ Identity, money model, brand, principles, decision logs, and company-level doctr
 ## Canonical Docs
 
 - [Waiz Media Identity Core](doctrine-identity-core-april-26.md): company identity, origin story, mission, vision, operating principles, positioning boundaries, voice, and terminology.
-- [Money Model And Offer Architecture](overview-money-model-april-26.md): offer structure, buyer profiles, routing logic, downsell rules, and long-term money model.
+- [Money Model](overview-money-model.md): how Waiz gets paid. Two lanes (DSCR and reverse mortgage) and two new-client offers. Draft as of 2026-10-16. Dollar amounts stay on the founder pricing sheet. Deliverables: [Client Offers](../acquisition/offer/client-offers.md).
+- [Company Drafts](drafts/README.md): the April 2026 money model, kept for history.
 - [Brand And Visual Identity](doctrine-brand-and-visual-identity-april-26.md): color palette, design rules, visual style, typography direction, and AI design prompt baseline.
 
 ## Open Gaps

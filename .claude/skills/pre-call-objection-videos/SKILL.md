@@ -30,7 +30,7 @@ description: >-
 1. Follow `load_order` in the manifest.
 2. Match prospect objection or funnel stage to `assets[].pre_handle_beliefs` / `use_cases` in the manifest (or the quick-send table in the hub doc).
 3. Pull **key messages** and **transcript** from the hub doc section for that asset — do not invent claims not in the transcript.
-4. For **guarantee or pricing numbers** in asset #6: confirm against [money model](../../../docs/company/overview-money-model-april-26.md) — founder-only; do not drift from live offer.
+4. For **guarantee or pricing numbers** in asset #6: confirm against [money model](../../../docs/company/overview-money-model.md) — founder-only; do not drift from live offer.
 5. **Shorts** may end with social CTAs (“comment reverse”); sales sends use the **prospect landing page** link.
 
 ## Default nurture sequence (not strict)

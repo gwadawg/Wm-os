@@ -3,15 +3,18 @@ title: Acquisition — Offer
 domain: acquisition
 owner: founder
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-10-16
 review_cycle: quarterly
 ---
 
 # Acquisition — Offer
 
-Offer architecture beyond company-level money model. Canonical offer overview converts from Drive when approved.
+Two documents define what Waiz sells now. Client proposals in this
+folder record a single deal. They are not the next quote.
 
 ## Canonical Docs
 
-- Company-level source of truth: [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md)
-- Team tier pricing (2-20+ LOs): [Pricing Architecture — Team Tiers](pricing-architecture.md)
+- How Waiz gets paid: [Money Model](../../company/overview-money-model.md)
+- What each offer includes: [Client Offers](client-offers.md)
+- Team tier pricing (legacy draft, not the new-client quote): [Pricing Architecture — Team Tiers](pricing-architecture.md)
+- April 2026 model (history): [Company drafts](../../company/drafts/overview-money-model-april-26.md)

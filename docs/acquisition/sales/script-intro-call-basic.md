@@ -32,7 +32,7 @@ Every live intro: booked slot, early confirmation call, dialer connect, or intro
 
 - Waiz voice: qualified conversations, acquisition system, strategic partner ([Identity Core](../../company/doctrine-identity-core-april-26.md)).
 - Conversation, not pitch — prospect should feel evaluated for fit, not sold.
-- Programs and implementation depth → demo with closer. **Ballpark investment range** only when they won’t move without a number — wide range + custom framing per [pricing boundaries](#setter-boundaries-pricing-programs-depth) and approved [pricing sheet](../../company/overview-money-model-april-26.md#pricing-rule).
+- Programs and implementation depth → demo with closer. **Ballpark investment range** only when they won’t move without a number — wide range + custom framing per [pricing boundaries](#setter-boundaries-pricing-programs-depth) and approved [pricing sheet](../../company/overview-money-model.md#pricing-rule).
 - Not DFY-qualified → Boot Camp, not demo ([Disqualifying and Financial Qualification](disqualifying-financial-qualification.md)).
 
 ## Metrics
@@ -556,7 +556,7 @@ Fill out **immediately** after every call. If you don’t capture it, it’s gon
 | Script factory blocks            | [Script Factory README](script-factory/README.md)                                            |
 | Version history                  | [Sales Script Version Change Log](sales-script-version-change-log.md)                        |
 | Voice / positioning              | [Identity Core](../../company/doctrine-identity-core-april-26.md)                            |
-| Offers                           | [Money Model](../../company/overview-money-model-april-26.md)                                |
+| Offers                           | [Money Model](../../company/overview-money-model.md)                                |
 
 
 ## Open questions

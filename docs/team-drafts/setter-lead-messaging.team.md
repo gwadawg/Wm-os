@@ -339,7 +339,7 @@ Questions, pricing, or exceptions → escalate to Gabriel (Setter team).
 - [Pre-call videos here](docs/acquisition/marketing/pre-call-objection-videos.md)
 - [Identity Core here](docs/company/doctrine-identity-core-april-26.md)
 - [Sales intelligence bible here](docs/acquisition/intelligence/wm-sales-intelligence-bible.md)
-- [Money model here](docs/company/overview-money-model-april-26.md)
+- [Money model here](docs/company/overview-money-model.md)
 - [LinkedIn copy angles here](docs/acquisition/outbound/linkedin/copy-angles.md)
 
 > **📌 REMEMBER**

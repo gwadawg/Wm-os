@@ -3,7 +3,7 @@ title: Approved Operating Spine
 domain: company
 owner: operations
 status: active
-last_updated: 2026-05-29
+last_updated: 2026-10-16
 review_cycle: monthly
 ---
 
@@ -11,10 +11,13 @@ review_cycle: monthly
 
 These canonical docs are **`status: active`** — safe for team execution and AI default context. Everything else in `docs/` may still be `draft` until reviewed.
 
+The money model and client offers are `draft` as of 2026-10-16. Load them for the current commercial model. They are not team-approved until their status is active.
+
 ## Company (always load first)
 
 - [Identity Core](company/doctrine-identity-core-april-26.md)
-- [Money Model And Offer Architecture](company/overview-money-model-april-26.md)
+- [Money Model](company/overview-money-model.md) (`draft`) — how Waiz gets paid
+- [Client Offers](acquisition/offer/client-offers.md) (`draft`) — what each new-client offer includes
 - [Brand And Visual Identity](company/doctrine-brand-and-visual-identity-april-26.md)
 
 ## Acquisition — sales funnel
@@ -31,7 +34,7 @@ These canonical docs are **`status: active`** — safe for team execution and AI
 | Setter daily workflow | Setter | [Setter Daily Checklist](acquisition/sales/setter-daily-checklist.md) |
 | LinkedIn outbound | Setter → founder DM | [LinkedIn manifest](acquisition/outbound/linkedin/manifest.yaml) (`draft` — process + copy-angles) |
 
-Pricing and deal structure: founder-only per money model. Boot Camp downsell when not DFY-qualified.
+Pricing and deal structure: founder-only per the money model. New clients are on the core offer or the leads-only offer.
 
 ## Client fulfillment — delivery & performance
 

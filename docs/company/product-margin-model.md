@@ -278,6 +278,6 @@ Call-center keep/kill and performance fee terms: open on
 - [2026-Q2 Pass 2 — Margin + Comp Economics](reflections/2026-q2-pass-2-margin-comp-economics.md)
 - [2026-Q3 Pricing + Retention Analysis](reflections/2026-q3-pricing-retention-analysis.md)
 - [Pricing Architecture (RM/DSCR)](../acquisition/offer/pricing-architecture.md)
-- [Money Model And Offer Architecture](overview-money-model-april-26.md)
+- [Money Model](overview-money-model.md)
 - [Q3 Comp Foreshadow](../operations/people/q3-comp-foreshadow.md)
 

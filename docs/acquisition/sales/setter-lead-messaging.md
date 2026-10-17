@@ -81,7 +81,7 @@ Use one frame per text. Personalize with their form data and market.
 
 ## Example text library
 
-Ready-to-adapt SMS for **reverse mortgage LO prospects** (Waiz acquisition ICP). Sources: [Identity Core](../../company/doctrine-identity-core-april-26.md), [Money Model buyer profiles](../../company/overview-money-model-april-26.md), [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md), [Objection Categories](wm-objection-categories.md), [LinkedIn copy angles](../outbound/linkedin/copy-angles.md).
+Ready-to-adapt SMS for **reverse mortgage LO prospects** (Waiz acquisition ICP). Sources: [Identity Core](../../company/doctrine-identity-core-april-26.md), [Money Model](../../company/overview-money-model.md), [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md), [Objection Categories](wm-objection-categories.md), [LinkedIn copy angles](../outbound/linkedin/copy-angles.md).
 
 **Rules:** Swap bracketed fields from the lead file. One framework per message. No pricing on SMS — escalate to Gabriel. No guaranteed unit counts unless ops approves exact wording.
 
@@ -236,7 +236,7 @@ Avoid fake scarcity (“only X spots”) unless ops provides real capacity langu
 - [Pre-Call Objection Videos](../marketing/pre-call-objection-videos.md)
 - [Identity Core](../../company/doctrine-identity-core-april-26.md) — voice
 - [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md) — LO beliefs / reframes (SMS = steer to call)
-- [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md) — buyer profile
+- [Money Model](../../company/overview-money-model.md) — current offers
 - [WM Objection Categories](wm-objection-categories.md) — § J
 - [LinkedIn Copy Angles](../outbound/linkedin/copy-angles.md) — peer tone reference
 

@@ -250,4 +250,4 @@ _SOP: [EOD Report SOP](eod-report-sop-setters-closers.md)_
 | Objections | [Objection Handling Hub](objection-handling-hub.md) |
 | EOD | [EOD Report SOP](eod-report-sop-setters-closers.md) |
 | GHL daily queue + pipeline | [GHL Pipeline And Disposition Reference](ghl-pipeline-disposition-reference.md) |
-| Offers / routing | [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md) |
+| Offers / routing | [Money Model](../../company/overview-money-model.md) |

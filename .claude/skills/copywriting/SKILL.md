@@ -42,7 +42,7 @@ When the task is **prospect nurture**, **Hammer-Them** sequences, **setter video
 
 1. **Read first:** [pre-call-objection-videos-manifest.yaml](../../docs/acquisition/marketing/pre-call-objection-videos-manifest.yaml) via [pre-call-objection-videos/SKILL.md](../pre-call-objection-videos/SKILL.md)
 2. Use **prospect_page_url** for CTAs in sales copy; pull phrasing from transcripts in [pre-call-objection-videos.md](../../docs/acquisition/marketing/pre-call-objection-videos.md)
-3. Do not invent guarantee or pricing numbers — asset #6 requires live offer confirmation per [money model](../../docs/company/overview-money-model-april-26.md)
+3. Do not invent guarantee or pricing numbers — asset #6 requires live offer confirmation per [money model](../../docs/company/overview-money-model.md)
 
 ---
 
@@ -56,7 +56,7 @@ When the task is a **case study email**, **testimonial email**, **social-proof e
 
 **Not case study emails:** story-driven nurture uses [Money Tales Email Copy Framework SOP](../../docs/acquisition/marketing/sop-money-tales-email-copy-framework.md) — different format; do not mix the two.
 
-For Waiz voice and offer routing when relevant, see [Identity Core](../../docs/company/doctrine-identity-core-april-26.md) and [Money Model](../../docs/company/overview-money-model-april-26.md).
+For Waiz voice and offer routing when relevant, see [Identity Core](../../docs/company/doctrine-identity-core-april-26.md) and [Money Model](../../docs/company/overview-money-model.md).
 
 ---
 

@@ -187,7 +187,7 @@ Tags — not stages — decide what sends. **A lead must never carry two `nurtur
 | `nurture:cold` | WF-09 | Long-term cold emails active |
 | `human-active` | WF-04 reply handler, or setter manually | A human owns this conversation — **all automated sends skip**. Setter adds it before any manual text to a Warm/Cold lead; auto-removed after 48h of no activity |
 | `stop-all-nurture` | Setter/ops manually | Hard kill switch — no workflow may send anything |
-| `boot-camp-route` | Setter/closer | Not DFY fit; Boot Camp offer presented per [Money Model](../../company/overview-money-model-april-26.md) |
+| `boot-camp-route` | Setter/closer | Legacy tag from the April 2026 model. See [historical money model](../../company/drafts/overview-money-model-april-26.md). New clients use the [current money model](../../company/overview-money-model.md). |
 | `conditional-followup` | Setter | Lead asked for contact at a specific future date — set **Next Follow-Up Date** + GHL task; pauses SMS workflows; surfaces on DQ-3 when due |
 | `retrigger-noshow-recovery` | Ops (one-time) | Bulk migration trigger for the no-show backlog |
 
@@ -390,7 +390,7 @@ Supersedes scattered stage references; consistent with [EOD disposition rules](e
 | No-show (intro or demo) | Intro/Demo No Show | WF-06/07 auto-runs; run live P6 protocol too |
 | Post-demo, deal active | Negotiating | Closer owns |
 | Post-demo, unconverted | Warm Nurture | Post-Demo Objection field set via closer form → WF-08 |
-| Not DFY fit | Closed (or Boot Camp pending) | `boot-camp-route` per [Money Model](../../company/overview-money-model-april-26.md) |
+| Not DFY fit | Closed (or Boot Camp pending) | Legacy `boot-camp-route`. New-client routing is the [current money model](../../company/overview-money-model.md). |
 | Bad data / junk | Closed Lost | Grade = Junk |
 | Asked for specific future date | current stage | `conditional-followup` + Next Follow-Up Date + GHL task (DQ-3) |
 | Snooze out of today's queue | current stage | Next Work Date = future + GHL task + note |
@@ -405,7 +405,7 @@ Supersedes scattered stage references; consistent with [EOD disposition rules](e
 - [Power Dialer New Leads SOP](sop-power-dialer-new-leads.md) — P5 dialing
 - [EOD Report SOP](eod-report-sop-setters-closers.md) — pipeline-cleared standard
 - [No Shows And Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md) — live no-show protocol
-- [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md) — routing rules
+- [Money Model](../../company/overview-money-model.md) — current routing rules
 
 ## Open Questions
 

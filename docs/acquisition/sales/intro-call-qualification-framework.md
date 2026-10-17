@@ -27,13 +27,13 @@ See [domain owners](../../_inventory/domain-owners.md): **setter**.
 
 ## When To Use
 
-Use when executing or improving the workflow described in the source document. For offer routing and pricing rules, see [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md).
+Use when executing or improving the workflow described in the source document. For offer routing and pricing rules, see [Money Model](../../company/overview-money-model.md).
 
 ## Quality Bar
 
 - Follows Waiz voice: qualified conversations, acquisition system, strategic partner (see [Identity Core](../../company/doctrine-identity-core-april-26.md)).
 - Pricing and deal structure escalated to founder when applicable.
-- Boot Camp downsell offered when prospect is not DFY-qualified.
+- New-client routing follows the [money model](../../company/overview-money-model.md): core offer or leads-only offer.
 
 ## Metrics
 
@@ -280,7 +280,7 @@ That handoff is the job. Everything on the Intro Call is in service of making th
 
 - [Intro Call Script](script-intro-call-basic.md) — word-for-word intro, boundaries, seven-stage checklist
 - [Demo Appointment Confirmation Script](script-demo-appointment-confirmation.md) — after demo is booked; morning-of / 24–48hr confirm + pre-call watch tie-down
-- [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md)
+- [Money Model](../../company/overview-money-model.md)
 - [Identity Core](../../company/doctrine-identity-core-april-26.md)
 - [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md)
 - [Sales Discovery Framework (Hell, Bridges, Heaven, Fuel)](sales-discovery-framework-hell-bridges-heaven-fuel.md) — deeper discovery on demo, not intro

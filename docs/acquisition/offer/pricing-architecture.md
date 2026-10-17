@@ -4,22 +4,32 @@ domain: acquisition
 subdomain: offer
 owner: founder
 status: draft
-last_updated: 2026-06-23
+last_updated: 2026-10-16
 review_cycle: quarterly
 related_docs:
-  - docs/company/overview-money-model-april-26.md
+  - docs/company/overview-money-model.md
   - docs/acquisition/offer/README.md
   - .agents/product-marketing.md
 ---
 
 # Waiz Media Pricing Architecture — Team Tiers
 
+> **Not the forward new-client quote.** As of 2026-10-16, new clients are
+> offered the two structures in
+> [Money Model](../../company/overview-money-model.md):
+> the core offer (startup, retainer, pay per legitimate conversation)
+> or the leads-only offer (startup, retainer, percent of ad spend).
+> Use this file only for a team account already scoped to these tiers,
+> and only with Gabe's approval.
+
 ## Purpose
 
-Define the pricing model for multi-LO team accounts. The Solo tier (current core offer) is documented in
-[overview-money-model-april-26.md](../../company/overview-money-model-april-26.md). This document extends
-that model with team tiers designed for 2-20+ LO accounts, including setup fees, monthly retainers,
-ad spend kickers, bundled reporting, and performance fees.
+Define a draft pricing model for multi-LO team accounts. The forward
+solo offer is the core offer in
+[overview-money-model.md](../../company/overview-money-model.md).
+This document explores team tiers for 2-20+ LO accounts, including
+setup fees, monthly retainers, ad spend kickers, bundled reporting,
+and performance fees. It does not set new-client pricing.
 
 ## Scope
 
@@ -34,7 +44,8 @@ This document governs:
 - Grand Slam value stacks for sales proposals
 - Upsell pathway from Solo → Team → Branch
 
-It does not supersede the Solo offer or the Boot Camp downsell defined in the money model doc.
+It does not supersede the forward offers in the money model. The April 26
+Boot Camp downsell is a legacy path, not the current new-client offer.
 
 ## Owner
 
@@ -109,8 +120,10 @@ the minimum are not qualified for team tiers.
 | Dashboard | Not included (optional add-on) |
 | Performance kicker | None |
 
-> Solo pricing and offer details live in [overview-money-model-april-26.md](../../company/overview-money-model-april-26.md).
-> Treat the entries above as a reference anchor only.
+> The forward solo offer is the core offer in the
+> [money model](../../company/overview-money-model.md) and
+> [client offers](client-offers.md). Dollar amounts are not in those
+> docs. Treat the table above as a legacy anchor for this draft.
 
 ---
 

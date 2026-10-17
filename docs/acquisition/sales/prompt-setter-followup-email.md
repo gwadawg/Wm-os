@@ -37,7 +37,7 @@ See [domain owners](../../_inventory/domain-owners.md): **setter** (prompt maint
 | File                                                                                            | Why it's in the project                                                  |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [doctrine-identity-core-april-26.md](../../company/doctrine-identity-core-april-26.md)          | Who Waiz is, origin story, voice, positioning boundaries                 |
-| [overview-money-model-april-26.md](../../company/overview-money-model-april-26.md)              | Offer architecture (DFY + Boot Camp), routing — contains no live pricing |
+| [overview-money-model.md](../../company/overview-money-model.md)              | Current money model. No live pricing. Core offer or leads-only offer. |
 | [wm-sales-intelligence-bible.md](../intelligence/wm-sales-intelligence-bible.md)                | LO beliefs, fears, misunderstandings, and approved reframes              |
 | [setter-lead-messaging.md](setter-lead-messaging.md)                                            | Setter follow-up rules, value frameworks, example library                |
 | [case-study-email-copy-framework.md](../marketing/case-study-email-copy-framework.md)           | 3-step proof email structure                                             |

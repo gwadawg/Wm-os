@@ -25,13 +25,13 @@ See [domain owners](../../_inventory/domain-owners.md): **closer**.
 
 ## When To Use
 
-Use when executing or improving the workflow described in the source document. For offer routing and pricing rules, see [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md).
+Use when executing or improving the workflow described in the source document. For offer routing and pricing rules, see [Money Model](../../company/overview-money-model.md).
 
 ## Quality Bar
 
 - Follows Waiz voice: qualified conversations, acquisition system, strategic partner (see [Identity Core](../../company/doctrine-identity-core-april-26.md)).
 - Pricing and deal structure escalated to founder when applicable.
-- Boot Camp downsell offered when prospect is not DFY-qualified.
+- New-client routing follows the [money model](../../company/overview-money-model.md): core offer or leads-only offer.
 
 ## Metrics
 
@@ -1097,7 +1097,7 @@ This manual is a living document. As new objections are encountered and new resp
 
 ## Related Docs
 
-- [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md)
+- [Money Model](../../company/overview-money-model.md)
 - [Identity Core](../../company/doctrine-identity-core-april-26.md)
 - [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md)
 - [Objection Handling Master Guide](objection-handling-master-guide.md)

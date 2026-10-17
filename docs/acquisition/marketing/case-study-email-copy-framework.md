@@ -143,7 +143,7 @@ Use any of these to retrieve this framework in chat:
 
 - [Money Tales Email Copy Framework SOP](sop-money-tales-email-copy-framework.md) — story-driven nurture emails (different vehicle)
 - [Identity Core](../../company/doctrine-identity-core-april-26.md) — Waiz voice and positioning
-- [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md) — offer routing and pricing rules
+- [Money Model](../../company/overview-money-model.md) — offer routing and pricing rules
 - [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md) — buyer context and objections
 - [Acquisition — Marketing](README.md)
 

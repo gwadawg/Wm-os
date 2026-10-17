@@ -24,7 +24,7 @@ Use this backlog to turn the raw Google Drive export into durable AI-ready compa
 
 - [x] Convert `Waiz Media OS/00 _ Company DNA/Doctrine _ Brand and Visual Identity _ April 26.docx` to `docs/company/doctrine-brand-and-visual-identity-april-26.md`.
 - [x] Convert `Waiz Media OS/00 _ Company DNA/Doctrine _ Identity Core _ April 26.docx` to `docs/company/doctrine-identity-core-april-26.md`.
-- [x] Convert `Waiz Media OS/00 _ Company DNA/Overview _ Money Model _ April 26.docx` to `docs/company/overview-money-model-april-26.md`.
+- [x] Convert `Waiz Media OS/00 _ Company DNA/Overview _ Money Model _ April 26.docx` to `docs/company/overview-money-model-april-26.md`. That file is historical as of 2026-10-16 (`docs/company/drafts/`). Current model: `docs/company/overview-money-model.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Intelligence/WM Sales Intelligence Bible.docx` to `docs/acquisition/intelligence/wm-sales-intelligence-bible.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Marketing/Resources & References/SOP -- Money Tales Email Copy Framework.docx` to `docs/acquisition/marketing/sop-money-tales-email-copy-framework.md`.
 - [x] Convert `Waiz Media OS/01 _ Acquisition/Sales/Objection Handling Master Guide.docx` to `docs/acquisition/sales/objection-handling-master-guide.md`.

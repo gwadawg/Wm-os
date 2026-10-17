@@ -91,7 +91,7 @@ assets:
       - setter_or_closer_send_when_market_size_objection
     related_docs:
       - ../intelligence/wm-sales-intelligence-bible.md
-      - ../../company/overview-money-model-april-26.md
+      - ../../company/overview-money-model.md
 
   - id: what-makes-waiz-different
     sequence: 3
@@ -125,7 +125,7 @@ assets:
       - setter_or_closer_send_when_comparing_vendors
       - setter_or_closer_send_before_strategy_call
     related_docs:
-      - ../../company/overview-money-model-april-26.md
+      - ../../company/overview-money-model.md
       - ../intelligence/wm-sales-intelligence-bible.md
       - ../../company/doctrine-identity-core-april-26.md
 
@@ -203,7 +203,7 @@ assets:
       - burnt-by-other-agencies
     related_docs:
       - ../sales/objection-handling-master-guide.md
-      - ../../company/overview-money-model-april-26.md
+      - ../../company/overview-money-model.md
 
   - id: do-we-guarantee-results
     sequence: 6
@@ -244,7 +244,7 @@ assets:
       Video states specific guarantee terms (e.g. 50 conversations / 90 days).
       Confirm live offer language against founder-approved pricing/offer docs before quoting in calls or copy.
     related_docs:
-      - ../../company/overview-money-model-april-26.md
+      - ../../company/overview-money-model.md
       - ../sales/objection-handling-master-guide.md
       - ../sales/disqualifying-financial-qualification.md
 

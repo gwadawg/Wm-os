@@ -195,7 +195,7 @@ Merges the rules for existing automations #6 (post demo nurturing) and #7 (warm 
 
 - **Entry:** closer submits post-call form (unconverted) → Post-Demo Objection field set → stage **Warm Nurture** → tag `nurture:post-demo`.
 - **Sequence:** existing objection-branched emails, every 2 days (founder videos + educational content). Max **1 SMS per week**, and only if no email opens in 7 days.
-- Manual closer/setter follow-up runs in parallel per [Money Model](../../company/overview-money-model-april-26.md#offer-routing-logic) — any manual text requires adding `human-active` first (pauses sends 48h).
+- Any manual text requires adding `human-active` first (pauses sends 48h). Which offer a new client is on is the [money model](../../company/overview-money-model.md#offer-routing-logic).
 
 ### Track B — broad warm (fallback)
 
@@ -340,7 +340,7 @@ Roll up through the existing funnel in [WM Acquisition Report Data System](../..
 - [Setter Daily Checklist](setter-daily-checklist.md)
 - [No Shows And Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md)
 - [Pre-Call Objection Video Assets](../marketing/pre-call-objection-videos.md)
-- [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md)
+- [Money Model](../../company/overview-money-model.md)
 
 ## Open Questions
 

@@ -32,7 +32,7 @@ See [Approved Operating Spine](../../SPINE.md) and [SOURCE-OF-TRUTH](../../SOURC
 | Objections | Closer / setter | [Objection Handling Hub](objection-handling-hub.md) |
 | Pre-call nurture videos | Setter / closer | [Pre-Call Objection Video Assets](../marketing/pre-call-objection-videos.md) — [manifest](../marketing/pre-call-objection-videos-manifest.yaml) |
 
-Pricing and packaging: [Money Model](../../company/overview-money-model-april-26.md) (founder-only). Boot Camp when not DFY-qualified.
+Pricing and packaging: [Money Model](../../company/overview-money-model.md) (founder-only). New clients are offered the [core offer or the leads-only offer](../offer/client-offers.md).
 
 ## Active docs
 

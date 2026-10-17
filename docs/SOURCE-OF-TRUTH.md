@@ -37,7 +37,7 @@ Use this page before creating, moving, or converting any Waiz Media OS document.
 | Artifact | Pattern | Example |
 |----------|---------|---------|
 | Doctrine | `doctrine-{topic}.md` | `doctrine-identity-core-april-26.md` |
-| Overview | `overview-{topic}.md` | `overview-money-model-april-26.md` |
+| Overview | `overview-{topic}.md` | `overview-money-model.md` |
 | SOP | `{workflow}-sop.md` | `discovery-call-sop.md` |
 | Playbook / daily checklist | `{topic}-playbook.md` or `{role}-daily-checklist.md` | `setter-daily-checklist.md` |
 | Client playbooks index | `client-playbooks/catalog.yaml` + generated `catalog.md` | Auto-sync via `scripts/sync-client-playbooks.py` |
@@ -52,7 +52,7 @@ Fix typos in canonical names (`infrastructure` not `infrustructure`). Do not cop
 - **One concept → one canonical file.** If two sources overlap, merge content and list both under `source_document` or a "Superseded sources" section.
 - **Do not** create a second canonical doc for the same workflow in another folder.
 - **Link, don't copy:** company DNA (identity, money model, brand) lives in [company/](company/). Other docs link to it instead of repeating blocks.
-- **Pricing:** never invent numbers. Reference the live pricing sheet; pricing is founder-only per [overview-money-model-april-26.md](company/overview-money-model-april-26.md).
+- **Pricing:** never invent numbers. Reference the live pricing sheet; pricing is founder-only per [overview-money-model.md](company/overview-money-model.md).
 
 ## Status Lifecycle
 

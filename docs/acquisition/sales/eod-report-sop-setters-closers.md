@@ -187,7 +187,7 @@ EOD is a standard, not optional when reps push back on change.
 - [Power Dialer New Leads SOP](sop-power-dialer-new-leads.md)
 - [GHL Pipeline And Disposition Reference](ghl-pipeline-disposition-reference.md) — daily queue DQ-1/DQ-2/DQ-3
 - [No Shows and Maximizing Show Rates](no-shows-maximizing-show-rates-setter-levers.md)
-- [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md)
+- [Money Model](../../company/overview-money-model.md)
 - [Identity Core](../../company/doctrine-identity-core-april-26.md)
 - [WM Sales Intelligence Bible](../intelligence/wm-sales-intelligence-bible.md)
 - [Pre-Call Objection Videos](../marketing/pre-call-objection-videos.md)

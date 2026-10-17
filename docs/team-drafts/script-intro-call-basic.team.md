@@ -931,7 +931,7 @@ Does that sound like what you're trying to do?
 - [Pre-call videos here](docs/acquisition/marketing/pre-call-objection-videos.md)
 - [Objection hub here](docs/acquisition/sales/objection-handling-hub.md)
 - [Identity Core here](docs/company/doctrine-identity-core-april-26.md)
-- [Money model here](docs/company/overview-money-model-april-26.md)
+- [Money model here](docs/company/overview-money-model.md)
 
 > **📌 REMEMBER**
 >

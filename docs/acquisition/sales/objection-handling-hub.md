@@ -39,7 +39,7 @@ Intro, discovery, and demo conversations with reverse mortgage loan officer pros
 ## Quality Bar
 
 - Use company voice from [Identity Core](../../company/doctrine-identity-core-april-26.md).
-- Route to Boot Camp when not DFY-qualified per [Money Model](../../company/overview-money-model-april-26.md).
+- Route the prospect using the [Money Model](../../company/overview-money-model.md): core offer or leads-only offer. Boot Camp routing in older scripts is the April 2026 model.
 
 ## Related Docs
 

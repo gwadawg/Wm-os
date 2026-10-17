@@ -21,7 +21,7 @@ LinkedIn outbound to reverse mortgage LOs (Track A) and forward LO recruits (Tra
 
 **In:** SN lists, comment warm-up, connect/DM sequence, setter **outreach only** (no setter replies), Gabriel replies through book, ghost sequence, dream-account omnichannel.
 
-**Out:** Setter pricing, phone intro execution (see intro script), automated bots. Phone funnel: [Intro Call Qualification](../../sales/intro-call-qualification-framework.md), [Money Model](../../../company/overview-money-model-april-26.md).
+**Out:** Setter pricing, phone intro execution (see intro script), automated bots. Phone funnel: [Intro Call Qualification](../../sales/intro-call-qualification-framework.md), [Money Model](../../../company/overview-money-model.md).
 
 ## Owners (current)
 

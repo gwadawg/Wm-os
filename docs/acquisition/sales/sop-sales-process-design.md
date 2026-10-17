@@ -34,7 +34,7 @@ See [domain owners](../../_inventory/domain-owners.md): **sales-leadership**.
 - Sales KPI snapshots from [WM Sales Call Tracker](../wm-sales-call-tracker.md)
 - Call evidence (recordings, notes, transcript excerpts)
 - Current active SOP/script set from [Sales Operating Hub](README.md)
-- Constraints from [Money Model And Offer Architecture](../../company/overview-money-model-april-26.md)
+- Constraints from [Money Model](../../company/overview-money-model.md)
 
 ## Outputs
 

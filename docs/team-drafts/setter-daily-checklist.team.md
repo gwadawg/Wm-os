@@ -191,7 +191,7 @@ Submit when done — flexible timing. Full standard: [EOD SOP here](docs/acquisi
 - [Pre-call objection videos here](docs/acquisition/marketing/pre-call-objection-videos.md)
 - [Objection handling hub here](docs/acquisition/sales/objection-handling-hub.md)
 - [EOD SOP here](docs/acquisition/sales/eod-report-sop-setters-closers.md)
-- [Offer and money model here](docs/company/overview-money-model-april-26.md)
+- [Offer and money model here](docs/company/overview-money-model.md)
 
 <div align="center">
 
