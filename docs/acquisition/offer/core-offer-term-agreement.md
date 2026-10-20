@@ -6,7 +6,7 @@ owner: founder
 status: draft
 terms: locked
 locked_on: 2026-10-17
-last_updated: 2026-10-17
+last_updated: 2026-10-20
 review_cycle: as-needed
 related_docs:
   - docs/acquisition/offer/client-offers.md
@@ -15,13 +15,15 @@ related_docs:
 
 # Core Offer — Term Agreement
 
-Term template for the core offer. Commercial terms locked 2026-10-17. Do not change those terms unless Gabe reopens them. The month-to-month template is separate and is not this file. Merge fields are numbers. This text supplies the dollar sign and the word "months." Have counsel review it before it is sent.
+Term template for the core offer. Commercial terms locked 2026-10-17. Pause and claimed were updated 2026-10-19. Do not change the other commercial terms unless Gabe reopens them. The month-to-month template is separate and is not this file. Merge fields are numbers. This text supplies the dollar sign and the word "months." Have counsel review it before it is sent.
+
+In practice, one late claimed tag gets the benefit of the doubt unless that client keeps doing it. That practice stays out of the client copy. A client who cancels and then works the lead is a direct conversation, not a clause.
 
 ---
 
 # Service Agreement
 
-This Service Agreement is entered into on {{right_now.little_endian_date}} between **Waiz Media LLC** ("Waiz Media") and the person who signs below (the "Client").
+This Service Agreement is entered into on {{right_now.middle_endian_date}} between **Waiz Media LLC** ("Waiz Media") and the person who signs below (the "Client").
 
 Waiz Media LLC is the only company party. The person who signs for Waiz Media does so as its founder and is not personally a party. The person who signs for the Client is the Client and owes the fees in this agreement.
 
@@ -65,7 +67,7 @@ Onboarding is expected to take 7 to 14 business days. That range is not a deadli
 
 **Bail.** A booked appointment the Client does not attend, and for which the Client did not give at least 2 hours' notice to reschedule or cancel.
 
-**Claimed.** The Client contacted the lead on the Client's own, and marked that lead with the claimed tag in WM CRM. The tag tells Waiz Media to stop outreach on that lead.
+**Claimed.** The Client marks a lead with the claimed tag in WM CRM. The tag tells Waiz Media to stop outreach on that lead. Section 6 states when that lead carries a fee.
 
 ## 3. Launch
 
@@ -76,6 +78,8 @@ Waiz Media does not launch until the Client approves that material. Waiz Media d
 Waiz Media may decline to run any rate, claim, or promise it will not run. Waiz Media may take down an asset that creates a legal or platform risk. Taking an asset down is not a pause under Section 9. Fees and the term do not change because an asset is declined or taken down.
 
 The Client warrants that the Client is licensed to originate loans in the states being advertised. The Client's name and license number are the advertiser. Waiz Media's people and AI do not quote rates, promise approval, or give loan advice.
+
+Waiz Media calls and texts leads who opt in through the Client's campaigns. The Client authorizes those calls and texts, and authorizes recording of them. Waiz Media honors a lead's opt-out and gives any recording notice the law requires. The Client will not give Waiz Media leads who did not opt in through those campaigns.
 
 ## 4. Representation
 
@@ -119,15 +123,15 @@ A booked appointment is charged the conversation fee if the Client speaks with t
 
 A bail is charged one half of the conversation fee. There is no fee when the Client attends and the prospect does not.
 
-**Claimed leads.** A lead the Client contacts on the Client's own is not a conversation. Waiz Media did not make that contact, so there is no conversation fee for it. The Client is responsible for adding the claimed tag in WM CRM. That tag is how the Client tells Waiz Media the Client has spoken with the lead and outreach should stop.
+**Claimed leads.** This applies when the Client uses WM CRM and contacts leads on the Client's own. The Client marks that lead with the claimed tag. Waiz Media stops outreach on that lead.
 
-If the claimed tag is on the lead before Waiz Media books an appointment or live-transfers the lead, there is no charge.
+If the tag is on the lead before Waiz Media books an appointment or live-transfers the lead, there is no fee.
 
-If the tag is missing, and Waiz Media books the appointment or completes the live transfer, the Client owes the charge in this section for that booking or transfer.
+If the Client had already spoken with the lead before that booking or transfer, there is no fee, even when the tag is late. A text, call, or email from before the booking is enough to show that.
 
-If the Client adds the claimed tag after the appointment is booked and before the introduction, the charge is one half of the conversation fee. The appointment was booked. The introduction had not happened.
+If the Client first contacts the lead after the booking and then claims it, the conversation fee is due.
 
-A prospect is charged once. The half fee is not added on top of the conversation fee. If the Client speaks with that prospect because of a booking or a completed live transfer, the charge is the conversation fee. If the only amount due is a bail, or a claim after booking and before the introduction, the charge is one half of the conversation fee.
+A prospect is charged once. The half fee is not added on top of the conversation fee. If the Client speaks with that prospect because of a booking or a completed live transfer, or the conversation fee is due because of a claim after the booking, the charge is the conversation fee. If the only amount due is a bail, the charge is one half of the conversation fee.
 
 ## 7. Ad spend
 
@@ -147,7 +151,9 @@ The Client has 3 calendar days from that email to object by email. An objection 
 
 A pause is a temporary stop of all work: campaigns, dialing, booking, live transfers, and strategy sessions. No new conversation fees are created while a pause is on. The agreement stays in place. Fees for conversations, bails, and claimed leads that already happened stay due.
 
-**The Client asks to pause.** All work stops until Waiz Media turns it back on. Waiz Media turns it back on when the Client asks to restart. Paid service days are not used during the pause. Waiz Media does not charge a new retainer while the pause is on. The end of the term moves back by the number of paused days. The startup fee does not become extra service days. Money already paid stays paid.
+**The Client asks to pause.** The Client pauses by email and may name a restart date. If no date is named, the pause is 30 days. A longer pause needs Waiz Media's agreement by email. Waiz Media turns the work back on when the Client asks to restart. Paid service days are not used during the pause. Waiz Media does not charge a new retainer while the pause is on. The end of the term moves back by the number of paused days. The startup fee does not become extra service days. Money already paid stays paid.
+
+Paused days the Client asked for may add up to 60 during the term. After that, Waiz Media may end the agreement by email. The agreement continues until that email is sent. A restart date Waiz Media has agreed to by email stands. A pause that starts because a fee charge did not clear does not count toward those 60 days.
 
 **A fee charge does not clear.** Waiz Media notifies the Client the day the charge fails and pauses all work. Paid service days are not used. Waiz Media does not charge a new retainer while the work is off. The end of the term moves back by those days. The work turns back on when the past-due balance is paid. A failed charge does not end this agreement.
 
@@ -159,7 +165,7 @@ If a fee charge fails while an unresponsive pause is already on, the term still 
 
 The term is {{contact.term}} months from the go-live date, adjusted only as Section 9 says.
 
-The Client cannot end the agreement before the last day of the term. Either party may send notice during the term. The agreement then ends on the last day of the term, or 30 days after the notice, whichever is later.
+The Client cannot end the agreement before the last day of the term. After the paused days the Client asked for reach 60 under Section 9, Waiz Media may end the agreement by email. That email ends the agreement when it is sent. Either party may send any other notice during the term. The agreement then ends on the last day of the term, or 30 days after that notice, whichever is later.
 
 After the term, the agreement continues month to month at the same retainer and the same conversation fee. Either party may end that continuation with 30 days' written notice.
 
@@ -183,11 +189,9 @@ Waiz Media may use the Client's business name, and performance figures that do n
 
 ## 14. Responsibility and liability
 
-The Client is responsible for claims about the Client's license, the Client's loan product, material the Client approved, and claims the Client told Waiz Media to run.
+The Client is responsible for the Client's license, the Client's loan product, material the Client approved, and any claim the Client told Waiz Media to run.
 
-Waiz Media is responsible for claims caused by Waiz Media's gross negligence or willful misconduct in the work.
-
-Neither party is liable for indirect damages or lost profits. Waiz Media's total liability under this agreement, including its indemnity, will not exceed the fees the Client paid Waiz Media in the 3 months before the claim. Amounts the Client owes Waiz Media are not capped. The Client's responsibility for license, product, approved material, and instructed claims is not capped.
+Neither party is liable for indirect damages or lost profits. Waiz Media's total liability under this agreement will not exceed the fees the Client paid Waiz Media in the 3 months before the claim. Amounts the Client owes Waiz Media are not capped.
 
 ## 15. General
 
