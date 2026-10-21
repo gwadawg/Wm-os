@@ -6,7 +6,7 @@ owner: founder
 status: draft
 terms: locked
 locked_on: 2026-10-17
-last_updated: 2026-10-20
+last_updated: 2026-10-21
 review_cycle: as-needed
 related_docs:
   - docs/acquisition/offer/client-offers.md
@@ -15,7 +15,7 @@ related_docs:
 
 # Core Offer — Term Agreement
 
-Term template for the core offer. Commercial terms locked 2026-10-17. Pause and claimed were updated 2026-10-19. Do not change the other commercial terms unless Gabe reopens them. The month-to-month template is separate and is not this file. Merge fields are numbers. This text supplies the dollar sign and the word "months." Have counsel review it before it is sent.
+Term template for the core offer. Commercial terms locked 2026-10-17. Pause and claimed were updated 2026-10-19. The Client's right to see call recordings and chat history was added 2026-10-21. Do not change the other commercial terms unless Gabe reopens them. The month-to-month template is separate and is not this file. Merge fields are numbers. This text supplies the dollar sign and the word "months." Have counsel review it before it is sent.
 
 In practice, one late claimed tag gets the benefit of the doubt unless that client keeps doing it. That practice stays out of the client copy. A client who cancels and then works the lead is a direct conversation, not a clause.
 
@@ -175,13 +175,15 @@ Notice by email is sufficient.
 
 Leads from the Client's campaigns, and the prospect's personal information, are the Client's. Waiz Media does not give those leads to another client. Waiz Media does not share those records with anyone outside the work unless the Client gives permission, or the law requires the disclosure.
 
+Call recordings of those leads, and the chat history with them, are part of the Client's lead records. While this agreement is in effect, the Client may ask by email to see them. Waiz Media provides the recordings and the chat history it has for those leads.
+
 Waiz Media may share those records with its staff, its contractors, and the tools used to deliver the work, including WM CRM and the dialer.
 
 The Client will not share Waiz Media's pricing, scripts, playbooks, workflows, or reports with anyone outside the Client's own business, and will not give them to another agency. This duty lasts during the agreement and for 3 years after it ends.
 
 ## 12. After the agreement ends
 
-Waiz Media owns its media-buying process, WM Apex, the virtual business card build, the WM CRM configuration and automations, the Waiz AI Agent, the scripts, the workflows, and the phone number it provides under Section 1. The Client's lead records stay the Client's. If the Client asks within 30 days after the agreement ends, Waiz Media exports those records to the Client. Access to Waiz Media's systems ends when the agreement ends. The phone number stays with Waiz Media.
+Waiz Media owns its media-buying process, WM Apex, the virtual business card build, the WM CRM configuration and automations, the Waiz AI Agent, the scripts, the workflows, and the phone number it provides under Section 1. The Client's lead records stay the Client's, including the call recordings and chat history in Section 11. If the Client asks within 30 days after the agreement ends, Waiz Media exports those records to the Client. Access to Waiz Media's systems ends when the agreement ends. The phone number stays with Waiz Media.
 
 ## 13. Name and results
 
