@@ -15,7 +15,7 @@ related_docs:
 
 # Core Offer — Term Agreement
 
-Term template for the core offer. Commercial terms locked 2026-10-17. Pause and claimed were updated 2026-10-19. The Client's right to see call recordings and chat history was added 2026-10-21. Do not change the other commercial terms unless Gabe reopens them. The month-to-month template is separate and is not this file. Merge fields are numbers. This text supplies the dollar sign and the word "months." Have counsel review it before it is sent.
+Term template for the core offer. Commercial terms locked 2026-10-17. Pause and claimed were updated 2026-10-19. The Client's right to see call recordings and chat history was added 2026-10-21. Team scope was clarified the same day: team members are in only under one company identity with round-robin distribution. Social management, custom team-KPI software, and custom filmed ad video sit on a higher-level package. Do not change the other commercial terms unless Gabe reopens them. The month-to-month template is separate and is not this file. Merge fields are numbers. This text supplies the dollar sign and the word "months." Have counsel review it before it is sent.
 
 In practice, one late claimed tag gets the benefit of the doubt unless that client keeps doing it. That practice stays out of the client copy. A client who cancels and then works the lead is a direct conversation, not a clause.
 
@@ -46,6 +46,10 @@ Waiz Media will install and run its proprietary mortgage acquisition system for 
 **Strategy.** At least one strategy session each service month while the work is on, covering KPIs, the reports, and scaling.
 
 **Reporting.** A monthly report of the work and the amounts due.
+
+**Team members.** Waiz Media works with the Client's team members when they are under one company identity and leads are distributed by round robin, each new lead to the next team member in turn. Messaging and systems built for each team member are not part of this agreement. A lead distribution built custom for each person is not part of this agreement.
+
+**Higher-level work.** Social media management for the Client's company pages, custom software to track a team's KPIs and manage team performance, and filming and editing custom video content for ads are a higher-level package. They are not part of this agreement. The monthly report in this section is included. The campaign creative in this section is still included.
 
 Leads from the Client's campaigns belong to the Client only. Waiz Media does not promise a number of leads, conversations, or funded loans. The media-buying process, WM Apex, the virtual business card build, the WM CRM build, the nurturing sequences, the automations, the Waiz AI Agent, the scripts, and the workflows are Waiz Media's property under Section 12.
 
