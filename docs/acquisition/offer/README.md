@@ -3,7 +3,7 @@ title: Acquisition — Offer
 domain: acquisition
 owner: founder
 status: active
-last_updated: 2026-10-17
+last_updated: 2026-10-21
 review_cycle: quarterly
 ---
 
@@ -14,7 +14,7 @@ folder record a single deal. They are not the next quote.
 
 ## Canonical Docs
 
-- Term agreement for the core offer (draft template): [Core Offer — Term Agreement](core-offer-term-agreement.md)
+- Term agreement for the core offer (live): [Core Offer — Term Agreement](core-offer-term-agreement.md)
 - How Waiz gets paid: [Money Model](../../company/overview-money-model.md)
 - What each offer includes: [Client Offers](client-offers.md)
 - Team tier pricing (legacy draft, not the new-client quote): [Pricing Architecture — Team Tiers](pricing-architecture.md)
