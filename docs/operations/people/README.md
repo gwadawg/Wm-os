@@ -44,7 +44,7 @@ KPI Review cadence: [KPI Review Meeting SOP](kpi-review-meeting-sop.md) ·
 - [Lead MB PJ Comp Design](../../superpowers/specs/2026-09-15-lead-media-buyer-pj-comp-design.md) — BRL ladder L1–L4 + L2+ CPQL commissions ([pointer](../../plans/2026-09-15-lead-media-buyer-pj-comp-design.md))
   - Pack: [Payment](lead-mb-pj-payment-agreement.md) · [SOW](lead-mb-pj-sow.md) · [Levels](lead-mb-pj-level-checklist.md) · [Commissions](lead-mb-pj-commission-appendix.md) · [EOM](lead-mb-pj-eom-sheet-template.md)
 - [Ops VA PJ Comp Design](ops-va-pj-comp-design.md) — BRL ladder locked through L5 (Training → L5). Above L5 is unset.
-  - Pack: [Payment](ops-va-pj-payment-agreement.md) · [SOW](ops-va-pj-sow.md) · [Levels](ops-va-pj-level-checklist.md)
+  - Pack: [Payment](ops-va-pj-payment-agreement.md) · [SOW](ops-va-pj-sow.md) · [Levels](ops-va-pj-level-checklist.md) · [Walkthrough draft](ops-va-pj-ladder-walkthrough.md)
 - [CCM Comp Plan V1 — Pedro](../../plans/2026-07-14-ccm-pedro-comp-plan-v1.md) — Rio base + show-rate pool + B2B
 - [Team Responsibility Directory](team-responsibility-directory.md)
 - [Product Margin Model — RM/DSCR](../../company/product-margin-model.md)

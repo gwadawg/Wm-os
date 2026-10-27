@@ -12,6 +12,7 @@ related_docs:
   - docs/operations/people/ops-va-pj-payment-agreement.md
   - docs/operations/people/ops-va-pj-sow.md
   - docs/operations/people/ops-va-pj-level-checklist.md
+  - docs/operations/people/ops-va-pj-ladder-walkthrough.md
 ---
 
 # Ops VA — PJ Comp Design
@@ -74,6 +75,7 @@ Payday is the **9th**, paying the prior month, same as the other PJ agreement.
 
 ## Related
 
+- [Ladder walkthrough](ops-va-pj-ladder-walkthrough.md) — draft to review with her. Not the signature pack.
 - [Payment agreement](ops-va-pj-payment-agreement.md)
 - [Statement of work](ops-va-pj-sow.md)
 - [Level checklist](ops-va-pj-level-checklist.md)
