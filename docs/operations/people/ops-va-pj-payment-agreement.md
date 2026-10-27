@@ -32,6 +32,10 @@ signature.
 The ladder through **L5** is founder-locked. See
 [Ops VA — PJ Comp Design](ops-va-pj-comp-design.md).
 
+**Do not send this for the training month.** Month 1 uses the
+[training agreement](ops-va-pj-training-agreement.md). This document is for
+after that month, if both sides want to continue.
+
 ## 1. Engagement
 
 Contractor provides Ops services as described in the

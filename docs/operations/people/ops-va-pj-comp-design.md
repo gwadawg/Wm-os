@@ -13,6 +13,7 @@ related_docs:
   - docs/operations/people/ops-va-pj-sow.md
   - docs/operations/people/ops-va-pj-level-checklist.md
   - docs/operations/people/ops-va-pj-ladder-walkthrough.md
+  - docs/operations/people/ops-va-pj-training-agreement.md
 ---
 
 # Ops VA — PJ Comp Design
@@ -28,6 +29,11 @@ Nothing above L5 is priced or defined here.
 [payment agreement](ops-va-pj-payment-agreement.md),
 [statement of work](ops-va-pj-sow.md), and
 [level checklist](ops-va-pj-level-checklist.md).
+
+Month 1 is a separate paper:
+[Training month agreement](ops-va-pj-training-agreement.md). Send that one
+first. Do not send the full payment agreement until both sides want to
+continue after training.
 
 Fill the hire’s name, PJ id, start date, and core hours. Accountant or
 lawyer reviews the PJ wrapper before signature. The ladder text does not
@@ -75,6 +81,7 @@ Payday is the **9th**, paying the prior month, same as the other PJ agreement.
 
 ## Related
 
+- [Training month agreement](ops-va-pj-training-agreement.md) — the only paper to sign for month 1.
 - [Ladder walkthrough](ops-va-pj-ladder-walkthrough.md) — draft to review with her. Not the signature pack.
 - [Payment agreement](ops-va-pj-payment-agreement.md)
 - [Statement of work](ops-va-pj-sow.md)
