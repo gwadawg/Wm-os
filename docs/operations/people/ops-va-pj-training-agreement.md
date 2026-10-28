@@ -54,7 +54,7 @@ The Parties agree to this Service Agreement on the terms below.
 
 ## 2. Term
 
-2.1. Services start on [START DATE] and end on [END DATE], one month later. This Agreement does not renew itself. It continues only if both Parties sign a new agreement or a written amendment before the end date. Silence is not a renewal.
+2.1. The paid cycle is the calendar month: the **1st through the last day** of that month. Services in this Agreement cover [MONTH, YEAR], from [START DATE] through the last day of that month. This Agreement does not renew itself. It continues only if both Parties sign a new agreement or a written amendment. Silence is not a renewal.
 
 ## 3. Price and payment
 
@@ -282,11 +282,11 @@ This Annex is part of the Service Agreement between [WAZ LEGAL NAME] and [CONTRA
 
 ## 1. Price and payment
 
-1.1. For the training month in clause 2.1, the Client pays the Contractor **R$4,000.00 (four thousand reais)**. Payment is on the **9th** of the following month, against a service invoice (*nota fiscal*). Payment is by PIX to the key the Contractor states in writing.
+1.1. The Contractor is paid for the calendar month, the **1st through the last day**. For a full month the fee is **R$4,000.00 (four thousand reais)**. The Client pays that month on the **9th of the following month**, against a service invoice (*nota fiscal*). Example: work from the 1st through the 31st of October is paid on the 9th of November. If the 9th is not a banking day, payment is on the next banking day. Payment is by PIX to the key the Contractor states in writing.
 
 1.2. The Contractor sends the invoice by the **5th** of the payment month. If the invoice is missing, the Client may hold the payment until it arrives. The hold is not a waiver of the fee.
 
-1.3. If the Agreement ends early under clause 6.1, the fee is pro-rated: R$4,000.00 divided by the number of days in the training period, times the days worked through the end date the Client confirms in writing. Neither Party owes an extra indemnity for ending without cause.
+1.3. If the start date is after the 1st, or the Agreement ends before the last day of the month under clause 6.1, the fee for that month is pro-rated: R$4,000.00 divided by the number of days in that calendar month, times the days worked. Neither Party owes an extra indemnity for ending without cause.
 
 1.4. Extra expenses are reimbursed only against a tax receipt, and only if the Client approved the expense in writing first.
 

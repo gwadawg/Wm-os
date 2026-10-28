@@ -24,7 +24,7 @@ You are paid for the seat you can hold. From that day, you are already practicin
 
 A level turns on when the same standard has shown up on **3 to 5** real cases, and I would hand you the next one without briefing it. Three is the minimum. Five is the most you need to show. Hitting five does not turn the level on if I would still have to walk you through the next one.
 
-The new pay starts the **next full month** after we both initial the checklist. Payday is the **9th**, for the month before. You invoice as PJ and handle your own taxes.
+You are paid for the calendar month, the **1st through the last day**. We pay that month on the **9th** of the next month. October 1–31 is paid on November 9. A new level starts on the 1st of the next month after we both initial the checklist. You invoice as PJ and handle your own taxes. Send the invoice by the 5th.
 
 | Level | Monthly | What this seat is |
 |---|---|---|

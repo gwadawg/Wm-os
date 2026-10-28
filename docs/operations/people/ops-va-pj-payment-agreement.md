@@ -210,10 +210,11 @@ to the founder are permissions, money, and client promises.
 
 ## 13. Payday
 
-- **Pay day: the 9th** of every month (BRL).
-- Pays the **prior calendar month** at the level then in force.
+- The paid cycle is the calendar month: the **1st through the last day**.
+- **Pay day: the 9th** of the following month (BRL), for that cycle, at the level then in force. Example: the 1st through the 31st of October is paid on the 9th of November.
 - If the 9th is not a banking day, pay the next banking day.
-- Contractor invoices. Founder approves. Company pays.
+- Contractor sends the invoice by the **5th** of the payment month. Founder approves. Company pays.
+- A start or end mid-month is pro-rated: that month’s base ÷ days in the month × days worked.
 
 ## 14. Step-down
 

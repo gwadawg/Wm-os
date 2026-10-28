@@ -33,7 +33,12 @@ Nothing above L5 is priced or defined here.
 Month 1 is a separate paper:
 [Training month agreement](ops-va-pj-training-agreement.md). Send that one
 first. Do not send the full payment agreement until both sides want to
-continue after training.
+continue after training. It uses the clause structure of the tested
+Brazilian service contract. Three commercial choices differ from that
+sample and should be confirmed with counsel before the Portuguese
+signature copy: the term is one month and does not auto-renew; payday is
+the 9th; the non-solicit fine is R$12,000 and is limited to the Client’s
+clients and misuse of Waiz information, not a nationwide ban on other work.
 
 Fill the hire’s name, PJ id, start date, and core hours. Accountant or
 lawyer reviews the PJ wrapper before signature. The ladder text does not
@@ -70,7 +75,7 @@ Until that addendum is signed, the top of this agreement is **L5**.
 | **L4** | **R$8,000** | Snapshot bugs, workflow improvements, internal builds |
 | **L5** | **R$10,000** | Ships systems on one light review |
 
-Payday is the **9th**, paying the prior month, same as the other PJ agreement.
+The paid cycle is the **1st through the last day** of the month. Payday is the **9th** of the following month.
 
 ## Operating consequences
 
