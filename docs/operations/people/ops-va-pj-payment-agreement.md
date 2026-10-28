@@ -50,10 +50,15 @@ engagement, held without the founder in the daily work.
 
 | Component | Amount |
 |---|---|
-| Base | **R$4,000** (flat) |
+| Base | **R$4,000** (flat) for the first full calendar month |
+| Stub before that 1st | **R$25/hour** |
 
 Month 1 is access, shadowing, and supervised reps on real tickets and a live
-Tech Buildout. End of Month 1 is a check-in. There is no automatic raise.
+Tech Buildout. Days before the 1st of that month are paid by the hour. The
+rate is R$4,000 ÷ 160 hours (40 hours × 4 weeks). The 1st through the last
+day of the training month is the flat R$4,000. End of Month 1 is a check-in.
+There is no automatic raise. The
+[training agreement](ops-va-pj-training-agreement.md) controls this period.
 
 She leaves the month able to find a client in ClickUp, follow the Tech
 Buildout checklist, and write a ticket note the founder can read.

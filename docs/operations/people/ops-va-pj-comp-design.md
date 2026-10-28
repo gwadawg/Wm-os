@@ -75,7 +75,7 @@ Until that addendum is signed, the top of this agreement is **L5**.
 | **L4** | **R$8,000** | Snapshot bugs, workflow improvements, internal builds |
 | **L5** | **R$10,000** | Ships systems on one light review |
 
-The paid cycle is the **1st through the last day** of the month. Payday is the **9th** of the following month.
+The paid cycle is the **1st through the last day** of the month. Payday is the **9th** of the following month. Hours before the 1st of the first full training month are **R$25/hour** (R$4,000 ÷ 160). That full month is the flat R$4,000.
 
 ## Operating consequences
 

@@ -37,7 +37,9 @@ You are paid for the calendar month, the **1st through the last day**. We pay th
 
 ## Training — R$4.000
 
-Month 1 only. Access, shadowing, and supervised reps on real tickets and a live client setup. There is no automatic raise at day 30.
+The first full training month is a calendar month, the 1st through the last day, at **R$4.000**. If you start before that 1st, those earlier days are **R$25 per hour**. That rate is the month divided by a 40-hour week: R$4.000 ÷ 160 hours. You keep an hour record. I approve it. Both pieces are paid on the 9th of the following month.
+
+The month itself is access, shadowing, and supervised reps on real tickets and a live client setup. There is no automatic raise at the end of it.
 
 By the end of the month you can find a client in ClickUp, follow the tech setup checklist, and write a ticket note I can read.
 

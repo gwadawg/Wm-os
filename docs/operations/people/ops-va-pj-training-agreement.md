@@ -54,7 +54,7 @@ The Parties agree to this Service Agreement on the terms below.
 
 ## 2. Term
 
-2.1. The paid cycle is the calendar month: the **1st through the last day** of that month. Services in this Agreement cover [MONTH, YEAR], from [START DATE] through the last day of that month. This Agreement does not renew itself. It continues only if both Parties sign a new agreement or a written amendment. Silence is not a renewal.
+2.1. The first full training month is a calendar month, the **1st through the last day** of [MONTH, YEAR]. If the start date [START DATE] falls before that 1st, the days from the start date through the last day of the prior month are a stub. The stub is paid by the hour. The full month is the flat fee. This Agreement does not renew itself. It continues only if both Parties sign a new agreement or a written amendment. Silence is not a renewal.
 
 ## 3. Price and payment
 
@@ -282,17 +282,21 @@ This Annex is part of the Service Agreement between [WAZ LEGAL NAME] and [CONTRA
 
 ## 1. Price and payment
 
-1.1. The Contractor is paid for the calendar month, the **1st through the last day**. For a full month the fee is **R$4,000.00 (four thousand reais)**. The Client pays that month on the **9th of the following month**, against a service invoice (*nota fiscal*). Example: work from the 1st through the 31st of October is paid on the 9th of November. If the 9th is not a banking day, payment is on the next banking day. Payment is by PIX to the key the Contractor states in writing.
+1.1. **Stub, before the first full month.** From the start date through the last day before the 1st of the training month, the Client pays **R$25.00 (twenty-five reais) per hour** worked. The rate is the monthly fee at a 40-hour week: R$4,000.00 ÷ (40 hours × 4 weeks) = R$4,000.00 ÷ 160 hours = R$25.00. The Contractor keeps an hour record. The Client approves it. If the start date is the 1st, there is no stub.
 
-1.2. The Contractor sends the invoice by the **5th** of the payment month. If the invoice is missing, the Client may hold the payment until it arrives. The hold is not a waiver of the fee.
+1.2. **First full training month.** The 1st through the last day of that month is **R$4,000.00 (four thousand reais)**, not hourly.
 
-1.3. If the start date is after the 1st, or the Agreement ends before the last day of the month under clause 6.1, the fee for that month is pro-rated: R$4,000.00 divided by the number of days in that calendar month, times the days worked. Neither Party owes an extra indemnity for ending without cause.
+1.3. Each calendar month is paid on the **9th of the following month**, against a service invoice (*nota fiscal*). Stub hours worked in October are paid on the 9th of November. The November training month is paid on the 9th of December. If the 9th is not a banking day, payment is on the next banking day. Payment is by PIX to the key the Contractor states in writing.
 
-1.4. Extra expenses are reimbursed only against a tax receipt, and only if the Client approved the expense in writing first.
+1.4. The Contractor sends the invoice by the **5th** of the payment month. The stub invoice lists the hours. If the invoice is missing, the Client may hold the payment until it arrives. The hold is not a waiver of the fee.
+
+1.5. If the full training month ends before the last day under clause 6.1, that month’s fee is pro-rated: R$4,000.00 divided by the days in that month, times the days worked. The stub stays hours × R$25.00. Neither Party owes an extra indemnity for ending without cause.
+
+1.6. Extra expenses are reimbursed only against a tax receipt, and only if the Client approved the expense in writing first.
 
 ## 2. Other payment terms
 
-2.1. The fee in this Annex is the only amount due for the training month. It covers the Contractor’s taxes, labor charges, social charges, tools the Contractor chooses to use, and other costs of performing. It does not cover Client systems the Client provides.
+2.1. The stub hours and the training-month fee in this Annex are the only amounts due for this Agreement. They cover the Contractor’s taxes, labor charges, social charges, tools the Contractor chooses to use, and other costs of performing. They do not cover Client systems the Client provides.
 
 2.2. A later written agreement may set a different monthly fee or a bonus. That writing is required. A conversation is not enough. Clause 1.5 of the Agreement still applies: a new level is an amendment, not an implied raise.
 
