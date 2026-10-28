@@ -5,7 +5,7 @@ subdomain: people
 owner: founder
 status: active
 confidentiality: owner-only
-last_updated: 2026-10-26
+last_updated: 2026-10-27
 review_cycle: quarterly
 artifact_type: policy
 related_docs:
