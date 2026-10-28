@@ -87,6 +87,7 @@ The paid cycle is the **1st through the last day** of the month. Payday is the *
 ## Related
 
 - [Training month agreement](ops-va-pj-training-agreement.md) — the only paper to sign for month 1.
+- [GHL paste copy](ops-va-pj-training-agreement-ghl.txt) — same text, notes removed, for the contract template.
 - [Ladder walkthrough](ops-va-pj-ladder-walkthrough.md) — draft to review with her. Not the signature pack.
 - [Payment agreement](ops-va-pj-payment-agreement.md)
 - [Statement of work](ops-va-pj-sow.md)
