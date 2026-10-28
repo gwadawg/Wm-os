@@ -286,7 +286,7 @@ This Annex is part of the Service Agreement between [WAZ LEGAL NAME] and [CONTRA
 
 1.2. **First full training month.** The 1st through the last day of that month is **R$4,000.00 (four thousand reais)**, not hourly.
 
-1.3. Each calendar month is paid on the **9th of the following month**, against a service invoice (*nota fiscal*). Stub hours worked in October are paid on the 9th of November. The November training month is paid on the 9th of December. If the 9th is not a banking day, payment is on the next banking day. Payment is by PIX to the key the Contractor states in writing.
+1.3. Each calendar month is paid on the **9th of the following month**, against a service invoice (*nota fiscal*). Example: stub hours worked in October are paid on the 9th of November. A November training month is paid on the 9th of December. If the 9th is not a banking day, payment is on the next banking day. Payment is by PIX to the key the Contractor states in writing.
 
 1.4. The Contractor sends the invoice by the **5th** of the payment month. The stub invoice lists the hours. If the invoice is missing, the Client may hold the payment until it arrives. The hold is not a waiver of the fee.
 
